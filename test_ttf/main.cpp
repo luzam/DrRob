@@ -1,17 +1,14 @@
-/*#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else*/
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include "SDL_rotozoom.h"
-#include <iostream>
-//#endif
+/*******************************************************/
+/** Programme de PERRUCHON Romain pour developpez.com **/
+/**               Chapitre V : SDL_TTF                **/
+/*******************************************************/
+
+//Les fichiers d'entête
+#include "SDL/SDL.h"
+#include "SDL/SDL_image.h"
+#include "SDL/SDL_ttf.h"
+#include <string>
+
 //Les attributs de l'ecran (640 * 480)
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -79,7 +76,6 @@ bool init()
     //initialisation de tout les sous-systemes de sdl
     if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
     {
-        std::cout<<"SDL erreur"<<std::endl;
         return false;
     }
 
@@ -89,14 +85,12 @@ bool init()
     //Si il y a une erreur lors de la mise en place de l'ecran
     if( screen == NULL )
     {
-        std::cout<<"Screen erreur"<<std::endl;
         return false;
     }
 
     //Initialisation de SDL_ttf
     if( TTF_Init() == -1 )
     {
-        std::cout<<"TTF erreur"<<std::endl;
         return false;
     }
 
@@ -113,19 +107,17 @@ bool load_files()
     background = load_image( "background.png" );
 
     //Ouverture du font
-    font = TTF_OpenFont( "ARIAL.TTF", 28 );
+    font = TTF_OpenFont( "CaslonBold.ttf", 28 );
 
     //si il y a un probleme au chargement du fond
     if( background == NULL )
     {
-        std::cout<<"background erreur"<<std::endl;
         return false;
     }
 
     //Si il y a une erreur au chargement du font
     if( font == NULL )
     {
-        std::cout<<"Font erreur"<<std::endl;
         return false;
     }
 
@@ -151,22 +143,19 @@ void clean_up()
 
 int main( int argc, char* args[] )
 {
-    std::cout<<"Coucou"<<std::endl;
     //ce qui va nous permettre de quitter
     bool quit = false;
 
     //Initialisation
     if( init() == false )
     {
-        std::cout<<"init erreur"<<std::endl;
         return 1;
     }
 
     //Chargement des fichiers
     if( load_files() == false )
     {
-        std::cout<<"load erreur"<<std::endl;
-        return 2;
+        return 1;
     }
 
     //application du texte
@@ -175,7 +164,6 @@ int main( int argc, char* args[] )
     //Si il y a une erreur lors de l'application du texte
     if( message == NULL )
     {
-        std::cout<<"message erreur"<<std::endl;
         return 1;
     }
 
@@ -186,7 +174,6 @@ int main( int argc, char* args[] )
     //mise à jour de l'ecran
     if( SDL_Flip( screen ) == -1 )
     {
-        std::cout<<"Flip erreur"<<std::endl;
         return 1;
     }
 

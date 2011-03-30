@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1145144695 c:\documents and settings\perruchon\mes documents\tmp\test_ttf\main.cpp
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+	<string>
+

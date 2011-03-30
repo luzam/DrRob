@@ -18,7 +18,7 @@
 			<Target title="Release">
 				<Option output="bin\Release\DrRob" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj\Release\" />
-				<Option type="0" />
+				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
@@ -50,6 +50,7 @@
 			<Add directory="C:\Program Files\CodeBlocks\SDL_gfx" />
 			<Add directory="C:\Program Files\CodeBlocks\SDL_ttf\lib" />
 		</Linker>
+		<Unit filename="ARIAL.TTF" />
 		<Unit filename="SDL_rotozoom.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1301487716 source:c:\users\antoine\desktop\projetcpp\drrob\main.cpp
+1301493070 source:c:\users\antoine\desktop\projetcpp\drrob\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<SDL/SDL.h>
@@ -7,6 +7,7 @@
 	<SDL_image.h>
 	<SDL_ttf.h>
 	"SDL_rotozoom.h"
+	<iostream>
 
 1255800448 c:\program files\codeblocks\sdl\include\sdl\sdl.h
 	"SDL_main.h"
