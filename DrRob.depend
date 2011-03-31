@@ -375,7 +375,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1255908494 c:\program files\codeblocks\sdl_ttf\include\sdl_ttf.h
+1185006604 c:\program files\codeblocks\sdl_ttf\include\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
@@ -389,6 +389,26 @@
 	"SDL.h"
 
 1281906410 source:c:\users\antoine\desktop\projetcpp\drrob\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"SDL_rotozoom.h"
+
+1301582604 source:c:\users\lucas\desktop\drrob\main.cpp
+	<cstdlib>
+	<stdlib.h>
+	<SDL/SDL.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	"SDL_rotozoom.h"
+	<iostream>
+
+1301582604 c:\users\lucas\desktop\drrob\sdl_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1301582604 source:c:\users\lucas\desktop\drrob\sdl_rotozoom.c
 	<windows.h>
 	<stdlib.h>
 	<string.h>
