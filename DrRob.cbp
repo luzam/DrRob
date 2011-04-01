@@ -56,7 +56,11 @@
 		</Unit>
 		<Unit filename="SDL_rotozoom.h" />
 		<Unit filename="cb.bmp" />
+		<Unit filename="include\Grille.h" />
+		<Unit filename="include\MoteurPhy.h" />
+		<Unit filename="include\Position.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="source\MoteurPhy.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

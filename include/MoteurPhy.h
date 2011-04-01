@@ -12,10 +12,12 @@ class MoteurPhy{
     int _vitesseBlob;
     int _orientation;
     Grille _grille;
+    int _ligneBlobCourant=0;
+    int _colBlobCourant = 2;
 
     public :
-    MoteurPhy(int taille,const Position& posBlobPivot,int vitesseBlob,const Grille& grille):
-    _taille(taille),_posBlobPivot(posBlobPivot),_vitesseBlob(vitesseBlob),_orientation( HAUT),_grille(grille){};
+    MoteurPhy(int taille,int vitesseBlob,const Grille& grille):
+    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_grille(grille){};
     MoteurPhy(){}
     ~MoteurPhy(){}
 
