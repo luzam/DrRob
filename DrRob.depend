@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1301493070 source:c:\users\antoine\desktop\projetcpp\drrob\main.cpp
+1301677282 source:c:\users\antoine\desktop\projetcpp\drrob\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<SDL/SDL.h>
@@ -375,7 +375,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1185006604 c:\program files\codeblocks\sdl_ttf\include\sdl_ttf.h
+1255908494 c:\program files\codeblocks\sdl_ttf\include\sdl_ttf.h
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
@@ -384,11 +384,11 @@
 	<math.h>
 	"SDL.h"
 
-1282018734 c:\users\antoine\desktop\projetcpp\drrob\sdl_rotozoom.h
+1301677282 c:\users\antoine\desktop\projetcpp\drrob\sdl_rotozoom.h
 	<math.h>
 	"SDL.h"
 
-1281906410 source:c:\users\antoine\desktop\projetcpp\drrob\sdl_rotozoom.c
+1301677282 source:c:\users\antoine\desktop\projetcpp\drrob\sdl_rotozoom.c
 	<windows.h>
 	<stdlib.h>
 	<string.h>
