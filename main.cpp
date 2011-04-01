@@ -11,6 +11,9 @@
 #include <SDL_ttf.h>
 #include "SDL_rotozoom.h"
 #include <iostream>
+
+//coucou
+
 //#endif
 //Les attributs de l'ecran (640 * 480)
 const int SCREEN_WIDTH = 640;
