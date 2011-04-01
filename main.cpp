@@ -15,6 +15,20 @@
 //coucou
 
 //#endif
+
+
+#include "include/MoteurPhy.h"
+
+
+//*
+int main( int argc, char* args[] ){
+    MoteurPhy turboteur();
+    return 0;
+}
+//*/
+
+/*
+
 //Les attributs de l'ecran (640 * 480)
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
@@ -154,7 +168,7 @@ void clean_up()
 
 int main( int argc, char* args[] )
 {
-    std::cout<<"Coucou"<<std::endl;
+    std::cout<<"Debut programme"<<std::endl;
     //ce qui va nous permettre de quitter
     bool quit = false;
 
@@ -213,3 +227,4 @@ int main( int argc, char* args[] )
 
     return 0;
 }
+*/
