@@ -18,6 +18,9 @@
 
 
 #include "include/MoteurPhy.h"
+#include "include/Grille.h"
+#include "include/Position.h"
+#include "include/Blob.h"
 
 
 //*
