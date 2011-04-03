@@ -394,7 +394,7 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1301817025 source:c:\users\lucas\desktop\drrob\main.cpp
+1301846330 source:c:\users\lucas\desktop\drrob\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<SDL/SDL.h>
@@ -407,6 +407,8 @@
 	"include/Grille.h"
 	"include/Position.h"
 	"include/Blob.h"
+	"include/Tree.h"
+	"include/Game.h"
 
 1301582604 c:\users\lucas\desktop\drrob\sdl_rotozoom.h
 	<math.h>
@@ -418,7 +420,7 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1301823267 c:\users\lucas\desktop\drrob\include\moteurphy.h
+1301846525 c:\users\lucas\desktop\drrob\include\moteurphy.h
 	"Position.h"
 	"Grille.h"
 	"Tree.h"
@@ -434,5 +436,8 @@
 
 1301817163 c:\users\lucas\desktop\drrob\include\blob.h
 
-1301823768 c:\users\lucas\desktop\drrob\include\tree.h
+1301846277 c:\users\lucas\desktop\drrob\include\tree.h
+
+1301846255 c:\users\lucas\desktop\drrob\include\game.h
+	"MoteurPhy.h"
 

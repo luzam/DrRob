@@ -9,18 +9,18 @@ void MoteurPhy:: rotationHoraire()
     switch(_orientation)
     {
     case HAUT :
-        if(colBlobCourant() == 5*_taille||_grille(ligneBlobCourant(),colBlobCourant()+1)!=0)
+        if(colBlobCourant() == 5*_taille||(*_grille)(ligneBlobCourant(),colBlobCourant()+1)!=0)
         {
-            if(_grille(ligneBlobCourant(),colBlobCourant()-1)!=0)
+            if((*_grille)(ligneBlobCourant(),colBlobCourant()-1)!=0)
                 return;
             _posBlobPivot.setX(_posBlobPivot.x()-_taille);
         }
         _orientation = DROITE;
         break;
     case BAS :
-        if(colBlobCourant() == 0||_grille(ligneBlobCourant(),colBlobCourant()-1)!=0)
+        if(colBlobCourant() == 0||(*_grille)(ligneBlobCourant(),colBlobCourant()-1)!=0)
         {
-            if(_grille(ligneBlobCourant(),colBlobCourant()+1)!=0)
+            if((*_grille)(ligneBlobCourant(),colBlobCourant()+1)!=0)
                 return;
             _posBlobPivot.setX(_posBlobPivot.x()+_taille);
         }
@@ -30,7 +30,7 @@ void MoteurPhy:: rotationHoraire()
         _orientation = HAUT;
         break;
     case DROITE :
-        if(_grille(ligneBlobCourant()+1,colBlobCourant())!=0)
+        if((*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
             _posBlobPivot.setY(_posBlobPivot.y()-_taille);
         _orientation = BAS;
         break;
@@ -48,18 +48,18 @@ void MoteurPhy::rotationAntiHoraire()
     switch(_orientation)
     {
     case BAS :
-        if(colBlobCourant() == 5*_taille||_grille(ligneBlobCourant(),colBlobCourant()+1)!=0)
+        if(colBlobCourant() == 5*_taille||(*_grille)(ligneBlobCourant(),colBlobCourant()+1)!=0)
         {
-            if(_grille(ligneBlobCourant(),colBlobCourant()-1)!=0)
+            if((*_grille)(ligneBlobCourant(),colBlobCourant()-1)!=0)
                 return;
             _posBlobPivot.setX(_posBlobPivot.x()-_taille);
         }
         _orientation = DROITE;
         break;
     case HAUT :
-        if(colBlobCourant() == 0||_grille(ligneBlobCourant(),colBlobCourant()-1)!=0)
+        if(colBlobCourant() == 0||(*_grille)(ligneBlobCourant(),colBlobCourant()-1)!=0)
         {
-            if(_grille(ligneBlobCourant(),colBlobCourant()+1)!=0)
+            if((*_grille)(ligneBlobCourant(),colBlobCourant()+1)!=0)
                 return;
             _posBlobPivot.setX(_posBlobPivot.x()+_taille);
         }
@@ -69,7 +69,7 @@ void MoteurPhy::rotationAntiHoraire()
         _orientation = HAUT;
         break;
     case GAUCHE :
-        if(_grille(ligneBlobCourant()+1,colBlobCourant())!=0)
+        if((*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
             _posBlobPivot.setY(_posBlobPivot.y()-_taille);
         _orientation = BAS;
         break;
@@ -83,7 +83,7 @@ void MoteurPhy::rotationAntiHoraire()
 void MoteurPhy::moove()
 {
     int nextPosX = _posBlobPivot.y()+_vitesseBlob;
-    if(_grille((int)(nextPosX/_taille),colBlobCourant())!=0){
+    if((*_grille)((int)(nextPosX/_taille),colBlobCourant())!=0){
         nextPosX = (((int)(nextPosX/_taille))-1)*_taille;
         //TO DO : Touching
     }
@@ -103,20 +103,20 @@ void MoteurPhy::gauche()
     case GAUCHE :
         if(colBlobCourant() == _taille)
             return;
-        else if(_grille(ligneBlobCourant(),colBlobCourant()-2)!=0)
+        else if((*_grille)(ligneBlobCourant(),colBlobCourant()-2)!=0)
             return;
         break;
     case BAS :
         if(colBlobCourant() == 0)
             return;
-        else if(_grille(ligneBlobCourant()+1,colBlobCourant()-1)!=0)
+        else if((*_grille)(ligneBlobCourant()+1,colBlobCourant()-1)!=0)
             return;
         break;
     case HAUT :
     case DROITE :
         if(colBlobCourant() == 0)
             return;
-        else  if(_grille(ligneBlobCourant(),colBlobCourant()-1)!=0)
+        else  if((*_grille)(ligneBlobCourant(),colBlobCourant()-1)!=0)
             return;
         break;
     }
@@ -134,20 +134,20 @@ void MoteurPhy::droite()
     case DROITE :
         if(colBlobCourant() == 4*_taille)
             return;
-        else if(_grille(ligneBlobCourant(),colBlobCourant()+2)!=0)
+        else if((*_grille)(ligneBlobCourant(),colBlobCourant()+2)!=0)
             return;
         break;
     case BAS :
         if(colBlobCourant() == 5*_taille)
             return;
-        else if(_grille(ligneBlobCourant()+1,colBlobCourant()+1)!=0)
+        else if((*_grille)(ligneBlobCourant()+1,colBlobCourant()+1)!=0)
             return;
         break;
     case HAUT :
     case GAUCHE :
         if(colBlobCourant() == 5*_taille)
             return;
-        else if(_grille(ligneBlobCourant(),colBlobCourant()+1)!=0)
+        else if((*_grille)(ligneBlobCourant(),colBlobCourant()+1)!=0)
             return;
         break;
     }

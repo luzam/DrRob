@@ -12,14 +12,14 @@ class MoteurPhy{
     Position _posBlobPivot;
     int _vitesseBlob;
     int _orientation;
-    Grille _grille;
+    Grille* _grille;
     int _ligneBlobCourant;
     int _colBlobCourant;
     const int ligneBlobCourant()const{return (int)(_posBlobPivot.y()/_taille);}
     const int colBlobCourant()const{return (int)(_posBlobPivot.x()/_taille);}
 
     public :
-    MoteurPhy(int taille,int vitesseBlob,const Grille& grille):
+    MoteurPhy(int taille,int vitesseBlob,Grille* grille):
     _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_grille(grille),
     _ligneBlobCourant(0),_colBlobCourant(2){};
     MoteurPhy(){}
