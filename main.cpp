@@ -13,7 +13,11 @@
 #include <iostream>
 
 #include "include/MoteurPhy.h"
-
+#include "include/Grille.h"
+#include "include/Position.h"
+#include "include/Blob.h"
+#include "include/Tree.h"
+#include "include/Game.h"
 
 //*
 int main( int argc, char* args[] ){
