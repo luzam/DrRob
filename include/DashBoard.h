@@ -1,13 +1,13 @@
 #ifndef DASHBOARD_H
 #define DASHBOARD_H
 
-class DashBoard{
+class DashBoard : public MoteurPhy{
 
 protected :
 
 
 public :
-
+DashBoard(){}
 
 
 

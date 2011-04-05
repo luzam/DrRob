@@ -9,24 +9,26 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
-#include "SDL_rotozoom.h"
+#include "include/SDL_rotozoom.h"
 #include <iostream>
 
 //coucou
 
 //#endif
+#include "include/Clock.h"
 
 
-#include "include/MoteurPhy.h"
-#include "include/Grille.h"
-#include "include/Position.h"
-#include "include/Blob.h"
-#include "include/Tree.h"
 #include "include/Game.h"
 
 //*
 int main( int argc, char* args[] ){
-    MoteurPhy turboteur();
+    Game drRob(2);
+    Clock sdlclock;
+    for(int c=0;c<90000000;c++)
+    {
+        if(sdlclock.tic(100))
+            std::cout<<c<<std::endl;
+    }
     return 0;
 }
 //*/

@@ -1,9 +1,9 @@
 #ifndef BLOB_B
 #define BLOB_H
 
-enum Color {BLUE=0,RED,GREEN,YELLOW,PURPLE,DARK};
-enum State {FIXED,FALLING,CURRENT,TOUCHING,TURNING_DIRECT,TURNING_HORAIRE};
-enum Link {NO_LINK=0,S,E,W,N,SE,SW,SN,SEW,SEN,SEWN,EW,EN,EWN,WN};
+#include "State.h"
+#include "Color.h"
+#include "Link.h"
 
 class Blob
 {
@@ -28,14 +28,17 @@ public :
     {
         return _link;
     }
-    void setColor(Color color){
-    _color=color;
+    void setColor(Color color)
+    {
+        _color=color;
     }
-    void setState(State state){
-    _state =  state;
+    void setState(State state)
+    {
+        _state =  state;
     }
-    void setLink(Link link){
-    _link = link;
+    void setLink(Link link)
+    {
+        _link = link;
     }
 };
 
