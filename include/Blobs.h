@@ -1,20 +1,23 @@
-#ifndef BLOBS_B
-#define BLOBS_H
+#ifndef BLOBS_H_INCLUDED
+#define BLOBS_H_INCLUDED
+
 
 #include "State.h"
 #include "Color.h"
 #include "Link.h"
 
-class Blob
+
+class Blobs
 {
 protected :
     Color _color;
     State _state;
     Link _link;
 public :
-    Blob(Color color,State state=CURRENT,Link link=NO_LINK):
+    Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
         _color(color),_state(state),_link(link) {}
-    ~Blob() {}
+    Blobs(){}//a supprimer, pour DashBoard pour linstant
+    ~Blobs() {}
 
     const Color color()const
     {
@@ -41,6 +44,7 @@ public :
         _link = link;
     }
 };
+
 
 
 

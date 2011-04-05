@@ -17,7 +17,7 @@ protected :
     Grille(char a){
     _grille = new int[13*6];
     for(int c=0;c<13*6;c++)
-        _grille[c] = c%6;
+        _grille[c] = (5*c)%6;
     }
     ~Grille(){
     delete[] _grille;

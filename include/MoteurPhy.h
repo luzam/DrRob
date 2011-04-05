@@ -38,6 +38,7 @@ class MoteurPhy{
     void speedToNormal();
     int majCombo();
     void moove();
+    void ComboActReInit(){_comboAct = 0;}
 
 
 };

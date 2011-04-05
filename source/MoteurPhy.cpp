@@ -182,6 +182,7 @@ int MoteurPhy::majCombo()
     std::multimap<unsigned char,Position> key;
 
     std::cout<<"Grille"<<std::endl;
+    //écriture de la grille dans un unsigned char
     for(int l=0; l<13; l++)
     {
         for(int c=0; c<6; c++)
@@ -197,7 +198,7 @@ int MoteurPhy::majCombo()
 
     std::cout<<"labeled"<<std::endl;
 
-
+    // récupération des connectedComponents labelled
     int width = 6, height =13;
     unsigned char *out_uc = (unsigned char *)malloc(width*height);
     ConnectedComponents cc(6);
@@ -210,6 +211,7 @@ int MoteurPhy::majCombo()
             putchar('0'+out_uc[r*width+c]);
         putchar('\n');
     }
+    // récupération des label dans un vector
     for(int l=0; l<13; l++)
         for(int c=0; c<6; c++)
             key.insert(std::pair<unsigned char,Position>(out_uc[l*6+c], Position(l,c)));
@@ -217,9 +219,10 @@ int MoteurPhy::majCombo()
     std::cout<<std::endl<<"taille map : "<<key.size()<<std::endl;
     std::multimap<unsigned char,Position>::iterator it;
     std::set<unsigned char> keyset;
+    // suppression des zones inférieurs à quatre et des absences de blobs
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end();
             ++it)
-        if(key.count((*it).first)<4)
+        if(key.count((*it).first)<4||(*_grille)((*it).second.x(),(*it).second.y())==0)//et BIM
             keyset.insert((*it).first);
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
@@ -227,6 +230,7 @@ int MoteurPhy::majCombo()
             ++it)
         std::cout << "  {  " << (int)((*it).first) << ", [" << (*it).second.x() << ","<< (*it).second.y()<< "]  }" << std::endl;
     keyset.clear();
+    //on récuper les label des combos restant
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
             keyset.insert((*it).first);
     if(key.empty())

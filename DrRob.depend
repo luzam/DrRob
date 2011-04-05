@@ -416,7 +416,7 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1302029286 c:\users\lucas\desktop\drrob\include\moteurphy.h
+1302034973 c:\users\lucas\desktop\drrob\include\moteurphy.h
 	"Position.h"
 	"Grille.h"
 	"Tree.h"
@@ -426,11 +426,11 @@
 
 1301660035 c:\users\lucas\desktop\drrob\include\position.h
 
-1302028036 c:\users\lucas\desktop\drrob\include\grille.h
+1302032635 c:\users\lucas\desktop\drrob\include\grille.h
 	<iostream>
 	<assert.h>
 
-1302029237 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
+1302033291 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
 	"../include/MoteurPhy.h"
 
 1302028516 c:\users\lucas\desktop\drrob\include\blob.h
@@ -448,7 +448,10 @@
 	<vector>
 	<assert.h>
 
-1301986470 c:\users\lucas\desktop\drrob\include\dashboard.h
+1302035001 c:\users\lucas\desktop\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	<vector>
 
 1301986681 c:\users\lucas\desktop\drrob\include\clock.h
 	"SDL.h"
@@ -474,4 +477,9 @@
 1301995962 c:\users\lucas\desktop\drrob\include\conected.h
 	<vector>
 	<algorithm>
+
+1302035096 c:\users\lucas\desktop\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
 
