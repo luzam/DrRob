@@ -4,6 +4,9 @@
 #include "Position.h"
 #include "Grille.h"
 #include "Tree.h"
+#include "conected.h"
+#include <map>
+#include <set>
 enum Orientation{ HAUT,BAS,DROITE,GAUCHE};
 class MoteurPhy{
 
@@ -12,6 +15,8 @@ class MoteurPhy{
     Position _posBlobPivot;
     int _vitesseBlob;
     int _orientation;
+    int _comboAct;
+    bool _launchCombo;
     Grille* _grille;
     int _ligneBlobCourant;
     int _colBlobCourant;
@@ -20,9 +25,9 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,int vitesseBlob,Grille* grille):
-    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_grille(grille),
+    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_comboAct(0),_launchCombo(false),_grille(grille),
     _ligneBlobCourant(0),_colBlobCourant(2){};
-    MoteurPhy(){}
+    MoteurPhy(){} // temporaire pour DashBoard, a supprimer
     ~MoteurPhy(){}
 
     void rotationHoraire();
@@ -31,7 +36,7 @@ class MoteurPhy{
     void droite();
     void speedUp();
     void speedToNormal();
-    void majCombo();
+    int majCombo();
     void moove();
 
 

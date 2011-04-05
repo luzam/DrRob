@@ -1,5 +1,5 @@
-#ifndef BLOB_B
-#define BLOB_H
+#ifndef BLOBS_B
+#define BLOBS_H
 
 #include "State.h"
 #include "Color.h"

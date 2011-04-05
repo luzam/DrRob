@@ -15,20 +15,16 @@
 //coucou
 
 //#endif
-#include "include/Clock.h"
-
+#include "include/MoteurPhy.h"
 
 #include "include/Game.h"
 
 //*
 int main( int argc, char* args[] ){
-    Game drRob(2);
-    Clock sdlclock;
-    for(int c=0;c<90000000;c++)
-    {
-        if(sdlclock.tic(100))
-            std::cout<<c<<std::endl;
-    }
+    Grille* grille = new Grille('t');
+    MoteurPhy turboteur(8,1,grille);
+    turboteur.majCombo();
+
     return 0;
 }
 //*/

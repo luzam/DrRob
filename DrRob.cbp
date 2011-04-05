@@ -51,22 +51,24 @@
 			<Add directory="C:\Program Files\CodeBlocks\SDL_ttf\lib" />
 		</Linker>
 		<Unit filename="ARIAL.TTF" />
-		<Unit filename="SDL_rotozoom.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="SDL_rotozoom.h" />
 		<Unit filename="cb.bmp" />
 		<Unit filename="include\Blob.h" />
 		<Unit filename="include\Clock.h" />
+		<Unit filename="include\Color.h" />
 		<Unit filename="include\DashBoard.h" />
-		<Unit filename="include\Enums.h" />
 		<Unit filename="include\Game.h" />
 		<Unit filename="include\Grille.h" />
+		<Unit filename="include\Link.h" />
 		<Unit filename="include\MoteurPhy.h" />
 		<Unit filename="include\Position.h" />
+		<Unit filename="include\SDL_rotozoom.h" />
+		<Unit filename="include\State.h" />
 		<Unit filename="include\Tree.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="source\MoteurPhy.cpp" />
+		<Unit filename="source\SDL_rotozoom.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />
