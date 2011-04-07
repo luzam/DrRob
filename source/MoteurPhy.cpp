@@ -30,8 +30,12 @@ void MoteurPhy:: rotationHoraire()
         _orientation = HAUT;
         break;
     case DROITE :
-        if((*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
+        if(ligneBlobCourant()==13||(*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
+        {
+            if(colBlobCourant()==0)
+                return;
             _posBlobPivot.setY(_posBlobPivot.y()-_taille);
+        }
         _orientation = BAS;
         break;
     }
@@ -69,8 +73,12 @@ void MoteurPhy::rotationAntiHoraire()
         _orientation = HAUT;
         break;
     case GAUCHE :
-        if((*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
+        if(ligneBlobCourant()==13||(*_grille)(ligneBlobCourant()+1,colBlobCourant())!=0)
+        {
+            if(colBlobCourant()==0)
+                return;
             _posBlobPivot.setY(_posBlobPivot.y()-_taille);
+        }
         _orientation = BAS;
         break;
     }
@@ -176,7 +184,7 @@ void MoteurPhy::speedToNormal()
   *
   * (documentation goes here)
   */
-int MoteurPhy::majCombo()
+std::vector<Position> MoteurPhy::majCombo()
 {
     char *img = (char *)malloc(6*13);
     std::multimap<unsigned char,Position> key;
@@ -232,22 +240,34 @@ int MoteurPhy::majCombo()
     keyset.clear();
     //on récuper les label des combos restant
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-            keyset.insert((*it).first);
+        keyset.insert((*it).first);
     if(key.empty())
     {
         if(_comboAct!=0)
             _launchCombo = true;
     }
-    else{
+    else
+    {
         for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
-                    _comboAct+=key.count(*its);
+            _comboAct+=key.count(*its);
 
     }
-        for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-            ;//TO DO : dire aux blobs du combo de dégager
+    keyset.clear();
+    std::vector<Position> retourPos;// recupéré les comboté dans un vecteur pour animation
+    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
+        ;//TO DO : dire aux blobs du combo de dégager
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
+}
+
+/** @brief make blobs fall after a combote
+  *
+  * (documentation goes here)
+  */
+std::vector<Position> MoteurPhy::fall(){
+
+
 
 
 }

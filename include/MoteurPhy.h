@@ -5,6 +5,7 @@
 #include "Grille.h"
 #include "Tree.h"
 #include "conected.h"
+#include "Blobs.h"
 #include <map>
 #include <set>
 enum Orientation{ HAUT,BAS,DROITE,GAUCHE};
@@ -18,6 +19,7 @@ class MoteurPhy{
     int _comboAct;
     bool _launchCombo;
     Grille* _grille;
+    std::vector<Blobs>* _grilleBlobs;
     int _ligneBlobCourant;
     int _colBlobCourant;
     const int ligneBlobCourant()const{return (int)(_posBlobPivot.y()/_taille);}
@@ -25,8 +27,8 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,int vitesseBlob,Grille* grille):
-    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_comboAct(0),_launchCombo(false),_grille(grille),
-    _ligneBlobCourant(0),_colBlobCourant(2){};
+    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(vitesseBlob),_orientation( HAUT),_comboAct(0),_launchCombo(false),
+    _grille(grille),_ligneBlobCourant(0),_colBlobCourant(2){};
     MoteurPhy(){} // temporaire pour DashBoard, a supprimer
     ~MoteurPhy(){}
 
@@ -36,7 +38,8 @@ class MoteurPhy{
     void droite();
     void speedUp();
     void speedToNormal();
-    int majCombo();
+    std::vector<Position> majCombo();
+    std::vector<Position> fall();
     void moove();
     void ComboActReInit(){_comboAct = 0;}
 

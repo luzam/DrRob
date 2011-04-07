@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "Blob.h"
+#include "Blobs.h"
 
 #include "MoteurPhy.h"
 #include "DashBoard.h"
