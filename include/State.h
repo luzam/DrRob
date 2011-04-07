@@ -1,0 +1,9 @@
+#ifndef STATE_H
+#define STATE_H
+
+enum State {FIXED,FALLING,CURRENT,TOUCHING,TURNING_DIRECT,TURNING_HORAIRE};
+
+#endif
+
+
+

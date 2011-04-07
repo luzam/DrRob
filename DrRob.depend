@@ -394,20 +394,16 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1301846330 source:c:\users\lucas\desktop\drrob\main.cpp
+1302023081 source:c:\users\lucas\desktop\drrob\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<SDL/SDL.h>
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
-	"SDL_rotozoom.h"
+	"include/SDL_rotozoom.h"
 	<iostream>
 	"include/MoteurPhy.h"
-	"include/Grille.h"
-	"include/Position.h"
-	"include/Blob.h"
-	"include/Tree.h"
 	"include/Game.h"
 
 1301582604 c:\users\lucas\desktop\drrob\sdl_rotozoom.h
@@ -420,24 +416,329 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1301846525 c:\users\lucas\desktop\drrob\include\moteurphy.h
+1302099341 c:\users\lucas\desktop\drrob\include\moteurphy.h
 	"Position.h"
 	"Grille.h"
 	"Tree.h"
+	"conected.h"
+	"Blobs.h"
+	<map>
+	<set>
 
 1301660035 c:\users\lucas\desktop\drrob\include\position.h
 
-1301675545 c:\users\lucas\desktop\drrob\include\grille.h
+1302087280 c:\users\lucas\desktop\drrob\include\grille.h
 	<iostream>
 	<assert.h>
 
-1301823149 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
+1302100197 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
 	"../include/MoteurPhy.h"
 
-1301817163 c:\users\lucas\desktop\drrob\include\blob.h
+1302028516 c:\users\lucas\desktop\drrob\include\blob.h
+	"State.h"
+	"Color.h"
+	"Link.h"
 
 1301846277 c:\users\lucas\desktop\drrob\include\tree.h
 
-1301846255 c:\users\lucas\desktop\drrob\include\game.h
+1302086867 c:\users\lucas\desktop\drrob\include\game.h
+	"Blobs.h"
 	"MoteurPhy.h"
+	"DashBoard.h"
+	"Clock.h"
+	<vector>
+	<assert.h>
+
+1302035001 c:\users\lucas\desktop\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	<vector>
+
+1301986681 c:\users\lucas\desktop\drrob\include\clock.h
+	"SDL.h"
+
+1301850171 c:\users\lucas\desktop\drrob\include\enums.h
+
+1301985206 c:\users\lucas\desktop\drrob\include\state.h
+
+1301985150 c:\users\lucas\desktop\drrob\include\color.h
+
+1301985259 c:\users\lucas\desktop\drrob\include\link.h
+
+1301985932 source:c:\users\lucas\desktop\drrob\source\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"../include/SDL_rotozoom.h"
+
+1301582604 c:\users\lucas\desktop\drrob\include\sdl_rotozoom.h
+	<math.h>
+	"SDL.h"
+
+1301995962 c:\users\lucas\desktop\drrob\include\conected.h
+	<vector>
+	<algorithm>
+
+1302035096 c:\users\lucas\desktop\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
+
+1302183085 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\source\moteurphy.cpp
+	"../include/MoteurPhy.h"
+
+1302183007 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\moteurphy.h
+	<stdio.h>
+	"Position.h"
+	"Grille.h"
+	"Tree.h"
+	"conected.h"
+	"Blobs.h"
+	<map>
+	<set>
+
+1302181582 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\position.h
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\grille.h
+	<iostream>
+	<assert.h>
+
+1302181582 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\tree.h
+
+1302183148 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\conected.h
+	<vector>
+	<algorithm>
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\state.h
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\color.h
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\link.h
+
+1302182064 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\source\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"../include/SDL_rotozoom.h"
+
+1302182274 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\sdl_rotozoom.h
+	<math.h>
+	"../SDL/include/SDL.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_platform.h
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\begin_code.h
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\close_code.h
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_keysym.h
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302184033 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\main.cpp
+	<iostream>
+	"include/MoteurPhy.h"
+	"include/Game.h"
+
+1302182513 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl_image\include\sdl_image.h
+	"../../SDL/include/SDL.h"
+	"../../SDL/include/SDL_version.h"
+	"../../SDL/include/begin_code.h"
+	"../../SDL/include/close_code.h"
+
+1302182748 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl_ttf\include\sdl_ttf.h
+	"../../SDL/include/SDL.h"
+	"../../SDL/include/begin_code.h"
+	"../../SDL/include/close_code.h"
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\game.h
+	"Blobs.h"
+	"MoteurPhy.h"
+	"DashBoard.h"
+	"Clock.h"
+	<vector>
+	<assert.h>
+
+1302182064 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	<vector>
+
+1302184085 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\clock.h
+	<SDL.h>
 

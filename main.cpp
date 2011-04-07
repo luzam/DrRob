@@ -1,27 +1,17 @@
-/*#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else*/
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
-#include "SDL_rotozoom.h"
+#include "include/SDL_rotozoom.h"
 #include <iostream>
-
 #include "include/MoteurPhy.h"
-#include "include/Grille.h"
-#include "include/Position.h"
-#include "include/Blob.h"
-#include "include/Tree.h"
 #include "include/Game.h"
 
 //*
 int main( int argc, char* args[] ){
-    MoteurPhy turboteur();
+    Grille* grille = new Grille('t');
+    MoteurPhy turboteur(8,1,grille);
+    turboteur.majCombo();
+
     return 0;
 }
 //*/
