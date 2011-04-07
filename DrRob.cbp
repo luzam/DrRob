@@ -43,8 +43,9 @@
 			<Add library="gdi32" />
 			<Add library="winmm" />
 			<Add library="dxguid" />
-			<Add library="..\..\..\..\..\Program Files\CodeBlocks\SDL_image\lib\SDL_image.lib" />
-			<Add library="..\..\..\..\..\Program Files\CodeBlocks\SDL_ttf\lib\SDL_ttf.lib" />
+			<Add library="SDL_image\lib\SDL_image.lib" />
+			<Add library="SDL_ttf\lib\SDL_ttf.lib" />
+			<Add library="SDL\lib\SDL_image.lib" />
 			<Add directory="C:\Program Files\CodeBlocks\SDL\lib" />
 			<Add directory="C:\Program Files\CodeBlocks\SDL_image\lib" />
 			<Add directory="C:\Program Files\CodeBlocks\SDL_gfx" />

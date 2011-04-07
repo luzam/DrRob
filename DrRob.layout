@@ -2,7 +2,7 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include\Blobs.h" open="1" top="0" tabpos="6">
-		<Cursor position="384" topLine="5" />
+		<Cursor position="384" topLine="0" />
 	</File>
 	<File name="include\Clock.h" open="0" top="0" tabpos="10">
 		<Cursor position="356" topLine="8" />
@@ -23,7 +23,7 @@
 		<Cursor position="111" topLine="0" />
 	</File>
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="1">
-		<Cursor position="1200" topLine="23" />
+		<Cursor position="1243" topLine="31" />
 	</File>
 	<File name="include\Position.h" open="0" top="0" tabpos="5">
 		<Cursor position="0" topLine="10" />
@@ -38,10 +38,10 @@
 		<Cursor position="1697" topLine="64" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="384" topLine="13" />
+		<Cursor position="421" topLine="15" />
 	</File>
 	<File name="source\MoteurPhy.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="6365" topLine="232" />
+		<Cursor position="7270" topLine="238" />
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="227" topLine="6" />
