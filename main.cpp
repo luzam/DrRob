@@ -8,10 +8,31 @@
 #include "include/InterfaceX.h"
 //*
 int main( int argc, char* args[] ){
+    bool quit=false;
+    std::cout<<"DrRob cree par Antoine Hoarau"<<std::endl;
     Grille* grille = new Grille('t');
     MoteurPhy turboteur(8,1,grille);
     turboteur.majCombo();
-
+    InterfaceX i(1);
+    i.init();
+    i.load_files();
+    //Mise à jour de l'écran
+    i.apply_surface(0,0,i.background(),i.screen(),NULL);
+    i.apply_surface(0,0,i.blobs(),i.screen(),NULL);
+    if( SDL_Flip( i.screen() ) == -1 )
+    {
+        return 1;
+    }
+    while( quit == false )
+    {
+        while( SDL_PollEvent( &(i.event()) ) )
+        {
+            if( i.event().type == SDL_QUIT )
+            {
+                quit = true;
+            }
+        }
+    }
     return 0;
 }
 //*/
