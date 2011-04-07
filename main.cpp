@@ -5,7 +5,7 @@
 #include <iostream>
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
-
+#include "include/InterfaceX.h"
 //*
 int main( int argc, char* args[] ){
     Grille* grille = new Grille('t');

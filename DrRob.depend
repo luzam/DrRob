@@ -526,9 +526,9 @@
 	<string.h>
 	"../include/SDL_rotozoom.h"
 
-1302182274 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\sdl_rotozoom.h
+1302185306 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\sdl_rotozoom.h
 	<math.h>
-	"../SDL/include/SDL.h"
+	<SDL.h>
 
 1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl.h
 	"SDL_main.h"
@@ -710,10 +710,15 @@
 	"begin_code.h"
 	"close_code.h"
 
-1302184033 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\main.cpp
+1302185159 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	"include/SDL_rotozoom.h"
 	<iostream>
 	"include/MoteurPhy.h"
 	"include/Game.h"
+	"include/InterfaceX.h"
 
 1302182513 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl_image\include\sdl_image.h
 	"../../SDL/include/SDL.h"
@@ -741,4 +746,14 @@
 
 1302184085 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\clock.h
 	<SDL.h>
+
+1302185099 source:c:\documents and settings\ahoarau\bureau\drrob\drrob\source\interfacex.cpp
+
+1302182063 c:\documents and settings\ahoarau\bureau\drrob\drrob\sdl\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302185105 c:\documents and settings\ahoarau\bureau\drrob\drrob\include\interfacex.h
 
