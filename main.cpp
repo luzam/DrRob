@@ -3,7 +3,6 @@
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
-<<<<<<< HEAD:main.cpp
 
 //coucou
 
@@ -12,15 +11,17 @@
 #include "include/Game.h"
 //#include "include/Game.h"
 
-//*
+//*//main lucas
 int main( int argc, char* args[] ){
 
 
     Game drRob(1,16);
     drRob.go();
     //dash.moteurPhy().majCombo();
+    return 0;
+}
 
-=======
+/*//main antoine
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
 #include "include/InterfaceX.h"
