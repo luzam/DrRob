@@ -31,7 +31,7 @@ protected:
     TTF_Font *_font;
     SDL_Color _textColor;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(700),_SCREEN_HEIGHT(200),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs)
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs)
     {
 
 

@@ -14,14 +14,32 @@
 //*//main lucas
 int main( int argc, char* args[] ){
 
-
+    bool quit=false;
     Game drRob(1,16);
-    InterfaceX i(4);
+    InterfaceX i(7);
     i.init();
     i.load_files();
     i.resize_files();
-    for(int j=0;j<i.vDash().size();j++)
+    i.compute_vDash();
+    for(size_t j=0;j<i.vDash().size();j++)
     std::cout<<"x : "<<i.vDash().at(j).x()<<"y : "<<i.vDash().at(j).y()<<std::endl;
+    for(size_t j=0;j<i.vDash().size();j++)
+    i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
+
+    if( SDL_Flip( i.screen() ) == -1 )
+    {
+        return 1;
+    }
+    while( quit == false )
+    {
+        while( SDL_PollEvent( &(i.event()) ))
+        {
+            if( i.event().type == SDL_QUIT )
+            {
+                quit = true;
+            }
+        }
+    }
 //    drRob.go();
     //dash.moteurPhy().majCombo();
     return 0;

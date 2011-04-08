@@ -68,15 +68,30 @@ bool InterfaceX::resize_files()
 
 bool InterfaceX::compute_vDash()
 {
-    int nbJoueursX=round(_nbJoueurs/2);
+    int nbJoueursX=round((_nbJoueurs+0.1)/2);
+            std::cout<<"xNbJoux :  "<<nbJoueursX<<std::endl;
+
     int posX,posY;
-    for(int i=1;i<=_vDash.size();i++){
-        posX=nbJoueursX*i-_dashboard->w;
+    for (int i=0;i<_vDash.size();i++)
+    {
+        if (i>=nbJoueursX)
+        {
+            posY=(_screen->h/2);
+            posX=(_screen->w)/nbJoueursX;
+        }
+        if(i==0)
+        posX=-_dashboard->w+(_screen->w)/nbJoueursX;
+        else
+        posX+=_dashboard->w;
         posY=0;
-        if(i>nbJoueursX)
-        posY+=(nbJoueursX+1);
+        if (i>=nbJoueursX)
+        {
+            posY=(_screen->h/2);
+            posX=0;
+        }
         _vDash.at(i).setX(posX);
         _vDash.at(i).setY(posY);
+        std::cout<<"x : "<<posX<<" y : "<<posY<<std::endl;
     }
     return true;
 }
