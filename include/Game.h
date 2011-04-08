@@ -22,6 +22,7 @@ public :
         for(int c=0; c<nbJoueurs; c++)
             _dashBoards.push_back(DashBoard());
     }
+    std::vector<DashBoard> dashboard(){return _dashBoards;}
 
 
 

@@ -1,92 +1,117 @@
 #include "../include/InterfaceX.h"
+#ifdef WIN32
+#define WINDOWS
+#endif
+#ifdef X64
+#define WINDOWS
+#endif
+#ifdef WINDOWS
 #include <direct.h>
-SDL_Surface* InterfaceX::load_image( std::string filename )
+#endif
+SDL_Surface* InterfaceX::load_img( std::string filename )
 {
-    //L'image qui est chargée
     SDL_Surface* loadedImage = NULL;
-
-    //L'image optimisée qu'on va utiliser
     SDL_Surface* optimizedImage = NULL;
-
-    //Chargement de l'image
     loadedImage = IMG_Load( filename.c_str() );
 
-    //Si l'image est chargée
-    if( loadedImage != NULL )
+    if ( loadedImage != NULL )
     {
-        //Création de l'image optimisée
-        optimizedImage = SDL_DisplayFormat( loadedImage );
-
-        //Libération de l'ancienne image
+        optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
         SDL_FreeSurface( loadedImage );
-
-        //Si la création de l'image optimisée s'est bien passée
-        if( optimizedImage != NULL )
-        {
-            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 0, 0xFF, 0xFF ) );
-        }
+        if ( optimizedImage != NULL )
+            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 255, 255, 0 ) );
     }
-
-    //On retourne l'image optimisée
     return optimizedImage;
 }
 void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip = NULL )
 {
     SDL_Rect offset;
-
     offset.x = x;
     offset.y = y;
-
-    //On blitte la surface
     SDL_BlitSurface( source, clip, destination, &offset );
 }
 bool InterfaceX::init()
 {
-    //Initialisation de tous les sous-systèmes de SDL
-    if( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
-    {
+    if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-    }
-
-    //Mise en place de l'écran
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE );
-
-    //S'il y a une erreur lors de la mise en place de l'écran
-    if( _screen == NULL )
-    {
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
+    if ( _screen == NULL )
         return false;
-    }
-
-    //Mise en place de la barre caption
-    SDL_WM_SetCaption( "Split the faces", NULL );
-
-    //Si tout s'est bien passé
+    SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
 }
+bool InterfaceX::resize_img(double pixel)
+{
+    double ratio = (_taille_blob)/_dashboard_ini->h;
+    std::cout<<"Taille dashboard : "<<_dashboard_ini->w<<"x"<<_dashboard_ini->h<<std::endl;
+    std::cout<<"Ratio : "<<ratio<<std::endl;
+
+    _dashboard=img_zoom_pixel(_dashboard_ini,pixel);
+    int nb_blobs_par_h=12;
+    double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
+    _blobs=img_zoom_pixel(_blobs_ini,taille_blob);
+    std::cout<<"Taille dashboard : "<<_dashboard->w<<"x"<<_dashboard->h<<std::endl;
+    if (_background==NULL || _blobs==NULL || _background==NULL)
+        return false;
+    return true;
+}
+
+bool InterfaceX::resize_files()
+{
+
+    if (_nbJoueurs<=2)
+        resize_img(_screen->h);
+    else
+        resize_img((_screen->h)/2);
+    return true;
+}
+bool InterfaceX::compute_pos_dashboards(){
+    for(int i=0;i<_nbJoueurs;i++){
+
+
+}
+
+
 bool InterfaceX::load_files()
 {
-    if(_chdir("img")==-1)
+#ifdef WINDOWS
+    if (_chdir("img")==-1)
         std::cout<<"Erreur dossier"<<std::endl;
+#else
+    if (chdir("img")==-1)
+        std::cout<<"Erreur dossier"<<std::endl;
+#endif
     //Chargement de la feuille de sprite
-    _blobs = load_image( "puyo3.png" );
+    _background = load_img("background.png");
+    _dashboard_ini = load_img("dashboard.png");
+    _blobs_ini = load_img( "blobs.png" );
 
     //S'il y a eu un problème au chargement de la feuille de sprites
-    if( _blobs == NULL )
+    if ( _blobs_ini == NULL || _background==NULL || _blobs_ini==NULL)
     {
         return false;
     }
-
     //Si tout s'est bien passé
     return true;
 }
 void InterfaceX::clean_up()
 {
-    //On libère la feuille de sprites
     SDL_FreeSurface( _blobs );
     SDL_FreeSurface(_background);
-    //On quitte SDL
     SDL_Quit();
 }
+
+SDL_Surface* InterfaceX::img_zoom_pixel(SDL_Surface *surface1,int pixel)
+{
+    double carre=pixel;
+    double carre2=surface1->h;
+    double zoom=(double)carre/(double)carre2;
+    SDL_Surface *tmp=rotozoomSurfaceXY(surface1,0,zoom,zoom,1);
+    SDL_FreeSurface(surface1);
+    return tmp;
+}
+
+
 /*int main( int argc, char* args[] )
 {
     //Ce qui va nous permettre de quitter

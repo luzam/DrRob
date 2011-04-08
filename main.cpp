@@ -6,18 +6,19 @@
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
 #include "include/InterfaceX.h"
-//*
 int main( int argc, char* args[] ){
     bool quit=false;
     std::cout<<"DrRob cree par Antoine Hoarau"<<std::endl;
     Grille* grille = new Grille('t');
     MoteurPhy turboteur(8,1,grille);
     turboteur.majCombo();
-    InterfaceX i(1);
+    InterfaceX i(4);
     i.init();
     i.load_files();
+    i.resize_files();
     //Mise à jour de l'écran
     i.apply_surface(0,0,i.background(),i.screen(),NULL);
+    i.apply_surface(0,0,i.dashboard(),i.screen(),NULL);
     i.apply_surface(0,0,i.blobs(),i.screen(),NULL);
     if( SDL_Flip( i.screen() ) == -1 )
     {
@@ -25,7 +26,7 @@ int main( int argc, char* args[] ){
     }
     while( quit == false )
     {
-        while( SDL_PollEvent( &(i.event()) ) )
+        while( SDL_PollEvent( &(i.event()) ))
         {
             if( i.event().type == SDL_QUIT )
             {

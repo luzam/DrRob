@@ -7,8 +7,8 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin\Debug\DrRob" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
+				<Option output="bin/Debug/DrRob" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -16,8 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin\Release\DrRob" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
+				<Option output="bin/Release/DrRob" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
@@ -30,45 +30,35 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="SDL\include" />
-			<Add directory="SDL_ttf\include" />
-			<Add directory="SDL_image\include" />
+			<Add directory="SDL/include" />
+			<Add directory="SDL_ttf/include" />
+			<Add directory="SDL_image/include" />
 		</Compiler>
 		<Linker>
-			<Add library="mingw32" />
-			<Add library="user32" />
-			<Add library="gdi32" />
-			<Add library="winmm" />
-			<Add library="dxguid" />
-			<Add library="SDL_image\lib\SDL_image.lib" />
-			<Add library="SDL_ttf\lib\SDL_ttf.lib" />
-			<Add library="SDL\lib\SDL_image.lib" />
-			<Add library="SDL\lib\libSDLmain.a" />
-			<Add library="SDL\lib\SDL.dll" />
-			<Add directory="SDL\lib" />
-			<Add directory="SDL_image\lib" />
-			<Add directory="SDL_ttf\lib" />
+			<Add directory="SDL/lib" />
+			<Add directory="SDL_image/lib" />
+			<Add directory="SDL_ttf/lib" />
 		</Linker>
 		<Unit filename="ARIAL.TTF" />
 		<Unit filename="cb.bmp" />
-		<Unit filename="include\Blobs.h" />
-		<Unit filename="include\Clock.h" />
-		<Unit filename="include\Color.h" />
-		<Unit filename="include\DashBoard.h" />
-		<Unit filename="include\Game.h" />
-		<Unit filename="include\Grille.h" />
-		<Unit filename="include\InterfaceX.h" />
-		<Unit filename="include\Link.h" />
-		<Unit filename="include\MoteurPhy.h" />
-		<Unit filename="include\Position.h" />
-		<Unit filename="include\SDL_rotozoom.h" />
-		<Unit filename="include\State.h" />
-		<Unit filename="include\Tree.h" />
-		<Unit filename="include\conected.h" />
+		<Unit filename="include/Blobs.h" />
+		<Unit filename="include/Clock.h" />
+		<Unit filename="include/Color.h" />
+		<Unit filename="include/DashBoard.h" />
+		<Unit filename="include/Game.h" />
+		<Unit filename="include/Grille.h" />
+		<Unit filename="include/InterfaceX.h" />
+		<Unit filename="include/Link.h" />
+		<Unit filename="include/MoteurPhy.h" />
+		<Unit filename="include/Position.h" />
+		<Unit filename="include/SDL_rotozoom.h" />
+		<Unit filename="include/State.h" />
+		<Unit filename="include/Tree.h" />
+		<Unit filename="include/conected.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="source\InterfaceX.cpp" />
-		<Unit filename="source\MoteurPhy.cpp" />
-		<Unit filename="source\SDL_rotozoom.c">
+		<Unit filename="source/InterfaceX.cpp" />
+		<Unit filename="source/MoteurPhy.cpp" />
+		<Unit filename="source/SDL_rotozoom.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
