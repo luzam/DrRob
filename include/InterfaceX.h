@@ -5,7 +5,8 @@
 #include <iostream>
 #include <SDL_ttf.h>
 #include "SDL_rotozoom.h"
-
+#include <vector>
+#include "Position.h"
 class InterfaceX
 {
 protected:
@@ -21,6 +22,7 @@ protected:
     SDL_Rect *offset_dash_nextBlob;
     SDL_Rect *offset_dash_score;
     SDL_Surface *_dashboard;
+    std::vector<Position> _vDash;
     SDL_Surface *_background;
     SDL_Surface *_screen;
     SDL_Surface *_dashboard_ini;
@@ -29,7 +31,7 @@ protected:
     TTF_Font *_font;
     SDL_Color _textColor;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(700),_SCREEN_HEIGHT(200),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs)
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(700),_SCREEN_HEIGHT(200),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs)
     {
 
 
@@ -45,6 +47,7 @@ public:
     bool init();
     bool load_files();
     void clean_up();
+    std::vector<Position> vDash()const{return _vDash;}
     SDL_Surface* screen(){return _screen;}
     SDL_Event event(){return _event;}
     SDL_Surface* blobs(){return _blobs;}
@@ -53,5 +56,6 @@ public:
     bool resize_files();
     SDL_Surface* img_zoom_pixel(SDL_Surface *surface1,int pixel);
     bool resize_img(double pixel);
+    bool compute_vDash();
 };
 #endif // INTERFACEX_H_INCLUDED

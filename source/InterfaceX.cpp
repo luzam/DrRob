@@ -65,10 +65,20 @@ bool InterfaceX::resize_files()
         resize_img((_screen->h)/2);
     return true;
 }
-bool InterfaceX::compute_pos_dashboards(){
-    for(int i=0;i<_nbJoueurs;i++){
 
-
+bool InterfaceX::compute_vDash()
+{
+    int nbJoueursX=round(_nbJoueurs/2);
+    int posX,posY;
+    for(int i=1;i<=_vDash.size();i++){
+        posX=nbJoueursX*i-_dashboard->w;
+        posY=0;
+        if(i>nbJoueursX)
+        posY+=(nbJoueursX+1);
+        _vDash.at(i).setX(posX);
+        _vDash.at(i).setY(posY);
+    }
+    return true;
 }
 
 

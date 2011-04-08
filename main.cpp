@@ -3,7 +3,7 @@
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
-
+#include "include/InterfaceX.h"
 //coucou
 
 //#endif
@@ -16,7 +16,13 @@ int main( int argc, char* args[] ){
 
 
     Game drRob(1,16);
-    drRob.go();
+    InterfaceX i(4);
+    i.init();
+    i.load_files();
+    i.resize_files();
+    for(int j=0;j<i.vDash().size();j++)
+    std::cout<<"x : "<<i.vDash().at(j).x()<<"y : "<<i.vDash().at(j).y()<<std::endl;
+//    drRob.go();
     //dash.moteurPhy().majCombo();
     return 0;
 }

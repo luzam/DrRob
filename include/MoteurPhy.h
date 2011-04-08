@@ -1,14 +1,9 @@
 #ifndef MOTEURPHY_H
 #define MOTEURPHY_H
-
-<<<<<<< HEAD:include/MoteurPhy.h
 #define TOUCHING_ANIM_TIME 10
 #define FALLING_ANIM_TIME 10
 #define COMBOTING_ANIM_TIME 10
-
-=======
 #include <stdio.h>
->>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:include/MoteurPhy.h
 #include "Position.h"
 #include "Grille.h"
 #include "Tree.h"
