@@ -1,16 +1,9 @@
-/*#ifdef __cplusplus
-    #include <cstdlib>
-#else
-    #include <stdlib.h>
-#endif
-#ifdef __APPLE__
-#include <SDL/SDL.h>
-#else*/
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
+<<<<<<< HEAD:main.cpp
 
 //coucou
 
@@ -27,6 +20,38 @@ int main( int argc, char* args[] ){
     drRob.go();
     //dash.moteurPhy().majCombo();
 
+=======
+#include "include/MoteurPhy.h"
+#include "include/Game.h"
+#include "include/InterfaceX.h"
+//*
+int main( int argc, char* args[] ){
+    bool quit=false;
+    std::cout<<"DrRob cree par Antoine Hoarau"<<std::endl;
+    Grille* grille = new Grille('t');
+    MoteurPhy turboteur(8,1,grille);
+    turboteur.majCombo();
+    InterfaceX i(1);
+    i.init();
+    i.load_files();
+    //Mise à jour de l'écran
+    i.apply_surface(0,0,i.background(),i.screen(),NULL);
+    i.apply_surface(0,0,i.blobs(),i.screen(),NULL);
+    if( SDL_Flip( i.screen() ) == -1 )
+    {
+        return 1;
+    }
+    while( quit == false )
+    {
+        while( SDL_PollEvent( &(i.event()) ) )
+        {
+            if( i.event().type == SDL_QUIT )
+            {
+                quit = true;
+            }
+        }
+    }
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:main.cpp
     return 0;
 }
 //*/

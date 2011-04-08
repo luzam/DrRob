@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD:DrRob.layout
 	<File name="include\Blobs.h" open="1" top="0" tabpos="6">
 		<Cursor position="1048" topLine="34" />
+=======
+	<File name="include\Clock.h" open="0" top="0" tabpos="4">
+		<Cursor position="443" topLine="0" />
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
 	</File>
-	<File name="include\Clock.h" open="0" top="0" tabpos="10">
-		<Cursor position="356" topLine="8" />
+	<File name="include\Game.h" open="1" top="0" tabpos="2">
+		<Cursor position="288" topLine="0" />
 	</File>
+<<<<<<< HEAD:DrRob.layout
 	<File name="include\Color.h" open="1" top="0" tabpos="8">
 		<Cursor position="83" topLine="0" />
 	</File>
@@ -33,10 +39,21 @@
 	</File>
 	<File name="include\Tree.h" open="0" top="0" tabpos="7">
 		<Cursor position="147" topLine="0" />
+=======
+	<File name="include\InterfaceX.h" open="1" top="0" tabpos="4">
+		<Cursor position="1323" topLine="0" />
+	</File>
+	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="3">
+		<Cursor position="61" topLine="0" />
+	</File>
+	<File name="include\SDL_rotozoom.h" open="0" top="0" tabpos="5">
+		<Cursor position="313" topLine="0" />
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
 	</File>
 	<File name="include\conected.h" open="0" top="0" tabpos="0">
-		<Cursor position="1697" topLine="64" />
+		<Cursor position="283" topLine="150" />
 	</File>
+<<<<<<< HEAD:DrRob.layout
 	<File name="main.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="453" topLine="17" />
 	</File>
@@ -45,8 +62,15 @@
 	</File>
 	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="5344" topLine="165" />
+=======
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="607" topLine="0" />
 	</File>
-	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
-		<Cursor position="227" topLine="6" />
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2381" topLine="48" />
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
+	</File>
+	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="8000" topLine="239" />
 	</File>
 </CodeBlocks_layout_file>

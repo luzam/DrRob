@@ -332,6 +332,7 @@ int MoteurPhy::majCombo()
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
+<<<<<<< HEAD:source/MoteurPhy.cpp
     for(int l=0; l<13; l++)
     {
         for(int c=0; c<6; c++)
@@ -342,6 +343,9 @@ int MoteurPhy::majCombo()
     }
     std::cout<<std::endl;
     return combo;
+=======
+    return retourPos;
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:source/MoteurPhy.cpp
 }
 
 /** @brief make blobs fall after a combote
@@ -352,7 +356,7 @@ void MoteurPhy::fall()
 {
 
 
-
+    return std::vector<Position>();
 }
 
 

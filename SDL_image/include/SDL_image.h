@@ -25,9 +25,9 @@
 #ifndef _SDL_IMAGE_H
 #define _SDL_IMAGE_H
 
-#include "SDL.h"
-#include "SDL_version.h"
-#include "begin_code.h"
+#include "../../SDL/include/SDL.h"
+#include "../../SDL/include/SDL_version.h"
+#include "../../SDL/include/begin_code.h"
 
 /* Set up for C function definitions, even when using C++ */
 #ifdef __cplusplus
@@ -131,6 +131,6 @@ extern DECLSPEC SDL_Surface * SDLCALL IMG_ReadXPMFromArray(char **xpm);
 #ifdef __cplusplus
 }
 #endif
-#include "close_code.h"
+#include "../../SDL/include/close_code.h"
 
 #endif /* _SDL_IMAGE_H */
