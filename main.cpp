@@ -3,6 +3,25 @@
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
+
+//coucou
+
+//#endif
+//#include "include/DashBoard.h"
+#include "include/Game.h"
+//#include "include/Game.h"
+
+//*//main lucas
+int main( int argc, char* args[] ){
+
+
+    Game drRob(1,16);
+    drRob.go();
+    //dash.moteurPhy().majCombo();
+    return 0;
+}
+
+/*//main antoine
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
 #include "include/InterfaceX.h"
@@ -33,6 +52,7 @@ int main( int argc, char* args[] ){
             }
         }
     }
+>>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:main.cpp
     return 0;
 }
 //*/
