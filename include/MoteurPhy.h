@@ -1,14 +1,11 @@
 #ifndef MOTEURPHY_H
 #define MOTEURPHY_H
 
-<<<<<<< HEAD:include/MoteurPhy.h
 #define TOUCHING_ANIM_TIME 10
 #define FALLING_ANIM_TIME 10
 #define COMBOTING_ANIM_TIME 10
 
-=======
 #include <stdio.h>
->>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:include/MoteurPhy.h
 #include "Position.h"
 #include "Grille.h"
 #include "Tree.h"
@@ -21,7 +18,7 @@ class MoteurPhy{
 
         protected :
     int _taille;
-    Position _posBlobPivot;
+    Position* _posBlobPivot;
     Color _colorMaster;
     Color _colorSlave;
     int _vitesseBlob;
@@ -33,16 +30,15 @@ class MoteurPhy{
     int _colBlobCourant;
     int _touching;
     int _comboting;
-    const int ligneBlobCourant()const{return (int)(_posBlobPivot.y()/_taille);}
-    const int colBlobCourant()const{return (int)(_posBlobPivot.x()/_taille);}
+    const int ligneBlobCourant()const{return (int)((*_posBlobPivot).y()/_taille);}
+    const int colBlobCourant()const{return (int)((*_posBlobPivot).x()/_taille);}
     void ajoutGrille();
 
 
     public :
     MoteurPhy(int taille,Grille<Blobs>* grille):
-    _taille(taille),_posBlobPivot(2*_taille,0),_vitesseBlob(2),_orientation( HAUT),_comboAct(0),_launchCombo(false),
-    _grille(grille),_ligneBlobCourant(0),_colBlobCourant(2),_touching(0),_comboting(0){};
-    MoteurPhy(){} // temporaire pour DashBoard, a supprimer
+    _taille(taille),_vitesseBlob(2),_orientation( HAUT),_comboAct(0),_launchCombo(false),
+    _grille(grille),_ligneBlobCourant(0),_colBlobCourant(2),_touching(0),_comboting(0){_posBlobPivot = new Position(2*_taille,0);}
     ~MoteurPhy(){}
 
     void rotationHoraire();

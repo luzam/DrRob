@@ -30,11 +30,21 @@ void Game::go()
             case SDLK_ESCAPE: /* Appui sur la touche Echap, on arrête le programme */
                 continuer = 0;
                  break;
+            case SDLK_LEFT :
+                _dashBoards.at(0).moteurPhy().gauche();
+                break;
+            case SDLK_RIGHT :
+                _dashBoards.at(0).moteurPhy().droite();
+                break;
+            case SDLK_DOWN :
+                _dashBoards.at(0).moteurPhy().speedUp();
+                break;
+
                 default : break;
             }
             break;
         }
-        for(int i=0; i<_dashBoards.size(); i++)
+        for(size_t i=0; i<_dashBoards.size(); i++)
             _dashBoards.at(i).moteurPhy().moove();
         //on blit tout
         // SDL_blit ...
