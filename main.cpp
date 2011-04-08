@@ -15,15 +15,17 @@
 //coucou
 
 //#endif
-#include "include/MoteurPhy.h"
-
+//#include "include/DashBoard.h"
 #include "include/Game.h"
+//#include "include/Game.h"
 
 //*
 int main( int argc, char* args[] ){
-    Grille* grille = new Grille('t');
-    MoteurPhy turboteur(8,1,grille);
-    turboteur.majCombo();
+
+
+    Game drRob(1,16);
+    drRob.go();
+    //dash.moteurPhy().majCombo();
 
     return 0;
 }

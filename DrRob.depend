@@ -394,7 +394,7 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1302023081 source:c:\users\lucas\desktop\drrob\main.cpp
+1302255110 source:c:\users\lucas\desktop\drrob\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<SDL/SDL.h>
@@ -403,7 +403,6 @@
 	<SDL_ttf.h>
 	"include/SDL_rotozoom.h"
 	<iostream>
-	"include/MoteurPhy.h"
 	"include/Game.h"
 
 1301582604 c:\users\lucas\desktop\drrob\sdl_rotozoom.h
@@ -416,7 +415,7 @@
 	<string.h>
 	"SDL_rotozoom.h"
 
-1302099341 c:\users\lucas\desktop\drrob\include\moteurphy.h
+1302253214 c:\users\lucas\desktop\drrob\include\moteurphy.h
 	"Position.h"
 	"Grille.h"
 	"Tree.h"
@@ -427,11 +426,12 @@
 
 1301660035 c:\users\lucas\desktop\drrob\include\position.h
 
-1302087280 c:\users\lucas\desktop\drrob\include\grille.h
+1302249011 c:\users\lucas\desktop\drrob\include\grille.h
 	<iostream>
 	<assert.h>
+	<vector>
 
-1302100197 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
+1302253696 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
 	"../include/MoteurPhy.h"
 
 1302028516 c:\users\lucas\desktop\drrob\include\blob.h
@@ -441,17 +441,21 @@
 
 1301846277 c:\users\lucas\desktop\drrob\include\tree.h
 
-1302086867 c:\users\lucas\desktop\drrob\include\game.h
+1302253782 c:\users\lucas\desktop\drrob\include\game.h
+	"SDL.h"
 	"Blobs.h"
 	"MoteurPhy.h"
 	"DashBoard.h"
 	"Clock.h"
 	<vector>
 	<assert.h>
+	<stdlib.h>
+	<time.h>
 
-1302035001 c:\users\lucas\desktop\drrob\include\dashboard.h
+1302253233 c:\users\lucas\desktop\drrob\include\dashboard.h
 	"Blobs.h"
 	"Position.h"
+	"MoteurPhy.h"
 	<vector>
 
 1301986681 c:\users\lucas\desktop\drrob\include\clock.h
@@ -459,11 +463,11 @@
 
 1301850171 c:\users\lucas\desktop\drrob\include\enums.h
 
-1301985206 c:\users\lucas\desktop\drrob\include\state.h
+1302249715 c:\users\lucas\desktop\drrob\include\state.h
 
-1301985150 c:\users\lucas\desktop\drrob\include\color.h
+1302249712 c:\users\lucas\desktop\drrob\include\color.h
 
-1301985259 c:\users\lucas\desktop\drrob\include\link.h
+1302189089 c:\users\lucas\desktop\drrob\include\link.h
 
 1301985932 source:c:\users\lucas\desktop\drrob\source\sdl_rotozoom.c
 	<windows.h>
@@ -471,16 +475,396 @@
 	<string.h>
 	"../include/SDL_rotozoom.h"
 
-1301582604 c:\users\lucas\desktop\drrob\include\sdl_rotozoom.h
+1302185177 c:\users\lucas\desktop\drrob\include\sdl_rotozoom.h
 	<math.h>
-	"SDL.h"
+	<SDL.h>
 
-1301995962 c:\users\lucas\desktop\drrob\include\conected.h
+1302185441 c:\users\lucas\desktop\drrob\include\conected.h
 	<vector>
 	<algorithm>
 
-1302035096 c:\users\lucas\desktop\drrob\include\blobs.h
+1302195357 c:\users\lucas\desktop\drrob\include\blobs.h
 	"State.h"
 	"Color.h"
 	"Link.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1255800464 c:\users\lucas\desktop\drrob\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_platform.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\begin_code.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\close_code.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_keysym.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1255800464 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_platform.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\begin_code.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\close_code.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_keysym.h
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1255800450 c:\users\lucas\desktop\drrob\sdl\include\sdl\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1258249878 c:\users\lucas\desktop\drrob\sdl\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1185006604 c:\users\lucas\desktop\drrob\sdl_ttf\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1258246278 c:\users\lucas\desktop\drrob\sdl_image\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302255100 source:c:\users\lucas\desktop\drrob\source\game.cpp
+	"../include/Game.h"
 

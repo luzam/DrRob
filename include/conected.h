@@ -72,7 +72,7 @@ private:
     int new_label() {
 		// Thanks to Pierre Grinspan for suggesting using capacity()
 		// instead of size() here.
-		if(highest_label+1 > labels.capacity())
+		if(highest_label+1 >(unsigned char) labels.capacity())
 			labels.reserve(highest_label*2);
 		labels.resize(highest_label+1);
 		labels[highest_label] = Similarity(highest_label);
@@ -126,7 +126,7 @@ ConnectedComponents::label_image(const Tin *img, Tlabel *labelimg,
     label(&row[0]) = new_label();
 
     // label the first row.
-    for(int c=1, r=0; c<width; ++c) {
+    for(int c=1; c<width; ++c) {
 	if(SAME(row[c], row[c-1]))
 	    label(&row[c]) = label(&row[c-1]);
 	else
@@ -173,7 +173,7 @@ int
 ConnectedComponents::relabel_image(Tlabel *labelimg, int width, int height)
 {
     int newtag = 0;
-    for(int id=0; id<labels.size(); ++id)
+    for(int id=0; id<(unsigned char)labels.size(); ++id)
 	if(is_root_label(id))
 	    labels[id].tag = newtag++;
 

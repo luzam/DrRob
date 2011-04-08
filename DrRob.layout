@@ -2,34 +2,34 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include\Blobs.h" open="1" top="0" tabpos="6">
-		<Cursor position="384" topLine="0" />
+		<Cursor position="1048" topLine="34" />
 	</File>
 	<File name="include\Clock.h" open="0" top="0" tabpos="10">
 		<Cursor position="356" topLine="8" />
 	</File>
-	<File name="include\Color.h" open="0" top="0" tabpos="0">
-		<Cursor position="87" topLine="0" />
+	<File name="include\Color.h" open="1" top="0" tabpos="8">
+		<Cursor position="83" topLine="0" />
 	</File>
 	<File name="include\DashBoard.h" open="1" top="0" tabpos="5">
-		<Cursor position="409" topLine="9" />
+		<Cursor position="856" topLine="22" />
 	</File>
 	<File name="include\Game.h" open="1" top="0" tabpos="7">
-		<Cursor position="49" topLine="0" />
+		<Cursor position="50" topLine="11" />
 	</File>
 	<File name="include\Grille.h" open="1" top="0" tabpos="4">
-		<Cursor position="352" topLine="0" />
+		<Cursor position="314" topLine="0" />
 	</File>
-	<File name="include\Link.h" open="0" top="0" tabpos="0">
-		<Cursor position="111" topLine="0" />
+	<File name="include\Link.h" open="1" top="0" tabpos="9">
+		<Cursor position="99" topLine="0" />
 	</File>
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="1">
-		<Cursor position="1243" topLine="31" />
+		<Cursor position="1484" topLine="41" />
 	</File>
 	<File name="include\Position.h" open="0" top="0" tabpos="5">
 		<Cursor position="0" topLine="10" />
 	</File>
-	<File name="include\State.h" open="0" top="0" tabpos="0">
-		<Cursor position="121" topLine="0" />
+	<File name="include\State.h" open="1" top="0" tabpos="10">
+		<Cursor position="80" topLine="0" />
 	</File>
 	<File name="include\Tree.h" open="0" top="0" tabpos="7">
 		<Cursor position="147" topLine="0" />
@@ -38,10 +38,13 @@
 		<Cursor position="1697" topLine="64" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="421" topLine="15" />
+		<Cursor position="453" topLine="17" />
 	</File>
-	<File name="source\MoteurPhy.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="7270" topLine="238" />
+	<File name="source\Game.cpp" open="1" top="1" tabpos="11">
+		<Cursor position="626" topLine="12" />
+	</File>
+	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="5344" topLine="165" />
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="227" topLine="6" />
