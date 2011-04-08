@@ -25,7 +25,6 @@ int main( int argc, char* args[] ){
     std::cout<<"x : "<<i.vDash().at(j).x()<<"y : "<<i.vDash().at(j).y()<<std::endl;
     for(size_t j=0;j<i.vDash().size();j++)
     i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
-
     if( SDL_Flip( i.screen() ) == -1 )
     {
         return 1;

@@ -58,40 +58,52 @@ bool InterfaceX::resize_img(double pixel)
 
 bool InterfaceX::resize_files()
 {
-
+    int nbJoueursX=round((_nbJoueurs+0.1)/2);
     if (_nbJoueurs<=2)
         resize_img(_screen->h);
     else
         resize_img((_screen->h)/2);
-    return true;
+    if (_dashboard->w*nbJoueursX>_screen->w)
+    {
+        int minw=_dashboard->w/nbJoueursX;
+
+    }
 }
 
+/** @brief Calcule les positions des differents dashboard
+*
+*
+*/
 bool InterfaceX::compute_vDash()
 {
     int nbJoueursX=round((_nbJoueurs+0.1)/2);
-            std::cout<<"xNbJoux :  "<<nbJoueursX<<std::endl;
+    std::cout<<"xNbJoux :  "<<nbJoueursX<<std::endl;
 
     int posX,posY;
-    for (int i=0;i<_vDash.size();i++)
-    {
-        if (i>=nbJoueursX)
+    //Soit le nombre de joueurs sur X fois la taille d'un dashboard esst suffisante soit on doit redimensionner en W
+
+
+
+        for (int j=0;j<nbJoueursX;j++)
         {
-            posY=(_screen->h/2);
-            posX=(_screen->w)/nbJoueursX;
+            if (i>=nbJoueursX)
+            {
+                posY=(_screen->h/2);
+                posX=(_screen->w)/nbJoueursX;
+            }
+            if (i==0)
+                posX=-_dashboard->w+(_screen->w)/nbJoueursX;
+            else
+                posX+=_dashboard->w;
+            posY=0;
+            if (i>=nbJoueursX)
+            {
+                posY=(_screen->h/2);
+                posX=0;
+            }
+            _vDash.at(i).setX(posX);
+            _vDash.at(i).setY(posY);
         }
-        if(i==0)
-        posX=-_dashboard->w+(_screen->w)/nbJoueursX;
-        else
-        posX+=_dashboard->w;
-        posY=0;
-        if (i>=nbJoueursX)
-        {
-            posY=(_screen->h/2);
-            posX=0;
-        }
-        _vDash.at(i).setX(posX);
-        _vDash.at(i).setY(posY);
-        std::cout<<"x : "<<posX<<" y : "<<posY<<std::endl;
     }
     return true;
 }
