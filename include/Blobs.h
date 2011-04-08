@@ -16,7 +16,9 @@ protected :
 public :
     Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
         _color(color),_state(state),_link(link) {}
-    Blobs(){}//a supprimer, pour DashBoard pour linstant
+    Blobs(int zero):_color(BLANK),_state(NO_STATE),_link(NO_LINK){}
+    Blobs(const Blobs& blob): _color(blob.color()),_state(blob.state()),_link(blob.link()){}
+    Blobs(){}
     ~Blobs() {}
 
     const Color color()const
@@ -42,6 +44,11 @@ public :
     void setLink(Link link)
     {
         _link = link;
+    }
+    void setBlob(Color color, State state, Link link){
+    _link = link;
+    _color = color;
+    _state = state;
     }
 };
 

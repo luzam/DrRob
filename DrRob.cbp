@@ -59,12 +59,40 @@
 		<Unit filename="source/InterfaceX.cpp" />
 		<Unit filename="source/MoteurPhy.cpp" />
 		<Unit filename="source/SDL_rotozoom.c">
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
+		</Compiler>
+		<Linker>
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
+			<Add directory="SDL_image\include" />
+		</Linker>
+		<Unit filename="include\Blobs.h" />
+		<Unit filename="include\Clock.h" />
+		<Unit filename="include\Color.h" />
+		<Unit filename="include\DashBoard.h" />
+		<Unit filename="include\Enums.h" />
+		<Unit filename="include\Game.h" />
+		<Unit filename="include\Grille.h" />
+		<Unit filename="include\InterfaceX.h" />
+		<Unit filename="include\Link.h" />
+		<Unit filename="include\MoteurPhy.h" />
+		<Unit filename="include\Position.h" />
+		<Unit filename="include\SDL_rotozoom.h" />
+		<Unit filename="include\State.h" />
+		<Unit filename="include\Tree.h" />
+		<Unit filename="include\conected.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="source\Game.cpp" />
+		<Unit filename="source\InterfaceX.cpp" />
+		<Unit filename="source\MoteurPhy.cpp" />
+		<Unit filename="source\SDL_rotozoom.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
 			<code_completion />
-			<debugger />
 			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

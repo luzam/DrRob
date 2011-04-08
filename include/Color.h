@@ -1,7 +1,7 @@
 #ifndef COLOR_H
 #define COLOR_H
 
-enum Color {BLUE=0,RED,GREEN,YELLOW,PURPLE,DARK};
+enum Color {RED=0,BLUE,YELLOW,GREEN,PURPLE,DARK,BLANK};
 
 
 
