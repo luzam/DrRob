@@ -31,14 +31,14 @@ protected:
     TTF_Font *_font;
     SDL_Color _textColor;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs),_ratio(1),_offset_dash_grille()
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs),_ratio(1)
     {
-_dashboard=NULL;
-_background=NULL;
-_screen=NULL;
-_dashboard_ini=NULL;
-_background_ini=NULL;
-_blobs_ini=NULL;
+        _dashboard=NULL;
+        _background=NULL;
+        _screen=NULL;
+        _dashboard_ini=NULL;
+        _background_ini=NULL;
+        _blobs_ini=NULL;
 
     }
     ~InterfaceX()
@@ -52,19 +52,40 @@ _blobs_ini=NULL;
     bool init();
     bool load_files();
     void clean_up();
-    Position offset_grille()const{return _offset_dash_grille;}
-    std::vector<Position> vDash()const{return _vDash;}
-    SDL_Surface* screen()const{return _screen;}
-    SDL_Event event()const{return _event;}
-    SDL_Surface* blobs()const{return _blobs;}
-    SDL_Surface* background()const{return _background;}
-    SDL_Surface* dashboard()const{return _dashboard;}
+    Position offset_grille()const
+    {
+        return _offset_dash_grille;
+    }
+    std::vector<Position> vDash()const
+    {
+        return _vDash;
+    }
+    SDL_Surface* screen()const
+    {
+        return _screen;
+    }
+    SDL_Event event()const
+    {
+        return _event;
+    }
+    SDL_Surface* blobs()const
+    {
+        return _blobs;
+    }
+    SDL_Surface* background()const
+    {
+        return _background;
+    }
+    SDL_Surface* dashboard()const
+    {
+        return _dashboard;
+    }
     bool resize_files();
     SDL_Surface* img_zoom_pixel_H(SDL_Surface *surface1,int pixel);
     SDL_Surface* img_zoom_pixel_W(SDL_Surface *surface1,int pixel);
     bool resize_img_H(double pixel);
-     bool resize_img_W(double pixel);
-     bool compute_offsets();
+    bool resize_img_W(double pixel);
+    bool compute_offsets();
     bool compute_vDash();
 };
 #endif // INTERFACEX_H_INCLUDED

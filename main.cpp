@@ -1,8 +1,11 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
+#include <stdlib.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
+#include <time.h>
+#include "include/Color.h"
 #include "include/InterfaceX.h"
 //#endif
 //#include "include/DashBoard.h"
@@ -10,11 +13,27 @@
 //#include "include/Game.h"
 
 //*//main lucas
-int main( int argc, char* argv[] ){
+int main( int argc, char* argv[] )
+{
+    //////////////////////CREATION D'UNE GRILLE DE TEST
+    srand(time(NULL));
+    int r=0;
+    Grille<Blobs>* maGrille = new Grille<Blobs>();
+    for(int l=0; l<6; l++)
+    {
+        for(int c=0; c<13; c++)
+        {
+            std::cout<<Color(rand() %6);
 
+            (*maGrille)(l,c).setColor(Color(rand() %6+1));
+          //  std::cout<<((*maGrille)(l,c)).color();
+        }
+        std::cout<<""<<std::endl;
+    }
     bool quit=false;
-    Game drRob(1,16);
-    InterfaceX i(14);
+  //  Game drRob(1,16);
+  ////////////////////////////////CREATION DE L'INTERFACE DE TEST
+    InterfaceX i(4);
     i.init();
     i.load_files();
     i.resize_files();
@@ -22,16 +41,16 @@ int main( int argc, char* argv[] ){
     i.compute_offsets();
     std::cout<<"screen x : "<<i.screen()->w<<" screen y : "<<i.screen()->h<<std::endl;
     i.apply_surface(0,0,i.background(),i.screen(),NULL);
+/////////////////////////////////BLIT DES ELEMENTS
+    for(size_t j=0; j<i.vDash().size(); j++) //Affichage des coordonnées du vecteur de coordonnee des dashboard
+        std::cout<<"x : "<<i.vDash().at(j).x()<<" y : "<<i.vDash().at(j).y()<<std::endl;
 
-    for(size_t j=0;j<i.vDash().size();j++)
-    std::cout<<"x : "<<i.vDash().at(j).x()<<" y : "<<i.vDash().at(j).y()<<std::endl;
-
-    for(size_t j=0;j<i.vDash().size();j++)
-    i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
+    for(size_t j=0; j<i.vDash().size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
+        i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
     std::cout<<"Blobs : "<<i.blobs()->w<<"x"<<i.blobs()->h<<std::endl;
 
-    for(size_t j=0;j<i.vDash().size();j++)
-    i.apply_surface((i.offset_grille()).x()+i.vDash().at(j).x(),(i.offset_grille()).y()+i.vDash().at(j).y(),i.blobs(),i.screen(),NULL);
+    for(size_t j=0; j<i.vDash().size(); j++) //affichage des blobs utilisant le veteur et l'offset de la grille
+        i.apply_surface((i.offset_grille()).x()+i.vDash().at(j).x(),(i.offset_grille()).y()+i.vDash().at(j).y(),i.blobs(),i.screen(),NULL);
 
 
     if( SDL_Flip( i.screen() ) == -1 )

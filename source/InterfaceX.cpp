@@ -7,12 +7,12 @@
 #endif
 #include <stdio.h>  /* defines FILENAME_MAX */
 #ifdef WINDOWS
-    #include <direct.h>
-    #define GetCurrentDir _getcwd
+#include <direct.h>
+#define GetCurrentDir _getcwd
 #else
-    #include <unistd.h>
-    #define GetCurrentDir getcwd
- #endif
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#endif
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -25,7 +25,11 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
         SDL_FreeSurface( loadedImage );
         if ( optimizedImage != NULL )
             SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 255, 255, 0 ) );
-    }else{std::cout<<"Erreur Chargement image"<<std::endl;}
+    }
+    else
+    {
+        std::cout<<"Erreur Chargement image"<<std::endl;
+    }
     return optimizedImage;
 }
 void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip = NULL )
@@ -56,9 +60,9 @@ bool InterfaceX::resize_img_H(double pixel)
 {
 
     _dashboard=img_zoom_pixel_H(_dashboard_ini,pixel);
-  /*  int nb_blobs_par_h=12;
-    double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
-    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);*/
+    /*  int nb_blobs_par_h=12;
+      double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
+      _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);*/
 
     return true;
 }
@@ -73,14 +77,16 @@ bool InterfaceX::resize_files()
     std::cout<<"Taille dash W resized : "<<resizedDashW<<std::endl;
     if(nbJoueursX*resizedDashW<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
     {
-    std::cout<<"Assez de place en W"<<std::endl;
+        std::cout<<"Assez de place en W"<<std::endl;
         if (_nbJoueurs<=2)
             _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h);
         else
-           _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h/2);
-    }else{ //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
+            _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h/2);
+    }
+    else   //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
+    {
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
-            resize_img_W(_screen->w/nbJoueursX);
+        resize_img_W(_screen->w/nbJoueursX);
 
     }
     _ratio=(double)_dashboard->h/d_h_ini;
@@ -102,20 +108,21 @@ bool InterfaceX::compute_vDash()
 {
     int nbJoueursX=2;
     if(_nbJoueurs>2)
-    nbJoueursX=round((_nbJoueurs+0.1)/2);
+        nbJoueursX=round((_nbJoueurs+0.1)/2);
     std::cout<<"xNb joueurs en X :  "<<nbJoueursX<<std::endl;
 
     int posX=0,posY=0;
     if(_nbJoueurs>2)
-    posY=_screen->h/2-_dashboard->h;
+        posY=_screen->h/2-_dashboard->h;
     for (int j=0; j<_nbJoueurs; j++)
     {
         _vDash.at(j).setX(posX);
         _vDash.at(j).setY(posY);
         posX+=_dashboard->w;
-        if(j==nbJoueursX-1 && _nbJoueurs>2){
-        posX=0;
-        posY+=_dashboard->h;
+        if(j==nbJoueursX-1 && _nbJoueurs>2)
+        {
+            posX=0;
+            posY+=_dashboard->h;
         }
     }
     int decalage=(_screen->w -nbJoueursX*_dashboard->w)/2;
@@ -123,21 +130,23 @@ bool InterfaceX::compute_vDash()
     {
         _vDash.at(j).setX(_vDash.at(j).x()+decalage);
     }
-return true;
+    return true;
 }
-bool decouper_sprite(){
+bool decouper_sprite()
+{
 
 
 
 }
 
-bool InterfaceX::compute_offsets(){
+bool InterfaceX::compute_offsets()
+{
     std::cout<<"Calcul offsets"<<std::endl;
 
     _offset_dash_grille.setX((8)*(_ratio));
-    _offset_dash_grille.setY((32)*(_ratio));
+    _offset_dash_grille.setY((32-_taille_blob)*(_ratio));
     std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
-return true;
+    return true;
 }
 
 bool InterfaceX::load_files()
@@ -149,15 +158,15 @@ bool InterfaceX::load_files()
     if (chdir("img")==-1)
         std::cout<<"Erreur dossier"<<std::endl;
 #endif
-char cCurrentPath[FILENAME_MAX];
+    char cCurrentPath[FILENAME_MAX];
 
- if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
-     {
-     return errno;
-     }
+    if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
+    {
+        return errno;
+    }
 
-cCurrentPath[sizeof(cCurrentPath) - 1] = '/0'; /* not really required */
-std::cout<< cCurrentPath<<std::endl;
+    cCurrentPath[sizeof(cCurrentPath) - 1] = '/0'; /* not really required */
+    std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
