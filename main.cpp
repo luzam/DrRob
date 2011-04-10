@@ -14,7 +14,7 @@ int main( int argc, char* argv[] ){
 
     bool quit=false;
     Game drRob(1,16);
-    InterfaceX i(4);
+    InterfaceX i(14);
     i.init();
     i.load_files();
     i.resize_files();
@@ -25,10 +25,13 @@ int main( int argc, char* argv[] ){
 
     for(size_t j=0;j<i.vDash().size();j++)
     std::cout<<"x : "<<i.vDash().at(j).x()<<" y : "<<i.vDash().at(j).y()<<std::endl;
+
     for(size_t j=0;j<i.vDash().size();j++)
     i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
     std::cout<<"Blobs : "<<i.blobs()->w<<"x"<<i.blobs()->h<<std::endl;
-    i.apply_surface((i.offset_grille()).x(),(i.offset_grille()).y(),i.blobs(),i.screen(),NULL);
+
+    for(size_t j=0;j<i.vDash().size();j++)
+    i.apply_surface((i.offset_grille()).x()+i.vDash().at(j).x(),(i.offset_grille()).y()+i.vDash().at(j).y(),i.blobs(),i.screen(),NULL);
 
 
     if( SDL_Flip( i.screen() ) == -1 )

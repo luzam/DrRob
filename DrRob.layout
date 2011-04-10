@@ -20,7 +20,7 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="1">
-		<Cursor position="1548" topLine="3" />
+		<Cursor position="539" topLine="0" />
 	</File>
 	<File name="include\MoteurPhy.h" open="0" top="0" tabpos="5">
 		<Cursor position="222" topLine="0" />
@@ -35,10 +35,10 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="358" topLine="6" />
+		<Cursor position="359" topLine="1" />
 	</File>
 	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="4117" topLine="87" />
+		<Cursor position="3664" topLine="82" />
 	</File>
 	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="10481" topLine="249" />

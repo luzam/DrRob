@@ -47,24 +47,19 @@ bool InterfaceX::init()
 }
 bool InterfaceX::resize_img_W(double pixel)
 {
-    double ratio = (_taille_blob)/_dashboard_ini->h;
     _dashboard=img_zoom_pixel_W(_dashboard_ini,pixel);
-    int nb_blobs_par_h=12;
-    double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
-    _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob);
-    if (_background==NULL || _blobs==NULL || _background==NULL)
-        return false;
+////////
+
     return true;
 }
 bool InterfaceX::resize_img_H(double pixel)
 {
-    double ratio = (_taille_blob)/_dashboard_ini->h;
+
     _dashboard=img_zoom_pixel_H(_dashboard_ini,pixel);
-    int nb_blobs_par_h=12;
+  /*  int nb_blobs_par_h=12;
     double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
-    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);
-    if (_background==NULL || _blobs==NULL || _background==NULL)
-        return false;
+    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);*/
+
     return true;
 }
 bool InterfaceX::resize_files()
@@ -73,13 +68,16 @@ bool InterfaceX::resize_files()
     double ratio_dash = (double)(_dashboard_ini->w)/(double)(_dashboard_ini->h);
     double d_w_ini=_dashboard_ini->w;
     double d_h_ini=_dashboard_ini->h;
-    if(nbJoueursX*_screen->h*ratio_dash<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
+
+    int resizedDashW = ((double)_screen->h/2)*((double)_dashboard_ini->w)/((double)_dashboard_ini->h);
+    std::cout<<"Taille dash W resized : "<<resizedDashW<<std::endl;
+    if(nbJoueursX*resizedDashW<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
     {
     std::cout<<"Assez de place en W"<<std::endl;
         if (_nbJoueurs<=2)
-            resize_img_H(_screen->h);
+            _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h);
         else
-            resize_img_H(_screen->h/2);
+           _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h/2);
     }else{ //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
             resize_img_W(_screen->w/nbJoueursX);
@@ -87,6 +85,12 @@ bool InterfaceX::resize_files()
     }
     _ratio=(double)_dashboard->h/d_h_ini;
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
+    std::cout<<"Resize des blobs"<<std::endl;
+    double ratioBlob = (_taille_blob)/d_h_ini;
+    int nb_blobs_par_h=12;
+    double taille_blob =_dashboard->h*nb_blobs_par_h*_taille_blob/d_h_ini;
+    std::cout<<"taille_blobs : "<<taille_blob<<" Ratio : "<<ratioBlob<<std::endl;
+    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);
     return true;
 }
 
@@ -96,7 +100,9 @@ bool InterfaceX::resize_files()
 */
 bool InterfaceX::compute_vDash()
 {
-    int nbJoueursX=round((_nbJoueurs+0.1)/2);
+    int nbJoueursX=2;
+    if(_nbJoueurs>2)
+    nbJoueursX=round((_nbJoueurs+0.1)/2);
     std::cout<<"xNb joueurs en X :  "<<nbJoueursX<<std::endl;
 
     int posX=0,posY=0;
@@ -111,6 +117,11 @@ bool InterfaceX::compute_vDash()
         posX=0;
         posY+=_dashboard->h;
         }
+    }
+    int decalage=(_screen->w -nbJoueursX*_dashboard->w)/2;
+    for (int j=0; j<_nbJoueurs; j++)
+    {
+        _vDash.at(j).setX(_vDash.at(j).x()+decalage);
     }
 return true;
 }
@@ -146,7 +157,7 @@ char cCurrentPath[FILENAME_MAX];
      }
 
 cCurrentPath[sizeof(cCurrentPath) - 1] = '/0'; /* not really required */
-std::cout<< cCurrentPath;
+std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
