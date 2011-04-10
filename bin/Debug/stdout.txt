@@ -1,0 +1,10 @@
+E:\Users\Antoine\Desktop\ProjetMeanBean\DrRob\imgAssez de place en W
+xNb joueurs en X :  2
+Calcul offsets
+Offset grille : 11x46  RATIO : 0.691429
+screen x : 1000 screen y : 700
+x : 0 y : 0
+x : 231 y : 0
+x : 0 y : 350
+x : 231 y : 350
+Blobs : 461x276

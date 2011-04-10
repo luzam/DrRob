@@ -3,20 +3,49 @@
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>
-
-//coucou
-
+#include "include/InterfaceX.h"
 //#endif
 //#include "include/DashBoard.h"
 #include "include/Game.h"
 //#include "include/Game.h"
 
 //*//main lucas
-int main( int argc, char* args[] ){
+int main( int argc, char* argv[] ){
 
-
+    bool quit=false;
     Game drRob(1,16);
-    drRob.go();
+    InterfaceX i(4);
+    i.init();
+    i.load_files();
+    i.resize_files();
+    i.compute_vDash();
+    i.compute_offsets();
+    std::cout<<"screen x : "<<i.screen()->w<<" screen y : "<<i.screen()->h<<std::endl;
+    i.apply_surface(0,0,i.background(),i.screen(),NULL);
+
+    for(size_t j=0;j<i.vDash().size();j++)
+    std::cout<<"x : "<<i.vDash().at(j).x()<<" y : "<<i.vDash().at(j).y()<<std::endl;
+    for(size_t j=0;j<i.vDash().size();j++)
+    i.apply_surface(i.vDash().at(j).x(),i.vDash().at(j).y(),i.dashboard(),i.screen(),NULL);
+    std::cout<<"Blobs : "<<i.blobs()->w<<"x"<<i.blobs()->h<<std::endl;
+    i.apply_surface((i.offset_grille()).x(),(i.offset_grille()).y(),i.blobs(),i.screen(),NULL);
+
+
+    if( SDL_Flip( i.screen() ) == -1 )
+    {
+        return 1;
+    }
+    while( quit == false )
+    {
+        while( SDL_PollEvent( &(i.event()) ))
+        {
+            if( i.event().type == SDL_QUIT )
+            {
+                quit = true;
+            }
+        }
+    }
+//    drRob.go();
     //dash.moteurPhy().majCombo();
     return 0;
 }
@@ -25,6 +54,35 @@ int main( int argc, char* args[] ){
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
 #include "include/InterfaceX.h"
+<<<<<<< HEAD
+int main( int argc, char* args[] ){
+    bool quit=false;
+    std::cout<<"DrRob cree par Antoine Hoarau"<<std::endl;
+    Grille* grille = new Grille('t');
+    MoteurPhy turboteur(8,1,grille);
+    turboteur.majCombo();
+    InterfaceX i(4);
+    i.init();
+    i.load_files();
+    i.resize_files();
+    //Mise à jour de l'écran
+    i.apply_surface(0,0,i.background(),i.screen(),NULL);
+    i.apply_surface(0,0,i.dashboard(),i.screen(),NULL);
+    i.apply_surface(0,0,i.blobs(),i.screen(),NULL);
+    if( SDL_Flip( i.screen() ) == -1 )
+    {
+        return 1;
+    }
+    while( quit == false )
+    {
+        while( SDL_PollEvent( &(i.event()) ))
+        {
+            if( i.event().type == SDL_QUIT )
+            {
+                quit = true;
+            }
+        }
+=======
 //*
 int main( int argc, char* args[] ){
     bool quit=false;
@@ -51,6 +109,7 @@ int main( int argc, char* args[] ){
                 quit = true;
             }
         }
+>>>>>>> 34e72849bb5c128eb5c85d0323267dfb9fc06bd8
     }
 >>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:main.cpp
     return 0;

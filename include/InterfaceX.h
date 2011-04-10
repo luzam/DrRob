@@ -4,35 +4,41 @@
 #include <SDL_image.h>
 #include <iostream>
 #include <SDL_ttf.h>
-
+#include "SDL_rotozoom.h"
+#include <vector>
+#include "Position.h"
 class InterfaceX
 {
 protected:
     const int _SCREEN_WIDTH;
     const int _SCREEN_HEIGHT;
     const int _SCREEN_BPP;
-    double _dash_W;
-    double _dash_H;
+    const double _taille_blob;
     SDL_Surface *_blobs;
+    const int _nbJoueurs;
+    Position _offset_dash_grille;
+    Position _offset_dash_nextBlob;
+    Position _offset_dash_score;
+    double _ratio;
+    std::vector<Position> _vDash;
+    SDL_Surface *_dashboard;
     SDL_Surface *_background;
     SDL_Surface *_screen;
+    SDL_Surface *_dashboard_ini;
+    SDL_Surface *_background_ini;
+    SDL_Surface *_blobs_ini;
     SDL_Event _event;
     TTF_Font *_font;
     SDL_Color _textColor;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(640),_SCREEN_HEIGHT(480),_SCREEN_BPP(32)
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs),_ratio(1),_offset_dash_grille()
     {
-        if(nbJoueurs>2)
-        {
-            _dash_H=_SCREEN_HEIGHT/2;
-            _dash_W=11/14*_dash_H;
-        }
-        else
-        {
-            _dash_H=_SCREEN_HEIGHT;
-            _dash_W=_SCREEN_WIDTH/2;
-        }
-
+_dashboard=NULL;
+_background=NULL;
+_screen=NULL;
+_dashboard_ini=NULL;
+_background_ini=NULL;
+_blobs_ini=NULL;
 
     }
     ~InterfaceX()
@@ -41,14 +47,24 @@ public:
         clean_up();
         std::cout<<"Interface fermee avec succes"<<std::endl;
     }
-    SDL_Surface* load_image( std::string filename );
+    SDL_Surface* load_img( std::string filename );
     void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip);
     bool init();
     bool load_files();
     void clean_up();
-    SDL_Surface* screen(){return _screen;}
-    SDL_Event event(){return _event;}
-    SDL_Surface* blobs(){return _blobs;}
-    SDL_Surface* background(){return _background;}
+    Position offset_grille()const{return _offset_dash_grille;}
+    std::vector<Position> vDash()const{return _vDash;}
+    SDL_Surface* screen()const{return _screen;}
+    SDL_Event event()const{return _event;}
+    SDL_Surface* blobs()const{return _blobs;}
+    SDL_Surface* background()const{return _background;}
+    SDL_Surface* dashboard()const{return _dashboard;}
+    bool resize_files();
+    SDL_Surface* img_zoom_pixel_H(SDL_Surface *surface1,int pixel);
+    SDL_Surface* img_zoom_pixel_W(SDL_Surface *surface1,int pixel);
+    bool resize_img_H(double pixel);
+     bool resize_img_W(double pixel);
+     bool compute_offsets();
+    bool compute_vDash();
 };
 #endif // INTERFACEX_H_INCLUDED

@@ -5,6 +5,9 @@
 #define FALLING_ANIM_TIME 10
 #define COMBOTING_ANIM_TIME 10
 
+#define TOUCHING_ANIM_TIME 10
+#define FALLING_ANIM_TIME 10
+#define COMBOTING_ANIM_TIME 10
 #include <stdio.h>
 #include "Position.h"
 #include "Grille.h"

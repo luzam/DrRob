@@ -1,96 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="include/Clock.h" open="0" top="0" tabpos="4">
-=======
-<<<<<<< HEAD:DrRob.layout
-	<File name="include\Blobs.h" open="1" top="0" tabpos="6">
-		<Cursor position="1048" topLine="34" />
-=======
-	<File name="include\Clock.h" open="0" top="0" tabpos="4">
->>>>>>> 2e4d6ad27d6f548f6baf55de0a6b80f9d6236a87
-		<Cursor position="443" topLine="0" />
->>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
-	</File>
-	<File name="include/DashBoard.h" open="1" top="0" tabpos="6">
+	<File name="include\Blobs.h" open="1" top="0" tabpos="8">
 		<Cursor position="0" topLine="0" />
 	</File>
-<<<<<<< HEAD
-	<File name="include/Game.h" open="1" top="0" tabpos="2">
-		<Cursor position="469" topLine="0" />
-=======
-<<<<<<< HEAD:DrRob.layout
-	<File name="include\Color.h" open="1" top="0" tabpos="8">
-		<Cursor position="83" topLine="0" />
+	<File name="include\Clock.h" open="0" top="0" tabpos="4">
+		<Cursor position="443" topLine="0" />
 	</File>
-	<File name="include\DashBoard.h" open="1" top="0" tabpos="5">
-		<Cursor position="856" topLine="22" />
+	<File name="include\Color.h" open="1" top="0" tabpos="5">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\Game.h" open="1" top="0" tabpos="7">
-		<Cursor position="50" topLine="11" />
+	<File name="include\DashBoard.h" open="1" top="0" tabpos="10">
+		<Cursor position="329" topLine="0" />
 	</File>
-	<File name="include\Grille.h" open="1" top="0" tabpos="4">
-		<Cursor position="314" topLine="0" />
+	<File name="include\Game.h" open="1" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\Link.h" open="1" top="0" tabpos="9">
-		<Cursor position="99" topLine="0" />
+	<File name="include\Grille.h" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="1">
-		<Cursor position="1484" topLine="41" />
+	<File name="include\InterfaceX.h" open="1" top="0" tabpos="1">
+		<Cursor position="1548" topLine="3" />
 	</File>
-	<File name="include\Position.h" open="0" top="0" tabpos="5">
-		<Cursor position="0" topLine="10" />
+	<File name="include\MoteurPhy.h" open="0" top="0" tabpos="5">
+		<Cursor position="222" topLine="0" />
 	</File>
-	<File name="include\State.h" open="1" top="0" tabpos="10">
-		<Cursor position="80" topLine="0" />
+	<File name="include\Position.h" open="1" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\Tree.h" open="0" top="0" tabpos="7">
-		<Cursor position="147" topLine="0" />
-=======
-	<File name="include\InterfaceX.h" open="1" top="0" tabpos="4">
-		<Cursor position="1323" topLine="0" />
->>>>>>> 2e4d6ad27d6f548f6baf55de0a6b80f9d6236a87
+	<File name="include\SDL_rotozoom.h" open="0" top="0" tabpos="0">
+		<Cursor position="1248" topLine="34" />
 	</File>
-	<File name="include/InterfaceX.h" open="1" top="0" tabpos="4">
-		<Cursor position="522" topLine="10" />
+	<File name="include\State.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include/MoteurPhy.h" open="1" top="0" tabpos="3">
-		<Cursor position="402" topLine="14" />
+	<File name="main.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="358" topLine="6" />
 	</File>
-	<File name="include/SDL_rotozoom.h" open="0" top="0" tabpos="5">
-		<Cursor position="313" topLine="0" />
->>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="4117" topLine="87" />
 	</File>
-	<File name="include/conected.h" open="0" top="0" tabpos="0">
-		<Cursor position="283" topLine="150" />
+	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="10481" topLine="249" />
 	</File>
-<<<<<<< HEAD
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="442" topLine="1" />
-	</File>
-	<File name="source/InterfaceX.cpp" open="1" top="1" tabpos="5">
-		<Cursor position="2131" topLine="39" />
-=======
-<<<<<<< HEAD:DrRob.layout
-	<File name="main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="453" topLine="17" />
-	</File>
-	<File name="source\Game.cpp" open="1" top="1" tabpos="11">
-		<Cursor position="626" topLine="12" />
-	</File>
-	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="5344" topLine="165" />
-=======
-	<File name="main.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="607" topLine="0" />
-	</File>
-	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="2381" topLine="48" />
->>>>>>> 836f6b904f659c1ecb7f7c3d71c60d9a972d4ef5:DrRob.layout
->>>>>>> 2e4d6ad27d6f548f6baf55de0a6b80f9d6236a87
-	</File>
-	<File name="source/MoteurPhy.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="8000" topLine="239" />
+	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
+		<Cursor position="26030" topLine="1014" />
 	</File>
 </CodeBlocks_layout_file>
