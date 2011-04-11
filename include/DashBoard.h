@@ -17,10 +17,12 @@ class DashBoard
 protected :
     MoteurPhy* _moteurPhy;
     int _combo;
+    Blobs _masterBlob;
+    Blobs _slaveBlob;
     Grille<Blobs>* _grille;
     std::list<Blobs>* _nextBlobs;
     std::list<Blobs>::iterator _it;
-    Position _pivot;
+    Position _master;
     Position _slave;
     Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
     /* SDLttf texte _score;
@@ -32,7 +34,9 @@ public :
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin())
     {
         _moteurPhy = new MoteurPhy(taille,grille);
-        _moteurPhy->nextBlobs(*(++_it),*(++_it));
+        _masterBlob.setColor((++_it)->color());
+        _slaveBlob.setColor((++_it)->color());
+        _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
        // std::cout<<"Dashboard()->>>"<<_courantPivot.color()<<std::endl;
     }
 
@@ -50,7 +54,11 @@ public :
     {
         return _moteurPhy;
     }
+    Grille<Blobs>* grille()const{return _grille;}
+
     void go();
+
+
 
 };
 

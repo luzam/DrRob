@@ -11,6 +11,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <time.h>
+#include "InterfaceX.h"
 
 #include <iostream> // temporaire
 
@@ -19,11 +20,13 @@ class Game
 protected :
     std::vector<DashBoard> _dashBoards;
     std::list<Blobs> _randBlobs;
+    InterfaceX* _X;
     Clock _clock;
 public :
 
-    Game(int nbJoueurs,int taille): _clock()
+    Game(int nbJoueurs,int taille):_clock()
     {
+        _X = new InterfaceX(nbJoueurs);
         std::cout<<"Game()\n";
         assert(nbJoueurs>0);
         initBlobs();
@@ -32,7 +35,7 @@ public :
 
     }
 
-    std::vector<DashBoard> dashboard()const{return _dashBoards;}
+    std::vector<DashBoard> dashBoards()const{return _dashBoards;}
     void initBlobs(){
         Blobs randBlob;
     srand(time(NULL));

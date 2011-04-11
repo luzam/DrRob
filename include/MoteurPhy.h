@@ -5,9 +5,6 @@
 #define FALLING_ANIM_TIME 10
 #define COMBOTING_ANIM_TIME 10
 
-#define TOUCHING_ANIM_TIME 10
-#define FALLING_ANIM_TIME 10
-#define COMBOTING_ANIM_TIME 10
 #include <stdio.h>
 #include "Position.h"
 #include "Grille.h"
@@ -45,15 +42,15 @@ class MoteurPhy{
     _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
-    void rotationHoraire();
-    void rotationAntiHoraire();
-    void gauche();
-    void droite();
+    void rotationHoraire(Position& master,Position& slave);
+    void rotationAntiHoraire(Position& master,Position& slave);
+    void gauche(Position& master,Position& slave);
+    void droite(Position& master,Position& slave);
     void speedUp();
     void speedToNormal();
     int majCombo();
     void fall();
-    void moove();
+    void moove(Position& master,Position& slave);
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){

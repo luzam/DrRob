@@ -1,17 +1,8 @@
-#include <SDL.h>
-#include <SDL_image.h>
-#include <SDL_ttf.h>
-#include "include/SDL_rotozoom.h"
-#include <iostream>*/
-
-//coucou
-
 //#endif
 //#include "include/DashBoard.h"
 
 ///////// MAIN LUCAS////////
-
-//*/
+/*/
 #include "include/Game.h"
 //#include "include/Game.h"
 
@@ -337,3 +328,24 @@ int main( int argc, char* argv[] )
 }
 
 */
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_ttf.h>
+#include <stdlib.h>
+#include "include/SDL_rotozoom.h"
+#include <iostream>
+#include <time.h>
+#include "include/Color.h"
+#include "include/InterfaceX.h"
+//#endif
+//#include "include/DashBoard.h"
+#include "include/Game.h"
+
+int main( int argc, char* argv[] )
+{
+    Game drRob(1,16);
+    drRob.go();
+
+
+    return 0;
+}

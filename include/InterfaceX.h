@@ -7,14 +7,15 @@
 #include "SDL_rotozoom.h"
 #include <vector>
 #include "Position.h"
+#include "DashBoard.h"
 class InterfaceX
 {
 protected:
     const int _SCREEN_WIDTH;
     const int _SCREEN_HEIGHT;
     const int _SCREEN_BPP;
-    const double _taille_blob;
-    SDL_Surface *_blobs;
+    const int _taille_blob_ini;
+    int _taille_blob;
     const int _nbJoueurs;
     Position _offset_dash_grille;
     Position _offset_dash_nextBlob;
@@ -23,6 +24,7 @@ protected:
     std::vector<Position> _vDash;
     SDL_Surface *_dashboard;
     SDL_Surface *_background;
+    SDL_Surface *_blobs;
     SDL_Surface *_screen;
     SDL_Surface *_dashboard_ini;
     SDL_Surface *_background_ini;
@@ -31,14 +33,16 @@ protected:
     TTF_Font *_font;
     SDL_Color _textColor;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),_SCREEN_BPP(32),_taille_blob(16),_nbJoueurs(nbJoueurs),_vDash(nbJoueurs),_ratio(1)
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),
+    _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_nbJoueurs(nbJoueurs),_offset_dash_grille(),_offset_dash_nextBlob()
+    ,_offset_dash_score(),_ratio(1),_vDash(nbJoueurs),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
+    ,_blobs_ini(NULL),_event(),_font(NULL)
     {
-        _dashboard=NULL;
-        _background=NULL;
-        _screen=NULL;
-        _dashboard_ini=NULL;
-        _background_ini=NULL;
-        _blobs_ini=NULL;
+    init();
+    load_files();
+    resize_files();
+    compute_vDash();
+    compute_offsets();
 
     }
     ~InterfaceX()
@@ -52,6 +56,7 @@ public:
     bool init();
     bool load_files();
     void clean_up();
+    const int taille_blob()const{return _taille_blob;}
     Position offset_grille()const
     {
         return _offset_dash_grille;
@@ -64,9 +69,9 @@ public:
     {
         return _screen;
     }
-    SDL_Event event()const
+    SDL_Event* event()
     {
-        return _event;
+        return &_event;
     }
     SDL_Surface* blobs()const
     {
@@ -87,5 +92,11 @@ public:
     bool resize_img_W(double pixel);
     bool compute_offsets();
     bool compute_vDash();
+    void blit_dash();
+    void blit_fond();
+    void blits(std::vector<DashBoard> dashBoards);
+    bool decouper_sprite();
+    void blit_blobs(std::vector<DashBoard> dashBoards);
+    SDL_Rect offset_sprite(int color,int link,int state);
 };
 #endif // INTERFACEX_H_INCLUDED

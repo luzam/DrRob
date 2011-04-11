@@ -4,7 +4,7 @@
   *
   * (documentation goes here)
   */
-void MoteurPhy:: rotationHoraire()
+void MoteurPhy:: rotationHoraire(Position& master,Position& slave)
 {
     switch(_orientation)
     {
@@ -39,8 +39,8 @@ void MoteurPhy:: rotationHoraire()
         _orientation = BAS;
         break;
     }
-            std::cout<<"roration-> orientation "<<_orientation<<std::endl;
-
+    std::cout<<"roration-> orientation "<<_orientation<<std::endl;
+    majPosition(master,slave);
     //TO DO : Turning clock_wise
 }
 
@@ -49,7 +49,7 @@ void MoteurPhy:: rotationHoraire()
   *
   * (documentation goes here)
   */
-void MoteurPhy::rotationAntiHoraire()
+void MoteurPhy::rotationAntiHoraire(Position& master,Position& slave)
 {
 
     switch(_orientation)
@@ -85,7 +85,8 @@ void MoteurPhy::rotationAntiHoraire()
         _orientation = BAS;
         break;
     }
-        std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
+    std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
+    majPosition(master,slave);
 
     // TO DO : turning Direct_wise
 }
@@ -93,10 +94,10 @@ void MoteurPhy::rotationAntiHoraire()
   *
   * (documentation goes here)
   */
-void MoteurPhy::moove()
+void MoteurPhy::moove(Position& master,Position& slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
-                std::cout<<"touching : "<<(_touching)<<std::endl;
+    std::cout<<"touching : "<<(_touching)<<std::endl;
     bool touch = false;
     switch(_orientation)
     {
@@ -106,7 +107,7 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK)
+        else if(((*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()))->color()!=BLANK)
             touch = true;
         break;
     case BAS :
@@ -115,7 +116,7 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob+_taille)/_taille+1),colBlobCourant())).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob+_taille)/_taille+1),colBlobCourant())).color()!=BLANK)
             touch = true;
         break;
     case GAUCHE :
@@ -124,7 +125,7 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
                 (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()-1)).color()!=BLANK)
             touch = true;
         break;
@@ -134,8 +135,8 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
-               (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()+1)).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()+1)).color()!=BLANK)
             touch = true;
         break;
     }
@@ -143,19 +144,23 @@ void MoteurPhy::moove()
     {
 
         if((_touching) !=0)
-        {std::cout<<"touching : "<<(_touching)<<std::endl;
+        {
+            std::cout<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
             if((_touching)==0)
                 ajoutGrille();
         }
-        else{
+        else
+        {
             (_touching) = TOUCHING_ANIM_TIME;
-         if((_touching)==TOUCHING_ANIM_TIME)
-            (_posBlobPivot).setY(((int)((((_posBlobPivot).y()+_vitesseBlob)/_taille))-1)*_taille);
-            std::cout<<"touching : "<<(_touching)<<std::endl;}
+            if((_touching)==TOUCHING_ANIM_TIME)
+                (_posBlobPivot).setY(((int)((((_posBlobPivot).y()+_vitesseBlob)/_taille))-1)*_taille);
+            std::cout<<"touching : "<<(_touching)<<std::endl;
+        }
     }
     else
-           (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
+        (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
+    majPosition(master,slave);
 
 }
 /** @brief fixes a blob to the grind
@@ -167,20 +172,30 @@ void MoteurPhy::ajoutGrille()
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setColor(_colorMaster);
+    ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setState(FIXED);
+    //TODO : setLink et de ceux autours
+    ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setLink(0);
     switch(_orientation)
     {
-
     case HAUT :
         (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setColor(_colorSlave);
+        (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setState(FIXED);
+        (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setLink(0);
         break;
     case BAS :
         (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setColor(_colorSlave);
+        (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setState(FIXED);
+        (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setLink(0);
         break;
     case GAUCHE :
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setColor(_colorSlave);
+        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setState(FIXED);
+        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setLink(0);
         break;
     case DROITE :
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setColor(_colorSlave);
+        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setState(FIXED);
+        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setLink(0);
         break;
     }
     majCombo();
@@ -192,9 +207,9 @@ void MoteurPhy::ajoutGrille()
   *
   * (documentation goes here)
   */
-void MoteurPhy::gauche()
+void MoteurPhy::gauche(Position& master,Position& slave)
 {
-        std::cout<<"gauche"<<std::endl;
+    std::cout<<"gauche"<<std::endl;
     switch(_orientation)
     {
     case GAUCHE :
@@ -218,13 +233,14 @@ void MoteurPhy::gauche()
         break;
     }
     (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+    majPosition(master,slave);
 }
 
 /** @brief Mooves current blobs right if possible
   *
   * (documentation goes here)
   */
-void MoteurPhy::droite()
+void MoteurPhy::droite(Position& master,Position& slave)
 {
     std::cout<<"droite"<<std::endl;
     switch(_orientation)
@@ -250,6 +266,7 @@ void MoteurPhy::droite()
         break;
     }
     (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+        majPosition(master,slave);
 }
 
 /** @brief Speed up
@@ -295,7 +312,7 @@ int MoteurPhy::majCombo()
         for(int c=0; c<6; c++)
             (img)[l*6+c]=(*_grille)(l,c)->color();
     }
-        std::cout<<"Image"<<std::endl;
+    std::cout<<"Image"<<std::endl;
 
     for(int l=0; l<13; l++)
     {
@@ -311,13 +328,13 @@ int MoteurPhy::majCombo()
     // récupération des connectedComponents labelled
     int width = 6, height =13;
     unsigned char *out_uc = (unsigned char *)malloc(width*height);
- std::cout<<"BLA1"<<std::endl;
+    std::cout<<"BLA1"<<std::endl;
     ConnectedComponents cc(7);
-     std::cout<<"BLA2"<<std::endl;
+    std::cout<<"BLA2"<<std::endl;
     cc.connected(img, out_uc, width, height,
                  std::equal_to<unsigned char>(),
                  false);
-         std::cout<<"BLA3"<<std::endl;
+    std::cout<<"BLA3"<<std::endl;
     for(int r=0; r<height; ++r)
     {
         for(int c=0; c<width; ++c)
@@ -358,7 +375,7 @@ int MoteurPhy::majCombo()
     }
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        ((*_grille)((*it).second.x(),(*it).second.y()))->setState(COMBOTING);
+        ;//((*_grille)((*it).second.x(),(*it).second.y()))->setState(COMBOTING);
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
@@ -380,19 +397,46 @@ int MoteurPhy::majCombo()
   */
 void MoteurPhy::fall()
 {
-    for(int col=0;col<6;col++)
+    for(int col=0; col<6; col++)
     {
         int blanks = 0;
-        for(int ligne=12;ligne>=0;ligne--)
+        for(int ligne=12; ligne>=0; ligne--)
         {
             if(((*_grille)(ligne,col))->color()==BLANK)
                 blanks++;
-            else{
+            else
+            {
                 ((*_grille)(ligne,col))->setFalling(blanks*FALLING_ANIM_TIME);
             }
         }
     }
 
+}
+
+/** @brief make blobs fall after a combote
+  *
+  * (documentation goes here)
+  */
+void MoteurPhy::majPosition(Position& master, Position &slave)
+{
+    master.setX(_posBlobPivot.x());
+    master.setT(_posBlobPivot.y());
+    switch(_orientation)
+    {
+
+    case HAUT :
+        slave.setX(_posBlobPivot.x());
+        slave.setY(_posBlobPivot.y()-_taille);
+    case BAS :
+        slave.setX(_posBlobPivot.x());
+        slave.setY(_posBlobPivot.y()+_taille);
+    case GAUCHE :
+        slave.setX(_posBlobPivot.x()-_taille);
+        slave.setY(_posBlobPivot.y());
+    case DROITE :
+        slave.setX(_posBlobPivot.x()+_taille);
+        slave.setY(_posBlobPivot.y());
+    }
 }
 
 

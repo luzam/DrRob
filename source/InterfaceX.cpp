@@ -13,6 +13,9 @@
 #include <unistd.h>
 #define GetCurrentDir getcwd
 #endif
+#include "../include/Color.h"
+#include "../include/Link.h"
+#include "../include/State.h"
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -69,8 +72,6 @@ bool InterfaceX::resize_img_H(double pixel)
 bool InterfaceX::resize_files()
 {
     int nbJoueursX=round((_nbJoueurs+0.1)/2);
-    double ratio_dash = (double)(_dashboard_ini->w)/(double)(_dashboard_ini->h);
-    double d_w_ini=_dashboard_ini->w;
     double d_h_ini=_dashboard_ini->h;
 
     int resizedDashW = ((double)_screen->h/2)*((double)_dashboard_ini->w)/((double)_dashboard_ini->h);
@@ -92,11 +93,13 @@ bool InterfaceX::resize_files()
     _ratio=(double)_dashboard->h/d_h_ini;
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
     std::cout<<"Resize des blobs"<<std::endl;
-    double ratioBlob = (_taille_blob)/d_h_ini;
+    double ratioBlob = (_taille_blob_ini)/d_h_ini;
     int nb_blobs_par_h=12;
-    double taille_blob =_dashboard->h*nb_blobs_par_h*_taille_blob/d_h_ini;
-    std::cout<<"taille_blobs : "<<taille_blob<<" Ratio : "<<ratioBlob<<std::endl;
+    double taille_blob =_dashboard->h*nb_blobs_par_h*_taille_blob_ini/d_h_ini;
+    std::cout<<"taille_blobs_h : "<<taille_blob<<" Ratio : "<<ratioBlob<<std::endl;
     _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);
+    _taille_blob=taille_blob/12;
+    std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
     return true;
 }
 
@@ -132,19 +135,78 @@ bool InterfaceX::compute_vDash()
     }
     return true;
 }
-bool decouper_sprite()
+bool InterfaceX::decouper_sprite()
 {
+
+
+    return true;
+}
+void InterfaceX::blit_fond(){
+ apply_surface(0,0,_background,_screen,NULL);
+}
+void InterfaceX::blits(std::vector<DashBoard> dashBoards){
+blit_fond();
+blit_dash();
+blit_blobs(dashBoards);
+}
+void InterfaceX::blit_dash(){
+    for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
+        apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
+}
+void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
+{
+    SDL_Rect offset;
+    int blobx,bloby;
+    int offsetgrillex;
+    int offsetgrilley;
+    Grille<Blobs>* grille;
+    for(size_t j=0; j<dashBoards.size(); j++)
+    {
+        grille=(dashBoards.at(j).grille());
+        for(int l=0; l<6; l++)
+        {
+            for(int c=0; c<13; c++)
+            {
+                if( ((*grille)(l,c))->color()!=BLANK)
+                {
+                    //On se place au debut de la grille
+                    offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
+                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
+                    //On calcule les coordonnées des blobs
+                    blobx=l*_taille_blob;
+                    bloby=c*_taille_blob;
+                    //calcul de la position dans le sprite
+                    offset=offset_sprite(((*grille)(l,c))->color(),((*grille)(l,c))->link(),((*grille)(l,c))->state());
+                    // Blit des Blobs (ahah)
+                    apply_surface(offsetgrillex+blobx,offsetgrilley+bloby,_blobs,_screen,&offset);
+                }
+            }
+        }
+    }
+
 
 
 
 }
+SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
+{
+    SDL_Rect r;
+    int tb=_taille_blob;
+    std::cout<<"Taille blob : "<<tb<<std::endl;
+    r.h=tb;
+    r.w=tb;
+    r.x=link*tb;
+    r.y=2*color*tb;
+    std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
 
+    return r;
+}
 bool InterfaceX::compute_offsets()
 {
     std::cout<<"Calcul offsets"<<std::endl;
 
-    _offset_dash_grille.setX((8)*(_ratio));
-    _offset_dash_grille.setY((32-_taille_blob)*(_ratio));
+    _offset_dash_grille.setX((9)*(_ratio));
+    _offset_dash_grille.setY((32-_taille_blob_ini)*(_ratio));
     std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
     return true;
 }
@@ -165,7 +227,6 @@ bool InterfaceX::load_files()
         return errno;
     }
 
-    cCurrentPath[sizeof(cCurrentPath) - 1] = '/0'; /* not really required */
     std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
