@@ -31,7 +31,7 @@ public :
         assert(nbJoueurs>0);
         initBlobs();
         for(int c=0; c<nbJoueurs; c++)
-            _dashBoards.push_back(DashBoard(taille,new Grille<Blobs>(),&_randBlobs));
+            _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille<Blobs>(),&_randBlobs));
 
     }
 
