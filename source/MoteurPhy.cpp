@@ -354,6 +354,8 @@ int MoteurPhy::majCombo()
             ++it)
         if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK)//et BIM
             keyset.insert((*it).first);
+    if(keyset.empty())
+        _fixed = true;
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
