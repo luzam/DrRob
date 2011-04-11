@@ -26,6 +26,7 @@ public :
     {
         std::cout<<"Game()\n";
         assert(nbJoueurs>0);
+        initBlobs();
         for(int c=0; c<nbJoueurs; c++)
             _dashBoards.push_back(DashBoard(taille,new Grille<Blobs>(),&_randBlobs));
 
@@ -35,8 +36,9 @@ public :
     void initBlobs(){
         Blobs randBlob;
     srand(time(NULL));
-    for(int i=0;i<1;i++){
-        randBlob.setBlob(Color(rand() % 6 + 1), NO_STATE,NO_LINK);
+    for(int i=0;i<50;i++){
+        randBlob.setBlob(Color(rand()%6), NO_STATE,NO_LINK);
+        std::cout<<randBlob.color()<<std::endl;
         _randBlobs.push_front(randBlob);
         }
     }

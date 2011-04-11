@@ -106,16 +106,16 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-        if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK)
+       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK)
             touch = true;
         break;
     case BAS :
-        if(((_posBlobPivot).y()+_vitesseBlob)/_taille+1>12)
+        if(((_posBlobPivot).y()+_vitesseBlob+_taille)/_taille>11)
         {
             touch = true;
             break;
         }
-        if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK)
+       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob+_taille)/_taille+1),colBlobCourant())).color()!=BLANK)
             touch = true;
         break;
     case GAUCHE :
@@ -124,7 +124,7 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-        if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
                 (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()-1)).color()!=BLANK)
             touch = true;
         break;
@@ -134,7 +134,7 @@ void MoteurPhy::moove()
             touch = true;
             break;
         }
-        if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+       else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()+1)).color()!=BLANK)
             touch = true;
         break;
@@ -165,8 +165,8 @@ void MoteurPhy::moove()
 void MoteurPhy::ajoutGrille()
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
-    std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<std::endl;
-    (*(*_grille)((ligneBlobCourant()),(colBlobCourant()))).setColor(_colorMaster);
+    std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
+    ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setColor(_colorMaster);
     switch(_orientation)
     {
 
@@ -284,8 +284,19 @@ int MoteurPhy::majCombo()
     for(int l=0; l<13; l++)
     {
         for(int c=0; c<6; c++)
-            sprintf(&img[l*6+c],"%d",(*(*_grille)(l,c)).color());
+            std::cout<<((*_grille)(l,c))->color();
+        std::cout<<std::endl;
     }
+    std::cout<<std::endl;
+
+
+    for(int l=0; l<13; l++)
+    {
+        for(int c=0; c<6; c++)
+            (img)[l*6+c]=(*_grille)(l,c)->color();
+    }
+        std::cout<<"Image"<<std::endl;
+
     for(int l=0; l<13; l++)
     {
         for(int c=0; c<6; c++)
@@ -296,13 +307,17 @@ int MoteurPhy::majCombo()
 
     std::cout<<"labeled"<<std::endl;
 
+
     // récupération des connectedComponents labelled
     int width = 6, height =13;
     unsigned char *out_uc = (unsigned char *)malloc(width*height);
-    ConnectedComponents cc(6);
+ std::cout<<"BLA1"<<std::endl;
+    ConnectedComponents cc(7);
+     std::cout<<"BLA2"<<std::endl;
     cc.connected(img, out_uc, width, height,
                  std::equal_to<unsigned char>(),
                  false);
+         std::cout<<"BLA3"<<std::endl;
     for(int r=0; r<height; ++r)
     {
         for(int c=0; c<width; ++c)
@@ -320,7 +335,7 @@ int MoteurPhy::majCombo()
     // suppression des zones inférieurs à quatre et des absences de blobs
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end();
             ++it)
-        if(key.count((*it).first)<4||(*(*_grille)((*it).second.x(),(*it).second.y())).color()==BLANK)//et BIM
+        if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK)//et BIM
             keyset.insert((*it).first);
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
@@ -343,7 +358,7 @@ int MoteurPhy::majCombo()
     }
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        (*(*_grille)((*it).second.x(),(*it).second.y())).setState(COMBOTING);
+        ((*_grille)((*it).second.x(),(*it).second.y()))->setState(COMBOTING);
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
@@ -351,7 +366,7 @@ int MoteurPhy::majCombo()
     {
         for(int c=0; c<6; c++)
         {
-            std::cout<<(*(*_grille)(l,c)).color();
+            std::cout<<(((*_grille)(l,c))->color());
         }
         std::cout<<std::endl;
     }
@@ -370,10 +385,10 @@ void MoteurPhy::fall()
         int blanks = 0;
         for(int ligne=12;ligne>=0;ligne--)
         {
-            if((*(*_grille)(ligne,col)).color()==blanks)
+            if(((*_grille)(ligne,col))->color()==BLANK)
                 blanks++;
             else{
-                (*(*_grille)(ligne,col)).setFalling(blanks*FALLING_ANIM_TIME);
+                ((*_grille)(ligne,col))->setFalling(blanks*FALLING_ANIM_TIME);
             }
         }
     }

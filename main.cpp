@@ -1,4 +1,4 @@
-/*#include <SDL.h>
+#include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include "include/SDL_rotozoom.h"
@@ -11,7 +11,7 @@
 
 ///////// MAIN LUCAS////////
 
-/*/
+//*/
 #include "include/Game.h"
 //#include "include/Game.h"
 
@@ -23,7 +23,7 @@ int main( int argc, char* args[] ){
     //dash.moteurPhy().majCombo();
     return 0;
 }
-*/
+//*/
 /*//main antoine
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
@@ -261,6 +261,7 @@ int main( int argc, char* args[] )
     return 0;
 }
 */
+/*/
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
@@ -275,7 +276,7 @@ int main( int argc, char* args[] )
 #include "include/Game.h"
 //#include "include/Game.h"
 
-//*//main lucas
+///main lucas
 int main( int argc, char* argv[] )
 {
     //////////////////////CREATION D'UNE GRILLE DE TEST
@@ -296,7 +297,7 @@ int main( int argc, char* argv[] )
     bool quit=false;
   //  Game drRob(1,16);
   ////////////////////////////////CREATION DE L'INTERFACE DE TEST
-    InterfaceX i(10);
+    InterfaceX i(1);
     i.init();
     i.load_files();
     i.resize_files();
@@ -335,4 +336,4 @@ int main( int argc, char* argv[] )
     return 0;
 }
 
-
+*/

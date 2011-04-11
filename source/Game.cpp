@@ -6,7 +6,6 @@
   */
 void Game::go()
 {
-    initBlobs();
     SDL_Surface *ecran = NULL;
     SDL_Event event; /* La variable contenant l'évènement */
     int continuer = 1; /* Notre booléen pour la boucle */

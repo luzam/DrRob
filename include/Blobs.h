@@ -11,9 +11,9 @@
 class Blobs
 {
 protected :
-    Color _color;
-    State _state;
-    Link _link;
+    size_t _color;
+    size_t _state;
+    size_t _link;
     int _falling;
 public :
     Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
@@ -23,31 +23,31 @@ public :
     Blobs(){}
     ~Blobs() {}
 
-    const Color color()const
+    const size_t color()const
     {
         return _color;
     }
-    const State state()const
+    const size_t state()const
     {
         return _state;
     }
-    const Link link()const
+    const size_t link()const
     {
         return _link;
     }
-    void setColor(Color color)
+    void setColor(size_t color)
     {
         _color=color;
     }
-    void setState(State state)
+    void setState(size_t state)
     {
         _state =  state;
     }
-    void setLink(Link link)
+    void setLink(size_t link)
     {
         _link = link;
     }
-    void setBlob(Color color, State state, Link link){
+    void setBlob(size_t color, size_t state, size_t link){
     _link = link;
     _color = color;
     _state = state;

@@ -24,8 +24,8 @@ class MoteurPhy{
         protected :
     int _taille;
     Position _posBlobPivot;
-    Color _colorMaster;
-    Color _colorSlave;
+    size_t _colorMaster;
+    size_t _colorSlave;
     int _vitesseBlob;
     int _orientation;
     int _comboAct;

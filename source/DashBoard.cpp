@@ -19,8 +19,7 @@ void DashBoard::go()
         if(checkCombo()){//check combo fini -> lancer combo game
         ;
         std::cout<<"blob suivant\n";
-        _courantPivot.setBlob(*(++_it));
-        _courantSlave.setBlob(*(++_it));}
+        _moteurPhy->nextBlobs(*(++_it),*(++_it));}
         _moteurPhy->moove();
         }
 

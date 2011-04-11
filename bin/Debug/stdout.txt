@@ -1,3 +1,104 @@
+Game()
+2
+Blob(Blob)
+5
+Blob(Blob)
+4
+Blob(Blob)
+0
+Blob(Blob)
+4
+Blob(Blob)
+3
+Blob(Blob)
+1
+Blob(Blob)
+3
+Blob(Blob)
+1
+Blob(Blob)
+2
+Blob(Blob)
+4
+Blob(Blob)
+0
+Blob(Blob)
+0
+Blob(Blob)
+2
+Blob(Blob)
+2
+Blob(Blob)
+3
+Blob(Blob)
+0
+Blob(Blob)
+2
+Blob(Blob)
+4
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+1
+Blob(Blob)
+0
+Blob(Blob)
+0
+Blob(Blob)
+2
+Blob(Blob)
+5
+Blob(Blob)
+4
+Blob(Blob)
+1
+Blob(Blob)
+4
+Blob(Blob)
+0
+Blob(Blob)
+0
+Blob(Blob)
+1
+Blob(Blob)
+1
+Blob(Blob)
+2
+Blob(Blob)
+3
+Blob(Blob)
+2
+Blob(Blob)
+0
+Blob(Blob)
+3
+Blob(Blob)
+4
+Blob(Blob)
+1
+Blob(Blob)
+0
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+2
+Blob(Blob)
+1
+Blob(Blob)
+2
+Blob(Blob)
+2
+Blob(Blob)
+1
+Blob(Blob)
+3
+Blob(Blob)
+4
+Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -156,29 +257,926 @@ Blob(int)
 Blob(int)
 Blob(int)
 FIN grille()
-3404355342154
-1502542302020
-3431323503104
-0242043340441
-5304524120514
-5112035254522
-C:\Users\Lucas\Desktop\DrRob\img
-Taille dash W resized : 231
-PAS Assez de place en W--> resize en H
-Resize des blobs
-taille_blobs : 239.603 Ratio : 0.0661157
-xNb joueurs en X :  5
-Calcul offsets
-Offset grille : 9x19  RATIO : 0.801325
-screen x : 1000 screen y : 700
-x : 0 y : 48
-x : 200 y : 48
-x : 400 y : 48
-x : 600 y : 48
-x : 800 y : 48
-x : 0 y : 350
-x : 200 y : 350
-x : 400 y : 350
-x : 600 y : 350
-x : 800 y : 350
-Blobs : 398x239
+MoteurPhy()
+Blob(Blob)
+Blob(Blob)
+32 , 0
+touching : 0
+32 , 15
+touching : 0
+droite
+48 , 30
+touching : 0
+gauche
+32 , 45
+touching : 0
+32 , 60
+touching : 0
+32 , 75
+touching : 0
+droite
+48 , 90
+touching : 0
+gauche
+32 , 105
+touching : 0
+32 , 120
+touching : 0
+32 , 135
+touching : 0
+droite
+48 , 150
+touching : 0
+gauche
+32 , 165
+touching : 0
+32 , 180
+touching : 0
+droite
+48 , 195
+touching : 0
+touching : 10
+48 , 192
+touching : 10
+gauche
+32 , 207
+touching : 10
+touching : 10
+32 , 207
+touching : 9
+touching : 9
+droite
+48 , 207
+touching : 8
+touching : 8
+48 , 207
+touching : 7
+touching : 7
+gauche
+32 , 207
+touching : 6
+touching : 6
+32 , 207
+touching : 5
+touching : 5
+droite
+48 , 207
+touching : 4
+touching : 4
+48 , 207
+touching : 3
+touching : 3
+gauche
+32 , 207
+touching : 2
+touching : 2
+32 , 207
+touching : 1
+touching : 1
+32 , 207
+ajout blob : 12 2<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663666
+661666
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001000
+002000
+
+taille map : 78
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663666
+661666
+
+droite
+48 , 207
+touching : 0
+touching : 10
+48 , 192
+touching : 10
+gauche
+48 , 207
+touching : 10
+touching : 10
+48 , 207
+touching : 9
+touching : 9
+48 , 207
+touching : 8
+touching : 8
+droite
+64 , 207
+touching : 7
+touching : 7
+gauche
+48 , 207
+touching : 6
+touching : 6
+48 , 207
+touching : 5
+touching : 5
+droite
+64 , 207
+touching : 4
+touching : 4
+64 , 207
+touching : 3
+touching : 3
+gauche
+48 , 207
+touching : 2
+touching : 2
+48 , 207
+touching : 1
+touching : 1
+48 , 207
+ajout blob : 12 3<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663366
+661166
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001100
+002200
+
+taille map : 78
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663366
+661166
+
+droite
+64 , 207
+touching : 0
+touching : 10
+64 , 192
+touching : 10
+gauche
+64 , 207
+touching : 10
+touching : 10
+64 , 207
+touching : 9
+touching : 9
+droite
+80 , 207
+touching : 8
+touching : 8
+80 , 207
+touching : 7
+touching : 7
+gauche
+64 , 207
+touching : 6
+touching : 6
+64 , 207
+touching : 5
+touching : 5
+gauche
+64 , 207
+touching : 4
+touching : 4
+64 , 207
+touching : 3
+touching : 3
+droite
+80 , 207
+touching : 2
+touching : 2
+80 , 207
+touching : 1
+touching : 1
+80 , 207
+ajout blob : 12 5<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663363
+661161
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001102
+003304
+
+taille map : 78
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663363
+661161
+
+gauche
+64 , 207
+touching : 0
+touching : 10
+64 , 192
+touching : 10
+droite
+64 , 207
+touching : 10
+touching : 10
+64 , 207
+touching : 9
+touching : 9
+gauche
+64 , 207
+touching : 8
+touching : 8
+64 , 207
+touching : 7
+touching : 7
+droite
+64 , 207
+touching : 6
+touching : 6
+64 , 207
+touching : 5
+touching : 5
+gauche
+64 , 207
+touching : 4
+touching : 4
+64 , 207
+touching : 3
+touching : 3
+64 , 207
+touching : 2
+touching : 2
+droite
+64 , 207
+touching : 1
+touching : 1
+64 , 207
+ajout blob : 12 4<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663333
+661111
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001111
+002222
+
+taille map : 78
+  {  1, [11,2]  }
+  {  1, [11,3]  }
+  {  1, [11,4]  }
+  {  1, [11,5]  }
+  {  2, [12,2]  }
+  {  2, [12,3]  }
+  {  2, [12,4]  }
+  {  2, [12,5]  }
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663333
+661111
+
+gauche
+64 , 207
+touching : 0
+touching : 10
+64 , 192
+touching : 10
+touching : 10
+64 , 192
+touching : 9
+touching : 9
+droite
+64 , 192
+touching : 8
+touching : 8
+gauche
+64 , 192
+touching : 7
+touching : 7
+64 , 192
+touching : 6
+touching : 6
+droite
+64 , 192
+touching : 5
+touching : 5
+64 , 192
+touching : 4
+touching : 4
+gauche
+64 , 192
+touching : 3
+touching : 3
+64 , 192
+touching : 2
+touching : 2
+64 , 192
+touching : 1
+touching : 1
+64 , 192
+ajout blob : 12 4<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663333
+661111
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001111
+002222
+
+taille map : 78
+  {  1, [11,2]  }
+  {  1, [11,3]  }
+  {  1, [11,4]  }
+  {  1, [11,5]  }
+  {  2, [12,2]  }
+  {  2, [12,3]  }
+  {  2, [12,4]  }
+  {  2, [12,5]  }
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663333
+661111
+
+droite
+64 , 192
+touching : 0
+touching : 10
+gauche
+64 , 176
+touching : 10
+touching : 10
+64 , 176
+touching : 9
+touching : 9
+64 , 176
+touching : 8
+touching : 8
+droite
+64 , 176
+touching : 7
+touching : 7
+gauche
+64 , 176
+touching : 6
+touching : 6
+64 , 176
+touching : 5
+touching : 5
+64 , 176
+touching : 4
+touching : 4
+droite
+64 , 176
+touching : 3
+touching : 3
+gauche
+64 , 176
+touching : 2
+touching : 2
+64 , 176
+touching : 1
+touching : 1
+64 , 176
+ajout blob : 11 4<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666636
+663313
+661111
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000010
+002234
+003333
+
+taille map : 78
+  {  3, [11,4]  }
+  {  3, [12,2]  }
+  {  3, [12,3]  }
+  {  3, [12,4]  }
+  {  3, [12,5]  }
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666636
+663313
+661111
+
+droite
+64 , 176
+touching : 0
+touching : 10
+64 , 160
+touching : 10
+touching : 10
+gauche
+48 , 160
+touching : 9
+48 , 175
+touching : 9
+touching : 9
+48 , 175
+touching : 8
+touching : 8
+droite
+48 , 175
+touching : 7
+touching : 7
+gauche
+32 , 175
+touching : 6
+touching : 6
+32 , 175
+touching : 5
+touching : 5
+droite
+48 , 175
+touching : 4
+touching : 4
+48 , 175
+touching : 3
+touching : 3
+gauche
+32 , 175
+touching : 2
+touching : 2
+32 , 175
+touching : 1
+touching : 1
+32 , 175
+ajout blob : 10 2<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663666
+661636
+663313
+661111
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001000
+002030
+004456
+005555
+
+taille map : 78
+  {  5, [11,4]  }
+  {  5, [12,2]  }
+  {  5, [12,3]  }
+  {  5, [12,4]  }
+  {  5, [12,5]  }
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663666
+661636
+663313
+661111
+
+32 , 175
+touching : 0
+touching : 10
+droite
+48 , 160
+touching : 10
+gauche
+48 , 175
+touching : 10
+touching : 10
+48 , 175
+touching : 9
+touching : 9
+48 , 175
+touching : 8
+touching : 8
+droite
+48 , 175
+touching : 7
+touching : 7
+gauche
+48 , 175
+touching : 6
+touching : 6
+48 , 175
+touching : 5
+touching : 5
+droite
+48 , 175
+touching : 4
+touching : 4
+48 , 175
+touching : 3
+touching : 3
+gauche
+48 , 175
+touching : 2
+touching : 2
+48 , 175
+touching : 1
+touching : 1
+48 , 175
+ajout blob : 10 3<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663366
+661136
+663313
+661111
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001100
+002230
+004456
+005555
+
+taille map : 78
+  {  5, [11,4]  }
+  {  5, [12,2]  }
+  {  5, [12,3]  }
+  {  5, [12,4]  }
+  {  5, [12,5]  }
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+663366
+661136
+663313
+661111
+
+48 , 175
+touching : 0
+touching : 10
+48 , 160
+touching : 10
+touching : 10
