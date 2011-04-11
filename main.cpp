@@ -33,7 +33,7 @@ int main( int argc, char* argv[] )
     bool quit=false;
   //  Game drRob(1,16);
   ////////////////////////////////CREATION DE L'INTERFACE DE TEST
-    InterfaceX i(4);
+    InterfaceX i(120);
     i.init();
     i.load_files();
     i.resize_files();
