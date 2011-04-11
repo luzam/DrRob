@@ -27,6 +27,7 @@ class MoteurPhy{
     int _orientation;
     int _comboAct;
     bool _launchCombo;
+    bool _fixed;
     Grille<Blobs>* _grille;
     int _touching;
     int _comboting;
@@ -38,28 +39,31 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille<Blobs>* grille):
-    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(15),_orientation( HAUT),_comboAct(0),_launchCombo(false),
+    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(15),_orientation( HAUT),_comboAct(0),_launchCombo(false),_fixed(false),
     _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
-    void rotationHoraire(Position& master,Position& slave);
-    void rotationAntiHoraire(Position& master,Position& slave);
-    void gauche(Position& master,Position& slave);
-    void droite(Position& master,Position& slave);
+    void rotationHoraire(Position* master,Position* slave);
+    void rotationAntiHoraire(Position* master,Position* slave);
+    void gauche(Position* master,Position* slave);
+    void droite(Position* master,Position* slave);
     void speedUp();
     void speedToNormal();
     int majCombo();
     void fall();
-    void moove(Position& master,Position& slave);
+    void moove(Position* master,Position* slave);
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){
     _colorMaster = master.color();
-    _colorSlave = slave.color();}
+    _colorSlave = slave.color();
+    _fixed = false;}
     bool launchCombo()const{ return _launchCombo;}
+    bool fixed()const{return _fixed;}
     void setLaunchCombo(bool combo){_launchCombo=combo;}
     int falling()const{return _falling;}
     int comboting()const{return _comboting;}
+    void majPosition(Position* master,Position* slave);
 
 
 };

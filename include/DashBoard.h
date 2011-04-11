@@ -57,8 +57,10 @@ public :
     Grille<Blobs>* grille()const{return _grille;}
 
     void go();
-
-
+    Position* masterPos(){return &_master;}
+    Position* slavePos(){return &_slave;}
+    Blobs* masterBlob(){return &_masterBlob;}
+    Blobs* slaveBlob(){return &_slaveBlob;}
 
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef INTERFACEX_H_INCLUDED
 #define INTERFACEX_H_INCLUDED
 #include <SDL.h>
@@ -101,8 +100,7 @@ public:
     SDL_Rect offset_sprite(int color,int link,int state);
 };
 #endif // INTERFACEX_H_INCLUDED
-=======
-#ifndef INTERFACEX_H_INCLUDED
+/*#ifndef INTERFACEX_H_INCLUDED
 #define INTERFACEX_H_INCLUDED
 #include <SDL.h>
 #include <SDL_image.h>
@@ -204,4 +202,4 @@ public:
     SDL_Rect offset_sprite(int color,int link,int state);
 };
 #endif // INTERFACEX_H_INCLUDED
->>>>>>> 74d0c2fb173a69cc94fba289722cf1b1a7716709
+*/

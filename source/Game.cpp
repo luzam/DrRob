@@ -31,16 +31,16 @@ void Game::go()
                 continuer = 0;
                  break;
             case SDLK_LEFT :
-                _dashBoards.at(0).moteurPhy()->gauche();
+                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
             case SDLK_RIGHT :
-                _dashBoards.at(0).moteurPhy()->droite();
+                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
             case SDLK_DOWN :
                 _dashBoards.at(0).moteurPhy()->speedUp();
                 break;
             case SDLK_UP :
-                _dashBoards.at(0).moteurPhy()->rotationHoraire();
+                _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
 
                 default : break;
@@ -50,6 +50,10 @@ void Game::go()
 
         for(size_t i=0; i<_dashBoards.size(); i++)
             _dashBoards.at(i).go();
+
+        for(size_t i=0; i<_dashBoards.size(); i++)
+            _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
+                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob());
 
         _X->blits(_dashBoards);
         SDL_Flip(_X->screen());
