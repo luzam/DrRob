@@ -6,12 +6,10 @@
   */
 void Game::go()
 {
-    initBlobs();
     SDL_Surface *ecran = NULL;
     SDL_Event event; /* La variable contenant l'évènement */
     int continuer = 1; /* Notre booléen pour la boucle */
-    InterfaceX i(1);
-    i.blits(_dashBoards);
+    _X->blits(_dashBoards);
 
    // SDL_Init(SDL_INIT_VIDEO);
 
@@ -52,10 +50,9 @@ void Game::go()
 
         for(size_t i=0; i<_dashBoards.size(); i++)
             _dashBoards.at(i).go();
-        //on blit tout
-        // SDL_blit ...
-        i.blits(_dashBoards);
-        SDL_Flip(i.screen());
+
+        _X->blits(_dashBoards);
+        SDL_Flip(_X->screen());
     }
 
 }

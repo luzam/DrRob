@@ -15,15 +15,20 @@ void DashBoard::go()
     {
         ;//anim falling
     }
-    else{
-        if(checkCombo()){//check combo fini -> lancer combo game
-        ;
-        std::cout<<"blob suivant\n";
-        _courantPivot.setBlob(*(++_it));
-        _courantSlave.setBlob(*(++_it));}
-        _moteurPhy->moove();
+    else
+    {
+        if(checkCombo()) //check combo fini -> lancer combo game
+        {
+            ;
+            std::cout<<"blob suivant\n";
+            _masterBlob.setBlob(*(++_it));
+            _slaveBlob.setBlob(*(++_it));
+            _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
         }
-
-
-
     }
+    _moteurPhy->moove();
+}
+
+
+
+
