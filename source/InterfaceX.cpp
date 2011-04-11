@@ -16,6 +16,8 @@
 #include "../include/Color.h"
 #include "../include/Link.h"
 #include "../include/State.h"
+#include "../include/Blobs.h"
+#include "../include/Position.h"
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -52,23 +54,7 @@ bool InterfaceX::init()
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
 }
-bool InterfaceX::resize_img_W(double pixel)
-{
-    _dashboard=img_zoom_pixel_W(_dashboard_ini,pixel);
-////////
 
-    return true;
-}
-bool InterfaceX::resize_img_H(double pixel)
-{
-
-    _dashboard=img_zoom_pixel_H(_dashboard_ini,pixel);
-    /*  int nb_blobs_par_h=12;
-      double taille_blob =_dashboard->h*ratio*nb_blobs_par_h;
-      _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);*/
-
-    return true;
-}
 bool InterfaceX::resize_files()
 {
     int nbJoueursX=round((_nbJoueurs+0.1)/2);
@@ -87,7 +73,7 @@ bool InterfaceX::resize_files()
     else   //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
     {
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
-        resize_img_W(_screen->w/nbJoueursX);
+        img_zoom_pixel_W(_dashboard_ini,_screen->w/nbJoueursX);
 
     }
     _ratio=(double)_dashboard->h/d_h_ini;
@@ -141,33 +127,46 @@ bool InterfaceX::decouper_sprite()
 
     return true;
 }
-void InterfaceX::blit_fond(){
- apply_surface(0,0,_background,_screen,NULL);
+void InterfaceX::blit_fond()
+{
+    apply_surface(0,0,_background,_screen,NULL);
 }
-void InterfaceX::blits(std::vector<DashBoard> dashBoards){
-blit_fond();
-blit_dash();
-blit_blobs(dashBoards);
+void InterfaceX::blits(std::vector<DashBoard> dashBoards)
+{
+    blit_fond();
+    blit_dash();
+    blit_blobs(dashBoards);
 }
-void InterfaceX::blit_dash(){
+void InterfaceX::blit_dash()
+{
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
+
+void InterfaceX::blit_un_blob(Blobs* blob,int x,int y){
+    SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
+    apply_surface(x,y,_blobs,_screen,&offset);
+
+
+}
+void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave)
+{
+    blit_un_blob(master,pmaster.x(),pmaster.y());
+    blit_un_blob(slave,pslave.x(),pslave.y());
+}
 void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
 {
-    SDL_Rect offset;
+
     int blobx,bloby;
     int offsetgrillex;
     int offsetgrilley;
-    Grille<Blobs>* grille;
     for(size_t j=0; j<dashBoards.size(); j++)
     {
-        grille=(dashBoards.at(j).grille());
         for(int l=0; l<6; l++)
         {
             for(int c=0; c<13; c++)
             {
-                if( ((*grille)(l,c))->color()!=BLANK)
+                if( ((*(dashBoards.at(j).grille()))(l,c))->color()!=BLANK)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
@@ -175,10 +174,8 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                     //On calcule les coordonnées des blobs
                     blobx=l*_taille_blob;
                     bloby=c*_taille_blob;
-                    //calcul de la position dans le sprite
-                    offset=offset_sprite(((*grille)(l,c))->color(),((*grille)(l,c))->link(),((*grille)(l,c))->state());
-                    // Blit des Blobs (ahah)
-                    apply_surface(offsetgrillex+blobx,offsetgrilley+bloby,_blobs,_screen,&offset);
+
+                    blit_un_blob(((*(dashBoards.at(j).grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
                 }
             }
         }

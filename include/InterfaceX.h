@@ -88,12 +88,12 @@ public:
     bool resize_files();
     SDL_Surface* img_zoom_pixel_H(SDL_Surface *surface1,int pixel);
     SDL_Surface* img_zoom_pixel_W(SDL_Surface *surface1,int pixel);
-    bool resize_img_H(double pixel);
-    bool resize_img_W(double pixel);
     bool compute_offsets();
     bool compute_vDash();
     void blit_dash();
     void blit_fond();
+    void blit_un_blob(Blobs* blob,int x,int y);
+    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave);
     void blits(std::vector<DashBoard> dashBoards);
     bool decouper_sprite();
     void blit_blobs(std::vector<DashBoard> dashBoards);
