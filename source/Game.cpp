@@ -31,16 +31,16 @@ void Game::go()
                 continuer = 0;
                  break;
             case SDLK_LEFT :
-                _dashBoards.at(0).moteurPhy()->gauche();
+                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
             case SDLK_RIGHT :
-                _dashBoards.at(0).moteurPhy()->droite();
+                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
             case SDLK_DOWN :
                 _dashBoards.at(0).moteurPhy()->speedUp();
                 break;
             case SDLK_UP :
-                _dashBoards.at(0).moteurPhy()->rotationHoraire();
+                _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 break;
 
                 default : break;

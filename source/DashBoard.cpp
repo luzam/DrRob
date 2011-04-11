@@ -15,6 +15,10 @@ void DashBoard::go()
     {
         ;//anim falling
     }
+    else if(_moteurPhy->touching()!=0)
+    {
+        ;
+    }
     else
     {
         if(checkCombo()) //check combo fini -> lancer combo game
@@ -26,7 +30,7 @@ void DashBoard::go()
             _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
         }
     }
-    _moteurPhy->moove();
+    _moteurPhy->moove(&_master,&_slave);
 }
 
 

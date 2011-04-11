@@ -4,7 +4,7 @@
   *
   * (documentation goes here)
   */
-void MoteurPhy:: rotationHoraire(Position& master,Position& slave)
+void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
 {
     switch(_orientation)
     {
@@ -49,7 +49,7 @@ void MoteurPhy:: rotationHoraire(Position& master,Position& slave)
   *
   * (documentation goes here)
   */
-void MoteurPhy::rotationAntiHoraire(Position& master,Position& slave)
+void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
 {
 
     switch(_orientation)
@@ -94,7 +94,7 @@ void MoteurPhy::rotationAntiHoraire(Position& master,Position& slave)
   *
   * (documentation goes here)
   */
-void MoteurPhy::moove(Position& master,Position& slave)
+void MoteurPhy::moove(Position* master,Position* slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"touching : "<<(_touching)<<std::endl;
@@ -207,7 +207,7 @@ void MoteurPhy::ajoutGrille()
   *
   * (documentation goes here)
   */
-void MoteurPhy::gauche(Position& master,Position& slave)
+void MoteurPhy::gauche(Position* master,Position* slave)
 {
     std::cout<<"gauche"<<std::endl;
     switch(_orientation)
@@ -240,7 +240,7 @@ void MoteurPhy::gauche(Position& master,Position& slave)
   *
   * (documentation goes here)
   */
-void MoteurPhy::droite(Position& master,Position& slave)
+void MoteurPhy::droite(Position* master,Position* slave)
 {
     std::cout<<"droite"<<std::endl;
     switch(_orientation)
@@ -417,25 +417,25 @@ void MoteurPhy::fall()
   *
   * (documentation goes here)
   */
-void MoteurPhy::majPosition(Position& master, Position &slave)
+void MoteurPhy::majPosition(Position* master, Position* slave)
 {
-    master.setX(_posBlobPivot.x());
-    master.setT(_posBlobPivot.y());
+    master->setX(_posBlobPivot.x());
+    master->setY(_posBlobPivot.y());
     switch(_orientation)
     {
 
     case HAUT :
-        slave.setX(_posBlobPivot.x());
-        slave.setY(_posBlobPivot.y()-_taille);
+        slave->setX(_posBlobPivot.x());
+        slave->setY(_posBlobPivot.y()-_taille);
     case BAS :
-        slave.setX(_posBlobPivot.x());
-        slave.setY(_posBlobPivot.y()+_taille);
+        slave->setX(_posBlobPivot.x());
+        slave->setY(_posBlobPivot.y()+_taille);
     case GAUCHE :
-        slave.setX(_posBlobPivot.x()-_taille);
-        slave.setY(_posBlobPivot.y());
+        slave->setX(_posBlobPivot.x()-_taille);
+        slave->setY(_posBlobPivot.y());
     case DROITE :
-        slave.setX(_posBlobPivot.x()+_taille);
-        slave.setY(_posBlobPivot.y());
+        slave->setX(_posBlobPivot.x()+_taille);
+        slave->setY(_posBlobPivot.y());
     }
 }
 

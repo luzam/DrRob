@@ -42,15 +42,15 @@ class MoteurPhy{
     _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
-    void rotationHoraire(Position& master,Position& slave);
-    void rotationAntiHoraire(Position& master,Position& slave);
-    void gauche(Position& master,Position& slave);
-    void droite(Position& master,Position& slave);
+    void rotationHoraire(Position* master,Position* slave);
+    void rotationAntiHoraire(Position* master,Position* slave);
+    void gauche(Position* master,Position* slave);
+    void droite(Position* master,Position* slave);
     void speedUp();
     void speedToNormal();
     int majCombo();
     void fall();
-    void moove(Position& master,Position& slave);
+    void moove(Position* master,Position* slave);
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){
@@ -60,6 +60,7 @@ class MoteurPhy{
     void setLaunchCombo(bool combo){_launchCombo=combo;}
     int falling()const{return _falling;}
     int comboting()const{return _comboting;}
+    void majPosition(Position* master,Position* slave);
 
 
 };
