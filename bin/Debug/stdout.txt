@@ -1,141 +1,3 @@
-<<<<<<< HEAD
-0220214400020
-4221115142550
-0144120311411
-4220321254214
-5432401235410
-0523415051441
-Z:\Desktop\ProjetMeanBean\DrRob\img
-Taille dash W resized : 231
-PAS Assez de place en W--> resize en H
-Resize des blobs
-taille_blobs : 19.0413 Ratio : 0.0661157
-xNb joueurs en X :  60
-Calcul offsets
-Offset grille : 0x1  RATIO : 10.0833
-screen x : 1000 screen y : 700
-x : 20 y : 326
-x : 36 y : 326
-x : 52 y : 326
-x : 68 y : 326
-x : 84 y : 326
-x : 100 y : 326
-x : 116 y : 326
-x : 132 y : 326
-x : 148 y : 326
-x : 164 y : 326
-x : 180 y : 326
-x : 196 y : 326
-x : 212 y : 326
-x : 228 y : 326
-x : 244 y : 326
-x : 260 y : 326
-x : 276 y : 326
-x : 292 y : 326
-x : 308 y : 326
-x : 324 y : 326
-x : 340 y : 326
-x : 356 y : 326
-x : 372 y : 326
-x : 388 y : 326
-x : 404 y : 326
-x : 420 y : 326
-x : 436 y : 326
-x : 452 y : 326
-x : 468 y : 326
-x : 484 y : 326
-x : 500 y : 326
-x : 516 y : 326
-x : 532 y : 326
-x : 548 y : 326
-x : 564 y : 326
-x : 580 y : 326
-x : 596 y : 326
-x : 612 y : 326
-x : 628 y : 326
-x : 644 y : 326
-x : 660 y : 326
-x : 676 y : 326
-x : 692 y : 326
-x : 708 y : 326
-x : 724 y : 326
-x : 740 y : 326
-x : 756 y : 326
-x : 772 y : 326
-x : 788 y : 326
-x : 804 y : 326
-x : 820 y : 326
-x : 836 y : 326
-x : 852 y : 326
-x : 868 y : 326
-x : 884 y : 326
-x : 900 y : 326
-x : 916 y : 326
-x : 932 y : 326
-x : 948 y : 326
-x : 964 y : 326
-x : 20 y : 350
-x : 36 y : 350
-x : 52 y : 350
-x : 68 y : 350
-x : 84 y : 350
-x : 100 y : 350
-x : 116 y : 350
-x : 132 y : 350
-x : 148 y : 350
-x : 164 y : 350
-x : 180 y : 350
-x : 196 y : 350
-x : 212 y : 350
-x : 228 y : 350
-x : 244 y : 350
-x : 260 y : 350
-x : 276 y : 350
-x : 292 y : 350
-x : 308 y : 350
-x : 324 y : 350
-x : 340 y : 350
-x : 356 y : 350
-x : 372 y : 350
-x : 388 y : 350
-x : 404 y : 350
-x : 420 y : 350
-x : 436 y : 350
-x : 452 y : 350
-x : 468 y : 350
-x : 484 y : 350
-x : 500 y : 350
-x : 516 y : 350
-x : 532 y : 350
-x : 548 y : 350
-x : 564 y : 350
-x : 580 y : 350
-x : 596 y : 350
-x : 612 y : 350
-x : 628 y : 350
-x : 644 y : 350
-x : 660 y : 350
-x : 676 y : 350
-x : 692 y : 350
-x : 708 y : 350
-x : 724 y : 350
-x : 740 y : 350
-x : 756 y : 350
-x : 772 y : 350
-x : 788 y : 350
-x : 804 y : 350
-x : 820 y : 350
-x : 836 y : 350
-x : 852 y : 350
-x : 868 y : 350
-x : 884 y : 350
-x : 900 y : 350
-x : 916 y : 350
-x : 932 y : 350
-x : 948 y : 350
-x : 964 y : 350
-Blobs : 31x18
-=======
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -294,30 +156,333 @@ Blob(int)
 Blob(int)
 Blob(int)
 FIN grille()
-3404355342154
-1502542302020
-3431323503104
-0242043340441
-5304524120514
-5112035254522
-C:\Users\Lucas\Desktop\DrRob\img
+
+
+
+
+
+
+Z:\Desktop\ProjetMeanBean\DrRob\img
 Taille dash W resized : 231
-PAS Assez de place en W--> resize en H
+Assez de place en W
 Resize des blobs
-taille_blobs : 239.603 Ratio : 0.0661157
-xNb joueurs en X :  5
+taille_blobs_h : 555.372 Ratio : 0.0661157
+Un blob mesure : 46 px de coté
+xNb joueurs en X :  2
 Calcul offsets
-Offset grille : 9x19  RATIO : 0.801325
-screen x : 1000 screen y : 700
-x : 0 y : 48
-x : 200 y : 48
-x : 400 y : 48
-x : 600 y : 48
-x : 800 y : 48
-x : 0 y : 350
-x : 200 y : 350
-x : 400 y : 350
-x : 600 y : 350
-x : 800 y : 350
-Blobs : 398x239
->>>>>>> 7dc886d52ff6e9bfc4835eca0d877f1d82396667
+Offset grille : 26x46  RATIO : 0.345714
+Screen : 1000x700
+Dash  38 :: 0
+Blobs : 925x555
+blob  0 :: 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  0 :: 46
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  0 :: 92
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  0 :: 138
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  0 :: 184
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  0 :: 230
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  0 :: 276
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  0 :: 322
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  0 :: 368
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  0 :: 414
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  0 :: 460
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  0 :: 506
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  0 :: 552
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  46 :: 0
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  46 :: 46
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  46 :: 92
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  46 :: 138
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  46 :: 184
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  46 :: 230
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  46 :: 276
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  46 :: 322
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  46 :: 368
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  46 :: 414
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  46 :: 460
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  46 :: 506
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  46 :: 552
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  92 :: 0
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  92 :: 46
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  92 :: 92
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  92 :: 138
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  92 :: 184
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  92 :: 230
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  92 :: 276
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  92 :: 322
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  92 :: 368
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  92 :: 414
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  92 :: 460
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  92 :: 506
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  92 :: 552
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  138 :: 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  138 :: 46
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  138 :: 92
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  138 :: 138
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  138 :: 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  138 :: 230
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  138 :: 276
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  138 :: 322
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  138 :: 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  138 :: 414
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  138 :: 460
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  138 :: 506
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  138 :: 552
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  184 :: 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  184 :: 46
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  184 :: 92
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  184 :: 138
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  184 :: 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  184 :: 230
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  184 :: 276
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  184 :: 322
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  184 :: 368
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  184 :: 414
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  184 :: 460
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  184 :: 506
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  184 :: 552
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  230 :: 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  230 :: 46
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  230 :: 92
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  230 :: 138
+Taille blob : 46
+Sprite x : 0 y : 368
+Offset  0 :: 368
+blob  230 :: 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Offset  0 :: 0
+blob  230 :: 230
+Taille blob : 46
+Sprite x : 0 y : 460
+Offset  0 :: 460
+blob  230 :: 276
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  230 :: 322
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  230 :: 368
+Taille blob : 46
+Sprite x : 0 y : 276
+Offset  0 :: 276
+blob  230 :: 414
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  230 :: 460
+Taille blob : 46
+Sprite x : 0 y : 184
+Offset  0 :: 184
+blob  230 :: 506
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
+blob  230 :: 552
+Taille blob : 46
+Sprite x : 0 y : 92
+Offset  0 :: 92
