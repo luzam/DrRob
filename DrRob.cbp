@@ -54,6 +54,7 @@
 		<Unit filename="include\Tree.h" />
 		<Unit filename="include\conected.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="source\DashBoard.cpp" />
 		<Unit filename="source\Game.cpp" />
 		<Unit filename="source\InterfaceX.cpp" />
 		<Unit filename="source\MoteurPhy.cpp" />

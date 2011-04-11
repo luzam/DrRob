@@ -6,6 +6,7 @@
   */
 void Game::go()
 {
+    initBlobs();
     SDL_Surface *ecran = NULL;
     SDL_Event event; /* La variable contenant l'évènement */
     int continuer = 1; /* Notre booléen pour la boucle */
@@ -31,21 +32,25 @@ void Game::go()
                 continuer = 0;
                  break;
             case SDLK_LEFT :
-                _dashBoards.at(0).moteurPhy().gauche();
+                _dashBoards.at(0).moteurPhy()->gauche();
                 break;
             case SDLK_RIGHT :
-                _dashBoards.at(0).moteurPhy().droite();
+                _dashBoards.at(0).moteurPhy()->droite();
                 break;
             case SDLK_DOWN :
-                _dashBoards.at(0).moteurPhy().speedUp();
+                _dashBoards.at(0).moteurPhy()->speedUp();
+                break;
+            case SDLK_UP :
+                _dashBoards.at(0).moteurPhy()->rotationHoraire();
                 break;
 
                 default : break;
             }
             break;
         }
+
         for(size_t i=0; i<_dashBoards.size(); i++)
-            _dashBoards.at(i).moteurPhy().moove();
+            _dashBoards.at(i).go();
         //on blit tout
         // SDL_blit ...
         //SDL_Flip(ecran); /* On met à jour l'affichage */

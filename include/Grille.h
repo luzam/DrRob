@@ -1,7 +1,7 @@
 #ifndef GRILLE_H
 #define GRILLE_H
 
-#include <iostream>
+#include <iostream>//temporaire
 #include <assert.h>
 #include <vector>
 template <typename X>
@@ -11,17 +11,19 @@ protected :
     std::vector<X> _grille;
     public :
     Grille():_grille(13*6){
+        std::cout<<"grille()\n";
     for(int c=0;c<13*6;c++)
     std::fill(_grille.begin(), _grille.end(), X(0));
+    std::cout<<"FIN grille()\n";
     }
 
     ~Grille(){
     delete[] _grille;
     }
-    X operator()(int ligne,int col) const
+    X* operator()(int ligne,int col)
     {
         assert(6*ligne+col<13*6);
-        return _grille.at(6*ligne + col);
+        return &(_grille.at(6*ligne + col));
     }
     void operator()(int ligne,int col,X value)
     {

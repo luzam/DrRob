@@ -1,0 +1,6 @@
+*.stackdump
+bin/*
+obj/*
+*.cbp
+*.layout
+*.depends

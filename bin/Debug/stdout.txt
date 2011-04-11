@@ -1,97 +1,254 @@
+Game()
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+grille()
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+Blob(int)
+FIN grille()
+MoteurPhy()
+Dashboard()
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
 32 , 0
-32 , 2
-32 , 4
+touching : 0
+32 , 15
+touching : 0
+32 , 30
+touching : 0
 droite
-48 , 6
-48 , 8
-droite
-64 , 10
-64 , 12
-droite
-80 , 14
-80 , 16
-droite
-96 , 18
-96 , 20
-droite
-112 , 22
-112 , 24
-droite
-128 , 26
-128 , 28
-droite
-144 , 30
-144 , 32
-droite
-160 , 34
-160 , 36
-droite
-176 , 38
-176 , 40
-droite
-192 , 42
-192 , 44
-droite
-208 , 46
-208 , 48
+48 , 45
+touching : 0
+48 , 60
+touching : 0
 gauche
-192 , 50
-192 , 52
-gauche
-176 , 54
-176 , 56
-gauche
-160 , 58
-160 , 60
-gauche
-144 , 62
-144 , 64
-gauche
-128 , 66
-128 , 68
-gauche
-112 , 70
-112 , 72
-gauche
-96 , 74
-96 , 76
-gauche
-80 , 78
-80 , 80
-gauche
-64 , 82
-64 , 84
-gauche
-48 , 86
-48 , 88
+32 , 75
+touching : 0
+droite
 48 , 90
-48 , 92
-48 , 94
-48 , 96
-48 , 98
-48 , 100
-48 , 102
-48 , 104
-48 , 106
-48 , 108
-48 , 110
+touching : 0
+48 , 105
+touching : 0
+gauche
+32 , 120
+touching : 0
+32 , 135
+touching : 0
 droite
-64 , 112
-64 , 114
-64 , 116
+48 , 150
+touching : 0
+48 , 165
+touching : 0
+48 , 180
+touching : 0
 droite
-80 , 118
-80 , 120
+64 , 195
+touching : 0
+touching : 10
+64 , 192
+touching : 10
 droite
-96 , 122
-96 , 124
+80 , 207
+touching : 10
+touching : 10
+80 , 207
+touching : 9
+touching : 9
+gauche
+64 , 207
+touching : 8
+touching : 8
+64 , 207
+touching : 7
+touching : 7
+gauche
+48 , 207
+touching : 6
+touching : 6
 droite
-112 , 126
-112 , 128
+64 , 207
+touching : 5
+touching : 5
+64 , 207
+touching : 4
+touching : 4
+64 , 207
+touching : 3
+touching : 3
 droite
-128 , 130
-128 , 132
-droite
-144 , 134
-144 , 136
-144 , 138
+80 , 207
+touching : 2
+touching : 2
+80 , 207
+touching : 1
+touching : 1
+80 , 207
+ajout blob : 12 5
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666661
+666667
+
+labeled
