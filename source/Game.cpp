@@ -1,5 +1,5 @@
 #include "../include/Game.h"
-
+#include "../include/InterfaceX.h"
 /** @brief main loop
   *
   * (documentation goes here)
@@ -10,12 +10,13 @@ void Game::go()
     SDL_Surface *ecran = NULL;
     SDL_Event event; /* La variable contenant l'évènement */
     int continuer = 1; /* Notre booléen pour la boucle */
+    InterfaceX i(1);
+    i.blits(_dashBoards);
 
+   // SDL_Init(SDL_INIT_VIDEO);
 
-    SDL_Init(SDL_INIT_VIDEO);
-
-    ecran = SDL_SetVideoMode(640, 480, 32, SDL_HWSURFACE);
-    SDL_WM_SetCaption("DrRob", NULL);
+   // ecran = SDL_SetVideoMode(640, 480, 32, SDL_HWSURFACE);
+   // SDL_WM_SetCaption("DrRob", NULL);
 
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
@@ -53,7 +54,8 @@ void Game::go()
             _dashBoards.at(i).go();
         //on blit tout
         // SDL_blit ...
-        //SDL_Flip(ecran); /* On met à jour l'affichage */
+        i.blits(_dashBoards);
+        SDL_Flip(i.screen());
     }
 
 }

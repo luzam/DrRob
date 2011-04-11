@@ -31,7 +31,7 @@ public :
 
     }
 
-    std::vector<DashBoard> dashboard()const{return _dashBoards;}
+    std::vector<DashBoard> dashBoards()const{return _dashBoards;}
     void initBlobs(){
         Blobs randBlob;
     srand(time(NULL));

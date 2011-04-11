@@ -139,9 +139,57 @@ bool InterfaceX::decouper_sprite()
 {
 
 
-return true;
+    return true;
 }
-SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat){
+void InterfaceX::blit_fond(){
+ apply_surface(0,0,_background,_screen,NULL);
+}
+void InterfaceX::blits(std::vector<DashBoard> dashBoards){
+blit_fond();
+blit_dash();
+blit_blobs(dashBoards);
+}
+void InterfaceX::blit_dash(){
+    for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
+        apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
+}
+void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
+{
+    SDL_Rect offset;
+    int blobx,bloby;
+    int offsetgrillex;
+    int offsetgrilley;
+    Grille<Blobs>* grille;
+    for(size_t j=0; j<dashBoards.size(); j++)
+    {
+        grille=(dashBoards.at(j).grille());
+        for(int l=0; l<6; l++)
+        {
+            for(int c=0; c<13; c++)
+            {
+                if( ((*grille)(l,c))->color()!=BLANK)
+                {
+                    //On se place au debut de la grille
+                    offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
+                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
+                    //On calcule les coordonnées des blobs
+                    blobx=l*_taille_blob;
+                    bloby=c*_taille_blob;
+                    //calcul de la position dans le sprite
+                    offset=offset_sprite(((*grille)(l,c))->color(),((*grille)(l,c))->link(),((*grille)(l,c))->state());
+                    // Blit des Blobs (ahah)
+                    apply_surface(offsetgrillex+blobx,offsetgrilley+bloby,_blobs,_screen,&offset);
+                }
+            }
+        }
+    }
+
+
+
+
+}
+SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
+{
     SDL_Rect r;
     int tb=_taille_blob;
     std::cout<<"Taille blob : "<<tb<<std::endl;

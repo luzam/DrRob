@@ -1,0 +1,4 @@
+Assertion failed: 6*ligne+col<13*6, file Z:\Desktop\ProjetMeanBean\DrRob\source\../include/Grille.h, line 25
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.

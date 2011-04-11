@@ -7,6 +7,7 @@
 #include "SDL_rotozoom.h"
 #include <vector>
 #include "Position.h"
+#include "DashBoard.h"
 class InterfaceX
 {
 protected:
@@ -37,7 +38,11 @@ public:
     ,_offset_dash_score(),_ratio(1),_vDash(nbJoueurs),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
-
+    init();
+    load_files();
+    resize_files();
+    compute_vDash();
+    compute_offsets();
 
     }
     ~InterfaceX()
@@ -87,7 +92,11 @@ public:
     bool resize_img_W(double pixel);
     bool compute_offsets();
     bool compute_vDash();
+    void blit_dash();
+    void blit_fond();
+    void blits(std::vector<DashBoard> dashBoards);
     bool decouper_sprite();
+    void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);
 };
 #endif // INTERFACEX_H_INCLUDED

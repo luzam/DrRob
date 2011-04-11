@@ -40,6 +40,7 @@ bool checkCombo(){
         return true;}
     return false;
 }
+Grille<Blobs>* grille()const{return _grille;}
 MoteurPhy* moteurPhy()const{return _moteurPhy;}
 void go();
 
