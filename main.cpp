@@ -280,7 +280,7 @@ int main( int argc, char* argv[] )
 {
     //////////////////////CREATION D'UNE GRILLE DE TEST
     srand(time(NULL));
-    int r=0;
+  //  int r=0;
     Grille<Blobs>* maGrille = new Grille<Blobs>();
     for(int l=0; l<6; l++)
     {
@@ -288,7 +288,7 @@ int main( int argc, char* argv[] )
         {
             std::cout<<Color(rand() %6);
 
-            (*maGrille)(l,c).setColor(Color(rand() %6+1));
+            (*(*maGrille)(l,c)).setColor(Color(rand() %6+1));
           //  std::cout<<((*maGrille)(l,c)).color();
         }
         std::cout<<""<<std::endl;
@@ -296,7 +296,7 @@ int main( int argc, char* argv[] )
     bool quit=false;
   //  Game drRob(1,16);
   ////////////////////////////////CREATION DE L'INTERFACE DE TEST
-    InterfaceX i(4);
+    InterfaceX i(10);
     i.init();
     i.load_files();
     i.resize_files();
