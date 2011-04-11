@@ -16,12 +16,14 @@
 #include "Blobs.h"
 #include <map>
 #include <set>
+#include <iostream> //temporaire
+
 enum Orientation{ HAUT,BAS,DROITE,GAUCHE};
 class MoteurPhy{
 
         protected :
     int _taille;
-    Position* _posBlobPivot;
+    Position _posBlobPivot;
     Color _colorMaster;
     Color _colorSlave;
     int _vitesseBlob;
@@ -29,19 +31,18 @@ class MoteurPhy{
     int _comboAct;
     bool _launchCombo;
     Grille<Blobs>* _grille;
-    int _ligneBlobCourant;
-    int _colBlobCourant;
     int _touching;
     int _comboting;
-    const int ligneBlobCourant()const{return (int)((*_posBlobPivot).y()/_taille);}
-    const int colBlobCourant()const{return (int)((*_posBlobPivot).x()/_taille);}
+    int _falling;
+    const int ligneBlobCourant()const{return (int)((_posBlobPivot).y()/_taille);}
+    const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
     void ajoutGrille();
 
 
     public :
     MoteurPhy(int taille,Grille<Blobs>* grille):
-    _taille(taille),_vitesseBlob(2),_orientation( HAUT),_comboAct(0),_launchCombo(false),
-    _grille(grille),_ligneBlobCourant(0),_colBlobCourant(2),_touching(0),_comboting(0){_posBlobPivot = new Position(2*_taille,0);}
+    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(15),_orientation( HAUT),_comboAct(0),_launchCombo(false),
+    _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
     void rotationHoraire();
@@ -60,6 +61,8 @@ class MoteurPhy{
     _colorSlave = slave.color();}
     bool launchCombo()const{ return _launchCombo;}
     void setLaunchCombo(bool combo){_launchCombo=combo;}
+    int falling()const{return _falling;}
+    int comboting()const{return _comboting;}
 
 
 };

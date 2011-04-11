@@ -30,13 +30,19 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
 		</Compiler>
-		<Unit filename="ARIAL.TTF" />
-		<Unit filename="cb.bmp" />
+		<Linker>
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
+			<Add directory="SDL_image\include" />
+		</Linker>
 		<Unit filename="include\Blobs.h" />
 		<Unit filename="include\Clock.h" />
 		<Unit filename="include\Color.h" />
 		<Unit filename="include\DashBoard.h" />
+		<Unit filename="include\Enums.h" />
 		<Unit filename="include\Game.h" />
 		<Unit filename="include\Grille.h" />
 		<Unit filename="include\InterfaceX.h" />
@@ -48,6 +54,8 @@
 		<Unit filename="include\Tree.h" />
 		<Unit filename="include\conected.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="source\DashBoard.cpp" />
+		<Unit filename="source\Game.cpp" />
 		<Unit filename="source\InterfaceX.cpp" />
 		<Unit filename="source\MoteurPhy.cpp" />
 		<Unit filename="source\SDL_rotozoom.c">
@@ -57,7 +65,6 @@
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
