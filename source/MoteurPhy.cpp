@@ -147,8 +147,10 @@ void MoteurPhy::moove(Position* master,Position* slave)
         {
             std::cout<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
-            if((_touching)==0)
+            if((_touching)==0){
                 ajoutGrille();
+                _fixed = true;
+                }
         }
         else
         {

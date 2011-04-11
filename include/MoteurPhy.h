@@ -55,6 +55,9 @@ class MoteurPhy{
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){
+        _posBlobPivot.setX(2*_taille);
+        _posBlobPivot.setY(0);
+        _orientation = HAUT;
     _colorMaster = master.color();
     _colorSlave = slave.color();
     _fixed = false;}
