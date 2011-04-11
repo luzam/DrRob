@@ -30,6 +30,8 @@ public :
             _dashBoards.push_back(DashBoard(taille,new Grille<Blobs>(),&_randBlobs));
 
     }
+
+    std::vector<DashBoard> dashboard()const{return _dashBoards;}
     void initBlobs(){
         Blobs randBlob;
     srand(time(NULL));
@@ -39,6 +41,7 @@ public :
         }
     }
     void go();
+
 
 };
 

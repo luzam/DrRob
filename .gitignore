@@ -1,6 +1,7 @@
-*.stackdump
+*.stackdump 
 obj/Debug/source/*.o
 *.cbp
 *.layout
-*.depends
+*.depend
 *.o
+
