@@ -86,6 +86,8 @@ bool InterfaceX::resize_files()
     _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);
     _taille_blob=taille_blob/12;
     std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
+    _grille_W=13*_taille_blob;
+    _grille_H=6*_taille_blob;
     return true;
 }
 

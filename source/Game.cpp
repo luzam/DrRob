@@ -6,7 +6,6 @@
   */
 void Game::go()
 {
-    SDL_Surface *ecran = NULL;
     SDL_Event event; /* La variable contenant l'évènement */
     int continuer = 1; /* Notre booléen pour la boucle */
     _X->blits(_dashBoards);
@@ -47,7 +46,7 @@ void Game::go()
             }
             break;
         }
-
+        _X->blits(_dashBoards);
         for(size_t i=0; i<_dashBoards.size(); i++)
             _dashBoards.at(i).go();
 
@@ -56,8 +55,6 @@ void Game::go()
                                    _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob());
         std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).masterPos()).x()<<" , " <<(*_dashBoards.at(i).masterPos()).y()<<" ]]]]]]]]]\n";
         }
-
-        _X->blits(_dashBoards);
         SDL_Flip(_X->screen());
     }
 

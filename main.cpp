@@ -19,7 +19,6 @@ int main( int argc, char* args[] ){
 #include "include/MoteurPhy.h"
 #include "include/Game.h"
 #include "include/InterfaceX.h"
-//*
 int main( int argc, char* args[] ){
     bool quit=false;
     std::cout<<"DrRob cree par Antoine Hoarau"<<std::endl;

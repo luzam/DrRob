@@ -32,6 +32,8 @@ protected:
     SDL_Event _event;
     TTF_Font *_font;
     SDL_Color _textColor;
+    int _grille_W;
+    int _grille_H;
 public:
     InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),
     _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_nbJoueurs(nbJoueurs),_offset_dash_grille(),_offset_dash_nextBlob()
@@ -85,6 +87,8 @@ public:
     {
         return _dashboard;
     }
+    int grille_H()const{return _grille_H;}
+    int grille_W()const{return _grille_W;}
     bool resize_files();
     SDL_Surface* img_zoom_pixel_H(SDL_Surface *surface1,int pixel);
     SDL_Surface* img_zoom_pixel_W(SDL_Surface *surface1,int pixel);

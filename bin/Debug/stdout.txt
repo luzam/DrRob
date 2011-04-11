@@ -1,168 +1,113 @@
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-grille()
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-Blob(int)
-FIN grille()
-
-
-
-
-
-
+Z:\Desktop\ProjetMeanBean\DrRob\img
+Taille dash W resized : 231
+Assez de place en W
+Resize des blobs
+taille_blobs_h : 555.372 Ratio : 0.0661157
+Un blob mesure : 46 px de coté
+xNb joueurs en X :  2
+Calcul offsets
+Offset grille : 26x46  RATIO : 0.345714
 Game()
+5
+Blob(Blob)
+2
+Blob(Blob)
+0
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+2
+Blob(Blob)
+3
+Blob(Blob)
+4
+Blob(Blob)
+5
+Blob(Blob)
+0
+Blob(Blob)
+5
+Blob(Blob)
+1
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+1
+Blob(Blob)
+4
+Blob(Blob)
+4
+Blob(Blob)
+2
+Blob(Blob)
+2
+Blob(Blob)
+3
+Blob(Blob)
+0
+Blob(Blob)
+5
+Blob(Blob)
+3
+Blob(Blob)
+1
+Blob(Blob)
+5
+Blob(Blob)
+3
+Blob(Blob)
+2
+Blob(Blob)
+4
+Blob(Blob)
+1
+Blob(Blob)
+2
+Blob(Blob)
+2
+Blob(Blob)
+4
+Blob(Blob)
+1
+Blob(Blob)
+1
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+1
+Blob(Blob)
+1
+Blob(Blob)
+0
+Blob(Blob)
+1
+Blob(Blob)
+3
+Blob(Blob)
+1
+Blob(Blob)
+3
+Blob(Blob)
+1
+Blob(Blob)
+1
+Blob(Blob)
+3
+Blob(Blob)
+2
+Blob(Blob)
+4
+Blob(Blob)
+1
+Blob(Blob)
+2
+Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -322,97 +267,157 @@ Blob(int)
 Blob(int)
 FIN grille()
 MoteurPhy()
-Dashboard()
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
-Z:\Desktop\ProjetMeanBean\DrRob\img
-Taille dash W resized : 231
-Assez de place en W
-Resize des blobs
-taille_blobs_h : 555.372 Ratio : 0.0661157
-Un blob mesure : 46 px de coté
-xNb joueurs en X :  2
-Calcul offsets
-Offset grille : 26x46  RATIO : 0.345714
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 0
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 15 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 15
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 30 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 30
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 45 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 45
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 60 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 60
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 75 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 75
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 90 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 90
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 105 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 105
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 120 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 120
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 135 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 135
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 150 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 150
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 165 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 165
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 180 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 32 , 180
 touching : 0
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 195 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -420,7 +425,205 @@ Blob(Blob)
 32 , 195
 touching : 0
 touching : 10
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 192 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+32 , 192
+touching : 10
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 10
+touching : 10
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 9
+touching : 9
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 8
+touching : 8
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 7
+touching : 7
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 6
+touching : 6
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 5
+touching : 5
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 4
+touching : 4
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 3
+touching : 3
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 2
+touching : 2
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+32 , 207
+touching : 1
+touching : 1
+32 , 207
+ajout blob : 12 2<---------1
+Grille
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+664666
+661666
+
+Image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+labeled
+BLA1
+BLA2
+BLA3
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+000000
+001000
+002000
+
+taille map : 78
+Combo : 0
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+666666
+664666
+661666
+
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 368
+[[[[[[[[[[[32 , 207 ]]]]]]]]]
