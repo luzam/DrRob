@@ -58,7 +58,7 @@ public:
     bool init();
     bool load_files();
     void clean_up();
-    const int taille_blob()const{return _taille_blob;}
+    int taille_blob()const{return _taille_blob;}
     Position offset_grille()const
     {
         return _offset_dash_grille;
@@ -100,6 +100,7 @@ public:
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
     void blits(std::vector<DashBoard> dashBoards);
     bool decouper_sprite();
+    void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);
 };

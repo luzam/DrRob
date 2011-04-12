@@ -54,13 +54,17 @@ bool InterfaceX::init()
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
 }
+void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n){
 
+    blit_un_blob(slave,_offset_dash_nextBlob.x()+_vDash[n].x(),_offset_dash_nextBlob.y()+_vDash[n].y()-2*_taille_blob);
+    blit_un_blob(master,_offset_dash_nextBlob.x()+_vDash[n].x(),_offset_dash_nextBlob.y()+_vDash[n].y()-_taille_blob);
+
+}
 bool InterfaceX::resize_files()
 {
-    int nbJoueursX=round((_nbJoueurs+0.1)/2);
-    double d_h_ini=_dashboard_ini->h;
-
-    int resizedDashW = ((double)_screen->h/2)*((double)_dashboard_ini->w)/((double)_dashboard_ini->h);
+    int nbJoueursX=round(((double)_nbJoueurs+0.1)/2.0);
+    int d_h_ini=_dashboard_ini->h;
+    int resizedDashW = (_screen->h/2)*(_dashboard_ini->w)/(_dashboard_ini->h);
     std::cout<<"Taille dash W resized : "<<resizedDashW<<std::endl;
     if(nbJoueursX*resizedDashW<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
     {
@@ -74,20 +78,22 @@ bool InterfaceX::resize_files()
     {
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
         _dashboard=img_zoom_pixel_W(_dashboard_ini,_screen->w/nbJoueursX);
-
     }
     double d_h=_dashboard->h;
-    _ratio=d_h/d_h_ini;
+    _ratio=d_h/(double)d_h_ini;
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
     std::cout<<"Resize des blobs"<<std::endl;
-    double ratioBlob = (_taille_blob_ini)/d_h_ini;
+    double ratioBlob = (double)(_taille_blob_ini)/(double)d_h_ini;
     int nb_blobs_par_h=12;
-    double taille_blob =_dashboard->h*nb_blobs_par_h*_taille_blob_ini/d_h_ini;
-    std::cout<<"taille_blobs_h : "<<taille_blob<<" Ratio : "<<ratioBlob<<std::endl;
-    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob);
-    _taille_blob=taille_blob/12;
+    int nb_blobs_par_w=20;
+    int taille_blob_H =nb_blobs_par_h*(double)_taille_blob_ini*_ratio;
+    int taille_blob_W =nb_blobs_par_w*(double)_taille_blob_ini*_ratio;
+    std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
+   std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
+    _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob_H);
+    _taille_blob=_blobs->w/20;
     std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
-    _grille_W=13*_taille_blob;
+    _grille_W=12*_taille_blob;
     _grille_H=6*_taille_blob;
     return true;
 }
@@ -173,7 +179,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
-                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
+                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y()+((*(dashBoards.at(j).grille()))(l,c))->current();
                     //On calcule les coordonnées des blobs
                     blobx=c*_taille_blob;
                     bloby=l*_taille_blob;
@@ -183,10 +189,6 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
             }
         }
     }
-
-
-
-
 }
 SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
 {
@@ -198,16 +200,16 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     r.x=link*tb;
     r.y=2*color*tb;
     std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
-
     return r;
 }
 bool InterfaceX::compute_offsets()
 {
     std::cout<<"Calcul offsets"<<std::endl;
-
     _offset_dash_grille.setX((9)*(_ratio));
     _offset_dash_grille.setY((32-_taille_blob_ini)*(_ratio));
     std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
+    _offset_dash_nextBlob.setX((128)*_ratio);
+    _offset_dash_nextBlob.setY((78)*_ratio);
     return true;
 }
 
@@ -247,23 +249,24 @@ void InterfaceX::clean_up()
     SDL_Quit();
 }
 
-SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface1,int pixel)
+SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int taille_desiree_W)
 {
-    double carre=pixel;
-    double carre2=surface1->w;
-    double zoom=(double)carre/(double)carre2;
-    SDL_Surface *tmp=rotozoomSurfaceXY(surface1,0,zoom,zoom,1);
-    SDL_FreeSurface(surface1);
-    return tmp;
+    double td_W=taille_desiree_W;
+    double sar_W=surface_a_resize->w;
+    double zoom=(double)td_W/(double)sar_W;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
 }
-SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface1,int pixel)
+SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
 {
-    double carre=pixel;
-    double carre2=surface1->h;
-    double zoom=(double)carre/(double)carre2;
-    SDL_Surface *tmp=rotozoomSurfaceXY(surface1,0,zoom,zoom,1);
-    SDL_FreeSurface(surface1);
-    return tmp;
+    double td_H=taille_desiree_H;
+    double sar_H=surface_a_resize->h;
+    double zoom=(double)td_H/(double)sar_H;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
 }
+
 
 

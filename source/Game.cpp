@@ -54,7 +54,7 @@ void Game::go()
         for(size_t i=0; i<_dashBoards.size(); i++){
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
                                    _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
-//            _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
+            _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
 
         }
         SDL_Flip(_X->screen());
