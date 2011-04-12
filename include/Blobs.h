@@ -14,7 +14,7 @@ protected :
     size_t _color;
     size_t _state;
     size_t _link;
-    int _falling;
+    int _current;
 public :
     Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
         _color(color),_state(state),_link(link),_falling(0) {std::cout<<"Blob(col)\n";}
@@ -58,7 +58,8 @@ public :
     _state = blob.state();
     }
     void setFalling(int falling){this->setState(FALLING);
-    _falling = falling;}
+    _current = falling;}
+    int current()const {return _current;}
 };
 
 
