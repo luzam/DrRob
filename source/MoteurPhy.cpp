@@ -450,12 +450,4 @@ void MoteurPhy::majPosition(Position* master, Position* slave)
         break;
     }
 }
-/** @brief make blobs go down depending on falling
-  *
-  * (documentation goes here)
-  */
-void MoteurPhy::goDown(Position* master, Position* slave)
-{
 
-
-}
