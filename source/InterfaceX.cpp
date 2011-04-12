@@ -73,10 +73,11 @@ bool InterfaceX::resize_files()
     else   //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
     {
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
-        img_zoom_pixel_W(_dashboard_ini,_screen->w/nbJoueursX);
+        _dashboard=img_zoom_pixel_W(_dashboard_ini,_screen->w/nbJoueursX);
 
     }
-    _ratio=(double)_dashboard->h/d_h_ini;
+    double d_h=_dashboard->h;
+    _ratio=d_h/d_h_ini;
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
     std::cout<<"Resize des blobs"<<std::endl;
     double ratioBlob = (_taille_blob_ini)/d_h_ini;
@@ -151,10 +152,10 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y){
 
 
 }
-void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave)
+void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
 {
-    blit_un_blob(master,pmaster.x(),pmaster.y());
-    blit_un_blob(slave,pslave.x(),pslave.y());
+    blit_un_blob(master,pmaster.x()+_offset_dash_grille.x()+_vDash[n].x(),pmaster.y()+_offset_dash_grille.y()+_vDash[n].y());
+    blit_un_blob(slave,pslave.x()+_offset_dash_grille.x()+_vDash[n].x(),pslave.y()+_offset_dash_grille.y()+_vDash[n].y());
 }
 void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
 {

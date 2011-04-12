@@ -19,6 +19,8 @@ protected :
     int _combo;
     Blobs _masterBlob;
     Blobs _slaveBlob;
+    Blobs _nextMaster;
+    Blobs _nextSlave;
     Grille<Blobs>* _grille;
     std::list<Blobs>* _nextBlobs;
     std::list<Blobs>::iterator _it;
@@ -36,6 +38,8 @@ public :
         _moteurPhy = new MoteurPhy(taille,grille);
         _masterBlob.setColor((++_it)->color());
         _slaveBlob.setColor((++_it)->color());
+        _nextMaster.setColor((++_it)->color());
+        _nextSlave.setColor((++_it)->color());
         _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
        // std::cout<<"Dashboard()->>>"<<_courantPivot.color()<<std::endl;
     }
@@ -61,6 +65,8 @@ public :
     Position* slavePos(){return &_slave;}
     Blobs* masterBlob(){return &_masterBlob;}
     Blobs* slaveBlob(){return &_slaveBlob;}
+    Blobs* nextMaster(){return &_nextMaster;}
+    Blobs* nextSlave(){return &_nextSlave;}
 
 };
 
