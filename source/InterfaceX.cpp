@@ -89,9 +89,15 @@ bool InterfaceX::resize_files()
     int taille_blob_H =nb_blobs_par_h*(double)_taille_blob_ini*_ratio;
     int taille_blob_W =nb_blobs_par_w*(double)_taille_blob_ini*_ratio;
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
+<<<<<<< HEAD:source/InterfaceX.cpp
    std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
     _blobs=img_zoom_pixel_H(_blobs_ini,taille_blob_H);
     _taille_blob=_blobs->w/20;
+=======
+   std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
+    _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob_W);
+    _taille_blob=round((double)_blobs->w/20+0.1);
+>>>>>>> eab52106aeb3a53e23593d8d8cdf41aff3834058:source/InterfaceX.cpp
     std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
     _grille_W=12*_taille_blob;
     _grille_H=6*_taille_blob;
@@ -179,7 +185,10 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
+                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING)
                     offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y()+((*(dashBoards.at(j).grille()))(l,c))->current();
+                    else
+                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
                     //On calcule les coordonnées des blobs
                     blobx=c*_taille_blob;
                     bloby=l*_taille_blob;
