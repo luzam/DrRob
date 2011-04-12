@@ -164,9 +164,9 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
     int offsetgrilley;
     for(size_t j=0; j<dashBoards.size(); j++)
     {
-        for(int l=0; l<6; l++)
+        for(int l=0; l<13; l++)
         {
-            for(int c=0; c<13; c++)
+            for(int c=0; c<6; c++)
             {
                 if( ((*(dashBoards.at(j).grille()))(l,c))->color()!=BLANK)
                 {
@@ -174,8 +174,8 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                     offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
                     offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
                     //On calcule les coordonnées des blobs
-                    blobx=l*_taille_blob;
-                    bloby=c*_taille_blob;
+                    blobx=c*_taille_blob;
+                    bloby=l*_taille_blob;
 
                     blit_un_blob(((*(dashBoards.at(j).grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
                 }
