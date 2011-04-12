@@ -1,75 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="include\Blobs.h" open="1" top="0" tabpos="5">
-		<Cursor position="881" topLine="0" />
+	<File name="include\Blobs.h" open="1" top="0" tabpos="10">
+		<Cursor position="628" topLine="12" />
 	</File>
-<<<<<<< HEAD
-	<File name="include\Color.h" open="1" top="0" tabpos="4">
-		<Cursor position="0" topLine="0" />
-	</File>
-	<File name="include\DashBoard.h" open="1" top="0" tabpos="9">
-		<Cursor position="1322" topLine="16" />
-	</File>
-	<File name="include\Game.h" open="1" top="0" tabpos="6">
-		<Cursor position="375" topLine="0" />
-	</File>
-	<File name="include\InterfaceX.h" open="1" top="0" tabpos="2">
-		<Cursor position="809" topLine="64" />
-	</File>
-	<File name="include\Link.h" open="0" top="0" tabpos="7">
-		<Cursor position="169" topLine="0" />
-	</File>
-	<File name="include\MoteurPhy.h" open="0" top="0" tabpos="0">
-		<Cursor position="466" topLine="0" />
-	</File>
-	<File name="include\Position.h" open="1" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
-	</File>
-	<File name="include\conected.h" open="0" top="0" tabpos="0">
-		<Cursor position="425" topLine="129" />
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="368" topLine="0" />
-	</File>
-	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="590" topLine="0" />
-	</File>
-	<File name="source\Game.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2290" topLine="10" />
-	</File>
-	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="3242" topLine="149" />
-	</File>
-	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="1078" topLine="321" />
-=======
 	<File name="include\DashBoard.h" open="1" top="0" tabpos="3">
-		<Cursor position="1695" topLine="46" />
+		<Cursor position="1926" topLine="56" />
 	</File>
 	<File name="include\Game.h" open="1" top="0" tabpos="2">
-		<Cursor position="708" topLine="21" />
+		<Cursor position="977" topLine="31" />
 	</File>
-	<File name="include\InterfaceX.h" open="1" top="0" tabpos="4">
-		<Cursor position="5994" topLine="26" />
+	<File name="include\InterfaceX.h" open="1" top="1" tabpos="4">
+		<Cursor position="1005" topLine="19" />
 	</File>
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="1">
-		<Cursor position="2223" topLine="51" />
+		<Cursor position="2171" topLine="54" />
 	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="3">
-		<Cursor position="8682" topLine="327" />
+	<File name="main.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="8613" topLine="327" />
 	</File>
 	<File name="source\DashBoard.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="538" topLine="17" />
+		<Cursor position="521" topLine="11" />
 	</File>
-	<File name="source\Game.cpp" open="0" top="0" tabpos="1">
-		<Cursor position="2237" topLine="35" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="1541" topLine="19" />
 	</File>
-	<File name="source\InterfaceX.cpp" open="0" top="0" tabpos="9">
-		<Cursor position="8069" topLine="244" />
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="8">
+		<Cursor position="1680" topLine="36" />
 	</File>
-	<File name="source\MoteurPhy.cpp" open="1" top="1" tabpos="6">
-		<Cursor position="9894" topLine="392" />
->>>>>>> 85d01de89a7d9b6fae36fc5d244591b05430102e
+	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="9841" topLine="296" />
 	</File>
 </CodeBlocks_layout_file>
