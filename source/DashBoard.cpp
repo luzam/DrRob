@@ -18,8 +18,9 @@ void DashBoard::go()
     else if(_moteurPhy->fixed())
     {
         std::cout<<"blob suivant\n";
-        _masterBlob.setBlob(_nextMaster.color());
-        _slaveBlob.setBlob(_nextSlave.color());
+        _masterBlob.setBlob(_nextMaster);
+        _slaveBlob.setBlob(_nextSlave);
+        std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
         _nextMaster.setBlob(*(++_it));
         _nextSlave.setBlob(*(++_it));
         _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
