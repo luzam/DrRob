@@ -65,6 +65,7 @@ class MoteurPhy{
     bool fixed()const{return _fixed;}
     void setLaunchCombo(bool combo){_launchCombo=combo;}
     int falling()const{return _falling;}
+    void setFalling(int falling){_falling = falling;}
     int comboting()const{return _comboting;}
     void majPosition(Position* master,Position* slave);
 

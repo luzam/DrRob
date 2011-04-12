@@ -17,9 +17,9 @@ protected :
     int _current;
 public :
     Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
-        _color(color),_state(state),_link(link),_falling(0) {std::cout<<"Blob(col)\n";}
-    Blobs(int zero):_color(BLANK),_state(NO_STATE),_link(NO_LINK),_falling(0){std::cout<<"Blob(int)\n";}
-    Blobs(const Blobs& blob): _color(blob.color()),_state(blob.state()),_link(blob.link()),_falling(0){std::cout<<"Blob(Blob)\n";}
+        _color(color),_state(state),_link(link),_current(0) {std::cout<<"Blob(col)\n";}
+    Blobs(int zero):_color(BLANK),_state(NO_STATE),_link(NO_LINK),_current(0){std::cout<<"Blob(int)\n";}
+    Blobs(const Blobs& blob): _color(blob.color()),_state(blob.state()),_link(blob.link()),_current(0){std::cout<<"Blob(Blob)\n";}
     Blobs(){}
     ~Blobs() {}
 

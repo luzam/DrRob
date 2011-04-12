@@ -201,6 +201,7 @@ void MoteurPhy::ajoutGrille()
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setLink(0);
         break;
     }
+    fall();
     majCombo();
 }
 
@@ -393,6 +394,7 @@ int MoteurPhy::majCombo()
         std::cout<<std::endl;
     }
     std::cout<<std::endl;
+    fall();
     return combo;
 }
 
@@ -409,7 +411,7 @@ void MoteurPhy::fall()
         for(int ligne=12; ligne>=0; ligne--)
         {
             if(((*_grille)(ligne,col))->color()==BLANK)
-                blanks++;
+                blanks+=_taille;
             else
             {
                 ((*_grille)(ligne,col))->setFalling(blanks*FALLING_ANIM_TIME);
@@ -418,6 +420,7 @@ void MoteurPhy::fall()
         }
     }
     _falling = maxBlank;
+    std::cout<<"MMMMMMMMAXBLANK->>>>>>>>>>>>>>>>>>>>>> " <<_falling<<std::endl;
 }
 
 /** @brief compute how much blobs fall after a combote
@@ -440,7 +443,6 @@ void MoteurPhy::majPosition(Position* master, Position* slave)
         slave->setY(_posBlobPivot.y()+_taille);
         break;
     case GAUCHE :
-        std::cout<<"ORIENTATION GAUCHE\n";
         slave->setX(_posBlobPivot.x()-_taille);
         slave->setY(_posBlobPivot.y());
         break;
@@ -450,12 +452,4 @@ void MoteurPhy::majPosition(Position* master, Position* slave)
         break;
     }
 }
-/** @brief make blobs go down depending on falling
-  *
-  * (documentation goes here)
-  */
-void MoteurPhy::goDown(Position* master, Position* slave)
-{
 
-
-}

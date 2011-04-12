@@ -9,11 +9,16 @@ void DashBoard::go()
 
     if(_moteurPhy->comboting()!=0)
     {
-        ;//anim comboting
+
+        ;
     }
     else if(_moteurPhy->falling()!=0)
     {
-        ;
+        _moteurPhy->setFalling(_moteurPhy->falling()-1);
+        for(int l=0; l<13; l++)
+            for(int c=0; c<6; c++)
+               if(((*_grille)(l,c))->state()==FALLING)
+                    ((*_grille)(l,c))->setFalling(((*_grille)(l,c))->current()-1);
     }
     else if(_moteurPhy->fixed())
     {
@@ -32,8 +37,10 @@ void DashBoard::go()
             ;//launchcombo?
 
         }
+
+        _moteurPhy->moove(&_master,&_slave);
     }
-    _moteurPhy->moove(&_master,&_slave);
+
 }
 
 
