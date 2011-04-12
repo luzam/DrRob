@@ -342,7 +342,7 @@ int main( int argc, char* argv[] )
 
 int main( int argc, char* argv[] )
 {
-    Game drRob(1,16);
+    Game drRob(1);
     drRob.go();
 
 

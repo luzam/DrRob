@@ -147,8 +147,10 @@ void MoteurPhy::moove(Position* master,Position* slave)
         {
             std::cout<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
-            if((_touching)==0)
+            if((_touching)==0){
                 ajoutGrille();
+                _fixed = true;
+                }
         }
         else
         {
@@ -429,15 +431,20 @@ void MoteurPhy::majPosition(Position* master, Position* slave)
     case HAUT :
         slave->setX(_posBlobPivot.x());
         slave->setY(_posBlobPivot.y()-_taille);
+        break;
     case BAS :
         slave->setX(_posBlobPivot.x());
         slave->setY(_posBlobPivot.y()+_taille);
+        break;
     case GAUCHE :
+        std::cout<<"ORIENTATION GAUCHE\n";
         slave->setX(_posBlobPivot.x()-_taille);
         slave->setY(_posBlobPivot.y());
+        break;
     case DROITE :
         slave->setX(_posBlobPivot.x()+_taille);
         slave->setY(_posBlobPivot.y());
+        break;
     }
 }
 

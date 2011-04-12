@@ -39,7 +39,7 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille<Blobs>* grille):
-    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(15),_orientation( HAUT),_comboAct(0),_launchCombo(false),_fixed(false),
+    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(15),_orientation(HAUT),_comboAct(0),_launchCombo(false),_fixed(false),
     _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
@@ -55,6 +55,9 @@ class MoteurPhy{
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){
+        _posBlobPivot.setX(2*_taille);
+        _posBlobPivot.setY(0);
+        _orientation = HAUT;
     _colorMaster = master.color();
     _colorSlave = slave.color();
     _fixed = false;}
