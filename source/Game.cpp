@@ -17,7 +17,7 @@ void Game::go()
 
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        SDL_WaitEvent(&event); /* On attend un évènement qu'on récupère dans event */
+        SDL_PollEvent(&event); /* On attend un évènement qu'on récupère dans event */
         switch(event.type) /* On teste le type d'évènement */
         {
         case SDL_QUIT: /* Si c'est un évènement QUITTER */
