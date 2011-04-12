@@ -7,20 +7,20 @@
 	<File name="include\DashBoard.h" open="1" top="0" tabpos="3">
 		<Cursor position="1695" topLine="46" />
 	</File>
-	<File name="include\Game.h" open="1" top="1" tabpos="2">
-		<Cursor position="708" topLine="15" />
+	<File name="include\Game.h" open="1" top="0" tabpos="2">
+		<Cursor position="708" topLine="21" />
 	</File>
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="4">
 		<Cursor position="5994" topLine="26" />
 	</File>
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="1">
-		<Cursor position="671" topLine="29" />
+		<Cursor position="2223" topLine="51" />
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="8682" topLine="327" />
 	</File>
-	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="343" topLine="5" />
+	<File name="source\DashBoard.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="538" topLine="17" />
 	</File>
 	<File name="source\Game.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="2237" topLine="35" />
@@ -28,7 +28,7 @@
 	<File name="source\InterfaceX.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="8069" topLine="244" />
 	</File>
-	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="11599" topLine="346" />
+	<File name="source\MoteurPhy.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="9894" topLine="392" />
 	</File>
 </CodeBlocks_layout_file>

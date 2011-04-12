@@ -54,6 +54,7 @@ void Game::go()
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
                                    _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob());
         std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).masterPos()).x()<<" , " <<(*_dashBoards.at(i).masterPos()).y()<<" ]]]]]]]]]\n";
+        std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).slavePos()).x()<<" , " <<(*_dashBoards.at(i).slavePos()).y()<<" ]]]]]]]]]\n";
         }
         SDL_Flip(_X->screen());
     }

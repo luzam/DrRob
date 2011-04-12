@@ -24,7 +24,7 @@ protected :
     Clock _clock;
 public :
 
-    Game(int nbJoueurs,int taille):_clock()
+    Game(int nbJoueurs):_clock()
     {
         _X = new InterfaceX(nbJoueurs);
         std::cout<<"Game()\n";

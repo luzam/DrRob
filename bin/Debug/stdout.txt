@@ -10,103 +10,103 @@ Offset grille : 26x46  RATIO : 0.345714
 Game()
 1
 Blob(Blob)
+3
+Blob(Blob)
+3
+Blob(Blob)
+3
+Blob(Blob)
 4
 Blob(Blob)
-3
-Blob(Blob)
-3
-Blob(Blob)
-3
-Blob(Blob)
-5
-Blob(Blob)
-1
-Blob(Blob)
-0
-Blob(Blob)
-5
-Blob(Blob)
-1
-Blob(Blob)
-5
+4
 Blob(Blob)
 2
 Blob(Blob)
 4
 Blob(Blob)
+0
+Blob(Blob)
+4
+Blob(Blob)
 5
+Blob(Blob)
+1
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+4
 Blob(Blob)
 0
 Blob(Blob)
-1
+4
 Blob(Blob)
 2
 Blob(Blob)
 1
 Blob(Blob)
-3
-Blob(Blob)
-1
-Blob(Blob)
-1
-Blob(Blob)
-3
-Blob(Blob)
-1
-Blob(Blob)
-5
-Blob(Blob)
 2
 Blob(Blob)
-4
-Blob(Blob)
-4
-Blob(Blob)
-0
-Blob(Blob)
-4
-Blob(Blob)
-1
-Blob(Blob)
-4
-Blob(Blob)
-4
-Blob(Blob)
-0
-Blob(Blob)
-1
-Blob(Blob)
-0
-Blob(Blob)
 3
-Blob(Blob)
-0
-Blob(Blob)
-4
-Blob(Blob)
-5
 Blob(Blob)
 2
 Blob(Blob)
 3
 Blob(Blob)
-5
+0
+Blob(Blob)
+3
+Blob(Blob)
+2
 Blob(Blob)
 4
 Blob(Blob)
-4
-Blob(Blob)
-1
+3
 Blob(Blob)
 3
 Blob(Blob)
 5
 Blob(Blob)
+0
+Blob(Blob)
+4
+Blob(Blob)
+5
+Blob(Blob)
+5
+Blob(Blob)
+0
+Blob(Blob)
 1
 Blob(Blob)
-0
+4
+Blob(Blob)
+5
 Blob(Blob)
 0
+Blob(Blob)
+3
+Blob(Blob)
+3
+Blob(Blob)
+5
+Blob(Blob)
+4
+Blob(Blob)
+2
+Blob(Blob)
+0
+Blob(Blob)
+5
+Blob(Blob)
+4
+Blob(Blob)
+3
+Blob(Blob)
+4
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -282,10 +282,11 @@ Blob(Blob)
 92 , 0
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -293,10 +294,11 @@ Blob(Blob)
 92 , 15
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -304,10 +306,11 @@ Blob(Blob)
 92 , 30
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -315,10 +318,11 @@ Blob(Blob)
 92 , 45
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -326,10 +330,11 @@ Blob(Blob)
 92 , 60
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -337,10 +342,11 @@ Blob(Blob)
 92 , 75
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -348,10 +354,11 @@ Blob(Blob)
 92 , 90
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -359,10 +366,11 @@ Blob(Blob)
 92 , 105
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -370,10 +378,11 @@ Blob(Blob)
 92 , 120
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -381,10 +390,11 @@ Blob(Blob)
 92 , 135
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 150 ]]]]]]]]]
+[[[[[[[[[[[92 , 104 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -392,10 +402,11 @@ Blob(Blob)
 92 , 150
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 165 ]]]]]]]]]
+[[[[[[[[[[[92 , 119 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -403,10 +414,11 @@ Blob(Blob)
 92 , 165
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 180 ]]]]]]]]]
+[[[[[[[[[[[92 , 134 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -414,10 +426,11 @@ Blob(Blob)
 92 , 180
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 195 ]]]]]]]]]
+[[[[[[[[[[[92 , 149 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -425,10 +438,11 @@ Blob(Blob)
 92 , 195
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 210 ]]]]]]]]]
+[[[[[[[[[[[92 , 164 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -436,10 +450,11 @@ Blob(Blob)
 92 , 210
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 225 ]]]]]]]]]
+[[[[[[[[[[[92 , 179 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -447,10 +462,11 @@ Blob(Blob)
 92 , 225
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 240 ]]]]]]]]]
+[[[[[[[[[[[92 , 194 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -458,10 +474,11 @@ Blob(Blob)
 92 , 240
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 255 ]]]]]]]]]
+[[[[[[[[[[[92 , 209 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -469,10 +486,11 @@ Blob(Blob)
 92 , 255
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 270 ]]]]]]]]]
+[[[[[[[[[[[92 , 224 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -480,10 +498,11 @@ Blob(Blob)
 92 , 270
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 285 ]]]]]]]]]
+[[[[[[[[[[[92 , 239 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -491,10 +510,11 @@ Blob(Blob)
 92 , 285
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 300 ]]]]]]]]]
+[[[[[[[[[[[92 , 254 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -502,10 +522,11 @@ Blob(Blob)
 92 , 300
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 315 ]]]]]]]]]
+[[[[[[[[[[[92 , 269 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -513,10 +534,11 @@ Blob(Blob)
 92 , 315
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 330 ]]]]]]]]]
+[[[[[[[[[[[92 , 284 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -524,10 +546,11 @@ Blob(Blob)
 92 , 330
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 345 ]]]]]]]]]
+[[[[[[[[[[[92 , 299 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -535,10 +558,11 @@ Blob(Blob)
 92 , 345
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 360 ]]]]]]]]]
+[[[[[[[[[[[92 , 314 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -546,10 +570,11 @@ Blob(Blob)
 92 , 360
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 375 ]]]]]]]]]
+[[[[[[[[[[[92 , 329 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -557,10 +582,11 @@ Blob(Blob)
 92 , 375
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 390 ]]]]]]]]]
+[[[[[[[[[[[92 , 344 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -568,10 +594,11 @@ Blob(Blob)
 92 , 390
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 405 ]]]]]]]]]
+[[[[[[[[[[[92 , 359 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -579,10 +606,11 @@ Blob(Blob)
 92 , 405
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 420 ]]]]]]]]]
+[[[[[[[[[[[92 , 374 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -590,10 +618,11 @@ Blob(Blob)
 92 , 420
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 435 ]]]]]]]]]
+[[[[[[[[[[[92 , 389 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -601,10 +630,11 @@ Blob(Blob)
 92 , 435
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 450 ]]]]]]]]]
+[[[[[[[[[[[92 , 404 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -612,10 +642,11 @@ Blob(Blob)
 92 , 450
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 465 ]]]]]]]]]
+[[[[[[[[[[[92 , 419 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -623,10 +654,11 @@ Blob(Blob)
 92 , 465
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 480 ]]]]]]]]]
+[[[[[[[[[[[92 , 434 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -634,10 +666,11 @@ Blob(Blob)
 92 , 480
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 495 ]]]]]]]]]
+[[[[[[[[[[[92 , 449 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -645,10 +678,11 @@ Blob(Blob)
 92 , 495
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 510 ]]]]]]]]]
+[[[[[[[[[[[92 , 464 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -656,10 +690,11 @@ Blob(Blob)
 92 , 510
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 525 ]]]]]]]]]
+[[[[[[[[[[[92 , 479 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -667,10 +702,11 @@ Blob(Blob)
 92 , 525
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 540 ]]]]]]]]]
+[[[[[[[[[[[92 , 494 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -678,10 +714,11 @@ Blob(Blob)
 92 , 540
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 555 ]]]]]]]]]
+[[[[[[[[[[[92 , 509 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -689,10 +726,11 @@ Blob(Blob)
 92 , 555
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 570 ]]]]]]]]]
+[[[[[[[[[[[92 , 524 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -700,10 +738,11 @@ Blob(Blob)
 92 , 570
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 585 ]]]]]]]]]
+[[[[[[[[[[[92 , 539 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -712,10 +751,11 @@ Blob(Blob)
 touching : 0
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 552 ]]]]]]]]]
+[[[[[[[[[[[92 , 506 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -723,10 +763,11 @@ Blob(Blob)
 92 , 552
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 567 ]]]]]]]]]
+[[[[[[[[[[[92 , 521 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -734,10 +775,11 @@ Blob(Blob)
 92 , 567
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 582 ]]]]]]]]]
+[[[[[[[[[[[92 , 536 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -745,10 +787,11 @@ Blob(Blob)
 92 , 582
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -757,10 +800,11 @@ Blob(Blob)
 touching : 10
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -769,10 +813,11 @@ Blob(Blob)
 touching : 9
 touching : 9
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -781,10 +826,11 @@ Blob(Blob)
 touching : 8
 touching : 8
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -793,10 +839,11 @@ Blob(Blob)
 touching : 7
 touching : 7
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -805,10 +852,11 @@ Blob(Blob)
 touching : 6
 touching : 6
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -817,10 +865,11 @@ Blob(Blob)
 touching : 5
 touching : 5
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -829,10 +878,11 @@ Blob(Blob)
 touching : 4
 touching : 4
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -841,10 +891,11 @@ Blob(Blob)
 touching : 3
 touching : 3
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -853,10 +904,11 @@ Blob(Blob)
 touching : 2
 touching : 2
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -865,7 +917,7 @@ Blob(Blob)
 touching : 1
 touching : 1
 92 , 597
-ajout blob : 12 2<---------0
+ajout blob : 12 2<---------3
 Grille
 666666
 666666
@@ -878,8 +930,8 @@ Grille
 666666
 666666
 666666
-661666
-660666
+664666
+663666
 
 Image
 
@@ -893,8 +945,8 @@ Image
 
 
 
-
- 
+
+
 
 labeled
 BLA1
@@ -927,18 +979,23 @@ Combo : 0
 666666
 666666
 666666
-661666
-660666
+664666
+663666
 
 Taille blob : 46
-Sprite x : 0 y : 0
+Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 8188 y : 92
+Sprite x : 8188 y : 368
 [[[[[[[[[[[92 , 597 ]]]]]]]]]
+[[[[[[[[[[[92 , 551 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
@@ -947,517 +1004,747 @@ touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 60
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 75
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 90
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 105
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 120
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 135
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 150 ]]]]]]]]]
+[[[[[[[[[[[92 , 104 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 150
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 165 ]]]]]]]]]
+[[[[[[[[[[[92 , 119 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 165
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 180 ]]]]]]]]]
+[[[[[[[[[[[92 , 134 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 180
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 195 ]]]]]]]]]
+[[[[[[[[[[[92 , 149 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 195
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 210 ]]]]]]]]]
+[[[[[[[[[[[92 , 164 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 210
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 225 ]]]]]]]]]
+[[[[[[[[[[[92 , 179 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 225
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 240 ]]]]]]]]]
+[[[[[[[[[[[92 , 194 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 240
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 255 ]]]]]]]]]
+[[[[[[[[[[[92 , 209 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 255
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 270 ]]]]]]]]]
+[[[[[[[[[[[92 , 224 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 270
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 285 ]]]]]]]]]
+[[[[[[[[[[[92 , 239 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 285
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 300 ]]]]]]]]]
+[[[[[[[[[[[92 , 254 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 300
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 315 ]]]]]]]]]
+[[[[[[[[[[[92 , 269 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 315
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 330 ]]]]]]]]]
+[[[[[[[[[[[92 , 284 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 330
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 345 ]]]]]]]]]
+[[[[[[[[[[[92 , 299 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 345
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 360 ]]]]]]]]]
+[[[[[[[[[[[92 , 314 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 360
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 375 ]]]]]]]]]
+[[[[[[[[[[[92 , 329 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 375
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 390 ]]]]]]]]]
+[[[[[[[[[[[92 , 344 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 390
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 405 ]]]]]]]]]
+[[[[[[[[[[[92 , 359 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 405
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 420 ]]]]]]]]]
+[[[[[[[[[[[92 , 374 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 420
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 435 ]]]]]]]]]
+[[[[[[[[[[[92 , 389 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 435
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 450 ]]]]]]]]]
+[[[[[[[[[[[92 , 404 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 450
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 465 ]]]]]]]]]
+[[[[[[[[[[[92 , 419 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 465
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 480 ]]]]]]]]]
+[[[[[[[[[[[92 , 434 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 480
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 495 ]]]]]]]]]
+[[[[[[[[[[[92 , 449 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 495
 touching : 0
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 460 ]]]]]]]]]
+[[[[[[[[[[[92 , 414 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 460
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 475 ]]]]]]]]]
+[[[[[[[[[[[92 , 429 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 475
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 490 ]]]]]]]]]
+[[[[[[[[[[[92 , 444 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 490
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 10
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 9
 touching : 9
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 8
 touching : 8
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 7
 touching : 7
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 6
 touching : 6
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 5
 touching : 5
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 4
 touching : 4
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 3
 touching : 3
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 2
 touching : 2
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 505
 touching : 1
 touching : 1
@@ -1473,10 +1760,10 @@ Grille
 666666
 666666
 666666
-663666
-665666
-661666
 660666
+665666
+664666
+663666
 
 Image
 
@@ -1488,10 +1775,10 @@ Image
 
 
 
-
-
-
  
+
+
+
 
 labeled
 BLA1
@@ -1522,478 +1809,847 @@ Combo : 0
 666666
 666666
 666666
-663666
-665666
-661666
 660666
+665666
+664666
+663666
 
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 276
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 505 ]]]]]]]]]
+[[[[[[[[[[[92 , 459 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
 92 , 0
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 60
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 75
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 90
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 105
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 120
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 135
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 150 ]]]]]]]]]
+[[[[[[[[[[[92 , 104 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 150
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 165 ]]]]]]]]]
+[[[[[[[[[[[92 , 119 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 165
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 180 ]]]]]]]]]
+[[[[[[[[[[[92 , 134 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 180
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 195 ]]]]]]]]]
+[[[[[[[[[[[92 , 149 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 195
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 210 ]]]]]]]]]
+[[[[[[[[[[[92 , 164 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 210
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 225 ]]]]]]]]]
+[[[[[[[[[[[92 , 179 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 225
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 240 ]]]]]]]]]
+[[[[[[[[[[[92 , 194 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 240
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 255 ]]]]]]]]]
+[[[[[[[[[[[92 , 209 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 255
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 270 ]]]]]]]]]
+[[[[[[[[[[[92 , 224 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 270
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 285 ]]]]]]]]]
+[[[[[[[[[[[92 , 239 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 285
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 300 ]]]]]]]]]
+[[[[[[[[[[[92 , 254 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 300
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 315 ]]]]]]]]]
+[[[[[[[[[[[92 , 269 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 315
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 330 ]]]]]]]]]
+[[[[[[[[[[[92 , 284 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 330
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 345 ]]]]]]]]]
+[[[[[[[[[[[92 , 299 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 345
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 360 ]]]]]]]]]
+[[[[[[[[[[[92 , 314 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 360
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 375 ]]]]]]]]]
+[[[[[[[[[[[92 , 329 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 375
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 390 ]]]]]]]]]
+[[[[[[[[[[[92 , 344 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 390
 touching : 0
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 405 ]]]]]]]]]
+[[[[[[[[[[[92 , 359 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 405
 touching : 0
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 368 ]]]]]]]]]
+[[[[[[[[[[[92 , 322 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 368
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 383 ]]]]]]]]]
+[[[[[[[[[[[92 , 337 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 383
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 398 ]]]]]]]]]
+[[[[[[[[[[[92 , 352 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 398
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 10
 touching : 10
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 9
 touching : 9
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 8
 touching : 8
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 7
 touching : 7
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 6
 touching : 6
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 5
 touching : 5
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 4
 touching : 4
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 3
 touching : 3
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 2
 touching : 2
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 413
 touching : 1
 touching : 1
 92 , 413
-ajout blob : 8 2<---------1
+ajout blob : 8 2<---------2
 Grille
 666666
 666666
@@ -2003,11 +2659,11 @@ Grille
 666666
 666666
 664666
-661666
-663666
-665666
-661666
+662666
 660666
+665666
+664666
+663666
 
 Image
 
@@ -2018,11 +2674,11 @@ Image
 
 
 
-
-
-
-
+
  
+
+
+
 
 labeled
 BLA1
@@ -2052,427 +2708,882 @@ Combo : 0
 666666
 666666
 664666
-661666
-663666
-665666
-661666
+662666
 660666
+665666
+664666
+663666
 
 Taille blob : 46
-Sprite x : 0 y : 92
+Sprite x : 0 y : 184
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 413 ]]]]]]]]]
+[[[[[[[[[[[92 , 367 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
 92 , 0
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 15 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 30 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 60 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 60
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 75 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 75
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 90 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 90
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 105 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 105
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 120 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 120
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 135 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 135
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 150 ]]]]]]]]]
+[[[[[[[[[[[92 , 104 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 150 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 150
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 165 ]]]]]]]]]
+[[[[[[[[[[[92 , 119 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 165 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 165
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 180 ]]]]]]]]]
+[[[[[[[[[[[92 , 134 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 180 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 180
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 195 ]]]]]]]]]
+[[[[[[[[[[[92 , 149 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 195 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 195
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 210 ]]]]]]]]]
+[[[[[[[[[[[92 , 164 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 210 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 210
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 225 ]]]]]]]]]
+[[[[[[[[[[[92 , 179 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 225 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 225
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 240 ]]]]]]]]]
+[[[[[[[[[[[92 , 194 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 240 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 240
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 255 ]]]]]]]]]
+[[[[[[[[[[[92 , 209 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 255 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 255
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 270 ]]]]]]]]]
+[[[[[[[[[[[92 , 224 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 270 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 270
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 285 ]]]]]]]]]
+[[[[[[[[[[[92 , 239 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 285 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 285
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 300 ]]]]]]]]]
+[[[[[[[[[[[92 , 254 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 300 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 300
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 315 ]]]]]]]]]
+[[[[[[[[[[[92 , 269 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 315 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 315
 touching : 0
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 276 ]]]]]]]]]
+[[[[[[[[[[[92 , 230 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 276 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 276
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 291 ]]]]]]]]]
+[[[[[[[[[[[92 , 245 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 291 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 291
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 306 ]]]]]]]]]
+[[[[[[[[[[[92 , 260 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 306 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 306
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 10
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 9
 touching : 9
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 8
 touching : 8
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 7
 touching : 7
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 6
 touching : 6
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 5
 touching : 5
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 4
 touching : 4
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 3
 touching : 3
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 2
 touching : 2
 Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
+[[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
-[[[[[[[[[[[92 , 321 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 321
 touching : 1
 touching : 1
 92 , 321
-ajout blob : 6 2<---------4
+ajout blob : 6 2<---------5
 Grille
 666666
 666666
 666666
 666666
 666666
-665666
-664666
-664666
-661666
 663666
 665666
-661666
+664666
+662666
 660666
+665666
+664666
+663666
 
 Image
 
@@ -2480,14 +3591,14 @@ Image
 
 
 
-
-
-
-
 
 
-
+
+
  
+
+
+
 
 labeled
 BLA1
@@ -2499,13 +3610,13 @@ BLA3
 000000
 000000
 001000
-002000
 002000
 003000
 004000
 005000
 006000
 007000
+008000
 
 taille map : 78
 Combo : 0
@@ -2514,30 +3625,41 @@ Combo : 0
 666666
 666666
 666666
-665666
-664666
-664666
-661666
 663666
 665666
-661666
+664666
+662666
 660666
+665666
+664666
+663666
 
 Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
 Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 276
 [[[[[[[[[[[92 , 321 ]]]]]]]]]
+[[[[[[[[[[[92 , 275 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
@@ -2546,487 +3668,795 @@ touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 60
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 75
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 90
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 105
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 120
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 135
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 150 ]]]]]]]]]
+[[[[[[[[[[[92 , 104 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 150
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 165 ]]]]]]]]]
+[[[[[[[[[[[92 , 119 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 165
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 180 ]]]]]]]]]
+[[[[[[[[[[[92 , 134 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 180
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 195 ]]]]]]]]]
+[[[[[[[[[[[92 , 149 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 195
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 210 ]]]]]]]]]
+[[[[[[[[[[[92 , 164 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 210
 touching : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 225 ]]]]]]]]]
+[[[[[[[[[[[92 , 179 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 225
 touching : 0
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 184 ]]]]]]]]]
+[[[[[[[[[[[92 , 138 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 184
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 199 ]]]]]]]]]
+[[[[[[[[[[[92 , 153 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 199
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 214 ]]]]]]]]]
+[[[[[[[[[[[92 , 168 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 214
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 10
 touching : 10
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 9
 touching : 9
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 8
 touching : 8
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 7
 touching : 7
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 6
 touching : 6
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 5
 touching : 5
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 4
 touching : 4
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 3
 touching : 3
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 2
 touching : 2
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 460
+Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 229
 touching : 1
 touching : 1
@@ -3036,31 +4466,31 @@ Grille
 666666
 666666
 666666
-662666
-663666
-665666
-664666
-664666
-661666
-663666
-665666
-661666
 660666
+663666
+663666
+665666
+664666
+662666
+660666
+665666
+664666
+663666
 
 Image
 
 
 
-
-
-
-
-
-
-
-
-
  
+
+
+
+
+
+ 
+
+
+
 
 labeled
 BLA1
@@ -3071,8 +4501,8 @@ BLA3
 000000
 001000
 002000
+002000
 003000
-004000
 004000
 005000
 006000
@@ -3085,40 +4515,47 @@ Combo : 0
 666666
 666666
 666666
-662666
-663666
-665666
-664666
-664666
-661666
-663666
-665666
-661666
 660666
+663666
+663666
+665666
+664666
+662666
+660666
+665666
+664666
+663666
 
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 229 ]]]]]]]]]
+[[[[[[[[[[[92 , 183 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
@@ -3129,24 +4566,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
@@ -3154,24 +4598,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
@@ -3179,24 +4630,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 Taille blob : 46
@@ -3204,24 +4662,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 60 ]]]]]]]]]
+[[[[[[[[[[[92 , 14 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 60
 touching : 0
 Taille blob : 46
@@ -3229,24 +4694,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 75 ]]]]]]]]]
+[[[[[[[[[[[92 , 29 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 75
 touching : 0
 Taille blob : 46
@@ -3254,24 +4726,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 90 ]]]]]]]]]
+[[[[[[[[[[[92 , 44 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 90
 touching : 0
 Taille blob : 46
@@ -3279,24 +4758,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 105 ]]]]]]]]]
+[[[[[[[[[[[92 , 59 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 105
 touching : 0
 Taille blob : 46
@@ -3304,24 +4790,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 120 ]]]]]]]]]
+[[[[[[[[[[[92 , 74 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 120
 touching : 0
 Taille blob : 46
@@ -3329,24 +4822,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 135 ]]]]]]]]]
+[[[[[[[[[[[92 , 89 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 135
 touching : 0
 touching : 10
@@ -3355,24 +4855,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 92 ]]]]]]]]]
+[[[[[[[[[[[92 , 46 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 92
 touching : 10
 Taille blob : 46
@@ -3380,24 +4887,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 107 ]]]]]]]]]
+[[[[[[[[[[[92 , 61 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 107
 touching : 10
 Taille blob : 46
@@ -3405,24 +4919,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 122 ]]]]]]]]]
+[[[[[[[[[[[92 , 76 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 122
 touching : 10
 Taille blob : 46
@@ -3430,24 +4951,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 10
 touching : 10
@@ -3456,24 +4984,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 9
 touching : 9
@@ -3482,24 +5017,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 8
 touching : 8
@@ -3508,24 +5050,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 7
 touching : 7
@@ -3534,24 +5083,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 6
 touching : 6
@@ -3560,24 +5116,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 5
 touching : 5
@@ -3586,24 +5149,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 4
 touching : 4
@@ -3612,24 +5182,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 3
 touching : 3
@@ -3638,24 +5215,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 2
 touching : 2
@@ -3664,24 +5248,31 @@ Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
 Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 137
 touching : 1
 touching : 1
@@ -3691,31 +5282,31 @@ Grille
 666666
 664666
 665666
-662666
-663666
-665666
-664666
-664666
-661666
-663666
-665666
-661666
 660666
+663666
+663666
+665666
+664666
+662666
+660666
+665666
+664666
+663666
 
 Image
 
 
 
-
-
-
-
-
-
-
-
-
  
+
+
+
+
+
+ 
+
+
+
 
 labeled
 BLA1
@@ -3726,8 +5317,8 @@ BLA3
 002000
 003000
 004000
+004000
 005000
-006000
 006000
 007000
 008000
@@ -3740,22 +5331,23 @@ Combo : 0
 666666
 664666
 665666
-662666
-663666
-665666
-664666
-664666
-661666
-663666
-665666
-661666
 660666
+663666
+663666
+665666
+664666
+662666
+660666
+665666
+664666
+663666
 
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
 [[[[[[[[[[[92 , 137 ]]]]]]]]]
+[[[[[[[[[[[92 , 91 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -3763,15 +5355,9 @@ Blob(Blob)
 Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
@@ -3779,490 +5365,541 @@ Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 blob suivant
 Blob(Blob)
 Blob(Blob)
 92 , 0
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 15 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 30 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 0
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 0
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 0 ]]]]]]]]]
+[[[[[[[[[[[92 , -46 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 0 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 0
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 15 ]]]]]]]]]
+[[[[[[[[[[[92 , -31 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 15 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 15
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 30 ]]]]]]]]]
+[[[[[[[[[[[92 , -16 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 30 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 30
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 10
 touching : 10
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 9
 touching : 9
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 8
 touching : 8
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 7
 touching : 7
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 6
 touching : 6
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 5
 touching : 5
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 4
 touching : 4
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
+[[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Blob(Blob)
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
-[[[[[[[[[[[92 , 45 ]]]]]]]]]
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Blob(Blob)
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 3
 touching : 3
 Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
 Sprite x : 0 y : 0
-Taille blob : 46
-Sprite x : 0 y : 276
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -4270,33 +5907,36 @@ Blob(Blob)
 Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
 Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 276
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 368
-92 , 45
-touching : 2
-touching : 2
 Taille blob : 46
 Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
+Taille blob : 46
+Sprite x : 0 y : 276
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
+Sprite x : 0 y : 460
+Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
+92 , 45
+touching : 2
+touching : 2
+Taille blob : 46
+Sprite x : 0 y : 92
+Taille blob : 46
+Sprite x : 0 y : 0
 [[[[[[[[[[[92 , 45 ]]]]]]]]]
+[[[[[[[[[[[92 , -1 ]]]]]]]]]
 Blob(Blob)
 Blob(Blob)
 Blob(Blob)
@@ -4304,15 +5944,9 @@ Blob(Blob)
 Taille blob : 46
 Sprite x : 0 y : 368
 Taille blob : 46
-Sprite x : 0 y : 368
-Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
-Sprite x : 0 y : 460
-Taille blob : 46
-Sprite x : 0 y : 184
-Taille blob : 46
-Sprite x : 0 y : 184
+Sprite x : 0 y : 0
 Taille blob : 46
 Sprite x : 0 y : 276
 Taille blob : 46
@@ -4320,11 +5954,19 @@ Sprite x : 0 y : 276
 Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
+Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 184
+Taille blob : 46
+Sprite x : 0 y : 0
+Taille blob : 46
 Sprite x : 0 y : 460
 Taille blob : 46
 Sprite x : 0 y : 368
+Taille blob : 46
+Sprite x : 0 y : 276
 92 , 45
 touching : 1
 touching : 1
 92 , 45
-ajout blob : 0 2<---------0
+ajout blob : 0 2<---------1
