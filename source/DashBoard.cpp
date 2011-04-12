@@ -13,7 +13,7 @@ void DashBoard::go()
     }
     else if(_moteurPhy->falling()!=0)
     {
-        ;//anim falling
+        ;
     }
     else if(_moteurPhy->fixed())
     {

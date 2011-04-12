@@ -9,7 +9,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
     switch(_orientation)
     {
     case HAUT :
-        if(colBlobCourant() == 5*_taille||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
                 return;
@@ -55,7 +55,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
     switch(_orientation)
     {
     case BAS :
-        if(colBlobCourant() == 5*_taille||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
                 return;
@@ -102,16 +102,16 @@ void MoteurPhy::moove(Position* master,Position* slave)
     switch(_orientation)
     {
     case HAUT :
-        if(((_posBlobPivot).y()+_vitesseBlob)/_taille>12)
+        if(((_posBlobPivot).y()+_vitesseBlob)>=12*_taille)
         {
             touch = true;
             break;
         }
-        else if(((*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()))->color()!=BLANK)
+        else if(((*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()))->color()!=BLANK)
             touch = true;
         break;
     case BAS :
-        if(((_posBlobPivot).y()+_vitesseBlob+_taille)/_taille>11)
+        if((_posBlobPivot).y()+_vitesseBlob>=10*_taille)
         {
             touch = true;
             break;
@@ -120,28 +120,30 @@ void MoteurPhy::moove(Position* master,Position* slave)
             touch = true;
         break;
     case GAUCHE :
-        if(((_posBlobPivot).y()+_vitesseBlob)/_taille>12)
+        if(((_posBlobPivot).y()+_vitesseBlob)>=12*_taille)
         {
             touch = true;
             break;
         }
-        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK||
-                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()-1)).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()-1)).color()!=BLANK)
             touch = true;
         break;
     case DROITE :
-        if(((_posBlobPivot).y()+_vitesseBlob)/_taille>12)
+        if(((_posBlobPivot).y()+_vitesseBlob)>=12*_taille)
         {
             touch = true;
             break;
         }
-        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK||
-                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()+1)).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
+                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()+1)).color()!=BLANK)
             touch = true;
         break;
     }
+
     if(touch)
     {
+        _posBlobPivot.setY((((_posBlobPivot.y()+_vitesseBlob)/_taille))*_taille);
 
         if((_touching) !=0)
         {
@@ -155,8 +157,7 @@ void MoteurPhy::moove(Position* master,Position* slave)
         else
         {
             (_touching) = TOUCHING_ANIM_TIME;
-            if((_touching)==TOUCHING_ANIM_TIME)
-                (_posBlobPivot).setY(((int)((((_posBlobPivot).y())/_taille)))*_taille);
+
             std::cout<<"touching : "<<(_touching)<<std::endl;
         }
     }
@@ -401,6 +402,7 @@ int MoteurPhy::majCombo()
   */
 void MoteurPhy::fall()
 {
+    int maxBlank = 0;
     for(int col=0; col<6; col++)
     {
         int blanks = 0;
@@ -411,13 +413,14 @@ void MoteurPhy::fall()
             else
             {
                 ((*_grille)(ligne,col))->setFalling(blanks*FALLING_ANIM_TIME);
+                maxBlank=(blanks>maxBlank)?blanks:maxBlank;
             }
         }
     }
-
+    _falling = maxBlank;
 }
 
-/** @brief make blobs fall after a combote
+/** @brief compute how much blobs fall after a combote
   *
   * (documentation goes here)
   */
@@ -447,6 +450,12 @@ void MoteurPhy::majPosition(Position* master, Position* slave)
         break;
     }
 }
+/** @brief make blobs go down depending on falling
+  *
+  * (documentation goes here)
+  */
+void MoteurPhy::goDown(Position* master, Position* slave)
+{
 
 
-
+}
