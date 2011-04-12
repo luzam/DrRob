@@ -35,7 +35,7 @@ protected:
     int _grille_W;
     int _grille_H;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1000),_SCREEN_HEIGHT(700),
+    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(1600),_SCREEN_HEIGHT(900),
     _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_nbJoueurs(nbJoueurs),_offset_dash_grille(),_offset_dash_nextBlob()
     ,_offset_dash_score(),_ratio(1),_vDash(nbJoueurs),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
@@ -97,7 +97,7 @@ public:
     void blit_dash();
     void blit_fond();
     void blit_un_blob(Blobs* blob,int x,int y);
-    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave);
+    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
     void blits(std::vector<DashBoard> dashBoards);
     bool decouper_sprite();
     void blit_blobs(std::vector<DashBoard> dashBoards);

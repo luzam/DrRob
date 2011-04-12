@@ -52,7 +52,7 @@ void Game::go()
 
         for(size_t i=0; i<_dashBoards.size(); i++){
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
-                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob());
+                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
         std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).masterPos()).x()<<" , " <<(*_dashBoards.at(i).masterPos()).y()<<" ]]]]]]]]]\n";
         std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).slavePos()).x()<<" , " <<(*_dashBoards.at(i).slavePos()).y()<<" ]]]]]]]]]\n";
         }
