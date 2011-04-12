@@ -125,8 +125,8 @@ void MoteurPhy::moove(Position* master,Position* slave)
             touch = true;
             break;
         }
-        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
-                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()-1)).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK||
+                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()-1)).color()!=BLANK)
             touch = true;
         break;
     case DROITE :
@@ -135,8 +135,8 @@ void MoteurPhy::moove(Position* master,Position* slave)
             touch = true;
             break;
         }
-        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant())).color()!=BLANK||
-                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille+1),colBlobCourant()+1)).color()!=BLANK)
+        else if((*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant())).color()!=BLANK||
+                (*(*_grille)((int)(((_posBlobPivot).y()+_vitesseBlob)/_taille),colBlobCourant()+1)).color()!=BLANK)
             touch = true;
         break;
     }
@@ -156,7 +156,7 @@ void MoteurPhy::moove(Position* master,Position* slave)
         {
             (_touching) = TOUCHING_ANIM_TIME;
             if((_touching)==TOUCHING_ANIM_TIME)
-                (_posBlobPivot).setY(((int)((((_posBlobPivot).y()+_vitesseBlob)/_taille))-1)*_taille);
+                (_posBlobPivot).setY(((int)((((_posBlobPivot).y())/_taille)))*_taille);
             std::cout<<"touching : "<<(_touching)<<std::endl;
         }
     }

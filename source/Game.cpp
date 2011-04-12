@@ -7,6 +7,7 @@
 void Game::go()
 {
     SDL_Event event; /* La variable contenant l'évènement */
+    SDL_EnableKeyRepeat(0,0);
     int continuer = 1; /* Notre booléen pour la boucle */
     _X->blits(_dashBoards);
 
@@ -17,7 +18,7 @@ void Game::go()
 
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        SDL_WaitEvent(&event); /* On attend un évènement qu'on récupère dans event */
+        SDL_PollEvent(&event); /* On attend un évènement qu'on récupère dans event */
         switch(event.type) /* On teste le type d'évènement */
         {
         case SDL_QUIT: /* Si c'est un évènement QUITTER */
@@ -53,8 +54,8 @@ void Game::go()
         for(size_t i=0; i<_dashBoards.size(); i++){
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
                                    _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
-        std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).masterPos()).x()<<" , " <<(*_dashBoards.at(i).masterPos()).y()<<" ]]]]]]]]]\n";
-        std::cout<<"[[[[[[[[[[["<<(*_dashBoards.at(i).slavePos()).x()<<" , " <<(*_dashBoards.at(i).slavePos()).y()<<" ]]]]]]]]]\n";
+//            _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
+
         }
         SDL_Flip(_X->screen());
     }

@@ -40,7 +40,7 @@ public :
         Blobs randBlob;
     srand(time(NULL));
     for(int i=0;i<50;i++){
-        randBlob.setBlob(Color(rand()%6), NO_STATE,NO_LINK);
+        randBlob.setBlob(Color(rand()%5), NO_STATE,NO_LINK);
         std::cout<<randBlob.color()<<std::endl;
         _randBlobs.push_front(randBlob);
         }
