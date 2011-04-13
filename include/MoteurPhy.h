@@ -1,7 +1,7 @@
 #ifndef MOTEURPHY_H
 #define MOTEURPHY_H
 
-#define TOUCHING_ANIM_TIME 200
+#define TOUCHING_ANIM_TIME 100
 #define FALLING_ANIM_TIME 10
 #define COMBOTING_ANIM_TIME 10
 
@@ -28,17 +28,17 @@ class MoteurPhy{
     int _comboAct;
     bool _launchCombo;
     bool _fixed;
-    Grille<Blobs>* _grille;
+    Grille* _grille;
     int _touching;
     int _comboting;
     int _falling;
     const int ligneBlobCourant()const{return (int)((_posBlobPivot).y()/_taille);}
     const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
-    void ajoutGrille();
+    int ajoutGrille();
 
 
     public :
-    MoteurPhy(int taille,Grille<Blobs>* grille):
+    MoteurPhy(int taille,Grille* grille):
     _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(1),_orientation(HAUT),_comboAct(0),_launchCombo(false),_fixed(false),
     _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
@@ -51,7 +51,7 @@ class MoteurPhy{
     void speedToNormal();
     int majCombo();
     void fall();
-    void moove(Position* master,Position* slave);
+    int moove(Position* master,Position* slave);
     void ComboActReInit(){_comboAct = 0;_launchCombo=false;}
     int comboAct()const{return _comboAct;}
     void nextBlobs(Blobs master, Blobs slave){
@@ -65,6 +65,7 @@ class MoteurPhy{
     bool fixed()const{return _fixed;}
     void setLaunchCombo(bool combo){_launchCombo=combo;}
     int falling()const{return _falling;}
+    void setFalling(int falling){_falling = falling;}
     int comboting()const{return _comboting;}
     void majPosition(Position* master,Position* slave);
 

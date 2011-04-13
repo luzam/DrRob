@@ -4,4 +4,5 @@ obj/Debug/source/*.o
 *.layout
 *.depend
 *.o
+bin/Debug/drRob.exe
 

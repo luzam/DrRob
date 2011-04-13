@@ -89,7 +89,6 @@ bool InterfaceX::resize_files()
     int taille_blob_H =nb_blobs_par_h*(double)_taille_blob_ini*_ratio;
     int taille_blob_W =nb_blobs_par_w*(double)_taille_blob_ini*_ratio;
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
-   std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
     _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob_W);
     _taille_blob=round((double)_blobs->w/20+0.1);
 
@@ -193,7 +192,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_dash_grille).x()+_vDash.at(j).x();
                     if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING)
-                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y()+((*(dashBoards.at(j).grille()))(l,c))->current();
+                    offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
                     else
                     offsetgrilley=(_offset_dash_grille).y()+_vDash.at(j).y();
                     //On calcule les coordonnées des blobs
@@ -223,12 +222,18 @@ bool InterfaceX::compute_offsets()
     std::cout<<"Calcul offsets"<<std::endl;
     _offset_dash_grille.setX((9)*(_ratio));
     _offset_dash_grille.setY((32-_taille_blob_ini)*(_ratio));
+<<<<<<< HEAD
     std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
     _offset_dash_nextBlob.setX((128)*_ratio);
     _offset_dash_nextBlob.setY((78)*_ratio);
     _offset_dash_avatar.setX((111)*_ratio);
         _offset_dash_avatar.setY((177)*_ratio);
 
+=======
+    std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
+    _offset_dash_nextBlob.setX((128)*_ratio);
+    _offset_dash_nextBlob.setY((78)*_ratio);
+>>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
     return true;
 }
 

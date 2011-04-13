@@ -15,6 +15,8 @@ protected :
     size_t _state;
     size_t _link;
     int _current;
+    int _fallingDepth;
+    size_t _fallingCol;
 public :
     Blobs(Color color,State state=CURRENT,Link link=NO_LINK):
         _color(color),_state(state),_link(link),_current(0) {std::cout<<"Blob(col)\n";}
@@ -57,9 +59,14 @@ public :
     _color = blob.color();
     _state = blob.state();
     }
-    void setFalling(int falling){this->setState(FALLING);
+    void setFalling(int falling){
+    this->setState(FALLING);
     _current = falling;}
     int current()const {return _current;}
+    int fallingDepth()const{return _fallingDepth;}
+    void setFallingDepth(int depth){_fallingDepth=depth;}
+    int fallingCol()const{return _fallingCol;}
+    void setFallingCol(int col){_fallingCol=col;}
 };
 
 

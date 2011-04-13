@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="include\Blobs.h" open="1" top="0" tabpos="5">
 		<Cursor position="607" topLine="0" />
 	</File>
@@ -9,25 +10,46 @@
 	</File>
 	<File name="include\DashBoard.h" open="1" top="0" tabpos="9">
 		<Cursor position="1322" topLine="0" />
+=======
+	<File name="include\Blobs.h" open="0" top="0" tabpos="10">
+		<Cursor position="1730" topLine="54" />
 	</File>
-	<File name="include\Game.h" open="1" top="0" tabpos="6">
-		<Cursor position="375" topLine="0" />
+	<File name="include\DashBoard.h" open="1" top="0" tabpos="2">
+		<Cursor position="1590" topLine="42" />
 	</File>
+	<File name="include\Game.h" open="1" top="0" tabpos="3">
+		<Cursor position="930" topLine="31" />
+>>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
+	</File>
+	<File name="include\Grille.h" open="1" top="1" tabpos="1">
+		<Cursor position="129" topLine="0" />
+	</File>
+<<<<<<< HEAD
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="2">
 		<Cursor position="428" topLine="0" />
+=======
+	<File name="include\InterfaceX.h" open="0" top="0" tabpos="4">
+		<Cursor position="1005" topLine="19" />
+>>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
 	</File>
-	<File name="include\Link.h" open="0" top="0" tabpos="7">
-		<Cursor position="169" topLine="0" />
+	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="4">
+		<Cursor position="944" topLine="30" />
 	</File>
+<<<<<<< HEAD
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="11">
 		<Cursor position="2153" topLine="23" />
+=======
+	<File name="main.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="6454" topLine="274" />
+>>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
 	</File>
-	<File name="include\Position.h" open="1" top="0" tabpos="8">
-		<Cursor position="0" topLine="0" />
+	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1530" topLine="42" />
 	</File>
-	<File name="include\conected.h" open="0" top="0" tabpos="0">
-		<Cursor position="425" topLine="129" />
+	<File name="source\Game.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="1541" topLine="19" />
 	</File>
+<<<<<<< HEAD
 	<File name="main.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="8328" topLine="298" />
 	</File>
@@ -42,5 +64,12 @@
 	</File>
 	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="10">
 		<Cursor position="13081" topLine="350" />
+=======
+	<File name="source\InterfaceX.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="5420" topLine="150" />
+	</File>
+	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="5922" topLine="166" />
+>>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
 	</File>
 </CodeBlocks_layout_file>
