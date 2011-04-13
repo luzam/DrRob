@@ -272,7 +272,7 @@ int main( int argc, char* argv[] )
     //////////////////////CREATION D'UNE GRILLE DE TEST
     srand(time(NULL));
   //  int r=0;
-    Grille<Blobs>* maGrille = new Grille<Blobs>();
+    Grille* maGrille = new Grille();
     for(int l=0; l<6; l++)
     {
         for(int c=0; c<13; c++)

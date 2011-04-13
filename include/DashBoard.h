@@ -21,7 +21,7 @@ protected :
     Blobs _slaveBlob;
     Blobs _nextMaster;
     Blobs _nextSlave;
-    Grille<Blobs>* _grille;
+    Grille* _grille;
     std::list<Blobs>* _nextBlobs;
     std::list<Blobs>::iterator _it;
     Position _master;
@@ -32,7 +32,7 @@ protected :
     std::vector<Blobs> _nextDarkBlobs;
 
 public :
-    DashBoard(int taille,Grille<Blobs>* grille,std::list<Blobs>* randBlobs):
+    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin())
     {
         _moteurPhy = new MoteurPhy(taille,grille);
@@ -58,7 +58,7 @@ public :
     {
         return _moteurPhy;
     }
-    Grille<Blobs>* grille()const{return _grille;}
+    Grille* grille()const{return _grille;}
 
     void go();
     Position* masterPos(){return &_master;}

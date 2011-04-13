@@ -9,6 +9,8 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
     switch(_orientation)
     {
     case HAUT :
+    if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
+            return;
         if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
@@ -18,6 +20,8 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         _orientation = DROITE;
         break;
     case BAS :
+    if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
+            return;
         if(colBlobCourant() == 0||(*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
@@ -55,7 +59,9 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
     switch(_orientation)
     {
     case BAS :
-        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+        if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
+            return;
+        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
                 return;
@@ -64,6 +70,8 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         _orientation = DROITE;
         break;
     case HAUT :
+    if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
+            return;
         if(colBlobCourant() == 0||(*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
         {
             if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
@@ -94,7 +102,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
   *
   * (documentation goes here)
   */
-void MoteurPhy::moove(Position* master,Position* slave)
+int MoteurPhy::moove(Position* master,Position* slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"touching : "<<(_touching)<<std::endl;
@@ -150,8 +158,8 @@ void MoteurPhy::moove(Position* master,Position* slave)
             std::cout<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
             if((_touching)==0){
-                ajoutGrille();
                 _fixed = true;
+                return ajoutGrille();
                 }
         }
         else
@@ -164,13 +172,14 @@ void MoteurPhy::moove(Position* master,Position* slave)
     else
         (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
     majPosition(master,slave);
+    return 0;
 
 }
 /** @brief fixes a blob to the grind
   *
   * (documentation goes here)
   */
-void MoteurPhy::ajoutGrille()
+int MoteurPhy::ajoutGrille()
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
@@ -201,8 +210,9 @@ void MoteurPhy::ajoutGrille()
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setLink(0);
         break;
     }
+
     fall();
-    majCombo();
+    return majCombo();
 }
 
 
@@ -381,7 +391,7 @@ int MoteurPhy::majCombo()
     }
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        ;//((*_grille)((*it).second.x(),(*it).second.y()))->setState(COMBOTING);
+        ((*_grille)((*it).second.x(),(*it).second.y()))->setColor(BLANK);//tempo
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
@@ -414,16 +424,19 @@ void MoteurPhy::fall()
                 blanks+=_taille;
             else
             {
-                ((*_grille)(ligne,col))->setFalling(blanks*FALLING_ANIM_TIME);
+                ((*_grille)(ligne,col))->setFalling(blanks);
+                ((*_grille)(ligne,col))->setFallingDepth(blanks);
+                ((*_grille)(ligne,col))->setFallingCol(blanks/_taille);
+
                 maxBlank=(blanks>maxBlank)?blanks:maxBlank;
             }
         }
     }
     _falling = maxBlank;
-    std::cout<<"MMMMMMMMAXBLANK->>>>>>>>>>>>>>>>>>>>>> " <<_falling<<std::endl;
+        std::cout<<"MMMMMMMMAXBLANK->>>>>>>>>>>>>>>>>>>>>> " <<_falling<<std::endl;
 }
 
-/** @brief compute how much blobs fall after a combote
+/** @brief updating position of blobs
   *
   * (documentation goes here)
   */

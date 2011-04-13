@@ -4,28 +4,32 @@
 #include <iostream>//temporaire
 #include <assert.h>
 #include <vector>
-template <typename X>
+#include "Blobs.h"
 class Grille{
 
 protected :
-    std::vector<X> _grille;
+    std::vector<Blobs> _grille;
+    void checkLink();
+    void checkState();
+    void checkHole();
+    void setLink(int l, int c, int n, int s, int e, int w);
     public :
     Grille():_grille(13*6){
         std::cout<<"grille()\n";
     for(int c=0;c<13*6;c++)
-    std::fill(_grille.begin(), _grille.end(), X(0));
+    std::fill(_grille.begin(), _grille.end(), Blobs(0));
     std::cout<<"FIN grille()\n";
     }
 
     ~Grille(){
-    delete[] _grille;
     }
-    X* operator()(int ligne,int col)
+    void check();
+    Blobs* operator()(int ligne,int col)
     {
         assert(6*ligne+col<13*6);
         return &(_grille.at(6*ligne + col));
     }
-    void operator()(int ligne,int col,X value)
+    void operator()(int ligne,int col,Blobs value)
     {
         assert(6*ligne+col<13*6);
         _grille.at(6*ligne + col) = value;
