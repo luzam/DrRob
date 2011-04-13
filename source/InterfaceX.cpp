@@ -92,9 +92,16 @@ bool InterfaceX::resize_files()
    std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
     _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob_W);
     _taille_blob=round((double)_blobs->w/20+0.1);
+
     std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
     _grille_W=12*_taille_blob;
     _grille_H=6*_taille_blob;
+
+    _ratio_avat_ini=0.675;
+    int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
+    _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
+
+
     return true;
 }
 
@@ -130,12 +137,7 @@ bool InterfaceX::compute_vDash()
     }
     return true;
 }
-bool InterfaceX::decouper_sprite()
-{
 
-
-    return true;
-}
 void InterfaceX::blit_fond()
 {
     apply_surface(0,0,_background,_screen,NULL);
@@ -145,6 +147,7 @@ void InterfaceX::blits(std::vector<DashBoard> dashBoards)
     blit_fond();
     blit_dash();
     blit_blobs(dashBoards);
+    blit_avatars();
 }
 void InterfaceX::blit_dash()
 {
@@ -157,6 +160,16 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y){
     apply_surface(x,y,_blobs,_screen,&offset);
 
 
+}
+void InterfaceX::blit_avatars(){
+    SDL_Rect offset_img;
+    offset_img.w=80;
+    offset_img.h=56;
+    for(size_t j=0; j<_vDash.size(); j++){
+        offset_img.x=j*(offset_img.w+4*_ratio*_ratio_avat_ini);
+        offset_img.y=j*(offset_img.h+6*_ratio*_ratio_avat_ini);
+        apply_surface(_vDash.at(j).x()+_offset_dash_avatar.x(),_vDash.at(j).y()+_offset_dash_avatar.y(),_avatars,_screen,&offset_img);
+    }
 }
 void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
 {
@@ -213,6 +226,9 @@ bool InterfaceX::compute_offsets()
     std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
     _offset_dash_nextBlob.setX((128)*_ratio);
     _offset_dash_nextBlob.setY((78)*_ratio);
+    _offset_dash_avatar.setX((111)*_ratio);
+        _offset_dash_avatar.setY((177)*_ratio);
+
     return true;
 }
 
@@ -236,6 +252,7 @@ bool InterfaceX::load_files()
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
+    _avatars_ini = load_img("avatars.png");
 
     if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
     {
@@ -249,6 +266,7 @@ void InterfaceX::clean_up()
     SDL_FreeSurface( _blobs );
     SDL_FreeSurface( _background);
     SDL_FreeSurface(_background);
+    SDL_FreeSurface(_avatars);
     SDL_Quit();
 }
 
