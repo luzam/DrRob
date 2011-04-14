@@ -6,7 +6,7 @@
   */
 void DashBoard::go()
 {
-    _moteurPhy->majCombo();
+    int combo = _moteurPhy->majCombo();
     _moteurPhy->fall();
     _grille->check();
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
@@ -45,20 +45,29 @@ void DashBoard::go()
     }
     if(_moteurPhy->falling()!=0)
     {
-     _go = false;
+        _go = false;
         //_masterBlob.setColor(BLANK);
         //_slaveBlob.setColor(BLANK);
         _moteurPhy->setFalling(_moteurPhy->falling()-1);
 
     }
-        if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0)
-            _go = true;
+    if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0)
+        _go = true;
 
 
-
-
+    _combo+=combo;
+    if(_combo!=0 && combo==0)
+    {
+        _launchCombo=true;
+        std::cout<<"COMBO ->>>>>>> "<<_combo<<"\n";
+    }
 }
 
+void DashBoard::resetCombo()
+{
+    _launchCombo = false;
+    _combo =0;
+}
 
 
 

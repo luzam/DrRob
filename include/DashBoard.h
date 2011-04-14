@@ -27,14 +27,15 @@ protected :
     Position _master;
     Position _slave;
     bool _go;
+    bool _launchCombo;
     Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
     /* SDLttf texte _score;
     SDLttf texte _joueur;*/
     std::vector<Blobs> _nextDarkBlobs;
 
 public :
-    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):
-        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false)
+    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_combo(0),
+        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -45,16 +46,7 @@ public :
        // std::cout<<"Dashboard()->>>"<<_courantPivot.color()<<std::endl;
     }
 
-    bool checkCombo()
-    {
-        if(_moteurPhy->launchCombo())
-        {
-            _combo = _moteurPhy->comboAct();
-            _moteurPhy->ComboActReInit();
-            return true;
-        }
-        return false;
-    }
+
     MoteurPhy* moteurPhy()const
     {
         return _moteurPhy;
@@ -68,6 +60,10 @@ public :
     Blobs* slaveBlob(){return &_slaveBlob;}
     Blobs* nextMaster(){return &_nextMaster;}
     Blobs* nextSlave(){return &_nextSlave;}
+    void resetCombo();
+    bool launchCombo()const{return _launchCombo;}
+    int combo()const{return _combo;}
+
 
 };
 
