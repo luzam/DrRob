@@ -6,6 +6,17 @@
   */
 void Game::go()
 {
+    std::cout<<"On lance le menu"<<std::endl;
+    _X->menu();
+    _nbJoueurs=_X->select_nbJoueurs();
+    std::cout<<"Nombre de joueurs : "<<_nbJoueurs<<std::endl;
+    _X->setNbJoueurs(_nbJoueurs);
+    _X->compute_game();
+    assert(_nbJoueurs>0);
+    initBlobs();
+    for(int c=0; c<_nbJoueurs; c++)
+        _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
+
     SDL_Event event; /* La variable contenant l'évènement */
     SDL_EnableKeyRepeat(100,50);
     int continuer = 1; /* Notre booléen pour la boucle */
@@ -34,7 +45,7 @@ void Game::go()
                 _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
             if (keystates[SDLK_DOWN])
                 _dashBoards.at(0).moteurPhy()->speedUp();
-                else
+            else
                 _dashBoards.at(0).moteurPhy()->speedToNormal();
             if (keystates[SDLK_UP])
                 _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());

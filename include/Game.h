@@ -22,16 +22,14 @@ protected :
     std::list<Blobs> _randBlobs;
     InterfaceX* _X;
     Clock _clock;
+    int _nbJoueurs;
 public :
 
-    Game(int nbJoueurs):_clock()
+    Game(int u):_clock()
     {
-        _X = new InterfaceX(nbJoueurs);
+        _X = new InterfaceX(800,900);
         std::cout<<"Game()\n";
-        assert(nbJoueurs>0);
-        initBlobs();
-        for(int c=0; c<nbJoueurs; c++)
-            _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
+
 
     }
 
