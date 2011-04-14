@@ -15,7 +15,7 @@ protected:
     const int _SCREEN_HEIGHT;
     const int _SCREEN_BPP;
     const int _taille_blob_ini;
-    int _taille_blob;
+    double _taille_blob;
     int _decalage_menu_x;
     int _decalage_menu_y;
     double _ratio_avat_ini;
