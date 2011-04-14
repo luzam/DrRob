@@ -1,8 +1,8 @@
 *.stackdump 
 obj/Debug/source/*.o
 *.cbp
-*.layout
+
 *.depend
 *.o
-*.exe
+
 
