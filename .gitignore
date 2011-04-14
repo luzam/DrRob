@@ -4,5 +4,5 @@ obj/Debug/source/*.o
 *.layout
 *.depend
 *.o
-
+*.exe
 
