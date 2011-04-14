@@ -26,6 +26,7 @@ protected :
     std::list<Blobs>::iterator _it;
     Position _master;
     Position _slave;
+    bool _go;
     Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
     /* SDLttf texte _score;
     SDLttf texte _joueur;*/
@@ -33,11 +34,11 @@ protected :
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):
-        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin())
+        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
-        _masterBlob.setColor((++_it)->color());
-        _slaveBlob.setColor((++_it)->color());
+         _masterBlob.setBlob(*(++_it));
+        _slaveBlob.setBlob(*(++_it));
         _nextMaster.setColor((++_it)->color());
         _nextSlave.setColor((++_it)->color());
         _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);

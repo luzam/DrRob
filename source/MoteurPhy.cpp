@@ -387,11 +387,13 @@ int MoteurPhy::majCombo()
     {
         for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
             combo+=key.count(*its);
+        _comboting = COMBOTING_ANIM_TIME;
 
     }
     keyset.clear();
-    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        ((*_grille)((*it).second.x(),(*it).second.y()))->setColor(BLANK);//tempo
+    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it){
+        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
+            ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);}
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
@@ -404,7 +406,6 @@ int MoteurPhy::majCombo()
         std::cout<<std::endl;
     }
     std::cout<<std::endl;
-    fall();
     return combo;
 }
 
@@ -422,7 +423,7 @@ void MoteurPhy::fall()
         {
             if(((*_grille)(ligne,col))->color()==BLANK)
                 blanks+=_taille;
-            else
+            else if(blanks!=0 &&(*_grille)(ligne,col)->current()==0 )
             {
                 ((*_grille)(ligne,col))->setFalling(blanks);
                 ((*_grille)(ligne,col))->setFallingDepth(blanks);

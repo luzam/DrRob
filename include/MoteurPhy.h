@@ -59,13 +59,14 @@ class MoteurPhy{
         _posBlobPivot.setY(0);
         _orientation = HAUT;
     _colorMaster = master.color();
-    _colorSlave = slave.color();
-    _fixed = false;}
+    _colorSlave = slave.color();}
     bool launchCombo()const{ return _launchCombo;}
     bool fixed()const{return _fixed;}
     void setLaunchCombo(bool combo){_launchCombo=combo;}
     int falling()const{return _falling;}
     void setFalling(int falling){_falling = falling;}
+    void setFixed(bool fixed){_fixed = fixed;}
+    void setComboting(int comboting){_comboting = comboting;}
     int comboting()const{return _comboting;}
     void majPosition(Position* master,Position* slave);
 

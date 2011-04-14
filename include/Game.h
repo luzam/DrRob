@@ -37,10 +37,10 @@ public :
 
     std::vector<DashBoard> dashBoards()const{return _dashBoards;}
     void initBlobs(){
+        srand(time(NULL));
         Blobs randBlob;
-    srand(time(NULL));
-    for(int i=0;i<100;i++){
-        randBlob.setBlob(Color(rand()%5), NO_STATE,NO_LINK);
+    for(int i=0;i<101;i++){
+        randBlob.setBlob(Color(rand()%6), NO_STATE,NO_LINK);
         std::cout<<randBlob.color()<<std::endl;
         _randBlobs.push_front(randBlob);
         }
