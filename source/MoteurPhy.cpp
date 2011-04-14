@@ -102,7 +102,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
   *
   * (documentation goes here)
   */
-int MoteurPhy::moove(Position* master,Position* slave)
+void MoteurPhy::moove(Position* master,Position* slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"touching : "<<(_touching)<<std::endl;
@@ -159,7 +159,7 @@ int MoteurPhy::moove(Position* master,Position* slave)
             (_touching)--;
             if((_touching)==0){
                 _fixed = true;
-                return ajoutGrille();
+                ajoutGrille();
                 }
         }
         else
@@ -172,14 +172,13 @@ int MoteurPhy::moove(Position* master,Position* slave)
     else
         (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
     majPosition(master,slave);
-    return 0;
 
 }
 /** @brief fixes a blob to the grind
   *
   * (documentation goes here)
   */
-int MoteurPhy::ajoutGrille()
+void MoteurPhy::ajoutGrille()
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
@@ -211,8 +210,6 @@ int MoteurPhy::ajoutGrille()
         break;
     }
 
-    fall();
-    return majCombo();
 }
 
 
@@ -378,20 +375,17 @@ int MoteurPhy::majCombo()
     //on récuper les label des combos restant
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
         keyset.insert((*it).first);
-    if(key.empty())
-    {
-        if(_comboAct!=0)
-            _launchCombo = true;
-    }
-    else
+    if(!key.empty())
     {
         for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
             combo+=key.count(*its);
+        _comboting = COMBOTING_ANIM_TIME;
 
     }
     keyset.clear();
-    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        ((*_grille)((*it).second.x(),(*it).second.y()))->setColor(BLANK);//tempo
+    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it){
+        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
+            ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);}
     std::cout<<"Combo : " << _comboAct << std::endl;
     free(out_uc);
     free(img);
@@ -404,7 +398,6 @@ int MoteurPhy::majCombo()
         std::cout<<std::endl;
     }
     std::cout<<std::endl;
-    fall();
     return combo;
 }
 
@@ -422,7 +415,7 @@ void MoteurPhy::fall()
         {
             if(((*_grille)(ligne,col))->color()==BLANK)
                 blanks+=_taille;
-            else
+            else if(blanks!=0 &&(*_grille)(ligne,col)->current()==0 )
             {
                 ((*_grille)(ligne,col))->setFalling(blanks);
                 ((*_grille)(ligne,col))->setFallingDepth(blanks);

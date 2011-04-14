@@ -5,7 +5,25 @@
   *
   * (documentation goes here)
   */
-void Grille::checkHole() {}
+void Grille::checkHole()
+{
+    for(int l=12; l>=0; --l)
+        for(int c=5; c>=0; --c)
+            if((_grille)[6*l+c].state()==FALLING)
+            {
+                if((_grille)[6*l+c].current()!=0)
+                {
+                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-3);
+                    if((_grille)[6*l+c].current()<=0)
+                    {
+                        switchBlobs(l,c,l+_grille[6*l+c].fallingCol(),c);
+                        _grille[6*l+c].setState(NO_STATE);
+                        std::cout<<"->[ "<<l<<" --> "<< l+_grille[6*l+c].fallingCol()<< " ] <\n";
+                    }
+                }
+            }
+
+}
 /** @brief (one liner)
   *
   * (documentation goes here)
@@ -132,6 +150,72 @@ void Grille::setLink(int l, int c, int n, int s, int e, int w)
         }
     }
 }
+/** @brief (one liner)
+   *
+   * (documentation goes here)
+   */
+void Grille::checkCombo()
+{
+    std::cout<<"STATE\n";
+    for(int l=0; l<13; l++)
+    {
+        for(int c=0; c<6; c++)
+        {
+            std::cout<<_grille[6*l+c].state();
+        }
+        std::cout<<"\n";
+    }
+    for(int l=0; l<13; l++)
+        for(int c=0; c<6; c++)
+            if(_grille[6*l+c].state()==COMBOTING)
+            {
+
+                _grille.at(6*l+c).setComboting(_grille.at(6*l+c).current()-1);
+                std::cout<<"---------------->>>>>>>>>>>GRILLECPP>>>>>"<<_grille.at(6*l+c).current()<<"\n";
+                if(l!=0)
+                    if(_grille.at(6*(l-1)+c).color()==DARK)
+                    {
+                        _grille.at(6*(l-1)+c).setState(COMBOTING);
+                        _grille.at(6*(l-1)+c).setComboting(_grille.at(6*(l)+c).current());
+                    }
+                if(l!=12)
+                    if(_grille.at(6*(l+1)+c).color()==DARK)
+                    {
+                        _grille.at(6*(l+1)+c).setState(COMBOTING);
+                        _grille.at(6*(l+1)+c).setComboting(_grille.at(6*(l)+c).current());
+                    }
+                if(c!=5)
+                    if(_grille.at(6*(l)+c+1).color()==DARK)
+                    {
+                        _grille.at(6*(l)+c+1).setState(COMBOTING);
+                        _grille.at(6*(l)+c+1).setComboting(_grille.at(6*(l)+c).current());
+                    }
+                if(c!=0)
+                    if(_grille.at(6*(l)+c-1).color()==DARK)
+                    {
+                        _grille.at(6*(l)+c-1).setState(COMBOTING);
+                        _grille.at(6*(l)+c-1).setComboting(_grille.at(6*(l)+c).current());
+                    }
+            }
+    for(int l=0; l<13; l++)
+        for(int c=0; c<6; c++)
+            if(_grille[6*l+c].state()==COMBOTING && _grille[6*l+c].current()<=0 )
+                _grille[6*l+c].setColor(BLANK);
+}
+/** @brief (one liner)
+   *
+   * (documentation goes here)
+   */
+void Grille::switchBlobs(int l1,int c1,int l2,int c2)
+{
+    _grille[l2*6+c2].setColor(_grille[l1*6+c1].color());
+    _grille[l1*6+c1].setColor(BLANK);
+    _grille[l1*6+c1].setFalling(0);
+    _grille[l1*6+c1].setState(NO_STATE);
+    _grille[l2*6+c2].setFalling(0);
+    _grille[l2*6+c2].setState(FIXED);
+}
+
 
 /** @brief (one liner)
   *
@@ -139,6 +223,7 @@ void Grille::setLink(int l, int c, int n, int s, int e, int w)
   */
 void Grille::check()
 {
+    checkCombo();
     checkHole();
     checkLink();
     checkState();
