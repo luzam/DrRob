@@ -1,7 +1,7 @@
 *.stackdump 
 obj/Debug/source/*.o
 *.cbp
-
+DrRob.layout
 *.depend
 *.o
 
