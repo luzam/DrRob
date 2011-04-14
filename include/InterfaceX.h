@@ -16,15 +16,19 @@ protected:
     const int _SCREEN_BPP;
     const int _taille_blob_ini;
     int _taille_blob;
+    double _ratio_avat_ini;
     const int _nbJoueurs;
     Position _offset_dash_grille;
     Position _offset_dash_nextBlob;
     Position _offset_dash_score;
+    Position _offset_dash_avatar;
     double _ratio;
     std::vector<Position> _vDash;
     SDL_Surface *_dashboard;
     SDL_Surface *_background;
     SDL_Surface *_blobs;
+    SDL_Surface *_avatars;
+    SDL_Surface *_avatars_ini;
     SDL_Surface *_screen;
     SDL_Surface *_dashboard_ini;
     SDL_Surface *_background_ini;
@@ -96,10 +100,11 @@ public:
     bool compute_vDash();
     void blit_dash();
     void blit_fond();
+    void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
     void blits(std::vector<DashBoard> dashBoards);
-    bool decouper_sprite();
+
     void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);

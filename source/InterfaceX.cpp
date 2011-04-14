@@ -18,6 +18,7 @@
 #include "../include/State.h"
 #include "../include/Blobs.h"
 #include "../include/Position.h"
+#include <time.h>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -91,9 +92,18 @@ bool InterfaceX::resize_files()
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
     _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob_W);
     _taille_blob=round((double)_blobs->w/20+0.1);
+
     std::cout<<"Un blob mesure : "<<_taille_blob<<" px de coté"<<std::endl;
     _grille_W=12*_taille_blob;
     _grille_H=6*_taille_blob;
+
+    _ratio_avat_ini=54.0/80.0;
+        std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
+
+    int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
+    std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
+    _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
+
     return true;
 }
 
@@ -129,12 +139,7 @@ bool InterfaceX::compute_vDash()
     }
     return true;
 }
-bool InterfaceX::decouper_sprite()
-{
 
-
-    return true;
-}
 void InterfaceX::blit_fond()
 {
     apply_surface(0,0,_background,_screen,NULL);
@@ -144,6 +149,7 @@ void InterfaceX::blits(std::vector<DashBoard> dashBoards)
     blit_fond();
     blit_dash();
     blit_blobs(dashBoards);
+    blit_avatars();
 }
 void InterfaceX::blit_dash()
 {
@@ -156,6 +162,23 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y){
     apply_surface(x,y,_blobs,_screen,&offset);
 
 
+}
+void InterfaceX::blit_avatars(){
+    SDL_Rect offset_img;
+    srand(time(NULL));
+    offset_img.w=(int)(80*_ratio*_ratio_avat_ini);
+    offset_img.h=(int)(56*_ratio*_ratio_avat_ini);
+    int cpt=0;
+    for(size_t j=0; j<_vDash.size(); j++){
+
+        offset_img.x=(rand()%6)*round(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        if(cpt>12)
+        cpt=0;
+        offset_img.y=cpt*round(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        std::cout<<"w : "<<offset_img.w<<" h : "<<offset_img.h<<" x : "<<offset_img.x<<" y : "<<offset_img.y<<std::endl;
+        apply_surface(_vDash.at(j).x()+_offset_dash_avatar.x(),_vDash.at(j).y()+_offset_dash_avatar.y(),_avatars,_screen,&offset_img);
+        cpt++;
+    }
 }
 void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
 {
@@ -206,12 +229,13 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
 }
 bool InterfaceX::compute_offsets()
 {
-    std::cout<<"Calcul offsets"<<std::endl;
-    _offset_dash_grille.setX((9)*(_ratio));
-    _offset_dash_grille.setY((32-_taille_blob_ini)*(_ratio));
-    std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
+    _offset_dash_grille.setX((9.0)*(_ratio));
+    _offset_dash_grille.setY((32.0-_taille_blob_ini)*(_ratio));
     _offset_dash_nextBlob.setX((128)*_ratio);
     _offset_dash_nextBlob.setY((78)*_ratio);
+    _offset_dash_avatar.setX((105)*_ratio);
+    _offset_dash_avatar.setY((178)*_ratio);
+
     return true;
 }
 
@@ -235,6 +259,7 @@ bool InterfaceX::load_files()
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
+    _avatars_ini = load_img("avatars.png");
 
     if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
     {
@@ -248,6 +273,7 @@ void InterfaceX::clean_up()
     SDL_FreeSurface( _blobs );
     SDL_FreeSurface( _background);
     SDL_FreeSurface(_background);
+    SDL_FreeSurface(_avatars);
     SDL_Quit();
 }
 
@@ -256,7 +282,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int tail
     double td_W=taille_desiree_W;
     double sar_W=surface_a_resize->w;
     double zoom=(double)td_W/(double)sar_W;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
     SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
@@ -265,7 +291,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     double td_H=taille_desiree_H;
     double sar_H=surface_a_resize->h;
     double zoom=(double)td_H/(double)sar_H;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
     SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
