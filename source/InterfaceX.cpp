@@ -18,6 +18,7 @@
 #include "../include/State.h"
 #include "../include/Blobs.h"
 #include "../include/Position.h"
+#include <time.h>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -96,10 +97,12 @@ bool InterfaceX::resize_files()
     _grille_W=12*_taille_blob;
     _grille_H=6*_taille_blob;
 
-    _ratio_avat_ini=0.675;
-    int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
-    _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
+    _ratio_avat_ini=54.0/80.0;
+        std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
 
+    int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
+    std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
+    _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
 
     return true;
 }
@@ -162,12 +165,19 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y){
 }
 void InterfaceX::blit_avatars(){
     SDL_Rect offset_img;
-    offset_img.w=80;
-    offset_img.h=56;
+    srand(time(NULL));
+    offset_img.w=(int)(80*_ratio*_ratio_avat_ini);
+    offset_img.h=(int)(56*_ratio*_ratio_avat_ini);
+    int cpt=0;
     for(size_t j=0; j<_vDash.size(); j++){
-        offset_img.x=j*(offset_img.w+4*_ratio*_ratio_avat_ini);
-        offset_img.y=j*(offset_img.h+6*_ratio*_ratio_avat_ini);
+
+        offset_img.x=(rand()%6)*round(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        if(cpt>12)
+        cpt=0;
+        offset_img.y=cpt*round(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        std::cout<<"w : "<<offset_img.w<<" h : "<<offset_img.h<<" x : "<<offset_img.x<<" y : "<<offset_img.y<<std::endl;
         apply_surface(_vDash.at(j).x()+_offset_dash_avatar.x(),_vDash.at(j).y()+_offset_dash_avatar.y(),_avatars,_screen,&offset_img);
+        cpt++;
     }
 }
 void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
@@ -219,21 +229,13 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
 }
 bool InterfaceX::compute_offsets()
 {
-    std::cout<<"Calcul offsets"<<std::endl;
-    _offset_dash_grille.setX((9)*(_ratio));
-    _offset_dash_grille.setY((32-_taille_blob_ini)*(_ratio));
-<<<<<<< HEAD
-    std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
+    _offset_dash_grille.setX((9.0)*(_ratio));
+    _offset_dash_grille.setY((32.0-_taille_blob_ini)*(_ratio));
     _offset_dash_nextBlob.setX((128)*_ratio);
     _offset_dash_nextBlob.setY((78)*_ratio);
-    _offset_dash_avatar.setX((111)*_ratio);
-        _offset_dash_avatar.setY((177)*_ratio);
+    _offset_dash_avatar.setX((105)*_ratio);
+    _offset_dash_avatar.setY((178)*_ratio);
 
-=======
-    std::cout<<"Offset grille : "<<(_offset_dash_grille).x()<<"x"<<(_offset_dash_grille).y()<<"  RATIO : "<<1/_ratio<<std::endl;
-    _offset_dash_nextBlob.setX((128)*_ratio);
-    _offset_dash_nextBlob.setY((78)*_ratio);
->>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
     return true;
 }
 
@@ -280,7 +282,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int tail
     double td_W=taille_desiree_W;
     double sar_W=surface_a_resize->w;
     double zoom=(double)td_W/(double)sar_W;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
     SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
@@ -289,7 +291,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     double td_H=taille_desiree_H;
     double sar_H=surface_a_resize->h;
     double zoom=(double)td_H/(double)sar_H;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,1);
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
     SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }

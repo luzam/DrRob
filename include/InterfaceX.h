@@ -103,12 +103,8 @@ public:
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
-<<<<<<< HEAD
     void blits(std::vector<DashBoard> dashBoards);
-=======
-    void blits(std::vector<DashBoard> dashBoards);
-    bool decouper_sprite();
->>>>>>> d7d89aca3b22ae17b295081c875b67a45bd8d44a
+
     void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);
