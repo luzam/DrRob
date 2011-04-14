@@ -50,7 +50,7 @@ void Grille::checkLink()
         {
             int s=0,n=0,w=0,e=0;
             int color = _grille.at(6*l+c).color();
-            if(color==BLANK)
+            if(color==BLANK||color==DARK)
                 continue;
             if(l!=12)
                 if(_grille[(l+1)*6+c].color()==color)

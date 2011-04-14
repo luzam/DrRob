@@ -7,7 +7,7 @@
 void Game::go()
 {
     SDL_Event event; /* La variable contenant l'évènement */
-    SDL_EnableKeyRepeat(100,50);
+   // SDL_EnableKeyRepeat(100,50);
     int continuer = 1; /* Notre booléen pour la boucle */
     _X->blits(_dashBoards);
 

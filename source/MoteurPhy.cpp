@@ -286,7 +286,8 @@ void MoteurPhy::droite(Position* master,Position* slave)
   */
 void MoteurPhy::speedUp()
 {
-    _vitesseBlob=(_vitesseBlob<50)?_vitesseBlob+1:_vitesseBlob;
+    //_vitesseBlob=(_vitesseBlob<50)?_vitesseBlob+10:_vitesseBlob;
+    _vitesseBlob= _taille/2;
 }
 
 /** @brief Speed to normal
@@ -363,7 +364,7 @@ int MoteurPhy::majCombo()
     // suppression des zones inférieurs à quatre et des absences de blobs
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end();
             ++it)
-        if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK)//et BIM
+        if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK||((*_grille)((*it).second.x(),(*it).second.y()))->color()==DARK)//et BIM
             keyset.insert((*it).first);
     if(keyset.empty())
         _fixed = true;
