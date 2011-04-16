@@ -15,13 +15,18 @@ protected:
     const int _SCREEN_HEIGHT;
     const int _SCREEN_BPP;
     const int _taille_blob_ini;
-    int _taille_blob;
+    double _taille_blob;
+    int _decalage_menu_x;
+    int _decalage_menu_y;
     double _ratio_avat_ini;
-    const int _nbJoueurs;
-    Position _offset_dash_grille;
-    Position _offset_dash_nextBlob;
-    Position _offset_dash_score;
-    Position _offset_dash_avatar;
+    int _nbJoueurs;
+    double _ratio_menu;
+    Position _offset_grille;
+    Position _offset_nextBlob;
+    Position _offset_score;
+    Position _offset_avatar;
+    Position _offset_cursor;
+    SDL_Rect _offset_menu;
     double _ratio;
     std::vector<Position> _vDash;
     SDL_Surface *_dashboard;
@@ -33,22 +38,30 @@ protected:
     SDL_Surface *_dashboard_ini;
     SDL_Surface *_background_ini;
     SDL_Surface *_blobs_ini;
+    SDL_Surface *_menu_ini;
+    SDL_Surface *_menu;
+    SDL_Surface *_cursor_ini;
+    SDL_Surface *_cursor;
     SDL_Event _event;
     TTF_Font *_font;
     SDL_Color _textColor;
     int _grille_W;
     int _grille_H;
 public:
-    InterfaceX(int nbJoueurs):_SCREEN_WIDTH(800),_SCREEN_HEIGHT(600),
-    _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_nbJoueurs(nbJoueurs),_offset_dash_grille(),_offset_dash_nextBlob()
-    ,_offset_dash_score(),_ratio(1),_vDash(nbJoueurs),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
+    InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
+    _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
+    ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
-    init();
+        _offset_menu.w=_SCREEN_WIDTH;
+        _offset_menu.h=_SCREEN_HEIGHT;
+        _offset_menu.x=0;
+        _offset_menu.y=0;
+        _offset_cursor.setX(83);
+        _offset_cursor.setY(73);
+
+    init_SDL();
     load_files();
-    resize_files();
-    compute_vDash();
-    compute_offsets();
 
     }
     ~InterfaceX()
@@ -57,15 +70,18 @@ public:
         clean_up();
         std::cout<<"Interface fermee avec succes"<<std::endl;
     }
+    void menu();
+    void compute_game();
     SDL_Surface* load_img( std::string filename );
     void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip);
-    bool init();
+    bool init_SDL();
     bool load_files();
     void clean_up();
     int taille_blob()const{return _taille_blob;}
+    void setNbJoueurs(int n){_nbJoueurs=n;}
     Position offset_grille()const
     {
-        return _offset_dash_grille;
+        return _offset_grille;
     }
     std::vector<Position> vDash()const
     {
@@ -100,11 +116,15 @@ public:
     bool compute_vDash();
     void blit_dash();
     void blit_fond();
+    void play_anim_menu();
+    int select_nbJoueurs();
+    void blit_cursor();
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
     void blits(std::vector<DashBoard> dashBoards);
-
+    void blit_menu();
+    void resize_menu();
     void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);
