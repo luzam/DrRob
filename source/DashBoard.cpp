@@ -34,7 +34,7 @@ void DashBoard::go()
     }
 
 
-    if(_moteurPhy->comboting()!=0)
+    if(_moteurPhy->comboting()!=0 && _moteurPhy->falling()==0 )
     {
         //TO DO : animation comboting
         _go = false;
@@ -42,6 +42,45 @@ void DashBoard::go()
         std::cout<<"---------------->>>>>>>>>>>>>>>>"<<_moteurPhy->comboting()<<"\n";
 
 
+    }
+    if(_moteurPhy->turningDirect()!=0)
+    {
+        switch(_moteurPhy->orientation())
+        {
+        case HAUT : _slave.setX(_slave.x());
+         _slave.setY(_slave.y());
+            break;
+        case BAS :_slave.setX(_slave.x());
+         _slave.setY(_slave.y());
+            break;
+        case GAUCHE :_slave.setX(_slave.x());
+         _slave.setY(_slave.y());
+            break;
+        case DROITE :_slave.setX(_slave.x());
+         _slave.setY(_slave.y());
+            break;
+        }
+        _moteurPhy->setTurningDirect(0);
+    }
+    if(_moteurPhy->turningHoraire()!=0)
+    {
+        int taille = _moteurPhy->taille()*0.8;
+        switch(_moteurPhy->orientation())
+        {
+        case HAUT :_slave.setX(_slave.x()-taille);
+         _slave.setY(_slave.y()+taille);
+            break;
+        case BAS :_slave.setX(_slave.x()+taille);
+         _slave.setY(_slave.y()-taille);
+            break;
+        case GAUCHE :_slave.setX(_slave.x()+taille);
+         _slave.setY(_slave.y()+taille);
+            break;
+        case DROITE :_slave.setX(_slave.x()-taille);
+         _slave.setY(_slave.y()-taille);
+            break;
+        }
+        _moteurPhy->setTurningHoraire(_moteurPhy->turningHoraire()-1);
     }
     if(_moteurPhy->falling()!=0)
     {

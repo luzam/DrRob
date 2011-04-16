@@ -4,6 +4,7 @@
 #include "Blobs.h"
 #include "Position.h"
 #include "MoteurPhy.h"
+#include "Orientation.h"
 //#include "SDLttf.h"
 #include <vector>
 #include <list>

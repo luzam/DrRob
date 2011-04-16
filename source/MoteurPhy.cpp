@@ -44,6 +44,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"roration-> orientation "<<_orientation<<std::endl;
+    _turningHoraire=8;
     majPosition(master,slave);
     //TO DO : Turning clock_wise
 }
@@ -94,6 +95,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
+    _turningDirect=8;
     majPosition(master,slave);
 
     // TO DO : turning Direct_wise

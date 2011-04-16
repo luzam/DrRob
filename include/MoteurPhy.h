@@ -11,11 +11,11 @@
 #include "Tree.h"
 #include "conected.h"
 #include "Blobs.h"
+#include "Orientation.h"
 #include <map>
 #include <set>
 #include <iostream> //temporaire
 
-enum Orientation{ HAUT,BAS,DROITE,GAUCHE};
 class MoteurPhy{
 
         protected :
@@ -31,6 +31,8 @@ class MoteurPhy{
     int _touching;
     int _comboting;
     int _falling;
+    int _turningDirect;
+    int _turningHoraire;
     const int ligneBlobCourant()const{return (int)((_posBlobPivot).y()/_taille);}
     const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
     void ajoutGrille();
@@ -39,7 +41,7 @@ class MoteurPhy{
     public :
     MoteurPhy(int taille,Grille* grille):
     _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(1),_orientation(HAUT),_comboAct(0),_fixed(false),
-    _grille(grille),_touching(0),_comboting(0),_falling(0){std::cout<<"MoteurPhy()\n";}
+    _grille(grille),_touching(0),_comboting(0),_falling(0),_turningDirect(0),_turningHoraire(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
     void rotationHoraire(Position* master,Position* slave);
@@ -61,10 +63,16 @@ class MoteurPhy{
     bool fixed()const{return _fixed;}
     int falling()const{return _falling;}
     void setFalling(int falling){_falling = falling;}
+    int turningDirect()const{return _turningDirect;}
+    void setTurningDirect(int turning){_turningDirect = turning;}
+    int turningHoraire()const{return _turningHoraire;}
+    void setTurningHoraire(int turning){_turningHoraire = turning;}
     void setFixed(bool fixed){_fixed = fixed;}
     void setComboting(int comboting){_comboting = comboting;}
     int comboting()const{return _comboting;}
+    int orientation()const{return _orientation;}
     void majPosition(Position* master,Position* slave);
+    int taille()const{return _taille;}
 
 
 };
