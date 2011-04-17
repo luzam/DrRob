@@ -16,7 +16,8 @@ class DashBoard
 {
 
 protected :
-int delay;
+    int _delay;
+    bool _looser;
     MoteurPhy* _moteurPhy;
     int _combo;
     Blobs _masterBlob;
@@ -36,7 +37,7 @@ int delay;
     int _nextDarkBlobs;
 
 public :
-    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):delay(100),_combo(0),
+    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_delay(100),_looser(false),_combo(0),
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
         _nextDarkBlobs(0)
     {
@@ -67,6 +68,7 @@ public :
     bool launchCombo()const{return _launchCombo;}
     int combo()const{return _combo;}
     void addDarkBlob();
+    bool looser()const{return _looser;}
 
 
 };

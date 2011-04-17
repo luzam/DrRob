@@ -6,9 +6,12 @@
   */
 void DashBoard::go()
 {
+    if(_looser)
+        return;
     _moteurPhy->majCombo();
     _moteurPhy->fall();
     _grille->check();
+    _looser = _grille->checkLoose();
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
     if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
     {
@@ -112,9 +115,9 @@ void DashBoard::go()
 
     if(_combo!=0 && _moteurPhy->comboting()==0 && _moteurPhy->falling()==0 )
     {
-        if(--delay==0){
+        if(--_delay==0){
         _launchCombo=true;
-        delay = 100;
+        _delay = 100;
         }
         std::cout<<"COMBO ->>>>>>> "<<_combo<<"\n";
     }

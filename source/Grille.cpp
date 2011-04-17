@@ -229,6 +229,14 @@ void Grille::check()
     checkState();
 
 }
+
+/** @brief (one liner)
+  *
+  * (documentation goes here)
+  */
+bool Grille::checkLoose(){
+    return (_grille.at(6*5+2).color()!=BLANK)?true:false;
+}
 /** @brief (one liner)
   *
   * (documentation goes here)

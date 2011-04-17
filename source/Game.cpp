@@ -62,7 +62,6 @@ void Game::go()
         }
                 repartitionCombo();
         _X->blits(_dashBoards);
-
         for(size_t i=0; i<_dashBoards.size(); i++)
         {
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
@@ -90,7 +89,7 @@ void Game::repartitionCombo()
             while(_combo[i]!=0){
                 do{
                 target = rand() % _dashBoards.size();
-                }while(target==i);
+                }while(target==i || _dashBoards[target].looser());
                 _dashBoards[target].addDarkBlob();
                 _combo[i]--;
             }
