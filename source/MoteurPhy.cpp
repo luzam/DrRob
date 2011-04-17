@@ -304,7 +304,7 @@ void MoteurPhy::speedToNormal()
   *
   * (documentation goes here)
   */
-int MoteurPhy::majCombo()
+void MoteurPhy::majCombo()
 {
     char *img = (char *)malloc(6*13);
     std::multimap<unsigned char,Position> key;
@@ -382,14 +382,15 @@ int MoteurPhy::majCombo()
     {
         for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
             combo+=key.count(*its);
-        _comboting = COMBOTING_ANIM_TIME;
+            _combo = 7;
+            _comboting = COMBOTING_ANIM_TIME;
 
     }
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it){
         if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
             ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);}
-    std::cout<<"Combo : " << _comboAct << std::endl;
+    std::cout<<"Combo : " << _combo << std::endl;
     free(out_uc);
     free(img);
     for(int l=0; l<13; l++)
@@ -401,7 +402,6 @@ int MoteurPhy::majCombo()
         std::cout<<std::endl;
     }
     std::cout<<std::endl;
-    return combo;
 }
 
 /** @brief make blobs fall after a combote

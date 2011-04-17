@@ -229,3 +229,35 @@ void Grille::check()
     checkState();
 
 }
+/** @brief (one liner)
+  *
+  * (documentation goes here)
+  */
+int Grille::checkDark(int size)
+{
+    srand(time(NULL));
+    int put=0;
+    if(size>=6)
+    {
+        for(int i=0; i<6; ++i)
+        {
+            _grille[i].setColor(DARK);
+            _grille[i].setState(FALLING);
+        }
+        return size;
+    }
+    else
+    {
+        while(put!=size)
+        {
+            int col = rand()%6;
+            if(_grille[col].color()!=DARK)
+            {
+                _grille[col].setColor(DARK) ;
+                _grille[col].setState(FALLING);
+                put++;
+            }
+        }
+    }
+    return put;
+}

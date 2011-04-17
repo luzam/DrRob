@@ -5,6 +5,8 @@
 #include <assert.h>
 #include <vector>
 #include "Blobs.h"
+#include "time.h"
+#include "stdlib.h"
 class Grille{
 
 protected :
@@ -25,6 +27,7 @@ protected :
     ~Grille(){
     }
     void check();
+    int checkDark(int size);
     void switchBlobs(int l1,int c1,int l2,int c2);
     Blobs* operator()(int ligne,int col)
     {

@@ -32,11 +32,12 @@ protected :
     Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
     /* SDLttf texte _score;
     SDLttf texte _joueur;*/
-    std::vector<Blobs> _nextDarkBlobs;
+    int _nextDarkBlobs;
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_combo(0),
-        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false)
+        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
+        _nextDarkBlobs(0)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -64,6 +65,7 @@ public :
     void resetCombo();
     bool launchCombo()const{return _launchCombo;}
     int combo()const{return _combo;}
+    void addDarkBlob();
 
 
 };

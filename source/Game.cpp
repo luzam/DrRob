@@ -16,6 +16,7 @@ void Game::go()
     initBlobs();
     for(int c=0; c<_nbJoueurs; c++)
         _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
+    _combo = (int *) calloc(_nbJoueurs,sizeof(int));
 
     SDL_Event event; /* La variable contenant l'évènement */
     SDL_EnableKeyRepeat(100,50);
@@ -48,13 +49,21 @@ void Game::go()
             else
                 _dashBoards.at(0).moteurPhy()->speedToNormal();
             if (keystates[SDLK_UP])
-                _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+                _dashBoards.at(0).moteurPhy()->rotationAntiHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
 
         }
         _X->blits(_dashBoards);
-        for(size_t i=0; i<_dashBoards.size(); i++)
+        for(size_t i=0; i<_dashBoards.size(); i++){
             _dashBoards.at(i).go();
-
+            if(_dashBoards.at(i).launchCombo())
+            {
+                _combo[i] = _dashBoards.at(i).combo();
+                _dashBoards.at(i).resetCombo();
+            }
+        }
+        for(int i=0;i<_dashBoards.size();++i)
+            std::cout<<"COMBO JOUEUR "<<i<<" = " << _combo[i]<<"\n";
+        repartitionCombo();
         for(size_t i=0; i<_dashBoards.size(); i++)
         {
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
@@ -65,6 +74,28 @@ void Game::go()
         SDL_Flip(_X->screen());
     }
 }
-
-
+/** @brief main loop
+  *
+  * (documentation goes here)
+  */
+void Game::repartitionCombo()
+{
+    if(_dashBoards.size()==1)
+        return;
+    srand(time(NULL));
+    int target =0;
+    for(int i=0;i<_dashBoards.size();++i)
+    {
+        if(_combo[i]!=0)
+        {
+            while(_combo[i]!=0){
+                do{
+                target = rand() % _dashBoards.size();
+                }while(target==i);
+                _dashBoards[target].addDarkBlob();
+                _combo[i]--;
+            }
+        }
+    }
+}
 
