@@ -7,13 +7,13 @@
   */
 void Grille::checkHole()
 {
-    for(int l=12; l>=0; --l)
+    for(int l=17; l>=0; --l)
         for(int c=5; c>=0; --c)
             if((_grille)[6*l+c].state()==FALLING)
             {
                 if((_grille)[6*l+c].current()!=0)
                 {
-                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-3);
+                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-5);
                     if((_grille)[6*l+c].current()<=0)
                     {
                         switchBlobs(l,c,l+_grille[6*l+c].fallingCol(),c);
@@ -30,7 +30,7 @@ void Grille::checkHole()
   */
 void Grille::checkState()
 {
-    for(int l=0; l<13; l++)
+    for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
             if(_grille.at(6*l+c).color()==BLANK)
             {
@@ -45,14 +45,14 @@ void Grille::checkState()
   */
 void Grille::checkLink()
 {
-    for(int l=0; l<13; l++)
+    for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
         {
             int s=0,n=0,w=0,e=0;
             int color = _grille.at(6*l+c).color();
             if(color==BLANK||color==DARK)
                 continue;
-            if(l!=12)
+            if(l!=17)
                 if(_grille[(l+1)*6+c].color()==color)
                     s=1;
             if(l!=0)
@@ -157,7 +157,7 @@ void Grille::setLink(int l, int c, int n, int s, int e, int w)
 void Grille::checkCombo()
 {
     std::cout<<"STATE\n";
-    for(int l=0; l<13; l++)
+    for(int l=0; l<18; l++)
     {
         for(int c=0; c<6; c++)
         {
@@ -165,7 +165,7 @@ void Grille::checkCombo()
         }
         std::cout<<"\n";
     }
-    for(int l=0; l<13; l++)
+    for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
             if(_grille[6*l+c].state()==COMBOTING)
             {
@@ -178,7 +178,7 @@ void Grille::checkCombo()
                         _grille.at(6*(l-1)+c).setState(COMBOTING);
                         _grille.at(6*(l-1)+c).setComboting(_grille.at(6*(l)+c).current());
                     }
-                if(l!=12)
+                if(l!=17)
                     if(_grille.at(6*(l+1)+c).color()==DARK)
                     {
                         _grille.at(6*(l+1)+c).setState(COMBOTING);
@@ -197,7 +197,7 @@ void Grille::checkCombo()
                         _grille.at(6*(l)+c-1).setComboting(_grille.at(6*(l)+c).current());
                     }
             }
-    for(int l=0; l<13; l++)
+    for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
             if(_grille[6*l+c].state()==COMBOTING && _grille[6*l+c].current()<=0 )
                 _grille[6*l+c].setColor(BLANK);
@@ -236,28 +236,34 @@ void Grille::check()
 int Grille::checkDark(int size)
 {
     srand(time(NULL));
-    int put=0;
-    if(size>=6)
+
+    int lignPut =(int) size/6;
+    int put=6*lignPut;
+    std::cout<< "LIGNE PUT "<<lignPut<<std::endl;
+    if(lignPut>0)
     {
-        for(int i=0; i<6; ++i)
+        int count=0;
+        for(int ligne=4 ;++count<=lignPut; --ligne)
         {
-            _grille[i].setColor(DARK);
-            _grille[i].setState(FALLING);
-        }
-        return size;
-    }
-    else
-    {
-        while(put!=size)
-        {
-            int col = rand()%6;
-            if(_grille[col].color()!=DARK)
+            for(int i=0; i<6; ++i)
             {
-                _grille[col].setColor(DARK) ;
-                _grille[col].setState(FALLING);
-                put++;
+                _grille[ligne*6+i].setColor(DARK);
+                _grille[ligne*6+i].setState(FALLING);
             }
+            if(ligne==0)
+                return size; // temporaire
         }
     }
+    while(put!=size)
+    {
+        int col = rand()%6;
+        if(_grille[(4-lignPut)*6+col].color()!=DARK)
+        {
+            _grille[(4-lignPut)*6+col].setColor(DARK) ;
+            _grille[(4-lignPut)*6+col].setState(FALLING);
+            put++;
+        }
+    }
+
     return put;
 }

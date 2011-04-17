@@ -40,7 +40,7 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille* grille):
-    _taille(taille),_posBlobPivot(2*taille,0),_vitesseBlob(1),_orientation(HAUT),_combo(0),_fixed(false),
+    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(1),_orientation(HAUT),_combo(0),_fixed(false),
     _grille(grille),_touching(0),_comboting(0),_falling(0),_turningDirect(0),_turningHoraire(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
@@ -56,7 +56,7 @@ class MoteurPhy{
     int combo()const{return _combo;}
     void nextBlobs(Blobs master, Blobs slave){
         _posBlobPivot.setX(2*_taille);
-        _posBlobPivot.setY(0);
+        _posBlobPivot.setY(6*_taille);
         _orientation = HAUT;
     _colorMaster = master.color();
     _colorSlave = slave.color();}
@@ -69,6 +69,7 @@ class MoteurPhy{
     void setTurningHoraire(int turning){_turningHoraire = turning;}
     void setFixed(bool fixed){_fixed = fixed;}
     void setComboting(int comboting){_comboting = comboting;}
+    void setCombo(int combo){_combo = combo;}
     int comboting()const{return _comboting;}
     int orientation()const{return _orientation;}
     void majPosition(Position* master,Position* slave);

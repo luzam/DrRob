@@ -52,7 +52,6 @@ void Game::go()
                 _dashBoards.at(0).moteurPhy()->rotationAntiHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
 
         }
-        _X->blits(_dashBoards);
         for(size_t i=0; i<_dashBoards.size(); i++){
             _dashBoards.at(i).go();
             if(_dashBoards.at(i).launchCombo())
@@ -61,9 +60,9 @@ void Game::go()
                 _dashBoards.at(i).resetCombo();
             }
         }
-        for(int i=0;i<_dashBoards.size();++i)
-            std::cout<<"COMBO JOUEUR "<<i<<" = " << _combo[i]<<"\n";
-        repartitionCombo();
+                repartitionCombo();
+        _X->blits(_dashBoards);
+
         for(size_t i=0; i<_dashBoards.size(); i++)
         {
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),

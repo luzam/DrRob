@@ -14,7 +14,6 @@ void DashBoard::go()
     {
         if(_moteurPhy->fixed()&& _nextDarkBlobs==0)
         {
-            _combo = _moteurPhy->combo();
             std::cout<<"blob suivant\n";
             std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
             _masterBlob.setBlob(_nextMaster);
@@ -37,7 +36,7 @@ void DashBoard::go()
     }
 
     if(_nextDarkBlobs!=0 && _moteurPhy->fixed())
-            _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
+        _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
 
     if(_moteurPhy->comboting()!=0 && _moteurPhy->falling()==0 )
     {
@@ -45,8 +44,11 @@ void DashBoard::go()
         _go = false;
         _moteurPhy->setComboting(_moteurPhy->comboting()-1);
         std::cout<<"---------------->>>>>>>>>>>>>>>>"<<_moteurPhy->comboting()<<"\n";
+        if(_moteurPhy->comboting()==0)
+        {
 
-
+     _combo =(_combo==0)?_moteurPhy->combo():(_combo!=0&&_combo<6)?_combo+2*_moteurPhy->combo():(_combo>6&&_combo<12)?_combo+4*_moteurPhy->combo():_combo+6*_moteurPhy->combo();
+        }
     }
     if(_moteurPhy->turningDirect()!=0)
     {
@@ -108,9 +110,12 @@ void DashBoard::go()
         _go = true;
 
 
-    if(_combo!=0)
+    if(_combo!=0 && _moteurPhy->comboting()==0 && _moteurPhy->falling()==0 )
     {
+        if(--delay==0){
         _launchCombo=true;
+        delay = 100;
+        }
         std::cout<<"COMBO ->>>>>>> "<<_combo<<"\n";
     }
 }
@@ -119,8 +124,10 @@ void DashBoard::resetCombo()
 {
     _launchCombo = false;
     _combo =0;
+    _moteurPhy->setCombo(0);
 }
-void DashBoard::addDarkBlob(){
+void DashBoard::addDarkBlob()
+{
     _nextDarkBlobs++;
 }
 
