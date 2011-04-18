@@ -1,8 +1,8 @@
 #ifndef MOTEURPHY_H
 #define MOTEURPHY_H
 
-#define TOUCHING_ANIM_TIME 100
-#define FALLING_ANIM_TIME 10
+#define TOUCHING_ANIM_TIME 5
+#define FALLING_ANIM_TIME 0
 #define COMBOTING_ANIM_TIME 10
 
 #include <stdio.h>
@@ -40,7 +40,7 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille* grille):
-    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(1),_orientation(HAUT),_combo(0),_fixed(false),
+    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(3),_orientation(HAUT),_combo(0),_fixed(false),
     _grille(grille),_touching(0),_comboting(0),_falling(0),_turningDirect(0),_turningHoraire(0){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 

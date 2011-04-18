@@ -1,27 +1,4 @@
 #include "../include/InterfaceX.h"
-#ifdef WIN32
-#define WINDOWS
-#endif
-#ifdef X64
-#define WINDOWS
-#endif
-#include <stdio.h>  /* defines FILENAME_MAX */
-#ifdef WINDOWS
-#include <direct.h>
-#define GetCurrentDir _getcwd
-#else
-#include <unistd.h>
-#define GetCurrentDir getcwd
-#endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
-#include <time.h>
-
-
-
 
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
@@ -53,10 +30,13 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
+        if(_SCREEN_WIDTH==0 || _SCREEN_HEIGHT==0)
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF |SDL_FULLSCREEN);
+        else
     _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
         return false;
-    SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
+    SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunersteinberg Hoarau ROB4 2011", NULL );
     return true;
 }
 void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
@@ -81,10 +61,10 @@ void InterfaceX::play_anim_menu()
         //std::cout<<"T : "<<t<<std::endl;
         if(t>0.001)
         {
-            _offset_menu.x+=1;
+            _offset_menu.x+=3;
             tinit=clock();
         }
-        if(_offset_menu.x==2*_offset_menu.w)
+        if(_offset_menu.x>=2*_offset_menu.w)
         {
             continuer=0;
         }
@@ -519,6 +499,32 @@ bool InterfaceX::load_files()
         return false;
     }
     return true;
+}
+void InterfaceX::decouper_sprite(){
+    if(SDL_MUSTLOCK(_blobs_ini))
+    SDL_LockSurface(_blobs_ini);
+        Uint32 rmask, gmask, bmask, amask;
+
+    #if SDL_BYTEORDER == SDL_BIG_ENDIAN
+    rmask = 0xff000000;
+    gmask = 0x00ff0000;
+    bmask = 0x0000ff00;
+    amask = 0x000000ff;
+#else
+    rmask = 0x000000ff;
+    gmask = 0x0000ff00;
+    bmask = 0x00ff0000;
+    amask = 0xff000000;
+#endif
+    for(int i=0;i<SIZE_COLOR-1;i++){
+        for(int j=0;j<40;j++){
+            _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini, 32, rmask, gmask, bmask, amask );
+
+        }
+    }
+    if(SDL_MUSTLOCK(_blobs_ini))
+    SDL_UnlockSurface(_blobs_ini);
+
 }
 void InterfaceX::clean_up()
 {

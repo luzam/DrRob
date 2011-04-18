@@ -44,7 +44,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"roration-> orientation "<<_orientation<<std::endl;
-    _turningHoraire=8;
+    _turningHoraire=1;
     majPosition(master,slave);
     //TO DO : Turning clock_wise
 }
@@ -95,7 +95,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
-    _turningDirect=8;
+    _turningDirect=4;
     majPosition(master,slave);
 
     // TO DO : turning Direct_wise
@@ -298,7 +298,7 @@ void MoteurPhy::speedUp()
   */
 void MoteurPhy::speedToNormal()
 {
-    _vitesseBlob = 1;
+    _vitesseBlob = 3;
 }
 /** @brief re-organizes grid after sub-combo
   *

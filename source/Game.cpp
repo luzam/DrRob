@@ -52,6 +52,7 @@ void Game::go()
                 _dashBoards.at(0).moteurPhy()->rotationAntiHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
 
         }
+        if(_clock.tic(30)){
         for(size_t i=0; i<_dashBoards.size(); i++){
             _dashBoards.at(i).go();
             if(_dashBoards.at(i).launchCombo())
@@ -60,7 +61,7 @@ void Game::go()
                 _dashBoards.at(i).resetCombo();
             }
         }
-                repartitionCombo();
+        repartitionCombo();
         _X->blits(_dashBoards);
         for(size_t i=0; i<_dashBoards.size(); i++)
         {
@@ -70,6 +71,7 @@ void Game::go()
 
         }
         SDL_Flip(_X->screen());
+        }
     }
 }
 /** @brief main loop
@@ -89,7 +91,7 @@ void Game::repartitionCombo()
             while(_combo[i]!=0){
                 do{
                 target = rand() % _dashBoards.size();
-                }while(target==i || _dashBoards[target].looser());
+                }while(target==i );//|| _dashBoards[target].looser());
                 _dashBoards[target].addDarkBlob();
                 _combo[i]--;
             }

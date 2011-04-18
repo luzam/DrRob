@@ -28,7 +28,7 @@ public :
 
     Game(int u):_clock()
     {
-        _X = new InterfaceX(800,900);
+        _X = new InterfaceX(800,500);
         std::cout<<"Game()\n";
 
 

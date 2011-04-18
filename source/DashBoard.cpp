@@ -13,6 +13,11 @@ void DashBoard::go()
     _grille->check();
     _looser = _grille->checkLoose();
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
+    if(_moteurPhy->fixed())
+    {
+        _masterBlob.setColor(BLANK);
+        _slaveBlob.setColor(BLANK);
+    }
     if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
     {
         if(_moteurPhy->fixed()&& _nextDarkBlobs==0)
@@ -55,7 +60,7 @@ void DashBoard::go()
     }
     if(_moteurPhy->turningDirect()!=0)
     {
-        int taille = _moteurPhy->taille()*0.8;
+        int taille = _moteurPhy->taille()*0.5;
         switch(_moteurPhy->orientation())
         {
         case HAUT :
@@ -104,8 +109,6 @@ void DashBoard::go()
     if(_moteurPhy->falling()!=0)
     {
         _go = false;
-        //_masterBlob.setColor(BLANK);
-        //_slaveBlob.setColor(BLANK);
         _moteurPhy->setFalling(_moteurPhy->falling()-1);
 
     }
