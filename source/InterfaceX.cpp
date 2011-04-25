@@ -1,25 +1,5 @@
 #include "../include/InterfaceX.h"
-#ifdef WIN32
-#define WINDOWS
-#endif
-#ifdef X64
-#define WINDOWS
-#endif
-#include <stdio.h>  /* defines FILENAME_MAX */
-#ifdef WINDOWS
-#include <direct.h>
-#define GetCurrentDir _getcwd
-#else
-#include <unistd.h>
-#define GetCurrentDir getcwd
-#endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
-#include <time.h>
-#include <sstream>
+
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -48,10 +28,17 @@ void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
 }
 bool InterfaceX::init_SDL()
 {
-    if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
+    if ( SDL_Init( SDL_INIT_EVERYTHING) == -1 )
         return false;
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
+        if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH ==0)
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF |SDL_FULLSCREEN );
+    else
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF  );
+    _SCREEN_HEIGHT=_screen->h;
+    _SCREEN_WIDTH=_screen->w;
     if ( _screen == NULL )
+        return false;
+        if(TTF_Init()==-1)
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
@@ -225,7 +212,7 @@ void InterfaceX::menu()
 
     std::cout<< cCurrentPath<<std::endl;
     resize_menu();
-    TTF_Init();
+
     int continuer=1;
     SDL_Event event;
     SDL_Surface *text;
@@ -347,8 +334,6 @@ bool InterfaceX::resize_files()
 
 
     std::cout<<"Resize des blobs"<<std::endl;
-    int nb_blobs_par_h=12;
-    int nb_blobs_par_w=20;
     double taille_blob_H =(double)_blobs_ini->h*_ratio;
     double taille_blob_W =(double)_blobs_ini->w*_ratio;
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
@@ -361,7 +346,7 @@ bool InterfaceX::resize_files()
     rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom,&dw,&dh);
     std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
     std::cout<<"zoom initial : "<<zoom<<std::endl;
-    while(dw/20.0!=(int)(dw/20.0))
+    while(dw!=(int)(dw))
     {
         zoom_optimal+=0.001;
         rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
@@ -388,6 +373,7 @@ bool InterfaceX::resize_files()
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
     std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
     _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
+
     std::cout<<"TAILLE BLOB ini : "<<_taille_blob_ini<<std::endl;
     std::cout<<"TAILLE BLOB /20 : "<<_blobs->w/20<<std::endl;
     std::cout<<"TAILLE BLOB final : "<<_taille_blob<<std::endl;
@@ -395,6 +381,7 @@ bool InterfaceX::resize_files()
 
     return true;
 }
+
 void InterfaceX::resize_menu()
 {
     std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
@@ -659,14 +646,95 @@ void InterfaceX::decouper_sprite(){
     bmask = 0x00ff0000;
     amask = 0xff000000;
 #endif
+//D'abord on alloue la surface necessaire
     for(int i=0;i<SIZE_COLOR-1;i++){
-        for(int j=0;j<40;j++){
+        for(int j=0;j<_nb_blobs;j++){
             _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini, 32, rmask, gmask, bmask, amask );
 
         }
     }
+//Puis on lit dans l'image pixel[x+y*pitch]
+int cptx=0,cpty=0;
+    for(int i=0;i<SIZE_COLOR-1;i++){//0 à 5
+        for(int j=0;j<_nb_blobs;j++){//0 à 40
+            for(int x=0;x<_taille_blob_ini;++x){
+                for(int y=0;y<_taille_blob_ini;++y){
+
+            putpixel(_blobsIMG_ini[i][j],x,y,getpixel(_blobs_ini,cptx,2*i));
+                }
+            }
+            cptx+=_taille_blob_ini;
+            if(j==20){
+            cptx=0;
+            cpty+=_taille_blob_ini;
+            }
+        }
+    }
+
     if(SDL_MUSTLOCK(_blobs_ini))
     SDL_UnlockSurface(_blobs_ini);
 
 }
 
+Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
+{
+    int bpp = surface->format->BytesPerPixel;
+    /* Here p is the address to the pixel we want to retrieve */
+    Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
+
+    switch(bpp) {
+    case 1:
+        return *p;
+        break;
+
+    case 2:
+        return *(Uint16 *)p;
+        break;
+
+    case 3:
+        if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
+            return p[0] << 16 | p[1] << 8 | p[2];
+        else
+            return p[0] | p[1] << 8 | p[2] << 16;
+        break;
+
+    case 4:
+        return *(Uint32 *)p;
+        break;
+
+    default:
+        return 0;       /* shouldn't happen, but avoids warnings */
+    }
+}
+void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
+{
+    int bpp = surface->format->BytesPerPixel;
+    /* Here p is the address to the pixel we want to set */
+    Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
+
+    switch(bpp) {
+    case 1:
+        *p = pixel;
+        break;
+
+    case 2:
+        *(Uint16 *)p = pixel;
+        break;
+
+    case 3:
+        if(SDL_BYTEORDER == SDL_BIG_ENDIAN) {
+            p[0] = (pixel >> 16) & 0xff;
+            p[1] = (pixel >> 8) & 0xff;
+            p[2] = pixel & 0xff;
+        } else {
+            p[0] = pixel & 0xff;
+            p[1] = (pixel >> 8) & 0xff;
+            p[2] = (pixel >> 16) & 0xff;
+        }
+        break;
+
+    case 4:
+        *(Uint32 *)p = pixel;
+        break;
+    }
+}
