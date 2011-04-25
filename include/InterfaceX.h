@@ -8,12 +8,35 @@
 #include <vector>
 #include "Position.h"
 #include "DashBoard.h"
+#ifdef WIN32
+#define WINDOWS
+#endif
+#ifdef X64
+#define WINDOWS
+#endif
+#include <stdio.h>  /* defines FILENAME_MAX */
+#ifdef WINDOWS
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#else
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#endif
+#include "../include/Color.h"
+#include "../include/Link.h"
+#include "../include/State.h"
+#include "../include/Blobs.h"
+#include "../include/Position.h"
+#include <time.h>
 class InterfaceX
 {
 protected:
     const int _SCREEN_WIDTH;
     const int _SCREEN_HEIGHT;
     const int _SCREEN_BPP;
+    std::vector<std::vector<SDL_Surface*> > _blobsIMG_ini;
+    std::vector<std::vector<SDL_Surface*> > _blobsIMG;
+
     const int _taille_blob_ini;
     double _taille_blob;
     int _decalage_menu_x;
@@ -49,10 +72,11 @@ protected:
     int _grille_H;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
-    _SCREEN_BPP(32),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
+    _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
+         = new std::vector<std::vector<SDL_Surface*> >(COLOR)
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
@@ -115,10 +139,18 @@ public:
     bool compute_offsets();
     bool compute_vDash();
     void blit_dash();
+<<<<<<< HEAD
     void blit_fond();
     int play_anim_menu(int init,int fin);
     int select_nbJoueurs();
     void blit_cursor();
+=======
+    void blit_fond();
+    void play_anim_menu();
+    int select_nbJoueurs();
+    void blit_cursor();
+    void decouper_sprite();
+>>>>>>> 0731edb7e1e7cf558d22d07cc999709ded77fa08
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);

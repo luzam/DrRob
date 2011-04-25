@@ -275,7 +275,7 @@ int main( int argc, char* argv[] )
     Grille* maGrille = new Grille();
     for(int l=0; l<6; l++)
     {
-        for(int c=0; c<13; c++)
+        for(int c=0; c<18; c++)
         {
             std::cout<<Color(rand() %6);
 
@@ -342,7 +342,7 @@ int main( int argc, char* argv[] )
 
 int main( int argc, char* argv[] )
 {
-    Game drRob(1);
+    Game drRob(7);
     drRob.go();
 
 

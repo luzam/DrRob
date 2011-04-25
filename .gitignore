@@ -1,8 +1,8 @@
 *.stackdump 
 obj/Debug/source/*.o
 *.cbp
-*.layout
+DrRob.layout
 *.depend
 *.o
-bin/Debug/drRob.exe
+
 

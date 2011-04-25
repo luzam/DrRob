@@ -23,11 +23,12 @@ protected :
     InterfaceX* _X;
     Clock _clock;
     int _nbJoueurs;
+    int *_combo;
 public :
 
     Game(int u):_clock()
     {
-        _X = new InterfaceX(800,900);
+        _X = new InterfaceX(800,500);
         std::cout<<"Game()\n";
 
 
@@ -38,12 +39,13 @@ public :
         srand(time(NULL));
         Blobs randBlob;
     for(int i=0;i<101;i++){
-        randBlob.setBlob(Color(rand()%6), NO_STATE,NO_LINK);
+        randBlob.setBlob(Color(rand()%5), NO_STATE,NO_LINK);
         std::cout<<randBlob.color()<<std::endl;
         _randBlobs.push_front(randBlob);
         }
     }
     void go();
+    void repartitionCombo();
 
 
 };

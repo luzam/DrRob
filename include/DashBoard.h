@@ -4,6 +4,7 @@
 #include "Blobs.h"
 #include "Position.h"
 #include "MoteurPhy.h"
+#include "Orientation.h"
 //#include "SDLttf.h"
 #include <vector>
 #include <list>
@@ -15,6 +16,8 @@ class DashBoard
 {
 
 protected :
+    int _delay;
+    bool _looser;
     MoteurPhy* _moteurPhy;
     int _combo;
     Blobs _masterBlob;
@@ -31,11 +34,12 @@ protected :
     Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
     /* SDLttf texte _score;
     SDLttf texte _joueur;*/
-    std::vector<Blobs> _nextDarkBlobs;
+    int _nextDarkBlobs;
 
 public :
-    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_combo(0),
-        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false)
+    DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_delay(50),_looser(false),_combo(0),
+        _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
+        _nextDarkBlobs(0)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -63,6 +67,8 @@ public :
     void resetCombo();
     bool launchCombo()const{return _launchCombo;}
     int combo()const{return _combo;}
+    void addDarkBlob();
+    bool looser()const{return _looser;}
 
 
 };

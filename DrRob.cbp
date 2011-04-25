@@ -48,6 +48,7 @@
 		<Unit filename="include\InterfaceX.h" />
 		<Unit filename="include\Link.h" />
 		<Unit filename="include\MoteurPhy.h" />
+		<Unit filename="include\Orientation.h" />
 		<Unit filename="include\Position.h" />
 		<Unit filename="include\SDL_rotozoom.h" />
 		<Unit filename="include\State.h" />
