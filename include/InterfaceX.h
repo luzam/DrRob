@@ -76,7 +76,6 @@ public:
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
-         = new std::vector<std::vector<SDL_Surface*> >(COLOR)
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
@@ -139,18 +138,11 @@ public:
     bool compute_offsets();
     bool compute_vDash();
     void blit_dash();
-<<<<<<< HEAD
     void blit_fond();
     int play_anim_menu(int init,int fin);
     int select_nbJoueurs();
     void blit_cursor();
-=======
-    void blit_fond();
-    void play_anim_menu();
-    int select_nbJoueurs();
-    void blit_cursor();
     void decouper_sprite();
->>>>>>> 0731edb7e1e7cf558d22d07cc999709ded77fa08
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
     void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);

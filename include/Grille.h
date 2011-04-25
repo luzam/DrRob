@@ -26,7 +26,7 @@ protected :
 
     ~Grille(){
     }
-    bool Grille::checkLoose();
+    bool checkLoose();
     void check();
     int checkDark(int size);
     void switchBlobs(int l1,int c1,int l2,int c2);

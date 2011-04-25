@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include "../include/InterfaceX.h"
 #ifdef WIN32
 #define WINDOWS
@@ -576,7 +575,7 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
-    _offset_grille.setY(ceil((31.0-_taille_blob_ini)*(_ratio)));
+    _offset_grille.setY(ceil((31.0-6*_taille_blob_ini)*(_ratio)));
     _offset_nextBlob.setX(ceil((128)*_ratio));
     _offset_nextBlob.setY(ceil((78)*_ratio));
     _offset_avatar.setX(ceil((105)*_ratio));
