@@ -379,7 +379,7 @@ bool InterfaceX::resize_files()
     std::cout<<"1.Un blob mesure(double) : "<<_taille_blob<<" px de coté"<<std::endl;
     _taille_blob=(int)(_blobs->h/12.0);
     std::cout<<"2.Un blob mesure(int) : "<<_taille_blob<<" px de coté"<<std::endl;
-    _grille_W=12*_taille_blob;
+    _grille_W=17*_taille_blob;
     _grille_H=6*_taille_blob;
 
 
@@ -538,7 +538,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
     int offsetgrilley;
     for(size_t j=0; j<dashBoards.size(); j++)
     {
-        for(int l=0; l<13; l++)
+        for(int l=0; l<18; l++)
         {
             for(int c=0; c<6; c++)
             {
