@@ -116,7 +116,7 @@ public:
     bool compute_vDash();
     void blit_dash();
     void blit_fond();
-    void play_anim_menu();
+    int play_anim_menu(int init,int fin);
     int select_nbJoueurs();
     void blit_cursor();
     void blit_avatars();

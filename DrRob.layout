@@ -8,13 +8,13 @@
 		<Cursor position="515" topLine="0" />
 	</File>
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="2">
-		<Cursor position="470" topLine="0" />
+		<Cursor position="3282" topLine="0" />
 	</File>
 	<File name="include\Position.h" open="1" top="0" tabpos="6">
 		<Cursor position="279" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="8314" topLine="262" />
+		<Cursor position="8314" topLine="253" />
 	</File>
 	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1457" topLine="0" />
@@ -23,7 +23,7 @@
 		<Cursor position="350" topLine="0" />
 	</File>
 	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="15881" topLine="253" />
+		<Cursor position="7504" topLine="332" />
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="22383" topLine="921" />
