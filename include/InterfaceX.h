@@ -85,10 +85,11 @@ public:
         _offset_cursor.setX(83);
         _offset_cursor.setY(73);
         std::cout<<"Initialisation du Tableau de Surfaces"<<std::endl;
-        for (int i = 0 ; i < SIZE_COLOR ; ++i)
-        for (int j = 0 ; j < _nb_blobs ; ++j){
+        for (int i = 0 ; i < SIZE_COLOR ; ++i){
+            for (int j = 0 ; j < _nb_blobs ; ++j){
             _blobsIMG[i][j] = NULL;
             _blobsIMG_ini[i][j] = NULL;
+            }
         }
           std::cout<<"Initialisation de la SDL"<<std::endl;
 

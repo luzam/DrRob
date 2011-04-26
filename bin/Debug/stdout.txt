@@ -1,2 +1,4 @@
 Initialisation du Tableau de Surfaces
 Initialisation de la SDL
+Chargement des images
+Ôù"

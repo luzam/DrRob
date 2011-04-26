@@ -1,5 +1,25 @@
 #include "../include/InterfaceX.h"
-
+#ifdef WIN32
+#define WINDOWS
+#endif
+#ifdef X64
+#define WINDOWS
+#endif
+#include <stdio.h>  /* defines FILENAME_MAX */
+#ifdef WINDOWS
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#else
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#endif
+#include "../include/Color.h"
+#include "../include/Link.h"
+#include "../include/State.h"
+#include "../include/Blobs.h"
+#include "../include/Position.h"
+#include <time.h>
+#include <sstream>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -26,18 +46,19 @@ void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
     offset.y = y;
     SDL_BlitSurface( source, clip, destination, &offset );
 }
+
 bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING) == -1 )
         return false;
-        if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH ==0)
+    if ( _screen == NULL )
+        return false;
+    if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH ==0)
     _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF |SDL_FULLSCREEN );
     else
     _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF  );
     _SCREEN_HEIGHT=_screen->h;
     _SCREEN_WIDTH=_screen->w;
-    if ( _screen == NULL )
-        return false;
         if(TTF_Init()==-1)
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
@@ -582,10 +603,6 @@ bool InterfaceX::load_files()
 #endif
     char cCurrentPath[FILENAME_MAX];
 
-    if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
-    {
-        return errno;
-    }
 
     std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
@@ -603,6 +620,7 @@ bool InterfaceX::load_files()
 }
 void InterfaceX::clean_up()
 {
+    TTF_Quit();
     SDL_FreeSurface( _blobs );
     SDL_FreeSurface( _background);
     SDL_FreeSurface(_background);
