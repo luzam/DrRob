@@ -1,5 +1,25 @@
 #include "../include/InterfaceX.h"
-
+#ifdef WIN32
+#define WINDOWS
+#endif
+#ifdef X64
+#define WINDOWS
+#endif
+#include <stdio.h>  /* defines FILENAME_MAX */
+#ifdef WINDOWS
+#include <direct.h>
+#define GetCurrentDir _getcwd
+#else
+#include <unistd.h>
+#define GetCurrentDir getcwd
+#endif
+#include "../include/Color.h"
+#include "../include/Link.h"
+#include "../include/State.h"
+#include "../include/Blobs.h"
+#include "../include/Position.h"
+#include <time.h>
+#include <sstream>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -30,13 +50,10 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-        if(_SCREEN_WIDTH==0 || _SCREEN_HEIGHT==0)
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF |SDL_FULLSCREEN);
-        else
     _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
         return false;
-    SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunersteinberg Hoarau ROB4 2011", NULL );
+    SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
 }
 void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
@@ -46,31 +63,79 @@ void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
     blit_un_blob(master,_offset_nextBlob.x()+_vDash[n].x(),_offset_nextBlob.y()+_vDash[n].y()-_taille_blob);
 
 }
-void InterfaceX::play_anim_menu()
+int InterfaceX::play_anim_menu(int init,int fin)
 {
     int continuer=1;
     clock_t tinit,tfinal;
     double t;
-    _offset_menu.x=_offset_menu.w;
+    SDL_Event event;
+    _offset_menu.x=init;
+    int offsetmenux=_offset_menu.x;
     tinit=clock();
+    std::cout<<" init : "<<init<<" fin : "<<fin<<std::endl;
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
         tfinal=clock();
+        Uint8 *keystates = SDL_GetKeyState( NULL );
         blit_menu();
+        SDL_PollEvent(&event);
         t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
         //std::cout<<"T : "<<t<<std::endl;
-        if(t>0.001)
+        if(keystates[SDLK_BACKSPACE] && fin>=init)//On retourne au debut
         {
-            _offset_menu.x+=3;
-            tinit=clock();
+            tinit=tfinal=clock();
+
+            while(continuer)
+            {
+                blit_menu();
+                tfinal=clock();
+                t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
+                if(t>0.001)
+                {
+                    tinit=clock();
+                        offsetmenux-=3;
+                        if(offsetmenux<=init)
+                        {
+                            _offset_menu.x=init;
+                            return 0;
+                        }
+                }
+                    _offset_menu.x=offsetmenux;
+                    std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
+                    SDL_Flip(_screen);
+                }
         }
-        if(_offset_menu.x>=2*_offset_menu.w)
-        {
-            continuer=0;
-        }
+
+    if(t>0.001)
+    {
+        if(fin-init>=0)
+            offsetmenux+=3;
         else
-            SDL_Flip(_screen);
+            offsetmenux-=3;
+        tinit=clock();
     }
+    if(fin>=init)//Si on avance
+    {
+        if(offsetmenux>=fin)
+        {
+            _offset_menu.x=fin;
+            return 0;
+        }
+    }
+    else//si on recule
+    {
+        if(offsetmenux<=fin)
+        {
+            _offset_menu.x=fin;
+            return 0;
+        }
+    }
+
+    _offset_menu.x=offsetmenux;
+    std::cout<<"position x : "<<_offset_menu.x<<std::endl;
+    SDL_Flip(_screen);
+}
+return 1;
 
 }
 int InterfaceX::select_nbJoueurs()
@@ -146,16 +211,42 @@ int InterfaceX::select_nbJoueurs()
 }
 void InterfaceX::menu()
 {
+    #ifdef WINDOWS
+    if (_chdir("img")==-1)
+        std::cout<<"Erreur dossier"<<std::endl;
+#else
+    if (chdir("img")==-1)
+        std::cout<<"Erreur dossier"<<std::endl;
+#endif
+    char cCurrentPath[FILENAME_MAX];
+
+    GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
+
+
+    std::cout<< cCurrentPath<<std::endl;
     resize_menu();
+    TTF_Init();
     int continuer=1;
     SDL_Event event;
+    SDL_Surface *text;
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",30);
     clock_t tinit,tfinal;
     float t;
+    SDL_Color textcolor = {255,200,255};
+    int nbjoueurs=1;
     tinit=clock();
+    int position_menu=1;
+    std::ostringstream oss;
+    std::string njoueurs;
     SDL_EnableKeyRepeat(100,50);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
         tfinal=clock();
+        oss.str("");
+        oss<<nbjoueurs;
+        text=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
+       // text=TTF_RenderText_Solid(font,"TEST",textcolor);
+
         while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
         {
             if (event.type==SDL_QUIT)  /* Si c'est un évènement QUITTER */
@@ -168,14 +259,33 @@ void InterfaceX::menu()
                 continuer = 0;
             if(keystates[SDLK_RETURN])
             {
-                play_anim_menu();
-                continuer=0;
+                if(_offset_menu.x<2*_offset_menu.w){
+                    play_anim_menu(_offset_menu.w,2*_offset_menu.w);
+                    position_menu++;
+                }
+                //continuer=0;
+                std::cout<<"AVANCE"<<std::endl;
             }
-
+            if(keystates[SDLK_DOWN]){
+                nbjoueurs++;
+            }
+            if(keystates[SDLK_UP]){
+                if(nbjoueurs>1)
+                nbjoueurs--;
+            }
+            if(keystates[SDLK_BACKSPACE])
+            {
+                if(_offset_menu.x>=2*_offset_menu.w)
+                {
+                    play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                    position_menu--;
+                    std::cout<<"RECULE"<<std::endl;
+                }
+            }
         }
         blit_menu();
         t=(tfinal-tinit);
-        if(t>150)
+        if(t>150 && _offset_menu.x<2*_offset_menu.w)
         {
             if(_offset_menu.x==0)
                 _offset_menu.x+=_offset_menu.w;
@@ -184,6 +294,8 @@ void InterfaceX::menu()
             tinit=clock();
 
         }
+        apply_surface(0,0,text,_screen,NULL);
+
         SDL_Flip(_screen);
     }
 
@@ -232,7 +344,7 @@ bool InterfaceX::resize_files()
     }
     double d_h=_dashboard->h;
     _ratio=d_h/(double)d_h_ini;
-    _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
+
 
     std::cout<<"Resize des blobs"<<std::endl;
     int nb_blobs_par_h=12;
@@ -250,7 +362,8 @@ bool InterfaceX::resize_files()
     std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
     std::cout<<"zoom initial : "<<zoom<<std::endl;
     while(dw/20.0!=(int)(dw/20.0))
-    {zoom_optimal+=0.001;
+    {
+        zoom_optimal+=0.001;
         rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
         std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
         std::cout<<"dw : "<<(dw)<<" dh :"<<(dh)<<std::endl;
@@ -258,7 +371,7 @@ bool InterfaceX::resize_files()
     }
     std::cout<<"dw optimal : "<<(dw)<<" dh optimal :"<<(dh)<<std::endl;
     std::cout<<"zoom optimal : "<<zoom_optimal<<std::endl;
-     _blobs=img_zoom_pixel_W(_blobs_ini,dw);
+    _blobs=img_zoom_pixel_W(_blobs_ini,dw);
     //_blobs=rotozoomSurface(_blobs_ini,0,zoom_optimal,0);
     std::cout<<"dw obtenu : "<<_blobs->w<<" dh obtenu :"<<_blobs->h<<std::endl;
 
@@ -306,7 +419,7 @@ void InterfaceX::resize_menu()
     _offset_cursor.setX(_offset_cursor.x()*_ratio_menu+_decalage_menu_x);
     _offset_cursor.setY(_offset_cursor.y()*_ratio_menu+_decalage_menu_y);
     _cursor=rotozoomSurface(_cursor_ini,0,_ratio_menu,0);
-
+    _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
 
 }
 /** @brief Calcule les positions des differents dashboard
@@ -390,6 +503,7 @@ void InterfaceX::blit_cursor()
 }
 void InterfaceX::blit_menu()
 {
+    apply_surface(0,0,_background,_screen,NULL);
     apply_surface(_decalage_menu_x,_decalage_menu_y,_menu,_screen,&_offset_menu);
 }
 void InterfaceX::blit_avatars()
@@ -500,6 +614,35 @@ bool InterfaceX::load_files()
     }
     return true;
 }
+void InterfaceX::clean_up()
+{
+    SDL_FreeSurface( _blobs );
+    SDL_FreeSurface( _background);
+    SDL_FreeSurface(_background);
+    SDL_FreeSurface(_avatars);
+    SDL_FreeSurface(_menu);
+    SDL_FreeSurface(_cursor);
+    SDL_Quit();
+}
+
+SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int taille_desiree_W)
+{
+    double td_W=taille_desiree_W;
+    double sar_W=surface_a_resize->w;
+    double zoom=(double)td_W/(double)sar_W;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
+}
+SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
+{
+    double td_H=taille_desiree_H;
+    double sar_H=surface_a_resize->h;
+    double zoom=(double)td_H/(double)sar_H;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
+}
 void InterfaceX::decouper_sprite(){
     if(SDL_MUSTLOCK(_blobs_ini))
     SDL_LockSurface(_blobs_ini);
@@ -526,33 +669,4 @@ void InterfaceX::decouper_sprite(){
     SDL_UnlockSurface(_blobs_ini);
 
 }
-void InterfaceX::clean_up()
-{
-    SDL_FreeSurface( _blobs );
-    SDL_FreeSurface( _background);
-    SDL_FreeSurface(_background);
-    SDL_FreeSurface(_avatars);
-    SDL_Quit();
-}
-
-SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int taille_desiree_W)
-{
-    double td_W=taille_desiree_W;
-    double sar_W=surface_a_resize->w;
-    double zoom=(double)td_W/(double)sar_W;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-    SDL_FreeSurface(surface_a_resize);
-    return surface_resized;
-}
-SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
-{
-    double td_H=taille_desiree_H;
-    double sar_H=surface_a_resize->h;
-    double zoom=(double)td_H/(double)sar_H;
-    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-    SDL_FreeSurface(surface_a_resize);
-    return surface_resized;
-}
-
-
 
