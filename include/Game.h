@@ -30,8 +30,6 @@ public :
     {
         _X = new InterfaceX(800,500);
         std::cout<<"Game()\n";
-
-
     }
 
     std::vector<DashBoard> dashBoards()const{return _dashBoards;}

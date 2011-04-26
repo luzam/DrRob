@@ -76,7 +76,7 @@ public:
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
-         = new std::vector<std::vector<SDL_Surface*> >(COLOR)
+         //= new std::vector<std::vector<SDL_Surface*> >(COLOR)
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
