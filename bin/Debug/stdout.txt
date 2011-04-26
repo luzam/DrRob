@@ -1,3 +1,4 @@
+<<<<<<< HEAD:bin/Debug/stdout.txt
 C:\Users\Lucas\Desktop\DrRob\img
 Game()
 On lance le menu
@@ -274920,3 +274921,9 @@ Taille blob : 33
 Sprite x : 0 y : 0
 Taille blob : 33
 Sprite x : 0 y : 264
+=======
+Initialisation du Tableau de Surfaces
+Initialisation de la SDL
+Chargement des images
+Ôù"
+>>>>>>> 43f5e4e9031564edaf5b7f60ef76f735fa4671f4:bin/Debug/stdout.txt

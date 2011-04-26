@@ -5,6 +5,7 @@
 		<Cursor position="696" topLine="0" />
 	</File>
 <<<<<<< HEAD:DrRob.layout
+<<<<<<< HEAD:DrRob.layout
 	<File name="include\Clock.h" open="1" top="0" tabpos="6">
 		<Cursor position="306" topLine="0" />
 	</File>
@@ -58,31 +59,40 @@
 =======
 	<File name="include\Game.h" open="1" top="0" tabpos="5">
 		<Cursor position="515" topLine="0" />
+=======
+	<File name="include\Game.h" open="1" top="0" tabpos="6">
+		<Cursor position="62" topLine="0" />
+>>>>>>> 43f5e4e9031564edaf5b7f60ef76f735fa4671f4:DrRob.layout
 	</File>
-	<File name="include\Grille.h" open="1" top="0" tabpos="7">
+	<File name="include\Grille.h" open="1" top="0" tabpos="5">
 		<Cursor position="599" topLine="0" />
 	</File>
-	<File name="include\InterfaceX.h" open="1" top="0" tabpos="2">
-		<Cursor position="3836" topLine="36" />
+	<File name="include\InterfaceX.h" open="1" top="1" tabpos="2">
+		<Cursor position="2580" topLine="55" />
 	</File>
-	<File name="include\Position.h" open="1" top="0" tabpos="6">
+	<File name="include\Position.h" open="1" top="0" tabpos="4">
 		<Cursor position="279" topLine="0" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="8314" topLine="292" />
+		<Cursor position="8298" topLine="285" />
 	</File>
 	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1457" topLine="0" />
 	</File>
-	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="350" topLine="0" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2673" topLine="3" />
 	</File>
-	<File name="source\Grille.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="780" topLine="225" />
+	<File name="source\Grille.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="1421" topLine="23" />
 	</File>
+<<<<<<< HEAD:DrRob.layout
 	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="3">
 		<Cursor position="15985" topLine="473" />
 >>>>>>> d3623b0382d089f1b8aead0e9ddbb60998ac4be8:DrRob.layout
+=======
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1395" topLine="51" />
+>>>>>>> 43f5e4e9031564edaf5b7f60ef76f735fa4671f4:DrRob.layout
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="22383" topLine="921" />
