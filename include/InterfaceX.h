@@ -74,7 +74,8 @@ protected:
     int _grille_H;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
-    _SCREEN_BPP(32),_nb_blobs(40),_blobsIMG_ini(SIZE_COLOR,std::vector<SDL_Surface*> (20)),_blobsIMG(SIZE_COLOR,std::vector<SDL_Surface*> (20)),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
+    _SCREEN_BPP(32),_nb_blobs(40)//,_blobsIMG_ini(5,std::vector<SDL_Surface *> (20)),_blobsIMG(5,std::vector<SDL_Surface *> (20))
+    ,_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
     ,_blobs_ini(NULL),_event(),_font(NULL)
     {
@@ -86,12 +87,12 @@ public:
         _offset_cursor.setX(83);
         _offset_cursor.setY(73);
         std::cout<<"Initialisation du Tableau de Surfaces"<<std::endl;
-        for (int i = 0 ; i < SIZE_COLOR ; ++i){
+       /* for (int i = 0 ; i < SIZE_COLOR ; ++i){
             for (int j = 0 ; j < _nb_blobs ; ++j){
             _blobsIMG[i][j] = NULL;
             _blobsIMG_ini[i][j] = NULL;
             }
-        }
+        }*/
           std::cout<<"Initialisation de la SDL"<<std::endl;
 
     init_SDL();
@@ -100,7 +101,7 @@ public:
     load_files();
             std::cout<<"Decoupage du sprite"<<std::endl;
 
-    decouper_sprite();
+   // decouper_sprite();
 
     }
     ~InterfaceX()

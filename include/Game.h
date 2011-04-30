@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "SDL.h"
 #include "Blobs.h"
 #include "MoteurPhy.h"
 #include "DashBoard.h"
@@ -28,7 +27,9 @@ public :
 
     Game(int u):_clock()
     {
-        InterfaceX _X(800,500);
+
+
+        _X = new InterfaceX(800,500);
         std::cout<<"Game()\n";
     }
 
