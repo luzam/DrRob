@@ -2,7 +2,7 @@
 #define MOTEURPHY_H
 
 #define TOUCHING_ANIM_TIME 5
-#define FALLING_ANIM_TIME 0
+#define FALLING_ANIM_TIME 1
 #define COMBOTING_ANIM_TIME 10
 
 #include <stdio.h>

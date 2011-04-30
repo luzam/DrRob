@@ -28,18 +28,16 @@
 #include "../include/Blobs.h"
 #include "../include/Position.h"
 #include <time.h>
-#include <sstream>
 class InterfaceX
 {
 protected:
-    int _SCREEN_WIDTH;
-    int _SCREEN_HEIGHT;
-     int _SCREEN_BPP;
-     int _nb_blobs;
+    const int _SCREEN_WIDTH;
+    const int _SCREEN_HEIGHT;
+    const int _SCREEN_BPP;
     std::vector<std::vector<SDL_Surface*> > _blobsIMG_ini;
     std::vector<std::vector<SDL_Surface*> > _blobsIMG;
 
-    int _taille_blob_ini;
+    const int _taille_blob_ini;
     double _taille_blob;
     int _decalage_menu_x;
     int _decalage_menu_y;
@@ -72,11 +70,12 @@ protected:
     SDL_Color _textColor;
     int _grille_W;
     int _grille_H;
+    int _nb_blobs;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
-    _SCREEN_BPP(32),_nb_blobs(40),_blobsIMG_ini(SIZE_COLOR,std::vector<SDL_Surface*> (20)),_blobsIMG(SIZE_COLOR,std::vector<SDL_Surface*> (20)),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
+    _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL)
+    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40)
     {
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
@@ -84,23 +83,11 @@ public:
         _offset_menu.y=0;
         _offset_cursor.setX(83);
         _offset_cursor.setY(73);
-        std::cout<<"Initialisation du Tableau de Surfaces"<<std::endl;
-        for (int i = 0 ; i < SIZE_COLOR ; ++i){
-            for (int j = 0 ; j < _nb_blobs ; ++j){
-            _blobsIMG[i][j] = NULL;
-            _blobsIMG_ini[i][j] = NULL;
-            }
-        }
-          std::cout<<"Initialisation de la SDL"<<std::endl;
 
     init_SDL();
-                std::cout<<"Chargement des images"<<std::endl;
-
     load_files();
-            std::cout<<"Decoupage du sprite"<<std::endl;
-
+    resize_vect();
     decouper_sprite();
-
     }
     ~InterfaceX()
     {
@@ -152,6 +139,7 @@ public:
     SDL_Surface* img_zoom_pixel_W(SDL_Surface *surface1,int pixel);
     bool compute_offsets();
     bool compute_vDash();
+    void resize_vect();
     void blit_dash();
     void blit_fond();
     int play_anim_menu(int init,int fin);
@@ -160,15 +148,19 @@ public:
     void decouper_sprite();
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
-    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
+    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining);
     void blits(std::vector<DashBoard> dashBoards);
     void blit_menu();
     void resize_menu();
     void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
     SDL_Rect offset_sprite(int color,int link,int state);
-    Uint32 getpixel(SDL_Surface *surface, int x, int y);
-    void putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
+    Uint32 getpixel(SDL_Surface* s,int x,int y);
+    void putpixel(SDL_Surface* s,int x,int y,Uint32 p);
+    void resize_blobsIMG();
+    int closestInt(double d);
+    int anim_comboting(Blobs* blob);
+    int anim_falling(Blobs* blob);
 };
 #endif // INTERFACEX_H_INCLUDED
 

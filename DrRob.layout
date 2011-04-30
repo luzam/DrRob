@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="include\Blobs.h" open="1" top="0" tabpos="3">
+		<Cursor position="929" topLine="36" />
+	</File>
 	<File name="include\DashBoard.h" open="0" top="0" tabpos="4">
-		<Cursor position="696" topLine="0" />
+		<Cursor position="1044" topLine="0" />
 	</File>
-	<File name="include\Game.h" open="1" top="0" tabpos="6">
-		<Cursor position="62" topLine="0" />
+	<File name="include\Game.h" open="0" top="0" tabpos="5">
+		<Cursor position="515" topLine="0" />
 	</File>
-	<File name="include\Grille.h" open="1" top="0" tabpos="5">
+	<File name="include\Grille.h" open="0" top="0" tabpos="7">
 		<Cursor position="599" topLine="0" />
 	</File>
-	<File name="include\InterfaceX.h" open="1" top="1" tabpos="2">
-		<Cursor position="2580" topLine="55" />
+	<File name="include\InterfaceX.h" open="1" top="0" tabpos="1">
+		<Cursor position="4196" topLine="101" />
 	</File>
-	<File name="include\Position.h" open="1" top="0" tabpos="4">
+	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="4">
+		<Cursor position="625" topLine="0" />
+	</File>
+	<File name="include\Position.h" open="0" top="0" tabpos="6">
 		<Cursor position="279" topLine="0" />
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="8298" topLine="285" />
+	<File name="main.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="8314" topLine="285" />
 	</File>
-	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="1457" topLine="0" />
+	<File name="source\DashBoard.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="222" topLine="0" />
 	</File>
-	<File name="source\Game.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="2673" topLine="3" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2201" topLine="19" />
 	</File>
-	<File name="source\Grille.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="1421" topLine="23" />
+	<File name="source\Grille.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="965" topLine="192" />
 	</File>
-	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="1395" topLine="51" />
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="18213" topLine="509" />
+	</File>
+	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="13267" topLine="307" />
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="22383" topLine="921" />

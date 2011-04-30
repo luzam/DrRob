@@ -8,8 +8,9 @@ void DashBoard::go()
 {
     if(_looser)
         return;
-    _moteurPhy->majCombo();
     _moteurPhy->fall();
+    _moteurPhy->majCombo();
+
     _grille->check();
     _looser = _grille->checkLoose();
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";

@@ -46,20 +46,12 @@ void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
     offset.y = y;
     SDL_BlitSurface( source, clip, destination, &offset );
 }
-
 bool InterfaceX::init_SDL()
 {
-    if ( SDL_Init( SDL_INIT_EVERYTHING) == -1 )
+    if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
-        return false;
-    if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH ==0)
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF |SDL_FULLSCREEN );
-    else
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF  );
-    _SCREEN_HEIGHT=_screen->h;
-    _SCREEN_WIDTH=_screen->w;
-        if(TTF_Init()==-1)
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
     return true;
@@ -101,49 +93,49 @@ int InterfaceX::play_anim_menu(int init,int fin)
                 if(t>0.001)
                 {
                     tinit=clock();
-                        offsetmenux-=3;
-                        if(offsetmenux<=init)
-                        {
-                            _offset_menu.x=init;
-                            return 0;
-                        }
+                    offsetmenux-=3;
+                    if(offsetmenux<=init)
+                    {
+                        _offset_menu.x=init;
+                        return 0;
+                    }
                 }
-                    _offset_menu.x=offsetmenux;
-                    std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
-                    SDL_Flip(_screen);
-                }
+                _offset_menu.x=offsetmenux;
+                std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
+                SDL_Flip(_screen);
+            }
         }
 
-    if(t>0.001)
-    {
-        if(fin-init>=0)
-            offsetmenux+=3;
-        else
-            offsetmenux-=3;
-        tinit=clock();
-    }
-    if(fin>=init)//Si on avance
-    {
-        if(offsetmenux>=fin)
+        if(t>0.001)
         {
-            _offset_menu.x=fin;
-            return 0;
+            if(fin-init>=0)
+                offsetmenux+=3;
+            else
+                offsetmenux-=3;
+            tinit=clock();
         }
-    }
-    else//si on recule
-    {
-        if(offsetmenux<=fin)
+        if(fin>=init)//Si on avance
         {
-            _offset_menu.x=fin;
-            return 0;
+            if(offsetmenux>=fin)
+            {
+                _offset_menu.x=fin;
+                return 0;
+            }
         }
-    }
+        else//si on recule
+        {
+            if(offsetmenux<=fin)
+            {
+                _offset_menu.x=fin;
+                return 0;
+            }
+        }
 
-    _offset_menu.x=offsetmenux;
-    std::cout<<"position x : "<<_offset_menu.x<<std::endl;
-    SDL_Flip(_screen);
-}
-return 1;
+        _offset_menu.x=offsetmenux;
+        std::cout<<"position x : "<<_offset_menu.x<<std::endl;
+        SDL_Flip(_screen);
+    }
+    return 1;
 
 }
 int InterfaceX::select_nbJoueurs()
@@ -219,7 +211,7 @@ int InterfaceX::select_nbJoueurs()
 }
 void InterfaceX::menu()
 {
-    #ifdef WINDOWS
+#ifdef WINDOWS
     if (_chdir("img")==-1)
         std::cout<<"Erreur dossier"<<std::endl;
 #else
@@ -233,7 +225,7 @@ void InterfaceX::menu()
 
     std::cout<< cCurrentPath<<std::endl;
     resize_menu();
-
+    TTF_Init();
     int continuer=1;
     SDL_Event event;
     SDL_Surface *text;
@@ -253,7 +245,7 @@ void InterfaceX::menu()
         oss.str("");
         oss<<nbjoueurs;
         text=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
-       // text=TTF_RenderText_Solid(font,"TEST",textcolor);
+        // text=TTF_RenderText_Solid(font,"TEST",textcolor);
 
         while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
         {
@@ -267,19 +259,22 @@ void InterfaceX::menu()
                 continuer = 0;
             if(keystates[SDLK_RETURN])
             {
-                if(_offset_menu.x<2*_offset_menu.w){
+                if(_offset_menu.x<2*_offset_menu.w)
+                {
                     play_anim_menu(_offset_menu.w,2*_offset_menu.w);
                     position_menu++;
                 }
                 //continuer=0;
                 std::cout<<"AVANCE"<<std::endl;
             }
-            if(keystates[SDLK_DOWN]){
+            if(keystates[SDLK_DOWN])
+            {
                 nbjoueurs++;
             }
-            if(keystates[SDLK_UP]){
+            if(keystates[SDLK_UP])
+            {
                 if(nbjoueurs>1)
-                nbjoueurs--;
+                    nbjoueurs--;
             }
             if(keystates[SDLK_BACKSPACE])
             {
@@ -317,6 +312,7 @@ void InterfaceX::compute_game()
     compute_vDash();
     compute_offsets();
 }
+
 bool InterfaceX::resize_files()
 {
     std::cout<<" NBJOUEURS :"<<_nbJoueurs<<std::endl;
@@ -367,7 +363,7 @@ bool InterfaceX::resize_files()
     rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom,&dw,&dh);
     std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
     std::cout<<"zoom initial : "<<zoom<<std::endl;
-    while(dw!=(int)(dw))
+    while(dw/20.0!=(int)(dw/20.0))
     {
         zoom_optimal+=0.001;
         rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
@@ -394,15 +390,13 @@ bool InterfaceX::resize_files()
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
     std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
     _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
-
     std::cout<<"TAILLE BLOB ini : "<<_taille_blob_ini<<std::endl;
     std::cout<<"TAILLE BLOB /20 : "<<_blobs->w/20<<std::endl;
     std::cout<<"TAILLE BLOB final : "<<_taille_blob<<std::endl;
 
-
+resize_blobsIMG();
     return true;
 }
-
 void InterfaceX::resize_menu()
 {
     std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
@@ -496,13 +490,40 @@ void InterfaceX::blit_dash()
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
+int InterfaceX::anim_falling(Blobs* blob){
+if(blob->current()<=10)
+return 16;
+else
+return 17;
 
+}
+
+int InterfaceX::anim_comboting(Blobs* blob){
+if(blob->current()<=3)
+return 33;
+else
+return 32;
+
+}
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
-    SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
-    apply_surface(x,y,_blobs,_screen,&offset);
+    //SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
+    switch(blob->state()){
+    case NO_STATE:
+    apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
+    break;
+    case FALLING:
+    apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
+    break;
+    case COMBOTING:
+    apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
 
+    break;
+    default://ne doit pas arriver mais pour debug
+        apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
+    break;
 
+    }
 }
 void InterfaceX::blit_cursor()
 {
@@ -533,9 +554,12 @@ void InterfaceX::blit_avatars()
         cpt++;
     }
 }
-void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
+void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining)
 {
+    if(!shining)
     blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
+    else
+    apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
     blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
 }
 void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
@@ -580,6 +604,12 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
     return r;
 }
+int InterfaceX::closestInt(double d){
+
+
+
+return 1;
+}
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
@@ -603,6 +633,10 @@ bool InterfaceX::load_files()
 #endif
     char cCurrentPath[FILENAME_MAX];
 
+    if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
+    {
+        return errno;
+    }
 
     std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
@@ -620,7 +654,6 @@ bool InterfaceX::load_files()
 }
 void InterfaceX::clean_up()
 {
-    TTF_Quit();
     SDL_FreeSurface( _blobs );
     SDL_FreeSurface( _background);
     SDL_FreeSurface(_background);
@@ -648,12 +681,25 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
-void InterfaceX::decouper_sprite(){
-    if(SDL_MUSTLOCK(_blobs_ini))
-    SDL_LockSurface(_blobs_ini);
-        Uint32 rmask, gmask, bmask, amask;
 
-    #if SDL_BYTEORDER == SDL_BIG_ENDIAN
+void InterfaceX::resize_vect()
+{
+    _blobsIMG_ini.resize(SIZE_COLOR,std::vector<SDL_Surface*> (_nb_blobs));
+    _blobsIMG.resize(SIZE_COLOR,std::vector<SDL_Surface*> (_nb_blobs));
+    for (int i = 0 ; i < SIZE_COLOR ; ++i)
+    {
+        for (int j = 0 ; j < _nb_blobs ; ++j)
+        {
+            _blobsIMG[i][j] = NULL;
+            _blobsIMG_ini[i][j] = NULL;
+        }
+    }
+
+}
+void InterfaceX::resize_blobsIMG(){
+Uint32 rmask, gmask, bmask, amask;
+
+#if SDL_BYTEORDER == SDL_BIG_ENDIAN
     rmask = 0xff000000;
     gmask = 0x00ff0000;
     bmask = 0x0000ff00;
@@ -665,42 +711,90 @@ void InterfaceX::decouper_sprite(){
     amask = 0xff000000;
 #endif
 //D'abord on alloue la surface necessaire
-    for(int i=0;i<SIZE_COLOR-1;i++){
-        for(int j=0;j<_nb_blobs;j++){
+    for(int i=0; i<SIZE_COLOR-1; i++)
+    {
+        for(int j=0; j<_nb_blobs; j++)
+        {
+            _blobsIMG[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob, _taille_blob, 32, rmask, gmask, bmask, amask );
+
+        }
+    }
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+        for(int j=0; j<_nb_blobs; j++) //0 à 40
+            _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
+
+   for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+        for(int j=0; j<_nb_blobs; j++) //0 à 40
+            std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
+
+
+}
+void InterfaceX::decouper_sprite()
+{
+    if(SDL_MUSTLOCK(_blobs_ini))
+        SDL_LockSurface(_blobs_ini);
+    Uint32 rmask, gmask, bmask, amask;
+
+#if SDL_BYTEORDER == SDL_BIG_ENDIAN
+    rmask = 0xff000000;
+    gmask = 0x00ff0000;
+    bmask = 0x0000ff00;
+    amask = 0x000000ff;
+#else
+    rmask = 0x000000ff;
+    gmask = 0x0000ff00;
+    bmask = 0x00ff0000;
+    amask = 0xff000000;
+#endif
+//D'abord on alloue la surface necessaire
+    for(int i=0; i<SIZE_COLOR-1; i++)
+    {
+        for(int j=0; j<_nb_blobs; j++)
+        {
             _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini, 32, rmask, gmask, bmask, amask );
 
         }
     }
 //Puis on lit dans l'image pixel[x+y*pitch]
-int cptx=0,cpty=0;
-    for(int i=0;i<SIZE_COLOR-1;i++){//0 à 5
-        for(int j=0;j<_nb_blobs;j++){//0 à 40
-            for(int x=0;x<_taille_blob_ini;++x){
-                for(int y=0;y<_taille_blob_ini;++y){
-
-            putpixel(_blobsIMG_ini[i][j],x,y,getpixel(_blobs_ini,cptx,2*i));
+    int cptx=0,cpty=0;
+    Uint32 p;
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+    {
+        for(int j=0; j<_nb_blobs; j++) //0 à 40
+        {
+            for(int x=0; x<_taille_blob_ini; ++x)
+            {
+                for(int y=0; y<_taille_blob_ini; ++y)
+                {
+                    p=getpixel(_blobs_ini,cptx+x,cpty+y);
+                    putpixel(_blobsIMG_ini[i][j],x,y,p);
                 }
             }
             cptx+=_taille_blob_ini;
-            if(j==20){
-            cptx=0;
-            cpty+=_taille_blob_ini;
+            if(j==_nb_blobs/2-1)
+            {
+                cptx=0;
+                cpty+=_taille_blob_ini;
             }
+
         }
+        cptx=0;
+        cpty+=_taille_blob_ini;
     }
 
     if(SDL_MUSTLOCK(_blobs_ini))
-    SDL_UnlockSurface(_blobs_ini);
+        SDL_UnlockSurface(_blobs_ini);
 
 }
 
 Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
 {
     int bpp = surface->format->BytesPerPixel;
-    /* Here p is the address to the pixel we want to retrieve */
+    // Here p is the address to the pixel we want to retrieve
     Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
 
-    switch(bpp) {
+    switch(bpp)
+    {
     case 1:
         return *p;
         break;
@@ -721,16 +815,17 @@ Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
         break;
 
     default:
-        return 0;       /* shouldn't happen, but avoids warnings */
+        return 0;       //shouldn't happen, but avoids warnings
     }
 }
 void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
 {
     int bpp = surface->format->BytesPerPixel;
-    /* Here p is the address to the pixel we want to set */
+    // Here p is the address to the pixel we want to set
     Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
 
-    switch(bpp) {
+    switch(bpp)
+    {
     case 1:
         *p = pixel;
         break;
@@ -740,11 +835,14 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
         break;
 
     case 3:
-        if(SDL_BYTEORDER == SDL_BIG_ENDIAN) {
+        if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
+        {
             p[0] = (pixel >> 16) & 0xff;
             p[1] = (pixel >> 8) & 0xff;
             p[2] = pixel & 0xff;
-        } else {
+        }
+        else
+        {
             p[0] = pixel & 0xff;
             p[1] = (pixel >> 8) & 0xff;
             p[2] = (pixel >> 16) & 0xff;

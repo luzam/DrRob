@@ -30,7 +30,14 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
 		</Compiler>
+		<Linker>
+			<Add directory="SDL\include" />
+			<Add directory="SDL_ttf\include" />
+			<Add directory="SDL_image\include" />
+		</Linker>
 		<Unit filename="include\Blobs.h" />
 		<Unit filename="include\Clock.h" />
 		<Unit filename="include\Color.h" />
