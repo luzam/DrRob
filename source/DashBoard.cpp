@@ -6,22 +6,41 @@
   */
 void DashBoard::go()
 {
+
+    bool retour =false;
     if(_looser)
         return;
-    _moteurPhy->majCombo();
-    _moteurPhy->fall();
+    if(_moteurPhy->falling()==0 && _moteurPhy->comboting() ==0 )
+        retour = true;
     _grille->check();
+    _moteurPhy->fall();
+    if((_moteurPhy->falling()!=0 || _moteurPhy->comboting() !=0) && retour )
+        return ;
+    _moteurPhy->setFalling(_grille->checkFalling());
+
+    if(_moteurPhy->falling()==0)
+        _moteurPhy->majCombo();
     _looser = _grille->checkLoose();
+    std::cerr<<"comboting "<<_moteurPhy->comboting()<<"\n";
+    std::cerr<<"falling   "<<_moteurPhy->falling()<<"\n";
+    std::cerr<<"falling grille   "<<_grille->checkFalling()<<"\n";
+    if(_moteurPhy->fixed())
+        std::cerr<<"fixed     "<<"\n";
+    if(_go)
+        std::cerr<<"go     "<<"\n";
+    std::cerr<<"\n";
     if(_moteurPhy->fixed())
     {
         _masterBlob.setColor(BLANK);
         _slaveBlob.setColor(BLANK);
     }
-        if(_moteurPhy->falling()!=0)
+
+
+    if(_moteurPhy->falling()!=0)
     {
         _go = false;
         _moteurPhy->setFalling(_moteurPhy->falling()-1);
-       // return;
+      //  return;
 
     }
     if(_moteurPhy->comboting()!=0 && _moteurPhy->falling()==0 )
@@ -38,42 +57,44 @@ void DashBoard::go()
     }
 
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
+    if(_nextDarkBlobs!=0 && _moteurPhy->fixed())
+    {
+        _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
+        //return;
+    }
 
     if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
     {
+
         if(_moteurPhy->fixed()&& _nextDarkBlobs==0 )
         {
 
-                 std::cout<<"blob suivant\n";
-                std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
-                _masterBlob.setBlob(_nextMaster);
-                _slaveBlob.setBlob(_nextSlave);
-                _moteurPhy->setFixed(false);
+            std::cout<<"blob suivant\n";
+            std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
+            _masterBlob.setBlob(_nextMaster);
+            _slaveBlob.setBlob(_nextSlave);
+            _moteurPhy->setFixed(false);
+            ++_it;
+            if(_it==_nextBlobs->end())
+                ++_it;
+            _nextMaster.setBlob(*_it);
+            ++_it;
+            if(_it==_nextBlobs->end())
+                ++_it;
+            _nextSlave.setBlob(*_it);
+            _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
 
-                ++_it;
-                if(_it==_nextBlobs->end())
-                    ++_it;
-                _nextMaster.setBlob(*_it);
-                ++_it;
-                if(_it==_nextBlobs->end())
-                    ++_it;
-                _nextSlave.setBlob(*_it);
-                _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
-                //return;
-          //  }
+            //  }
             //_delay = 100;
         }
 
-       else if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0){
+        else if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
+        {
             _moteurPhy->moove(&_master,&_slave);
-            //return;
-            }
+        }
     }
 
-    if(_nextDarkBlobs!=0 && _moteurPhy->fixed()){
-        _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
-       //return;
-        }
+
 
 
     if(_moteurPhy->turningDirect()!=0)
@@ -127,10 +148,11 @@ void DashBoard::go()
         //return;
     }
 
-    if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0){
+    if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0)
+    {
         _go = true;
         //return;
-        }
+    }
 
 
     if(_combo!=0 && _moteurPhy->comboting()==0 && _moteurPhy->falling()==0 )
@@ -138,10 +160,10 @@ void DashBoard::go()
         if(--_delay==0)
         {
             _launchCombo=true;
+            std::cerr<<"COMBO ->>>>>>> "<<_combo<<"\n";
             _delay = 100;
         }
-        std::cout<<"COMBO ->>>>>>> "<<_combo<<"\n";
-     //   return;
+        //   return;
     }
 
 }

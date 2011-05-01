@@ -21,6 +21,8 @@ void Game::go()
     SDL_Event event; /* La variable contenant l'évènement */
     SDL_EnableKeyRepeat(100,50);
     int continuer = 1; /* Notre booléen pour la boucle */
+    int shining=0;
+    int cpt=0;
     _X->blits(_dashBoards);
 
     // SDL_Init(SDL_INIT_VIDEO);
@@ -53,6 +55,12 @@ void Game::go()
 
         }
         if(_clock.tic(30)){
+        if(cpt>=4){
+        shining = (shining==0)?1:0;
+        cpt=0;
+        }
+        else
+        cpt++;
         for(size_t i=0; i<_dashBoards.size(); i++){
             _dashBoards.at(i).go();
             if(_dashBoards.at(i).launchCombo())
@@ -66,7 +74,7 @@ void Game::go()
         for(size_t i=0; i<_dashBoards.size(); i++)
         {
             _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
-                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
+                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i,shining);
             _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
 
         }

@@ -7,6 +7,7 @@
   */
 void Grille::checkHole()
 {
+    bool falling = false;
     for(int l=17; l>=0; --l)
         for(int c=5; c>=0; --c)
             if((_grille)[6*l+c].state()==FALLING)
@@ -22,6 +23,15 @@ void Grille::checkHole()
                     }
                 }
             }
+}
+
+int Grille::checkFalling(){
+    int max = 0;
+    for(int l=17; l>=0; --l)
+        for(int c=5; c>=0; --c)
+            if((_grille)[6*l+c].state()==FALLING)
+                max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
+    return max;
 
 }
 /** @brief (one liner)

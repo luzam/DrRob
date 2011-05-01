@@ -30,6 +30,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-g" />
 		</Compiler>
 		<Unit filename="include\Blobs.h" />
 		<Unit filename="include\Clock.h" />
