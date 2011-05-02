@@ -491,10 +491,11 @@ void InterfaceX::blit_dash()
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
 int InterfaceX::anim_falling(Blobs* blob){
-if(blob->current()<=10)
-return 16;
-else
 return 17;
+
+}
+int InterfaceX::anim_landing(Blobs* blob){
+return 16;
 
 }
 
@@ -514,6 +515,9 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
     break;
     case FALLING:
     apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
+    break;
+    case LANDING :
+    apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
     break;
     case COMBOTING:
     apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
@@ -605,7 +609,6 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     return r;
 }
 int InterfaceX::closestInt(double d){
-
 
 
 return 1;
@@ -741,6 +744,7 @@ void InterfaceX::decouper_sprite()
     bmask = 0x0000ff00;
     amask = 0x000000ff;
 #else
+
     rmask = 0x000000ff;
     gmask = 0x0000ff00;
     bmask = 0x00ff0000;

@@ -11,6 +11,7 @@ void Game::go()
     _nbJoueurs=_X->select_nbJoueurs();
     std::cout<<"Nombre de joueurs : "<<_nbJoueurs<<std::endl;
     _X->setNbJoueurs(_nbJoueurs);
+    _turningBool = new std::vector<bool>(_nbJoueurs,false);
     _X->compute_game();
     assert(_nbJoueurs>0);
     initBlobs();
@@ -19,7 +20,7 @@ void Game::go()
     _combo = (int *) calloc(_nbJoueurs,sizeof(int));
 
     SDL_Event event; /* La variable contenant l'évènement */
-    SDL_EnableKeyRepeat(100,50);
+    //SDL_EnableKeyRepeat(100,50);
     int continuer = 1; /* Notre booléen pour la boucle */
     int shining=0;
     int cpt=0;
@@ -43,16 +44,32 @@ void Game::go()
             if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
                 continuer = 0;
             if (keystates[SDLK_LEFT])
-                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+                _dashBoards.at(1).moteurPhy()->gauche(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
             if (keystates[SDLK_RIGHT])
-                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+                _dashBoards.at(1).moteurPhy()->droite(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
             if (keystates[SDLK_DOWN])
+                _dashBoards.at(1).moteurPhy()->speedUp();
+            else
+                _dashBoards.at(1).moteurPhy()->speedToNormal();
+            if (keystates[SDLK_UP] && !_turningBool->at(1) ){
+                _dashBoards.at(1).moteurPhy()->rotationHoraire(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
+                _turningBool->at(1) = true;}
+            if(!keystates[SDLK_UP] )
+                _turningBool->at(1) = false;
+
+
+               //*/ joueur 2
+            if (keystates[SDLK_s])
+                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+            if (keystates[SDLK_f])
+                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+            if (keystates[SDLK_d])
                 _dashBoards.at(0).moteurPhy()->speedUp();
             else
                 _dashBoards.at(0).moteurPhy()->speedToNormal();
-            if (keystates[SDLK_UP])
-                _dashBoards.at(0).moteurPhy()->rotationAntiHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
-
+            if (keystates[SDLK_e])
+                _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+            //*/
         }
         if(_clock.tic(30)){
         if(cpt>=4){

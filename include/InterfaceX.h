@@ -165,6 +165,7 @@ public:
     int closestInt(double d);
     int anim_comboting(Blobs* blob);
     int anim_falling(Blobs* blob);
+    int anim_landing(Blobs* blob);
 };
 #endif // INTERFACEX_H_INCLUDED
 

@@ -8,6 +8,7 @@ void DashBoard::go()
 {
 
     bool retour =false;
+
     if(_looser)
         return;
     if(_moteurPhy->falling()==0 && _moteurPhy->comboting() ==0 )
@@ -88,7 +89,7 @@ void DashBoard::go()
             //_delay = 100;
         }
 
-        else if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
+         if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
         {
             _moteurPhy->moove(&_master,&_slave);
         }

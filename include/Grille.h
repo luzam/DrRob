@@ -7,6 +7,9 @@
 #include "Blobs.h"
 #include "time.h"
 #include "stdlib.h"
+#define LANDING_ANIM_TIME 3
+
+
 class Grille{
 
 protected :

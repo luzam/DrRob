@@ -22,6 +22,7 @@ protected :
     InterfaceX* _X;
     Clock _clock;
     int _nbJoueurs;
+    std::vector<bool> *_turningBool;
     int *_combo;
 public :
 

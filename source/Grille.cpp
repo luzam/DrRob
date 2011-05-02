@@ -14,15 +14,24 @@ void Grille::checkHole()
             {
                 if((_grille)[6*l+c].current()!=0)
                 {
-                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-5);
+                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-8);
                     if((_grille)[6*l+c].current()<=0)
                     {
                         switchBlobs(l,c,l+_grille[6*l+c].fallingCol(),c);
                         _grille[6*l+c].setState(NO_STATE);
+
                         std::cout<<"->[ "<<l<<" --> "<< l+_grille[6*l+c].fallingCol()<< " ] <\n";
                     }
                 }
             }
+            else if((_grille)[6*l+c].state()==LANDING)
+            {
+                if((_grille)[6*l+c].current()>0)
+                    _grille[6*l+c].setLanding(_grille[l*6+c].current()-1);
+                if(_grille[6*l+c].current()==0)
+                    _grille[6*l+c].setState(NO_STATE);
+            }
+
 }
 
 int Grille::checkFalling(){
@@ -223,7 +232,8 @@ void Grille::switchBlobs(int l1,int c1,int l2,int c2)
     _grille[l1*6+c1].setFalling(0);
     _grille[l1*6+c1].setState(NO_STATE);
     _grille[l2*6+c2].setFalling(0);
-    _grille[l2*6+c2].setState(FIXED);
+    _grille[l2*6+c2].setState(LANDING);
+    _grille[l2*6+c2].setLanding(LANDING_ANIM_TIME);
 }
 
 
