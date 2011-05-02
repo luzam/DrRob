@@ -34,8 +34,12 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         _orientation = HAUT;
         break;
     case DROITE :
-        if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+1,colBlobCourant())).color()!=BLANK)
-        {
+    bool up = false;
+        if(ligneBlobCourant()>=16)
+            up = true;
+        if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+            up = true;
+        if(up){
             if(colBlobCourant()==0)
                 return;
             (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
@@ -44,7 +48,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"roration-> orientation "<<_orientation<<std::endl;
-    _turningHoraire=1;
+    _turningHoraire=4;
     majPosition(master,slave);
     //TO DO : Turning clock_wise
 }
@@ -84,8 +88,12 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
     case DROITE :
         _orientation = HAUT;
         break;
-    case GAUCHE :
-        if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+1,colBlobCourant())).color()!=BLANK)
+    case GAUCHE :bool up = false;
+        if(ligneBlobCourant()>=16)
+            up = true;
+        else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+            up = true;
+          if (up)
         {
             if(colBlobCourant()==0)
                 return;
@@ -368,8 +376,8 @@ void MoteurPhy::majCombo()
             ++it)
         if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK||((*_grille)((*it).second.x(),(*it).second.y()))->color()==DARK)//et BIM
             keyset.insert((*it).first);
-    if(keyset.empty())
-        _fixed = true;
+  /*  if(keyset.empty())
+        _fixed = true;*/
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)

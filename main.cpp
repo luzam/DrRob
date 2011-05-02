@@ -327,9 +327,10 @@ int main( int argc, char* argv[] )
 }
 
 */
+/*
 #include <SDL.h>
 #include <SDL_image.h>
-#include <SDL_ttf.h>
+#include <SDL_ttf.h>*/
 #include <stdlib.h>
 #include "include/SDL_rotozoom.h"
 #include <iostream>

@@ -7,6 +7,9 @@
 #include "Blobs.h"
 #include "time.h"
 #include "stdlib.h"
+#define LANDING_ANIM_TIME 3
+
+
 class Grille{
 
 protected :
@@ -27,6 +30,7 @@ protected :
     ~Grille(){
     }
     bool checkLoose();
+    int checkFalling();
     void check();
     int checkDark(int size);
     void switchBlobs(int l1,int c1,int l2,int c2);
