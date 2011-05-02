@@ -8,9 +8,9 @@ void Game::go()
 {
     std::cout<<"On lance le menu"<<std::endl;
     _X->menu();
-    _nbJoueurs=_X->select_nbJoueurs();
-    std::cout<<"Nombre de joueurs : "<<_nbJoueurs<<std::endl;
-    _X->setNbJoueurs(_nbJoueurs);
+    _nbJoueurs=_X->NbJoueurs();
+    _nbAI=_X->NbAI();
+    resize_commandes();
     _X->compute_game();
     assert(_nbJoueurs>0);
     initBlobs();
@@ -92,18 +92,21 @@ void Game::repartitionCombo()
         return;
     srand(time(NULL));
     int target =0;
-    for(int i=0;i<_dashBoards.size();++i)
+    for(size_t i=0;i<_dashBoards.size();++i)
     {
         if(_combo[i]!=0)
         {
             while(_combo[i]!=0){
                 do{
                 target = rand() % _dashBoards.size();
-                }while(target==i );//|| _dashBoards[target].looser());
+                }while(target==(int)i );//|| _dashBoards[target].looser());
                 _dashBoards[target].addDarkBlob();
                 _combo[i]--;
             }
         }
     }
+}
+void Game::resize_commandes(){
+_commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS));
 }
 

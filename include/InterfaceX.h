@@ -22,12 +22,14 @@
 #include <unistd.h>
 #define GetCurrentDir getcwd
 #endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
+#include "Color.h"
+#include "Link.h"
+#include "State.h"
+#include "Blobs.h"
+#include "Position.h"
 #include <time.h>
+#include "Clock.h"
+#include "Controls.h"
 class InterfaceX
 {
 protected:
@@ -43,6 +45,7 @@ protected:
     int _decalage_menu_y;
     double _ratio_avat_ini;
     int _nbJoueurs;
+    int _nbAI;
     double _ratio_menu;
     Position _offset_grille;
     Position _offset_nextBlob;
@@ -71,23 +74,29 @@ protected:
     int _grille_W;
     int _grille_H;
     int _nb_blobs;
+    int _taille_menu_ini;
+    int _taille_menu;
+    int _taille_text;
+    std::vector<std::vector<int> > _commandes;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
-    _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
+    _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_nbJoueurs(1),_nbAI(0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40)
+    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25)
     {
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
         _offset_menu.y=0;
-        _offset_cursor.setX(83);
-        _offset_cursor.setY(73);
+        _offset_cursor.setX(80);
+        _offset_cursor.setY(87);
+
 
     init_SDL();
     load_files();
     resize_vect();
     decouper_sprite();
+    resize_menu();
     }
     ~InterfaceX()
     {
@@ -132,6 +141,8 @@ public:
     {
         return _dashboard;
     }
+    int NbJoueurs()const{return _nbJoueurs;}
+    int NbAI()const{return _nbAI;}
     int grille_H()const{return _grille_H;}
     int grille_W()const{return _grille_W;}
     bool resize_files();
@@ -161,6 +172,9 @@ public:
     int closestInt(double d);
     int anim_comboting(Blobs* blob);
     int anim_falling(Blobs* blob);
+    void maj_offsets(int dx,int dy);
+    int controls_and_start();
+    int controls();
 };
 #endif // INTERFACEX_H_INCLUDED
 

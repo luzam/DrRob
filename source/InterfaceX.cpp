@@ -1,24 +1,4 @@
 #include "../include/InterfaceX.h"
-#ifdef WIN32
-#define WINDOWS
-#endif
-#ifdef X64
-#define WINDOWS
-#endif
-#include <stdio.h>  /* defines FILENAME_MAX */
-#ifdef WINDOWS
-#include <direct.h>
-#define GetCurrentDir _getcwd
-#else
-#include <unistd.h>
-#define GetCurrentDir getcwd
-#endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
-#include <time.h>
 #include <sstream>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
@@ -54,6 +34,9 @@ bool InterfaceX::init_SDL()
     if ( _screen == NULL )
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
+    if ( TTF_Init() == -1 )
+        return false;
+
     return true;
 }
 void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
@@ -66,74 +49,70 @@ void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
 int InterfaceX::play_anim_menu(int init,int fin)
 {
     int continuer=1;
-    clock_t tinit,tfinal;
-    double t;
     SDL_Event event;
     _offset_menu.x=init;
     int offsetmenux=_offset_menu.x;
-    tinit=clock();
+    Clock _clock;
     std::cout<<" init : "<<init<<" fin : "<<fin<<std::endl;
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        tfinal=clock();
         Uint8 *keystates = SDL_GetKeyState( NULL );
-        blit_menu();
         SDL_PollEvent(&event);
-        t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
-        //std::cout<<"T : "<<t<<std::endl;
+
+
+
+        if(_clock.tic(5))
+        {
+            blit_menu();
+            if(fin-init>=0)
+                offsetmenux+=5;
+            else
+                offsetmenux-=5;
+
+            if(fin>=init)//Si on avance
+            {
+                if(offsetmenux>=fin)
+                {
+                    _offset_menu.x=fin;
+                    return 0;
+                }
+            }
+            else//si on recule
+            {
+                if(offsetmenux<=fin)
+                {
+                    _offset_menu.x=fin;
+                    return 0;
+                }
+            }
+
+            _offset_menu.x=offsetmenux;
+            std::cout<<"position x : "<<_offset_menu.x<<std::endl;
+            SDL_Flip(_screen);
+        }
         if(keystates[SDLK_BACKSPACE] && fin>=init)//On retourne au debut
         {
-            tinit=tfinal=clock();
 
             while(continuer)
             {
-                blit_menu();
-                tfinal=clock();
-                t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
-                if(t>0.001)
+
+                if(_clock.tic(5))
                 {
-                    tinit=clock();
-                    offsetmenux-=3;
+                    blit_menu();
+                    offsetmenux-=5;
                     if(offsetmenux<=init)
                     {
                         _offset_menu.x=init;
-                        return 0;
+                        return -1;
                     }
+                    _offset_menu.x=offsetmenux;
+                    SDL_Flip(_screen);
                 }
-                _offset_menu.x=offsetmenux;
+
                 std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
-                SDL_Flip(_screen);
-            }
-        }
 
-        if(t>0.001)
-        {
-            if(fin-init>=0)
-                offsetmenux+=3;
-            else
-                offsetmenux-=3;
-            tinit=clock();
-        }
-        if(fin>=init)//Si on avance
-        {
-            if(offsetmenux>=fin)
-            {
-                _offset_menu.x=fin;
-                return 0;
             }
         }
-        else//si on recule
-        {
-            if(offsetmenux<=fin)
-            {
-                _offset_menu.x=fin;
-                return 0;
-            }
-        }
-
-        _offset_menu.x=offsetmenux;
-        std::cout<<"position x : "<<_offset_menu.x<<std::endl;
-        SDL_Flip(_screen);
     }
     return 1;
 
@@ -141,37 +120,81 @@ int InterfaceX::play_anim_menu(int init,int fin)
 int InterfaceX::select_nbJoueurs()
 {
     int continuer=1;
+    blit_menu();
+    blit_cursor();
+    SDL_Flip(_screen);
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    std::ostringstream nbj;
+    std::ostringstream nba;
+    std::string njoueurs;
+    std::string nai;
+    SDL_Surface* nbJoueurs=NULL;
+    SDL_Surface* nbAI=NULL;
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    SDL_Color textcolor = {255,255,255};
     SDL_Event event;
-    clock_t tinit,tfinal;
+    Clock _clock;
     std::cout<<"Curseur = "<<_cursor->w<<"x"<<_cursor->h<<" Position x = "<<_offset_cursor.x()<<" y = "<<_offset_cursor.y()<<std::endl;
-    float t;
-    tinit=clock();
     _offset_menu.x=2*_offset_menu.w;
     int curseur=1;
-    int NplayerMAX=4;
-    int saut=22*_ratio_menu;
+    int nb_lines=2;
+    Position _offset_nbj;
+    int decalage_text=20;
+    int offx_ini=80*_ratio_menu+_decalage_menu_x;
+    int offy_ini=87*_ratio_menu+_decalage_menu_y;
+    _offset_nbj.setX(offx_ini+decalage_text*_ratio_menu);
+    _offset_nbj.setY(offy_ini-10*_ratio_menu);
+    int saut=35*_ratio_menu;
     SDL_EnableKeyRepeat(100,50);
+    nbj.str("");
+    nbj<<_nbJoueurs;
+    nbJoueurs=TTF_RenderText_Solid(font,(nbj.str()).c_str(),textcolor);
+    nba.str("");
+    nba<<_nbAI;
+    nbAI=TTF_RenderText_Solid(font,(nba.str()).c_str(),textcolor);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        blit_menu();
-        blit_cursor();
-        tfinal=clock();
+
         while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
         {
+            keystates = SDL_GetKeyState( NULL );
+            nbj.str("");
+            nbj<<_nbJoueurs;
+            nbJoueurs=TTF_RenderText_Solid(font,(nbj.str()).c_str(),textcolor);
+            nba.str("");
+            nba<<_nbAI;
+            nbAI=TTF_RenderText_Solid(font,(nba.str()).c_str(),textcolor);
+
+            if((_nbJoueurs>=10||_nbAI>=10 )&& (_nbJoueurs<100&&_nbAI<100))
+            {
+                _offset_cursor.setX(offx_ini-10*_ratio_menu);
+                _offset_nbj.setX(offx_ini+(decalage_text-10)*_ratio_menu);
+            }
+            else if(_nbJoueurs>=100||_nbAI>=100)
+            {
+                _offset_cursor.setX(offx_ini-20*_ratio_menu);
+                _offset_nbj.setX(offx_ini+(decalage_text-20)*_ratio_menu);
+            }
+            else
+            {
+                _offset_cursor.setX(offx_ini);
+                _offset_nbj.setX(offx_ini+decalage_text*_ratio_menu);
+            }
+
             if (event.type==SDL_QUIT)  /* Si c'est un évènement QUITTER */
             {
                 continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
             }
-            Uint8 *keystates = SDL_GetKeyState( NULL );
+
 
             if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
-                continuer = 0;
+                return -1;
             if(keystates[SDLK_UP])
             {
                 if(curseur==1)
                 {
-                    _offset_cursor.setY(_offset_cursor.y()+(NplayerMAX-1)*saut);
-                    curseur=NplayerMAX;
+                    _offset_cursor.setY(_offset_cursor.y()+(nb_lines-1)*saut);
+                    curseur=nb_lines;
                 }
                 else
                 {
@@ -181,9 +204,9 @@ int InterfaceX::select_nbJoueurs()
             }
             if(keystates[SDLK_DOWN])
             {
-                if(curseur==NplayerMAX)
+                if(curseur==nb_lines)
                 {
-                    _offset_cursor.setY(_offset_cursor.y()-(NplayerMAX-1)*saut);
+                    _offset_cursor.setY(_offset_cursor.y()-(nb_lines-1)*saut);
                     curseur=1;
                 }
                 else
@@ -193,21 +216,197 @@ int InterfaceX::select_nbJoueurs()
                 }
 
             }
+            if(keystates[SDLK_BACKSPACE])
+            {
+                return -1;
+            }
+            if(keystates[SDLK_RIGHT])
+            {
+                if(curseur==1)
+                    _nbJoueurs++;
+                else
+                    _nbAI++;
+
+            }
+            if(keystates[SDLK_LEFT])
+            {
+                if(curseur==1 && _nbJoueurs>0)
+                    _nbJoueurs--;
+                else if(_nbAI>0)
+                    _nbAI--;
+
+            }
             if(keystates[SDLK_RETURN])
             {
-                continuer=0;
+
+                return 0;
             }
 
-        }
 
-        t=(tfinal-tinit);
-        if(t>15)
-        {
         }
-        SDL_Flip(_screen);
+        if(_clock.tic(15))
+        {
+            blit_menu();
+            blit_cursor();
+            apply_surface(_offset_nbj.x(),_offset_nbj.y(),nbJoueurs,_screen,NULL);
+            apply_surface(_offset_nbj.x(),_offset_nbj.y()+saut,nbAI,_screen,NULL);
+            SDL_Flip(_screen);
+        }
     }
 
-    return curseur;
+    return 1;
+}
+
+
+
+int InterfaceX::controls()
+{
+    SDL_Surface *text=NULL;
+    SDL_Surface *joueur=NULL;
+    std::ostringstream nbj;
+    _commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS));
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    SDL_Color textcolor = {255,255,255};
+    SDL_Event event;
+    Clock _clock;
+
+    int continuer=1;
+    nbj.str("");
+    nbj<<1;
+    std::string njoueur="Joueur "+nbj.str();
+    joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
+    blit_fond();
+    SDL_Flip(_screen);
+    std::vector<std::string> controls;
+    controls.push_back("GAUCHE");
+    controls.push_back("DROITE");
+    controls.push_back("BAS");
+    controls.push_back("TOURNER DROITE");
+    controls.push_back("TOURNER GAUCHE");
+    std::cout<<"CONTROLS : "<<controls.size()<<std::endl;
+    for(int i=0; i<_nbJoueurs; ++i)
+    {
+        nbj.str("");
+        nbj<<(i+1);
+        njoueur="Joueur "+nbj.str();
+        joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
+
+
+        for(int j=0;j<(int)controls.size();++j){
+        continuer=1;
+        text=TTF_RenderText_Solid(font,controls[j].c_str(),textcolor);
+        while(continuer)
+        {
+            while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
+            {
+                if(event.type==SDL_KEYDOWN)
+                {
+                    std::cout<<"Joueur["<<i<<"]["<<j<<"] : "<<event.key.keysym.sym<<std::endl;
+                    _commandes[i][j]=event.key.keysym.sym;
+                    continuer=0;
+                }
+
+
+                blit_fond();
+                apply_surface(_screen->w/2-text->w/2,_screen->h/2-text->h/2,text,_screen,NULL);
+                apply_surface(_screen->w/2-joueur->w/2,_screen->h/4-joueur->h/2,joueur,_screen,NULL);
+                SDL_Flip(_screen);
+            }
+        }
+        }
+        continuer=1;
+
+
+    }
+    return 1;
+}
+int InterfaceX::controls_and_start()
+{
+    int continuer=1;
+    SDL_Event event;
+    Clock _clock;
+    _offset_menu.x=3*_offset_menu.w;
+    int curseur=1;
+    int nb_lines=2;
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    blit_menu();
+    blit_cursor();
+    SDL_Flip(_screen);
+    Position _offset_nbj;
+    _offset_nbj.setX(_offset_cursor.x()+50);
+    _offset_nbj.setY(_offset_cursor.y()-20);
+    int saut=35*_ratio_menu;
+    SDL_EnableKeyRepeat(100,50);
+    while (continuer) /* TANT QUE la variable ne vaut pas 0 */
+    {
+
+        while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
+        {
+
+            if (event.type==SDL_QUIT)  /* Si c'est un évènement QUITTER */
+            {
+                continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
+            }
+            keystates = SDL_GetKeyState( NULL );
+
+            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
+                return -1;
+            if(keystates[SDLK_UP])
+            {
+                if(curseur==1)
+                {
+                    _offset_cursor.setY(_offset_cursor.y()+(nb_lines-1)*saut);
+                    curseur=nb_lines;
+                }
+                else
+                {
+                    _offset_cursor.setY(_offset_cursor.y()-saut);
+                    curseur--;
+                }
+            }
+            if(keystates[SDLK_DOWN])
+            {
+                if(curseur==nb_lines)
+                {
+                    _offset_cursor.setY(_offset_cursor.y()-(nb_lines-1)*saut);
+                    curseur=1;
+                }
+                else
+                {
+                    _offset_cursor.setY(_offset_cursor.y()+saut);
+                    curseur++;
+                }
+
+            }
+            if(keystates[SDLK_BACKSPACE])
+            {
+                return -1;
+            }
+
+            if(keystates[SDLK_RETURN])
+            {
+                if(curseur==1)
+                {
+                    std::cout<<"Start the game"<<std::endl;
+                }
+                else if(curseur==2)
+                {
+                    std::cout<<"Start Controls"<<std::endl;
+                    controls();
+                }
+            }
+
+
+        }
+        if(_clock.tic(15))
+        {
+            blit_menu();
+            blit_cursor();
+            SDL_Flip(_screen);
+        }
+    }
+
+    return 1;
 }
 void InterfaceX::menu()
 {
@@ -219,33 +418,17 @@ void InterfaceX::menu()
         std::cout<<"Erreur dossier"<<std::endl;
 #endif
     char cCurrentPath[FILENAME_MAX];
-
     GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
-
-
     std::cout<< cCurrentPath<<std::endl;
-    resize_menu();
-    TTF_Init();
     int continuer=1;
     SDL_Event event;
-    SDL_Surface *text;
-    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",30);
-    clock_t tinit,tfinal;
-    float t;
-    SDL_Color textcolor = {255,200,255};
-    int nbjoueurs=1;
-    tinit=clock();
-    int position_menu=1;
-    std::ostringstream oss;
-    std::string njoueurs;
+
+    Clock _clock;
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    int position_menu=0;
     SDL_EnableKeyRepeat(100,50);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        tfinal=clock();
-        oss.str("");
-        oss<<nbjoueurs;
-        text=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
-        // text=TTF_RenderText_Solid(font,"TEST",textcolor);
 
         while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
         {
@@ -253,53 +436,70 @@ void InterfaceX::menu()
             {
                 continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
             }
-            Uint8 *keystates = SDL_GetKeyState( NULL );
+            keystates = SDL_GetKeyState( NULL );
 
             if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
                 continuer = 0;
             if(keystates[SDLK_RETURN])
             {
-                if(_offset_menu.x<2*_offset_menu.w)
+                if(position_menu==0)
                 {
-                    play_anim_menu(_offset_menu.w,2*_offset_menu.w);
                     position_menu++;
+                    position_menu+=play_anim_menu(_offset_menu.w,2*_offset_menu.w);
+
                 }
-                //continuer=0;
-                std::cout<<"AVANCE"<<std::endl;
             }
-            if(keystates[SDLK_DOWN])
+        }
+            switch(position_menu)
             {
-                nbjoueurs++;
-            }
-            if(keystates[SDLK_UP])
-            {
-                if(nbjoueurs>1)
-                    nbjoueurs--;
-            }
-            if(keystates[SDLK_BACKSPACE])
-            {
-                if(_offset_menu.x>=2*_offset_menu.w)
+            case 1://choix des joueurs
+                switch(select_nbJoueurs())
                 {
-                    play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                case -1://on veut revenir en arriere
                     position_menu--;
-                    std::cout<<"RECULE"<<std::endl;
+                    position_menu+= play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                        _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+                    break;
+                case 0://on veut avancer
+                    position_menu++;
+                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x+_offset_menu.w);
+                    break;
+                default:
+                    break;
                 }
+                break;
+            case 2://controls et start
+                switch(controls_and_start())
+                {
+                case -1:
+                _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+                    position_menu--;
+                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                    break;
+                default:
+                    break;
+                }
+                break;
+            default://au debut donc on ne fait rien
+                break;
+
+
             }
-        }
-        blit_menu();
-        t=(tfinal-tinit);
-        if(t>150 && _offset_menu.x<2*_offset_menu.w)
+
+        if(_clock.tic(300))
         {
-            if(_offset_menu.x==0)
-                _offset_menu.x+=_offset_menu.w;
-            else
-                _offset_menu.x-=_offset_menu.w;
-            tinit=clock();
-
+            blit_menu();
+            if(position_menu==0)
+            {
+                if(_offset_menu.x==0)
+                    _offset_menu.x+=_offset_menu.w;
+                else
+                    _offset_menu.x-=_offset_menu.w;
+            }
+            SDL_Flip(_screen);
         }
-        apply_surface(0,0,text,_screen,NULL);
-
-        SDL_Flip(_screen);
     }
 
 }
@@ -394,27 +594,27 @@ bool InterfaceX::resize_files()
     std::cout<<"TAILLE BLOB /20 : "<<_blobs->w/20<<std::endl;
     std::cout<<"TAILLE BLOB final : "<<_taille_blob<<std::endl;
 
-resize_blobsIMG();
+    resize_blobsIMG();
     return true;
 }
 void InterfaceX::resize_menu()
 {
     std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
     double ratio_menu=(double)_menu_ini->h/(double)_menu_ini->w;
-
-    if(_SCREEN_HEIGHT<_SCREEN_WIDTH*3*ratio_menu)
+    int nb_menus = (int)(_menu_ini->w/_taille_menu_ini);
+    if(_SCREEN_HEIGHT<_SCREEN_WIDTH*nb_menus*ratio_menu)
     {
         _menu=img_zoom_pixel_H(_menu_ini,_SCREEN_HEIGHT);
-        _decalage_menu_x=ceil((_SCREEN_WIDTH-_menu->w/3)/2.0);
+        _decalage_menu_x=ceil((_SCREEN_WIDTH-_menu->w/nb_menus)/2.0);
     }
     else
     {
-        _menu=img_zoom_pixel_W(_menu_ini,_SCREEN_WIDTH*3);
+        _menu=img_zoom_pixel_W(_menu_ini,_SCREEN_WIDTH*nb_menus);
         _decalage_menu_y=ceil((_SCREEN_HEIGHT-_menu->h)/2.0);
     }
     _ratio_menu=(double)_menu->h/(double)_menu_ini->h;
 
-    _offset_menu.w=ceil(_menu->w/3);
+    _offset_menu.w=ceil(_menu->w/nb_menus);
     _offset_menu.h=_menu->h;
 
     std::cout<<"Le menu final = "<<_menu->w<<"x"<<_menu->h<<std::endl;
@@ -422,12 +622,26 @@ void InterfaceX::resize_menu()
     _offset_cursor.setY(_offset_cursor.y()*_ratio_menu+_decalage_menu_y);
     _cursor=rotozoomSurface(_cursor_ini,0,_ratio_menu,0);
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
+    _taille_menu=ratio_menu*_taille_menu_ini;
+    _taille_text*=_ratio_menu;
 
 }
 /** @brief Calcule les positions des differents dashboard
 *
 *
 */
+void InterfaceX::maj_offsets(int dx,int dy)
+{
+    std::cout<<"OFFSETS DE DECALAGE : "<<dx<<" x "<<dy<<std::endl;
+    _offset_grille.setX(_offset_grille.x()+dx);
+    _offset_grille.setY(_offset_grille.y()+dy);
+    _offset_nextBlob.setX(_offset_nextBlob.x()+dx);
+    _offset_nextBlob.setY(_offset_nextBlob.y()+dy);
+    _offset_avatar.setX(_offset_avatar.x()+dx);
+    _offset_avatar.setY(_offset_avatar.y()+dy);
+
+
+}
 bool InterfaceX::compute_vDash()
 {
     int nbJoueursX;
@@ -490,38 +704,41 @@ void InterfaceX::blit_dash()
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
-int InterfaceX::anim_falling(Blobs* blob){
-if(blob->current()<=10)
-return 16;
-else
-return 17;
+int InterfaceX::anim_falling(Blobs* blob)
+{
+    if(blob->current()<=10)
+        return 16;
+    else
+        return 17;
 
 }
 
-int InterfaceX::anim_comboting(Blobs* blob){
-if(blob->current()<=3)
-return 33;
-else
-return 32;
+int InterfaceX::anim_comboting(Blobs* blob)
+{
+    if(blob->current()<=3)
+        return 33;
+    else
+        return 32;
 
 }
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
     //SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
-    switch(blob->state()){
+    switch(blob->state())
+    {
     case NO_STATE:
-    apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
-    break;
+        apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
+        break;
     case FALLING:
-    apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
-    break;
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
+        break;
     case COMBOTING:
-    apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
 
-    break;
+        break;
     default://ne doit pas arriver mais pour debug
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
-    break;
+        break;
 
     }
 }
@@ -557,9 +774,9 @@ void InterfaceX::blit_avatars()
 void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining)
 {
     if(!shining)
-    blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
+        blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
     else
-    apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
+        apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
     blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
 }
 void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
@@ -604,16 +821,16 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
     return r;
 }
-int InterfaceX::closestInt(double d){
+int InterfaceX::closestInt(double d)
+{
 
 
-
-return 1;
+    return 1;
 }
 bool InterfaceX::compute_offsets()
 {
-    _offset_grille.setX(ceil((8.0)*(_ratio)));
-    _offset_grille.setY(ceil((31.0-6*_taille_blob_ini)*(_ratio)));
+    _offset_grille.setX(floor((8.0)*(_ratio)));
+    _offset_grille.setY(floor((32-6*_taille_blob_ini)*(_ratio)));
     _offset_nextBlob.setX(ceil((128)*_ratio));
     _offset_nextBlob.setY(ceil((78)*_ratio));
     _offset_avatar.setX(ceil((105)*_ratio));
@@ -643,7 +860,7 @@ bool InterfaceX::load_files()
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
     _avatars_ini = load_img("avatars.png");
-    _menu_ini = load_img("menu.png");
+    _menu_ini = load_img("menu2.png");
     _cursor_ini = load_img("cursor.png");
     if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
     {
@@ -696,8 +913,9 @@ void InterfaceX::resize_vect()
     }
 
 }
-void InterfaceX::resize_blobsIMG(){
-Uint32 rmask, gmask, bmask, amask;
+void InterfaceX::resize_blobsIMG()
+{
+    Uint32 rmask, gmask, bmask, amask;
 
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     rmask = 0xff000000;
@@ -723,7 +941,7 @@ Uint32 rmask, gmask, bmask, amask;
         for(int j=0; j<_nb_blobs; j++) //0 à 40
             _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
 
-   for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
         for(int j=0; j<_nb_blobs; j++) //0 à 40
             std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
 
