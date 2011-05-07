@@ -102,6 +102,7 @@ void Game::go()
                     if(_dashBoards.at(i).launchCombo())
                     {
                         _combo[i] = _dashBoards.at(i).combo();
+                        std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
                         _dashBoards.at(i).resetCombo();
                     }
                 }
@@ -113,8 +114,6 @@ void Game::go()
             _X->blits(_dashBoards);
             for(size_t i=0; i<_dashBoards.size(); i++)
             {
-                std::cerr<<"turning x pos -> "<<_dashBoards.at(i).slavePos()->x()<<"\n";
-                std::cerr<<"turning y pos -> "<<_dashBoards.at(i).slavePos()->y()<<"\n";
                 _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
                                        _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
                 _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);

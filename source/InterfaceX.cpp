@@ -1102,7 +1102,6 @@ void InterfaceX::maj_anims(DashBoard& dash)
     maj_shining();
     dash.moteurPhy()->fall();
     dash.grille()->check();
-    // dash.grille()->checkCombo();
     if((dash.moteurPhy()->falling()!=0 || dash.moteurPhy()->comboting() !=0 || dash.grille()->checkLanding()!=0) && retour )
         return ;
     dash.moteurPhy()->setFalling(dash.grille()->checkFalling());
@@ -1118,20 +1117,18 @@ void InterfaceX::maj_anims(DashBoard& dash)
     {
         dash.moteurPhy()->setFalling(dash.moteurPhy()->falling()-1);
     }
-    if(dash.moteurPhy()->comboting()!=0 && dash.moteurPhy()->falling()==0 && dash.grille()->checkLanding()==0 )
-    {
-        //TO DO : animation comboting
-        // _go = false;
-        dash.moteurPhy()->setComboting(dash.moteurPhy()->comboting()-1);
-        // std::cout<<"---------------->>>>>>>>>>>>>>>>"<<_moteurPhy->comboting()<<"\n";
-        if(dash.moteurPhy()->comboting()==0)
-        {
+            dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
 
-            dash.setCombo((dash.combo()==0)?dash.moteurPhy()->combo():(dash.combo()!=0&&dash.combo()<6)?dash.combo()+2*dash.moteurPhy()->combo():(dash.combo()>6&&dash.combo()<12)?dash.combo()+4*dash.moteurPhy()->combo():dash.combo()+6*dash.moteurPhy()->combo());
-        }//return;
-    }
-    std::cerr<<"turning + -> "<<dash.moteurPhy()->turningDirect()<<"\n";
-    std::cerr<<"turning - -> "<<dash.moteurPhy()->turningHoraire()<<"\n";
+     std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
+        if(dash.moteurPhy()->comboting()==1)
+        {
+                     dash.setCombo(dash.combo() + dash.moteurPhy()->combo());
+
+        }
+  //  if(dash.moteurPhy()->comboting()!=0 && dash.moteurPhy()->falling()==0 && dash.grille()->checkLanding()==0 )
+   // {
+   // }
+
 
     if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)
     {

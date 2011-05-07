@@ -35,6 +35,7 @@ protected :
     void checkHole();
     void checkCombo();
     int checkDark(int size);
+    int checkMaxCombo();
     void switchBlobs(int l1,int c1,int l2,int c2);
     Blobs* operator()(int ligne,int col)
     {

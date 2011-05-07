@@ -55,6 +55,16 @@ int Grille::checkLanding()
     return max;
 
 }
+int Grille::checkMaxCombo()
+{
+    int max = 0;
+    for(int l=17; l>=0; --l)
+        for(int c=5; c>=0; --c)
+            if((_grille)[6*l+c].state()==COMBOTING)
+                max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
+    return max;
+
+}
 /** @brief (one liner)
   *
   * (documentation goes here)

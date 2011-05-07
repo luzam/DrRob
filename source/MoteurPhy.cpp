@@ -116,7 +116,6 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
 int MoteurPhy::moove(Position* master,Position* slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
-    std::cerr<<"touching : "<<(_touching)<<std::endl;
     bool touch = false;
     switch(_orientation)
     {
@@ -166,7 +165,6 @@ int MoteurPhy::moove(Position* master,Position* slave)
 
         if((_touching) !=0)
         {
-            std::cerr<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
             if((_touching)==0)
             {
@@ -178,7 +176,6 @@ int MoteurPhy::moove(Position* master,Position* slave)
         {
             (_touching) = TOUCHING_ANIM_TIME;
 
-            std::cerr<<"touching : "<<(_touching)<<std::endl;
         }
     }
     else
@@ -395,8 +392,9 @@ void MoteurPhy::majCombo()
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
     {
-        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
+        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0){
             ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);
+            }
     }
     std::cout<<"Combo : " << _combo << std::endl;
     free(out_uc);
