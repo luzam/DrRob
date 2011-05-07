@@ -6,43 +6,79 @@
   */
 void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
 {
+    bool up = false;
     switch(_orientation)
     {
-    case HAUT :
-        if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
-            return;
-        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
-        {
-            if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
-                return;
-            (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
-        }
-        _orientation = DROITE;
-        break;
     case BAS :
-        if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
-            return;
-        if(colBlobCourant() == 0||(*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
+        if(colBlobCourant() == 0)
         {
-            if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK )
                 return;
-            (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+        }
+        else if(colBlobCourant() == 5)
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+            else return;
+        }
+        else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
+                return;
+            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
+            {
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+            }
         }
         _orientation = GAUCHE;
+        break;
+    case HAUT :
+        if(colBlobCourant() == 0)
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+            else return;
+        }
+        else if(colBlobCourant() == 5)
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK )
+                return;
+        }
+        else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK)
+                return;
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK||
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
+                up = true;
+            else if(colBlobCourant() == 0||(*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
+            {
+                if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
+                    return;
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+            }
+        }
+        if (up)
+        {
+            (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
+        }
+        _orientation = DROITE;
         break;
     case GAUCHE :
         _orientation = HAUT;
         break;
     case DROITE :
-        bool up = false;
-        if(ligneBlobCourant()>=16)
+        if(ligneBlobCourant()==17)
             up = true;
-        else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+        else if(
+            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant())).color()!=BLANK||
+            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
             up = true;
-        if(up)
+
+        if (up)
         {
-            if(colBlobCourant()==0)
-                return;
             (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
         }
         _orientation = BAS;
@@ -61,28 +97,63 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
   */
 void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
 {
-
+    bool up = false;
     switch(_orientation)
     {
     case BAS :
-        if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
-            return;
-        if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
+        if(colBlobCourant() == 0)
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK )
                 return;
-            (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+        }
+        else if(colBlobCourant() == 5)
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+            else return;
+        }
+        else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
+                return;
+            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
+            {
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+            }
         }
         _orientation = DROITE;
         break;
     case HAUT :
-        if(colBlobCourant() == 0&&(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
-            return;
-        if(colBlobCourant() == 0||(*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
+        if(colBlobCourant() == 0)
         {
-            if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+            else return;
+        }
+        else if(colBlobCourant() == 5)
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK )
                 return;
-            (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+        }
+        else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK)
+                return;
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK||
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
+                up = true;
+            else if(colBlobCourant() == 0||(*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
+            {
+                if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
+                    return;
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+            }
+        }
+        if (up)
+        {
+            (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
         }
         _orientation = GAUCHE;
         break;
@@ -90,15 +161,15 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         _orientation = HAUT;
         break;
     case GAUCHE :
-        bool up = false;
-        if(ligneBlobCourant()>=16)
+        if(ligneBlobCourant()==17)
             up = true;
-        else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+        else if(
+            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant())).color()!=BLANK||
+            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
             up = true;
+
         if (up)
         {
-            if(colBlobCourant()==0)
-                return;
             (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
         }
         _orientation = BAS;

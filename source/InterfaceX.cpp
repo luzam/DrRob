@@ -330,7 +330,7 @@ _commandes[0][CGAUCHE]=SDLK_LEFT;
 _commandes[0][CDROITE]=SDLK_RIGHT;
 _commandes[0][CBAS]=SDLK_DOWN;
 _commandes[0][CHORAIRE]=SDLK_UP;
-_commandes[0][CANTIHORAIRE]=SDLK_RCTRL;
+_commandes[0][CANTIHORAIRE]=SDLK_0;
 
 _commandes[1][CGAUCHE]=SDLK_a;
 _commandes[1][CDROITE]=SDLK_d;
