@@ -737,8 +737,8 @@ void InterfaceX::blit_fond()
 void InterfaceX::blits(std::vector<DashBoard> dashBoards)
 {
     blit_fond();
-    blit_dash();
     blit_blobs(dashBoards);
+    blit_dash();
     blit_avatars();
 }
 void InterfaceX::blit_dash()
@@ -820,7 +820,7 @@ void InterfaceX::blit_avatars()
     for(size_t j=0; j<_vDash.size(); j++)
     {
 
-        offset_img.x=(rand()%6)*ceil(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        offset_img.x=(rand()%5)*ceil(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
         if(cpt>12)
             cpt=0;
         offset_img.y=cpt*ceil(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
@@ -845,7 +845,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
     int offsetgrilley;
     for(size_t j=0; j<dashBoards.size(); j++)
     {
-        for(int l=0; l<18; l++)
+        for(int l=6; l<18; l++)
         {
             for(int c=0; c<6; c++)
             {
@@ -860,8 +860,8 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                     //On calcule les coordonnées des blobs
                     blobx=c*_taille_blob;
                     bloby=l*_taille_blob;
-
                     blit_un_blob(((*(dashBoards.at(j).grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
+
                 }
             }
         }
@@ -1121,7 +1121,6 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
 }
 void InterfaceX::maj_anims(DashBoard& dash)
 {
-
     bool retour =false;
     if(dash.moteurPhy()->falling()==0 && dash.moteurPhy()->comboting() ==0 && dash.grille()->checkLanding()==0)
         retour = true;
