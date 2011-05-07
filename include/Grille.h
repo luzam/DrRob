@@ -7,17 +7,14 @@
 #include "Blobs.h"
 #include "time.h"
 #include "stdlib.h"
-#define LANDING_ANIM_TIME 3
+#define LANDING_ANIM_TIME 6
 
 
 class Grille{
 
 protected :
     std::vector<Blobs> _grille;
-    void checkLink();
-    void checkState();
-    void checkHole();
-    void checkCombo();
+
     void setLink(int l, int c, int n, int s, int e, int w);
     public :
     Grille():_grille(18*6){
@@ -31,7 +28,12 @@ protected :
     }
     bool checkLoose();
     int checkFalling();
+    int checkLanding();
     void check();
+    void checkLink();
+    void checkState();
+    void checkHole();
+    void checkCombo();
     int checkDark(int size);
     void switchBlobs(int l1,int c1,int l2,int c2);
     Blobs* operator()(int ligne,int col)
@@ -44,6 +46,7 @@ protected :
         assert(6*ligne+col<18*6);
         _grille.at(6*ligne + col) = value;
     }
+
 };
 
 #endif

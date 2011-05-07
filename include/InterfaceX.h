@@ -8,6 +8,7 @@
 #include <vector>
 #include "Position.h"
 #include "DashBoard.h"
+#include <cmath>
 #ifdef WIN32
 #define WINDOWS
 #endif
@@ -27,6 +28,8 @@
 #include "../include/State.h"
 #include "../include/Blobs.h"
 #include "../include/Position.h"
+#include "../include/MoteurPhy.h"
+
 #include <time.h>
 #include <sstream>
 class InterfaceX
@@ -72,11 +75,13 @@ protected:
     int _grille_W;
     int _grille_H;
     int _nb_blobs;
+    int _shining;
+    int _cpt;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
     _blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40)
+    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_shining(0),_cpt(0)
     {
 
         _offset_menu.w=_SCREEN_WIDTH;
@@ -151,7 +156,7 @@ public:
     void decouper_sprite();
     void blit_avatars();
     void blit_un_blob(Blobs* blob,int x,int y);
-    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining);
+    void blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n);
     void blits(std::vector<DashBoard> dashBoards);
     void blit_menu();
     void resize_menu();
@@ -166,6 +171,10 @@ public:
     int anim_comboting(Blobs* blob);
     int anim_falling(Blobs* blob);
     int anim_landing(Blobs* blob);
+    void maj_anims(DashBoard& dash);
+    void maj_shining();
+    void tourne_un_blob(Position* pivot,Position* slave,int sens, int angle,int target);
+
 };
 #endif // INTERFACEX_H_INCLUDED
 

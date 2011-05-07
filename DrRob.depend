@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1304186447 source:c:\users\lucas\desktop\drrob\source\dashboard.cpp
+1304676959 source:c:\users\lucas\desktop\drrob\source\dashboard.cpp
 	"../include/DashBoard.h"
 
-1304170332 c:\users\lucas\desktop\drrob\include\dashboard.h
+1304689487 c:\users\lucas\desktop\drrob\include\dashboard.h
 	"Blobs.h"
 	"Position.h"
 	"MoteurPhy.h"
@@ -11,7 +11,7 @@
 	<list>
 	<iostream>
 
-1304264274 c:\users\lucas\desktop\drrob\include\blobs.h
+1304676684 c:\users\lucas\desktop\drrob\include\blobs.h
 	"State.h"
 	"Color.h"
 	"Link.h"
@@ -25,7 +25,7 @@
 
 1304170332 c:\users\lucas\desktop\drrob\include\position.h
 
-1304264315 c:\users\lucas\desktop\drrob\include\moteurphy.h
+1304691317 c:\users\lucas\desktop\drrob\include\moteurphy.h
 	<stdio.h>
 	"Position.h"
 	"Grille.h"
@@ -37,7 +37,7 @@
 	<set>
 	<iostream>
 
-1304265278 c:\users\lucas\desktop\drrob\include\grille.h
+1304674323 c:\users\lucas\desktop\drrob\include\grille.h
 	<iostream>
 	<assert.h>
 	<vector>
@@ -53,7 +53,7 @@
 
 1304170332 c:\users\lucas\desktop\drrob\include\orientation.h
 
-1304355004 source:c:\users\lucas\desktop\drrob\source\game.cpp
+1304691191 source:c:\users\lucas\desktop\drrob\source\game.cpp
 	"../include/Game.h"
 	"../include/InterfaceX.h"
 
@@ -70,10 +70,10 @@
 	"InterfaceX.h"
 	<iostream>
 
-1304170332 c:\users\lucas\desktop\drrob\include\clock.h
+1304684777 c:\users\lucas\desktop\drrob\include\clock.h
 	<SDL.h>
 
-1304264863 c:\users\lucas\desktop\drrob\include\interfacex.h
+1304691515 c:\users\lucas\desktop\drrob\include\interfacex.h
 	<SDL.h>
 	<SDL_image.h>
 	<iostream>
@@ -82,6 +82,7 @@
 	<vector>
 	"Position.h"
 	"DashBoard.h"
+	<cmath>
 	<stdio.h>
 	<direct.h>
 	<unistd.h>
@@ -90,6 +91,7 @@
 	"../include/State.h"
 	"../include/Blobs.h"
 	"../include/Position.h"
+	"../include/MoteurPhy.h"
 	<time.h>
 	<sstream>
 
@@ -97,10 +99,10 @@
 	<math.h>
 	<SDL.h>
 
-1304265294 source:c:\users\lucas\desktop\drrob\source\grille.cpp
+1304674495 source:c:\users\lucas\desktop\drrob\source\grille.cpp
 	"../include/Grille.h"
 
-1304265871 source:c:\users\lucas\desktop\drrob\source\interfacex.cpp
+1304692238 source:c:\users\lucas\desktop\drrob\source\interfacex.cpp
 	"../include/InterfaceX.h"
 	<stdio.h>
 	<direct.h>
@@ -113,7 +115,7 @@
 	<time.h>
 	<sstream>
 
-1304170336 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
+1304689139 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
 	"../include/MoteurPhy.h"
 
 1304170332 source:c:\users\lucas\desktop\drrob\source\sdl_rotozoom.c

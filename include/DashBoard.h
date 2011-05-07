@@ -64,12 +64,12 @@ public :
     Blobs* slaveBlob(){return &_slaveBlob;}
     Blobs* nextMaster(){return &_nextMaster;}
     Blobs* nextSlave(){return &_nextSlave;}
+    void setCombo(int combo){_combo = combo;}
     void resetCombo();
     bool launchCombo()const{return _launchCombo;}
     int combo()const{return _combo;}
     void addDarkBlob();
     bool looser()const{return _looser;}
-
 
 };
 

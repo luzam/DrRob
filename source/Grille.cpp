@@ -34,11 +34,23 @@ void Grille::checkHole()
 
 }
 
-int Grille::checkFalling(){
+int Grille::checkFalling()
+{
     int max = 0;
     for(int l=17; l>=0; --l)
         for(int c=5; c>=0; --c)
             if((_grille)[6*l+c].state()==FALLING)
+                max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
+    return max;
+
+}
+
+int Grille::checkLanding()
+{
+    int max = 0;
+    for(int l=17; l>=0; --l)
+        for(int c=5; c>=0; --c)
+            if((_grille)[6*l+c].state()==LANDING)
                 max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
     return max;
 
@@ -190,31 +202,34 @@ void Grille::checkCombo()
             {
 
                 _grille.at(6*l+c).setComboting(_grille.at(6*l+c).current()-1);
-                std::cout<<"---------------->>>>>>>>>>>GRILLECPP>>>>>"<<_grille.at(6*l+c).current()<<"\n";
-                if(l!=0)
-                    if(_grille.at(6*(l-1)+c).color()==DARK)
-                    {
-                        _grille.at(6*(l-1)+c).setState(COMBOTING);
-                        _grille.at(6*(l-1)+c).setComboting(_grille.at(6*(l)+c).current());
-                    }
-                if(l!=17)
-                    if(_grille.at(6*(l+1)+c).color()==DARK)
-                    {
-                        _grille.at(6*(l+1)+c).setState(COMBOTING);
-                        _grille.at(6*(l+1)+c).setComboting(_grille.at(6*(l)+c).current());
-                    }
-                if(c!=5)
-                    if(_grille.at(6*(l)+c+1).color()==DARK)
-                    {
-                        _grille.at(6*(l)+c+1).setState(COMBOTING);
-                        _grille.at(6*(l)+c+1).setComboting(_grille.at(6*(l)+c).current());
-                    }
-                if(c!=0)
-                    if(_grille.at(6*(l)+c-1).color()==DARK)
-                    {
-                        _grille.at(6*(l)+c-1).setState(COMBOTING);
-                        _grille.at(6*(l)+c-1).setComboting(_grille.at(6*(l)+c).current());
-                    }
+                if(_grille.at(6*l+c).color()!=DARK)
+                {
+                    std::cout<<"---------------->>>>>>>>>>>GRILLECPP>>>>>"<<_grille.at(6*l+c).current()<<"\n";
+                    if(l!=0)
+                        if(_grille.at(6*(l-1)+c).color()==DARK)
+                        {
+                            _grille.at(6*(l-1)+c).setState(COMBOTING);
+                            _grille.at(6*(l-1)+c).setComboting(_grille.at(6*(l)+c).current());
+                        }
+                    if(l!=17)
+                        if(_grille.at(6*(l+1)+c).color()==DARK)
+                        {
+                            _grille.at(6*(l+1)+c).setState(COMBOTING);
+                            _grille.at(6*(l+1)+c).setComboting(_grille.at(6*(l)+c).current());
+                        }
+                    if(c!=5)
+                        if(_grille.at(6*(l)+c+1).color()==DARK)
+                        {
+                            _grille.at(6*(l)+c+1).setState(COMBOTING);
+                            _grille.at(6*(l)+c+1).setComboting(_grille.at(6*(l)+c).current());
+                        }
+                    if(c!=0)
+                        if(_grille.at(6*(l)+c-1).color()==DARK)
+                        {
+                            _grille.at(6*(l)+c-1).setState(COMBOTING);
+                            _grille.at(6*(l)+c-1).setComboting(_grille.at(6*(l)+c).current());
+                        }
+                }
             }
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
@@ -254,7 +269,8 @@ void Grille::check()
   *
   * (documentation goes here)
   */
-bool Grille::checkLoose(){
+bool Grille::checkLoose()
+{
     return (_grille.at(6*5+2).color()!=BLANK)?true:false;
 }
 /** @brief (one liner)
@@ -271,7 +287,7 @@ int Grille::checkDark(int size)
     if(lignPut>0)
     {
         int count=0;
-        for(int ligne=4 ;++count<=lignPut; --ligne)
+        for(int ligne=4 ; ++count<=lignPut; --ligne)
         {
             for(int i=0; i<6; ++i)
             {

@@ -30,8 +30,8 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
     {
         optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
         SDL_FreeSurface( loadedImage );
-        if ( optimizedImage != NULL )
-            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 255, 255, 0 ) );
+        // if ( optimizedImage != NULL )
+        //SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 255, 255, 0 ) );
     }
     else
     {
@@ -50,7 +50,7 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
@@ -394,7 +394,7 @@ bool InterfaceX::resize_files()
     std::cout<<"TAILLE BLOB /20 : "<<_blobs->w/20<<std::endl;
     std::cout<<"TAILLE BLOB final : "<<_taille_blob<<std::endl;
 
-resize_blobsIMG();
+    resize_blobsIMG();
     return true;
 }
 void InterfaceX::resize_menu()
@@ -490,42 +490,56 @@ void InterfaceX::blit_dash()
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
-int InterfaceX::anim_falling(Blobs* blob){
-return 17;
+int InterfaceX::anim_falling(Blobs* blob)
+{
+    return 17;
 
 }
-int InterfaceX::anim_landing(Blobs* blob){
-return 16;
+int InterfaceX::anim_landing(Blobs* blob)
+{
+    return 16;
 
 }
 
-int InterfaceX::anim_comboting(Blobs* blob){
-if(blob->current()<=3)
-return 33;
-else
-return 32;
+int InterfaceX::anim_comboting(Blobs* blob)
+{
+//    int pas = COMBOTING_ANIM_TIME -3;
+//    if(blob->current())
+
+    if(blob->current()<=4)
+        return 33;
+    else if((blob->current())>= 30 )
+    {
+        if((blob->current())%4 >= 3)
+            return 19;
+        else
+            return 1;
+    }
+    else
+        return 32;
 
 }
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
     //SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
-    switch(blob->state()){
+    switch(blob->state())
+    {
     case NO_STATE:
-    apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
-    break;
+        apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
+        break;
     case FALLING:
-    apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
-    break;
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
+        break;
     case LANDING :
-    apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
-    break;
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
+        break;
     case COMBOTING:
-    apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
 
-    break;
+        break;
     default://ne doit pas arriver mais pour debug
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
-    break;
+        break;
 
     }
 }
@@ -558,12 +572,12 @@ void InterfaceX::blit_avatars()
         cpt++;
     }
 }
-void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining)
+void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
 {
-    if(!shining)
-    blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
+    if(!_shining)
+        blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
     else
-    apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
+        apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
     blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
 }
 void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
@@ -608,10 +622,11 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
     return r;
 }
-int InterfaceX::closestInt(double d){
+int InterfaceX::closestInt(double d)
+{
 
 
-return 1;
+    return 1;
 }
 bool InterfaceX::compute_offsets()
 {
@@ -699,8 +714,9 @@ void InterfaceX::resize_vect()
     }
 
 }
-void InterfaceX::resize_blobsIMG(){
-Uint32 rmask, gmask, bmask, amask;
+void InterfaceX::resize_blobsIMG()
+{
+    Uint32 rmask, gmask, bmask, amask;
 
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     rmask = 0xff000000;
@@ -713,20 +729,23 @@ Uint32 rmask, gmask, bmask, amask;
     bmask = 0x00ff0000;
     amask = 0xff000000;
 #endif
+    /* rmask=0;
+     gmask=0;
+     bmask=0;
+     amask=0;*/
 //D'abord on alloue la surface necessaire
     for(int i=0; i<SIZE_COLOR-1; i++)
     {
         for(int j=0; j<_nb_blobs; j++)
         {
             _blobsIMG[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob, _taille_blob, 32, rmask, gmask, bmask, amask );
-
         }
     }
     for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
         for(int j=0; j<_nb_blobs; j++) //0 à 40
             _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
 
-   for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
         for(int j=0; j<_nb_blobs; j++) //0 à 40
             std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
 
@@ -750,12 +769,17 @@ void InterfaceX::decouper_sprite()
     bmask = 0x00ff0000;
     amask = 0xff000000;
 #endif
+    /*  rmask=0;
+      gmask=0;
+      bmask=0;
+      amask=0;*/
 //D'abord on alloue la surface necessaire
     for(int i=0; i<SIZE_COLOR-1; i++)
     {
         for(int j=0; j<_nb_blobs; j++)
         {
             _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini, 32, rmask, gmask, bmask, amask );
+            SDL_SetColorKey( _blobsIMG_ini[i][j], SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( _blobsIMG_ini[i][j]->format, 0, 255, 0 ) );
 
         }
     }
@@ -858,3 +882,105 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
         break;
     }
 }
+void InterfaceX::maj_anims(DashBoard& dash)
+{
+
+    bool retour =false;
+    if(dash.moteurPhy()->falling()==0 && dash.moteurPhy()->comboting() ==0 && dash.grille()->checkLanding()==0)
+        retour = true;
+    maj_shining();
+    dash.moteurPhy()->fall();
+    dash.grille()->check();
+    // dash.grille()->checkCombo();
+    if((dash.moteurPhy()->falling()!=0 || dash.moteurPhy()->comboting() !=0 || dash.grille()->checkLanding()!=0) && retour )
+        return ;
+    dash.moteurPhy()->setFalling(dash.grille()->checkFalling());
+    if(dash.moteurPhy()->falling()==0)
+        dash.moteurPhy()->majCombo();
+    if(dash.moteurPhy()->fixed())
+    {
+        dash.grille()->check();
+        dash.masterBlob()->setColor(BLANK);
+        dash.slaveBlob()->setColor(BLANK);
+    }
+    if(dash.moteurPhy()->falling()!=0)
+    {
+        dash.moteurPhy()->setFalling(dash.moteurPhy()->falling()-1);
+    }
+    if(dash.moteurPhy()->comboting()!=0 && dash.moteurPhy()->falling()==0 && dash.grille()->checkLanding()==0 )
+    {
+        //TO DO : animation comboting
+        // _go = false;
+        dash.moteurPhy()->setComboting(dash.moteurPhy()->comboting()-1);
+        // std::cout<<"---------------->>>>>>>>>>>>>>>>"<<_moteurPhy->comboting()<<"\n";
+        if(dash.moteurPhy()->comboting()==0)
+        {
+
+            dash.setCombo((dash.combo()==0)?dash.moteurPhy()->combo():(dash.combo()!=0&&dash.combo()<6)?dash.combo()+2*dash.moteurPhy()->combo():(dash.combo()>6&&dash.combo()<12)?dash.combo()+4*dash.moteurPhy()->combo():dash.combo()+6*dash.moteurPhy()->combo());
+        }//return;
+    }
+    std::cerr<<"turning + -> "<<dash.moteurPhy()->turningDirect()<<"\n";
+    std::cerr<<"turning - -> "<<dash.moteurPhy()->turningHoraire()<<"\n";
+
+    if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)
+    {
+        int sens = 0;
+        int angle = dash.moteurPhy()->turningDirect()+dash.moteurPhy()->turningHoraire();
+        if(dash.moteurPhy()->turningDirect()!=0)
+        {
+            sens = 1;
+            dash.moteurPhy()->setTurningDirect(dash.moteurPhy()->turningDirect()-1);
+        }
+        else
+        {
+            dash.moteurPhy()->setTurningHoraire(dash.moteurPhy()->turningHoraire()-1);
+            sens = -1;
+            //return;
+        }
+        tourne_un_blob(dash.masterPos(),dash.slavePos(),sens,angle,dash.moteurPhy()->orientation());
+
+    }
+
+
+
+}
+void InterfaceX::maj_shining()
+{
+    if(_cpt>=15)
+    {
+        _shining = (_shining==0)?1:0;
+        _cpt=0;
+    }
+    else
+        _cpt++;
+}
+void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int angle,int target)
+{
+    double x0 = pivot->x();
+    double y0 = pivot->y();
+    double angle0 = 0;
+    switch(target)
+    {
+    case BAS:
+        angle0 = 1.5707;
+        break;
+    case HAUT :
+        angle0 = -1.5707;
+        break;
+    case GAUCHE :
+        angle0 = 3.1415;
+        break;
+    case DROITE :
+        angle0 = 0;
+        break;
+    }
+    double angle_diff = sens * angle * 1.5707 / TURNING_ANIM_TIME;
+    slave->setX(x0 + _taille_blob*std::cos(angle0+angle_diff));
+    slave->setY(y0 + _taille_blob*std::sin(angle0+angle_diff));
+
+}
+
+
+
+
+
