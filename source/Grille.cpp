@@ -24,6 +24,13 @@ void Grille::checkHole()
                     }
                 }
             }
+            else if((_grille)[6*l+c].state()==FALLIN_ANIM)
+            {
+                if((_grille)[6*l+c].current()!=0)
+                {
+                    _grille[6*l+c].setFallingAnim(_grille[l*6+c].current()-2);
+                }
+            }
             else if((_grille)[6*l+c].state()==LANDING)
             {
                 if((_grille)[6*l+c].current()>0)
@@ -51,6 +58,16 @@ int Grille::checkLanding()
     for(int l=17; l>=0; --l)
         for(int c=5; c>=0; --c)
             if((_grille)[6*l+c].state()==LANDING)
+                max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
+    return max;
+
+}
+int Grille::checkMaxCombo()
+{
+    int max = 0;
+    for(int l=17; l>=0; --l)
+        for(int c=5; c>=0; --c)
+            if((_grille)[6*l+c].state()==COMBOTING)
                 max = (max <=_grille[6*l+c].current())?_grille[6*l+c].current() : max;
     return max;
 
@@ -310,4 +327,14 @@ int Grille::checkDark(int size)
     }
 
     return put;
+}
+
+void Grille::animFallin(int taille){
+    for(int l=0; l<18; l++)
+        for(int c=0; c<6; c++){
+        _grille[l*6+c].setState(FALLIN_ANIM);
+        _grille[l*6+c].setFallingAnim(2*18*taille);
+        _grille[l*6+c].setFallingDepth(2*18*taille);
+        _grille[l*6+c].setFallingCol(2*18);
+        }
 }

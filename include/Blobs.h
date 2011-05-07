@@ -74,6 +74,11 @@ public :
         this->setState(FALLING);
         _current = falling;
     }
+     void setFallingAnim(int falling)
+    {
+        this->setState(FALLIN_ANIM);
+        _current = falling;
+    }
     void setTurning(int turning)
     {
         this->setState(NO_STATE);

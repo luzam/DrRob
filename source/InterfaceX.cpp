@@ -784,6 +784,7 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
     case NO_STATE:
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
         break;
+    case FALLIN_ANIM :
     case FALLING:
         apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
         break;
@@ -853,7 +854,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_grille).x()+_vDash.at(j).x();
-                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING)
+                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING ||((*(dashBoards.at(j).grille()))(l,c))->state()==FALLIN_ANIM )
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
                     else
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
@@ -1122,12 +1123,15 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
 void InterfaceX::maj_anims(DashBoard& dash)
 {
     bool retour =false;
+    if(dash.grille()->checkLoose()){
+        dash.masterBlob()->setColor(BLANK);
+        dash.slaveBlob()->setColor(BLANK);
+    }
     if(dash.moteurPhy()->falling()==0 && dash.moteurPhy()->comboting() ==0 && dash.grille()->checkLanding()==0)
         retour = true;
     maj_shining();
     dash.moteurPhy()->fall();
     dash.grille()->check();
-    // dash.grille()->checkCombo();
     if((dash.moteurPhy()->falling()!=0 || dash.moteurPhy()->comboting() !=0 || dash.grille()->checkLanding()!=0) && retour )
         return ;
     dash.moteurPhy()->setFalling(dash.grille()->checkFalling());
@@ -1143,21 +1147,16 @@ void InterfaceX::maj_anims(DashBoard& dash)
     {
         dash.moteurPhy()->setFalling(dash.moteurPhy()->falling()-1);
     }
-    if(dash.moteurPhy()->comboting()!=0 && dash.moteurPhy()->falling()==0 && dash.grille()->checkLanding()==0 )
-    {
-        //TO DO : animation comboting
-        // _go = false;
-        dash.moteurPhy()->setComboting(dash.moteurPhy()->comboting()-1);
-        // std::cout<<"---------------->>>>>>>>>>>>>>>>"<<_moteurPhy->comboting()<<"\n";
-        if(dash.moteurPhy()->comboting()==0)
+            dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
+
+     std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
+        if(dash.moteurPhy()->comboting()==1)
         {
-
-            dash.setCombo((dash.combo()==0)?dash.moteurPhy()->combo():(dash.combo()!=0&&dash.combo()<6)?dash.combo()+2*dash.moteurPhy()->combo():(dash.combo()>6&&dash.combo()<12)?dash.combo()+4*dash.moteurPhy()->combo():dash.combo()+6*dash.moteurPhy()->combo());
-        }//return;
-    }
-    std::cerr<<"turning + -> "<<dash.moteurPhy()->turningDirect()<<"\n";
-    std::cerr<<"turning - -> "<<dash.moteurPhy()->turningHoraire()<<"\n";
-
+            if(dash.combo()==0)
+                dash.setCombo(dash.moteurPhy()->combo()-3);
+            else
+                     dash.setCombo(6*(dash.moteurPhy()->combo()%4) +(dash.moteurPhy()->combo()%4) );
+        }
     if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)
     {
         int sens = 0;

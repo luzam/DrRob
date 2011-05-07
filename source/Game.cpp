@@ -44,7 +44,7 @@ void Game::go()
                     _dashBoards.at(i).moteurPhy()->speedUp();
                 else
                     _dashBoards.at(i).moteurPhy()->speedToNormal();
-                if (keystates[(_X->Commandes())[i][CHORAIRE]] && !_turningBool->at(i) )
+                if ((keystates[(_X->Commandes())[i][CHORAIRE]] )&& !_turningBool->at(i) )
                 {
                     _dashBoards.at(i).moteurPhy()->rotationHoraire(_dashBoards.at(i).masterPos(),_dashBoards.at(i).slavePos());
                     _turningBool->at(i) = true;
@@ -62,11 +62,7 @@ void Game::go()
             }
         }
         if(_clock.tic(20))
-        {
-
-
-
-            for(size_t i=0; i<_dashBoards.size(); i++)
+        {            for(size_t i=0; i<_dashBoards.size(); i++)
                 if(_dashBoards[i].moteurPhy()->speedUpBool())
                     _dashBoards.at(i).go();
 
@@ -81,19 +77,18 @@ void Game::go()
                     if(_dashBoards.at(i).launchCombo())
                     {
                         _combo[i] = _dashBoards.at(i).combo();
+                        std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
                         _dashBoards.at(i).resetCombo();
                     }
                 }
             }
             repartitionCombo();
              //ici les animations indépendantes du fonctionnements du jeu type shining
-            for(size_t i=0; i<_dashBoards.size(); i++)
-                _X->maj_anims(_dashBoards[i]);
             _X->blits(_dashBoards);
             for(size_t i=0; i<_dashBoards.size(); i++)
+                _X->maj_anims(_dashBoards[i]);
+            for(size_t i=0; i<_dashBoards.size(); i++)
             {
-                std::cerr<<"turning x pos -> "<<_dashBoards.at(i).slavePos()->x()<<"\n";
-                std::cerr<<"turning y pos -> "<<_dashBoards.at(i).slavePos()->y()<<"\n";
                 _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
                                        _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
                 _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
@@ -120,7 +115,7 @@ void Game::repartitionCombo()
             while(_combo[i]!=0){
                 do{
                 target = rand() % _dashBoards.size();
-                }while(target==(int)i );//|| _dashBoards[target].looser());
+                }while(target==(int)i || _dashBoards[target].looser());
                 _dashBoards[target].addDarkBlob();
                 _combo[i]--;
             }
