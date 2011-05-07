@@ -8,16 +8,9 @@ void Game::go()
 {
     std::cout<<"On lance le menu"<<std::endl;
     _X->menu();
-<<<<<<< HEAD
     _nbJoueurs=_X->NbJoueurs();
     _nbAI=_X->NbAI();
-    resize_commandes();
-=======
-    _nbJoueurs=_X->select_nbJoueurs();
-    std::cout<<"Nombre de joueurs : "<<_nbJoueurs<<std::endl;
-    _X->setNbJoueurs(_nbJoueurs);
     _turningBool = new std::vector<bool>(_nbJoueurs,false);
->>>>>>> 8e24d3493df2b5f427d2df04b6680b8717f3fb14
     _X->compute_game();
     assert(_nbJoueurs>0);
     initBlobs();
@@ -50,32 +43,20 @@ void Game::go()
             if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
                 continuer = 0;
             if (keystates[SDLK_LEFT])
-                _dashBoards.at(1).moteurPhy()->gauche(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
-            if (keystates[SDLK_RIGHT])
-                _dashBoards.at(1).moteurPhy()->droite(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
-            if (keystates[SDLK_DOWN])
-                _dashBoards.at(1).moteurPhy()->speedUp();
-            else
-                _dashBoards.at(1).moteurPhy()->speedToNormal();
-            if (keystates[SDLK_UP] && !_turningBool->at(1) ){
-                _dashBoards.at(1).moteurPhy()->rotationHoraire(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
-                _turningBool->at(1) = true;}
-            if(!keystates[SDLK_UP] )
-                _turningBool->at(1) = false;
-
-
-               //*/ joueur 2
-            if (keystates[SDLK_s])
                 _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
-            if (keystates[SDLK_f])
+            if (keystates[SDLK_RIGHT])
                 _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
-            if (keystates[SDLK_d])
+            if (keystates[SDLK_DOWN])
                 _dashBoards.at(0).moteurPhy()->speedUp();
             else
                 _dashBoards.at(0).moteurPhy()->speedToNormal();
-            if (keystates[SDLK_e])
+            if (keystates[SDLK_UP] && !_turningBool->at(0) ){
                 _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
-            //*/
+                _turningBool->at(0) = true;}
+            if(!keystates[SDLK_UP] )
+                _turningBool->at(0) = false;
+
+
         }
         if(_clock.tic(30)){
         if(cpt>=4){

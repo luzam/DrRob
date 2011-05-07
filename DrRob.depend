@@ -148,3 +148,291 @@
 	"include/InterfaceX.h"
 	"include/Game.h"
 
+1304355689 source:\\psf\home\desktop\projetmeanbean\drrob\source\dashboard.cpp
+	"../include/DashBoard.h"
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	"MoteurPhy.h"
+	"Orientation.h"
+	<vector>
+	<list>
+	<iostream>
+
+1304355689 \\psf\home\desktop\projetmeanbean\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
+	<iostream>
+
+1304355689 \\psf\home\desktop\projetmeanbean\drrob\include\state.h
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\color.h
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\link.h
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\position.h
+
+1304355689 \\psf\home\desktop\projetmeanbean\drrob\include\moteurphy.h
+	<stdio.h>
+	"Position.h"
+	"Grille.h"
+	"Tree.h"
+	"conected.h"
+	"Blobs.h"
+	"Orientation.h"
+	<map>
+	<set>
+	<iostream>
+
+1304355689 \\psf\home\desktop\projetmeanbean\drrob\include\grille.h
+	<iostream>
+	<assert.h>
+	<vector>
+	"Blobs.h"
+	"time.h"
+	"stdlib.h"
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\tree.h
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\conected.h
+	<vector>
+	<algorithm>
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\orientation.h
+
+1304357982 source:\\psf\home\desktop\projetmeanbean\drrob\source\game.cpp
+	"../include/Game.h"
+	"../include/InterfaceX.h"
+
+1304356795 \\psf\home\desktop\projetmeanbean\drrob\include\game.h
+	"Controls.h"
+	"Blobs.h"
+	"MoteurPhy.h"
+	"DashBoard.h"
+	"Clock.h"
+	<vector>
+	<list>
+	<assert.h>
+	<stdlib.h>
+	<time.h>
+	"InterfaceX.h"
+	<iostream>
+
+1304183437 \\psf\home\desktop\projetmeanbean\drrob\include\controls.h
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\clock.h
+	<SDL.h>
+
+1304356764 \\psf\home\desktop\projetmeanbean\drrob\include\interfacex.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<SDL_ttf.h>
+	"SDL_rotozoom.h"
+	<vector>
+	"Position.h"
+	"DashBoard.h"
+	<stdio.h>
+	<direct.h>
+	<unistd.h>
+	"Color.h"
+	"Link.h"
+	"State.h"
+	"Blobs.h"
+	"Position.h"
+	<time.h>
+	"Clock.h"
+	"Controls.h"
+
+1303698604 \\psf\home\desktop\projetmeanbean\drrob\include\sdl_rotozoom.h
+	<math.h>
+	<SDL.h>
+
+1304355689 source:\\psf\home\desktop\projetmeanbean\drrob\source\grille.cpp
+	"../include/Grille.h"
+
+1304355689 source:\\psf\home\desktop\projetmeanbean\drrob\source\moteurphy.cpp
+	"../include/MoteurPhy.h"
+
+1303698604 source:\\psf\home\desktop\projetmeanbean\drrob\source\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"../include/SDL_rotozoom.h"
+
+1304355689 source:\\psf\home\desktop\projetmeanbean\drrob\main.cpp
+	"include/Game.h"
+	"include/MoteurPhy.h"
+	"include/Game.h"
+	"include/InterfaceX.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+
+1304358984 source:\\psf\home\desktop\projetmeanbean\drrob\source\interfacex.cpp
+	"../include/InterfaceX.h"
+	<sstream>
+
+1304355689 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\dashboard.cpp
+	"../include/DashBoard.h"
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	"MoteurPhy.h"
+	"Orientation.h"
+	<vector>
+	<list>
+	<iostream>
+
+1304355689 e:\users\antoine\desktop\projetmeanbean\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
+	<iostream>
+
+1304355689 e:\users\antoine\desktop\projetmeanbean\drrob\include\state.h
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\color.h
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\link.h
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\position.h
+
+1304355689 e:\users\antoine\desktop\projetmeanbean\drrob\include\moteurphy.h
+	<stdio.h>
+	"Position.h"
+	"Grille.h"
+	"Tree.h"
+	"conected.h"
+	"Blobs.h"
+	"Orientation.h"
+	<map>
+	<set>
+	<iostream>
+
+1304355689 e:\users\antoine\desktop\projetmeanbean\drrob\include\grille.h
+	<iostream>
+	<assert.h>
+	<vector>
+	"Blobs.h"
+	"time.h"
+	"stdlib.h"
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\tree.h
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\conected.h
+	<vector>
+	<algorithm>
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\orientation.h
+
+1304357982 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\game.cpp
+	"../include/Game.h"
+	"../include/InterfaceX.h"
+
+1304356795 e:\users\antoine\desktop\projetmeanbean\drrob\include\game.h
+	"Controls.h"
+	"Blobs.h"
+	"MoteurPhy.h"
+	"DashBoard.h"
+	"Clock.h"
+	<vector>
+	<list>
+	<assert.h>
+	<stdlib.h>
+	<time.h>
+	"InterfaceX.h"
+	<iostream>
+
+1304183437 e:\users\antoine\desktop\projetmeanbean\drrob\include\controls.h
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\clock.h
+	<SDL.h>
+
+1304765072 e:\users\antoine\desktop\projetmeanbean\drrob\include\interfacex.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<SDL_ttf.h>
+	"SDL_rotozoom.h"
+	<vector>
+	"Position.h"
+	"DashBoard.h"
+	<stdio.h>
+	<direct.h>
+	<unistd.h>
+	"Color.h"
+	"Link.h"
+	"State.h"
+	"Blobs.h"
+	"Position.h"
+	<time.h>
+	"Clock.h"
+	"Controls.h"
+
+1303698604 e:\users\antoine\desktop\projetmeanbean\drrob\include\sdl_rotozoom.h
+	<math.h>
+	<SDL.h>
+
+1304355689 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\grille.cpp
+	"../include/Grille.h"
+
+1304355689 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\moteurphy.cpp
+	"../include/MoteurPhy.h"
+
+1303698604 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"../include/SDL_rotozoom.h"
+
+1304355689 source:e:\users\antoine\desktop\projetmeanbean\drrob\main.cpp
+	"include/Game.h"
+	"include/MoteurPhy.h"
+	"include/Game.h"
+	"include/InterfaceX.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+
+1304765095 source:e:\users\antoine\desktop\projetmeanbean\drrob\source\interfacex.cpp
+	"../include/InterfaceX.h"
+	<sstream>
+

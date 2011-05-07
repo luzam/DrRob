@@ -1,11 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-<<<<<<< HEAD
 #include "Controls.h"
-#include "SDL.h"
-=======
-
->>>>>>> 8e24d3493df2b5f427d2df04b6680b8717f3fb14
 #include "Blobs.h"
 #include "MoteurPhy.h"
 #include "DashBoard.h"
@@ -27,13 +22,9 @@ protected :
     std::vector<std::vector<int> > _commandes;
     InterfaceX* _X;
     Clock _clock;
-<<<<<<< HEAD
     int _nbJoueurs;
     int _nbAI;
-=======
-    int _nbJoueurs;
     std::vector<bool> *_turningBool;
->>>>>>> 8e24d3493df2b5f427d2df04b6680b8717f3fb14
     int *_combo;
 public :
 
