@@ -264,7 +264,7 @@ int InterfaceX::controls()
     SDL_Surface *text=NULL;
     SDL_Surface *joueur=NULL;
     std::ostringstream nbj;
-    _commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS));
+
     TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
     SDL_Color textcolor = {255,255,255};
     SDL_Event event;
@@ -320,8 +320,43 @@ int InterfaceX::controls()
     }
     return 1;
 }
+
+void InterfaceX::controls_resize(){
+_commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS,0));
+}
+void InterfaceX::controls_by_default(){
+_commandes.resize(4,std::vector<int> (5));
+_commandes[0][CGAUCHE]=SDLK_LEFT;
+_commandes[0][CDROITE]=SDLK_RIGHT;
+_commandes[0][CBAS]=SDLK_DOWN;
+_commandes[0][CHORAIRE]=SDLK_UP;
+_commandes[0][CANTIHORAIRE]=SDLK_EXCLAIM;
+
+_commandes[1][CGAUCHE]=SDLK_a;
+_commandes[1][CDROITE]=SDLK_d;
+_commandes[1][CBAS]=SDLK_s;
+_commandes[1][CHORAIRE]=SDLK_w;
+_commandes[1][CANTIHORAIRE]=SDLK_q;
+
+_commandes[2][CGAUCHE]=SDLK_g;
+_commandes[2][CDROITE]=SDLK_j;
+_commandes[2][CBAS]=SDLK_h;
+_commandes[2][CHORAIRE]=SDLK_y;
+_commandes[2][CANTIHORAIRE]=SDLK_t;
+
+_commandes[3][CGAUCHE]=SDLK_k;
+_commandes[3][CDROITE]=SDLK_m;
+_commandes[3][CBAS]=SDLK_l;
+_commandes[3][CHORAIRE]=SDLK_o;
+_commandes[3][CANTIHORAIRE]=SDLK_i;
+
+}
+
 int InterfaceX::controls_and_start()
 {
+    //Ici on connait le nb de joueurs
+    // ON realloue le vecteur de commandes
+    controls_resize();
     int continuer=1;
     SDL_Event event;
     Clock _clock;
@@ -333,8 +368,9 @@ int InterfaceX::controls_and_start()
     blit_cursor();
     SDL_Flip(_screen);
     Position _offset_nbj;
-    _offset_nbj.setX(_offset_cursor.x()+50);
-    _offset_nbj.setY(_offset_cursor.y()-20);
+  //  int offx_ini=80*_ratio_menu+_decalage_menu_x;
+    int offy_ini=87*_ratio_menu+_decalage_menu_y;
+    _offset_cursor.setY(offy_ini);
     int saut=35*_ratio_menu;
     SDL_EnableKeyRepeat(100,50);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
@@ -388,6 +424,7 @@ int InterfaceX::controls_and_start()
                 if(curseur==1)
                 {
                     std::cout<<"Start the game"<<std::endl;
+                    continuer=0;
                 }
                 else if(curseur==2)
                 {
@@ -477,6 +514,9 @@ void InterfaceX::menu()
                             _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
                     position_menu--;
                     position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                    break;
+                    case 1:
+                    continuer=0;
                     break;
                 default:
                     break;
@@ -744,6 +784,7 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
     case NO_STATE:
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
         break;
+    case FALLIN_ANIM :
     case FALLING:
         apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
         break;
@@ -813,7 +854,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_grille).x()+_vDash.at(j).x();
-                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING)
+                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING ||((*(dashBoards.at(j).grille()))(l,c))->state()==FALLIN_ANIM )
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
                     else
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
@@ -1097,6 +1138,10 @@ void InterfaceX::maj_anims(DashBoard& dash)
 {
 
     bool retour =false;
+    if(dash.grille()->checkLoose()){
+        dash.masterBlob()->setColor(BLANK);
+        dash.slaveBlob()->setColor(BLANK);
+    }
     if(dash.moteurPhy()->falling()==0 && dash.moteurPhy()->comboting() ==0 && dash.grille()->checkLanding()==0)
         retour = true;
     maj_shining();
@@ -1122,14 +1167,11 @@ void InterfaceX::maj_anims(DashBoard& dash)
      std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
         if(dash.moteurPhy()->comboting()==1)
         {
-                     dash.setCombo(dash.combo() + dash.moteurPhy()->combo());
-
+            if(dash.combo()==0)
+                dash.setCombo(dash.moteurPhy()->combo()-3);
+            else
+                     dash.setCombo(6*(dash.moteurPhy()->combo()%4) +(dash.moteurPhy()->combo()%4) );
         }
-  //  if(dash.moteurPhy()->comboting()!=0 && dash.moteurPhy()->falling()==0 && dash.grille()->checkLanding()==0 )
-   // {
-   // }
-
-
     if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)
     {
         int sens = 0;
@@ -1211,10 +1253,10 @@ void InterfaceX::blit_avatars()
     for(size_t j=0; j<_vDash.size(); j++)
     {
 
-        offset_img.x=(rand()%6)*ceil(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        offset_img.x=(rand()%6)*ceil(offset_img.w+4.0*_ratio*_ratio_avat_ini);//_ratio*_ratio_avat_ini);
         if(cpt>12)
             cpt=0;
-        offset_img.y=cpt*ceil(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        offset_img.y=cpt*ceil(offset_img.h+6.0*_ratio*_ratio_avat_ini);//_ratio*_ratio_avat_ini);
         std::cout<<"w : "<<offset_img.w<<" h : "<<offset_img.h<<" x : "<<offset_img.x<<" y : "<<offset_img.y<<std::endl;
         apply_surface(_vDash.at(j).x()+_offset_avatar.x(),_vDash.at(j).y()+_offset_avatar.y(),_avatars,_screen,&offset_img);
         cpt++;

@@ -103,6 +103,8 @@ public:
     resize_vect();
     decouper_sprite();
     resize_menu();
+    //on rempli les commandes par default
+    controls_by_default();
     }
     ~InterfaceX()
     {
@@ -183,6 +185,9 @@ public:
     void maj_anims(DashBoard& dash);
     void maj_shining();
     void tourne_un_blob(Position* pivot,Position* slave,int sens, int angle,int target);
+    std::vector<std::vector<int> > Commandes()const{return _commandes;}
+    void controls_resize();
+    void controls_by_default();
 
 };
 #endif // INTERFACEX_H_INCLUDED

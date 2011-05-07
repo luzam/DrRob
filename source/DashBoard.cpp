@@ -9,9 +9,16 @@ void DashBoard::go()
 
     bool retour =false;
 
-    if(_looser)
+    if(!_looser&&_grille->checkLoose()){
+        _grille->animFallin(_moteurPhy->taille());
+        _masterBlob.setColor(BLANK);
+        _slaveBlob.setColor(BLANK);
+        _looser = _grille->checkLoose();
         return;
-    _looser = _grille->checkLoose();
+    }
+    if(_looser)
+    return;
+
     if(_moteurPhy->fixed())
     {
         _masterBlob.setColor(BLANK);
