@@ -23,15 +23,16 @@
 #include <unistd.h>
 #define GetCurrentDir getcwd
 #endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
-#include "../include/MoteurPhy.h"
-
-#include <time.h>
 #include <sstream>
+#include "Color.h"
+#include "Link.h"
+#include "State.h"
+#include "Blobs.h"
+#include "Position.h"
+#include <time.h>
+#include "Clock.h"
+#include "Controls.h"
+
 class InterfaceX
 {
 protected:
@@ -47,6 +48,7 @@ protected:
     int _decalage_menu_y;
     double _ratio_avat_ini;
     int _nbJoueurs;
+    int _nbAI;
     double _ratio_menu;
     Position _offset_grille;
     Position _offset_nextBlob;
@@ -58,7 +60,6 @@ protected:
     std::vector<Position> _vDash;
     SDL_Surface *_dashboard;
     SDL_Surface *_background;
-    SDL_Surface *_blobs;
     SDL_Surface *_avatars;
     SDL_Surface *_avatars_ini;
     SDL_Surface *_screen;
@@ -75,27 +76,33 @@ protected:
     int _grille_W;
     int _grille_H;
     int _nb_blobs;
-    int _shining;
     int _cpt;
+    int _taille_menu_ini;
+    int _taille_menu;
+    int _taille_text;
+    std::vector<std::vector<int> > _commandes;
+    int _shining;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
-    _blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_offset_grille(),_offset_nextBlob()
-    ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_blobs(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_shining(0),_cpt(0)
+    _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_nbJoueurs(1),_nbAI(0),_offset_grille(),_offset_nextBlob()
+    ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
+    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0)
     {
 
         _offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
         _offset_menu.y=0;
-        _offset_cursor.setX(83);
-        _offset_cursor.setY(73);
+        _offset_cursor.setX(80);
+        _offset_cursor.setY(87);
+
 
 
     init_SDL();
     load_files();
     resize_vect();
     decouper_sprite();
+    resize_menu();
     }
     ~InterfaceX()
     {
@@ -128,10 +135,6 @@ public:
     {
         return &_event;
     }
-    SDL_Surface* blobs()const
-    {
-        return _blobs;
-    }
     SDL_Surface* background()const
     {
         return _background;
@@ -140,6 +143,8 @@ public:
     {
         return _dashboard;
     }
+    int NbJoueurs()const{return _nbJoueurs;}
+    int NbAI()const{return _nbAI;}
     int grille_H()const{return _grille_H;}
     int grille_W()const{return _grille_W;}
     bool resize_files();
@@ -162,15 +167,19 @@ public:
     void resize_menu();
     void blit_nextBlob(Blobs* master,Blobs* slave,int n);
     void blit_blobs(std::vector<DashBoard> dashBoards);
-
     SDL_Rect offset_sprite(int color,int link,int state);
     Uint32 getpixel(SDL_Surface* s,int x,int y);
     void putpixel(SDL_Surface* s,int x,int y,Uint32 p);
     void resize_blobsIMG();
-    int closestInt(double d);
     int anim_comboting(Blobs* blob);
     int anim_falling(Blobs* blob);
     int anim_landing(Blobs* blob);
+    void maj_offsets(int dx,int dy);
+    int controls_and_start();
+    int controls();
+    void resize_blobs();
+    void resize_dash();
+    void resize_avatars();
     void maj_anims(DashBoard& dash);
     void maj_shining();
     void tourne_un_blob(Position* pivot,Position* slave,int sens, int angle,int target);

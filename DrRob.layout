@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD:DrRob.layout
 	<File name="include\Blobs.h" open="1" top="0" tabpos="13">
 		<Cursor position="1657" topLine="64" />
+=======
+	<File name="include\Blobs.h" open="1" top="0" tabpos="6">
+		<Cursor position="1435" topLine="0" />
+>>>>>>> 2a6bd9587748f9c3ca5d1221271d0ef95cf754e1:DrRob.layout
 	</File>
 	<File name="include\Clock.h" open="1" top="0" tabpos="3">
 		<Cursor position="225" topLine="14" />
 	</File>
+<<<<<<< HEAD:DrRob.layout
 	<File name="include\Color.h" open="1" top="0" tabpos="15">
 		<Cursor position="0" topLine="0" />
 	</File>
@@ -48,5 +54,33 @@
 	</File>
 	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="11">
 		<Cursor position="9805" topLine="373" />
+=======
+	<File name="include\Controls.h" open="0" top="0" tabpos="6">
+		<Cursor position="94" topLine="0" />
+	</File>
+	<File name="include\DashBoard.h" open="0" top="0" tabpos="4">
+		<Cursor position="696" topLine="0" />
+	</File>
+	<File name="include\Game.h" open="1" top="0" tabpos="2">
+		<Cursor position="507" topLine="0" />
+	</File>
+	<File name="include\Grille.h" open="1" top="0" tabpos="4">
+		<Cursor position="198" topLine="0" />
+	</File>
+	<File name="include\InterfaceX.h" open="1" top="0" tabpos="1">
+		<Cursor position="3469" topLine="108" />
+	</File>
+	<File name="include\Link.h" open="0" top="0" tabpos="0">
+		<Cursor position="52" topLine="0" />
+	</File>
+	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="5">
+		<Cursor position="137" topLine="0" />
+	</File>
+	<File name="source\Game.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="2018" topLine="19" />
+	</File>
+	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="8">
+		<Cursor position="27717" topLine="824" />
+>>>>>>> 2a6bd9587748f9c3ca5d1221271d0ef95cf754e1:DrRob.layout
 	</File>
 </CodeBlocks_layout_file>

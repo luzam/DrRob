@@ -1,24 +1,4 @@
 #include "../include/InterfaceX.h"
-#ifdef WIN32
-#define WINDOWS
-#endif
-#ifdef X64
-#define WINDOWS
-#endif
-#include <stdio.h>  /* defines FILENAME_MAX */
-#ifdef WINDOWS
-#include <direct.h>
-#define GetCurrentDir _getcwd
-#else
-#include <unistd.h>
-#define GetCurrentDir getcwd
-#endif
-#include "../include/Color.h"
-#include "../include/Link.h"
-#include "../include/State.h"
-#include "../include/Blobs.h"
-#include "../include/Position.h"
-#include <time.h>
 #include <sstream>
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
@@ -30,8 +10,8 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
     {
         optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
         SDL_FreeSurface( loadedImage );
-        // if ( optimizedImage != NULL )
-        //SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 255, 255, 0 ) );
+//        if ( optimizedImage != NULL )
+//            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 0, 255, 0 ) );
     }
     else
     {
@@ -50,10 +30,13 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
+    if ( TTF_Init() == -1 )
+        return false;
+
     return true;
 }
 void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
@@ -66,74 +49,70 @@ void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
 int InterfaceX::play_anim_menu(int init,int fin)
 {
     int continuer=1;
-    clock_t tinit,tfinal;
-    double t;
     SDL_Event event;
     _offset_menu.x=init;
     int offsetmenux=_offset_menu.x;
-    tinit=clock();
+    Clock _clock;
     std::cout<<" init : "<<init<<" fin : "<<fin<<std::endl;
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        tfinal=clock();
         Uint8 *keystates = SDL_GetKeyState( NULL );
-        blit_menu();
         SDL_PollEvent(&event);
-        t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
-        //std::cout<<"T : "<<t<<std::endl;
+
+
+
+        if(_clock.tic(5))
+        {
+            blit_menu();
+            if(fin-init>=0)
+                offsetmenux+=5;
+            else
+                offsetmenux-=5;
+
+            if(fin>=init)//Si on avance
+            {
+                if(offsetmenux>=fin)
+                {
+                    _offset_menu.x=fin;
+                    return 0;
+                }
+            }
+            else//si on recule
+            {
+                if(offsetmenux<=fin)
+                {
+                    _offset_menu.x=fin;
+                    return 0;
+                }
+            }
+
+            _offset_menu.x=offsetmenux;
+            std::cout<<"position x : "<<_offset_menu.x<<std::endl;
+            SDL_Flip(_screen);
+        }
         if(keystates[SDLK_BACKSPACE] && fin>=init)//On retourne au debut
         {
-            tinit=tfinal=clock();
 
             while(continuer)
             {
-                blit_menu();
-                tfinal=clock();
-                t=(double)(tfinal-tinit)/CLOCKS_PER_SEC;
-                if(t>0.001)
+
+                if(_clock.tic(5))
                 {
-                    tinit=clock();
-                    offsetmenux-=3;
+                    blit_menu();
+                    offsetmenux-=5;
                     if(offsetmenux<=init)
                     {
                         _offset_menu.x=init;
-                        return 0;
+                        return -1;
                     }
+                    _offset_menu.x=offsetmenux;
+                    SDL_Flip(_screen);
                 }
-                _offset_menu.x=offsetmenux;
+
                 std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
-                SDL_Flip(_screen);
-            }
-        }
 
-        if(t>0.001)
-        {
-            if(fin-init>=0)
-                offsetmenux+=3;
-            else
-                offsetmenux-=3;
-            tinit=clock();
-        }
-        if(fin>=init)//Si on avance
-        {
-            if(offsetmenux>=fin)
-            {
-                _offset_menu.x=fin;
-                return 0;
             }
         }
-        else//si on recule
-        {
-            if(offsetmenux<=fin)
-            {
-                _offset_menu.x=fin;
-                return 0;
-            }
-        }
-
-        _offset_menu.x=offsetmenux;
-        std::cout<<"position x : "<<_offset_menu.x<<std::endl;
-        SDL_Flip(_screen);
     }
     return 1;
 
@@ -141,37 +120,81 @@ int InterfaceX::play_anim_menu(int init,int fin)
 int InterfaceX::select_nbJoueurs()
 {
     int continuer=1;
+    blit_menu();
+    blit_cursor();
+    SDL_Flip(_screen);
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    std::ostringstream nbj;
+    std::ostringstream nba;
+    std::string njoueurs;
+    std::string nai;
+    SDL_Surface* nbJoueurs=NULL;
+    SDL_Surface* nbAI=NULL;
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    SDL_Color textcolor = {255,255,255};
     SDL_Event event;
-    clock_t tinit,tfinal;
+    Clock _clock;
     std::cout<<"Curseur = "<<_cursor->w<<"x"<<_cursor->h<<" Position x = "<<_offset_cursor.x()<<" y = "<<_offset_cursor.y()<<std::endl;
-    float t;
-    tinit=clock();
     _offset_menu.x=2*_offset_menu.w;
     int curseur=1;
-    int NplayerMAX=4;
-    int saut=22*_ratio_menu;
+    int nb_lines=2;
+    Position _offset_nbj;
+    int decalage_text=20;
+    int offx_ini=80*_ratio_menu+_decalage_menu_x;
+    int offy_ini=87*_ratio_menu+_decalage_menu_y;
+    _offset_nbj.setX(offx_ini+decalage_text*_ratio_menu);
+    _offset_nbj.setY(offy_ini-10*_ratio_menu);
+    int saut=35*_ratio_menu;
     SDL_EnableKeyRepeat(100,50);
+    nbj.str("");
+    nbj<<_nbJoueurs;
+    nbJoueurs=TTF_RenderText_Solid(font,(nbj.str()).c_str(),textcolor);
+    nba.str("");
+    nba<<_nbAI;
+    nbAI=TTF_RenderText_Solid(font,(nba.str()).c_str(),textcolor);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        blit_menu();
-        blit_cursor();
-        tfinal=clock();
-        while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
-        {
-            if (event.type==SDL_QUIT)  /* Si c'est un évènement QUITTER */
-            {
-                continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
-            }
-            Uint8 *keystates = SDL_GetKeyState( NULL );
 
-            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
-                continuer = 0;
+        while(SDL_PollEvent(&event)) /* On attend un ï¿½nement qu'on rï¿½pï¿½ dans event */
+        {
+            keystates = SDL_GetKeyState( NULL );
+            nbj.str("");
+            nbj<<_nbJoueurs;
+            nbJoueurs=TTF_RenderText_Solid(font,(nbj.str()).c_str(),textcolor);
+            nba.str("");
+            nba<<_nbAI;
+            nbAI=TTF_RenderText_Solid(font,(nba.str()).c_str(),textcolor);
+
+            if((_nbJoueurs>=10||_nbAI>=10 )&& (_nbJoueurs<100&&_nbAI<100))
+            {
+                _offset_cursor.setX(offx_ini-10*_ratio_menu);
+                _offset_nbj.setX(offx_ini+(decalage_text-10)*_ratio_menu);
+            }
+            else if(_nbJoueurs>=100||_nbAI>=100)
+            {
+                _offset_cursor.setX(offx_ini-20*_ratio_menu);
+                _offset_nbj.setX(offx_ini+(decalage_text-20)*_ratio_menu);
+            }
+            else
+            {
+                _offset_cursor.setX(offx_ini);
+                _offset_nbj.setX(offx_ini+decalage_text*_ratio_menu);
+            }
+
+            if (event.type==SDL_QUIT)  /* Si c'est un ï¿½nement QUITTER */
+            {
+                continuer = 0; /* On met le boolï¿½ ï¿½, donc la boucle va s'arrï¿½r */
+            }
+
+
+            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrï¿½ le programme */
+                return -1;
             if(keystates[SDLK_UP])
             {
                 if(curseur==1)
                 {
-                    _offset_cursor.setY(_offset_cursor.y()+(NplayerMAX-1)*saut);
-                    curseur=NplayerMAX;
+                    _offset_cursor.setY(_offset_cursor.y()+(nb_lines-1)*saut);
+                    curseur=nb_lines;
                 }
                 else
                 {
@@ -181,9 +204,9 @@ int InterfaceX::select_nbJoueurs()
             }
             if(keystates[SDLK_DOWN])
             {
-                if(curseur==NplayerMAX)
+                if(curseur==nb_lines)
                 {
-                    _offset_cursor.setY(_offset_cursor.y()-(NplayerMAX-1)*saut);
+                    _offset_cursor.setY(_offset_cursor.y()-(nb_lines-1)*saut);
                     curseur=1;
                 }
                 else
@@ -193,21 +216,197 @@ int InterfaceX::select_nbJoueurs()
                 }
 
             }
+            if(keystates[SDLK_BACKSPACE])
+            {
+                return -1;
+            }
+            if(keystates[SDLK_RIGHT])
+            {
+                if(curseur==1)
+                    _nbJoueurs++;
+                else
+                    _nbAI++;
+
+            }
+            if(keystates[SDLK_LEFT])
+            {
+                if(curseur==1 && _nbJoueurs>0)
+                    _nbJoueurs--;
+                else if(_nbAI>0)
+                    _nbAI--;
+
+            }
             if(keystates[SDLK_RETURN])
             {
-                continuer=0;
+
+                return 0;
             }
 
-        }
 
-        t=(tfinal-tinit);
-        if(t>15)
-        {
         }
-        SDL_Flip(_screen);
+        if(_clock.tic(15))
+        {
+            blit_menu();
+            blit_cursor();
+            apply_surface(_offset_nbj.x(),_offset_nbj.y(),nbJoueurs,_screen,NULL);
+            apply_surface(_offset_nbj.x(),_offset_nbj.y()+saut,nbAI,_screen,NULL);
+            SDL_Flip(_screen);
+        }
     }
 
-    return curseur;
+    return 1;
+}
+
+
+
+int InterfaceX::controls()
+{
+    SDL_Surface *text=NULL;
+    SDL_Surface *joueur=NULL;
+    std::ostringstream nbj;
+    _commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS));
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    SDL_Color textcolor = {255,255,255};
+    SDL_Event event;
+    Clock _clock;
+
+    int continuer=1;
+    nbj.str("");
+    nbj<<1;
+    std::string njoueur="Joueur "+nbj.str();
+    joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
+    blit_fond();
+    SDL_Flip(_screen);
+    std::vector<std::string> controls;
+    controls.push_back("GAUCHE");
+    controls.push_back("DROITE");
+    controls.push_back("BAS");
+    controls.push_back("TOURNER DROITE");
+    controls.push_back("TOURNER GAUCHE");
+    std::cout<<"CONTROLS : "<<controls.size()<<std::endl;
+    for(int i=0; i<_nbJoueurs; ++i)
+    {
+        nbj.str("");
+        nbj<<(i+1);
+        njoueur="Joueur "+nbj.str();
+        joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
+
+
+        for(int j=0;j<(int)controls.size();++j){
+        continuer=1;
+        text=TTF_RenderText_Solid(font,controls[j].c_str(),textcolor);
+        while(continuer)
+        {
+            while(SDL_PollEvent(&event)) /* On attend un ï¿½nement qu'on rï¿½pï¿½ dans event */
+            {
+                if(event.type==SDL_KEYDOWN)
+                {
+                    std::cout<<"Joueur["<<i<<"]["<<j<<"] : "<<event.key.keysym.sym<<std::endl;
+                    _commandes[i][j]=event.key.keysym.sym;
+                    continuer=0;
+                }
+
+
+                blit_fond();
+                apply_surface(_screen->w/2-text->w/2,_screen->h/2-text->h/2,text,_screen,NULL);
+                apply_surface(_screen->w/2-joueur->w/2,_screen->h/4-joueur->h/2,joueur,_screen,NULL);
+                SDL_Flip(_screen);
+            }
+        }
+        }
+        continuer=1;
+
+
+    }
+    return 1;
+}
+int InterfaceX::controls_and_start()
+{
+    int continuer=1;
+    SDL_Event event;
+    Clock _clock;
+    _offset_menu.x=3*_offset_menu.w;
+    int curseur=1;
+    int nb_lines=2;
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    blit_menu();
+    blit_cursor();
+    SDL_Flip(_screen);
+    Position _offset_nbj;
+    _offset_nbj.setX(_offset_cursor.x()+50);
+    _offset_nbj.setY(_offset_cursor.y()-20);
+    int saut=35*_ratio_menu;
+    SDL_EnableKeyRepeat(100,50);
+    while (continuer) /* TANT QUE la variable ne vaut pas 0 */
+    {
+
+        while(SDL_PollEvent(&event)) /* On attend un ï¿½nement qu'on rï¿½pï¿½ dans event */
+        {
+
+            if (event.type==SDL_QUIT)  /* Si c'est un ï¿½nement QUITTER */
+            {
+                continuer = 0; /* On met le boolï¿½ ï¿½, donc la boucle va s'arrï¿½r */
+            }
+            keystates = SDL_GetKeyState( NULL );
+
+            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrï¿½ le programme */
+                return -1;
+            if(keystates[SDLK_UP])
+            {
+                if(curseur==1)
+                {
+                    _offset_cursor.setY(_offset_cursor.y()+(nb_lines-1)*saut);
+                    curseur=nb_lines;
+                }
+                else
+                {
+                    _offset_cursor.setY(_offset_cursor.y()-saut);
+                    curseur--;
+                }
+            }
+            if(keystates[SDLK_DOWN])
+            {
+                if(curseur==nb_lines)
+                {
+                    _offset_cursor.setY(_offset_cursor.y()-(nb_lines-1)*saut);
+                    curseur=1;
+                }
+                else
+                {
+                    _offset_cursor.setY(_offset_cursor.y()+saut);
+                    curseur++;
+                }
+
+            }
+            if(keystates[SDLK_BACKSPACE])
+            {
+                return -1;
+            }
+
+            if(keystates[SDLK_RETURN])
+            {
+                if(curseur==1)
+                {
+                    std::cout<<"Start the game"<<std::endl;
+                }
+                else if(curseur==2)
+                {
+                    std::cout<<"Start Controls"<<std::endl;
+                    controls();
+                }
+            }
+
+
+        }
+        if(_clock.tic(15))
+        {
+            blit_menu();
+            blit_cursor();
+            SDL_Flip(_screen);
+        }
+    }
+
+    return 1;
 }
 void InterfaceX::menu()
 {
@@ -219,102 +418,135 @@ void InterfaceX::menu()
         std::cout<<"Erreur dossier"<<std::endl;
 #endif
     char cCurrentPath[FILENAME_MAX];
-
     GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
-
-
     std::cout<< cCurrentPath<<std::endl;
-    resize_menu();
-    TTF_Init();
     int continuer=1;
     SDL_Event event;
-    SDL_Surface *text;
-    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",30);
-    clock_t tinit,tfinal;
-    float t;
-    SDL_Color textcolor = {255,200,255};
-    int nbjoueurs=1;
-    tinit=clock();
-    int position_menu=1;
-    std::ostringstream oss;
-    std::string njoueurs;
+
+    Clock _clock;
+    Uint8 *keystates = SDL_GetKeyState( NULL );
+    int position_menu=0;
     SDL_EnableKeyRepeat(100,50);
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
-        tfinal=clock();
-        oss.str("");
-        oss<<nbjoueurs;
-        text=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
-        // text=TTF_RenderText_Solid(font,"TEST",textcolor);
 
-        while(SDL_PollEvent(&event)) /* On attend un évènement qu'on récupère dans event */
+        while(SDL_PollEvent(&event)) /* On attend un ï¿½nement qu'on rï¿½pï¿½ dans event */
         {
-            if (event.type==SDL_QUIT)  /* Si c'est un évènement QUITTER */
+            if (event.type==SDL_QUIT)  /* Si c'est un ï¿½nement QUITTER */
             {
-                continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
+                continuer = 0; /* On met le boolï¿½ ï¿½, donc la boucle va s'arrï¿½r */
             }
-            Uint8 *keystates = SDL_GetKeyState( NULL );
+            keystates = SDL_GetKeyState( NULL );
 
-            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
+            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrï¿½ le programme */
                 continuer = 0;
             if(keystates[SDLK_RETURN])
             {
-                if(_offset_menu.x<2*_offset_menu.w)
+                if(position_menu==0)
                 {
-                    play_anim_menu(_offset_menu.w,2*_offset_menu.w);
                     position_menu++;
+                    position_menu+=play_anim_menu(_offset_menu.w,2*_offset_menu.w);
+
                 }
-                //continuer=0;
-                std::cout<<"AVANCE"<<std::endl;
             }
-            if(keystates[SDLK_DOWN])
+        }
+            switch(position_menu)
             {
-                nbjoueurs++;
-            }
-            if(keystates[SDLK_UP])
-            {
-                if(nbjoueurs>1)
-                    nbjoueurs--;
-            }
-            if(keystates[SDLK_BACKSPACE])
-            {
-                if(_offset_menu.x>=2*_offset_menu.w)
+            case 1://choix des joueurs
+                switch(select_nbJoueurs())
                 {
-                    play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                case -1://on veut revenir en arriere
                     position_menu--;
-                    std::cout<<"RECULE"<<std::endl;
+                    position_menu+= play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                        _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+                    break;
+                case 0://on veut avancer
+                    position_menu++;
+                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x+_offset_menu.w);
+                    break;
+                default:
+                    break;
                 }
+                break;
+            case 2://controls et start
+                switch(controls_and_start())
+                {
+                case -1:
+                _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+                    position_menu--;
+                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                    break;
+                default:
+                    break;
+                }
+                break;
+            default://au debut donc on ne fait rien
+                break;
+
+
             }
-        }
-        blit_menu();
-        t=(tfinal-tinit);
-        if(t>150 && _offset_menu.x<2*_offset_menu.w)
+
+        if(_clock.tic(300))
         {
-            if(_offset_menu.x==0)
-                _offset_menu.x+=_offset_menu.w;
-            else
-                _offset_menu.x-=_offset_menu.w;
-            tinit=clock();
-
+            blit_menu();
+            if(position_menu==0)
+            {
+                if(_offset_menu.x==0)
+                    _offset_menu.x+=_offset_menu.w;
+                else
+                    _offset_menu.x-=_offset_menu.w;
+            }
+            SDL_Flip(_screen);
         }
-        apply_surface(0,0,text,_screen,NULL);
-
-        SDL_Flip(_screen);
     }
 
 }
 void InterfaceX::compute_game()
 {
     //On fait tous les resize en fonction du nombre de joueurs
-    std::cout<<"Resize des Fichiers...";
     resize_files();
-    std::cout<<"OK"<<std::endl;
     compute_vDash();
     compute_offsets();
 }
+void InterfaceX::resize_blobs(){
+std::cout<<"Resize des blobs"<<std::endl;
+    double taille_blob_H =(double)_blobs_ini->h*_ratio;
+    double taille_blob_W =(double)_blobs_ini->w*_ratio;
+    std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
+    std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
+    int dw,dh;
+    double zoom=taille_blob_H/(double)_blobs_ini->h;
+    double zoom_optimal=zoom;
+    rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom,&dw,&dh);
+    std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
+    std::cout<<"zoom initial : "<<zoom<<std::endl;
+    while(dw/20.0!=(int)(dw/20.0))
+    {
+        if(ceil(dw)==floor(dw))
+        zoom_optimal-=0.001;
+        else
+        zoom_optimal+=0.001;
+        rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
+        std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
+        std::cout<<"dw : "<<(dw)<<" dh :"<<(dh)<<std::endl;
 
-bool InterfaceX::resize_files()
-{
+    }
+    std::cout<<"dw optimal : "<<(dw)<<" dh optimal :"<<(dh)<<std::endl;
+    std::cout<<"zoom optimal : "<<zoom_optimal<<std::endl;
+
+    _taille_blob=(double)dw/20.0;
+    std::cout<<"1.Un blob mesure(double) : "<<_taille_blob<<" px de cotÃ©"<<std::endl;
+    _taille_blob=(int)(dh/12.0);
+    std::cout<<"2.Un blob mesure(int) : "<<_taille_blob<<" px de cotÃ©"<<std::endl;
+    _grille_W=17*_taille_blob;
+    _grille_H=6*_taille_blob;
+    resize_blobsIMG();
+}
+
+
+void InterfaceX::resize_dash(){
     std::cout<<" NBJOUEURS :"<<_nbJoueurs<<std::endl;
     int nbJoueursX=_nbJoueurs;
     if(_nbJoueurs>2)
@@ -334,7 +566,7 @@ bool InterfaceX::resize_files()
         {
             std::cout<<"resize h"<<std::endl;
             _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h);
-            std::cout<<"resize h terminé"<<std::endl;
+            std::cout<<"resize h terminÃ©"<<std::endl;
         }
         else
         {
@@ -348,73 +580,43 @@ bool InterfaceX::resize_files()
     }
     double d_h=_dashboard->h;
     _ratio=d_h/(double)d_h_ini;
+}
 
-
-    std::cout<<"Resize des blobs"<<std::endl;
-    double taille_blob_H =(double)_blobs_ini->h*_ratio;
-    double taille_blob_W =(double)_blobs_ini->w*_ratio;
-    std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
-    std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
-    // _blobs=img_zoom_pixel_W(_blobs_ini,taille_blob_W);
-    int dw;
-    int dh;
-    double zoom=taille_blob_H/(double)_blobs_ini->h;
-    double zoom_optimal=zoom;
-    rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom,&dw,&dh);
-    std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
-    std::cout<<"zoom initial : "<<zoom<<std::endl;
-    while(dw/20.0!=(int)(dw/20.0))
-    {
-        zoom_optimal+=0.001;
-        rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
-        std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
-        std::cout<<"dw : "<<(dw)<<" dh :"<<(dh)<<std::endl;
-
-    }
-    std::cout<<"dw optimal : "<<(dw)<<" dh optimal :"<<(dh)<<std::endl;
-    std::cout<<"zoom optimal : "<<zoom_optimal<<std::endl;
-    _blobs=img_zoom_pixel_W(_blobs_ini,dw);
-    //_blobs=rotozoomSurface(_blobs_ini,0,zoom_optimal,0);
-    std::cout<<"dw obtenu : "<<_blobs->w<<" dh obtenu :"<<_blobs->h<<std::endl;
-
-    _taille_blob=(double)_blobs->w/20.0;
-    std::cout<<"1.Un blob mesure(double) : "<<_taille_blob<<" px de coté"<<std::endl;
-    _taille_blob=(int)(_blobs->h/12.0);
-    std::cout<<"2.Un blob mesure(int) : "<<_taille_blob<<" px de coté"<<std::endl;
-    _grille_W=17*_taille_blob;
-    _grille_H=6*_taille_blob;
-
+void InterfaceX::resize_avatars(){
 
     std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
-
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
     std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
     _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
-    std::cout<<"TAILLE BLOB ini : "<<_taille_blob_ini<<std::endl;
-    std::cout<<"TAILLE BLOB /20 : "<<_blobs->w/20<<std::endl;
-    std::cout<<"TAILLE BLOB final : "<<_taille_blob<<std::endl;
 
-    resize_blobsIMG();
+}
+bool InterfaceX::resize_files()
+{
+
+resize_dash();
+resize_blobs();
+resize_avatars();
+
     return true;
 }
 void InterfaceX::resize_menu()
 {
     std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
     double ratio_menu=(double)_menu_ini->h/(double)_menu_ini->w;
-
-    if(_SCREEN_HEIGHT<_SCREEN_WIDTH*3*ratio_menu)
+    int nb_menus = (int)(_menu_ini->w/_taille_menu_ini);
+    if(_SCREEN_HEIGHT<_SCREEN_WIDTH*nb_menus*ratio_menu)
     {
         _menu=img_zoom_pixel_H(_menu_ini,_SCREEN_HEIGHT);
-        _decalage_menu_x=ceil((_SCREEN_WIDTH-_menu->w/3)/2.0);
+        _decalage_menu_x=ceil((_SCREEN_WIDTH-_menu->w/nb_menus)/2.0);
     }
     else
     {
-        _menu=img_zoom_pixel_W(_menu_ini,_SCREEN_WIDTH*3);
+        _menu=img_zoom_pixel_W(_menu_ini,_SCREEN_WIDTH*nb_menus);
         _decalage_menu_y=ceil((_SCREEN_HEIGHT-_menu->h)/2.0);
     }
     _ratio_menu=(double)_menu->h/(double)_menu_ini->h;
 
-    _offset_menu.w=ceil(_menu->w/3);
+    _offset_menu.w=ceil(_menu->w/nb_menus);
     _offset_menu.h=_menu->h;
 
     std::cout<<"Le menu final = "<<_menu->w<<"x"<<_menu->h<<std::endl;
@@ -422,12 +624,26 @@ void InterfaceX::resize_menu()
     _offset_cursor.setY(_offset_cursor.y()*_ratio_menu+_decalage_menu_y);
     _cursor=rotozoomSurface(_cursor_ini,0,_ratio_menu,0);
     _background=rotozoomSurfaceXY(_background_ini,0,1/((double)_background_ini->w/(double)_screen->w),1/((double)_background_ini->h/(double)_screen->h),1);
+    _taille_menu=ratio_menu*_taille_menu_ini;
+    _taille_text*=_ratio_menu;
 
 }
 /** @brief Calcule les positions des differents dashboard
 *
 *
 */
+void InterfaceX::maj_offsets(int dx,int dy)
+{
+    std::cout<<"OFFSETS DE DECALAGE : "<<dx<<" x "<<dy<<std::endl;
+    _offset_grille.setX(_offset_grille.x()+dx);
+    _offset_grille.setY(_offset_grille.y()+dy);
+    _offset_nextBlob.setX(_offset_nextBlob.x()+dx);
+    _offset_nextBlob.setY(_offset_nextBlob.y()+dy);
+    _offset_avatar.setX(_offset_avatar.x()+dx);
+    _offset_avatar.setY(_offset_avatar.y()+dy);
+
+
+}
 bool InterfaceX::compute_vDash()
 {
     int nbJoueursX;
@@ -490,11 +706,11 @@ void InterfaceX::blit_dash()
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
-int InterfaceX::anim_falling(Blobs* blob)
-{
-    return 17;
+int InterfaceX::anim_falling(Blobs* blob){
+return 17;
 
 }
+
 int InterfaceX::anim_landing(Blobs* blob)
 {
     return 16;
@@ -519,6 +735,7 @@ int InterfaceX::anim_comboting(Blobs* blob)
         return 32;
 
 }
+
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
     //SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
@@ -600,7 +817,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
                     else
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
-                    //On calcule les coordonnées des blobs
+                    //On calcule les coordonnÃ©es des blobs
                     blobx=c*_taille_blob;
                     bloby=l*_taille_blob;
 
@@ -622,12 +839,7 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
     std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
     return r;
 }
-int InterfaceX::closestInt(double d)
-{
 
-
-    return 1;
-}
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
@@ -661,7 +873,7 @@ bool InterfaceX::load_files()
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
     _avatars_ini = load_img("avatars.png");
-    _menu_ini = load_img("menu.png");
+    _menu_ini = load_img("menu2.png");
     _cursor_ini = load_img("cursor.png");
     if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
     {
@@ -672,7 +884,6 @@ bool InterfaceX::load_files()
 }
 void InterfaceX::clean_up()
 {
-    SDL_FreeSurface( _blobs );
     SDL_FreeSurface( _background);
     SDL_FreeSurface(_background);
     SDL_FreeSurface(_avatars);
@@ -741,12 +952,12 @@ void InterfaceX::resize_blobsIMG()
             _blobsIMG[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob, _taille_blob, 32, rmask, gmask, bmask, amask );
         }
     }
-    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
-        for(int j=0; j<_nb_blobs; j++) //0 à 40
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
             _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
 
-    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
-        for(int j=0; j<_nb_blobs; j++) //0 à 40
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
             std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
 
 
@@ -786,9 +997,9 @@ void InterfaceX::decouper_sprite()
 //Puis on lit dans l'image pixel[x+y*pitch]
     int cptx=0,cpty=0;
     Uint32 p;
-    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
     {
-        for(int j=0; j<_nb_blobs; j++) //0 à 40
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
         {
             for(int x=0; x<_taille_blob_ini; ++x)
             {
@@ -982,5 +1193,305 @@ void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int a
 
 
 
+/*
+void InterfaceX::blit_cursor()
+{
+    apply_surface(_offset_cursor.x(),_offset_cursor.y(),_cursor,_screen,NULL);
 
+}
+void InterfaceX::blit_menu()
+{
+    apply_surface(0,0,_background,_screen,NULL);
+    apply_surface(_decalage_menu_x,_decalage_menu_y,_menu,_screen,&_offset_menu);
+}
+void InterfaceX::blit_avatars()
+{
+    SDL_Rect offset_img;
+    srand(time(NULL));
+    offset_img.w=(int)(80*_ratio*_ratio_avat_ini);
+    offset_img.h=(int)(56*_ratio*_ratio_avat_ini);
+    int cpt=0;
+    for(size_t j=0; j<_vDash.size(); j++)
+    {
+
+        offset_img.x=(rand()%6)*ceil(offset_img.w+4.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        if(cpt>12)
+            cpt=0;
+        offset_img.y=cpt*ceil(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
+        std::cout<<"w : "<<offset_img.w<<" h : "<<offset_img.h<<" x : "<<offset_img.x<<" y : "<<offset_img.y<<std::endl;
+        apply_surface(_vDash.at(j).x()+_offset_avatar.x(),_vDash.at(j).y()+_offset_avatar.y(),_avatars,_screen,&offset_img);
+        cpt++;
+    }
+}
+void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n,int shining)
+{
+    if(!shining)
+        blit_un_blob(master,pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y());
+    else
+        apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
+    blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
+}
+void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
+{
+
+    int blobx,bloby;
+    int offsetgrillex;
+    int offsetgrilley;
+    for(size_t j=0; j<dashBoards.size(); j++)
+    {
+        for(int l=0; l<18; l++)
+        {
+            for(int c=0; c<6; c++)
+            {
+                if( ((*(dashBoards.at(j).grille()))(l,c))->color()!=BLANK)
+                {
+                    //On se place au debut de la grille
+                    offsetgrillex=(_offset_grille).x()+_vDash.at(j).x();
+                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING)
+                        offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
+                    else
+                        offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
+                    //On calcule les coordonnÃ©es des blobs
+                    blobx=c*_taille_blob;
+                    bloby=l*_taille_blob;
+
+                    blit_un_blob(((*(dashBoards.at(j).grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
+                }
+            }
+        }
+    }
+}
+
+bool InterfaceX::compute_offsets()
+{
+    _offset_grille.setX(ceil((7.0)*(_ratio)));
+    _offset_grille.setY(ceil((32-6*_taille_blob_ini)*(_ratio)));
+    _offset_nextBlob.setX(ceil((128)*_ratio));
+    _offset_nextBlob.setY(ceil((78)*_ratio));
+    _offset_avatar.setX(ceil((105)*_ratio));
+    _offset_avatar.setY(ceil((178)*_ratio));
+
+    return true;
+}
+
+bool InterfaceX::load_files()
+{
+#ifdef WINDOWS
+    if (_chdir("img")==-1)
+        std::cout<<"Erreur dossier"<<std::endl;
+#else
+    if (chdir("img")==-1)
+        std::cout<<"Erreur dossier"<<std::endl;
+#endif
+    char cCurrentPath[FILENAME_MAX];
+
+    GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
+
+    _background_ini = load_img("background.png");
+    _dashboard_ini = load_img("dashboard.png");
+    _blobs_ini = load_img( "blobs.png" );
+    _avatars_ini = load_img("avatars.png");
+    _menu_ini = load_img("menu2.png");
+    _cursor_ini = load_img("cursor.png");
+    if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
+    {
+        std::cout<<"Erreur chargement"<<std::endl;
+        return false;
+    }
+    return true;
+}
+void InterfaceX::clean_up()
+{
+    SDL_FreeSurface( _background);
+    SDL_FreeSurface(_background);
+    SDL_FreeSurface(_avatars);
+    SDL_FreeSurface(_menu);
+    SDL_FreeSurface(_cursor);
+    SDL_Quit();
+}
+
+SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int taille_desiree_W)
+{
+    double td_W=taille_desiree_W;
+    double sar_W=surface_a_resize->w;
+    double zoom=(double)td_W/(double)sar_W;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
+}
+SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
+{
+    double td_H=taille_desiree_H;
+    double sar_H=surface_a_resize->h;
+    double zoom=(double)td_H/(double)sar_H;
+    SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
+    SDL_FreeSurface(surface_a_resize);
+    return surface_resized;
+}
+
+void InterfaceX::resize_vect()
+{
+    _blobsIMG_ini.resize(SIZE_COLOR,std::vector<SDL_Surface*> (_nb_blobs));
+    _blobsIMG.resize(SIZE_COLOR,std::vector<SDL_Surface*> (_nb_blobs));
+    for (int i = 0 ; i < SIZE_COLOR ; ++i)
+    {
+        for (int j = 0 ; j < _nb_blobs ; ++j)
+        {
+            _blobsIMG[i][j] = NULL;
+            _blobsIMG_ini[i][j] = NULL;
+        }
+    }
+
+}
+void InterfaceX::resize_blobsIMG()
+{
+    Uint32 rmask, gmask, bmask, amask;
+
+#if SDL_BYTEORDER == SDL_BIG_ENDIAN
+    rmask = 0xff000000;
+    gmask = 0x00ff0000;
+    bmask = 0x0000ff00;
+    amask = 0x000000ff;
+#else
+    rmask = 0x000000ff;
+    gmask = 0x0000ff00;
+    bmask = 0x00ff0000;
+    amask = 0xff000000;
+#endif
+//D'abord on alloue la surface necessaire
+    for(int i=0; i<SIZE_COLOR-1; i++)
+        for(int j=0; j<_nb_blobs; j++)
+            _blobsIMG[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE | SDL_SRCALPHA, _taille_blob, _taille_blob, _blobs_ini->format->BitsPerPixel, rmask, gmask, bmask, amask );
+
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
+            _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
+
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
+            std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
+
+
+}
+void InterfaceX::decouper_sprite()
+{
+    if(SDL_MUSTLOCK(_blobs_ini))
+        SDL_LockSurface(_blobs_ini);
+    Uint32 rmask, gmask, bmask, amask;
+#if SDL_BYTEORDER == SDL_BIG_ENDIAN
+    rmask = 0xff000000;
+    gmask = 0x00ff0000;
+    bmask = 0x0000ff00;
+    amask = 0x000000ff;
+#else
+    rmask = 0x000000ff;
+    gmask = 0x0000ff00;
+    bmask = 0x00ff0000;
+    amask = 0xff000000;
+#endif
+    for(int i=0; i<SIZE_COLOR-1; i++)
+        for(int j=0; j<_nb_blobs; j++)
+            _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini,_blobs_ini->format->BitsPerPixel, rmask, gmask, bmask, amask);
+//Puis on lit dans l'image pixel[x+y*pitch]
+    int cptx=0,cpty=0;
+    Uint32 pixel;
+    Uint8 r,g,b,a;
+    for(int i=0; i<SIZE_COLOR-1; i++) //0 Ã  5
+    {
+        for(int j=0; j<_nb_blobs; j++) //0 Ã  40
+        {
+            for(int x=0; x<_taille_blob_ini; ++x)
+            {
+                for(int y=0; y<_taille_blob_ini; ++y)
+                {
+                    pixel=getpixel(_blobs_ini,cptx+x,cpty+y);
+                    SDL_GetRGBA(pixel, _blobs_ini->format, &r, &g, &b, &a);
+                    pixel=SDL_MapRGBA(_blobsIMG_ini[i][j]->format, r, g, b, a);
+                    putpixel(_blobsIMG_ini[i][j],x,y,pixel);
+                }
+            }
+            cptx+=_taille_blob_ini;
+            if(j==_nb_blobs/2-1)
+            {
+                cptx=0;
+                cpty+=_taille_blob_ini;
+            }
+
+        }
+        cptx=0;
+        cpty+=_taille_blob_ini;
+    }
+
+    if(SDL_MUSTLOCK(_blobs_ini))
+        SDL_UnlockSurface(_blobs_ini);
+
+}
+
+Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
+{
+    int bpp = surface->format->BytesPerPixel;
+    // Here p is the address to the pixel we want to retrieve
+    Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
+
+    switch(bpp)
+    {
+    case 1:
+        return *p;
+        break;
+
+    case 2:
+        return *(Uint16 *)p;
+        break;
+
+    case 3:
+        if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
+            return p[0] << 16 | p[1] << 8 | p[2];
+        else
+            return p[0] | p[1] << 8 | p[2] << 16;
+        break;
+
+    case 4:
+        return *(Uint32 *)p;
+        break;
+
+    default:
+        return 0;       //shouldn't happen, but avoids warnings
+    }
+}
+void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
+{
+    int bpp = surface->format->BytesPerPixel;
+    // Here p is the address to the pixel we want to set
+    Uint8 *p = (Uint8 *)surface->pixels + y * surface->pitch + x * bpp;
+
+    switch(bpp)
+    {
+    case 1:
+        *p = pixel;
+        break;
+
+    case 2:
+        *(Uint16 *)p = pixel;
+        break;
+
+    case 3:
+        if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
+        {
+            p[0] = (pixel >> 16) & 0xff;
+            p[1] = (pixel >> 8) & 0xff;
+            p[2] = pixel & 0xff;
+        }
+        else
+        {
+            p[0] = pixel & 0xff;
+            p[1] = (pixel >> 8) & 0xff;
+            p[2] = (pixel >> 16) & 0xff;
+        }
+        break;
+
+    case 4:
+        *(Uint32 *)p = pixel;
+        break;
+    }
+}*/
 

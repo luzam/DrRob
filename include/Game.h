@@ -1,6 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
-
+#include "Controls.h"
 #include "Blobs.h"
 #include "MoteurPhy.h"
 #include "DashBoard.h"
@@ -19,16 +19,18 @@ class Game
 protected :
     std::vector<DashBoard> _dashBoards;
     std::list<Blobs> _randBlobs;
+    std::vector<std::vector<int> > _commandes;
     InterfaceX* _X;
     Clock _clock;
     int _nbJoueurs;
+    int _nbAI;
     std::vector<bool> *_turningBool;
     int *_combo;
 public :
 
-    Game(int u):_clock()
+    Game(int u):_commandes(),_clock(),_nbJoueurs(1),_nbAI(0)
     {
-        _X = new InterfaceX(800,500);
+        _X = new InterfaceX(800,700);
         std::cout<<"Game()\n";
     }
 
@@ -42,6 +44,7 @@ public :
         _randBlobs.push_front(randBlob);
         }
     }
+    void resize_commandes();
     void go();
     void repartitionCombo();
 
