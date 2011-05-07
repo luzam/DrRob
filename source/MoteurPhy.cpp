@@ -34,12 +34,13 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         _orientation = HAUT;
         break;
     case DROITE :
-    bool up = false;
+        bool up = false;
         if(ligneBlobCourant()>=16)
             up = true;
-       else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+        else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
             up = true;
-        if(up){
+        if(up)
+        {
             if(colBlobCourant()==0)
                 return;
             (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
@@ -68,7 +69,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
             return;
         if(colBlobCourant() == 5||(*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK )
         {
-            if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
                 return;
             (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
         }
@@ -89,12 +90,12 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         _orientation = HAUT;
         break;
     case GAUCHE :
-    bool up = false;
+        bool up = false;
         if(ligneBlobCourant()>=16)
             up = true;
         else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
             up = true;
-          if (up)
+        if (up)
         {
             if(colBlobCourant()==0)
                 return;
@@ -181,7 +182,7 @@ int MoteurPhy::moove(Position* master,Position* slave)
     else
         (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
     majPosition(master,slave);
-return _touching;
+    return _touching;
 }
 /** @brief fixes a blob to the grind
   *
@@ -230,20 +231,20 @@ void MoteurPhy::gauche(Position* master,Position* slave)
     case GAUCHE :
         if(colBlobCourant() == 1)
             return;
-        else if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-2)).color()!=BLANK)
+        else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-2)).color()!=BLANK)
             return;
         break;
     case BAS :
         if(colBlobCourant() == 0)
             return;
-        else if((*(*_grille)(ligneBlobCourant()+1,colBlobCourant()-1)).color()!=BLANK)
+        else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
             return;
         break;
     case HAUT :
     case DROITE :
         if(colBlobCourant() == 0)
             return;
-        else  if((*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK)
+        else  if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
             return;
         break;
     }
@@ -263,20 +264,28 @@ void MoteurPhy::droite(Position* master,Position* slave)
     case DROITE :
         if(colBlobCourant() == 4)
             return;
-        else if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+2)).color()!=BLANK)
-            return;
+        if(ligneBlobCourant()==17)
+        {
+            if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+2)).color()!=BLANK )
+                return;
+        }
+        else
+        {
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+2)).color()!=BLANK)
+                return;
+        }
         break;
     case BAS :
         if(colBlobCourant() == 5)
             return;
-        else if((*(*_grille)(ligneBlobCourant()+1,colBlobCourant()+1)).color()!=BLANK)
+        else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
             return;
         break;
     case HAUT :
     case GAUCHE :
         if(colBlobCourant() == 5)
             return;
-        else if((*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK)
+        else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
             return;
         break;
     }
@@ -370,8 +379,8 @@ void MoteurPhy::majCombo()
             ++it)
         if(key.count((*it).first)<4||((*_grille)((*it).second.x(),(*it).second.y()))->color()==BLANK||((*_grille)((*it).second.x(),(*it).second.y()))->color()==DARK)//et BIM
             keyset.insert((*it).first);
-  /*  if(keyset.empty())
-        _fixed = true;*/
+    /*  if(keyset.empty())
+          _fixed = true;*/
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
@@ -392,9 +401,10 @@ void MoteurPhy::majCombo()
     keyset.clear();
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
     {
-        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0){
+        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
+        {
             ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);
-            }
+        }
     }
     std::cout<<"Combo : " << _combo << std::endl;
     free(out_uc);

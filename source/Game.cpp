@@ -8,6 +8,7 @@ void Game::go()
 {
     while(1){
     _X->initialisation_debut_jeu();
+
     std::cout<<"On lance le menu"<<std::endl;
     if(_X->menu()==-1){
         //On quitte
@@ -22,7 +23,8 @@ void Game::go()
     for(int c=0; c<_nbJoueurs; c++)
         _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
     _combo = (int *) calloc(_nbJoueurs,sizeof(int));
-
+    for(int c=0; c<_nbJoueurs; c++)
+        _dashBoards[c].grille()->init();
     SDL_Event event;
     int continuer = 1;
 
