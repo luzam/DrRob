@@ -27,7 +27,8 @@ void Game::go()
         _dashBoards[c].grille()->init();
     SDL_Event event;
     int continuer = 1;
-
+    for(int i=0;i<100;++i)
+    std::cout<<" NB JOUEURS : "<<_nbJoueurs<<std::endl;
     _X->blits(_dashBoards);
 
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
