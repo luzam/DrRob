@@ -38,6 +38,7 @@ protected :
     int checkMaxCombo();
     void animFallin(int taille);
     void switchBlobs(int l1,int c1,int l2,int c2);
+    void init();
     Blobs* operator()(int ligne,int col)
     {
         assert(6*ligne+col<18*6);

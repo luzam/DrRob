@@ -6,8 +6,14 @@
   */
 void Game::go()
 {
+    while(1){
+    _X->initialisation_debut_jeu();
+
     std::cout<<"On lance le menu"<<std::endl;
-    _X->menu();
+    if(_X->menu()==-1){
+        //On quitte
+        return;
+    }
     _nbJoueurs=_X->NbJoueurs();
     _nbAI=_X->NbAI();
     _turningBool = new std::vector<bool>(_nbJoueurs,false);
@@ -17,7 +23,8 @@ void Game::go()
     for(int c=0; c<_nbJoueurs; c++)
         _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
     _combo = (int *) calloc(_nbJoueurs,sizeof(int));
-
+    for(int c=0; c<_nbJoueurs; c++)
+        _dashBoards[c].grille()->init();
     SDL_Event event;
     int continuer = 1;
 
@@ -96,6 +103,7 @@ void Game::go()
             }
             SDL_Flip(_X->screen());
         }
+    }
     }
 }
 /** @brief main loop

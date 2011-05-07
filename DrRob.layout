@@ -22,16 +22,16 @@
 	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="437" topLine="36" />
 	</File>
-	<File name="source\Game.cpp" open="0" top="0" tabpos="0">
+	<File name="source\Game.cpp" open="1" top="1" tabpos="2">
 		<Cursor position="4512" topLine="101" />
 	</File>
 	<File name="source\Grille.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="9427" topLine="316" />
 	</File>
 	<File name="source\InterfaceX.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="26754" topLine="828" />
+		<Cursor position="23514" topLine="762" />
 	</File>
-	<File name="source\MoteurPhy.cpp" open="0" top="0" tabpos="0">
-		<Cursor position="13798" topLine="418" />
+	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="2455" topLine="53" />
 	</File>
 </CodeBlocks_layout_file>

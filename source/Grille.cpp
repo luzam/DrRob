@@ -329,6 +329,13 @@ int Grille::checkDark(int size)
     return put;
 }
 
+void Grille::init(){
+for(int l=0; l<18; l++)
+        for(int c=0; c<6; c++){
+            _grille[l*6+c].setState(NO_STATE);
+            _grille[l*6+c].setColor(BLANK);}
+
+}
 void Grille::animFallin(int taille){
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++){
