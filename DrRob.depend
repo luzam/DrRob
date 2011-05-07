@@ -1,3 +1,157 @@
+<<<<<<< HEAD:DrRob.depend
+# depslib dependency file v1.0
+1304676959 source:c:\users\lucas\desktop\drrob\source\dashboard.cpp
+	"../include/DashBoard.h"
+
+1304689487 c:\users\lucas\desktop\drrob\include\dashboard.h
+	"Blobs.h"
+	"Position.h"
+	"MoteurPhy.h"
+	"Orientation.h"
+	<vector>
+	<list>
+	<iostream>
+
+1304676684 c:\users\lucas\desktop\drrob\include\blobs.h
+	"State.h"
+	"Color.h"
+	"Link.h"
+	<iostream>
+
+1304264086 c:\users\lucas\desktop\drrob\include\state.h
+
+1304170332 c:\users\lucas\desktop\drrob\include\color.h
+
+1304170332 c:\users\lucas\desktop\drrob\include\link.h
+
+1304170332 c:\users\lucas\desktop\drrob\include\position.h
+
+1304691317 c:\users\lucas\desktop\drrob\include\moteurphy.h
+	<stdio.h>
+	"Position.h"
+	"Grille.h"
+	"Tree.h"
+	"conected.h"
+	"Blobs.h"
+	"Orientation.h"
+	<map>
+	<set>
+	<iostream>
+
+1304674323 c:\users\lucas\desktop\drrob\include\grille.h
+	<iostream>
+	<assert.h>
+	<vector>
+	"Blobs.h"
+	"time.h"
+	"stdlib.h"
+
+1304170332 c:\users\lucas\desktop\drrob\include\tree.h
+
+1304170332 c:\users\lucas\desktop\drrob\include\conected.h
+	<vector>
+	<algorithm>
+
+1304170332 c:\users\lucas\desktop\drrob\include\orientation.h
+
+1304691191 source:c:\users\lucas\desktop\drrob\source\game.cpp
+	"../include/Game.h"
+	"../include/InterfaceX.h"
+
+1304341093 c:\users\lucas\desktop\drrob\include\game.h
+	"Blobs.h"
+	"MoteurPhy.h"
+	"DashBoard.h"
+	"Clock.h"
+	<vector>
+	<list>
+	<assert.h>
+	<stdlib.h>
+	<time.h>
+	"InterfaceX.h"
+	<iostream>
+
+1304684777 c:\users\lucas\desktop\drrob\include\clock.h
+	<SDL.h>
+
+1304691515 c:\users\lucas\desktop\drrob\include\interfacex.h
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<SDL_ttf.h>
+	"SDL_rotozoom.h"
+	<vector>
+	"Position.h"
+	"DashBoard.h"
+	<cmath>
+	<stdio.h>
+	<direct.h>
+	<unistd.h>
+	"../include/Color.h"
+	"../include/Link.h"
+	"../include/State.h"
+	"../include/Blobs.h"
+	"../include/Position.h"
+	"../include/MoteurPhy.h"
+	<time.h>
+	<sstream>
+
+1304170332 c:\users\lucas\desktop\drrob\include\sdl_rotozoom.h
+	<math.h>
+	<SDL.h>
+
+1304674495 source:c:\users\lucas\desktop\drrob\source\grille.cpp
+	"../include/Grille.h"
+
+1304692238 source:c:\users\lucas\desktop\drrob\source\interfacex.cpp
+	"../include/InterfaceX.h"
+	<stdio.h>
+	<direct.h>
+	<unistd.h>
+	"../include/Color.h"
+	"../include/Link.h"
+	"../include/State.h"
+	"../include/Blobs.h"
+	"../include/Position.h"
+	<time.h>
+	<sstream>
+
+1304689139 source:c:\users\lucas\desktop\drrob\source\moteurphy.cpp
+	"../include/MoteurPhy.h"
+
+1304170332 source:c:\users\lucas\desktop\drrob\source\sdl_rotozoom.c
+	<windows.h>
+	<stdlib.h>
+	<string.h>
+	"../include/SDL_rotozoom.h"
+
+1304170333 source:c:\users\lucas\desktop\drrob\main.cpp
+	"include/Game.h"
+	"include/MoteurPhy.h"
+	"include/Game.h"
+	"include/InterfaceX.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<stdlib.h>
+	"include/SDL_rotozoom.h"
+	<iostream>
+	<time.h>
+	"include/Color.h"
+	"include/InterfaceX.h"
+	"include/Game.h"
+
+=======
 # depslib dependency file v1.0
 1304186447 source:c:\users\lucas\desktop\drrob\source\dashboard.cpp
 	"../include/DashBoard.h"
@@ -436,3 +590,4 @@
 	"../include/InterfaceX.h"
 	<sstream>
 
+>>>>>>> 2a6bd9587748f9c3ca5d1221271d0ef95cf754e1:DrRob.depend

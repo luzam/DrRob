@@ -2,9 +2,10 @@
 #define MOTEURPHY_H
 
 
-#define TOUCHING_ANIM_TIME 5
-#define FALLING_ANIM_TIME 1
-#define COMBOTING_ANIM_TIME 10
+#define TOUCHING_ANIM_TIME 6
+#define FALLING_ANIM_TIME 0
+#define COMBOTING_ANIM_TIME 120
+#define TURNING_ANIM_TIME 6
 
 #include <stdio.h>
 #include "Position.h"
@@ -32,8 +33,10 @@ class MoteurPhy{
     int _touching;
     int _comboting;
     int _falling;
+    int _landing;
     int _turningDirect;
     int _turningHoraire;
+    bool _speedUp;
     const int ligneBlobCourant()const{return (int)((_posBlobPivot).y()/_taille);}
     const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
     void ajoutGrille();
@@ -41,8 +44,8 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille* grille):
-    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(3),_orientation(HAUT),_combo(0),_fixed(false),
-    _grille(grille),_touching(0),_comboting(0),_falling(0),_turningDirect(0),_turningHoraire(0){std::cout<<"MoteurPhy()\n";}
+    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(taille/2),_orientation(HAUT),_combo(0),_fixed(false),
+    _grille(grille),_touching(0),_comboting(0),_falling(0),_landing(0),_turningDirect(0),_turningHoraire(0),_speedUp(false){std::cout<<"MoteurPhy()\n";}
     ~MoteurPhy(){}
 
     void rotationHoraire(Position* master,Position* slave);
@@ -53,7 +56,7 @@ class MoteurPhy{
     void speedToNormal();
     void majCombo();
     void fall();
-    void moove(Position* master,Position* slave);
+    int moove(Position* master,Position* slave);
     int combo()const{return _combo;}
     void nextBlobs(Blobs master, Blobs slave){
         _posBlobPivot.setX(2*_taille);
@@ -75,6 +78,8 @@ class MoteurPhy{
     int orientation()const{return _orientation;}
     void majPosition(Position* master,Position* slave);
     int taille()const{return _taille;}
+    int setLanding(int landing){ _landing = landing;}
+    bool speedUpBool()const{return _speedUp;}
 
 
 };

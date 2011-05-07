@@ -37,7 +37,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
     bool up = false;
         if(ligneBlobCourant()>=16)
             up = true;
-        if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
+       else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
             up = true;
         if(up){
             if(colBlobCourant()==0)
@@ -48,7 +48,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"roration-> orientation "<<_orientation<<std::endl;
-    _turningHoraire=4;
+    _turningHoraire=TURNING_ANIM_TIME;
     majPosition(master,slave);
     //TO DO : Turning clock_wise
 }
@@ -88,7 +88,8 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
     case DROITE :
         _orientation = HAUT;
         break;
-    case GAUCHE :bool up = false;
+    case GAUCHE :
+    bool up = false;
         if(ligneBlobCourant()>=16)
             up = true;
         else if(ligneBlobCourant()==18||(*(*_grille)(ligneBlobCourant()+2,colBlobCourant())).color()!=BLANK)
@@ -103,7 +104,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         break;
     }
     std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
-    _turningDirect=4;
+    _turningDirect=TURNING_ANIM_TIME;
     majPosition(master,slave);
 
     // TO DO : turning Direct_wise
@@ -112,10 +113,10 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
   *
   * (documentation goes here)
   */
-void MoteurPhy::moove(Position* master,Position* slave)
+int MoteurPhy::moove(Position* master,Position* slave)
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
-    std::cout<<"touching : "<<(_touching)<<std::endl;
+    std::cerr<<"touching : "<<(_touching)<<std::endl;
     bool touch = false;
     switch(_orientation)
     {
@@ -165,7 +166,7 @@ void MoteurPhy::moove(Position* master,Position* slave)
 
         if((_touching) !=0)
         {
-            std::cout<<"touching : "<<(_touching)<<std::endl;
+            std::cerr<<"touching : "<<(_touching)<<std::endl;
             (_touching)--;
             if((_touching)==0)
             {
@@ -177,13 +178,13 @@ void MoteurPhy::moove(Position* master,Position* slave)
         {
             (_touching) = TOUCHING_ANIM_TIME;
 
-            std::cout<<"touching : "<<(_touching)<<std::endl;
+            std::cerr<<"touching : "<<(_touching)<<std::endl;
         }
     }
     else
         (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
     majPosition(master,slave);
-
+return _touching;
 }
 /** @brief fixes a blob to the grind
   *
@@ -194,31 +195,27 @@ void MoteurPhy::ajoutGrille()
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setColor(_colorMaster);
-    ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setState(FIXED);
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setLink(0);
     switch(_orientation)
     {
     case HAUT :
         (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setColor(_colorSlave);
-        (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setState(FIXED);
         (*(*_grille)((ligneBlobCourant())-1,(colBlobCourant()))).setLink(0);
         break;
     case BAS :
         (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setColor(_colorSlave);
-        (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setState(FIXED);
         (*(*_grille)((ligneBlobCourant())+1,(colBlobCourant()))).setLink(0);
         break;
     case GAUCHE :
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setColor(_colorSlave);
-        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setState(FIXED);
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())-1)).setLink(0);
         break;
     case DROITE :
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setColor(_colorSlave);
-        (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setState(FIXED);
         (*(*_grille)((ligneBlobCourant()),(colBlobCourant())+1)).setLink(0);
         break;
     }
+    _landing = LANDING_ANIM_TIME;
 
 }
 
@@ -297,7 +294,7 @@ void MoteurPhy::droite(Position* master,Position* slave)
 void MoteurPhy::speedUp()
 {
     //_vitesseBlob=(_vitesseBlob<50)?_vitesseBlob+10:_vitesseBlob;
-    _vitesseBlob= _taille/2;
+    _speedUp = true;
 }
 
 /** @brief Speed to normal
@@ -306,7 +303,7 @@ void MoteurPhy::speedUp()
   */
 void MoteurPhy::speedToNormal()
 {
-    _vitesseBlob = 3;
+    _speedUp = false;
 }
 /** @brief re-organizes grid after sub-combo
   *

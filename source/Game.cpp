@@ -21,8 +21,7 @@ void Game::go()
     SDL_Event event; /* La variable contenant l'évènement */
     //SDL_EnableKeyRepeat(100,50);
     int continuer = 1; /* Notre booléen pour la boucle */
-    int shining=0;
-    int cpt=0;
+
     _X->blits(_dashBoards);
 
     // SDL_Init(SDL_INIT_VIDEO);
@@ -43,46 +42,85 @@ void Game::go()
             if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
                 continuer = 0;
             if (keystates[SDLK_LEFT])
-                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+                _dashBoards.at(1).moteurPhy()->gauche(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
             if (keystates[SDLK_RIGHT])
-                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+                _dashBoards.at(1).moteurPhy()->droite(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
             if (keystates[SDLK_DOWN])
+                _dashBoards.at(1).moteurPhy()->speedUp();
+            else
+                _dashBoards.at(1).moteurPhy()->speedToNormal();
+            if (keystates[SDLK_UP] && !_turningBool->at(1) )
+            {
+                _dashBoards.at(1).moteurPhy()->rotationHoraire(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
+                _turningBool->at(1) = true;
+            }
+            if(!keystates[SDLK_UP] )
+                _turningBool->at(1) = false;
+            if (keystates[SDLK_m] && !_turningBool->at(1) )
+            {
+                _dashBoards.at(1).moteurPhy()->rotationAntiHoraire(_dashBoards.at(1).masterPos(),_dashBoards.at(1).slavePos());
+                _turningBool->at(1) = true;
+            }
+            if(!keystates[SDLK_UP] )
+                _turningBool->at(1) = false;
+
+
+            //*/ joueur 2
+            if (keystates[SDLK_s])
+                _dashBoards.at(0).moteurPhy()->gauche(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+            if (keystates[SDLK_f])
+                _dashBoards.at(0).moteurPhy()->droite(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
+            if (keystates[SDLK_d])
                 _dashBoards.at(0).moteurPhy()->speedUp();
             else
                 _dashBoards.at(0).moteurPhy()->speedToNormal();
-            if (keystates[SDLK_UP] && !_turningBool->at(0) ){
+            if (keystates[SDLK_e] && !_turningBool->at(0) ){
                 _dashBoards.at(0).moteurPhy()->rotationHoraire(_dashBoards.at(0).masterPos(),_dashBoards.at(0).slavePos());
                 _turningBool->at(0) = true;}
-            if(!keystates[SDLK_UP] )
+            if(!keystates[SDLK_e] )
                 _turningBool->at(0) = false;
 
 
         }
-        if(_clock.tic(30)){
-        if(cpt>=4){
-        shining = (shining==0)?1:0;
-        cpt=0;
-        }
-        else
-        cpt++;
-        for(size_t i=0; i<_dashBoards.size(); i++){
-            _dashBoards.at(i).go();
-            if(_dashBoards.at(i).launchCombo())
-            {
-                _combo[i] = _dashBoards.at(i).combo();
-                _dashBoards.at(i).resetCombo();
-            }
-        }
-        repartitionCombo();
-        _X->blits(_dashBoards);
-        for(size_t i=0; i<_dashBoards.size(); i++)
+        if(_clock.tic(20))
         {
-            _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
-                                   _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i,shining);
-            _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
 
-        }
-        SDL_Flip(_X->screen());
+
+
+            for(size_t i=0; i<_dashBoards.size(); i++)
+                if(_dashBoards[i].moteurPhy()->speedUpBool())
+                    _dashBoards.at(i).go();
+
+
+            if(_clock.tac())
+            {
+                // ici mises a jours du jeu, horloge plus lente et indépendantes
+                for(size_t i=0; i<_dashBoards.size(); i++)
+                {
+
+                    _dashBoards.at(i).go();
+                    if(_dashBoards.at(i).launchCombo())
+                    {
+                        _combo[i] = _dashBoards.at(i).combo();
+                        _dashBoards.at(i).resetCombo();
+                    }
+                }
+            }
+            repartitionCombo();
+             //ici les animations indépendantes du fonctionnements du jeu type shining
+            for(size_t i=0; i<_dashBoards.size(); i++)
+                _X->maj_anims(_dashBoards[i]);
+            _X->blits(_dashBoards);
+            for(size_t i=0; i<_dashBoards.size(); i++)
+            {
+                std::cerr<<"turning x pos -> "<<_dashBoards.at(i).slavePos()->x()<<"\n";
+                std::cerr<<"turning y pos -> "<<_dashBoards.at(i).slavePos()->y()<<"\n";
+                _X->blit_blobs_mobiles((*_dashBoards.at(i).masterPos()),(*_dashBoards.at(i).slavePos()),
+                                       _dashBoards.at(i).masterBlob(),_dashBoards.at(i).slaveBlob(),(int)i);
+                _X->blit_nextBlob(_dashBoards.at(i).nextMaster(),_dashBoards.at(i).nextSlave(),(int)i);
+
+            }
+            SDL_Flip(_X->screen());
         }
     }
 }

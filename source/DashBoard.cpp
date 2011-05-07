@@ -11,16 +11,16 @@ void DashBoard::go()
 
     if(_looser)
         return;
-    if(_moteurPhy->falling()==0 && _moteurPhy->comboting() ==0 )
-        retour = true;
-    _grille->check();
-    _moteurPhy->fall();
-    if((_moteurPhy->falling()!=0 || _moteurPhy->comboting() !=0) && retour )
-        return ;
-    _moteurPhy->setFalling(_grille->checkFalling());
+   // if(_moteurPhy->falling()==0 && _moteurPhy->comboting() ==0 )
+     //   retour = true;
+   // _grille->check();
+    //_moteurPhy->fall();
+   // if((_moteurPhy->falling()!=0 || _moteurPhy->comboting() !=0) && retour )
+     //   return ;
+   // _moteurPhy->setFalling(_grille->checkFalling());
 
-    if(_moteurPhy->falling()==0)
-        _moteurPhy->majCombo();
+    //if(_moteurPhy->falling()==0)
+      //  _moteurPhy->majCombo();
     _looser = _grille->checkLoose();
     std::cerr<<"comboting "<<_moteurPhy->comboting()<<"\n";
     std::cerr<<"falling   "<<_moteurPhy->falling()<<"\n";
@@ -37,14 +37,14 @@ void DashBoard::go()
     }
 
 
-    if(_moteurPhy->falling()!=0)
-    {
-        _go = false;
-        _moteurPhy->setFalling(_moteurPhy->falling()-1);
+  //  if(_moteurPhy->falling()!=0)
+    //{
+    //    _go = false;
+   //     _moteurPhy->setFalling(_moteurPhy->falling()-1);
       //  return;
 
-    }
-    if(_moteurPhy->comboting()!=0 && _moteurPhy->falling()==0 )
+  //  }
+  /*  if(_moteurPhy->comboting()!=0 && _moteurPhy->falling()==0 )
     {
         //TO DO : animation comboting
         _go = false;
@@ -55,7 +55,7 @@ void DashBoard::go()
 
             _combo =(_combo==0)?_moteurPhy->combo():(_combo!=0&&_combo<6)?_combo+2*_moteurPhy->combo():(_combo>6&&_combo<12)?_combo+4*_moteurPhy->combo():_combo+6*_moteurPhy->combo();
         }//return;
-    }
+    }*/
 
     std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
     if(_nextDarkBlobs!=0 && _moteurPhy->fixed())
@@ -63,8 +63,12 @@ void DashBoard::go()
         _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
         //return;
     }
-
-    if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
+if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0 && _grille->checkLanding()==0)
+    {
+        _go = true;
+        //return;
+    }
+    if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0)
     {
 
         if(_moteurPhy->fixed()&& _nextDarkBlobs==0 )
@@ -89,71 +93,18 @@ void DashBoard::go()
             //_delay = 100;
         }
 
-         if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0)
+         if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0 && _go)
         {
-            _moteurPhy->moove(&_master,&_slave);
+            int touching = _moteurPhy->moove(&_master,&_slave);
+            if(touching!=0){
+            _masterBlob.setState(LANDING);
+            _slaveBlob.setState(LANDING);
+            _masterBlob.setLanding(touching);
+            _slaveBlob.setLanding(touching);
+            }
         }
     }
 
-
-
-
-    if(_moteurPhy->turningDirect()!=0)
-    {
-        int taille = _moteurPhy->taille()*0.5;
-        switch(_moteurPhy->orientation())
-        {
-        case HAUT :
-            _slave.setX(_slave.x()+taille);
-            _slave.setY(_slave.y()+taille);
-            break;
-        case BAS :
-            _slave.setX(_slave.x()-taille);
-            _slave.setY(_slave.y()-taille);
-            break;
-        case GAUCHE :
-            _slave.setX(_slave.x()+taille);
-            _slave.setY(_slave.y()-taille);
-            break;
-        case DROITE :
-            _slave.setX(_slave.x()-taille);
-            _slave.setY(_slave.y()+taille);
-            break;
-        }
-        _moteurPhy->setTurningDirect(_moteurPhy->turningDirect()-1);
-        //return;
-    }
-    if(_moteurPhy->turningHoraire()!=0)
-    {
-        int taille = _moteurPhy->taille()*0.8;
-        switch(_moteurPhy->orientation())
-        {
-        case HAUT :
-            _slave.setX(_slave.x()-taille);
-            _slave.setY(_slave.y()+taille);
-            break;
-        case BAS :
-            _slave.setX(_slave.x()+taille);
-            _slave.setY(_slave.y()-taille);
-            break;
-        case GAUCHE :
-            _slave.setX(_slave.x()+taille);
-            _slave.setY(_slave.y()+taille);
-            break;
-        case DROITE :
-            _slave.setX(_slave.x()-taille);
-            _slave.setY(_slave.y()-taille);
-            break;
-        }
-        _moteurPhy->setTurningHoraire(_moteurPhy->turningHoraire()-1);
-        //return;
-    }
-
-    if(_moteurPhy->comboting()==0 && _moteurPhy->falling()==0)
-    {
-        _go = true;
-        //return;
-    }
 
 
     if(_combo!=0 && _moteurPhy->comboting()==0 && _moteurPhy->falling()==0 )
