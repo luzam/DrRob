@@ -89,22 +89,21 @@ public:
     ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0)
     {
 
-        _offset_menu.w=_SCREEN_WIDTH;
+
+    init_SDL();
+_offset_menu.w=_SCREEN_WIDTH;
         _offset_menu.h=_SCREEN_HEIGHT;
         _offset_menu.x=0;
         _offset_menu.y=0;
-        _offset_cursor.setX(80);
-        _offset_cursor.setY(87);
-
-
-
-    init_SDL();
+      //  _offset_cursor.setX(80);
+       // _offset_cursor.setY(87);
     load_files();
-    resize_vect();
-    decouper_sprite();
+    //resize_vect();
+   // decouper_sprite();
     resize_menu();
     //on rempli les commandes par default
-    controls_by_default();
+    //controls_by_default();
+
     }
     ~InterfaceX()
     {
@@ -112,7 +111,7 @@ public:
         clean_up();
         std::cout<<"Interface fermee avec succes"<<std::endl;
     }
-    void menu();
+    int menu();
     void compute_game();
     SDL_Surface* load_img( std::string filename );
     void apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip);
@@ -188,6 +187,7 @@ public:
     std::vector<std::vector<int> > Commandes()const{return _commandes;}
     void controls_resize();
     void controls_by_default();
+    void initialisation_debut_jeu();
 
 };
 #endif // INTERFACEX_H_INCLUDED
