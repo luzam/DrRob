@@ -3,73 +3,34 @@ falling   0
 falling grille   0
 
 touching : 0
-comboting 0
-falling   0
-falling grille   0
-
-touching : 0
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
+turning x pos -> 92
+turning y pos -> 253
 turning + -> 0
 turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 220
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
+turning x pos -> 92
+turning y pos -> 253
 comboting 0
 falling   0
 falling grille   0
@@ -78,66 +39,32 @@ go
 touching : 0
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
+turning x pos -> 92
+turning y pos -> 276
 turning + -> 0
 turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 240
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
+turning x pos -> 92
+turning y pos -> 276
 comboting 0
 falling   0
 falling grille   0
@@ -146,2115 +73,31 @@ go
 touching : 0
 turning + -> 0
 turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 260
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 280
-turning x pos -> 120
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 280
-turning x pos -> 120
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 280
-turning x pos -> 120
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 280
-turning x pos -> 120
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 120
-turning y pos -> 280
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 120
-turning y pos -> 300
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 120
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 120
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 120
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 120
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 160
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 160
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 320
-turning x pos -> 160
-turning y pos -> 320
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 160
-turning y pos -> 340
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 160
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 160
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 160
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 160
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 360
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 380
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 400
-turning x pos -> 200
-turning y pos -> 400
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 420
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 160
-turning y pos -> 420
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 440
-turning x pos -> 160
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 440
-turning x pos -> 120
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 440
-turning x pos -> 120
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 440
-turning x pos -> 120
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 440
-turning x pos -> 40
-turning y pos -> 440
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 40
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 40
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 0
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 0
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 0
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 0
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 460
-turning x pos -> 0
-turning y pos -> 460
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 480
-turning x pos -> 0
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 480
-turning x pos -> 0
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 480
-turning x pos -> 0
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 480
-turning x pos -> 0
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 500
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 500
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 500
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 500
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 500
-turning x pos -> 120
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 500
-turning x pos -> 120
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 500
-turning x pos -> 120
-turning y pos -> 500
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 160
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 160
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 520
-turning x pos -> 200
-turning y pos -> 520
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 540
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 170
-turning y pos -> 541
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 180
-turning y pos -> 545
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 188
-turning y pos -> 551
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 194
-turning y pos -> 560
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 200
-turning y pos -> 540
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 590
-turning x pos -> 200
-turning y pos -> 540
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 159
-turning y pos -> 639
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 149
-turning y pos -> 638
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 140
-turning y pos -> 634
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 131
-turning y pos -> 628
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 125
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 121
-turning y pos -> 610
-turning x pos -> 200
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 121
-turning y pos -> 610
-turning x pos -> 200
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 620
-turning x pos -> 200
-turning y pos -> 580
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 200
-turning y pos -> 600
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 200
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 160
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 5
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 170
-turning y pos -> 621
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 180
-turning y pos -> 625
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 200
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 5
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 198
-turning y pos -> 630
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 120
-turning y pos -> 660
-turning x pos -> 194
-turning y pos -> 639
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 188
-turning y pos -> 668
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 2
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 180
-turning y pos -> 674
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 1
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 170
-turning y pos -> 678
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 170
-turning y pos -> 678
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 170
-turning y pos -> 678
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 170
-turning y pos -> 678
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 170
-turning y pos -> 678
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 159
-turning y pos -> 699
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 5
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 149
-turning y pos -> 698
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 140
-turning y pos -> 694
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 120
-turning y pos -> 680
-turning x pos -> 131
-turning y pos -> 688
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 2
-turning x pos -> 120
-turning y pos -> 679
-turning x pos -> 125
-turning y pos -> 680
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 1
-turning x pos -> 121
-turning y pos -> 669
-turning x pos -> 121
-turning y pos -> 670
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 125
-turning y pos -> 659
-turning x pos -> 121
-turning y pos -> 670
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 131
-turning y pos -> 651
-turning x pos -> 120
-turning y pos -> 680
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 140
-turning y pos -> 645
-turning x pos -> 120
-turning y pos -> 680
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 149
-turning y pos -> 641
-turning x pos -> 120
-turning y pos -> 680
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 160
-turning y pos -> 640
-turning x pos -> 160
-turning y pos -> 640
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 170
-turning y pos -> 641
-turning x pos -> 170
-turning y pos -> 641
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 180
-turning y pos -> 645
-turning x pos -> 180
-turning y pos -> 645
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 3
-turning x pos -> 188
-turning y pos -> 651
-turning x pos -> 188
-turning y pos -> 651
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 2
-turning x pos -> 194
-turning y pos -> 660
-turning x pos -> 194
-turning y pos -> 660
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 1
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 198
-turning y pos -> 669
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 198
-turning y pos -> 669
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 198
-turning y pos -> 669
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 200
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 5
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 198
-turning y pos -> 650
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 198
-turning y pos -> 669
-turning x pos -> 194
-turning y pos -> 659
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 200
-turning y pos -> 640
-turning x pos -> 159
-turning y pos -> 699
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 198
-turning y pos -> 650
-turning x pos -> 149
-turning y pos -> 698
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 194
-turning y pos -> 659
-turning x pos -> 140
-turning y pos -> 694
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 3
-turning x pos -> 188
-turning y pos -> 668
-turning x pos -> 131
-turning y pos -> 688
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 6
-turning x pos -> 180
-turning y pos -> 674
-turning x pos -> 120
-turning y pos -> 659
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 5
-turning x pos -> 170
-turning y pos -> 678
-turning x pos -> 121
-turning y pos -> 649
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 170
-turning y pos -> 678
-turning x pos -> 125
-turning y pos -> 639
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 160
-turning y pos -> 680
-turning x pos -> 131
-turning y pos -> 651
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 2
-turning x pos -> 160
-turning y pos -> 680
-turning x pos -> 140
-turning y pos -> 645
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 160
-turning y pos -> 680
-turning x pos -> 160
-turning y pos -> 640
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 159
-turning y pos -> 679
-turning x pos -> 200
-turning y pos -> 640
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 149
-turning y pos -> 678
-turning x pos -> 198
-turning y pos -> 650
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 140
-turning y pos -> 674
-turning x pos -> 194
-turning y pos -> 659
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 6
-turning x pos -> 131
-turning y pos -> 668
-turning x pos -> 159
-turning y pos -> 679
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 5
-turning x pos -> 125
-turning y pos -> 680
-turning x pos -> 149
-turning y pos -> 698
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 4
-turning x pos -> 121
-turning y pos -> 670
-turning x pos -> 140
-turning y pos -> 694
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 121
-turning y pos -> 670
-turning x pos -> 131
-turning y pos -> 688
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 121
-turning y pos -> 670
-turning x pos -> 120
-turning y pos -> 659
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 659
-turning x pos -> 160
-turning y pos -> 620
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 121
-turning y pos -> 649
-turning x pos -> 170
-turning y pos -> 621
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 125
-turning y pos -> 639
-turning x pos -> 180
-turning y pos -> 625
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 3
-turning x pos -> 131
-turning y pos -> 651
-turning x pos -> 188
-turning y pos -> 651
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 6
-turning x pos -> 140
-turning y pos -> 645
-turning x pos -> 200
-turning y pos -> 640
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 5
-turning x pos -> 149
-turning y pos -> 641
-turning x pos -> 198
-turning y pos -> 650
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 149
-turning y pos -> 641
-turning x pos -> 194
-turning y pos -> 659
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 149
-turning y pos -> 641
-turning x pos -> 188
-turning y pos -> 668
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 2
-turning x pos -> 149
-turning y pos -> 641
-turning x pos -> 180
-turning y pos -> 674
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 1
-turning x pos -> 160
-turning y pos -> 640
-turning x pos -> 170
-turning y pos -> 678
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 41
-turning y pos -> 249
-turning x pos -> 160
-turning y pos -> 680
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 45
-turning y pos -> 239
-turning x pos -> 160
-turning y pos -> 680
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 159
-turning y pos -> 679
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 221
-turning x pos -> 149
-turning y pos -> 678
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 225
-turning x pos -> 140
-turning y pos -> 674
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 600
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 270
-turning x pos -> 170
-turning y pos -> 601
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 114
+turning x pos -> 92
 turning y pos -> 299
-turning x pos -> 180
-turning y pos -> 625
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 3
-turning x pos -> 108
-turning y pos -> 308
-turning x pos -> 188
-turning y pos -> 631
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 2
-turning x pos -> 100
-turning y pos -> 314
-turning x pos -> 194
-turning y pos -> 640
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 1
-turning x pos -> 90
-turning y pos -> 318
-turning x pos -> 198
-turning y pos -> 649
 turning + -> 0
 turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 90
-turning y pos -> 318
-turning x pos -> 198
-turning y pos -> 649
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 319
-turning x pos -> 200
-turning y pos -> 620
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 318
-turning x pos -> 198
-turning y pos -> 630
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 334
-turning x pos -> 194
-turning y pos -> 659
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
+turning x pos -> 92
 turning y pos -> 299
-turning x pos -> 159
-turning y pos -> 679
 turning + -> 0
-turning - -> 5
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
 turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 289
-turning x pos -> 149
-turning y pos -> 678
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
 turning + -> 0
-turning - -> 6
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
 turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 260
-turning x pos -> 120
-turning y pos -> 639
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
 turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 261
-turning x pos -> 121
-turning y pos -> 629
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 265
-turning x pos -> 125
-turning y pos -> 619
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 300
-turning x pos -> 160
-turning y pos -> 600
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 330
-turning x pos -> 41
-turning y pos -> 249
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 359
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 358
-turning x pos -> 90
-turning y pos -> 221
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 354
-turning x pos -> 100
-turning y pos -> 225
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
-turning y pos -> 319
-turning x pos -> 120
-turning y pos -> 260
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 309
-turning x pos -> 118
-turning y pos -> 270
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 280
-turning x pos -> 79
+turning - -> 0
+turning x pos -> 92
 turning y pos -> 299
 comboting 0
 falling   0
@@ -2262,6 +105,34 @@ falling grille   0
 go     
 
 touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
 comboting 0
 falling   0
 falling grille   0
@@ -2269,400 +140,438 @@ go
 
 touching : 0
 turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 301
-turning x pos -> 69
-turning y pos -> 318
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 305
-turning x pos -> 60
-turning y pos -> 314
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 340
-turning x pos -> 40
-turning y pos -> 279
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 350
-turning x pos -> 41
-turning y pos -> 269
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 379
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 378
-turning x pos -> 90
-turning y pos -> 241
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 374
-turning x pos -> 100
-turning y pos -> 245
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
-turning y pos -> 359
-turning x pos -> 120
-turning y pos -> 300
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 349
-turning x pos -> 118
-turning y pos -> 310
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 320
-turning x pos -> 79
-turning y pos -> 339
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 321
-turning x pos -> 69
-turning y pos -> 338
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 325
-turning x pos -> 60
-turning y pos -> 334
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 360
-turning x pos -> 40
-turning y pos -> 299
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 370
-turning x pos -> 41
-turning y pos -> 289
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 419
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 418
-turning x pos -> 90
-turning y pos -> 281
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 414
-turning x pos -> 100
-turning y pos -> 285
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
-turning y pos -> 379
-turning x pos -> 120
-turning y pos -> 320
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 369
-turning x pos -> 118
-turning y pos -> 330
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 340
-turning x pos -> 79
-turning y pos -> 359
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 341
-turning x pos -> 69
-turning y pos -> 358
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 365
-turning x pos -> 60
-turning y pos -> 374
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 400
-turning x pos -> 40
-turning y pos -> 339
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 410
-turning x pos -> 41
-turning y pos -> 329
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 439
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 438
-turning x pos -> 90
-turning y pos -> 301
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 434
-turning x pos -> 100
-turning y pos -> 305
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
-turning y pos -> 399
-turning x pos -> 120
-turning y pos -> 340
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 409
-turning x pos -> 118
-turning y pos -> 370
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 380
-turning x pos -> 79
-turning y pos -> 399
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 381
-turning x pos -> 69
-turning y pos -> 398
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 385
-turning x pos -> 60
-turning y pos -> 394
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 420
-turning x pos -> 40
-turning y pos -> 359
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 430
-turning x pos -> 41
-turning y pos -> 349
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 459
-turning x pos -> 80
-turning y pos -> 320
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 478
-turning x pos -> 90
-turning y pos -> 341
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 474
-turning x pos -> 100
+turning - -> 0
+turning x pos -> 92
 turning y pos -> 345
 turning + -> 0
-turning - -> 6
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 345
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 345
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 345
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 345
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 345
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 345
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 368
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 391
 turning + -> 0
 turning - -> 6
-turning x pos -> 40
-turning y pos -> 439
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 429
-turning x pos -> 118
-turning y pos -> 390
+turning x pos -> 184
+turning y pos -> 391
 turning + -> 0
 turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 400
-turning x pos -> 79
-turning y pos -> 419
+turning x pos -> 230
+turning y pos -> 437
 turning + -> 0
 turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 90
-turning y pos -> 401
-turning x pos -> 69
-turning y pos -> 418
+turning x pos -> 228
+turning y pos -> 448
 turning + -> 0
 turning - -> 4
+turning x pos -> 223
+turning y pos -> 459
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
 turning + -> 0
-turning - -> 4
-turning x pos -> 100
-turning y pos -> 405
-turning x pos -> 60
+turning - -> 3
+turning x pos -> 216
+turning y pos -> 492
+turning + -> 0
+turning - -> 2
+turning x pos -> 207
+turning y pos -> 499
+turning + -> 0
+turning - -> 1
+turning x pos -> 195
+turning y pos -> 504
+turning + -> 0
+turning - -> 0
+turning x pos -> 195
+turning y pos -> 504
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 552
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 575
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 621
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 644
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 667
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 713
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 759
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+touching : 6
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 6
+touching : 6
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 5
+touching : 5
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 4
+touching : 4
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 3
+touching : 3
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 2
+touching : 2
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 1
+touching : 1
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 782
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 345
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 391
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
 turning y pos -> 414
 comboting 0
 falling   0
@@ -2670,5349 +579,33 @@ falling grille   0
 go     
 
 touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
 turning + -> 0
 turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 120
-turning y pos -> 460
-turning x pos -> 40
-turning y pos -> 399
+turning x pos -> 184
+turning y pos -> 437
 turning + -> 0
 turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 118
-turning y pos -> 470
-turning x pos -> 41
-turning y pos -> 389
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 79
-turning y pos -> 499
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 69
-turning y pos -> 498
-turning x pos -> 90
-turning y pos -> 361
+turning x pos -> 195
+turning y pos -> 438
 turning + -> 0
 turning - -> 4
-turning + -> 0
-turning - -> 4
-turning x pos -> 60
-turning y pos -> 494
-turning x pos -> 100
-turning y pos -> 365
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 40
-turning y pos -> 459
-turning x pos -> 120
-turning y pos -> 400
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 5
-turning x pos -> 41
-turning y pos -> 449
-turning x pos -> 118
-turning y pos -> 410
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 440
-turning x pos -> 79
-turning y pos -> 459
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 5
-turning x pos -> 120
-turning y pos -> 480
-turning x pos -> 69
-turning y pos -> 458
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 4
-turning x pos -> 118
-turning y pos -> 490
-turning x pos -> 60
-turning y pos -> 454
-turning + -> 0
-turning - -> 4
+turning x pos -> 207
+turning y pos -> 443
 turning + -> 0
 turning - -> 3
-turning x pos -> 114
-turning y pos -> 499
-turning x pos -> 51
-turning y pos -> 448
-turning + -> 0
-turning - -> 3
+turning x pos -> 216
+turning y pos -> 450
 turning + -> 0
 turning - -> 2
-turning x pos -> 108
-turning y pos -> 508
-turning x pos -> 45
-turning y pos -> 440
-turning + -> 0
-turning - -> 2
+turning x pos -> 223
+turning y pos -> 460
 turning + -> 0
 turning - -> 1
-turning x pos -> 100
-turning y pos -> 514
-turning x pos -> 41
-turning y pos -> 430
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 90
-turning y pos -> 518
-turning x pos -> 41
-turning y pos -> 430
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 540
-turning x pos -> 40
-turning y pos -> 440
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 40
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 40
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 40
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 6
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 40
-turning y pos -> 459
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 5
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 41
-turning y pos -> 449
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 4
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 45
-turning y pos -> 439
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 80
-turning y pos -> 560
-turning x pos -> 51
-turning y pos -> 431
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 2
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 60
-turning y pos -> 445
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 1
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 580
-turning x pos -> 69
-turning y pos -> 441
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 79
-turning y pos -> 619
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 69
-turning y pos -> 638
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 60
-turning y pos -> 634
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 51
-turning y pos -> 628
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 45
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 41
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 41
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 41
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 500
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 520
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 540
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 679
-turning x pos -> 80
-turning y pos -> 580
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 41
-turning y pos -> 669
-turning x pos -> 80
-turning y pos -> 580
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 45
-turning y pos -> 659
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 51
-turning y pos -> 651
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 60
-turning y pos -> 645
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 69
-turning y pos -> 641
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 69
-turning y pos -> 641
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 69
-turning y pos -> 641
-turning x pos -> 80
-turning y pos -> 600
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 69
-turning y pos -> 641
-turning x pos -> 80
-turning y pos -> 600
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 620
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 640
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 220
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 170
-turning y pos -> 301
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 180
-turning y pos -> 305
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 188
-turning y pos -> 311
-turning x pos -> 80
-turning y pos -> 240
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 194
-turning y pos -> 340
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 260
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 280
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 300
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 320
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 340
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 460
-turning x pos -> 80
-turning y pos -> 360
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 480
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 490
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 194
-turning y pos -> 499
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 3
+turning x pos -> 228
+turning y pos -> 471
 turning + -> 0
 turning - -> 0
 turning x pos -> 228
-turning y pos -> 508
-turning x pos -> 80
-turning y pos -> 380
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 220
-turning y pos -> 534
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 210
-turning y pos -> 538
-turning x pos -> 80
-turning y pos -> 400
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 420
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 440
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 460
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 199
-turning y pos -> 639
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 189
-turning y pos -> 638
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 180
-turning y pos -> 634
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 171
-turning y pos -> 628
-turning x pos -> 80
-turning y pos -> 500
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 165
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 500
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 161
-turning y pos -> 610
-turning x pos -> 80
-turning y pos -> 520
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 540
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 160
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 560
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 240
-turning x pos -> 80
-turning y pos -> 220
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 260
-turning x pos -> 80
-turning y pos -> 240
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 280
-turning x pos -> 80
-turning y pos -> 260
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 300
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 301
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 20
-turning y pos -> 305
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 28
-turning y pos -> 311
-turning x pos -> 80
-turning y pos -> 280
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 34
-turning y pos -> 340
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 349
-turning x pos -> 80
-turning y pos -> 300
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 380
-turning x pos -> 80
-turning y pos -> 320
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 400
-turning x pos -> 80
-turning y pos -> 340
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 420
-turning x pos -> 80
-turning y pos -> 360
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 440
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 450
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 34
-turning y pos -> 459
-turning x pos -> 80
-turning y pos -> 380
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 28
-turning y pos -> 468
-turning x pos -> 80
-turning y pos -> 380
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 20
-turning y pos -> 494
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 10
-turning y pos -> 498
-turning x pos -> 80
-turning y pos -> 400
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 520
-turning x pos -> 80
-turning y pos -> 420
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 440
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 39
-turning y pos -> 539
-turning x pos -> 80
-turning y pos -> 440
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 29
-turning y pos -> 558
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 20
-turning y pos -> 554
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 11
-turning y pos -> 548
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 5
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 1
-turning y pos -> 530
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 1
-turning y pos -> 530
-turning x pos -> 80
-turning y pos -> 460
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 1
-turning y pos -> 530
-turning x pos -> 80
-turning y pos -> 460
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 540
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 560
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 580
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 0
-turning y pos -> 619
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 1
-turning y pos -> 609
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 5
-turning y pos -> 619
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 600
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 50
-turning y pos -> 601
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 20
-turning y pos -> 605
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 28
-turning y pos -> 611
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 34
-turning y pos -> 620
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 38
-turning y pos -> 629
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 660
-turning x pos -> 80
-turning y pos -> 480
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 220
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 6
-touching : 6
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 240
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 5
-touching : 5
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 260
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 4
-touching : 4
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 280
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 3
-touching : 3
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 40
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 300
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 2
-touching : 2
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 320
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 1
-touching : 1
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 680
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 640
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 78
-turning y pos -> 650
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 74
-turning y pos -> 659
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 0
-turning x pos -> 68
-turning y pos -> 668
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 0
-turning x pos -> 60
-turning y pos -> 674
-turning x pos -> 80
-turning y pos -> 340
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 0
-turning x pos -> 50
-turning y pos -> 678
-turning x pos -> 80
-turning y pos -> 340
-comboting 0
-falling   0
-falling grille   0
-fixed     
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 80
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 80
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 120
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 120
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 120
-turning y pos -> 360
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 220
-turning x pos -> 120
-turning y pos -> 360
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 120
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 160
-turning y pos -> 380
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 240
-turning x pos -> 160
-turning y pos -> 380
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 160
-turning y pos -> 400
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 260
-turning x pos -> 200
-turning y pos -> 400
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 280
-turning x pos -> 200
-turning y pos -> 420
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 300
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 120
-turning y pos -> 300
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 198
-turning y pos -> 350
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 0
-turning x pos -> 199
-turning y pos -> 379
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 0
-turning x pos -> 189
-turning y pos -> 378
-turning x pos -> 200
-turning y pos -> 440
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 0
-turning x pos -> 180
-turning y pos -> 374
-turning x pos -> 200
-turning y pos -> 440
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 6
-turning + -> 0
-turning - -> 6
-turning x pos -> 160
-turning y pos -> 359
-turning x pos -> 160
-turning y pos -> 460
-turning + -> 0
-turning - -> 5
-turning + -> 0
-turning - -> 6
-turning x pos -> 161
-turning y pos -> 349
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 4
-turning + -> 0
-turning - -> 5
-turning x pos -> 165
-turning y pos -> 339
-turning x pos -> 198
-turning y pos -> 510
-turning + -> 0
-turning - -> 3
-turning + -> 0
-turning - -> 6
-turning x pos -> 171
-turning y pos -> 331
-turning x pos -> 160
-turning y pos -> 499
-turning + -> 0
-turning - -> 2
-turning + -> 0
-turning - -> 5
-turning x pos -> 180
-turning y pos -> 325
-turning x pos -> 161
-turning y pos -> 489
-turning + -> 0
-turning - -> 1
-turning + -> 0
-turning - -> 4
-turning x pos -> 189
-turning y pos -> 321
-turning x pos -> 165
-turning y pos -> 479
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 3
-turning x pos -> 189
-turning y pos -> 321
-turning x pos -> 171
 turning y pos -> 471
 comboting 0
 falling   0
@@ -8020,74 +613,68 @@ falling grille   0
 go     
 
 touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
 turning + -> 0
 turning - -> 0
+turning x pos -> 230
+turning y pos -> 506
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 506
+turning + -> 0
+turning - -> 6
+turning x pos -> 230
+turning y pos -> 506
+turning + -> 0
+turning - -> 5
+turning x pos -> 228
+turning y pos -> 517
+turning + -> 0
+turning - -> 4
+turning x pos -> 223
+turning y pos -> 528
+turning + -> 0
+turning - -> 3
+turning x pos -> 262
+turning y pos -> 538
 turning + -> 0
 turning - -> 2
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 180
-turning y pos -> 485
-turning + -> 0
-turning - -> 0
+turning x pos -> 253
+turning y pos -> 545
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
 turning + -> 0
 turning - -> 1
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
+turning x pos -> 241
+turning y pos -> 573
 turning + -> 0
 turning - -> 0
+turning x pos -> 241
+turning y pos -> 573
 turning + -> 0
 turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
+turning x pos -> 241
+turning y pos -> 573
 turning + -> 0
 turning - -> 0
+turning x pos -> 241
+turning y pos -> 573
 turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
+turning - -> 6
+turning x pos -> 229
+turning y pos -> 574
 turning + -> 0
-turning - -> 0
+turning - -> 5
+turning x pos -> 218
+turning y pos -> 573
 turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 340
-turning x pos -> 189
-turning y pos -> 481
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
+turning - -> 4
+turning x pos -> 207
+turning y pos -> 568
 comboting 0
 falling   0
 falling grille   0
@@ -8095,146 +682,792 @@ go
 
 touching : 0
 turning + -> 0
-turning - -> 0
+turning - -> 3
+turning x pos -> 197
+turning y pos -> 584
+turning + -> 0
+turning - -> 2
+turning x pos -> 190
+turning y pos -> 575
+turning + -> 0
+turning - -> 1
+turning x pos -> 185
+turning y pos -> 563
 turning + -> 0
 turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
+turning x pos -> 185
+turning y pos -> 563
 turning + -> 0
-turning - -> 0
+turning - -> 6
+turning x pos -> 184
+turning y pos -> 551
 turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 360
-turning x pos -> 200
-turning y pos -> 500
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 380
-turning x pos -> 200
-turning y pos -> 520
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-comboting 0
-falling   0
-falling grille   0
-go     
-
-touching : 0
-turning + -> 0
-turning - -> 0
-turning + -> 0
-turning - -> 0
-turning x pos -> 200
-turning y pos -> 400
-turning x pos -> 200
+turning - -> 5
+turning x pos -> 185
 turning y pos -> 540
+turning + -> 0
+turning - -> 4
+turning x pos -> 190
+turning y pos -> 528
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 3
+turning x pos -> 197
+turning y pos -> 542
+turning + -> 0
+turning - -> 2
+turning x pos -> 207
+turning y pos -> 535
+turning + -> 0
+turning - -> 1
+turning x pos -> 218
+turning y pos -> 530
+turning + -> 0
+turning - -> 0
+turning x pos -> 218
+turning y pos -> 530
+turning + -> 0
+turning - -> 0
+turning x pos -> 218
+turning y pos -> 530
+turning + -> 0
+turning - -> 0
+turning x pos -> 218
+turning y pos -> 530
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 552
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 598
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 621
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 644
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 667
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 713
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+touching : 6
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 6
+touching : 6
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 5
+touching : 5
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 4
+touching : 4
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 3
+touching : 3
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 2
+touching : 2
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 1
+touching : 1
+turning + -> 0
+turning - -> 0
+turning x pos -> 230
+turning y pos -> 736
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 345
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 368
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 391
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 414
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 414
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 437
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 138
+turning y pos -> 460
+turning + -> 0
+turning - -> 6
+turning x pos -> 138
+turning y pos -> 460
+turning + -> 0
+turning - -> 5
+turning x pos -> 149
+turning y pos -> 461
+turning + -> 0
+turning - -> 4
+turning x pos -> 161
+turning y pos -> 466
+turning + -> 0
+turning - -> 3
+turning x pos -> 170
+turning y pos -> 473
+turning + -> 0
+turning - -> 2
+turning x pos -> 177
+turning y pos -> 483
+turning + -> 0
+turning - -> 1
+turning x pos -> 182
+turning y pos -> 494
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 529
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 552
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 598
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 621
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 644
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 667
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+touching : 6
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 6
+touching : 6
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 5
+touching : 5
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 4
+touching : 4
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 3
+touching : 3
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 2
+touching : 2
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 1
+touching : 1
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   92
+falling grille   84
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   75
+falling grille   68
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   59
+falling grille   52
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   43
+falling grille   36
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   27
+falling grille   20
+fixed     
+go     
+
+comboting 0
+falling   27
+falling grille   20
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   11
+falling grille   4
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+turning + -> 0
+turning - -> 0
+turning x pos -> 184
+turning y pos -> 690
+comboting 0
+falling   0
+falling grille   0
+fixed     
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 253
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 276
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 299
+comboting 0
+falling   0
+falling grille   0
+go     
+
+touching : 0
+turning + -> 0
+turning - -> 0
+turning x pos -> 92
+turning y pos -> 322

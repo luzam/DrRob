@@ -767,7 +767,7 @@ int InterfaceX::anim_comboting(Blobs* blob)
     else if((blob->current())>= 30 )
     {
         if((blob->current())%4 >= 3)
-            return 19;
+            return -1;
         else
             return 1;
     }
@@ -791,8 +791,8 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
         apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
         break;
     case COMBOTING:
+        if(anim_comboting(blob)!=-1)
         apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
-
         break;
     default://ne doit pas arriver mais pour debug
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
@@ -980,10 +980,6 @@ void InterfaceX::resize_blobsIMG()
     bmask = 0x00ff0000;
     amask = 0xff000000;
 #endif
-    /* rmask=0;
-     gmask=0;
-     bmask=0;
-     amask=0;*/
 //D'abord on alloue la surface necessaire
     for(int i=0; i<SIZE_COLOR-1; i++)
     {
@@ -1007,36 +1003,24 @@ void InterfaceX::decouper_sprite()
     if(SDL_MUSTLOCK(_blobs_ini))
         SDL_LockSurface(_blobs_ini);
     Uint32 rmask, gmask, bmask, amask;
-
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     rmask = 0xff000000;
     gmask = 0x00ff0000;
     bmask = 0x0000ff00;
     amask = 0x000000ff;
 #else
-
     rmask = 0x000000ff;
     gmask = 0x0000ff00;
     bmask = 0x00ff0000;
     amask = 0xff000000;
 #endif
-    /*  rmask=0;
-      gmask=0;
-      bmask=0;
-      amask=0;*/
-//D'abord on alloue la surface necessaire
     for(int i=0; i<SIZE_COLOR-1; i++)
-    {
         for(int j=0; j<_nb_blobs; j++)
-        {
-            _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini, 32, rmask, gmask, bmask, amask );
-            SDL_SetColorKey( _blobsIMG_ini[i][j], SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( _blobsIMG_ini[i][j]->format, 0, 255, 0 ) );
-
-        }
-    }
+            _blobsIMG_ini[i][j]=SDL_CreateRGBSurface (SDL_HWSURFACE |SDL_SRCALPHA, _taille_blob_ini, _taille_blob_ini,_blobs_ini->format->BitsPerPixel, rmask, gmask, bmask, amask);
 //Puis on lit dans l'image pixel[x+y*pitch]
     int cptx=0,cpty=0;
-    Uint32 p;
+    Uint32 pixel;
+    Uint8 r,g,b,a;
     for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
     {
         for(int j=0; j<_nb_blobs; j++) //0 à 40
@@ -1045,8 +1029,10 @@ void InterfaceX::decouper_sprite()
             {
                 for(int y=0; y<_taille_blob_ini; ++y)
                 {
-                    p=getpixel(_blobs_ini,cptx+x,cpty+y);
-                    putpixel(_blobsIMG_ini[i][j],x,y,p);
+                    pixel=getpixel(_blobs_ini,cptx+x,cpty+y);
+                    SDL_GetRGBA(pixel, _blobs_ini->format, &r, &g, &b, &a);
+                    pixel=SDL_MapRGBA(_blobsIMG_ini[i][j]->format, r, g, b, a);
+                    putpixel(_blobsIMG_ini[i][j],x,y,pixel);
                 }
             }
             cptx+=_taille_blob_ini;
