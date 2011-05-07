@@ -333,8 +333,8 @@ void Grille::animFallin(int taille){
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++){
         _grille[l*6+c].setState(FALLIN_ANIM);
-        _grille[l*6+c].setFallingAnim(18*taille);
-        _grille[l*6+c].setFallingDepth(18*taille);
-        _grille[l*6+c].setFallingCol(18);
+        _grille[l*6+c].setFallingAnim(2*18*taille);
+        _grille[l*6+c].setFallingDepth(2*18*taille);
+        _grille[l*6+c].setFallingCol(2*18);
         }
 }

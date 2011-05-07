@@ -115,7 +115,7 @@ void Game::repartitionCombo()
             while(_combo[i]!=0){
                 do{
                 target = rand() % _dashBoards.size();
-                }while(target==(int)i );//|| _dashBoards[target].looser());
+                }while(target==(int)i || _dashBoards[target].looser());
                 _dashBoards[target].addDarkBlob();
                 _combo[i]--;
             }
