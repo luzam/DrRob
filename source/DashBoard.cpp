@@ -17,7 +17,8 @@ void DashBoard::go()
         return;
     }
     if(_looser){
-    return;}
+    return;
+    }
 
     if(_moteurPhy->fixed())
     {

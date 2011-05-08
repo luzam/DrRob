@@ -46,7 +46,7 @@ public :
         }
     }
     void go();
-    void repartitionCombo();
+    void repartitionCombo(bool winner);
 
 
 };
