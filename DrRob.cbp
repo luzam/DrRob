@@ -1,67 +1,182 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="DrRob" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin\Debug\DrRob" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Debug\" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin\Release\DrRob" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj\Release\" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-			<Add option="-g" />
-		</Compiler>
-		<Unit filename="include\Blobs.h" />
-		<Unit filename="include\Clock.h" />
-		<Unit filename="include\Color.h" />
-		<Unit filename="include\Controls.h" />
-		<Unit filename="include\DashBoard.h" />
-		<Unit filename="include\Enums.h" />
-		<Unit filename="include\Game.h" />
-		<Unit filename="include\Grille.h" />
-		<Unit filename="include\InterfaceX.h" />
-		<Unit filename="include\Link.h" />
-		<Unit filename="include\MoteurPhy.h" />
-		<Unit filename="include\Orientation.h" />
-		<Unit filename="include\Position.h" />
-		<Unit filename="include\SDL_rotozoom.h" />
-		<Unit filename="include\State.h" />
-		<Unit filename="include\Tree.h" />
-		<Unit filename="include\conected.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="source\DashBoard.cpp" />
-		<Unit filename="source\Game.cpp" />
-		<Unit filename="source\Grille.cpp" />
-		<Unit filename="source\InterfaceX.cpp" />
-		<Unit filename="source\MoteurPhy.cpp" />
-		<Unit filename="source\SDL_rotozoom.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
-	</Project>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="DrRob" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\Applications\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\;CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Compiler\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/Users/Antoine/Desktop/ProjetMeanBean/DrRob" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="DrRob">
+         <Option output="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/DrRob.app/Contents/MacOS/DrRob" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Frameworks/SDL.framework/Headers" />
+            <Add directory="/Library/Frameworks/SDL_ttf.framework/Headers" />
+            <Add directory="/Library/Frameworks/SDL_image.framework/Headers" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 DrRob" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="DrRob/fast">
+         <Option output="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/DrRob.app/Contents/MacOS/DrRob" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="" />
+         <Option object_output="./" />
+         <Option type="0" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/Library/Frameworks/SDL.framework/Headers" />
+            <Add directory="/Library/Frameworks/SDL_ttf.framework/Headers" />
+            <Add directory="/Library/Frameworks/SDL_image.framework/Headers" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 DrRob/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/Users/Antoine/Desktop/ProjetMeanBean/DrRob" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Antoine/Desktop/ProjetMeanBean/DrRob/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/main.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/DashBoard.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/Game.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/Grille.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/InterfaceX.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/MoteurPhy.cpp">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/source/SDL_rotozoom.c">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Blobs.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Clock.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Color.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Controls.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/DashBoard.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Enums.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Game.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Grille.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/InterfaceX.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Link.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/MoteurPhy.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Orientation.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Position.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/SDL_rotozoom.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/State.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/Tree.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/include/conected.h">
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeSystemSpecificInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeGenericSystem.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeFindCodeBlocks.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeCInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeCXXInformation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/CMakeCommonLanguageInclude.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/FindSDL.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/FindSDL_image.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/FindSDL_ttf.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/MacOSXBundleInfo.plist.in">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/Darwin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/UnixPaths.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/Darwin-GNU-C.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/Darwin-GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/Darwin-GNU-CXX.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Platform/Darwin-GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Platform\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Compiler/GNU-C.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Compiler/GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Compiler/GNU-CXX.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+      <Unit filename="/Users/Antoine/Desktop/ProjetMeanBean/DrRob/../../../../../Applications/CMake 2.8-4.app/Contents/share/cmake-2.8/Modules/Compiler/GNU.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\..\Applications\CMake 2.8-4.app\Contents\share\cmake-2.8\Modules\Compiler\" />
+      </Unit>
+   </Project>
 </CodeBlocks_project_file>
