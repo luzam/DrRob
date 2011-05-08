@@ -848,7 +848,9 @@ void InterfaceX::blit_dash()
 /**
 * Animation quand un blob tombe
 **/
-int InterfaceX::anim_falling(){
+int InterfaceX::anim_falling(Blobs* blob){
+    if(blob->color()==DARK)
+    return 0;
 return 17;
 
 }
@@ -889,7 +891,7 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
         break;
     case FALLIN_ANIM :
     case FALLING:
-        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling()],_screen,NULL);
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
         break;
     case LANDING :
         apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
@@ -926,10 +928,7 @@ void InterfaceX::blit_scores(std::vector<DashBoard *> dashBoards){
     TTF_CloseFont(font);
 }
 
-/**
-* Affiche le menu
-=======
-}
+
 /**
 * Affiche le menu
 **/
