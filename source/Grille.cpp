@@ -19,7 +19,6 @@ void Grille::checkHole()
                         switchBlobs(l,c,l+_grille[6*l+c].fallingCol(),c);
                         _grille[6*l+c].setState(NO_STATE);
 
-                        std::cout<<"->[ "<<l<<" --> "<< l+_grille[6*l+c].fallingCol()<< " ] <\n";
                     }
                 }
             }
@@ -203,15 +202,6 @@ void Grille::setLink(int l, int c, int n, int s, int e, int w)
    */
 void Grille::checkCombo()
 {
-    std::cout<<"STATE\n";
-    for(int l=0; l<18; l++)
-    {
-        for(int c=0; c<6; c++)
-        {
-            std::cout<<_grille[6*l+c].state();
-        }
-        std::cout<<"\n";
-    }
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
             if(_grille[6*l+c].state()==COMBOTING)
@@ -220,7 +210,6 @@ void Grille::checkCombo()
                 _grille.at(6*l+c).setComboting(_grille.at(6*l+c).current()-1);
                 if(_grille.at(6*l+c).color()!=DARK)
                 {
-                    std::cout<<"---------------->>>>>>>>>>>GRILLECPP>>>>>"<<_grille.at(6*l+c).current()<<"\n";
                     if(l!=0)
                         if(_grille.at(6*(l-1)+c).color()==DARK)
                         {
@@ -299,7 +288,6 @@ int Grille::checkDark(int size)
 
     int lignPut =(int) size/6;
     int put=6*lignPut;
-    std::cout<< "LIGNE PUT "<<lignPut<<std::endl;
     if(lignPut>0)
     {
         int count=0;
@@ -339,8 +327,8 @@ void Grille::animFallin(int taille){
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++){
         _grille[l*6+c].setState(FALLIN_ANIM);
-        _grille[l*6+c].setFallingAnim(2*18*taille);
-        _grille[l*6+c].setFallingDepth(2*18*taille);
-        _grille[l*6+c].setFallingCol(2*18);
+        _grille[l*6+c].setFallingAnim(20*18*taille);
+        _grille[l*6+c].setFallingDepth(20*18*taille);
+        _grille[l*6+c].setFallingCol(20*18);
         }
 }

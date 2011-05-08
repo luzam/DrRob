@@ -27,7 +27,6 @@ void DashBoard::go()
     }
 
 
-    std::cout<<"\n\nmoteur phy : \nfalling : "<<_moteurPhy->falling()<<"\ncomboting : "<<_moteurPhy->comboting()<<"\n\n\n";
     if(_nextDarkBlobs!=0 && _moteurPhy->fixed())
     {
         _nextDarkBlobs-=_grille->checkDark(_nextDarkBlobs);
@@ -44,8 +43,6 @@ void DashBoard::go()
         if(_moteurPhy->fixed()&& _nextDarkBlobs==0)
         {
             if(_newDelay--==0){
-            std::cout<<"blob suivant\n";
-            std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
             _masterBlob.setBlob(_nextMaster);
             _slaveBlob.setBlob(_nextSlave);
             _moteurPhy->setFixed(false);

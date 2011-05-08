@@ -42,7 +42,6 @@
 		<Unit filename="include\Grille.h" />
 		<Unit filename="include\Hard.h" />
 		<Unit filename="include\InterfaceX.h" />
-		<Unit filename="include\Joueur.h" />
 		<Unit filename="include\Link.h" />
 		<Unit filename="include\MoteurPhy.h" />
 		<Unit filename="include\Orientation.h" />

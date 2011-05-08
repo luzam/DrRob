@@ -137,7 +137,6 @@ public:
     int anim_comboting(Blobs* blob);
     int anim_falling();
     int anim_landing(Blobs* blob);
-    void maj_offsets(int dx,int dy);
     int controls_and_start();
     int controls();
     void resize_blobs();

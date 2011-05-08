@@ -5,18 +5,8 @@
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
-    SDL_Surface* optimizedImage = NULL;
     loadedImage = IMG_Load( filename.c_str() );
-
-    if ( loadedImage != NULL )
-    {
-        optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
-    }
-    else
-    {
-        std::cout<<"Erreur Chargement image"<<std::endl;
-    }
-    return optimizedImage;
+    return SDL_DisplayFormatAlpha( loadedImage );
 }
 /**
 * Permet de blitter les surfaces a l'ecran
@@ -87,7 +77,6 @@ int InterfaceX::play_anim_menu(int init,int fin)
     int offsetmenux=_offset_menu.x;
     Clock _clock;
     int val=6*_ratio_menu;
-    std::cout<<" init : "<<init<<" fin : "<<fin<<std::endl;
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
         Uint8 *keystates = SDL_GetKeyState( NULL );
@@ -121,7 +110,6 @@ int InterfaceX::play_anim_menu(int init,int fin)
             }
 
             _offset_menu.x=offsetmenux;
-            std::cout<<"position x : "<<_offset_menu.x<<std::endl;
             SDL_Flip(_screen);
         }
         if(keystates[SDLK_BACKSPACE] && fin>=init)//On retourne au debut
@@ -143,7 +131,6 @@ int InterfaceX::play_anim_menu(int init,int fin)
                     SDL_Flip(_screen);
                 }
 
-                std::cout<<"recule position x : "<<_offset_menu.x<<std::endl;
 
             }
         }
@@ -171,7 +158,6 @@ int InterfaceX::select_nbJoueurs()
     SDL_Color textcolor = {240,240,240,0};
     SDL_Event event;
     Clock _clock;
-    std::cout<<"Curseur = "<<_cursor->w<<"x"<<_cursor->h<<" Position x = "<<_offset_cursor.x()<<" y = "<<_offset_cursor.y()<<std::endl;
     _offset_menu.x=2*_offset_menu.w;
     int curseur=1;
     int nb_lines=2;
@@ -333,7 +319,6 @@ int InterfaceX::controls()
     controls.push_back("BAS");
     controls.push_back("TOURNER DROITE");
     controls.push_back("TOURNER GAUCHE");
-    std::cout<<"CONTROLS : "<<controls.size()<<std::endl;
     for(int i=0; i<_nbJoueurs; ++i)
     {
         nbj.str("");
@@ -352,7 +337,6 @@ int InterfaceX::controls()
                 {
                     if(event.type==SDL_KEYDOWN)
                     {
-                        std::cout<<"Joueur["<<i<<"]["<<j<<"] : "<<event.key.keysym.sym<<std::endl;
                         _commandes[i][j]=event.key.keysym.sym;
                         continuer=0;
                     }
@@ -483,12 +467,10 @@ int InterfaceX::controls_and_start()
             {
                 if(curseur==1)
                 {
-                    std::cout<<"Start the game"<<std::endl;
                     continuer=0;
                 }
                 else if(curseur==2)
                 {
-                    std::cout<<"Start Controls"<<std::endl;
                     controls();
                 }
             }
@@ -511,15 +493,12 @@ int InterfaceX::controls_and_start()
 int InterfaceX::menu()
 {
 #ifdef WINDOWS
-    if (_chdir("img")==-1)
-        std::cout<<"Erreur dossier"<<std::endl;
+    _chdir("img");
 #else
-    if (chdir("img")==-1)
-        std::cout<<"Erreur dossier"<<std::endl;
+    chdir("img");
 #endif
     char cCurrentPath[FILENAME_MAX];
     GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
-    std::cout<< cCurrentPath<<std::endl;
     int continuer=1;
     SDL_Event event;
 
@@ -622,17 +601,12 @@ void InterfaceX::compute_game()
 * Redimensionne les blobs pour l'ecran
 **/
 void InterfaceX::resize_blobs(){
-std::cout<<"Resize des blobs"<<std::endl;
     double taille_blob_H =(double)_blobs_ini->h*_ratio;
     double taille_blob_W =(double)_blobs_ini->w*_ratio;
-    std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
-    std::cout<<"taille_blobs_w : "<<taille_blob_W<<" Ratio : "<<_ratio<<std::endl;
     int dw,dh;
     double zoom=taille_blob_H/(double)_blobs_ini->h;
     double zoom_optimal=zoom;
     rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom,&dw,&dh);
-    std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
-    std::cout<<"zoom initial : "<<zoom<<std::endl;
     while(dw/20.0!=(int)(dw/20.0))
     {
         if(ceil(dw)==floor(dw))
@@ -640,17 +614,11 @@ std::cout<<"Resize des blobs"<<std::endl;
         else
             zoom_optimal+=0.001;
         rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
-        std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
-        std::cout<<"dw : "<<(dw)<<" dh :"<<(dh)<<std::endl;
 
     }
-    std::cout<<"dw optimal : "<<(dw)<<" dh optimal :"<<(dh)<<std::endl;
-    std::cout<<"zoom optimal : "<<zoom_optimal<<std::endl;
 
     _taille_blob=(double)dw/20.0;
-    std::cout<<"1.Un blob mesure(double) : "<<_taille_blob<<" px de coté"<<std::endl;
     _taille_blob=dw/20;
-    std::cout<<"2.Un blob mesure(int) : "<<_taille_blob<<" px de coté"<<std::endl;
     _grille_W=17*_taille_blob;
     _grille_H=6*_taille_blob;
     resize_blobsIMG();
@@ -662,7 +630,6 @@ std::cout<<"Resize des blobs"<<std::endl;
 * Redimensionne les dashboards pour l'ecran
 **/
 void InterfaceX::resize_dash(){
-    std::cout<<" NBJOUEURS :"<<_nbJoueurs+_nbAI<<std::endl;
     int nbJoueursX=_nbJoueurs;
     if(_nbJoueurs>2)
         nbJoueursX=round(((double)_nbJoueurs+0.1)/2.0);
@@ -673,15 +640,11 @@ void InterfaceX::resize_dash(){
     else
         resizedDashW = ((_screen->h)*(_dashboard_ini->w)/(_dashboard_ini->h));
 
-    std::cout<<"Taille dash W resized : "<<resizedDashW<<std::endl;
     if(nbJoueursX*resizedDashW<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
     {
-        std::cout<<"Assez de place en W"<<std::endl;
         if (_nbJoueurs<=2)
         {
-            std::cout<<"resize h"<<std::endl;
             _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h);
-            std::cout<<"resize h terminé"<<std::endl;
         }
         else
         {
@@ -690,7 +653,6 @@ void InterfaceX::resize_dash(){
     }
     else   //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
     {
-        std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
         _dashboard=img_zoom_pixel_W(_dashboard_ini,ceil(_screen->w/nbJoueursX));
     }
     double d_h=_dashboard->h;
@@ -702,9 +664,7 @@ void InterfaceX::resize_dash(){
 **/
 void InterfaceX::resize_avatars(){
 
-    std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
-    std::cout<<"Taille avatar w : "<<taille_avat_W<<std::endl;
     _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
 
 }
@@ -725,7 +685,6 @@ bool InterfaceX::resize_files()
 **/
 void InterfaceX::resize_menu()
 {
-    std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
     double ratio_menu=(double)_menu_ini->h/(double)_menu_ini->w;
     int nb_menus = (int)(_menu_ini->w/_taille_menu_ini);
     if(_SCREEN_HEIGHT<_SCREEN_WIDTH*nb_menus*ratio_menu)
@@ -743,7 +702,6 @@ void InterfaceX::resize_menu()
     _offset_menu.w=ceil(_menu->w/nb_menus);
     _offset_menu.h=_menu->h;
 
-    std::cout<<"Le menu final = "<<_menu->w<<"x"<<_menu->h<<std::endl;
     _offset_cursor.setX(_offset_cursor.x()*_ratio_menu+_decalage_menu_x);
     _offset_cursor.setY(_offset_cursor.y()*_ratio_menu+_decalage_menu_y);
     _cursor=rotozoomSurface(_cursor_ini,0,_ratio_menu,0);
@@ -752,22 +710,7 @@ void InterfaceX::resize_menu()
     _taille_text*=_ratio_menu;
 
 }
-/** @brief Calcule les nouvelles positions des differents dashboard
-*
-*
-*/
-void InterfaceX::maj_offsets(int dx,int dy)
-{
-    std::cout<<"OFFSETS DE DECALAGE : "<<dx<<" x "<<dy<<std::endl;
-    _offset_grille.setX(_offset_grille.x()+dx);
-    _offset_grille.setY(_offset_grille.y()+dy);
-    _offset_nextBlob.setX(_offset_nextBlob.x()+dx);
-    _offset_nextBlob.setY(_offset_nextBlob.y()+dy);
-    _offset_avatar.setX(_offset_avatar.x()+dx);
-    _offset_avatar.setY(_offset_avatar.y()+dy);
 
-
-}
 /**
 * Calcule la position des dashboards
 **/
@@ -780,14 +723,11 @@ bool InterfaceX::compute_vDash()
     else
         nbJoueursX=_nbJoueurs;
 
-    std::cout<<"NB joueurs en X :  "<<nbJoueursX<<std::endl;
-    std::cout<<"NB joueurs  :  "<<_nbJoueurs<<std::endl;
     Position pinit(0,0);
     for(int i=0; i<_nbJoueurs; i++)
     {
         _vDash[i].setX(pinit.x());
         _vDash[i].setY(pinit.y());
-        std::cout<<" VDASH["<<i<<"] = "<<_vDash[i].x()<<"x"<<_vDash[i].y()<<std::endl;
     }
     int posX=0,posY=0;
     if(_nbJoueurs>2)
@@ -803,19 +743,17 @@ bool InterfaceX::compute_vDash()
             posY+=_dashboard->h;
         }
     }
-    int decalagex=(_screen->w -nbJoueursX*_dashboard->w)/2;
+    int decalagex=ceil((_screen->w -nbJoueursX*_dashboard->w)/2);
     int decalagey=0;
     if(_nbJoueurs<=2)
-        decalagey=(_screen->h-(ceil((double)nbJoueursX/2.0))*_dashboard->h)/2;
+        decalagey=floor((_screen->h-(ceil((double)nbJoueursX/2.0))*_dashboard->h)/2);
     for (int j=0; j<_nbJoueurs; j++)
     {
+        std::cout<<" DECALAGE Y : "<<decalagey<<std::endl;
         _vDash.at(j).setX(_vDash.at(j).x()+decalagex);
         _vDash.at(j).setY(_vDash.at(j).y()+decalagey);
     }
-    for (size_t j=0; j<_vDash.size(); j++)
-    {
-        std::cout<<"_vDash["<<j<<"] : "<<_vDash[j].x()<<"x"<<_vDash[j].y()<<std::endl;
-    }
+
 
     return true;
 }
@@ -955,7 +893,6 @@ void InterfaceX::blit_avatars()
         if(cpt>12)
             cpt=0;
         offset_img.y=cpt*ceil(offset_img.h+6.0*_ratio*_ratio_avat_ini);//*_ratio*_ratio_avat_ini);
-        std::cout<<"w : "<<offset_img.w<<" h : "<<offset_img.h<<" x : "<<offset_img.x<<" y : "<<offset_img.y<<std::endl;
         apply_surface(_vDash.at(j).x()+_offset_avatar.x(),_vDash.at(j).y()+_offset_avatar.y(),_avatars,_screen,&offset_img);
         cpt++;
     }
@@ -982,7 +919,7 @@ void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
     int offsetgrilley;
     for(size_t j=0; j<dashBoards.size(); j++)
     {
-        for(int l=6; l<18; l++)
+        for(int l=0; l<18; l++)
         {
             for(int c=0; c<6; c++)
             {
@@ -1025,17 +962,14 @@ bool InterfaceX::compute_offsets()
 bool InterfaceX::load_files()
 {
 #ifdef WINDOWS
-    if (_chdir("img")==-1)
-        std::cout<<"Erreur dossier"<<std::endl;
+    _chdir("img");
 #else
-    if (chdir("img")==-1)
-        std::cout<<"Erreur dossier"<<std::endl;
+    chdir("img");
 #endif
     char cCurrentPath[FILENAME_MAX];
 
     GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
 
-    std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
@@ -1044,7 +978,6 @@ bool InterfaceX::load_files()
     _cursor_ini = load_img("cursor.png");
     if ( _blobs_ini == NULL || _background_ini==NULL || _avatars_ini==NULL || _cursor_ini ==NULL||_menu_ini==NULL)
     {
-        std::cout<<"Erreur chargement"<<std::endl;
         return false;
     }
     return true;
@@ -1139,10 +1072,6 @@ void InterfaceX::resize_blobsIMG()
     for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
         for(int j=0; j<_nb_blobs; j++) //0 à 40
             _blobsIMG[i][j]=img_zoom_pixel_H(_blobsIMG_ini[i][j],_taille_blob);
-
-    for(int i=0; i<SIZE_COLOR-1; i++) //0 à 5
-        for(int j=0; j<_nb_blobs; j++) //0 à 40
-            std::cout<<" BLOB "<<i<<"x"<<j<<" : "<<_blobsIMG[i][j]->w <<"x"<<_blobsIMG_ini[i][j]->h<<std::endl;
 
 
 }

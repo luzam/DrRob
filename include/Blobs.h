@@ -21,15 +21,12 @@ public :
     Blobs(Color color,State state=NO_STATE,Link link=NO_LINK):
         _color(color),_state(state),_link(link),_current(0)
     {
-        std::cout<<"Blob(couleur)\n";
     }
     Blobs():_color(BLANK),_state(NO_STATE),_link(NO_LINK),_current(0)
     {
-        std::cout<<"Blob(vierge)\n";
     }
     Blobs(const Blobs& blob): _color(blob.color()),_state(blob.state()),_link(blob.link()),_current(0)
     {
-        std::cout<<"Blob(Blob copie)\n";
     }
     ~Blobs() {}
 

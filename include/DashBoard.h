@@ -47,7 +47,6 @@ public :
         _nextMaster.setColor((++_it)->color());
         _nextSlave.setColor((++_it)->color());
         _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
-       // std::cout<<"Dashboard()->>>"<<_courantPivot.color()<<std::endl;
     }
     virtual ~DashBoard(){
     delete _moteurPhy;

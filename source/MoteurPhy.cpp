@@ -79,7 +79,6 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
         _orientation = BAS;
         break;
     }
-    std::cout<<"roration-> orientation "<<_orientation<<std::endl;
     _turningHoraire=TURNING_ANIM_TIME;
     majPosition(master,slave);
     //TO DO : Turning clock_wise
@@ -166,7 +165,6 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         _orientation = BAS;
         break;
     }
-    std::cout<<"rotation-> orientation "<<_orientation<<std::endl;
     _turningDirect=TURNING_ANIM_TIME;
     majPosition(master,slave);
 
@@ -178,7 +176,6 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
   */
 int MoteurPhy::moove(Position* master,Position* slave)
 {
-    std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     bool touch = false;
     switch(_orientation)
     {
@@ -252,7 +249,6 @@ int MoteurPhy::moove(Position* master,Position* slave)
   */
 void MoteurPhy::ajoutGrille()
 {
-    std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setColor(_colorMaster);
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setLink(0);
     switch(_orientation)
@@ -286,7 +282,6 @@ void MoteurPhy::ajoutGrille()
   */
 void MoteurPhy::gauche(Position* master,Position* slave)
 {
-    std::cout<<"gauche"<<std::endl;
     switch(_orientation)
     {
     case GAUCHE :
@@ -319,7 +314,6 @@ void MoteurPhy::gauche(Position* master,Position* slave)
   */
 void MoteurPhy::droite(Position* master,Position* slave)
 {
-    std::cout<<"droite"<<std::endl;
     switch(_orientation)
     {
     case DROITE :
@@ -382,15 +376,6 @@ void MoteurPhy::majCombo()
     std::multimap<unsigned char,Position> key;
     int combo = 0;
 
-    std::cout<<"Grille"<<std::endl;
-    //écriture de la grille dans un unsigned char
-    for(int l=0; l<18; l++)
-    {
-        for(int c=0; c<6; c++)
-            std::cout<<((*_grille)(l,c))->color();
-        std::cout<<std::endl;
-    }
-    std::cout<<std::endl;
 
 
     for(int l=0; l<18; l++)
@@ -398,29 +383,15 @@ void MoteurPhy::majCombo()
         for(int c=0; c<6; c++)
             (img)[l*6+c]=(*_grille)(l,c)->color();
     }
-    std::cout<<"Image"<<std::endl;
-
-    for(int l=0; l<18; l++)
-    {
-        for(int c=0; c<6; c++)
-            std::cout<<(img)[l*6+c];
-        std::cout<<std::endl;
-    }
-    std::cout<<std::endl;
-
-    std::cout<<"labeled"<<std::endl;
 
 
     // récupération des connectedComponents labelled
     int width = 6, height =18;
     unsigned char *out_uc = (unsigned char *)malloc(width*height);
-    std::cout<<"BLA1"<<std::endl;
     ConnectedComponents cc(7);
-    std::cout<<"BLA2"<<std::endl;
     cc.connected(img, out_uc, width, height,
                  std::equal_to<unsigned char>(),
                  false);
-    std::cout<<"BLA3"<<std::endl;
     for(int r=0; r<height; ++r)
     {
         for(int c=0; c<width; ++c)
@@ -432,7 +403,6 @@ void MoteurPhy::majCombo()
         for(int c=0; c<6; c++)
             key.insert(std::pair<unsigned char,Position>(out_uc[l*6+c], Position(l,c)));
 
-    std::cout<<std::endl<<"taille map : "<<key.size()<<std::endl;
     std::multimap<unsigned char,Position>::iterator it;
     std::set<unsigned char> keyset;
     // suppression des zones inférieurs à quatre et des absences de blobs
@@ -444,8 +414,7 @@ void MoteurPhy::majCombo()
           _fixed = true;*/
     for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
         key.erase((*its));
-    for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
-        std::cout << "  {  " << (int)((*it).first) << ", [" << (*it).second.x() << ","<< (*it).second.y()<< "]  }" << std::endl;
+
     keyset.clear();
     //on récuper les label des combos restant
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
@@ -467,18 +436,8 @@ void MoteurPhy::majCombo()
             ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);
         }
     }
-    std::cout<<"Combo : " << _combo << std::endl;
     free(out_uc);
     free(img);
-    for(int l=0; l<18; l++)
-    {
-        for(int c=0; c<6; c++)
-        {
-            std::cout<<(((*_grille)(l,c))->color());
-        }
-        std::cout<<std::endl;
-    }
-    std::cout<<std::endl;
 
 }
 
@@ -507,7 +466,6 @@ void MoteurPhy::fall()
         }
     }
     _falling = maxBlank;
-    std::cout<<"MMMMMMMMAXBLANK->>>>>>>>>>>>>>>>>>>>>> " <<_falling<<std::endl;
 }
 
 /** @brief updating position of blobs

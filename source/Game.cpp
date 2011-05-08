@@ -13,7 +13,6 @@ void Game::go()
         int winnerDelay = 100;
         _X->initialisation_debut_jeu();
 
-        std::cout<<"On lance le menu"<<std::endl;
         if(_X->menu()==-1)
         {
             //On quitte
@@ -22,7 +21,6 @@ void Game::go()
         _nbJoueurs=_X->NbJoueurs();
         _nbAI=_X->NbAI();
         _X->setNbJoueurs(_nbJoueurs+_nbAI);
-        std::cout<<" NBJOUEURS TOTAL : "<<(_nbJoueurs+_nbAI)<<std::endl;
         std::vector<bool> _turningBool(_nbJoueurs,false);
         std::vector<bool> _turninghBool(_nbJoueurs,false);
         _X->compute_game();
@@ -36,8 +34,6 @@ void Game::go()
         _combo = (int *) calloc(_nbJoueurs+_nbAI,sizeof(int));
         SDL_Event event;
         int continuer = 1;
-        for(int i=0; i<100; ++i)
-            std::cout<<" NB JOUEURS : "<<_nbJoueurs<<std::endl;
         _X->blits(_dashBoards);
 
         while (continuer) /* TANT QUE la variable ne vaut pas 0 */
@@ -49,10 +45,11 @@ void Game::go()
                     continuer = 0; /* On met le booléen à 0, donc la boucle va s'arrêter */
                 }
                 Uint8 *keystates = SDL_GetKeyState( NULL );
+                    if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
+                    continuer = 0;
                 for (int i=0; i<_nbJoueurs; i++)
                 {
-                    if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arrête le programme */
-                        continuer = 0;
+
 
                     if (keystates[(_X->Commandes())[i][CGAUCHE]])
                         _dashBoards.at(i)->moteurPhy()->gauche(_dashBoards.at(i)->masterPos(),_dashBoards.at(i)->slavePos());

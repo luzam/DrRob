@@ -1,52 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="include\Clock.h" open="0" top="0" tabpos="0">
-		<Cursor position="70" topLine="9" />
+	<File name="include\Blobs.h" open="1" top="0" tabpos="5">
+		<Cursor position="765" topLine="8" />
 	</File>
-	<File name="include\DashBoard.h" open="0" top="0" tabpos="8">
-		<Cursor position="1972" topLine="11" />
+	<File name="include\DashBoard.h" open="1" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\Easy.h" open="0" top="0" tabpos="3">
-		<Cursor position="815" topLine="19" />
+	<File name="include\InterfaceX.h" open="1" top="0" tabpos="3">
+		<Cursor position="2878" topLine="77" />
 	</File>
-	<File name="include\Game.h" open="0" top="0" tabpos="7">
-		<Cursor position="1104" topLine="30" />
+	<File name="include\Position.h" open="1" top="0" tabpos="6">
+		<Cursor position="250" topLine="0" />
 	</File>
-	<File name="include\Grille.h" open="0" top="0" tabpos="14">
-		<Cursor position="769" topLine="12" />
+	<File name="main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="include\Hard.h" open="0" top="0" tabpos="1">
-		<Cursor position="209" topLine="0" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="4486" topLine="49" />
 	</File>
-	<File name="include\InterfaceX.h" open="0" top="0" tabpos="10">
-		<Cursor position="4885" topLine="147" />
-	</File>
-	<File name="include\Joueur.h" open="0" top="0" tabpos="9">
-		<Cursor position="277" topLine="0" />
-	</File>
-	<File name="include\MoteurPhy.h" open="0" top="0" tabpos="12">
-		<Cursor position="1661" topLine="54" />
-	</File>
-	<File name="include\ai.h" open="0" top="0" tabpos="2">
-		<Cursor position="281" topLine="1" />
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="11">
-		<Cursor position="267" topLine="0" />
-	</File>
-	<File name="source\DashBoard.cpp" open="0" top="0" tabpos="6">
-		<Cursor position="444" topLine="29" />
-	</File>
-	<File name="source\Game.cpp" open="0" top="0" tabpos="4">
-		<Cursor position="4546" topLine="16" />
-	</File>
-	<File name="source\Grille.cpp" open="0" top="0" tabpos="13">
-		<Cursor position="1049" topLine="13" />
-	</File>
-	<File name="source\InterfaceX.cpp" open="0" top="0" tabpos="5">
-		<Cursor position="37174" topLine="1163" />
-	</File>
-	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
-		<Cursor position="4" topLine="0" />
+	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="4933" topLine="144" />
 	</File>
 </CodeBlocks_layout_file>

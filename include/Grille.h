@@ -18,10 +18,8 @@ protected :
     void setLink(int l, int c, int n, int s, int e, int w);
     public :
     Grille(int taille):_grille(18*6),_tailleBlob(taille){
-        std::cout<<"grille()\n";
     for(int c=0;c<18*6;c++)
     std::fill(_grille.begin(), _grille.end(), Blobs());
-    std::cout<<"FIN grille()\n";
     }
 
     ~Grille(){
