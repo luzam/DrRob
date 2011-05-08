@@ -30,9 +30,7 @@ protected :
     Position _slave;
     bool _go;
     bool _launchCombo;
-    Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
-    /* SDLttf texte _score;
-    SDLttf texte _joueur;*/
+    Position posFen;
     int _nextDarkBlobs;
     bool _landing;
 
@@ -70,6 +68,7 @@ public :
     int combo()const{return _combo;}
     void addDarkBlob();
     bool looser()const{return _looser;}
+    virtual void think() = 0;
 
 };
 

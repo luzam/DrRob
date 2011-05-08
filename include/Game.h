@@ -11,13 +11,16 @@
 #include <stdlib.h>
 #include <time.h>
 #include "InterfaceX.h"
+#include "Easy.h"
+#include "Hard.h"
+#include "Joueur.h"
 
 #include <iostream> // temporaire
 
 class Game
 {
 protected :
-    std::vector<DashBoard> _dashBoards;
+    std::vector<DashBoard *> _dashBoards;
     std::list<Blobs> _randBlobs;
     InterfaceX* _X;
     Clock _clock;
@@ -26,13 +29,13 @@ protected :
     int *_combo;
 public :
 
-    Game():_clock(),_nbJoueurs(1),_nbAI(0)
+    Game():_clock(),_nbJoueurs(1),_nbAI(1)
     {
         _X = new InterfaceX(600,500);
         std::cout<<"Game()\n";
     }
 
-    std::vector<DashBoard> dashBoards()const{return _dashBoards;}
+    std::vector<DashBoard *> dashBoards()const{return _dashBoards;}
     void initBlobs(){
         srand(time(NULL));
         Blobs randBlob;

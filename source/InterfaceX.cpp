@@ -591,7 +591,7 @@ std::cout<<"Resize des blobs"<<std::endl;
 
 
 void InterfaceX::resize_dash(){
-    std::cout<<" NBJOUEURS :"<<_nbJoueurs<<std::endl;
+    std::cout<<" NBJOUEURS :"<<_nbJoueurs+_nbAI<<std::endl;
     int nbJoueursX=_nbJoueurs;
     if(_nbJoueurs>2)
         nbJoueursX=round(((double)_nbJoueurs+0.1)/2.0);
@@ -741,7 +741,7 @@ void InterfaceX::blit_fond()
 {
     apply_surface(0,0,_background,_screen,NULL);
 }
-void InterfaceX::blits(std::vector<DashBoard> dashBoards)
+void InterfaceX::blits(std::vector<DashBoard *> dashBoards)
 {
     blit_fond();
     blit_blobs(dashBoards);
@@ -773,7 +773,7 @@ int InterfaceX::anim_comboting(Blobs* blob)
         if((blob->current())%4 >= 3)
             return -1;
         else
-            return 1;
+            return 0;
     }
     else
         return 32;
@@ -841,7 +841,7 @@ void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* mast
         apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
     blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
 }
-void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
+void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
 {
 
     int blobx,bloby;
@@ -853,18 +853,18 @@ void InterfaceX::blit_blobs(std::vector<DashBoard> dashBoards)
         {
             for(int c=0; c<6; c++)
             {
-                if( ((*(dashBoards.at(j).grille()))(l,c))->color()!=BLANK)
+                if( ((*(dashBoards.at(j)->grille()))(l,c))->color()!=BLANK)
                 {
                     //On se place au debut de la grille
                     offsetgrillex=(_offset_grille).x()+_vDash.at(j).x();
-                    if( ((*(dashBoards.at(j).grille()))(l,c))->state()==FALLING ||((*(dashBoards.at(j).grille()))(l,c))->state()==FALLIN_ANIM )
-                        offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j).grille()))(l,c))->current()+((*(dashBoards.at(j).grille()))(l,c))->fallingDepth();
+                    if( ((*(dashBoards.at(j)->grille()))(l,c))->state()==FALLING ||((*(dashBoards.at(j)->grille()))(l,c))->state()==FALLIN_ANIM )
+                        offsetgrilley=(_offset_grille).y()+_vDash.at(j).y()-((*(dashBoards.at(j)->grille()))(l,c))->current()+((*(dashBoards.at(j)->grille()))(l,c))->fallingDepth();
                     else
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
                     //On calcule les coordonnées des blobs
                     blobx=c*_taille_blob;
                     bloby=l*_taille_blob;
-                    blit_un_blob(((*(dashBoards.at(j).grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
+                    blit_un_blob(((*(dashBoards.at(j)->grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
 
                 }
             }
