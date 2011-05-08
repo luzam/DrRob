@@ -34,14 +34,27 @@ public :
         std::cerr<< "l1 : " << l1 << "\n"<<std::endl;
         std::cerr<< "l2 : " << l2 << "\n"<<std::endl;
 
-        /*if(rand()%2==0)
+        if(rand()%20==0)
+        if(_moteurPhy->colBlobCourant()==2){
+        if(rand()%2==0)
+             _moteurPhy->gauche(&_master,&_slave);
+            else
+                _moteurPhy->droite(&_master,&_slave);
+            if(rand()%2==0)
+            _moteurPhy->rotationAntiHoraire(&_master,&_slave);
+            else
+                _moteurPhy->rotationHoraire(&_master,&_slave);
+            return;
+        }
+        if(rand()%5==0)
         {
             if(_moteurPhy->colBlobCourant()<3)
                 _moteurPhy->gauche(&_master,&_slave);
             else
                 _moteurPhy->droite(&_master,&_slave);
+            return;
 
-        }*/
+        }
 
         if(l1==-1 && l2 == -1)
         {

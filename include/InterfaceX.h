@@ -135,7 +135,7 @@ public:
     void putpixel(SDL_Surface* s,int x,int y,Uint32 p);
     void resize_blobsIMG();
     int anim_comboting(Blobs* blob);
-    int anim_falling();
+    int anim_falling(Blobs* blob);
     int anim_landing(Blobs* blob);
     int controls_and_start();
     int controls();

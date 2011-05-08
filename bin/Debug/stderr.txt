@@ -1,0 +1,1161 @@
+666666
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+11-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666666
+colmin : 5
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+10-
+ 666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+10-
+ 666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666666
+colmin : 4
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : 0
+
+l2 : 0
+
+orienation : 2
+7-
+ 666631
+colmin : 3
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 666631
+colmin : 3
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 10-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 1
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 666631
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 660031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 3
+7-
+ 660031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 660031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 660031
+colmin : 0
+
+l1 : -1
+
+l2 : 2
+
+4-
+ 660031
+colmin : 0
+
+l1 : -1
+
+l2 : 2
+
+4-
+ 660031
+colmin : 0
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 0
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 0
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 660031
+colmin : 1
+
+l1 : -1
+
+l2 : 2
+
+goto
+ 4-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 1
+7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 3
+7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 600031
+colmin : 0
+
+l1 : 0
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 5-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+goto
+ 11-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 600031
+colmin : 0
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 200031
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 200031
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 200031
+colmin : 3
+
+l1 : -1
+
+l2 : -1
+
+5-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 5
+
+l2 : 5
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 2
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 4
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 4
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 4
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 3
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 200031
+colmin : 4
+
+l1 : 4
+
+l2 : 0
+
+orienation : 0
+goto
+ 7-
+ 
