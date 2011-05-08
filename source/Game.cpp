@@ -26,11 +26,16 @@ void Game::go()
         _X->compute_game();
         assert(_nbJoueurs+_nbAI>0);
         initBlobs();
+        srand(time(NULL));
         _dashBoards.clear();
         for(int c=0; c<_nbJoueurs; c++)
             _dashBoards.push_back(new Joueur(_X->taille_blob(),new Grille((int)(_X->taille_blob())),&_randBlobs));
-        for(int c = 0 ; c<_nbAI; c++)
+        for(int c = 0 ; c<_nbAI; c++){
+            if(rand()%3==0)
+            _dashBoards.push_back(new Easy(_X->taille_blob(),new Grille((int)(_X->taille_blob())),&_randBlobs));
+            else
             _dashBoards.push_back(new Hard(_X->taille_blob(),new Grille((int)(_X->taille_blob())),&_randBlobs));
+        }
         _combo = (int *) calloc(_nbJoueurs+_nbAI,sizeof(int));
         SDL_Event event;
         int continuer = 1;

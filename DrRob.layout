@@ -2,13 +2,22 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include\Blobs.h" open="1" top="0" tabpos="5">
-		<Cursor position="765" topLine="8" />
+		<Cursor position="779" topLine="13" />
 	</File>
 	<File name="include\DashBoard.h" open="1" top="0" tabpos="7">
-		<Cursor position="0" topLine="0" />
+		<Cursor position="1234" topLine="27" />
+	</File>
+	<File name="include\Game.h" open="1" top="0" tabpos="8">
+		<Cursor position="308" topLine="0" />
+	</File>
+	<File name="include\Grille.h" open="1" top="0" tabpos="9">
+		<Cursor position="488" topLine="0" />
+	</File>
+	<File name="include\Hard.h" open="1" top="0" tabpos="13">
+		<Cursor position="232" topLine="0" />
 	</File>
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="3">
-		<Cursor position="2878" topLine="77" />
+		<Cursor position="4315" topLine="84" />
 	</File>
 	<File name="include\Position.h" open="1" top="0" tabpos="6">
 		<Cursor position="250" topLine="0" />
@@ -16,10 +25,19 @@
 	<File name="main.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="4486" topLine="49" />
+	<File name="source\DashBoard.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="1045" topLine="51" />
 	</File>
-	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="4933" topLine="144" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="1094" topLine="17" />
+	</File>
+	<File name="source\Grille.cpp" open="1" top="0" tabpos="11">
+		<Cursor position="8710" topLine="0" />
+	</File>
+	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="21491" topLine="724" />
+	</File>
+	<File name="source\MoteurPhy.cpp" open="1" top="1" tabpos="12">
+		<Cursor position="13128" topLine="359" />
 	</File>
 </CodeBlocks_layout_file>

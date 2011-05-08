@@ -749,7 +749,6 @@ bool InterfaceX::compute_vDash()
         decalagey=floor((_screen->h-(ceil((double)nbJoueursX/2.0))*_dashboard->h)/2);
     for (int j=0; j<_nbJoueurs; j++)
     {
-        std::cout<<" DECALAGE Y : "<<decalagey<<std::endl;
         _vDash.at(j).setX(_vDash.at(j).x()+decalagex);
         _vDash.at(j).setY(_vDash.at(j).y()+decalagey);
     }

@@ -392,12 +392,6 @@ void MoteurPhy::majCombo()
     cc.connected(img, out_uc, width, height,
                  std::equal_to<unsigned char>(),
                  false);
-    for(int r=0; r<height; ++r)
-    {
-        for(int c=0; c<width; ++c)
-            putchar('0'+out_uc[r*width+c]);
-        putchar('\n');
-    }
     // récupération des label dans un vector
     for(int l=0; l<18; l++)
         for(int c=0; c<6; c++)
