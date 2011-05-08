@@ -45,7 +45,9 @@ class MoteurPhy{
     public :
     MoteurPhy(int taille,Grille* grille):
     _taille(taille), _grille(grille){init(taille);}
-    ~MoteurPhy(){}
+    ~MoteurPhy(){
+    delete _grille;
+    }
     void init(int taille){
         _taille = taille;
         _posBlobPivot.setX(2*taille);

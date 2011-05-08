@@ -33,11 +33,12 @@ protected :
     Position posFen;
     int _nextDarkBlobs;
     bool _landing;
+    int _newDelay;
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_looser(false),_combo(0),
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
-        _nextDarkBlobs(0),_landing(true)
+        _nextDarkBlobs(0),_landing(true),_newDelay(2)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -47,7 +48,10 @@ public :
         _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
        // std::cout<<"Dashboard()->>>"<<_courantPivot.color()<<std::endl;
     }
+    virtual ~DashBoard(){
+    delete _moteurPhy;
 
+    }
 
     MoteurPhy* moteurPhy()const
     {

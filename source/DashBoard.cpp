@@ -9,15 +9,17 @@ void DashBoard::go()
 
     bool retour =false;
 
-    if(!_looser&&_grille->checkLoose()){
+    if(!_looser&&_grille->checkLoose())
+    {
         _grille->animFallin(_moteurPhy->taille());
         _masterBlob.setColor(BLANK);
         _slaveBlob.setColor(BLANK);
         _looser = _grille->checkLoose();
         return;
     }
-    if(_looser){
-    return;
+    if(_looser)
+    {
+        return;
     }
 
     if(_moteurPhy->fixed())
@@ -38,12 +40,12 @@ void DashBoard::go()
         _go = true;
         //return;
     }
-    if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0)
+    if(_go && _moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0 && _grille->checkFalling() == 0 )
     {
 
-        if(_moteurPhy->fixed()&& _nextDarkBlobs==0 )
+        if(_moteurPhy->fixed()&& _nextDarkBlobs==0)
         {
-
+            if(_newDelay--==0){
             std::cout<<"blob suivant\n";
             std::cout<<"MASTER COLOR ::::::"<<_nextMaster.color()<<std::endl;
             _masterBlob.setBlob(_nextMaster);
@@ -58,7 +60,7 @@ void DashBoard::go()
                 ++_it;
             _nextSlave.setBlob(*_it);
             _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
-
+            _newDelay = 2;}
         }
 
         if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0 && _go)
@@ -66,7 +68,6 @@ void DashBoard::go()
             bool land = _moteurPhy->moove(&_master,&_slave);
             if(land&&_landing)
             {
-                std::cerr<<"set landing\n";
 
                 _masterBlob.setState(LANDING);
                 _masterBlob.setLanding(LANDING_ANIM_TIME);
@@ -76,12 +77,13 @@ void DashBoard::go()
 
                 _landing = false;
             }
-            else if(!land)  {
+            else if(!land)
+            {
                 _landing = true;
-                std::cerr<<"reset landing\n";
             }
 
         }
+
     }
 
 

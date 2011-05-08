@@ -115,7 +115,6 @@ void Game::go()
                         if(_dashBoards.at(i)->launchCombo())
                         {
                             _combo[i] = _dashBoards.at(i)->combo();
-                            //  std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
                             _dashBoards.at(i)->resetCombo();
                         }
                     }
@@ -139,6 +138,9 @@ void Game::go()
                 SDL_Flip(_X->screen());
             }
         }
+        for(int c=0; c<_nbJoueurs+_nbAI ; c++)
+            delete _dashBoards[c];
+        free(_combo);
     }
 }
 /** @brief main loop

@@ -27,10 +27,10 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-        if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH==0)
-            _screen = SDL_SetVideoMode( 0, 0, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF | SDL_FULLSCREEN );
-        else
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
+    if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH==0)
+        _screen = SDL_SetVideoMode( 0, 0, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF | SDL_FULLSCREEN );
+    else
+        _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
     _SCREEN_HEIGHT=_screen->h;
     _SCREEN_WIDTH=_screen->w;
     if ( _screen == NULL )
@@ -304,27 +304,28 @@ int InterfaceX::controls()
         joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
 
 
-        for(int j=0;j<_nbJoueurs;++j){
-        continuer=1;
-        text=TTF_RenderText_Solid(font,controls[j].c_str(),textcolor);
-        while(continuer)
+        for(int j=0; j<_nbJoueurs; ++j)
         {
-            while(SDL_PollEvent(&event)) /* On attend un �nement qu'on r�p� dans event */
+            continuer=1;
+            text=TTF_RenderText_Solid(font,controls[j].c_str(),textcolor);
+            while(continuer)
             {
-                if(event.type==SDL_KEYDOWN)
+                while(SDL_PollEvent(&event)) /* On attend un �nement qu'on r�p� dans event */
                 {
-                    std::cout<<"Joueur["<<i<<"]["<<j<<"] : "<<event.key.keysym.sym<<std::endl;
-                    _commandes[i][j]=event.key.keysym.sym;
-                    continuer=0;
+                    if(event.type==SDL_KEYDOWN)
+                    {
+                        std::cout<<"Joueur["<<i<<"]["<<j<<"] : "<<event.key.keysym.sym<<std::endl;
+                        _commandes[i][j]=event.key.keysym.sym;
+                        continuer=0;
+                    }
+
+
+                    blit_fond();
+                    apply_surface(_screen->w/2-text->w/2,_screen->h/2-text->h/2,text,_screen,NULL);
+                    apply_surface(_screen->w/2-joueur->w/2,_screen->h/4-joueur->h/2,joueur,_screen,NULL);
+                    SDL_Flip(_screen);
                 }
-
-
-                blit_fond();
-                apply_surface(_screen->w/2-text->w/2,_screen->h/2-text->h/2,text,_screen,NULL);
-                apply_surface(_screen->w/2-joueur->w/2,_screen->h/4-joueur->h/2,joueur,_screen,NULL);
-                SDL_Flip(_screen);
             }
-        }
         }
         continuer=1;
 
@@ -333,34 +334,36 @@ int InterfaceX::controls()
     return 1;
 }
 
-void InterfaceX::controls_resize(){
-_commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS,0));
+void InterfaceX::controls_resize()
+{
+    _commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS,0));
 }
-void InterfaceX::controls_by_default(){
-_commandes.resize(4,std::vector<int> (5));
-_commandes[0][CGAUCHE]=SDLK_LEFT;
-_commandes[0][CDROITE]=SDLK_RIGHT;
-_commandes[0][CBAS]=SDLK_DOWN;
-_commandes[0][CHORAIRE]=SDLK_UP;
-_commandes[0][CANTIHORAIRE]=SDLK_0;
+void InterfaceX::controls_by_default()
+{
+    _commandes.resize(4,std::vector<int> (5));
+    _commandes[0][CGAUCHE]=SDLK_LEFT;
+    _commandes[0][CDROITE]=SDLK_RIGHT;
+    _commandes[0][CBAS]=SDLK_DOWN;
+    _commandes[0][CHORAIRE]=SDLK_UP;
+    _commandes[0][CANTIHORAIRE]=SDLK_0;
 
-_commandes[1][CGAUCHE]=SDLK_a;
-_commandes[1][CDROITE]=SDLK_d;
-_commandes[1][CBAS]=SDLK_s;
-_commandes[1][CHORAIRE]=SDLK_w;
-_commandes[1][CANTIHORAIRE]=SDLK_q;
+    _commandes[1][CGAUCHE]=SDLK_a;
+    _commandes[1][CDROITE]=SDLK_d;
+    _commandes[1][CBAS]=SDLK_s;
+    _commandes[1][CHORAIRE]=SDLK_w;
+    _commandes[1][CANTIHORAIRE]=SDLK_q;
 
-_commandes[2][CGAUCHE]=SDLK_g;
-_commandes[2][CDROITE]=SDLK_j;
-_commandes[2][CBAS]=SDLK_h;
-_commandes[2][CHORAIRE]=SDLK_y;
-_commandes[2][CANTIHORAIRE]=SDLK_t;
+    _commandes[2][CGAUCHE]=SDLK_g;
+    _commandes[2][CDROITE]=SDLK_j;
+    _commandes[2][CBAS]=SDLK_h;
+    _commandes[2][CHORAIRE]=SDLK_y;
+    _commandes[2][CANTIHORAIRE]=SDLK_t;
 
-_commandes[3][CGAUCHE]=SDLK_k;
-_commandes[3][CDROITE]=SDLK_m;
-_commandes[3][CBAS]=SDLK_l;
-_commandes[3][CHORAIRE]=SDLK_o;
-_commandes[3][CANTIHORAIRE]=SDLK_i;
+    _commandes[3][CGAUCHE]=SDLK_k;
+    _commandes[3][CDROITE]=SDLK_m;
+    _commandes[3][CBAS]=SDLK_l;
+    _commandes[3][CHORAIRE]=SDLK_o;
+    _commandes[3][CANTIHORAIRE]=SDLK_i;
 
 }
 
@@ -380,7 +383,7 @@ int InterfaceX::controls_and_start()
     blit_cursor();
     SDL_Flip(_screen);
     Position _offset_nbj;
-  //  int offx_ini=80*_ratio_menu+_decalage_menu_x;
+    //  int offx_ini=80*_ratio_menu+_decalage_menu_x;
     int offy_ini=87*_ratio_menu+_decalage_menu_y;
     _offset_cursor.setY(offy_ini);
     int saut=35*_ratio_menu;
@@ -499,46 +502,46 @@ int InterfaceX::menu()
                 }
             }
         }
-            switch(position_menu)
+        switch(position_menu)
+        {
+        case 1://choix des joueurs
+            switch(select_nbJoueurs())
             {
-            case 1://choix des joueurs
-                switch(select_nbJoueurs())
-                {
-                case -1://on veut revenir en arriere
-                    position_menu--;
-                    position_menu+= play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
-                        _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
-                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
-                    break;
-                case 0://on veut avancer
-                    position_menu++;
-                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x+_offset_menu.w);
-                    break;
-                default:
-                    break;
-                }
-                break;
-            case 2://controls et start
-                switch(controls_and_start())
-                {
-                case -1:
+            case -1://on veut revenir en arriere
+                position_menu--;
+                position_menu+= play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
                 _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
-                            _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
-                    position_menu--;
-                    position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
-                    break;
-                    case 1:
-                    continuer=0;
-                    break;
-                default:
-                    break;
-                }
+                _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
                 break;
-            default://au debut donc on ne fait rien
+            case 0://on veut avancer
+                position_menu++;
+                position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x+_offset_menu.w);
                 break;
-
-
+            default:
+                break;
             }
+            break;
+        case 2://controls et start
+            switch(controls_and_start())
+            {
+            case -1:
+                _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+                _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+                position_menu--;
+                position_menu+=play_anim_menu(_offset_menu.x,_offset_menu.x-_offset_menu.w);
+                break;
+            case 1:
+                continuer=0;
+                break;
+            default:
+                break;
+            }
+            break;
+        default://au debut donc on ne fait rien
+            break;
+
+
+        }
 
         if(_clock.tic(300))
         {
@@ -563,8 +566,9 @@ void InterfaceX::compute_game()
     compute_vDash();
     compute_offsets();
 }
-void InterfaceX::resize_blobs(){
-std::cout<<"Resize des blobs"<<std::endl;
+void InterfaceX::resize_blobs()
+{
+    std::cout<<"Resize des blobs"<<std::endl;
     double taille_blob_H =(double)_blobs_ini->h*_ratio;
     double taille_blob_W =(double)_blobs_ini->w*_ratio;
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
@@ -578,9 +582,9 @@ std::cout<<"Resize des blobs"<<std::endl;
     while(dw/20.0!=(int)(dw/20.0))
     {
         if(ceil(dw)==floor(dw))
-        zoom_optimal-=0.001;
+            zoom_optimal-=0.001;
         else
-        zoom_optimal+=0.001;
+            zoom_optimal+=0.001;
         rotozoomSurfaceSize(_blobs_ini->w,_blobs_ini->h,0,zoom_optimal,&dw,&dh);
         std::cout<<"dw(double) : "<<(dw/20.0)<<" dh(int) :"<<(int)(dw/20.0)<<std::endl;
         std::cout<<"dw : "<<(dw)<<" dh :"<<(dh)<<std::endl;
@@ -599,7 +603,8 @@ std::cout<<"Resize des blobs"<<std::endl;
 }
 
 
-void InterfaceX::resize_dash(){
+void InterfaceX::resize_dash()
+{
     std::cout<<" NBJOUEURS :"<<_nbJoueurs+_nbAI<<std::endl;
     int nbJoueursX=_nbJoueurs;
     if(_nbJoueurs>2)
@@ -635,7 +640,8 @@ void InterfaceX::resize_dash(){
     _ratio=d_h/(double)d_h_ini;
 }
 
-void InterfaceX::resize_avatars(){
+void InterfaceX::resize_avatars()
+{
 
     std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
@@ -646,9 +652,9 @@ void InterfaceX::resize_avatars(){
 bool InterfaceX::resize_files()
 {
 
-resize_dash();
-resize_blobs();
-resize_avatars();
+    resize_dash();
+    resize_blobs();
+    resize_avatars();
 
     return true;
 }
@@ -707,7 +713,7 @@ bool InterfaceX::compute_vDash()
         nbJoueursX=_nbJoueurs;
 
     std::cout<<"NB joueurs en X :  "<<nbJoueursX<<std::endl;
-     std::cout<<"NB joueurs  :  "<<_nbJoueurs<<std::endl;
+    std::cout<<"NB joueurs  :  "<<_nbJoueurs<<std::endl;
     Position pinit(0,0);
     for(int i=0; i<_nbJoueurs; i++)
     {
@@ -762,14 +768,14 @@ void InterfaceX::blit_dash()
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
-int InterfaceX::anim_falling(Blobs* blob){
-return 17;
+int InterfaceX::anim_falling(Blobs* blob)
+{
+    return 17;
 
 }
 
 int InterfaceX::anim_landing(Blobs* blob)
 {
-    std::cerr << "landing : "<< blob->current() << "\n";
     return (blob->current()%6>=3)?16:17;
 }
 
@@ -805,7 +811,7 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
         break;
     case COMBOTING:
         if(anim_comboting(blob)!=-1)
-        apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
+            apply_surface(x,y,_blobsIMG[blob->color()][anim_comboting(blob)],_screen,NULL);
         break;
     default://ne doit pas arriver mais pour debug
         apply_surface(x,y,_blobsIMG[blob->color()][blob->link()],_screen,NULL);
@@ -948,7 +954,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int tail
     double sar_W=surface_a_resize->w;
     double zoom=(double)td_W/(double)sar_W;
     SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-   // SDL_FreeSurface(surface_a_resize);
+    // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
 SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
@@ -957,7 +963,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     double sar_H=surface_a_resize->h;
     double zoom=(double)td_H/(double)sar_H;
     SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-   // SDL_FreeSurface(surface_a_resize);
+    // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
 
@@ -1082,7 +1088,8 @@ Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
         if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
             return p[0] << 16 | p[1] << 8 | p[2];
         else
-            return p[0] | p[1] << 8 | p[2] << 16;    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
+            return p[0] | p[1] << 8 | p[2] << 16;
+        _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
 
         break;
 
@@ -1133,7 +1140,8 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
 void InterfaceX::maj_anims(DashBoard& dash)
 {
     bool retour =false;
-    if(dash.grille()->checkLoose()){
+    if(dash.grille()->checkLoose())
+    {
         dash.masterBlob()->setColor(BLANK);
         dash.slaveBlob()->setColor(BLANK);
     }
@@ -1142,16 +1150,18 @@ void InterfaceX::maj_anims(DashBoard& dash)
     maj_shining();
     dash.moteurPhy()->fall();
     dash.grille()->check();
+    dash.grille()->checkCombo();
     if(dash.masterBlob()->state()==LANDING)
+    {
+        dash.masterBlob()->setLanding(dash.masterBlob()->current()-1);
+        dash.slaveBlob()->setLanding(dash.slaveBlob()->current()-1);
+        if(dash.masterBlob()->current()==0)
         {
-            dash.masterBlob()->setLanding(dash.masterBlob()->current()-1);
-            dash.slaveBlob()->setLanding(dash.slaveBlob()->current()-1);
-            if(dash.masterBlob()->current()==0){
             dash.masterBlob()->setState(NO_STATE);
             dash.slaveBlob()->setState(NO_STATE);
 
-            }
         }
+    }
     if((dash.moteurPhy()->falling()!=0 || dash.moteurPhy()->comboting() !=0 || dash.grille()->checkLanding()!=0) && retour )
         return ;
     dash.moteurPhy()->setFalling(dash.grille()->checkFalling());
@@ -1160,6 +1170,7 @@ void InterfaceX::maj_anims(DashBoard& dash)
     if(dash.moteurPhy()->fixed())
     {
         dash.grille()->check();
+        dash.grille()->checkCombo();
         dash.masterBlob()->setColor(BLANK);
         dash.slaveBlob()->setColor(BLANK);
     }
@@ -1167,15 +1178,17 @@ void InterfaceX::maj_anims(DashBoard& dash)
     {
         dash.moteurPhy()->setFalling(dash.moteurPhy()->falling()-1);
     }
-            dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
+    dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
+     std::cerr << "combo : "<< dash.moteurPhy()->comboting() << "\n";
+    if(dash.moteurPhy()->comboting()==1||dash.moteurPhy()->comboting()==2)
+    {
+        if(dash.combo()==0)
+            dash.setCombo(dash.moteurPhy()->combo()-3);
+        else
+            dash.setCombo(6*(dash.moteurPhy()->combo()%4) +(dash.moteurPhy()->combo()%4) );
+    }
+         std::cerr << "combo value : "<< dash.moteurPhy()->combo() << "\n";
 
-        if(dash.moteurPhy()->comboting()==1)
-        {
-            if(dash.combo()==0)
-                dash.setCombo(dash.moteurPhy()->combo()-3);
-            else
-                     dash.setCombo(6*(dash.moteurPhy()->combo()%4) +(dash.moteurPhy()->combo()%4) );
-        }
     if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)
     {
         int sens = 0;
@@ -1237,19 +1250,20 @@ void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int a
 * Initialise les parametres du jeu
 *
 **/
-void InterfaceX::initialisation_debut_jeu(){
-        //_offset_menu.w=_SCREEN_WIDTH;
-        //_offset_menu.h=_SCREEN_HEIGHT;
-        _offset_menu.x=0;
-        _offset_menu.y=0;
-        _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
-        _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
-        _nbJoueurs=1;
-        _nbAI=0;
+void InterfaceX::initialisation_debut_jeu()
+{
+    //_offset_menu.w=_SCREEN_WIDTH;
+    //_offset_menu.h=_SCREEN_HEIGHT;
+    _offset_menu.x=0;
+    _offset_menu.y=0;
+    _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
+    _offset_cursor.setY(87*_ratio_menu+_decalage_menu_y);
+    _nbJoueurs=1;
+    _nbAI=0;
     load_files();
     resize_vect();
     decouper_sprite();
- //   resize_menu();
+//   resize_menu();
     //on rempli les commandes par default
     controls_by_default();
 }

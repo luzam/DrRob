@@ -6,7 +6,6 @@
   */
 void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
 {
-        std::cerr<<" ligne  " << ligneBlobCourant() << " \ncol " << colBlobCourant()<<"\n orientation : " <<_orientation << "\n\n";
 
     bool up = false;
     switch(_orientation)
@@ -245,7 +244,6 @@ int MoteurPhy::moove(Position* master,Position* slave)
     else
         (_posBlobPivot).setY((_posBlobPivot).y()+_vitesseBlob);
     majPosition(master,slave);
-    std::cerr << "touch : " << touch << "\n" ;
     return touch;
 }
 /** @brief fixes a blob to the grind
@@ -255,7 +253,6 @@ int MoteurPhy::moove(Position* master,Position* slave)
 void MoteurPhy::ajoutGrille()
 {
     std::cout<<(_posBlobPivot).x()<<" , "<<(_posBlobPivot).y()<<std::endl;
-    std::cout<<"ajout blob : "<<(ligneBlobCourant())<<" "<<colBlobCourant()<<"<---------"<<_colorMaster<<std::endl;
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setColor(_colorMaster);
     ((*_grille)((ligneBlobCourant()),(colBlobCourant())))->setLink(0);
     switch(_orientation)
