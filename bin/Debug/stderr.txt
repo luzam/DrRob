@@ -1,0 +1,316 @@
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ ligne  7 
+col 2
+ orientation : 0
+
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+JOUEUR
+touch : 1
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 1
+set landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 1
+landing : 5
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 1
+set landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 1
+landing : 5
+landing : 5
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+JOUEUR
+touch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing
+ EASYtouch : 0
+reset landing

@@ -30,15 +30,14 @@ protected :
     Position _slave;
     bool _go;
     bool _launchCombo;
-    Position posFen;//position relative du dashboard dans la fenetre, a metre dans MoteurX (??)
-    /* SDLttf texte _score;
-    SDLttf texte _joueur;*/
+    Position posFen;
     int _nextDarkBlobs;
+    bool _landing;
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_looser(false),_combo(0),
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
-        _nextDarkBlobs(0)
+        _nextDarkBlobs(0),_landing(true)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -69,6 +68,7 @@ public :
     int combo()const{return _combo;}
     void addDarkBlob();
     bool looser()const{return _looser;}
+    virtual void think() = 0;
 
 };
 

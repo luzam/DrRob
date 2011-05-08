@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
+<<<<<<< HEAD
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="1" tabpos="0">
 		<Cursor position="0" topLine="0" />
 	</File>
+=======
+	<ActiveTarget name="all" />
+>>>>>>> 44302631f1dad7c2c68425e2a2de4c42b39a73a9
 </CodeBlocks_layout_file>
