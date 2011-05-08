@@ -50,11 +50,17 @@ void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
 }
 void InterfaceX::winner(int i)
 {
-    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text*1.5);
     SDL_Color textcolor = {255,255,255};
     std::ostringstream oss;
-    oss<<i;
-    _winner=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
+    oss<<i+1;
+    SDL_Surface* _rectWin=NULL;
+    _winner=TTF_RenderText_Solid(font,("Joueur "+oss.str()+" gagne").c_str(),textcolor);
+    _rectWin = SDL_CreateRGBSurface(SDL_HWSURFACE, _screen->w,_winner->h*2,32/*_screen->format->BytesPerPixel*/, 0, 0, 0, 0);
+    //_rectWin->h = _winner->h*2;
+   // _rectWin->w = _screen->w;
+    SDL_FillRect(_rectWin, NULL, SDL_MapRGB(_screen->format, 10, 10, 10));
+    apply_surface(0,_screen->h/2-_rectWin->h/2,_rectWin,_screen,NULL);
     apply_surface(_screen->w/2-_winner->w/2,_screen->h/2-_winner->h/2,_winner,_screen,NULL);
 }
 int InterfaceX::play_anim_menu(int init,int fin)

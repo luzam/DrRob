@@ -50,75 +50,10 @@ touch : 0
 reset landing
 touch : 0
 reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-landing : 9
-touch : 1
-landing : 8
-landing : 8
-touch : 1
-landing : 7
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
 touch : 0
 reset landing
 touch : 1
 set landing
-landing : 11
 landing : 11
 touch : 1
 landing : 10
@@ -181,7 +116,9 @@ touch : 1
 touch : 0
 reset landing
 landing : 9
+landing : 9
 touch : 1
+landing : 8
 landing : 8
 touch : 1
 landing : 7
@@ -224,7 +161,9 @@ set landing
 landing : 11
 touch : 1
 landing : 10
+landing : 10
 touch : 1
+landing : 9
 landing : 9
 touch : 1
 landing : 8
@@ -267,56 +206,6 @@ touch : 1
 landing : 9
 touch : 1
 landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-landing : 11
-touch : 1
-landing : 10
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
 landing : 8
 touch : 1
 landing : 7
@@ -325,107 +214,6 @@ touch : 1
 landing : 6
 landing : 6
 touch : 1
-touch : 1
-touch : 1
-touch : 1
-touch : 1
-touch : 0
-reset landing
-touch : 1
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
 touch : 0
 reset landing
 touch : 0
@@ -452,109 +240,12 @@ touch : 1
 landing : 8
 touch : 1
 landing : 7
-landing : 7
 touch : 1
 landing : 6
-landing : 6
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
 touch : 0
 reset landing
 touch : 1
 set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-touch : 1
-landing : 8
-landing : 8
-touch : 1
-landing : 7
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
 landing : 11
 touch : 1
 landing : 10
@@ -564,48 +255,27 @@ touch : 1
 touch : 0
 reset landing
 landing : 9
-touch : 1
+landing : 9
+landing : 8
 landing : 8
 landing : 7
+landing : 7
+landing : 6
 landing : 6
 landing : 5
+landing : 5
 landing : 4
+landing : 4
+landing : 3
 landing : 3
 touch : 1
 touch : 0
 reset landing
 landing : 2
 landing : 1
-landing : 1
 touch : 1
 touch : 0
 reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-touch : 0
-reset landing
-landing : 11
-landing : 11
-landing : 10
-landing : 10
-landing : 9
-landing : 9
-landing : 8
-landing : 8
-landing : 7
-landing : 6
-landing : 5
-touch : 1
-touch : 0
-reset landing
-landing : 4
-landing : 3
-landing : 2
-landing : 1
 touch : 1
 touch : 0
 reset landing
@@ -624,14 +294,10 @@ landing : 9
 landing : 8
 landing : 8
 landing : 7
-landing : 7
 landing : 6
-landing : 6
-landing : 5
 landing : 5
 touch : 1
 touch : 1
-landing : 4
 landing : 4
 landing : 3
 landing : 2
@@ -643,41 +309,5 @@ touch : 1
 touch : 1
 touch : 1
 touch : 1
- ligne  17 
-col 0
- orientation : 0
-
 touch : 1
 touch : 1
- ligne  17 
-col 0
- orientation : 2
-
-touch : 1
-touch : 1
- ligne  16 
-col 0
- orientation : 1
-
-touch : 0
-reset landing
-touch : 1
- ligne  6 
-col 2
- orientation : 0
-
-touch : 0
-reset landing
-touch : 1
- ligne  7 
-col 2
- orientation : 2
-
-touch : 0
-reset landing
- ligne  7 
-col 2
- orientation : 1
-
-touch : 0
-reset landing
