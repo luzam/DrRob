@@ -14,6 +14,8 @@ Easy(int taille,Grille* grille,std::list<Blobs>* randBlobs):Ai(taille,grille,ran
 
 virtual void think(){
     int comp = rand()%21;
+    _moteurPhy->speedToNormal();
+
     switch(comp){
     case 0 :_moteurPhy->rotationAntiHoraire(&_master,&_slave); break;
     case 1 : _moteurPhy->rotationHoraire(&_master,&_slave); break;

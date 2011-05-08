@@ -38,7 +38,6 @@ class MoteurPhy{
     int _turningHoraire;
     bool _speedUp;
     const int ligneBlobCourant()const{return (int)((_posBlobPivot).y()/_taille);}
-    const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
     void ajoutGrille();
 
 
@@ -64,6 +63,7 @@ class MoteurPhy{
         _turningHoraire = 0;
         _speedUp = false;
     }
+    const int colBlobCourant()const{return (int)((_posBlobPivot).x()/_taille);}
     void rotationHoraire(Position* master,Position* slave);
     void rotationAntiHoraire(Position* master,Position* slave);
     void gauche(Position* master,Position* slave);
