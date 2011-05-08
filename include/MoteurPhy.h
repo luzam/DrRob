@@ -94,7 +94,7 @@ class MoteurPhy{
     int orientation()const{return _orientation;}
     void majPosition(Position* master,Position* slave);
     int taille()const{return _taille;}
-    int setLanding(int landing){ _landing = landing;}
+    void setLanding(int landing){ _landing = landing;}
     bool speedUpBool()const{return _speedUp;}
 
 

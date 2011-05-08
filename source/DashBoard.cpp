@@ -7,8 +7,6 @@
 void DashBoard::go()
 {
 
-    bool retour =false;
-
     if(!_looser&&_grille->checkLoose())
     {
         _grille->animFallin(_moteurPhy->taille());
@@ -98,6 +96,7 @@ void DashBoard::go()
 void DashBoard::resetCombo()
 {
     _launchCombo = false;
+    _score+=_combo*10;
     _combo =0;
     _moteurPhy->setCombo(0);
 }

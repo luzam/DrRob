@@ -34,11 +34,12 @@ protected :
     int _nextDarkBlobs;
     bool _landing;
     int _newDelay;
+    int _score;
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_looser(false),_combo(0),
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
-        _nextDarkBlobs(0),_landing(true),_newDelay(2)
+        _nextDarkBlobs(0),_landing(true),_newDelay(2),_score(0)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -72,6 +73,7 @@ public :
     int combo()const{return _combo;}
     void addDarkBlob();
     bool looser()const{return _looser;}
+    int score()const{return _score;}
     virtual void think() = 0;
 
 };

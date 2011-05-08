@@ -1,5 +1,7 @@
 #include "../include/InterfaceX.h"
-
+/**
+* Permet de charger les images optimisees pour l'ecran
+**/
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -16,6 +18,9 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
     }
     return optimizedImage;
 }
+/**
+* Permet de blitter les surfaces a l'ecran
+**/
 void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip = NULL )
 {
     SDL_Rect offset;
@@ -23,6 +28,9 @@ void InterfaceX::apply_surface( int x, int y, SDL_Surface* source, SDL_Surface* 
     offset.y = y;
     SDL_BlitSurface( source, clip, destination, &offset );
 }
+/**
+* Initrialisations des SDL et SDL ttf
+**/
 bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
@@ -41,22 +49,36 @@ bool InterfaceX::init_SDL()
 
     return true;
 }
+/**
+* Blit dans le dash les prochains blobs
+**/
 void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
 {
-
     blit_un_blob(slave,_offset_nextBlob.x()+_vDash[n].x(),_offset_nextBlob.y()+_vDash[n].y()-2*_taille_blob);
     blit_un_blob(master,_offset_nextBlob.x()+_vDash[n].x(),_offset_nextBlob.y()+_vDash[n].y()-_taille_blob);
-
 }
+/**
+* Afficher le gagnant de la partie
+**/
 void InterfaceX::winner(int i)
 {
-    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
-    SDL_Color textcolor = {255,255,255};
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text*1.5);
+    SDL_Color textcolor = {255,255,255,0};
     std::ostringstream oss;
-    oss<<i;
-    _winner=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
+    oss<<i+1;
+    SDL_Surface* _winner=NULL;
+    SDL_Surface* _rectWin=NULL;
+    _winner=TTF_RenderText_Solid(font,("Joueur "+oss.str()+" gagne").c_str(),textcolor);
+    _rectWin = SDL_CreateRGBSurface(SDL_HWSURFACE, _screen->w,_winner->h*2,32/*_screen->format->BytesPerPixel*/, 0, 0, 0, 0);
+    SDL_FillRect(_rectWin, NULL, SDL_MapRGB(_screen->format, 10, 10, 10));
+    apply_surface(0,_screen->h/2-_rectWin->h/2,_rectWin,_screen,NULL);
     apply_surface(_screen->w/2-_winner->w/2,_screen->h/2-_winner->h/2,_winner,_screen,NULL);
+    SDL_FreeSurface(_winner);
+    SDL_FreeSurface(_rectWin);
 }
+/**
+* Joue l'animation du menu
+**/
 int InterfaceX::play_anim_menu(int init,int fin)
 {
     int continuer=1;
@@ -129,6 +151,9 @@ int InterfaceX::play_anim_menu(int init,int fin)
     return 1;
 
 }
+/**
+* Ecran de selection du nombre de joueurs
+**/
 int InterfaceX::select_nbJoueurs()
 {
     int continuer=1;
@@ -143,7 +168,7 @@ int InterfaceX::select_nbJoueurs()
     SDL_Surface* nbJoueurs=NULL;
     SDL_Surface* nbAI=NULL;
     TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
-    SDL_Color textcolor = {255,255,255};
+    SDL_Color textcolor = {255,255,255,0};
     SDL_Event event;
     Clock _clock;
     std::cout<<"Curseur = "<<_cursor->w<<"x"<<_cursor->h<<" Position x = "<<_offset_cursor.x()<<" y = "<<_offset_cursor.y()<<std::endl;
@@ -199,8 +224,12 @@ int InterfaceX::select_nbJoueurs()
             }
 
 
-            if (keystates[SDLK_ESCAPE]) /* Appui sur la touche Echap, on arr� le programme */
-                return -1;
+            if (keystates[SDLK_ESCAPE]){ /* Appui sur la touche Echap, on arr� le programme */
+                //on desalloue
+                SDL_FreeSurface(nbJoueurs);
+                SDL_FreeSurface(nbAI);
+                TTF_CloseFont(font);
+                return -1;}
             if(keystates[SDLK_UP])
             {
                 if(curseur==1)
@@ -229,7 +258,10 @@ int InterfaceX::select_nbJoueurs()
 
             }
             if(keystates[SDLK_BACKSPACE])
-            {
+            {//free
+                SDL_FreeSurface(nbJoueurs);
+                SDL_FreeSurface(nbAI);
+                TTF_CloseFont(font);
                 return -1;
             }
             if(keystates[SDLK_RIGHT])
@@ -250,7 +282,10 @@ int InterfaceX::select_nbJoueurs()
             }
             if(keystates[SDLK_RETURN])
             {
-
+                //free
+                SDL_FreeSurface(nbJoueurs);
+                SDL_FreeSurface(nbAI);
+                TTF_CloseFont(font);
                 return 0;
             }
 
@@ -265,12 +300,15 @@ int InterfaceX::select_nbJoueurs()
             SDL_Flip(_screen);
         }
     }
-
+        SDL_FreeSurface(nbJoueurs);
+                SDL_FreeSurface(nbAI);
+                TTF_CloseFont(font);
     return 1;
 }
 
-
-
+/**
+* Permet d'enregistrer les controles persos
+**/
 int InterfaceX::controls()
 {
     SDL_Surface *text=NULL;
@@ -278,7 +316,7 @@ int InterfaceX::controls()
     std::ostringstream nbj;
 
     TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
-    SDL_Color textcolor = {255,255,255};
+    SDL_Color textcolor = {255,255,255,0};
     SDL_Event event;
     Clock _clock;
 
@@ -328,45 +366,52 @@ int InterfaceX::controls()
             }
         }
         continuer=1;
-
-
     }
+    SDL_FreeSurface(text);
+    SDL_FreeSurface(joueur);
+    TTF_CloseFont(font);
     return 1;
 }
 
-void InterfaceX::controls_resize()
-{
-    _commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS,0));
+/**
+* Redimensionne le vecteur de commandes
+**/
+void InterfaceX::controls_resize(){
+_commandes.resize(_nbJoueurs,std::vector<int> (SIZE_COMMANDS,0));
 }
-void InterfaceX::controls_by_default()
-{
-    _commandes.resize(4,std::vector<int> (5));
-    _commandes[0][CGAUCHE]=SDLK_LEFT;
-    _commandes[0][CDROITE]=SDLK_RIGHT;
-    _commandes[0][CBAS]=SDLK_DOWN;
-    _commandes[0][CHORAIRE]=SDLK_UP;
-    _commandes[0][CANTIHORAIRE]=SDLK_0;
+/**
+* Ecrit les commandes par defaut
+**/
+void InterfaceX::controls_by_default(){
+_commandes.resize(4,std::vector<int> (5));
+_commandes[0][CGAUCHE]=SDLK_LEFT;
+_commandes[0][CDROITE]=SDLK_RIGHT;
+_commandes[0][CBAS]=SDLK_DOWN;
+_commandes[0][CHORAIRE]=SDLK_UP;
+_commandes[0][CANTIHORAIRE]=SDLK_0;
 
-    _commandes[1][CGAUCHE]=SDLK_a;
-    _commandes[1][CDROITE]=SDLK_d;
-    _commandes[1][CBAS]=SDLK_s;
-    _commandes[1][CHORAIRE]=SDLK_w;
-    _commandes[1][CANTIHORAIRE]=SDLK_q;
+_commandes[1][CGAUCHE]=SDLK_a;
+_commandes[1][CDROITE]=SDLK_d;
+_commandes[1][CBAS]=SDLK_s;
+_commandes[1][CHORAIRE]=SDLK_w;
+_commandes[1][CANTIHORAIRE]=SDLK_q;
 
-    _commandes[2][CGAUCHE]=SDLK_g;
-    _commandes[2][CDROITE]=SDLK_j;
-    _commandes[2][CBAS]=SDLK_h;
-    _commandes[2][CHORAIRE]=SDLK_y;
-    _commandes[2][CANTIHORAIRE]=SDLK_t;
+_commandes[2][CGAUCHE]=SDLK_g;
+_commandes[2][CDROITE]=SDLK_j;
+_commandes[2][CBAS]=SDLK_h;
+_commandes[2][CHORAIRE]=SDLK_y;
+_commandes[2][CANTIHORAIRE]=SDLK_t;
 
-    _commandes[3][CGAUCHE]=SDLK_k;
-    _commandes[3][CDROITE]=SDLK_m;
-    _commandes[3][CBAS]=SDLK_l;
-    _commandes[3][CHORAIRE]=SDLK_o;
-    _commandes[3][CANTIHORAIRE]=SDLK_i;
+_commandes[3][CGAUCHE]=SDLK_k;
+_commandes[3][CDROITE]=SDLK_m;
+_commandes[3][CBAS]=SDLK_l;
+_commandes[3][CHORAIRE]=SDLK_o;
+_commandes[3][CANTIHORAIRE]=SDLK_i;
 
 }
-
+/**
+* Ecran de demarrage du jeu ou choix des commandes
+**/
 int InterfaceX::controls_and_start()
 {
     //Ici on connait le nb de joueurs
@@ -460,6 +505,9 @@ int InterfaceX::controls_and_start()
 
     return 1;
 }
+/**
+* Ecran menu principal
+**/
 int InterfaceX::menu()
 {
 #ifdef WINDOWS
@@ -559,16 +607,22 @@ int InterfaceX::menu()
     return 0;
 
 }
+/**
+* Calcul les positions de tout
+**/
 void InterfaceX::compute_game()
 {
     //On fait tous les resize en fonction du nombre de joueurs
     resize_files();
     compute_vDash();
     compute_offsets();
+
 }
-void InterfaceX::resize_blobs()
-{
-    std::cout<<"Resize des blobs"<<std::endl;
+/**
+* Redimensionne les blobs pour l'ecran
+**/
+void InterfaceX::resize_blobs(){
+std::cout<<"Resize des blobs"<<std::endl;
     double taille_blob_H =(double)_blobs_ini->h*_ratio;
     double taille_blob_W =(double)_blobs_ini->w*_ratio;
     std::cout<<"taille_blobs_h : "<<taille_blob_H<<" Ratio : "<<_ratio<<std::endl;
@@ -603,8 +657,11 @@ void InterfaceX::resize_blobs()
 }
 
 
-void InterfaceX::resize_dash()
-{
+
+/**
+* Redimensionne les dashboards pour l'ecran
+**/
+void InterfaceX::resize_dash(){
     std::cout<<" NBJOUEURS :"<<_nbJoueurs+_nbAI<<std::endl;
     int nbJoueursX=_nbJoueurs;
     if(_nbJoueurs>2)
@@ -640,8 +697,10 @@ void InterfaceX::resize_dash()
     _ratio=d_h/(double)d_h_ini;
 }
 
-void InterfaceX::resize_avatars()
-{
+/**
+* Redimensionne les avatars pour l'ecran
+**/
+void InterfaceX::resize_avatars(){
 
     std::cout<<"avatar iniw : "<<_avatars_ini->w<<" ratio ini avat : "<<_ratio_avat_ini<<" ratio : "<<_ratio<<std::endl;
     int taille_avat_W=_avatars_ini->w*_ratio_avat_ini*_ratio;
@@ -649,6 +708,9 @@ void InterfaceX::resize_avatars()
     _avatars=img_zoom_pixel_W(_avatars_ini,taille_avat_W);
 
 }
+/**
+* Redimensionne les fichiers pour l'ecran
+**/
 bool InterfaceX::resize_files()
 {
 
@@ -658,6 +720,9 @@ bool InterfaceX::resize_files()
 
     return true;
 }
+/**
+* Redimensionne le menu pour l'ecran
+**/
 void InterfaceX::resize_menu()
 {
     std::cout<<"Le menu = "<<_menu_ini->w<<"x"<<_menu_ini->h<<std::endl;
@@ -687,7 +752,7 @@ void InterfaceX::resize_menu()
     _taille_text*=_ratio_menu;
 
 }
-/** @brief Calcule les positions des differents dashboard
+/** @brief Calcule les nouvelles positions des differents dashboard
 *
 *
 */
@@ -703,6 +768,9 @@ void InterfaceX::maj_offsets(int dx,int dy)
 
 
 }
+/**
+* Calcule la position des dashboards
+**/
 bool InterfaceX::compute_vDash()
 {
     int nbJoueursX;
@@ -751,11 +819,16 @@ bool InterfaceX::compute_vDash()
 
     return true;
 }
-
+/**
+* Blit le fond noir
+**/
 void InterfaceX::blit_fond()
 {
     apply_surface(0,0,_background,_screen,NULL);
 }
+/**
+* Effectue tous les blits
+**/
 void InterfaceX::blits(std::vector<DashBoard *> dashBoards)
 {
     blit_fond();
@@ -763,22 +836,31 @@ void InterfaceX::blits(std::vector<DashBoard *> dashBoards)
     blit_dash();
     blit_avatars();
 }
+/**
+* Blit des dashboards
+**/
 void InterfaceX::blit_dash()
 {
     for(size_t j=0; j<_vDash.size(); j++) //Affichage des dashboard en utilisant le vecteur de coordonnee
         apply_surface(_vDash.at(j).x(),_vDash.at(j).y(),_dashboard,_screen,NULL);
 }
-int InterfaceX::anim_falling(Blobs* blob)
-{
-    return 17;
+/**
+* Animation quand un blob tombe
+**/
+int InterfaceX::anim_falling(){
+return 17;
 
 }
-
+/**
+* Animation quand un blob atterit
+**/
 int InterfaceX::anim_landing(Blobs* blob)
 {
     return (blob->current()%6>=3)?16:17;
 }
-
+/**
+* Animation quand un blob effectue un combo
+**/
 int InterfaceX::anim_comboting(Blobs* blob)
 {
     if(blob->current()<=4)
@@ -794,7 +876,9 @@ int InterfaceX::anim_comboting(Blobs* blob)
         return 32;
 
 }
-
+/**
+* Appellee pour les blits de blobs
+**/
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
     switch(blob->state())
@@ -804,7 +888,7 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
         break;
     case FALLIN_ANIM :
     case FALLING:
-        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling(blob)],_screen,NULL);
+        apply_surface(x,y,_blobsIMG[blob->color()][anim_falling()],_screen,NULL);
         break;
     case LANDING :
         apply_surface(x,y,_blobsIMG[blob->color()][anim_landing(blob)],_screen,NULL);
@@ -819,16 +903,25 @@ void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 
     }
 }
+/**
+* Affiche un curseur au menu
+**/
 void InterfaceX::blit_cursor()
 {
     apply_surface(_offset_cursor.x(),_offset_cursor.y(),_cursor,_screen,NULL);
 
 }
+/**
+* Affiche le menu
+**/
 void InterfaceX::blit_menu()
 {
     apply_surface(0,0,_background,_screen,NULL);
     apply_surface(_decalage_menu_x,_decalage_menu_y,_menu,_screen,&_offset_menu);
 }
+/**
+* Affiche les avatars
+**/
 void InterfaceX::blit_avatars()
 {
     SDL_Rect offset_img;
@@ -848,6 +941,9 @@ void InterfaceX::blit_avatars()
         cpt++;
     }
 }
+/**
+* Blit des blobs courants
+**/
 void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* master,Blobs* slave,int n)
 {
     if(!_shining)
@@ -856,6 +952,9 @@ void InterfaceX::blit_blobs_mobiles(Position pmaster,Position pslave,Blobs* mast
         apply_surface(pmaster.x()+_offset_grille.x()+_vDash[n].x(),pmaster.y()+_offset_grille.y()+_vDash[n].y(),_blobsIMG[master->color()][18],_screen,NULL);
     blit_un_blob(slave,pslave.x()+_offset_grille.x()+_vDash[n].x(),pslave.y()+_offset_grille.y()+_vDash[n].y());
 }
+/**
+* Blit de la grille de blob
+**/
 void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
 {
 
@@ -886,31 +985,24 @@ void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
         }
     }
 }
-SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
-{
-    SDL_Rect r;
-    int tb=_taille_blob;
-    std::cout<<"Taille blob : "<<tb<<std::endl;
-    r.h=tb;
-    r.w=tb;
-    r.x=link*tb;
-    r.y=2*color*tb;
-    std::cout<<"Sprite x : "<<r.x<<" y : "<<r.y<<std::endl;
-    return r;
-}
-
+/**
+* Calcule les positions des elements du dashboard
+**/
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
-    _offset_grille.setY(ceil((32.0-6*_taille_blob_ini)*(_ratio)));
+    _offset_grille.setY(ceil((33.0-6*_taille_blob_ini)*(_ratio)));
     _offset_nextBlob.setX(ceil((128)*_ratio));
     _offset_nextBlob.setY(ceil((78)*_ratio));
     _offset_avatar.setX(ceil((105)*_ratio));
     _offset_avatar.setY(ceil((178)*_ratio));
-
+    _offset_score.setX(ceil((112.0)*(_ratio)));
+    _offset_score.setY(ceil((145.0)*(_ratio)));
     return true;
 }
-
+/**
+* Charge les images
+**/
 bool InterfaceX::load_files()
 {
 #ifdef WINDOWS
@@ -929,7 +1021,7 @@ bool InterfaceX::load_files()
     _dashboard_ini = load_img("dashboard.png");
     _blobs_ini = load_img( "blobs.png" );
     _avatars_ini = load_img("avatars.png");
-    _menu_ini = load_img("menu2.png");
+    _menu_ini = load_img("menu.png");
     _cursor_ini = load_img("cursor.png");
     if ( _blobs_ini == NULL || _background_ini==NULL || _avatars_ini==NULL || _cursor_ini ==NULL||_menu_ini==NULL)
     {
@@ -938,16 +1030,29 @@ bool InterfaceX::load_files()
     }
     return true;
 }
+/**
+* On liberer toute la memoire
+**/
 void InterfaceX::clean_up()
 {
-    SDL_FreeSurface( _background);
+    SDL_FreeSurface(_background_ini);
     SDL_FreeSurface(_background);
+    SDL_FreeSurface(_avatars_ini);
     SDL_FreeSurface(_avatars);
     SDL_FreeSurface(_menu);
+    SDL_FreeSurface(_menu_ini);
     SDL_FreeSurface(_cursor);
+    SDL_FreeSurface(_cursor_ini);
+    SDL_FreeSurface(_dashboard_ini);
+    SDL_FreeSurface(_dashboard);
+    SDL_FreeSurface(_screen);
+    SDL_FreeSurface(_blobs_ini);
+    TTF_Quit();
     SDL_Quit();
 }
-
+/**
+* Redimensionne une surface en W
+**/
 SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int taille_desiree_W)
 {
     double td_W=taille_desiree_W;
@@ -957,6 +1062,9 @@ SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int tail
     // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
+/**
+* Redimensionne une surface en H
+**/
 SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
 {
     double td_H=taille_desiree_H;
@@ -966,7 +1074,9 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
-
+/**
+* Redimensionne le vector des images de blobs
+**/
 void InterfaceX::resize_vect()
 {
     _blobsIMG_ini.resize(SIZE_COLOR,std::vector<SDL_Surface*> (_nb_blobs));
@@ -981,6 +1091,9 @@ void InterfaceX::resize_vect()
     }
 
 }
+/**
+* Cree le vector des images de blobs
+**/
 void InterfaceX::resize_blobsIMG()
 {
     Uint32 rmask, gmask, bmask, amask;
@@ -1014,6 +1127,9 @@ void InterfaceX::resize_blobsIMG()
 
 
 }
+/**
+* Decoupe l'image de blobs
+**/
 void InterfaceX::decouper_sprite()
 {
     if(SDL_MUSTLOCK(_blobs_ini))
@@ -1067,7 +1183,9 @@ void InterfaceX::decouper_sprite()
         SDL_UnlockSurface(_blobs_ini);
 
 }
-
+/**
+* Recuperer un pixel d'une surface
+**/
 Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
 {
     int bpp = surface->format->BytesPerPixel;
@@ -1101,6 +1219,9 @@ Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
         return 0;       //shouldn't happen, but avoids warnings
     }
 }
+/**
+* Met un pixel dans une surface
+**/
 void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
 {
     int bpp = surface->format->BytesPerPixel;
@@ -1137,6 +1258,9 @@ void InterfaceX::putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel)
         break;
     }
 }
+/**
+* On met a jour toutes les animations
+**/
 void InterfaceX::maj_anims(DashBoard& dash)
 {
     bool retour =false;
@@ -1211,6 +1335,9 @@ void InterfaceX::maj_anims(DashBoard& dash)
 
 
 }
+/**
+* On fait clignoter le blob pivot
+**/
 void InterfaceX::maj_shining()
 {
     if(_cpt>=15)
@@ -1244,7 +1371,6 @@ void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int a
     double angle_diff = sens * angle * 1.5707 / TURNING_ANIM_TIME;
     slave->setX(x0 + _taille_blob*std::cos(angle0+angle_diff));
     slave->setY(y0 + _taille_blob*std::sin(angle0+angle_diff));
-
 }
 /**
 * Initialise les parametres du jeu
@@ -1252,8 +1378,6 @@ void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int a
 **/
 void InterfaceX::initialisation_debut_jeu()
 {
-    //_offset_menu.w=_SCREEN_WIDTH;
-    //_offset_menu.h=_SCREEN_HEIGHT;
     _offset_menu.x=0;
     _offset_menu.y=0;
     _offset_cursor.setX(80*_ratio_menu+_decalage_menu_x);
@@ -1263,7 +1387,5 @@ void InterfaceX::initialisation_debut_jeu()
     load_files();
     resize_vect();
     decouper_sprite();
-//   resize_menu();
-    //on rempli les commandes par default
     controls_by_default();
 }
