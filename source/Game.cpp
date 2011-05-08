@@ -99,10 +99,10 @@ void Game::go()
 
                 int jvivant= 0;
                 int winer = 0;
-                for(size_t i=0; i<_dashBoards.size(); i++)
+                for(size_t i=0; i<_dashBoards.size(); i++){
                     if(_dashBoards[i]->looser())
                         jvivant++;
-                    else winer=i;
+                    else winer=i;}
                 if(jvivant>= _nbJoueurs+_nbAI - 1){
                     continuer = 0;
 

@@ -48,6 +48,15 @@ void InterfaceX::blit_nextBlob(Blobs* master,Blobs* slave,int n)
     blit_un_blob(master,_offset_nextBlob.x()+_vDash[n].x(),_offset_nextBlob.y()+_vDash[n].y()-_taille_blob);
 
 }
+void InterfaceX::winner(int i)
+{
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
+    SDL_Color textcolor = {255,255,255};
+    std::ostringstream oss;
+    oss<<i;
+    _winner=TTF_RenderText_Solid(font,(oss.str()).c_str(),textcolor);
+    apply_surface(_screen->w/2-_winner->w/2,_screen->h/2-_winner->h/2,_winner,_screen,NULL);
+}
 int InterfaceX::play_anim_menu(int init,int fin)
 {
     int continuer=1;

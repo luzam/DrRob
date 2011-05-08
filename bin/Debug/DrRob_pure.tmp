@@ -1,0 +1,9 @@
+Purify for Windows,
+(C) Copyright IBM Corporation. 1992, 2010. All Rights Reserved.
+Version 7.0.1.0-001 (Evaluation); Build: 11785;
+WinNT 6.1 7600  Multiprocessor Free
+Instrumenting: 
+	  DrRob.exe    2329492 bytes	  NTDLL.DLL    1289536 bytes	  ADVAPI32.DLL 640000 bytes	  ADVAPI32.DLL 640000 bytes	  SDL.DLL      321536 bytes	  SDL_IMAGE.DLL 43520 bytes	  SDL_TTF.DLL  19456 bytes	  KERNEL32.DLL 857088 bytes	  MSVCRT.DLL   690688 bytes
+Purify: While processing file C:\Windows\system32\MSVCRT.DLL:
+Note: Instrumentation repeating with 7 additional entry points.
+	  KERNELBASE.DLL 288256 bytes	  SECHOST.DLL  92160 bytes	  SECHOST.DLL  92160 bytes	  RPCRT4.DLL   652288 bytes	  RPCRT4.DLL   652288 bytes	  PCWUM.DLL    33280 bytes	  PCWUM.DLL    33280 bytes	  CRYPTSP.DLL  78848 bytes	  CRYPTSP.DLL  78848 bytes	  GDI32.DLL    304640 bytes	  GDI32.DLL    304640 bytes	  USER32.DLL   811520 bytes	  USER32.DLL   811520 bytes	  WINMM.DLL    194048 bytes	  WINMM.DLL    194048 bytes	  LIBFREETYPE-6.DLL 522240 bytes	  LPK.DLL      26624 bytes	  LPK.DLL      26624 bytes	  ZLIB1.DLL    70656 bytes	  USP10.DLL    627200 bytes	  USP10.DLL    627200 bytes

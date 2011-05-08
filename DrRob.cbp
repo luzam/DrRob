@@ -36,10 +36,13 @@
 		<Unit filename="include\Clock.h" />
 		<Unit filename="include\Color.h" />
 		<Unit filename="include\DashBoard.h" />
+		<Unit filename="include\Easy.h" />
 		<Unit filename="include\Enums.h" />
 		<Unit filename="include\Game.h" />
 		<Unit filename="include\Grille.h" />
+		<Unit filename="include\Hard.h" />
 		<Unit filename="include\InterfaceX.h" />
+		<Unit filename="include\Joueur.h" />
 		<Unit filename="include\Link.h" />
 		<Unit filename="include\MoteurPhy.h" />
 		<Unit filename="include\Orientation.h" />
@@ -47,6 +50,7 @@
 		<Unit filename="include\SDL_rotozoom.h" />
 		<Unit filename="include\State.h" />
 		<Unit filename="include\Tree.h" />
+		<Unit filename="include\ai.h" />
 		<Unit filename="include\conected.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="source\DashBoard.cpp" />
