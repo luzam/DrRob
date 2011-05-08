@@ -11,7 +11,7 @@
 		<Cursor position="815" topLine="19" />
 	</File>
 	<File name="include\Game.h" open="1" top="0" tabpos="7">
-		<Cursor position="1084" topLine="7" />
+		<Cursor position="1104" topLine="30" />
 	</File>
 	<File name="include\Grille.h" open="1" top="0" tabpos="14">
 		<Cursor position="769" topLine="12" />
@@ -35,13 +35,13 @@
 		<Cursor position="267" topLine="0" />
 	</File>
 	<File name="source\DashBoard.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="172" topLine="0" />
+		<Cursor position="172" topLine="82" />
 	</File>
-	<File name="source\Game.cpp" open="1" top="1" tabpos="4">
-		<Cursor position="4627" topLine="94" />
+	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
+		<Cursor position="252" topLine="101" />
 	</File>
-	<File name="source\Grille.cpp" open="1" top="0" tabpos="13">
-		<Cursor position="441" topLine="12" />
+	<File name="source\Grille.cpp" open="1" top="1" tabpos="13">
+		<Cursor position="780" topLine="15" />
 	</File>
 	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="5">
 		<Cursor position="35352" topLine="1091" />

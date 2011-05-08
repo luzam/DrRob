@@ -48,179 +48,10 @@ touch : 0
 reset landing
 touch : 0
 reset landing
-touch : 0
-reset landing
 touch : 1
 set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-landing : 9
-touch : 1
-landing : 8
-landing : 8
-touch : 1
-landing : 7
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
 touch : 0
 reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
 landing : 11
 touch : 1
 landing : 10
@@ -236,105 +67,8 @@ touch : 1
 landing : 6
 landing : 6
 touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-landing : 11
-touch : 1
-landing : 10
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
-touch : 1
-landing : 10
-touch : 1
-touch : 1
-touch : 0
-reset landing
-landing : 9
-touch : 1
-landing : 8
-landing : 8
-touch : 1
-landing : 7
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 1
-touch : 1
-touch : 1
-touch : 1
-touch : 0
-reset landing
-touch : 1
-touch : 1
-touch : 0
-reset landing
+landing : 5
+landing : 5
 touch : 0
 reset landing
 touch : 0
@@ -389,12 +123,13 @@ landing : 11
 landing : 11
 touch : 1
 landing : 10
+landing : 10
+touch : 1
+landing : 9
 touch : 1
 touch : 1
 touch : 0
 reset landing
-landing : 9
-touch : 1
 landing : 8
 touch : 1
 landing : 7
@@ -444,18 +179,25 @@ landing : 11
 touch : 1
 landing : 10
 touch : 1
+landing : 9
+touch : 1
 touch : 1
 touch : 0
 reset landing
-landing : 9
-touch : 1
 landing : 8
 touch : 1
 landing : 7
-landing : 7
 touch : 1
 landing : 6
 landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
 touch : 0
 reset landing
 touch : 0
@@ -489,9 +231,64 @@ reset landing
 touch : 1
 set landing
 landing : 11
+landing : 11
 touch : 1
 landing : 10
+landing : 10
 touch : 1
+landing : 9
+landing : 9
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
 landing : 9
 touch : 1
 landing : 8
@@ -503,6 +300,16 @@ touch : 1
 landing : 6
 landing : 6
 touch : 1
+landing : 5
+landing : 5
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
 touch : 0
 reset landing
 touch : 0
@@ -528,91 +335,31 @@ reset landing
 touch : 1
 set landing
 landing : 11
-touch : 1
-landing : 10
-touch : 1
-landing : 9
-touch : 1
-landing : 8
-touch : 1
-landing : 7
-touch : 1
-landing : 6
-landing : 6
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-landing : 11
 landing : 11
 touch : 1
 landing : 10
 landing : 10
 touch : 1
+landing : 9
+landing : 9
+touch : 1
 touch : 1
 touch : 0
 reset landing
-landing : 9
-touch : 1
 landing : 8
+landing : 8
+touch : 1
 landing : 7
+landing : 7
+touch : 1
 landing : 6
 landing : 5
 landing : 4
 landing : 3
-touch : 1
-touch : 0
-reset landing
 landing : 2
+touch : 0
+reset landing
 landing : 1
-landing : 1
-touch : 1
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 0
-reset landing
-touch : 1
-set landing
-touch : 0
-reset landing
-landing : 11
-landing : 11
-landing : 10
-landing : 10
-landing : 9
-landing : 9
-landing : 8
-landing : 8
-landing : 7
-landing : 6
-landing : 5
-touch : 1
-touch : 0
-reset landing
-landing : 4
-landing : 3
-landing : 2
-landing : 1
-touch : 1
-touch : 0
-reset landing
-touch : 1
-touch : 0
-reset landing
-touch : 1
 touch : 1
 set landing
 landing : 11
@@ -624,14 +371,9 @@ landing : 9
 landing : 8
 landing : 8
 landing : 7
-landing : 7
-landing : 6
 landing : 6
 landing : 5
-landing : 5
 touch : 1
-touch : 1
-landing : 4
 landing : 4
 landing : 3
 landing : 2
@@ -641,43 +383,2261 @@ touch : 1
 touch : 1
 touch : 1
 touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 12
+touch : 0
+reset landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 0
+reset landing
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 0
+reset landing
+touch : 1
+set landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
 touch : 1
 touch : 1
- ligne  17 
+touch : 0
+reset landing
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 8
+landing : 8
+touch : 0
+reset landing
+landing : 7
+landing : 7
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 1
+touch : 0
+reset landing
+landing : 4
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 1
+set landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 1
+touch : 1
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 12
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 12
+landing : 5
+landing : 11
+landing : 4
+landing : 10
+landing : 3
+landing : 9
+landing : 2
+landing : 8
+landing : 1
+landing : 7
+landing : 6
+landing : 5
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  7 
+col 2
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 1
+landing : 5
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  9 
+col 2
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  14 
 col 0
  orientation : 0
 
-touch : 1
-touch : 1
- ligne  17 
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  15 
 col 0
  orientation : 2
 
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
 touch : 1
 touch : 1
+ ligne  15 
+col 0
+ orientation : 1
+
+touch : 0
+reset landing
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
  ligne  16 
+col 1
+ orientation : 3
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  16 
+col 1
+ orientation : 0
+
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+touch : 1
+landing : 10
+landing : 10
+landing : 9
+landing : 9
+touch : 1
+landing : 9
+landing : 9
+landing : 8
+landing : 8
+touch : 1
+landing : 8
+landing : 7
+touch : 1
+landing : 7
+landing : 6
+touch : 1
+landing : 6
+landing : 5
+touch : 1
+touch : 0
+reset landing
+ ligne  17 
+col 1
+ orientation : 2
+
+touch : 1
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+ ligne  16 
+col 1
+ orientation : 1
+
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 1
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 12
+landing : 12
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+landing : 9
+landing : 9
+landing : 8
+landing : 8
+landing : 7
+landing : 7
+landing : 6
+landing : 6
+touch : 0
+reset landing
+landing : 5
+landing : 5
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  8 
+col 1
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+landing : 5
+landing : 4
+touch : 1
+set landing
+landing : 3
+landing : 11
+landing : 2
+landing : 2
+landing : 10
+landing : 10
+landing : 1
+landing : 1
+landing : 9
+landing : 9
+landing : 8
+landing : 8
+landing : 7
+landing : 7
+landing : 6
+landing : 6
+landing : 5
+landing : 5
+touch : 1
+landing : 11
+landing : 4
+landing : 4
+landing : 9
+landing : 3
+landing : 3
+landing : 7
+landing : 2
+landing : 5
+landing : 1
+landing : 3
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 12
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+touch : 0
+reset landing
+landing : 6
+landing : 5
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  10 
+col 0
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  11 
+col 0
+ orientation : 2
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  12 
 col 0
  orientation : 1
 
 touch : 0
 reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
 touch : 1
- ligne  6 
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 6
+landing : 5
+landing : 5
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 11
+landing : 2
+landing : 2
+landing : 9
+landing : 1
+landing : 1
+landing : 7
+touch : 0
+reset landing
+landing : 5
+landing : 3
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 0
+reset landing
+touch : 1
+landing : 4
+landing : 3
+touch : 0
+reset landing
+landing : 2
+landing : 2
+touch : 0
+reset landing
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+touch : 1
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  10 
 col 2
  orientation : 0
 
 touch : 0
 reset landing
-touch : 1
- ligne  7 
+touch : 0
+reset landing
+ ligne  10 
+col 1
+ orientation : 2
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  9 
+col 2
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  10 
 col 2
  orientation : 2
 
 touch : 0
 reset landing
- ligne  7 
+touch : 0
+reset landing
+ ligne  10 
 col 2
  orientation : 1
 
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  11 
+col 2
+ orientation : 3
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+ ligne  11 
+col 2
+ orientation : 0
+
+touch : 0
+reset landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+landing : 6
+touch : 1
+landing : 5
+touch : 0
+reset landing
+ ligne  12 
+col 2
+ orientation : 2
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  12 
+col 2
+ orientation : 1
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 10
+touch : 0
+reset landing
+landing : 9
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 8
+landing : 8
+touch : 1
+landing : 10
+landing : 10
+landing : 7
+landing : 7
+touch : 1
+landing : 9
+landing : 9
+landing : 6
+landing : 6
+touch : 1
+landing : 8
+landing : 8
+landing : 5
+landing : 5
+touch : 1
+touch : 1
+touch : 1
+landing : 7
+landing : 7
+landing : 4
+landing : 4
+touch : 1
+landing : 6
+landing : 6
+landing : 3
+landing : 3
+touch : 0
+reset landing
+landing : 2
+landing : 2
+touch : 0
+reset landing
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+touch : 1
+landing : 10
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+landing : 5
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+landing : 9
+landing : 9
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 8
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 6
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+touch : 1
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 4
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+landing : 3
+landing : 11
+landing : 2
+landing : 9
+landing : 1
+landing : 7
+landing : 5
+landing : 3
+touch : 1
+landing : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 6
+landing : 5
+landing : 5
+touch : 1
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+landing : 6
+landing : 6
+landing : 5
+landing : 5
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 12
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 11
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 9
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 7
+landing : 5
+landing : 11
+landing : 5
+landing : 11
+landing : 5
+landing : 11
+landing : 5
+landing : 11
+landing : 5
+landing : 11
+landing : 3
+landing : 9
+landing : 3
+landing : 9
+landing : 3
+landing : 9
+landing : 3
+landing : 9
+landing : 3
+landing : 9
+landing : 1
+landing : 7
+landing : 1
+landing : 7
+landing : 1
+landing : 7
+landing : 1
+landing : 7
+landing : 1
+landing : 7
+touch : 0
+reset landing
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 5
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 3
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+landing : 5
+touch : 1
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+landing : 12
+landing : 12
+landing : 10
+landing : 10
+landing : 8
+landing : 8
+touch : 1
+landing : 6
+landing : 6
+landing : 4
+landing : 4
+landing : 2
+landing : 2
+touch : 1
+landing : 11
+landing : 11
+touch : 1
+landing : 9
+landing : 9
+landing : 7
+landing : 7
+landing : 5
+landing : 5
+landing : 3
+landing : 3
+landing : 1
+landing : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+touch : 0
+reset landing
+landing : 9
+landing : 9
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 7
+landing : 7
+touch : 0
+reset landing
+landing : 5
+landing : 5
+touch : 0
+reset landing
+landing : 3
+landing : 3
+touch : 0
+reset landing
+landing : 1
+landing : 1
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+landing : 9
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+landing : 6
+landing : 6
+landing : 5
+landing : 5
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+touch : 1
+touch : 0
+reset landing
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+landing : 12
+touch : 0
+reset landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 0
+reset landing
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+touch : 0
+reset landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 7
+landing : 6
+landing : 6
+landing : 5
+landing : 5
+touch : 1
+touch : 0
+reset landing
+landing : 4
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 1
+set landing
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 1
+touch : 1
+landing : 4
+landing : 3
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+landing : 9
+landing : 9
+landing : 8
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 0
+reset landing
+touch : 1
+landing : 4
+landing : 3
+landing : 2
+landing : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 1
+set landing
+touch : 0
+reset landing
+landing : 11
+landing : 11
+landing : 10
+landing : 10
+landing : 9
+landing : 9
+touch : 1
+landing : 8
+landing : 8
+touch : 1
+landing : 7
+landing : 7
+touch : 1
+landing : 6
+landing : 6
+touch : 1
+landing : 5
+landing : 5
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 4
+landing : 4
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+touch : 1
+landing : 10
+touch : 1
+landing : 9
+touch : 1
+landing : 8
+touch : 1
+landing : 7
+touch : 1
+touch : 1
+touch : 0
+reset landing
+landing : 6
+touch : 1
+touch : 1
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 1
+set landing
+landing : 11
+landing : 11
+landing : 10
+landing : 9
+landing : 8
+landing : 7
+landing : 6
+landing : 5
+touch : 1
+landing : 4
+landing : 3
+landing : 2
+landing : 2
+landing : 1
+landing : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 1
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+ ligne  9 
+col 2
+ orientation : 0
+
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
+touch : 0
+reset landing
 touch : 0
 reset landing

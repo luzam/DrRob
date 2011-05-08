@@ -1169,7 +1169,6 @@ void InterfaceX::maj_anims(DashBoard& dash)
     }
             dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
 
-    // std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
         if(dash.moteurPhy()->comboting()==1)
         {
             if(dash.combo()==0)
