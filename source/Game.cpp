@@ -21,13 +21,13 @@ void Game::go()
     std::vector<bool> _turningBool(_nbJoueurs,false);
     std::vector<bool> _turninghBool(_nbJoueurs,false);
     _X->compute_game();
-    assert(_nbJoueurs>0);
+    assert(_nbJoueurs+_nbAI>0);
     initBlobs();
     _dashBoards.clear();
     for(int c=0; c<_nbJoueurs; c++)
-        _dashBoards.push_back(new Joueur(_X->taille_blob(),new Grille(),&_randBlobs));
+        _dashBoards.push_back(new Joueur(_X->taille_blob(),new Grille(_X->taille_blob()),&_randBlobs));
     for(int c = 0 ; c<_nbAI; c++)
-        _dashBoards.push_back(new Easy(_X->taille_blob(),new Grille(),&_randBlobs));
+        _dashBoards.push_back(new Easy(_X->taille_blob(),new Grille(_X->taille_blob()),&_randBlobs));
     _combo = (int *) calloc(_nbJoueurs+_nbAI,sizeof(int));
     SDL_Event event;
     int continuer = 1;
@@ -95,6 +95,26 @@ void Game::go()
                     }
                 }
             }
+
+
+                int jvivant= 0;
+                int winer = 0;
+                for(size_t i=0; i<_dashBoards.size(); i++)
+                    if(_dashBoards[i]->looser())
+                        jvivant++;
+                    else winer=i;
+                if(jvivant>= _nbJoueurs+_nbAI - 1){
+                    continuer = 0;
+
+                    _X->winner(winer);
+                    SDL_Flip(_X->screen());
+                    SDL_WaitEvent(&event);
+                }
+
+
+
+
+
              //ici les animations indépendantes du fonctionnements du jeu type shining
             _X->blits(_dashBoards);
             repartitionCombo();

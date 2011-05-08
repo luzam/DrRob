@@ -14,7 +14,7 @@ void Grille::checkHole()
             {
                 if((_grille)[6*l+c].current()!=0)
                 {
-                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-8);
+                    _grille[6*l+c].setFalling(_grille[l*6+c].current()-_tailleBlob/6);
                     if((_grille)[6*l+c].current()<=0)
                     {
                         switchBlobs(l,c,l+_grille[6*l+c].fallingCol(),c);
@@ -28,7 +28,7 @@ void Grille::checkHole()
             {
                 if((_grille)[6*l+c].current()!=0)
                 {
-                    _grille[6*l+c].setFallingAnim(_grille[l*6+c].current()-2);
+                    _grille[6*l+c].setFallingAnim(_grille[l*6+c].current()-_tailleBlob/6);
                 }
             }
             else if((_grille)[6*l+c].state()==LANDING)

@@ -14,10 +14,10 @@ class Grille{
 
 protected :
     std::vector<Blobs> _grille;
-
+    int _tailleBlob;
     void setLink(int l, int c, int n, int s, int e, int w);
     public :
-    Grille():_grille(18*6){
+    Grille(int taille):_grille(18*6),_tailleBlob(taille){
         std::cout<<"grille()\n";
     for(int c=0;c<18*6;c++)
     std::fill(_grille.begin(), _grille.end(), Blobs());

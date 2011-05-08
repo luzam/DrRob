@@ -16,8 +16,8 @@ void DashBoard::go()
         _looser = _grille->checkLoose();
         return;
     }
-    if(_looser)
-    return;
+    if(_looser){
+    return;}
 
     if(_moteurPhy->fixed())
     {
