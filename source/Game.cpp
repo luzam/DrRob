@@ -30,9 +30,9 @@ void Game::go()
         initBlobs();
         _dashBoards.clear();
         for(int c=0; c<_nbJoueurs; c++)
-            _dashBoards.push_back(new Joueur(_X->taille_blob(),new Grille(_X->taille_blob()),&_randBlobs));
+            _dashBoards.push_back(new Joueur(_X->taille_blob(),new Grille((int)(_X->taille_blob())),&_randBlobs));
         for(int c = 0 ; c<_nbAI; c++)
-            _dashBoards.push_back(new Easy(_X->taille_blob(),new Grille(_X->taille_blob()),&_randBlobs));
+            _dashBoards.push_back(new Easy(_X->taille_blob(),new Grille((int)(_X->taille_blob())),&_randBlobs));
         _combo = (int *) calloc(_nbJoueurs+_nbAI,sizeof(int));
         SDL_Event event;
         int continuer = 1;
@@ -119,7 +119,6 @@ void Game::go()
                         if(_dashBoards.at(i)->launchCombo())
                         {
                             _combo[i] = _dashBoards.at(i)->combo();
-                            //  std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
                             _dashBoards.at(i)->resetCombo();
                         }
                     }
@@ -143,6 +142,9 @@ void Game::go()
                 SDL_Flip(_X->screen());
             }
         }
+        for(int c=0; c<_nbJoueurs+_nbAI ; c++)
+            delete _dashBoards[c];
+        free(_combo);
     }
 }
 /** @brief main loop

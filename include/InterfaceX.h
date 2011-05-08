@@ -102,7 +102,7 @@ public:
     bool init_SDL();
     bool load_files();
     void clean_up();
-    int taille_blob()const{return _taille_blob;}
+    double taille_blob()const{return _taille_blob;}
     void setNbJoueurs(int n){_nbJoueurs=n;}
     std::vector<Position> vDash()const{return _vDash;}
     SDL_Surface* screen()const{return _screen;}

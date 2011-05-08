@@ -7,7 +7,6 @@
   */
 void Grille::checkHole()
 {
-    bool falling = false;
     for(int l=17; l>=0; --l)
         for(int c=5; c>=0; --c)
             if((_grille)[6*l+c].state()==FALLING)
@@ -275,7 +274,7 @@ void Grille::switchBlobs(int l1,int c1,int l2,int c2)
   */
 void Grille::check()
 {
-    checkCombo();
+    //checkCombo();
     checkHole();
     checkLink();
     checkState();
