@@ -54,14 +54,15 @@ void InterfaceX::winner(int i)
     SDL_Color textcolor = {255,255,255};
     std::ostringstream oss;
     oss<<i+1;
+    SDL_Surface* _winner=NULL;
     SDL_Surface* _rectWin=NULL;
     _winner=TTF_RenderText_Solid(font,("Joueur "+oss.str()+" gagne").c_str(),textcolor);
     _rectWin = SDL_CreateRGBSurface(SDL_HWSURFACE, _screen->w,_winner->h*2,32/*_screen->format->BytesPerPixel*/, 0, 0, 0, 0);
-    //_rectWin->h = _winner->h*2;
-   // _rectWin->w = _screen->w;
     SDL_FillRect(_rectWin, NULL, SDL_MapRGB(_screen->format, 10, 10, 10));
     apply_surface(0,_screen->h/2-_rectWin->h/2,_rectWin,_screen,NULL);
     apply_surface(_screen->w/2-_winner->w/2,_screen->h/2-_winner->h/2,_winner,_screen,NULL);
+    SDL_FreeSurface(_winner);
+    SDL_FreeSurface(_rectWin);
 }
 int InterfaceX::play_anim_menu(int init,int fin)
 {

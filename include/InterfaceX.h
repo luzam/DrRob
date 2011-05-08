@@ -83,12 +83,11 @@ protected:
     int _taille_text;
     std::vector<std::vector<int> > _commandes;
     int _shining;
-    SDL_Surface* _winner;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
     _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_nbJoueurs(1),_nbAI(0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0),_winner(NULL)
+    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0)
     {
 
 
