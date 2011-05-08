@@ -102,7 +102,7 @@ public:
     bool init_SDL();
     bool load_files();
     void clean_up();
-    const double taille_blob()const{return _taille_blob;}
+    double taille_blob()const{return _taille_blob;}
     void setNbJoueurs(int n){_nbJoueurs=n;}
     std::vector<Position> vDash()const{return _vDash;}
     SDL_Surface* screen()const{return _screen;}
@@ -151,7 +151,7 @@ public:
     void controls_by_default();
     void initialisation_debut_jeu();
     void winner(int i);
-
+    void blit_scores(std::vector<DashBoard *> dashBoards);
 };
 #endif // INTERFACEX_H_INCLUDED
 
