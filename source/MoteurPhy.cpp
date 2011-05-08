@@ -10,59 +10,51 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
     switch(_orientation)
     {
     case BAS :
-        if(colBlobCourant() == 0)
+        if(colBlobCourant() == 5)
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK )
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK )
                 return;
         }
-        else if(colBlobCourant() == 5)
+        else if(colBlobCourant() == 0)
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()==BLANK )
-                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
             else return;
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
                 return;
-            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
+            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
             {
-                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+                (_posBlobPivot).setY((_posBlobPivot).y()+_taille);
             }
         }
         _orientation = GAUCHE;
         break;
     case HAUT :
-        if(colBlobCourant() == 0)
+        if(colBlobCourant() == 5)
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()==BLANK )
-                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()==BLANK )
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
             else return;
         }
-        else if(colBlobCourant() == 5)
+        else if(colBlobCourant() == 0)
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK )
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK )
                 return;
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK &&
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK)
-                return;
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK||
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK &&
                     (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
-                up = true;
-            else if(colBlobCourant() == 0||(*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
-            {
-                if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
-                    return;
-                (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+                return;
+            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK){
+                (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+                (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
             }
-        }
-        if (up)
-        {
-            (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
         }
         _orientation = DROITE;
         break;
@@ -74,7 +66,7 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
             up = true;
         else if(
             (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant())).color()!=BLANK||
-            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
+            (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
             up = true;
 
         if (up)
@@ -114,12 +106,13 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()-1)).color()!=BLANK)
+             if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
                 return;
             else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK)
             {
                 (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
+                (_posBlobPivot).setY((_posBlobPivot).y()+_taille);
             }
         }
         _orientation = DROITE;
@@ -138,22 +131,13 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK &&
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK)
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK &&
+                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
                 return;
-            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK||
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
-                up = true;
-            else if(colBlobCourant() == 0||(*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
-            {
-                if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)
-                    return;
+            else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK){
                 (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
+                (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
             }
-        }
-        if (up)
-        {
-            (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
         }
         _orientation = GAUCHE;
         break;

@@ -44,10 +44,24 @@ class MoteurPhy{
 
     public :
     MoteurPhy(int taille,Grille* grille):
-    _taille(taille),_posBlobPivot(2*taille,6*taille),_vitesseBlob(taille/2),_orientation(HAUT),_combo(0),_fixed(false),
-    _grille(grille),_touching(0),_comboting(0),_falling(0),_landing(0),_turningDirect(0),_turningHoraire(0),_speedUp(false){std::cout<<"MoteurPhy()\n";}
+    _taille(taille), _grille(grille){init(taille);}
     ~MoteurPhy(){}
-
+    void init(int taille){
+        _taille = taille;
+        _posBlobPivot.setX(2*taille);
+        _posBlobPivot.setY(6*taille);
+        _vitesseBlob = taille/2;
+        _orientation = HAUT;
+        _combo = 0;
+        _fixed = false;
+        _touching = 0;
+        _comboting = 0;
+        _falling = 0;
+        _landing = 0;
+        _turningDirect = 0;
+        _turningHoraire = 0;
+        _speedUp = false;
+    }
     void rotationHoraire(Position* master,Position* slave);
     void rotationAntiHoraire(Position* master,Position* slave);
     void gauche(Position* master,Position* slave);

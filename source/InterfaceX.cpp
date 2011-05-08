@@ -9,7 +9,7 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
     if ( loadedImage != NULL )
     {
         optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
-        SDL_FreeSurface( loadedImage );
+       // SDL_FreeSurface( loadedImage );
 //        if ( optimizedImage != NULL )
 //            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 0, 255, 0 ) );
     }
@@ -30,7 +30,7 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
-    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_SWSURFACE |SDL_DOUBLEBUF );
+    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
     if ( _screen == NULL )
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
@@ -292,7 +292,7 @@ int InterfaceX::controls()
         joueur=TTF_RenderText_Solid(font,njoueur.c_str(),textcolor);
 
 
-        for(int j=0;j<(int)controls.size();++j){
+        for(int j=0;j<_nbJoueurs;++j){
         continuer=1;
         text=TTF_RenderText_Solid(font,controls[j].c_str(),textcolor);
         while(continuer)
@@ -688,16 +688,19 @@ void InterfaceX::maj_offsets(int dx,int dy)
 bool InterfaceX::compute_vDash()
 {
     int nbJoueursX;
+    _vDash.resize(_nbJoueurs);
     if(_nbJoueurs>2)
         nbJoueursX=round((_nbJoueurs+0.1)/2);
     else
         nbJoueursX=_nbJoueurs;
 
     std::cout<<"NB joueurs en X :  "<<nbJoueursX<<std::endl;
+     std::cout<<"NB joueurs  :  "<<_nbJoueurs<<std::endl;
     Position pinit(0,0);
     for(int i=0; i<_nbJoueurs; i++)
     {
-        _vDash.push_back(pinit);
+        _vDash[i].setX(pinit.x());
+        _vDash[i].setY(pinit.y());
         std::cout<<" VDASH["<<i<<"] = "<<_vDash[i].x()<<"x"<<_vDash[i].y()<<std::endl;
     }
     int posX=0,posY=0;
@@ -905,10 +908,7 @@ bool InterfaceX::load_files()
 #endif
     char cCurrentPath[FILENAME_MAX];
 
-    if (!GetCurrentDir(cCurrentPath, sizeof(cCurrentPath)))
-    {
-        return errno;
-    }
+    GetCurrentDir(cCurrentPath, sizeof(cCurrentPath));
 
     std::cout<< cCurrentPath<<std::endl;
     _background_ini = load_img("background.png");
@@ -917,7 +917,7 @@ bool InterfaceX::load_files()
     _avatars_ini = load_img("avatars.png");
     _menu_ini = load_img("menu2.png");
     _cursor_ini = load_img("cursor.png");
-    if ( _blobs_ini == NULL || _background_ini==NULL || _blobs_ini==NULL)
+    if ( _blobs_ini == NULL || _background_ini==NULL || _avatars_ini==NULL || _cursor_ini ==NULL||_menu_ini==NULL)
     {
         std::cout<<"Erreur chargement"<<std::endl;
         return false;
@@ -940,7 +940,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_W(SDL_Surface *surface_a_resize,int tail
     double sar_W=surface_a_resize->w;
     double zoom=(double)td_W/(double)sar_W;
     SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-    SDL_FreeSurface(surface_a_resize);
+   // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
 SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int taille_desiree_H)
@@ -949,7 +949,7 @@ SDL_Surface* InterfaceX::img_zoom_pixel_H(SDL_Surface *surface_a_resize,int tail
     double sar_H=surface_a_resize->h;
     double zoom=(double)td_H/(double)sar_H;
     SDL_Surface *surface_resized=rotozoomSurfaceXY(surface_a_resize,0,zoom,zoom,0);
-    SDL_FreeSurface(surface_a_resize);
+   // SDL_FreeSurface(surface_a_resize);
     return surface_resized;
 }
 

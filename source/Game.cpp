@@ -20,14 +20,14 @@ void Game::go()
     _X->compute_game();
     assert(_nbJoueurs>0);
     initBlobs();
+    _dashBoards.clear();
     for(int c=0; c<_nbJoueurs; c++)
         _dashBoards.push_back(DashBoard(_X->taille_blob(),new Grille(),&_randBlobs));
     _combo = (int *) calloc(_nbJoueurs,sizeof(int));
-    for(int c=0; c<_nbJoueurs; c++)
-        _dashBoards[c].grille()->init();
     SDL_Event event;
     int continuer = 1;
-
+    for(int i=0;i<100;++i)
+    std::cout<<" NB JOUEURS : "<<_nbJoueurs<<std::endl;
     _X->blits(_dashBoards);
 
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
