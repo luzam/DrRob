@@ -151,7 +151,7 @@ public:
     void controls_by_default();
     void initialisation_debut_jeu();
     void winner(int i);
-
+    void blit_scores(std::vector<DashBoard *> dashBoards);
 };
 #endif // INTERFACEX_H_INCLUDED
 

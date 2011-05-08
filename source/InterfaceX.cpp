@@ -830,6 +830,7 @@ void InterfaceX::blits(std::vector<DashBoard *> dashBoards)
     blit_fond();
     blit_blobs(dashBoards);
     blit_dash();
+    blit_scores(dashBoards);
     blit_avatars();
 }
 /**
@@ -908,6 +909,19 @@ void InterfaceX::blit_cursor()
     apply_surface(_offset_cursor.x(),_offset_cursor.y(),_cursor,_screen,NULL);
 
 }
+void InterfaceX::blit_scores(std::vector<DashBoard *> dashBoards){
+    SDL_Surface *score=NULL;
+    std::ostringstream sc;
+    TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_score*_ratio);
+    SDL_Color textcolor = {255,255,255,0};
+for(size_t j=0; j<dashBoards.size(); j++){
+    sc.str("");
+    sc<<dashBoards[j]->score();
+    score=TTF_RenderText_Solid(font,(sc.str()).c_str(),textcolor);
+    apply_surface(_vDash[j].x()+_offset_score.x(),_vDash[j].x()+_offset_score.x(),score,_screen,NULL);
+    }
+}
+
 /**
 * Affiche le menu
 **/
