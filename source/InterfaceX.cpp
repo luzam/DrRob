@@ -168,7 +168,7 @@ int InterfaceX::select_nbJoueurs()
     SDL_Surface* nbJoueurs=NULL;
     SDL_Surface* nbAI=NULL;
     TTF_Font *font= TTF_OpenFont("ARIAL.TTF",_taille_text);
-    SDL_Color textcolor = {255,255,255,0};
+    SDL_Color textcolor = {240,240,240,0};
     SDL_Event event;
     Clock _clock;
     std::cout<<"Curseur = "<<_cursor->w<<"x"<<_cursor->h<<" Position x = "<<_offset_cursor.x()<<" y = "<<_offset_cursor.y()<<std::endl;
@@ -649,7 +649,7 @@ std::cout<<"Resize des blobs"<<std::endl;
 
     _taille_blob=(double)dw/20.0;
     std::cout<<"1.Un blob mesure(double) : "<<_taille_blob<<" px de coté"<<std::endl;
-    _taille_blob=(int)(dh/12.0);
+    _taille_blob=dw/20;
     std::cout<<"2.Un blob mesure(int) : "<<_taille_blob<<" px de coté"<<std::endl;
     _grille_W=17*_taille_blob;
     _grille_H=6*_taille_blob;
@@ -669,9 +669,9 @@ void InterfaceX::resize_dash(){
     int d_h_ini=_dashboard_ini->h;
     int resizedDashW ;
     if(_nbJoueurs>2)
-        resizedDashW = (double)((_screen->h/2)*(_dashboard_ini->w)/(_dashboard_ini->h));
+        resizedDashW = ((_screen->h/2)*(_dashboard_ini->w)/(_dashboard_ini->h));
     else
-        resizedDashW = (double)((_screen->h)*(_dashboard_ini->w)/(_dashboard_ini->h));
+        resizedDashW = ((_screen->h)*(_dashboard_ini->w)/(_dashboard_ini->h));
 
     std::cout<<"Taille dash W resized : "<<resizedDashW<<std::endl;
     if(nbJoueursX*resizedDashW<=_screen->w) //On verifie que les dash rentrent bien dans l'ecran <---->
@@ -685,13 +685,13 @@ void InterfaceX::resize_dash(){
         }
         else
         {
-            _dashboard=img_zoom_pixel_H(_dashboard_ini,_screen->h/2);
+            _dashboard=img_zoom_pixel_H(_dashboard_ini,ceil(_screen->h/2));
         }
     }
     else   //si c'est trop grand, on calcule la taille des dash en fonction de _screen->w/NbJoueurx
     {
         std::cout<<"PAS Assez de place en W--> resize en H"<<std::endl;
-        _dashboard=img_zoom_pixel_W(_dashboard_ini,_screen->w/nbJoueursX);
+        _dashboard=img_zoom_pixel_W(_dashboard_ini,ceil(_screen->w/nbJoueursX));
     }
     double d_h=_dashboard->h;
     _ratio=d_h/(double)d_h_ini;
@@ -932,7 +932,6 @@ void InterfaceX::blit_scores(std::vector<DashBoard *> dashBoards){
 }
 /**
 * Affiche le menu
->>>>>>> bd1a65fc08147ac5b63d3be36f7da1ea8d35eb86
 **/
 void InterfaceX::blit_menu()
 {
@@ -996,8 +995,8 @@ void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
                     else
                         offsetgrilley=(_offset_grille).y()+_vDash.at(j).y();
                     //On calcule les coordonnées des blobs
-                    blobx=c*_taille_blob;
-                    bloby=l*_taille_blob;
+                    blobx=ceil(c*_taille_blob_ini*_ratio);
+                    bloby=ceil(l*_taille_blob_ini*_ratio);
                     blit_un_blob(((*(dashBoards.at(j)->grille()))(l,c)),offsetgrillex+blobx,offsetgrilley+bloby);
 
                 }
@@ -1011,13 +1010,13 @@ void InterfaceX::blit_blobs(std::vector<DashBoard *> dashBoards)
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
-    _offset_grille.setY(ceil((33.0-6*_taille_blob_ini)*(_ratio)));
+    _offset_grille.setY(ceil(((33-6*_taille_blob_ini)*(_ratio))));
     _offset_nextBlob.setX(ceil((128)*_ratio));
     _offset_nextBlob.setY(ceil((78)*_ratio));
     _offset_avatar.setX(ceil((105)*_ratio));
     _offset_avatar.setY(ceil((178)*_ratio));
-    _offset_score.setX(ceil((112.0)*(_ratio)));
-    _offset_score.setY(ceil((145.0)*(_ratio)));
+    _offset_score.setX(ceil((114)*(_ratio)));
+    _offset_score.setY(ceil((145)*(_ratio)));
     return true;
 }
 /**

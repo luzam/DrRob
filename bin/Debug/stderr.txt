@@ -972,3 +972,3879 @@ combo : 0
 combo value : 0
 combo : 0
 combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
+combo : 0
+combo value : 0
