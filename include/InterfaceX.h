@@ -39,10 +39,9 @@ class InterfaceX
 protected:
     int _SCREEN_WIDTH;
     int _SCREEN_HEIGHT;
-     int _SCREEN_BPP;
+    int _SCREEN_BPP;
     std::vector<std::vector<SDL_Surface*> > _blobsIMG_ini;
     std::vector<std::vector<SDL_Surface*> > _blobsIMG;
-
     const int _taille_blob_ini;
     double _taille_blob;
     int _decalage_menu_x;
@@ -71,9 +70,6 @@ protected:
     SDL_Surface *_menu;
     SDL_Surface *_cursor_ini;
     SDL_Surface *_cursor;
-    SDL_Event _event;
-    TTF_Font *_font;
-    SDL_Color _textColor;
     int _grille_W;
     int _grille_H;
     int _nb_blobs;
@@ -83,35 +79,22 @@ protected:
     int _taille_text;
     std::vector<std::vector<int> > _commandes;
     int _shining;
+    int _taille_score;
 public:
     InterfaceX(int w,int h):_SCREEN_WIDTH(w),_SCREEN_HEIGHT(h),
     _SCREEN_BPP(32),_blobsIMG_ini(),_taille_blob_ini(16),_taille_blob(16),_decalage_menu_x(0),_decalage_menu_y(0), _ratio_avat_ini(54.0/80.0),_nbJoueurs(1),_nbAI(0),_offset_grille(),_offset_nextBlob()
     ,_offset_score(),_ratio(1),_vDash(),_dashboard(NULL),_background(NULL),_screen(NULL),_dashboard_ini(NULL),_background_ini(NULL)
-    ,_blobs_ini(NULL),_event(),_font(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0)
+    ,_blobs_ini(NULL),_nb_blobs(40),_taille_menu_ini(320),_taille_text(25),_shining(0),_taille_score(14)
     {
-
-
     init_SDL();
-_offset_menu.w=_SCREEN_WIDTH;
-        _offset_menu.h=_SCREEN_HEIGHT;
-        _offset_menu.x=0;
-        _offset_menu.y=0;
-      //  _offset_cursor.setX(80);
-       // _offset_cursor.setY(87);
+    _offset_menu.w=_SCREEN_WIDTH;
+    _offset_menu.h=_SCREEN_HEIGHT;
+    _offset_menu.x=0;
+    _offset_menu.y=0;
     load_files();
-    //resize_vect();
-   // decouper_sprite();
     resize_menu();
-    //on rempli les commandes par default
-    //controls_by_default();
-
     }
-    ~InterfaceX()
-    {
-        std::cout<<"Fermeture interface"<<std::endl;
-        clean_up();
-        std::cout<<"Interface fermee avec succes"<<std::endl;
-    }
+    ~InterfaceX(){clean_up();}
     int menu();
     void compute_game();
     SDL_Surface* load_img( std::string filename );
@@ -121,30 +104,8 @@ _offset_menu.w=_SCREEN_WIDTH;
     void clean_up();
     int taille_blob()const{return _taille_blob;}
     void setNbJoueurs(int n){_nbJoueurs=n;}
-    Position offset_grille()const
-    {
-        return _offset_grille;
-    }
-    std::vector<Position> vDash()const
-    {
-        return _vDash;
-    }
-    SDL_Surface* screen()const
-    {
-        return _screen;
-    }
-    SDL_Event* event()
-    {
-        return &_event;
-    }
-    SDL_Surface* background()const
-    {
-        return _background;
-    }
-    SDL_Surface* dashboard()const
-    {
-        return _dashboard;
-    }
+    std::vector<Position> vDash()const{return _vDash;}
+    SDL_Surface* screen()const{return _screen;}
     int NbJoueurs()const{return _nbJoueurs;}
     int NbAI()const{return _nbAI;}
     int grille_H()const{return _grille_H;}
@@ -174,7 +135,7 @@ _offset_menu.w=_SCREEN_WIDTH;
     void putpixel(SDL_Surface* s,int x,int y,Uint32 p);
     void resize_blobsIMG();
     int anim_comboting(Blobs* blob);
-    int anim_falling(Blobs* blob);
+    int anim_falling();
     int anim_landing(Blobs* blob);
     void maj_offsets(int dx,int dy);
     int controls_and_start();

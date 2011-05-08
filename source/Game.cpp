@@ -101,7 +101,11 @@ void Game::go()
                         continuer = 0;
                         _X->winner(winer);
                         SDL_Flip(_X->screen());
-                        SDL_WaitEvent(&event);
+                        while(SDL_WaitEvent(&event)){
+                        Uint8* keystates = SDL_GetKeyState( NULL );
+                        if(keystates[SDLK_RETURN])
+                            break;
+                        }
                     }
                 }
                 if(_clock.tac())
