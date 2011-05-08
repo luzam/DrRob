@@ -1,5 +1,5 @@
 #include "../include/InterfaceX.h"
-#include <sstream>
+
 SDL_Surface* InterfaceX::load_img( std::string filename )
 {
     SDL_Surface* loadedImage = NULL;
@@ -9,9 +9,6 @@ SDL_Surface* InterfaceX::load_img( std::string filename )
     if ( loadedImage != NULL )
     {
         optimizedImage = SDL_DisplayFormatAlpha( loadedImage );
-       // SDL_FreeSurface( loadedImage );
-//        if ( optimizedImage != NULL )
-//            SDL_SetColorKey( optimizedImage, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB( optimizedImage->format, 0, 255, 0 ) );
     }
     else
     {
@@ -30,7 +27,12 @@ bool InterfaceX::init_SDL()
 {
     if ( SDL_Init( SDL_INIT_EVERYTHING ) == -1 )
         return false;
+        if(_SCREEN_HEIGHT==0 || _SCREEN_WIDTH==0)
+            _screen = SDL_SetVideoMode( 0, 0, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF | SDL_FULLSCREEN );
+        else
     _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
+    _SCREEN_HEIGHT=_screen->h;
+    _SCREEN_WIDTH=_screen->w;
     if ( _screen == NULL )
         return false;
     SDL_WM_SetCaption( "Dr.Robotnik Mean Bean Machine - Zamunerstein Hoarau ROB4 2011", NULL );
@@ -53,6 +55,7 @@ int InterfaceX::play_anim_menu(int init,int fin)
     _offset_menu.x=init;
     int offsetmenux=_offset_menu.x;
     Clock _clock;
+    int val=6*_ratio_menu;
     std::cout<<" init : "<<init<<" fin : "<<fin<<std::endl;
     while (continuer) /* TANT QUE la variable ne vaut pas 0 */
     {
@@ -65,9 +68,9 @@ int InterfaceX::play_anim_menu(int init,int fin)
         {
             blit_menu();
             if(fin-init>=0)
-                offsetmenux+=5;
+                offsetmenux+=val;
             else
-                offsetmenux-=5;
+                offsetmenux-=val;
 
             if(fin>=init)//Si on avance
             {
@@ -99,7 +102,7 @@ int InterfaceX::play_anim_menu(int init,int fin)
                 if(_clock.tic(5))
                 {
                     blit_menu();
-                    offsetmenux-=5;
+                    offsetmenux-=val;
                     if(offsetmenux<=init)
                     {
                         _offset_menu.x=init;
@@ -757,15 +760,12 @@ return 17;
 
 int InterfaceX::anim_landing(Blobs* blob)
 {
-    return 16;
-
+    std::cerr << "landing : "<< blob->current() << "\n";
+    return (blob->current()%6>=3)?16:17;
 }
 
 int InterfaceX::anim_comboting(Blobs* blob)
 {
-//    int pas = COMBOTING_ANIM_TIME -3;
-//    if(blob->current())
-
     if(blob->current()<=4)
         return 33;
     else if((blob->current())>= 30 )
@@ -782,7 +782,6 @@ int InterfaceX::anim_comboting(Blobs* blob)
 
 void InterfaceX::blit_un_blob(Blobs* blob,int x,int y)
 {
-    //SDL_Rect offset=offset_sprite(blob->color(),blob->link(),blob->state());
     switch(blob->state())
     {
     case NO_STATE:
@@ -888,7 +887,7 @@ SDL_Rect InterfaceX::offset_sprite(int color,int link,int etat)
 bool InterfaceX::compute_offsets()
 {
     _offset_grille.setX(ceil((8.0)*(_ratio)));
-    _offset_grille.setY(ceil((31.0-6*_taille_blob_ini)*(_ratio)));
+    _offset_grille.setY(ceil((33.0-6*_taille_blob_ini)*(_ratio)));
     _offset_nextBlob.setX(ceil((128)*_ratio));
     _offset_nextBlob.setY(ceil((78)*_ratio));
     _offset_avatar.setX(ceil((105)*_ratio));
@@ -1074,7 +1073,8 @@ Uint32 InterfaceX::getpixel(SDL_Surface *surface, int x, int y)
         if(SDL_BYTEORDER == SDL_BIG_ENDIAN)
             return p[0] << 16 | p[1] << 8 | p[2];
         else
-            return p[0] | p[1] << 8 | p[2] << 16;
+            return p[0] | p[1] << 8 | p[2] << 16;    _screen = SDL_SetVideoMode( _SCREEN_WIDTH, _SCREEN_HEIGHT, _SCREEN_BPP, SDL_HWSURFACE |SDL_DOUBLEBUF );
+
         break;
 
     case 4:
@@ -1133,6 +1133,16 @@ void InterfaceX::maj_anims(DashBoard& dash)
     maj_shining();
     dash.moteurPhy()->fall();
     dash.grille()->check();
+    if(dash.masterBlob()->state()==LANDING)
+        {
+            dash.masterBlob()->setLanding(dash.masterBlob()->current()-1);
+            dash.slaveBlob()->setLanding(dash.slaveBlob()->current()-1);
+            if(dash.masterBlob()->current()==0){
+            dash.masterBlob()->setState(NO_STATE);
+            dash.slaveBlob()->setState(NO_STATE);
+
+            }
+        }
     if((dash.moteurPhy()->falling()!=0 || dash.moteurPhy()->comboting() !=0 || dash.grille()->checkLanding()!=0) && retour )
         return ;
     dash.moteurPhy()->setFalling(dash.grille()->checkFalling());
@@ -1150,7 +1160,7 @@ void InterfaceX::maj_anims(DashBoard& dash)
     }
             dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
 
-     std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
+    // std::cerr<< " comboting = " << dash.moteurPhy()->comboting()<< " / "<< COMBOTING_ANIM_TIME << "\n" ;
         if(dash.moteurPhy()->comboting()==1)
         {
             if(dash.combo()==0)
@@ -1215,7 +1225,10 @@ void  InterfaceX::tourne_un_blob(Position* pivot,Position* slave,int sens, int a
     slave->setY(y0 + _taille_blob*std::sin(angle0+angle_diff));
 
 }
-
+/**
+* Initialise les parametres du jeu
+*
+**/
 void InterfaceX::initialisation_debut_jeu(){
         //_offset_menu.w=_SCREEN_WIDTH;
         //_offset_menu.h=_SCREEN_HEIGHT;

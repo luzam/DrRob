@@ -1,6 +1,7 @@
 #ifndef INTERFACEX_H_INCLUDED
 #define INTERFACEX_H_INCLUDED
 #include <SDL.h>
+#include <sstream>
 #include <SDL_image.h>
 #include <iostream>
 #include <SDL_ttf.h>

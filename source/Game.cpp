@@ -16,7 +16,8 @@ void Game::go()
     }
     _nbJoueurs=_X->NbJoueurs();
     _nbAI=_X->NbAI();
-    _turningBool = new std::vector<bool>(_nbJoueurs,false);
+    std::vector<bool> _turningBool(_nbJoueurs,false);
+    std::vector<bool> _turninghBool(_nbJoueurs,false);
     _X->compute_game();
     assert(_nbJoueurs>0);
     initBlobs();
@@ -51,20 +52,20 @@ void Game::go()
                     _dashBoards.at(i).moteurPhy()->speedUp();
                 else
                     _dashBoards.at(i).moteurPhy()->speedToNormal();
-                if ((keystates[(_X->Commandes())[i][CHORAIRE]] )&& !_turningBool->at(i) )
+                if ((keystates[(_X->Commandes())[i][CHORAIRE]] )&& !_turningBool.at(i) )
                 {
                     _dashBoards.at(i).moteurPhy()->rotationHoraire(_dashBoards.at(i).masterPos(),_dashBoards.at(i).slavePos());
-                    _turningBool->at(i) = true;
+                    _turningBool.at(i) = true;
                 }
                 if(!keystates[(_X->Commandes())[i][CHORAIRE]] )
-                    _turningBool->at(i) = false;
-                if (keystates[(_X->Commandes())[i][CANTIHORAIRE]] && !_turningBool->at(i) )
+                    _turningBool.at(i) = false;
+                if (keystates[(_X->Commandes())[i][CANTIHORAIRE]] && !_turninghBool.at(i) )
                 {
                     _dashBoards.at(i).moteurPhy()->rotationAntiHoraire(_dashBoards.at(i).masterPos(),_dashBoards.at(i).slavePos());
-                    _turningBool->at(i) = true;
+                    _turninghBool.at(i) = true;
                 }
                 if(!keystates[(_X->Commandes())[i][CANTIHORAIRE]] )
-                    _turningBool->at(i) = false;
+                    _turninghBool.at(i) = false;
 
             }
         }
@@ -84,7 +85,7 @@ void Game::go()
                     if(_dashBoards.at(i).launchCombo())
                     {
                         _combo[i] = _dashBoards.at(i).combo();
-                        std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
+                      //  std::cerr<< "combo joueur " << i << " : " << _combo[i]<< "\n";
                         _dashBoards.at(i).resetCombo();
                     }
                 }

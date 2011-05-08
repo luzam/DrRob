@@ -23,13 +23,12 @@ protected :
     Clock _clock;
     int _nbJoueurs;
     int _nbAI;
-    std::vector<bool> *_turningBool;
     int *_combo;
 public :
 
-    Game(int u):_clock(),_nbJoueurs(1),_nbAI(0)
+    Game():_clock(),_nbJoueurs(1),_nbAI(0)
     {
-        _X = new InterfaceX(800,700);
+        _X = new InterfaceX(600,500);
         std::cout<<"Game()\n";
     }
 

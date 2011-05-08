@@ -62,14 +62,24 @@ void DashBoard::go()
 
         if(_moteurPhy->falling()==0 && _moteurPhy->comboting()==0&& _grille->checkLanding()==0 && _go)
         {
-            int touching = _moteurPhy->moove(&_master,&_slave);
-            if(touching!=0)
+            bool land = _moteurPhy->moove(&_master,&_slave);
+            if(land&&_landing)
             {
+                std::cerr<<"set landing\n";
+
                 _masterBlob.setState(LANDING);
+                _masterBlob.setLanding(LANDING_ANIM_TIME);
+
+                _slaveBlob.setLanding(LANDING_ANIM_TIME);
                 _slaveBlob.setState(LANDING);
-                _masterBlob.setLanding(touching);
-                _slaveBlob.setLanding(touching);
+
+                _landing = false;
             }
+            else if(!land)  {
+                _landing = true;
+                std::cerr<<"reset landing\n";
+            }
+
         }
     }
 
