@@ -1,0 +1,760 @@
+\hypertarget{a00013}{
+\section{Référence de la classe MoteurPhy}
+\label{a00013}\index{MoteurPhy@{MoteurPhy}}
+}
+
+
+{\ttfamily \#include $<$MoteurPhy.h$>$}
+
+
+
+Graphe de collaboration de MoteurPhy:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{a00094}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00013_ac2fb9ac23086a274df6c4166a76875da}{MoteurPhy} (int taille, \hyperlink{a00009}{Grille} $\ast$grille)
+\item 
+\hyperlink{a00013_a8038b2b7dd00da0650ed594af52bd5d3}{$\sim$MoteurPhy} ()
+\item 
+void \hyperlink{a00013_aa2a69dd8dae77dc0172d9fb4d7b5fb60}{init} (int taille)
+\item 
+const int \hyperlink{a00013_afc5325d5fbbff1cd9c72b943726a02ea}{colBlobCourant} () const 
+\item 
+void \hyperlink{a00013_a28c33e603d5b4938e005b5cef1dff958}{rotationHoraire} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+void \hyperlink{a00013_a48b81367d338f8887643db583281d8fb}{rotationAntiHoraire} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+void \hyperlink{a00013_aff04c5ab8ca86434f15b2d09aeb4d3c4}{gauche} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+void \hyperlink{a00013_ac552223e5740621815438cd1a4097b87}{droite} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+void \hyperlink{a00013_a36aa8c6a3c53abab11d7c76e68fc5922}{speedUp} ()
+\item 
+void \hyperlink{a00013_a1a8f08b95399519bcb9b7393cce04f36}{speedToNormal} ()
+\item 
+void \hyperlink{a00013_af93e0d86f1ceaa2151892cec50ce4c49}{majCombo} ()
+\item 
+void \hyperlink{a00013_a7338064aa970bcfb13511b6feeedb258}{fall} ()
+\item 
+int \hyperlink{a00013_a333168582e7ceaa77b7575fab5a5c4fb}{moove} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+int \hyperlink{a00013_ac7111dfbdee8744f40c2dd22dbb8b472}{combo} () const 
+\item 
+void \hyperlink{a00013_a7949b13ddb18140c687c5ff7d0c5c7c2}{nextBlobs} (\hyperlink{a00002}{Blobs} master, \hyperlink{a00002}{Blobs} slave)
+\item 
+bool \hyperlink{a00013_ae9c1c631f6aec115d9da860a2c117422}{fixed} () const 
+\item 
+int \hyperlink{a00013_aad81aa6262b2df09b7f5f6867b7d6948}{falling} () const 
+\item 
+void \hyperlink{a00013_a69eec554c4ffdb8814b53d4b6d81efc4}{setFalling} (int falling)
+\item 
+int \hyperlink{a00013_ab4e7eeb4a93c113b9baea02d20e9139e}{turningDirect} () const 
+\item 
+void \hyperlink{a00013_a918c18d9fc03eb66642acafb23563b09}{setTurningDirect} (int turning)
+\item 
+int \hyperlink{a00013_a605c22162ce9f303a92e23c7de5628d9}{turningHoraire} () const 
+\item 
+void \hyperlink{a00013_a7cf07be486ce2c669977fb58a57f6359}{setTurningHoraire} (int turning)
+\item 
+void \hyperlink{a00013_ab4729174c75f3bf9d0fe80804a97dc4a}{setFixed} (bool fixed)
+\item 
+void \hyperlink{a00013_a3f4bfe7f5bb26faa0cd7aaff389aafae}{setComboting} (int comboting)
+\item 
+void \hyperlink{a00013_a540eb7aa4aad37a5487ac0e4c91da903}{setCombo} (int combo)
+\item 
+int \hyperlink{a00013_a97d4047a17d5ef7e5be05b56e014d8b3}{comboting} () const 
+\item 
+int \hyperlink{a00013_a268b4af76d3a123c58bf3e74c34732d9}{orientation} () const 
+\item 
+void \hyperlink{a00013_a01eb529a43ee1e37c6a46339768ff406}{majPosition} (\hyperlink{a00014}{Position} $\ast$master, \hyperlink{a00014}{Position} $\ast$slave)
+\item 
+int \hyperlink{a00013_a187627c77d1f8f3abdfc943c78049036}{taille} () const 
+\item 
+void \hyperlink{a00013_a883ec44e96971e9b099b5e62dd2027f7}{setLanding} (int landing)
+\item 
+bool \hyperlink{a00013_a66cd74a97dbe962a642fd9112418bc6d}{speedUpBool} () const 
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{a00013_aa5c0b98ac8017941948a790736bec204}{ligneBlobCourant} () const 
+\item 
+void \hyperlink{a00013_aa9de1430d6438bd3d5c0ca6a8911e7ec}{ajoutGrille} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{a00013_a3c1e76cb12396ae57a40340decf3502a}{\_\-taille}
+\item 
+\hyperlink{a00014}{Position} \hyperlink{a00013_adea2f52929d858754cc5b47fe9048851}{\_\-posBlobPivot}
+\item 
+size\_\-t \hyperlink{a00013_a9d4e37ce23b4789f20fffd11e5eafdf5}{\_\-colorMaster}
+\item 
+size\_\-t \hyperlink{a00013_a70abfbed5e6126f443c721d185f04952}{\_\-colorSlave}
+\item 
+int \hyperlink{a00013_adddea379291ef88ec19e7cc8f6dc13c8}{\_\-vitesseBlob}
+\item 
+int \hyperlink{a00013_a00fd8bca4af06999915a03b221d06141}{\_\-orientation}
+\item 
+int \hyperlink{a00013_ac03396a1d6630aab8e1124f140ec0209}{\_\-combo}
+\item 
+bool \hyperlink{a00013_a017cb4047a99eb1d77a00b809dddb316}{\_\-fixed}
+\item 
+\hyperlink{a00009}{Grille} $\ast$ \hyperlink{a00013_adb5aaa4c6afc40fb635dab1ae6903bab}{\_\-grille}
+\item 
+int \hyperlink{a00013_a9e294d1d8102ce049a8433f1a1e4f2d8}{\_\-touching}
+\item 
+int \hyperlink{a00013_af24fab45cd725cba2bc90d04c45d455f}{\_\-comboting}
+\item 
+int \hyperlink{a00013_acc1309c3ba878730a3767d3d06c6f632}{\_\-falling}
+\item 
+int \hyperlink{a00013_ae60dc40b758975f2259c162647f934b3}{\_\-landing}
+\item 
+int \hyperlink{a00013_ae1c1702bbaa2ecae65150c4af9b1712a}{\_\-turningDirect}
+\item 
+int \hyperlink{a00013_a1a8ace56710143ada31add1aaa159f26}{\_\-turningHoraire}
+\item 
+bool \hyperlink{a00013_a2d83ff8a47ad2b92fea4514886bc80e2}{\_\-speedUp}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 21 du fichier MoteurPhy.h.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{a00013_ac2fb9ac23086a274df6c4166a76875da}{
+\index{MoteurPhy@{MoteurPhy}!MoteurPhy@{MoteurPhy}}
+\index{MoteurPhy@{MoteurPhy}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{MoteurPhy}]{\setlength{\rightskip}{0pt plus 5cm}MoteurPhy::MoteurPhy (
+\begin{DoxyParamCaption}
+\item[{int}]{taille, }
+\item[{{\bf Grille} $\ast$}]{grille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_ac2fb9ac23086a274df6c4166a76875da}
+
+
+Définition à la ligne 45 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00013_ac2fb9ac23086a274df6c4166a76875da_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_a8038b2b7dd00da0650ed594af52bd5d3}{
+\index{MoteurPhy@{MoteurPhy}!$\sim$MoteurPhy@{$\sim$MoteurPhy}}
+\index{$\sim$MoteurPhy@{$\sim$MoteurPhy}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{$\sim$MoteurPhy}]{\setlength{\rightskip}{0pt plus 5cm}MoteurPhy::$\sim$MoteurPhy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a8038b2b7dd00da0650ed594af52bd5d3}
+
+
+Définition à la ligne 47 du fichier MoteurPhy.h.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{a00013_aa9de1430d6438bd3d5c0ca6a8911e7ec}{
+\index{MoteurPhy@{MoteurPhy}!ajoutGrille@{ajoutGrille}}
+\index{ajoutGrille@{ajoutGrille}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{ajoutGrille}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::ajoutGrille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_aa9de1430d6438bd3d5c0ca6a8911e7ec}
+\hypertarget{a00013_afc5325d5fbbff1cd9c72b943726a02ea}{
+\index{MoteurPhy@{MoteurPhy}!colBlobCourant@{colBlobCourant}}
+\index{colBlobCourant@{colBlobCourant}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{colBlobCourant}]{\setlength{\rightskip}{0pt plus 5cm}const int MoteurPhy::colBlobCourant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_afc5325d5fbbff1cd9c72b943726a02ea}
+
+
+Définition à la ligne 66 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ac7111dfbdee8744f40c2dd22dbb8b472}{
+\index{MoteurPhy@{MoteurPhy}!combo@{combo}}
+\index{combo@{combo}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{combo}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::combo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_ac7111dfbdee8744f40c2dd22dbb8b472}
+
+
+Définition à la ligne 76 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a97d4047a17d5ef7e5be05b56e014d8b3}{
+\index{MoteurPhy@{MoteurPhy}!comboting@{comboting}}
+\index{comboting@{comboting}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{comboting}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::comboting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a97d4047a17d5ef7e5be05b56e014d8b3}
+
+
+Définition à la ligne 93 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ac552223e5740621815438cd1a4097b87}{
+\index{MoteurPhy@{MoteurPhy}!droite@{droite}}
+\index{droite@{droite}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{droite}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::droite (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_ac552223e5740621815438cd1a4097b87}
+\hypertarget{a00013_a7338064aa970bcfb13511b6feeedb258}{
+\index{MoteurPhy@{MoteurPhy}!fall@{fall}}
+\index{fall@{fall}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{fall}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::fall (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a7338064aa970bcfb13511b6feeedb258}
+\hypertarget{a00013_aad81aa6262b2df09b7f5f6867b7d6948}{
+\index{MoteurPhy@{MoteurPhy}!falling@{falling}}
+\index{falling@{falling}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{falling}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::falling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_aad81aa6262b2df09b7f5f6867b7d6948}
+
+
+Définition à la ligne 84 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ae9c1c631f6aec115d9da860a2c117422}{
+\index{MoteurPhy@{MoteurPhy}!fixed@{fixed}}
+\index{fixed@{fixed}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{fixed}]{\setlength{\rightskip}{0pt plus 5cm}bool MoteurPhy::fixed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_ae9c1c631f6aec115d9da860a2c117422}
+
+
+Définition à la ligne 83 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_aff04c5ab8ca86434f15b2d09aeb4d3c4}{
+\index{MoteurPhy@{MoteurPhy}!gauche@{gauche}}
+\index{gauche@{gauche}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{gauche}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::gauche (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_aff04c5ab8ca86434f15b2d09aeb4d3c4}
+\hypertarget{a00013_aa2a69dd8dae77dc0172d9fb4d7b5fb60}{
+\index{MoteurPhy@{MoteurPhy}!init@{init}}
+\index{init@{init}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::init (
+\begin{DoxyParamCaption}
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_aa2a69dd8dae77dc0172d9fb4d7b5fb60}
+
+
+Définition à la ligne 50 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00013_aa2a69dd8dae77dc0172d9fb4d7b5fb60_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_aa5c0b98ac8017941948a790736bec204}{
+\index{MoteurPhy@{MoteurPhy}!ligneBlobCourant@{ligneBlobCourant}}
+\index{ligneBlobCourant@{ligneBlobCourant}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{ligneBlobCourant}]{\setlength{\rightskip}{0pt plus 5cm}const int MoteurPhy::ligneBlobCourant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}
+\label{a00013_aa5c0b98ac8017941948a790736bec204}
+
+
+Définition à la ligne 40 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_af93e0d86f1ceaa2151892cec50ce4c49}{
+\index{MoteurPhy@{MoteurPhy}!majCombo@{majCombo}}
+\index{majCombo@{majCombo}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{majCombo}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::majCombo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_af93e0d86f1ceaa2151892cec50ce4c49}
+\hypertarget{a00013_a01eb529a43ee1e37c6a46339768ff406}{
+\index{MoteurPhy@{MoteurPhy}!majPosition@{majPosition}}
+\index{majPosition@{majPosition}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{majPosition}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::majPosition (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a01eb529a43ee1e37c6a46339768ff406}
+\hypertarget{a00013_a333168582e7ceaa77b7575fab5a5c4fb}{
+\index{MoteurPhy@{MoteurPhy}!moove@{moove}}
+\index{moove@{moove}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{moove}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::moove (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a333168582e7ceaa77b7575fab5a5c4fb}
+\hypertarget{a00013_a7949b13ddb18140c687c5ff7d0c5c7c2}{
+\index{MoteurPhy@{MoteurPhy}!nextBlobs@{nextBlobs}}
+\index{nextBlobs@{nextBlobs}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{nextBlobs}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::nextBlobs (
+\begin{DoxyParamCaption}
+\item[{{\bf Blobs}}]{master, }
+\item[{{\bf Blobs}}]{slave}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a7949b13ddb18140c687c5ff7d0c5c7c2}
+
+
+Définition à la ligne 77 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00013_a7949b13ddb18140c687c5ff7d0c5c7c2_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_a268b4af76d3a123c58bf3e74c34732d9}{
+\index{MoteurPhy@{MoteurPhy}!orientation@{orientation}}
+\index{orientation@{orientation}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{orientation}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a268b4af76d3a123c58bf3e74c34732d9}
+
+
+Définition à la ligne 94 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a48b81367d338f8887643db583281d8fb}{
+\index{MoteurPhy@{MoteurPhy}!rotationAntiHoraire@{rotationAntiHoraire}}
+\index{rotationAntiHoraire@{rotationAntiHoraire}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{rotationAntiHoraire}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::rotationAntiHoraire (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a48b81367d338f8887643db583281d8fb}
+\hypertarget{a00013_a28c33e603d5b4938e005b5cef1dff958}{
+\index{MoteurPhy@{MoteurPhy}!rotationHoraire@{rotationHoraire}}
+\index{rotationHoraire@{rotationHoraire}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{rotationHoraire}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::rotationHoraire (
+\begin{DoxyParamCaption}
+\item[{{\bf Position} $\ast$}]{master, }
+\item[{{\bf Position} $\ast$}]{slave}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a28c33e603d5b4938e005b5cef1dff958}
+\hypertarget{a00013_a540eb7aa4aad37a5487ac0e4c91da903}{
+\index{MoteurPhy@{MoteurPhy}!setCombo@{setCombo}}
+\index{setCombo@{setCombo}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setCombo}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setCombo (
+\begin{DoxyParamCaption}
+\item[{int}]{combo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a540eb7aa4aad37a5487ac0e4c91da903}
+
+
+Définition à la ligne 92 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=362pt]{a00013_a540eb7aa4aad37a5487ac0e4c91da903_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_a3f4bfe7f5bb26faa0cd7aaff389aafae}{
+\index{MoteurPhy@{MoteurPhy}!setComboting@{setComboting}}
+\index{setComboting@{setComboting}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setComboting}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setComboting (
+\begin{DoxyParamCaption}
+\item[{int}]{comboting}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a3f4bfe7f5bb26faa0cd7aaff389aafae}
+
+
+Définition à la ligne 91 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00013_a3f4bfe7f5bb26faa0cd7aaff389aafae_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_a69eec554c4ffdb8814b53d4b6d81efc4}{
+\index{MoteurPhy@{MoteurPhy}!setFalling@{setFalling}}
+\index{setFalling@{setFalling}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setFalling}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setFalling (
+\begin{DoxyParamCaption}
+\item[{int}]{falling}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a69eec554c4ffdb8814b53d4b6d81efc4}
+
+
+Définition à la ligne 85 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=356pt]{a00013_a69eec554c4ffdb8814b53d4b6d81efc4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_ab4729174c75f3bf9d0fe80804a97dc4a}{
+\index{MoteurPhy@{MoteurPhy}!setFixed@{setFixed}}
+\index{setFixed@{setFixed}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setFixed}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setFixed (
+\begin{DoxyParamCaption}
+\item[{bool}]{fixed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_ab4729174c75f3bf9d0fe80804a97dc4a}
+
+
+Définition à la ligne 90 du fichier MoteurPhy.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{a00013_ab4729174c75f3bf9d0fe80804a97dc4a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00013_a883ec44e96971e9b099b5e62dd2027f7}{
+\index{MoteurPhy@{MoteurPhy}!setLanding@{setLanding}}
+\index{setLanding@{setLanding}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setLanding}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setLanding (
+\begin{DoxyParamCaption}
+\item[{int}]{landing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a883ec44e96971e9b099b5e62dd2027f7}
+
+
+Définition à la ligne 97 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a918c18d9fc03eb66642acafb23563b09}{
+\index{MoteurPhy@{MoteurPhy}!setTurningDirect@{setTurningDirect}}
+\index{setTurningDirect@{setTurningDirect}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setTurningDirect}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setTurningDirect (
+\begin{DoxyParamCaption}
+\item[{int}]{turning}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a918c18d9fc03eb66642acafb23563b09}
+
+
+Définition à la ligne 87 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a7cf07be486ce2c669977fb58a57f6359}{
+\index{MoteurPhy@{MoteurPhy}!setTurningHoraire@{setTurningHoraire}}
+\index{setTurningHoraire@{setTurningHoraire}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{setTurningHoraire}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::setTurningHoraire (
+\begin{DoxyParamCaption}
+\item[{int}]{turning}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a7cf07be486ce2c669977fb58a57f6359}
+
+
+Définition à la ligne 89 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a1a8f08b95399519bcb9b7393cce04f36}{
+\index{MoteurPhy@{MoteurPhy}!speedToNormal@{speedToNormal}}
+\index{speedToNormal@{speedToNormal}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{speedToNormal}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::speedToNormal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a1a8f08b95399519bcb9b7393cce04f36}
+\hypertarget{a00013_a36aa8c6a3c53abab11d7c76e68fc5922}{
+\index{MoteurPhy@{MoteurPhy}!speedUp@{speedUp}}
+\index{speedUp@{speedUp}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{speedUp}]{\setlength{\rightskip}{0pt plus 5cm}void MoteurPhy::speedUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00013_a36aa8c6a3c53abab11d7c76e68fc5922}
+\hypertarget{a00013_a66cd74a97dbe962a642fd9112418bc6d}{
+\index{MoteurPhy@{MoteurPhy}!speedUpBool@{speedUpBool}}
+\index{speedUpBool@{speedUpBool}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{speedUpBool}]{\setlength{\rightskip}{0pt plus 5cm}bool MoteurPhy::speedUpBool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a66cd74a97dbe962a642fd9112418bc6d}
+
+
+Définition à la ligne 98 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a187627c77d1f8f3abdfc943c78049036}{
+\index{MoteurPhy@{MoteurPhy}!taille@{taille}}
+\index{taille@{taille}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{taille}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::taille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a187627c77d1f8f3abdfc943c78049036}
+
+
+Définition à la ligne 96 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ab4e7eeb4a93c113b9baea02d20e9139e}{
+\index{MoteurPhy@{MoteurPhy}!turningDirect@{turningDirect}}
+\index{turningDirect@{turningDirect}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{turningDirect}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::turningDirect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_ab4e7eeb4a93c113b9baea02d20e9139e}
+
+
+Définition à la ligne 86 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a605c22162ce9f303a92e23c7de5628d9}{
+\index{MoteurPhy@{MoteurPhy}!turningHoraire@{turningHoraire}}
+\index{turningHoraire@{turningHoraire}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{turningHoraire}]{\setlength{\rightskip}{0pt plus 5cm}int MoteurPhy::turningHoraire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00013_a605c22162ce9f303a92e23c7de5628d9}
+
+
+Définition à la ligne 88 du fichier MoteurPhy.h.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{a00013_a9d4e37ce23b4789f20fffd11e5eafdf5}{
+\index{MoteurPhy@{MoteurPhy}!\_\-colorMaster@{\_\-colorMaster}}
+\index{\_\-colorMaster@{\_\-colorMaster}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-colorMaster}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf MoteurPhy::\_\-colorMaster}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a9d4e37ce23b4789f20fffd11e5eafdf5}
+
+
+Définition à la ligne 26 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a70abfbed5e6126f443c721d185f04952}{
+\index{MoteurPhy@{MoteurPhy}!\_\-colorSlave@{\_\-colorSlave}}
+\index{\_\-colorSlave@{\_\-colorSlave}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-colorSlave}]{\setlength{\rightskip}{0pt plus 5cm}size\_\-t {\bf MoteurPhy::\_\-colorSlave}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a70abfbed5e6126f443c721d185f04952}
+
+
+Définition à la ligne 27 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ac03396a1d6630aab8e1124f140ec0209}{
+\index{MoteurPhy@{MoteurPhy}!\_\-combo@{\_\-combo}}
+\index{\_\-combo@{\_\-combo}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-combo}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-combo}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_ac03396a1d6630aab8e1124f140ec0209}
+
+
+Définition à la ligne 30 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_af24fab45cd725cba2bc90d04c45d455f}{
+\index{MoteurPhy@{MoteurPhy}!\_\-comboting@{\_\-comboting}}
+\index{\_\-comboting@{\_\-comboting}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-comboting}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-comboting}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_af24fab45cd725cba2bc90d04c45d455f}
+
+
+Définition à la ligne 34 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_acc1309c3ba878730a3767d3d06c6f632}{
+\index{MoteurPhy@{MoteurPhy}!\_\-falling@{\_\-falling}}
+\index{\_\-falling@{\_\-falling}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-falling}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-falling}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_acc1309c3ba878730a3767d3d06c6f632}
+
+
+Définition à la ligne 35 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a017cb4047a99eb1d77a00b809dddb316}{
+\index{MoteurPhy@{MoteurPhy}!\_\-fixed@{\_\-fixed}}
+\index{\_\-fixed@{\_\-fixed}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-fixed}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MoteurPhy::\_\-fixed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a017cb4047a99eb1d77a00b809dddb316}
+
+
+Définition à la ligne 31 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_adb5aaa4c6afc40fb635dab1ae6903bab}{
+\index{MoteurPhy@{MoteurPhy}!\_\-grille@{\_\-grille}}
+\index{\_\-grille@{\_\-grille}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-grille}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grille}$\ast$ {\bf MoteurPhy::\_\-grille}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_adb5aaa4c6afc40fb635dab1ae6903bab}
+
+
+Définition à la ligne 32 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ae60dc40b758975f2259c162647f934b3}{
+\index{MoteurPhy@{MoteurPhy}!\_\-landing@{\_\-landing}}
+\index{\_\-landing@{\_\-landing}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-landing}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-landing}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_ae60dc40b758975f2259c162647f934b3}
+
+
+Définition à la ligne 36 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a00fd8bca4af06999915a03b221d06141}{
+\index{MoteurPhy@{MoteurPhy}!\_\-orientation@{\_\-orientation}}
+\index{\_\-orientation@{\_\-orientation}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-orientation}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-orientation}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a00fd8bca4af06999915a03b221d06141}
+
+
+Définition à la ligne 29 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_adea2f52929d858754cc5b47fe9048851}{
+\index{MoteurPhy@{MoteurPhy}!\_\-posBlobPivot@{\_\-posBlobPivot}}
+\index{\_\-posBlobPivot@{\_\-posBlobPivot}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-posBlobPivot}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} {\bf MoteurPhy::\_\-posBlobPivot}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_adea2f52929d858754cc5b47fe9048851}
+
+
+Définition à la ligne 25 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a2d83ff8a47ad2b92fea4514886bc80e2}{
+\index{MoteurPhy@{MoteurPhy}!\_\-speedUp@{\_\-speedUp}}
+\index{\_\-speedUp@{\_\-speedUp}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-speedUp}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf MoteurPhy::\_\-speedUp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a2d83ff8a47ad2b92fea4514886bc80e2}
+
+
+Définition à la ligne 39 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a3c1e76cb12396ae57a40340decf3502a}{
+\index{MoteurPhy@{MoteurPhy}!\_\-taille@{\_\-taille}}
+\index{\_\-taille@{\_\-taille}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-taille}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-taille}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a3c1e76cb12396ae57a40340decf3502a}
+
+
+Définition à la ligne 24 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a9e294d1d8102ce049a8433f1a1e4f2d8}{
+\index{MoteurPhy@{MoteurPhy}!\_\-touching@{\_\-touching}}
+\index{\_\-touching@{\_\-touching}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-touching}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-touching}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a9e294d1d8102ce049a8433f1a1e4f2d8}
+
+
+Définition à la ligne 33 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_ae1c1702bbaa2ecae65150c4af9b1712a}{
+\index{MoteurPhy@{MoteurPhy}!\_\-turningDirect@{\_\-turningDirect}}
+\index{\_\-turningDirect@{\_\-turningDirect}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-turningDirect}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-turningDirect}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_ae1c1702bbaa2ecae65150c4af9b1712a}
+
+
+Définition à la ligne 37 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_a1a8ace56710143ada31add1aaa159f26}{
+\index{MoteurPhy@{MoteurPhy}!\_\-turningHoraire@{\_\-turningHoraire}}
+\index{\_\-turningHoraire@{\_\-turningHoraire}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-turningHoraire}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-turningHoraire}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_a1a8ace56710143ada31add1aaa159f26}
+
+
+Définition à la ligne 38 du fichier MoteurPhy.h.
+
+\hypertarget{a00013_adddea379291ef88ec19e7cc8f6dc13c8}{
+\index{MoteurPhy@{MoteurPhy}!\_\-vitesseBlob@{\_\-vitesseBlob}}
+\index{\_\-vitesseBlob@{\_\-vitesseBlob}!MoteurPhy@{MoteurPhy}}
+\subsubsection[{\_\-vitesseBlob}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf MoteurPhy::\_\-vitesseBlob}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00013_adddea379291ef88ec19e7cc8f6dc13c8}
+
+
+Définition à la ligne 28 du fichier MoteurPhy.h.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{a00031}{MoteurPhy.h}\end{DoxyCompactItemize}

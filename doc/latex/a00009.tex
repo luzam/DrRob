@@ -1,0 +1,285 @@
+\hypertarget{a00009}{
+\section{Référence de la classe Grille}
+\label{a00009}\index{Grille@{Grille}}
+}
+
+
+{\ttfamily \#include $<$Grille.h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00009_a81670107c4d72721fe21ca966031bb38}{Grille} (int taille)
+\item 
+\hyperlink{a00009_ac9f539f33c2652c09f0f9db1adfa758d}{$\sim$Grille} ()
+\item 
+bool \hyperlink{a00009_a675db2a23a1a2a55668e823adca5a9ef}{checkLoose} ()
+\item 
+int \hyperlink{a00009_a858572a13fbc8917cec074554ca574d4}{checkFalling} ()
+\item 
+int \hyperlink{a00009_ae85e20bc3da47e38fff29e6e2f9ac6c0}{checkLanding} ()
+\item 
+void \hyperlink{a00009_adbbe24c84a3433c3968f18792de5aab7}{check} ()
+\item 
+void \hyperlink{a00009_acae31a9e26671f326ee60e11424f4545}{checkLink} ()
+\item 
+void \hyperlink{a00009_ab8bd46d3f97f1849662fe2642f270846}{checkState} ()
+\item 
+void \hyperlink{a00009_a9921270522f16053aa254abb2cab22de}{checkHole} ()
+\item 
+void \hyperlink{a00009_a4b142af28f88e73e0985c32a03472caf}{checkCombo} ()
+\item 
+int \hyperlink{a00009_a70e60f93d2b0ff9d37fd0e3967b3d454}{checkDark} (int size)
+\item 
+int \hyperlink{a00009_a0aa8c02a0ebdb2e0bd45bc29311a5693}{checkMaxCombo} ()
+\item 
+void \hyperlink{a00009_acdddbfa2d76354f294bc017196c5bc16}{animFallin} (int taille)
+\item 
+void \hyperlink{a00009_af24ae497afd4dc1657587803fb45fe1f}{switchBlobs} (int l1, int c1, int l2, int c2)
+\item 
+void \hyperlink{a00009_aa178d44adfb7047a30ecee5e21857bba}{init} ()
+\item 
+\hyperlink{a00002}{Blobs} $\ast$ \hyperlink{a00009_a7ebbc3349442e0cf860bb7000a81f742}{operator()} (int ligne, int col)
+\item 
+void \hyperlink{a00009_a3c0262b7d0b65a16c5ee573bd5adf542}{operator()} (int ligne, int col, \hyperlink{a00002}{Blobs} value)
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{a00009_add9aa6f09b3f80fa364ee7df3c6daa16}{setLink} (int l, int c, int n, int s, int e, int w)
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std::vector$<$ \hyperlink{a00002}{Blobs} $>$ \hyperlink{a00009_a4d8c997595fcd22c7505e470e8633cd7}{\_\-grille}
+\item 
+int \hyperlink{a00009_a8be16edd283bc90ff878489491cd496d}{\_\-tailleBlob}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 13 du fichier Grille.h.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{a00009_a81670107c4d72721fe21ca966031bb38}{
+\index{Grille@{Grille}!Grille@{Grille}}
+\index{Grille@{Grille}!Grille@{Grille}}
+\subsubsection[{Grille}]{\setlength{\rightskip}{0pt plus 5cm}Grille::Grille (
+\begin{DoxyParamCaption}
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00009_a81670107c4d72721fe21ca966031bb38}
+
+
+Définition à la ligne 20 du fichier Grille.h.
+
+\hypertarget{a00009_ac9f539f33c2652c09f0f9db1adfa758d}{
+\index{Grille@{Grille}!$\sim$Grille@{$\sim$Grille}}
+\index{$\sim$Grille@{$\sim$Grille}!Grille@{Grille}}
+\subsubsection[{$\sim$Grille}]{\setlength{\rightskip}{0pt plus 5cm}Grille::$\sim$Grille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00009_ac9f539f33c2652c09f0f9db1adfa758d}
+
+
+Définition à la ligne 25 du fichier Grille.h.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{a00009_acdddbfa2d76354f294bc017196c5bc16}{
+\index{Grille@{Grille}!animFallin@{animFallin}}
+\index{animFallin@{animFallin}!Grille@{Grille}}
+\subsubsection[{animFallin}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::animFallin (
+\begin{DoxyParamCaption}
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_acdddbfa2d76354f294bc017196c5bc16}
+\hypertarget{a00009_adbbe24c84a3433c3968f18792de5aab7}{
+\index{Grille@{Grille}!check@{check}}
+\index{check@{check}!Grille@{Grille}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_adbbe24c84a3433c3968f18792de5aab7}
+\hypertarget{a00009_a4b142af28f88e73e0985c32a03472caf}{
+\index{Grille@{Grille}!checkCombo@{checkCombo}}
+\index{checkCombo@{checkCombo}!Grille@{Grille}}
+\subsubsection[{checkCombo}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::checkCombo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a4b142af28f88e73e0985c32a03472caf}
+\hypertarget{a00009_a70e60f93d2b0ff9d37fd0e3967b3d454}{
+\index{Grille@{Grille}!checkDark@{checkDark}}
+\index{checkDark@{checkDark}!Grille@{Grille}}
+\subsubsection[{checkDark}]{\setlength{\rightskip}{0pt plus 5cm}int Grille::checkDark (
+\begin{DoxyParamCaption}
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a70e60f93d2b0ff9d37fd0e3967b3d454}
+\hypertarget{a00009_a858572a13fbc8917cec074554ca574d4}{
+\index{Grille@{Grille}!checkFalling@{checkFalling}}
+\index{checkFalling@{checkFalling}!Grille@{Grille}}
+\subsubsection[{checkFalling}]{\setlength{\rightskip}{0pt plus 5cm}int Grille::checkFalling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a858572a13fbc8917cec074554ca574d4}
+\hypertarget{a00009_a9921270522f16053aa254abb2cab22de}{
+\index{Grille@{Grille}!checkHole@{checkHole}}
+\index{checkHole@{checkHole}!Grille@{Grille}}
+\subsubsection[{checkHole}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::checkHole (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a9921270522f16053aa254abb2cab22de}
+\hypertarget{a00009_ae85e20bc3da47e38fff29e6e2f9ac6c0}{
+\index{Grille@{Grille}!checkLanding@{checkLanding}}
+\index{checkLanding@{checkLanding}!Grille@{Grille}}
+\subsubsection[{checkLanding}]{\setlength{\rightskip}{0pt plus 5cm}int Grille::checkLanding (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_ae85e20bc3da47e38fff29e6e2f9ac6c0}
+\hypertarget{a00009_acae31a9e26671f326ee60e11424f4545}{
+\index{Grille@{Grille}!checkLink@{checkLink}}
+\index{checkLink@{checkLink}!Grille@{Grille}}
+\subsubsection[{checkLink}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::checkLink (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_acae31a9e26671f326ee60e11424f4545}
+\hypertarget{a00009_a675db2a23a1a2a55668e823adca5a9ef}{
+\index{Grille@{Grille}!checkLoose@{checkLoose}}
+\index{checkLoose@{checkLoose}!Grille@{Grille}}
+\subsubsection[{checkLoose}]{\setlength{\rightskip}{0pt plus 5cm}bool Grille::checkLoose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a675db2a23a1a2a55668e823adca5a9ef}
+\hypertarget{a00009_a0aa8c02a0ebdb2e0bd45bc29311a5693}{
+\index{Grille@{Grille}!checkMaxCombo@{checkMaxCombo}}
+\index{checkMaxCombo@{checkMaxCombo}!Grille@{Grille}}
+\subsubsection[{checkMaxCombo}]{\setlength{\rightskip}{0pt plus 5cm}int Grille::checkMaxCombo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_a0aa8c02a0ebdb2e0bd45bc29311a5693}
+\hypertarget{a00009_ab8bd46d3f97f1849662fe2642f270846}{
+\index{Grille@{Grille}!checkState@{checkState}}
+\index{checkState@{checkState}!Grille@{Grille}}
+\subsubsection[{checkState}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::checkState (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_ab8bd46d3f97f1849662fe2642f270846}
+\hypertarget{a00009_aa178d44adfb7047a30ecee5e21857bba}{
+\index{Grille@{Grille}!init@{init}}
+\index{init@{init}!Grille@{Grille}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_aa178d44adfb7047a30ecee5e21857bba}
+\hypertarget{a00009_a7ebbc3349442e0cf860bb7000a81f742}{
+\index{Grille@{Grille}!operator()@{operator()}}
+\index{operator()@{operator()}!Grille@{Grille}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Blobs}$\ast$ Grille::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00009_a7ebbc3349442e0cf860bb7000a81f742}
+
+
+Définition à la ligne 40 du fichier Grille.h.
+
+\hypertarget{a00009_a3c0262b7d0b65a16c5ee573bd5adf542}{
+\index{Grille@{Grille}!operator()@{operator()}}
+\index{operator()@{operator()}!Grille@{Grille}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{ligne, }
+\item[{int}]{col, }
+\item[{{\bf Blobs}}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00009_a3c0262b7d0b65a16c5ee573bd5adf542}
+
+
+Définition à la ligne 45 du fichier Grille.h.
+
+\hypertarget{a00009_add9aa6f09b3f80fa364ee7df3c6daa16}{
+\index{Grille@{Grille}!setLink@{setLink}}
+\index{setLink@{setLink}!Grille@{Grille}}
+\subsubsection[{setLink}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::setLink (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{int}]{c, }
+\item[{int}]{n, }
+\item[{int}]{s, }
+\item[{int}]{e, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00009_add9aa6f09b3f80fa364ee7df3c6daa16}
+\hypertarget{a00009_af24ae497afd4dc1657587803fb45fe1f}{
+\index{Grille@{Grille}!switchBlobs@{switchBlobs}}
+\index{switchBlobs@{switchBlobs}!Grille@{Grille}}
+\subsubsection[{switchBlobs}]{\setlength{\rightskip}{0pt plus 5cm}void Grille::switchBlobs (
+\begin{DoxyParamCaption}
+\item[{int}]{l1, }
+\item[{int}]{c1, }
+\item[{int}]{l2, }
+\item[{int}]{c2}
+\end{DoxyParamCaption}
+)}}
+\label{a00009_af24ae497afd4dc1657587803fb45fe1f}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{a00009_a4d8c997595fcd22c7505e470e8633cd7}{
+\index{Grille@{Grille}!\_\-grille@{\_\-grille}}
+\index{\_\-grille@{\_\-grille}!Grille@{Grille}}
+\subsubsection[{\_\-grille}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<${\bf Blobs}$>$ {\bf Grille::\_\-grille}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00009_a4d8c997595fcd22c7505e470e8633cd7}
+
+
+Définition à la ligne 16 du fichier Grille.h.
+
+\hypertarget{a00009_a8be16edd283bc90ff878489491cd496d}{
+\index{Grille@{Grille}!\_\-tailleBlob@{\_\-tailleBlob}}
+\index{\_\-tailleBlob@{\_\-tailleBlob}!Grille@{Grille}}
+\subsubsection[{\_\-tailleBlob}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Grille::\_\-tailleBlob}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00009_a8be16edd283bc90ff878489491cd496d}
+
+
+Définition à la ligne 17 du fichier Grille.h.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{a00026}{Grille.h}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00025.html" title="include/Game.h" alt="" coords="369,83,495,111"/>
+<area shape="rect" id="node5" href="$a00021.html" title="Controls.h" alt="" coords="383,238,476,266"/>
+<area shape="rect" id="node7" href="$a00017.html" title="Blobs.h" alt="" coords="291,393,363,421"/>
+<area shape="rect" id="node11" href="$a00031.html" title="MoteurPhy.h" alt="" coords="109,315,216,343"/>
+<area shape="rect" id="node15" href="$a00022.html" title="DashBoard.h" alt="" coords="199,238,308,266"/>
+<area shape="rect" id="node24" href="$a00018.html" title="Clock.h" alt="" coords="501,238,573,266"/>
+<area shape="rect" id="node34" href="$a00028.html" title="InterfaceX.h" alt="" coords="667,161,771,189"/>
+<area shape="rect" id="node43" href="$a00023.html" title="Easy.h" alt="" coords="845,161,912,189"/>
+<area shape="rect" id="node45" href="$a00027.html" title="Hard.h" alt="" coords="987,238,1053,266"/>
+<area shape="rect" id="node48" href="$a00029.html" title="Joueur.h" alt="" coords="213,161,293,189"/>
+</map>

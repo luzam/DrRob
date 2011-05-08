@@ -1,0 +1,131 @@
+.TH "Hard" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Hard \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Hard.h>\fP
+.PP
+Est dérivée de \fBAi\fP.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBHard\fP (int taille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)"
+.br
+.ti -1c
+.RI "virtual \fB~Hard\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBthink\fP ()"
+.br
+.ti -1c
+.RI "void \fBmajLineUp\fP ()"
+.br
+.ti -1c
+.RI "void \fBmajLineEmpty\fP ()"
+.br
+.ti -1c
+.RI "void \fBvertical\fP (int col)"
+.br
+.ti -1c
+.RI "int \fBcheckLigne\fP (int color)"
+.br
+.ti -1c
+.RI "void \fBdroite\fP (int col)"
+.br
+.ti -1c
+.RI "void \fBgauche\fP (int col)"
+.br
+.ti -1c
+.RI "void \fBverticalBas\fP (int col)"
+.br
+.ti -1c
+.RI "void \fBverticalHaut\fP (int col)"
+.br
+.ti -1c
+.RI "void \fBgotocol\fP (int col)"
+.br
+.ti -1c
+.RI "void \fBeasy\fP ()"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::vector< int > \fB_lineUp\fP"
+.br
+.ti -1c
+.RI "int \fB_colMin\fP"
+.br
+.ti -1c
+.RI "int \fB_debilismeAleatoire\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 9 du fichier Hard.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Hard::Hard (inttaille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)\fC [inline]\fP"
+.PP
+Définition à la ligne 16 du fichier Hard.h.
+.SS "virtual Hard::~Hard ()\fC [inline, virtual]\fP"
+.PP
+Définition à la ligne 17 du fichier Hard.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "int Hard::checkLigne (intcolor)\fC [inline]\fP"
+.PP
+Définition à la ligne 203 du fichier Hard.h.
+.SS "void Hard::droite (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 214 du fichier Hard.h.
+.SS "void Hard::easy ()\fC [inline]\fP"
+.PP
+Définition à la ligne 318 du fichier Hard.h.
+.SS "void Hard::gauche (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 231 du fichier Hard.h.
+.SS "void Hard::gotocol (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 300 du fichier Hard.h.
+.SS "void Hard::majLineEmpty ()\fC [inline]\fP"
+.PP
+Définition à la ligne 139 du fichier Hard.h.
+.SS "void Hard::majLineUp ()\fC [inline]\fP"
+.PP
+Définition à la ligne 127 du fichier Hard.h.
+.SS "virtual void Hard::think ()\fC [inline, virtual]\fP"
+.PP
+Implémente \fBAi\fP.
+.PP
+Définition à la ligne 19 du fichier Hard.h.
+.SS "void Hard::vertical (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 180 du fichier Hard.h.
+.SS "void Hard::verticalBas (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 249 du fichier Hard.h.
+.SS "void Hard::verticalHaut (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 274 du fichier Hard.h.
+.SH "Documentation des données membres"
+.PP 
+.SS "int \fBHard::_colMin\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 13 du fichier Hard.h.
+.SS "int \fBHard::_debilismeAleatoire\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 14 du fichier Hard.h.
+.SS "std::vector<int> \fBHard::_lineUp\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 12 du fichier Hard.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

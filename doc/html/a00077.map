@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00001.html" title="{Ai\n||+ Ai()\l+ go()\l+ think()\l+ next_rand()\l+ ~Ai()\l}" alt="" coords="61,713,173,858"/>
+<area shape="rect" id="node9" href="$a00012.html" title="{Joueur\n||+ Joueur()\l+ ~Joueur()\l+ think()\l}" alt="" coords="197,729,296,842"/>
+<area shape="rect" id="node5" href="$a00007.html" title="{Easy\n||+ Easy()\l+ think()\l}" alt="" coords="5,1011,83,1109"/>
+<area shape="rect" id="node7" href="$a00010.html" title="{Hard\n|# _lineUp\l# _colMin\l# _debilismeAleatoire\l|+ Hard()\l+ ~Hard()\l+ think()\l+ majLineUp()\l+ majLineEmpty()\l+ vertical()\l+ checkLigne()\l+ droite()\l+ gauche()\l+ verticalBas()\l+ verticalHaut()\l+ gotocol()\l+ easy()\l}" alt="" coords="107,907,275,1213"/>
+</map>

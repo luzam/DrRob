@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de include/InterfaceX.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00028.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">include/InterfaceX.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00028.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef INTERFACEX_H_INCLUDED</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define INTERFACEX_H_INCLUDED</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span><span class="preprocessor">#include &lt;SDL.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;SDL_image.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;SDL_ttf.h&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;SDL_rotozoom.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="a00033.html">Position.h</a>&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="a00022.html">DashBoard.h</a>&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#ifdef WIN32</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define WINDOWS</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00016"></a>00016 <span class="preprocessor"></span><span class="preprocessor">#ifdef X64</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define WINDOWS</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#include &lt;stdio.h&gt;</span>  <span class="comment">/* defines FILENAME_MAX */</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#ifdef WINDOWS</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#include &lt;direct.h&gt;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#define GetCurrentDir _getcwd</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00025"></a><a class="code" href="a00028.html#af0c0d1034a71f8aa3a08cda83c9d4e7a">00025</a> <span class="preprocessor">#define GetCurrentDir getcwd</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span><span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="a00019.html">Color.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="a00030.html">Link.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="a00034.html">State.h</a>&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="a00017.html">Blobs.h</a>&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="a00033.html">Position.h</a>&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;time.h&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="a00018.html">Clock.h</a>&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="a00021.html">Controls.h</a>&quot;</span>
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="a00011.html">00037</a> <span class="keyword">class </span><a class="code" href="a00011.html">InterfaceX</a>
+<a name="l00038"></a>00038 {
+<a name="l00039"></a>00039 <span class="keyword">protected</span>:
+<a name="l00040"></a><a class="code" href="a00011.html#a6f00bbd8d46ea6a53c148bc74a78db05">00040</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a6f00bbd8d46ea6a53c148bc74a78db05">_SCREEN_WIDTH</a>;
+<a name="l00041"></a><a class="code" href="a00011.html#a9da581df6276df3710ac37ae617360bb">00041</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a9da581df6276df3710ac37ae617360bb">_SCREEN_HEIGHT</a>;
+<a name="l00042"></a><a class="code" href="a00011.html#a1b36ec980a5220505bbae259cc96bc2c">00042</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a1b36ec980a5220505bbae259cc96bc2c">_SCREEN_BPP</a>;
+<a name="l00043"></a><a class="code" href="a00011.html#a4d99a064e76835578ea5363a76d13ade">00043</a>     std::vector&lt;std::vector&lt;SDL_Surface*&gt; &gt; <a class="code" href="a00011.html#a4d99a064e76835578ea5363a76d13ade">_blobsIMG_ini</a>;
+<a name="l00044"></a><a class="code" href="a00011.html#aa47d2f27a33563cbadfdd7c98ff729f9">00044</a>     std::vector&lt;std::vector&lt;SDL_Surface*&gt; &gt; <a class="code" href="a00011.html#aa47d2f27a33563cbadfdd7c98ff729f9">_blobsIMG</a>;
+<a name="l00045"></a><a class="code" href="a00011.html#a88f27d619ba61b4e9105d0be4b1ae474">00045</a>     <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="a00011.html#a88f27d619ba61b4e9105d0be4b1ae474">_taille_blob_ini</a>;
+<a name="l00046"></a><a class="code" href="a00011.html#accea7493bc80f704415600c1e3925df2">00046</a>     <span class="keywordtype">double</span> <a class="code" href="a00011.html#accea7493bc80f704415600c1e3925df2">_taille_blob</a>;
+<a name="l00047"></a><a class="code" href="a00011.html#a63d8eb39c2413f9525cb5af3795672ac">00047</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a63d8eb39c2413f9525cb5af3795672ac">_decalage_menu_x</a>;
+<a name="l00048"></a><a class="code" href="a00011.html#a4bc8fbcc5e5b60221023ecacac71ce57">00048</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a4bc8fbcc5e5b60221023ecacac71ce57">_decalage_menu_y</a>;
+<a name="l00049"></a><a class="code" href="a00011.html#a5b2280558d08c0c82dc1231af910617c">00049</a>     <span class="keywordtype">double</span> <a class="code" href="a00011.html#a5b2280558d08c0c82dc1231af910617c">_ratio_avat_ini</a>;
+<a name="l00050"></a><a class="code" href="a00011.html#aef41c15d24fd691d1e3c05b387a8fd96">00050</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#aef41c15d24fd691d1e3c05b387a8fd96">_nbJoueurs</a>;
+<a name="l00051"></a><a class="code" href="a00011.html#a9d9ba47a3441ea5ae681f1a9111a91af">00051</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a9d9ba47a3441ea5ae681f1a9111a91af">_nbAI</a>;
+<a name="l00052"></a><a class="code" href="a00011.html#a49855d7045bc2dec7eee28540691d17b">00052</a>     <span class="keywordtype">double</span> <a class="code" href="a00011.html#a49855d7045bc2dec7eee28540691d17b">_ratio_menu</a>;
+<a name="l00053"></a><a class="code" href="a00011.html#a722c39f202350477d29c25ed9f71eadb">00053</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00011.html#a722c39f202350477d29c25ed9f71eadb">_offset_grille</a>;
+<a name="l00054"></a><a class="code" href="a00011.html#a8359bf13315c6fda156c755fedf87712">00054</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00011.html#a8359bf13315c6fda156c755fedf87712">_offset_nextBlob</a>;
+<a name="l00055"></a><a class="code" href="a00011.html#af08b50a0e9a62b88613d6eda29e61fe3">00055</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00011.html#af08b50a0e9a62b88613d6eda29e61fe3">_offset_score</a>;
+<a name="l00056"></a><a class="code" href="a00011.html#a21d0a8fbd79bd252269cad9461e97fa4">00056</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00011.html#a21d0a8fbd79bd252269cad9461e97fa4">_offset_avatar</a>;
+<a name="l00057"></a><a class="code" href="a00011.html#a66835fb4e65c2b55a5f49bb2dee0d15d">00057</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00011.html#a66835fb4e65c2b55a5f49bb2dee0d15d">_offset_cursor</a>;
+<a name="l00058"></a><a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">00058</a>     SDL_Rect <a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">_offset_menu</a>;
+<a name="l00059"></a><a class="code" href="a00011.html#aa2a6a332aba9f37ba861a7d9dfcab7c3">00059</a>     <span class="keywordtype">double</span> <a class="code" href="a00011.html#aa2a6a332aba9f37ba861a7d9dfcab7c3">_ratio</a>;
+<a name="l00060"></a><a class="code" href="a00011.html#a20e95369c05d8a39c90baea0924d84c1">00060</a>     std::vector&lt;Position&gt; <a class="code" href="a00011.html#a20e95369c05d8a39c90baea0924d84c1">_vDash</a>;
+<a name="l00061"></a><a class="code" href="a00011.html#adb0cbbbfa65c44ec89b8eb1b94fd0b5d">00061</a>     SDL_Surface *<a class="code" href="a00011.html#adb0cbbbfa65c44ec89b8eb1b94fd0b5d">_dashboard</a>;
+<a name="l00062"></a><a class="code" href="a00011.html#a6020a5ecde63a9807c9e9be10cf0ed6f">00062</a>     SDL_Surface *<a class="code" href="a00011.html#a6020a5ecde63a9807c9e9be10cf0ed6f">_background</a>;
+<a name="l00063"></a><a class="code" href="a00011.html#ad4d9dec8fe3d03b877888634feacbc8e">00063</a>     SDL_Surface *<a class="code" href="a00011.html#ad4d9dec8fe3d03b877888634feacbc8e">_avatars</a>;
+<a name="l00064"></a><a class="code" href="a00011.html#a34d0862fbbbfbf487e623abd4b478f54">00064</a>     SDL_Surface *<a class="code" href="a00011.html#a34d0862fbbbfbf487e623abd4b478f54">_avatars_ini</a>;
+<a name="l00065"></a><a class="code" href="a00011.html#a24f8420a0d24f9c943dc03ebf09a9b63">00065</a>     SDL_Surface *<a class="code" href="a00011.html#a24f8420a0d24f9c943dc03ebf09a9b63">_screen</a>;
+<a name="l00066"></a><a class="code" href="a00011.html#adc79d6b99c7934e04606c0734f535a34">00066</a>     SDL_Surface *<a class="code" href="a00011.html#adc79d6b99c7934e04606c0734f535a34">_dashboard_ini</a>;
+<a name="l00067"></a><a class="code" href="a00011.html#a304a7dbac538a6b5713c20f0affd498e">00067</a>     SDL_Surface *<a class="code" href="a00011.html#a304a7dbac538a6b5713c20f0affd498e">_background_ini</a>;
+<a name="l00068"></a><a class="code" href="a00011.html#aafa3c968571905556bb0df1c12330475">00068</a>     SDL_Surface *<a class="code" href="a00011.html#aafa3c968571905556bb0df1c12330475">_blobs_ini</a>;
+<a name="l00069"></a><a class="code" href="a00011.html#a86bb002cf9b27e6362f2b48cc9bccf22">00069</a>     SDL_Surface *<a class="code" href="a00011.html#a86bb002cf9b27e6362f2b48cc9bccf22">_menu_ini</a>;
+<a name="l00070"></a><a class="code" href="a00011.html#af74c931698aacb8315ad7875a1968300">00070</a>     SDL_Surface *<a class="code" href="a00011.html#af74c931698aacb8315ad7875a1968300">_menu</a>;
+<a name="l00071"></a><a class="code" href="a00011.html#aa2ea2d74e3d3e4e9955b2c52b0e41cbc">00071</a>     SDL_Surface *<a class="code" href="a00011.html#aa2ea2d74e3d3e4e9955b2c52b0e41cbc">_cursor_ini</a>;
+<a name="l00072"></a><a class="code" href="a00011.html#aa88f07cc32a1794d03eb64a52057e093">00072</a>     SDL_Surface *<a class="code" href="a00011.html#aa88f07cc32a1794d03eb64a52057e093">_cursor</a>;
+<a name="l00073"></a><a class="code" href="a00011.html#aff377fb4e786e623a8304c50648e7334">00073</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#aff377fb4e786e623a8304c50648e7334">_grille_W</a>;
+<a name="l00074"></a><a class="code" href="a00011.html#a1b9e885d44b84e8c33dd37ca1e1c6f8e">00074</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a1b9e885d44b84e8c33dd37ca1e1c6f8e">_grille_H</a>;
+<a name="l00075"></a><a class="code" href="a00011.html#ab7d7e603a5566ea712bcfe630f6dd231">00075</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#ab7d7e603a5566ea712bcfe630f6dd231">_nb_blobs</a>;
+<a name="l00076"></a><a class="code" href="a00011.html#af85d5f48a87755c72b61a986471cfebf">00076</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#af85d5f48a87755c72b61a986471cfebf">_cpt</a>;
+<a name="l00077"></a><a class="code" href="a00011.html#a28bcc53b96a43bf89cff0a7f2ee40b7d">00077</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a28bcc53b96a43bf89cff0a7f2ee40b7d">_taille_menu_ini</a>;
+<a name="l00078"></a><a class="code" href="a00011.html#ac117b8a1db19fc488c6ee2f75badca2b">00078</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#ac117b8a1db19fc488c6ee2f75badca2b">_taille_menu</a>;
+<a name="l00079"></a><a class="code" href="a00011.html#a0814919e81b67a236a14ae1957081147">00079</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a0814919e81b67a236a14ae1957081147">_taille_text</a>;
+<a name="l00080"></a><a class="code" href="a00011.html#a15a5fd30d586b8998a6275a372836679">00080</a>     std::vector&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00011.html#a15a5fd30d586b8998a6275a372836679">_commandes</a>;
+<a name="l00081"></a><a class="code" href="a00011.html#a1ee3f9d7baf7a8bdc58d2fe0c215ac83">00081</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a1ee3f9d7baf7a8bdc58d2fe0c215ac83">_shining</a>;
+<a name="l00082"></a><a class="code" href="a00011.html#acb5639de7ed37f0cc5d9270b1067f57b">00082</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#acb5639de7ed37f0cc5d9270b1067f57b">_taille_score</a>;
+<a name="l00083"></a>00083 <span class="keyword">public</span>:
+<a name="l00084"></a><a class="code" href="a00011.html#a4d0dc701199325adc921f65499354f3a">00084</a>     <a class="code" href="a00011.html#a4d0dc701199325adc921f65499354f3a">InterfaceX</a>(<span class="keywordtype">int</span> w,<span class="keywordtype">int</span> h):<a class="code" href="a00011.html#a6f00bbd8d46ea6a53c148bc74a78db05">_SCREEN_WIDTH</a>(w),<a class="code" href="a00011.html#a9da581df6276df3710ac37ae617360bb">_SCREEN_HEIGHT</a>(h),
+<a name="l00085"></a>00085     <a class="code" href="a00011.html#a1b36ec980a5220505bbae259cc96bc2c">_SCREEN_BPP</a>(32),<a class="code" href="a00011.html#a4d99a064e76835578ea5363a76d13ade">_blobsIMG_ini</a>(),<a class="code" href="a00011.html#a88f27d619ba61b4e9105d0be4b1ae474">_taille_blob_ini</a>(16),<a class="code" href="a00011.html#accea7493bc80f704415600c1e3925df2">_taille_blob</a>(16),<a class="code" href="a00011.html#a63d8eb39c2413f9525cb5af3795672ac">_decalage_menu_x</a>(0),<a class="code" href="a00011.html#a4bc8fbcc5e5b60221023ecacac71ce57">_decalage_menu_y</a>(0), <a class="code" href="a00011.html#a5b2280558d08c0c82dc1231af910617c">_ratio_avat_ini</a>(54.0/80.0),<a class="code" href="a00011.html#aef41c15d24fd691d1e3c05b387a8fd96">_nbJoueurs</a>(1),<a class="code" href="a00011.html#a9d9ba47a3441ea5ae681f1a9111a91af">_nbAI</a>(0),<a class="code" href="a00011.html#a722c39f202350477d29c25ed9f71eadb">_offset_grille</a>(),<a class="code" href="a00011.html#a8359bf13315c6fda156c755fedf87712">_offset_nextBlob</a>()
+<a name="l00086"></a>00086     ,<a class="code" href="a00011.html#af08b50a0e9a62b88613d6eda29e61fe3">_offset_score</a>(),<a class="code" href="a00011.html#aa2a6a332aba9f37ba861a7d9dfcab7c3">_ratio</a>(1),<a class="code" href="a00011.html#a20e95369c05d8a39c90baea0924d84c1">_vDash</a>(),<a class="code" href="a00011.html#adb0cbbbfa65c44ec89b8eb1b94fd0b5d">_dashboard</a>(NULL),<a class="code" href="a00011.html#a6020a5ecde63a9807c9e9be10cf0ed6f">_background</a>(NULL),<a class="code" href="a00011.html#a24f8420a0d24f9c943dc03ebf09a9b63">_screen</a>(NULL),<a class="code" href="a00011.html#adc79d6b99c7934e04606c0734f535a34">_dashboard_ini</a>(NULL),<a class="code" href="a00011.html#a304a7dbac538a6b5713c20f0affd498e">_background_ini</a>(NULL)
+<a name="l00087"></a>00087     ,<a class="code" href="a00011.html#aafa3c968571905556bb0df1c12330475">_blobs_ini</a>(NULL),<a class="code" href="a00011.html#ab7d7e603a5566ea712bcfe630f6dd231">_nb_blobs</a>(40),<a class="code" href="a00011.html#a28bcc53b96a43bf89cff0a7f2ee40b7d">_taille_menu_ini</a>(320),<a class="code" href="a00011.html#a0814919e81b67a236a14ae1957081147">_taille_text</a>(25),<a class="code" href="a00011.html#a1ee3f9d7baf7a8bdc58d2fe0c215ac83">_shining</a>(0),<a class="code" href="a00011.html#acb5639de7ed37f0cc5d9270b1067f57b">_taille_score</a>(14)
+<a name="l00088"></a>00088     {
+<a name="l00089"></a>00089     <a class="code" href="a00011.html#a672b691c82429b955e09e352ab254319">init_SDL</a>();
+<a name="l00090"></a>00090     <a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">_offset_menu</a>.w=<a class="code" href="a00011.html#a6f00bbd8d46ea6a53c148bc74a78db05">_SCREEN_WIDTH</a>;
+<a name="l00091"></a>00091     <a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">_offset_menu</a>.h=<a class="code" href="a00011.html#a9da581df6276df3710ac37ae617360bb">_SCREEN_HEIGHT</a>;
+<a name="l00092"></a>00092     <a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">_offset_menu</a>.x=0;
+<a name="l00093"></a>00093     <a class="code" href="a00011.html#ae0f325eee7cf4b68a4ca9b2400bf8cb3">_offset_menu</a>.y=0;
+<a name="l00094"></a>00094     <a class="code" href="a00011.html#a850000d49338e9ac40f28f625241ecf8">load_files</a>();
+<a name="l00095"></a>00095     <a class="code" href="a00011.html#a7b46b20070935b72451550dc23a5d37c">resize_menu</a>();
+<a name="l00096"></a>00096     }
+<a name="l00097"></a><a class="code" href="a00011.html#a06d4159e8a0fe9591ebebfd20f79a055">00097</a>     <a class="code" href="a00011.html#a06d4159e8a0fe9591ebebfd20f79a055">~InterfaceX</a>(){<a class="code" href="a00011.html#aa26c292a0d00f6bdb48c611fc46e0a06">clean_up</a>();}
+<a name="l00098"></a>00098     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a04f6a2f38eacdf947037eaf45092c33a">menu</a>();
+<a name="l00099"></a>00099     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a0e50405d74683c38fc1f0e3f71cf4c3d">compute_game</a>();
+<a name="l00100"></a>00100     SDL_Surface* <a class="code" href="a00011.html#adb0d55fe794496b8588456dcf272ee4d">load_img</a>( std::string filename );
+<a name="l00101"></a>00101     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a7b7e5b7ff85bbcaf82c5bc75d481118d">apply_surface</a>( <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, SDL_Surface* source, SDL_Surface* destination, SDL_Rect* clip);
+<a name="l00102"></a>00102     <span class="keywordtype">bool</span> <a class="code" href="a00011.html#a672b691c82429b955e09e352ab254319">init_SDL</a>();
+<a name="l00103"></a>00103     <span class="keywordtype">bool</span> <a class="code" href="a00011.html#a850000d49338e9ac40f28f625241ecf8">load_files</a>();
+<a name="l00104"></a>00104     <span class="keywordtype">void</span> <a class="code" href="a00011.html#aa26c292a0d00f6bdb48c611fc46e0a06">clean_up</a>();
+<a name="l00105"></a><a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">00105</a>     <span class="keywordtype">double</span> <a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#accea7493bc80f704415600c1e3925df2">_taille_blob</a>;}
+<a name="l00106"></a><a class="code" href="a00011.html#addc58fa271a81d66c482aa8ac0e178af">00106</a>     <span class="keywordtype">void</span> <a class="code" href="a00011.html#addc58fa271a81d66c482aa8ac0e178af">setNbJoueurs</a>(<span class="keywordtype">int</span> n){<a class="code" href="a00011.html#aef41c15d24fd691d1e3c05b387a8fd96">_nbJoueurs</a>=n;}
+<a name="l00107"></a><a class="code" href="a00011.html#aa710ff2b044214ea1e47af43ee1ee231">00107</a>     std::vector&lt;Position&gt; <a class="code" href="a00011.html#aa710ff2b044214ea1e47af43ee1ee231">vDash</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#a20e95369c05d8a39c90baea0924d84c1">_vDash</a>;}
+<a name="l00108"></a><a class="code" href="a00011.html#ada4011aa7937ea45af992c4cad392238">00108</a>     SDL_Surface* <a class="code" href="a00011.html#ada4011aa7937ea45af992c4cad392238">screen</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#a24f8420a0d24f9c943dc03ebf09a9b63">_screen</a>;}
+<a name="l00109"></a><a class="code" href="a00011.html#aa202bf95ccd9db4a78a5eed055c56c22">00109</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#aa202bf95ccd9db4a78a5eed055c56c22">NbJoueurs</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#aef41c15d24fd691d1e3c05b387a8fd96">_nbJoueurs</a>;}
+<a name="l00110"></a><a class="code" href="a00011.html#a9d87b046afcb1badd511cd1ee97ef062">00110</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a9d87b046afcb1badd511cd1ee97ef062">NbAI</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#a9d9ba47a3441ea5ae681f1a9111a91af">_nbAI</a>;}
+<a name="l00111"></a><a class="code" href="a00011.html#a8883fd408fb230f1fc99a64dcb1cf1f8">00111</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a8883fd408fb230f1fc99a64dcb1cf1f8">grille_H</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#a1b9e885d44b84e8c33dd37ca1e1c6f8e">_grille_H</a>;}
+<a name="l00112"></a><a class="code" href="a00011.html#a893c8145402363b79888ef736a06c093">00112</a>     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a893c8145402363b79888ef736a06c093">grille_W</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#aff377fb4e786e623a8304c50648e7334">_grille_W</a>;}
+<a name="l00113"></a>00113     <span class="keywordtype">bool</span> <a class="code" href="a00011.html#a57a833c82b51162dc1ff9682fce7ac79">resize_files</a>();
+<a name="l00114"></a>00114     SDL_Surface* <a class="code" href="a00011.html#aa69b04a060c46db5f77e762e5e236852">img_zoom_pixel_H</a>(SDL_Surface *surface1,<span class="keywordtype">int</span> pixel);
+<a name="l00115"></a>00115     SDL_Surface* <a class="code" href="a00011.html#a308b62bf273262c54fd355fc60cc7c9c">img_zoom_pixel_W</a>(SDL_Surface *surface1,<span class="keywordtype">int</span> pixel);
+<a name="l00116"></a>00116     <span class="keywordtype">bool</span> <a class="code" href="a00011.html#ad1fe91f0ea2d2bac39fc9a7127d7557f">compute_offsets</a>();
+<a name="l00117"></a>00117     <span class="keywordtype">bool</span> <a class="code" href="a00011.html#a6cdb65bbf7fb79217512000f00191e2b">compute_vDash</a>();
+<a name="l00118"></a>00118     <span class="keywordtype">void</span> <a class="code" href="a00011.html#ace09c48496eeefa8ea8fe9e187eec909">resize_vect</a>();
+<a name="l00119"></a>00119     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a5181b163e848a46bfb74e58a968705d4">blit_dash</a>();
+<a name="l00120"></a>00120     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a568dd368bdd332b1ac867e8915bf2ff8">blit_fond</a>();
+<a name="l00121"></a>00121     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a66cc30a89b13d0895416d5bd80b40ded">play_anim_menu</a>(<span class="keywordtype">int</span> init,<span class="keywordtype">int</span> fin);
+<a name="l00122"></a>00122     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a38e3ffa36df556ac7ce4d4a9d41a9b72">select_nbJoueurs</a>();
+<a name="l00123"></a>00123     <span class="keywordtype">void</span> <a class="code" href="a00011.html#acb5e4817b1b1b2c406c4b2e0c4bfa810">blit_cursor</a>();
+<a name="l00124"></a>00124     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a614825ffbb2dc7c84580d4e8b2ff93e4">decouper_sprite</a>();
+<a name="l00125"></a>00125     <span class="keywordtype">void</span> <a class="code" href="a00011.html#aafbd6e6b0743e017964f53ea04de1903">blit_avatars</a>();
+<a name="l00126"></a>00126     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a1c61cf8412148067616fd92b409f11eb">blit_un_blob</a>(<a class="code" href="a00002.html">Blobs</a>* blob,<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);
+<a name="l00127"></a>00127     <span class="keywordtype">void</span> <a class="code" href="a00011.html#ae5bc9e2ed46c0448eb4f7dea08217b45">blit_blobs_mobiles</a>(<a class="code" href="a00014.html">Position</a> pmaster,<a class="code" href="a00014.html">Position</a> pslave,<a class="code" href="a00002.html">Blobs</a>* master,<a class="code" href="a00002.html">Blobs</a>* slave,<span class="keywordtype">int</span> n);
+<a name="l00128"></a>00128     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a1564b6d5334c9a23025b6090c1968bca">blits</a>(std::vector&lt;DashBoard *&gt; dashBoards);
+<a name="l00129"></a>00129     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a673e0a32ae093bd4e4f07fa0ef2e3839">blit_menu</a>();
+<a name="l00130"></a>00130     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a7b46b20070935b72451550dc23a5d37c">resize_menu</a>();
+<a name="l00131"></a>00131     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a98196e7e039d0613d157349b7a16149f">blit_nextBlob</a>(<a class="code" href="a00002.html">Blobs</a>* master,<a class="code" href="a00002.html">Blobs</a>* slave,<span class="keywordtype">int</span> n);
+<a name="l00132"></a>00132     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a30b3d0be2369fe70823507b30444401b">blit_blobs</a>(std::vector&lt;DashBoard *&gt; dashBoards);
+<a name="l00133"></a>00133     SDL_Rect <a class="code" href="a00011.html#a4e2365dc147991810422dc3977b17d95">offset_sprite</a>(<span class="keywordtype">int</span> color,<span class="keywordtype">int</span> link,<span class="keywordtype">int</span> state);
+<a name="l00134"></a>00134     Uint32 <a class="code" href="a00011.html#ad5f35be24aa0bcb7ad247d84056c1d1f">getpixel</a>(SDL_Surface* s,<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);
+<a name="l00135"></a>00135     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a876abee7dcedec2e06d3a80cd482fd2b">putpixel</a>(SDL_Surface* s,<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y,Uint32 p);
+<a name="l00136"></a>00136     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a6cf97dcfc74a0bbcce08b6cf2b7a8aaa">resize_blobsIMG</a>();
+<a name="l00137"></a>00137     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a9560986497eadbcec1245b55837b05c4">anim_comboting</a>(<a class="code" href="a00002.html">Blobs</a>* blob);
+<a name="l00138"></a>00138     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a9e3b255d376a942c02473defaf58c0d9">anim_falling</a>(<a class="code" href="a00002.html">Blobs</a>* blob);
+<a name="l00139"></a>00139     <span class="keywordtype">int</span> <a class="code" href="a00011.html#ae177a43e82f45e6610d86baf7460da22">anim_landing</a>(<a class="code" href="a00002.html">Blobs</a>* blob);
+<a name="l00140"></a>00140     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a76916e87c447d621a562a766840fa0ba">controls_and_start</a>();
+<a name="l00141"></a>00141     <span class="keywordtype">int</span> <a class="code" href="a00011.html#a518ceb8632ff76ce4a47e7a8955e82d1">controls</a>();
+<a name="l00142"></a>00142     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a836023020e0e313bd9fb00eee5dc8c91">resize_blobs</a>();
+<a name="l00143"></a>00143     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a3d0e9c5cf58769f006904426dbde99be">resize_dash</a>();
+<a name="l00144"></a>00144     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a1b054eb8feeb623d940e7c1400ea3417">resize_avatars</a>();
+<a name="l00145"></a>00145     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a5bcad9348c35e0472ec0bb1bf66770fb">maj_anims</a>(<a class="code" href="a00006.html">DashBoard</a>&amp; dash);
+<a name="l00146"></a>00146     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a88af29fb328541af72b5a105fe8eafe6">maj_shining</a>();
+<a name="l00147"></a>00147     <span class="keywordtype">void</span> <a class="code" href="a00011.html#ad9dffbe4de7378738a1c0e9903462e30">tourne_un_blob</a>(<a class="code" href="a00014.html">Position</a>* pivot,<a class="code" href="a00014.html">Position</a>* slave,<span class="keywordtype">int</span> sens, <span class="keywordtype">int</span> angle,<span class="keywordtype">int</span> target);
+<a name="l00148"></a><a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">00148</a>     std::vector&lt;std::vector&lt;int&gt; &gt; <a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00011.html#a15a5fd30d586b8998a6275a372836679">_commandes</a>;}
+<a name="l00149"></a>00149     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a37bd38cd162a32848043875a181694df">controls_resize</a>();
+<a name="l00150"></a>00150     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a516951c4ba06596e817c40113847b876">controls_by_default</a>();
+<a name="l00151"></a>00151     <span class="keywordtype">void</span> <a class="code" href="a00011.html#ab36b304cac86159cb4b27e10fb35d9b8">initialisation_debut_jeu</a>();
+<a name="l00152"></a>00152     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a885bd9df47f9c00230fe13ad20ce29a7">winner</a>(<span class="keywordtype">int</span> i);
+<a name="l00153"></a>00153     <span class="keywordtype">void</span> <a class="code" href="a00011.html#a8a4434fc2667bf4a413ad029c7b3861d">blit_scores</a>(std::vector&lt;DashBoard *&gt; dashBoards);
+<a name="l00154"></a>00154 };
+<a name="l00155"></a>00155 <span class="preprocessor">#endif // INTERFACEX_H_INCLUDED</span>
+<a name="l00156"></a>00156 <span class="preprocessor"></span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00028.html">InterfaceX.h</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:30:25 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

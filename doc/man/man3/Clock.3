@@ -1,0 +1,85 @@
+.TH "Clock" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Clock \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Clock.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBClock\fP ()"
+.br
+.ti -1c
+.RI "\fB~Clock\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtic\fP (size_t periodeMinMs)"
+.br
+.ti -1c
+.RI "bool \fBtac\fP ()"
+.br
+.ti -1c
+.RI "int \fBtemps_prec\fP () const "
+.br
+.ti -1c
+.RI "int \fBtemps_act\fP () const "
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "size_t \fB_temps_prec\fP"
+.br
+.ti -1c
+.RI "size_t \fB_temps_act\fP"
+.br
+.ti -1c
+.RI "size_t \fB_delay\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 5 du fichier Clock.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Clock::Clock ()\fC [inline]\fP"
+.PP
+Définition à la ligne 14 du fichier Clock.h.
+.SS "Clock::~Clock ()\fC [inline]\fP"
+.PP
+Définition à la ligne 16 du fichier Clock.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "bool Clock::tac ()\fC [inline]\fP"
+.PP
+Définition à la ligne 29 du fichier Clock.h.
+.SS "int Clock::temps_act () const\fC [inline]\fP"
+.PP
+Définition à la ligne 43 du fichier Clock.h.
+.SS "int Clock::temps_prec () const\fC [inline]\fP"
+.PP
+Définition à la ligne 39 du fichier Clock.h.
+.SS "bool Clock::tic (size_tperiodeMinMs)\fC [inline]\fP"
+.PP
+Définition à la ligne 18 du fichier Clock.h.
+.SH "Documentation des données membres"
+.PP 
+.SS "size_t \fBClock::_delay\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 12 du fichier Clock.h.
+.SS "size_t \fBClock::_temps_act\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 11 du fichier Clock.h.
+.SS "size_t \fBClock::_temps_prec\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 10 du fichier Clock.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

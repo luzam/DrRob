@@ -1,0 +1,99 @@
+.TH "Game" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Game \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Game.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBGame\fP ()"
+.br
+.ti -1c
+.RI "std::vector< \fBDashBoard\fP * > \fBdashBoards\fP () const "
+.br
+.ti -1c
+.RI "void \fBinitBlobs\fP ()"
+.br
+.ti -1c
+.RI "void \fBgo\fP ()"
+.br
+.ti -1c
+.RI "void \fBrepartitionCombo\fP (bool winner)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBDashBoard\fP * > \fB_dashBoards\fP"
+.br
+.ti -1c
+.RI "std::list< \fBBlobs\fP > \fB_randBlobs\fP"
+.br
+.ti -1c
+.RI "\fBInterfaceX\fP * \fB_X\fP"
+.br
+.ti -1c
+.RI "\fBClock\fP \fB_clock\fP"
+.br
+.ti -1c
+.RI "int \fB_nbJoueurs\fP"
+.br
+.ti -1c
+.RI "int \fB_nbAI\fP"
+.br
+.ti -1c
+.RI "int * \fB_combo\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 20 du fichier Game.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Game::Game ()\fC [inline]\fP"
+.PP
+Définition à la ligne 32 du fichier Game.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "std::vector<\fBDashBoard\fP *> Game::dashBoards () const\fC [inline]\fP"
+.PP
+Définition à la ligne 37 du fichier Game.h.
+.SS "void Game::go ()"
+.SS "void Game::initBlobs ()\fC [inline]\fP"
+.PP
+Définition à la ligne 38 du fichier Game.h.
+.SS "void Game::repartitionCombo (boolwinner)"
+.SH "Documentation des données membres"
+.PP 
+.SS "\fBClock\fP \fBGame::_clock\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 26 du fichier Game.h.
+.SS "int* \fBGame::_combo\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 29 du fichier Game.h.
+.SS "std::vector<\fBDashBoard\fP *> \fBGame::_dashBoards\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 23 du fichier Game.h.
+.SS "int \fBGame::_nbAI\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 28 du fichier Game.h.
+.SS "int \fBGame::_nbJoueurs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 27 du fichier Game.h.
+.SS "std::list<\fBBlobs\fP> \fBGame::_randBlobs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 24 du fichier Game.h.
+.SS "\fBInterfaceX\fP* \fBGame::_X\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 25 du fichier Game.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

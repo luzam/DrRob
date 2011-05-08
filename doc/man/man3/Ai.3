@@ -1,0 +1,63 @@
+.TH "Ai" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Ai \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ai.h>\fP
+.PP
+Est dérivée de \fBDashBoard\fP.
+.PP
+Dérivée par \fBEasy\fP, et \fBHard\fP.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBAi\fP (int taille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)"
+.br
+.ti -1c
+.RI "virtual void \fBgo\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBthink\fP ()=0"
+.br
+.ti -1c
+.RI "int \fBnext_rand\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Ai\fP ()"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 9 du fichier ai.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Ai::Ai (inttaille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)\fC [inline]\fP"
+.PP
+Définition à la ligne 14 du fichier ai.h.
+.SS "virtual Ai::~Ai ()\fC [inline, virtual]\fP"
+.PP
+Définition à la ligne 21 du fichier ai.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "virtual void Ai::go ()\fC [inline, virtual]\fP"
+.PP
+Réimplémentée à partir de \fBDashBoard\fP.
+.PP
+Définition à la ligne 17 du fichier ai.h.
+.SS "int Ai::next_rand ()\fC [inline]\fP"
+.PP
+Définition à la ligne 19 du fichier ai.h.
+.SS "virtual void Ai::think ()\fC [pure virtual]\fP"
+.PP
+Implémente \fBDashBoard\fP.
+.PP
+Implémenté dans \fBEasy\fP, et \fBHard\fP.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

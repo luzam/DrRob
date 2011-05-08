@@ -1,0 +1,127 @@
+.TH "Grille" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Grille \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Grille.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBGrille\fP (int taille)"
+.br
+.ti -1c
+.RI "\fB~Grille\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheckLoose\fP ()"
+.br
+.ti -1c
+.RI "int \fBcheckFalling\fP ()"
+.br
+.ti -1c
+.RI "int \fBcheckLanding\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheck\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckLink\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckState\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckHole\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheckCombo\fP ()"
+.br
+.ti -1c
+.RI "int \fBcheckDark\fP (int size)"
+.br
+.ti -1c
+.RI "int \fBcheckMaxCombo\fP ()"
+.br
+.ti -1c
+.RI "void \fBanimFallin\fP (int taille)"
+.br
+.ti -1c
+.RI "void \fBswitchBlobs\fP (int l1, int c1, int l2, int c2)"
+.br
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP * \fBoperator()\fP (int ligne, int col)"
+.br
+.ti -1c
+.RI "void \fBoperator()\fP (int ligne, int col, \fBBlobs\fP value)"
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetLink\fP (int l, int c, int n, int s, int e, int w)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBBlobs\fP > \fB_grille\fP"
+.br
+.ti -1c
+.RI "int \fB_tailleBlob\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 13 du fichier Grille.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Grille::Grille (inttaille)\fC [inline]\fP"
+.PP
+Définition à la ligne 20 du fichier Grille.h.
+.SS "Grille::~Grille ()\fC [inline]\fP"
+.PP
+Définition à la ligne 25 du fichier Grille.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void Grille::animFallin (inttaille)"
+.SS "void Grille::check ()"
+.SS "void Grille::checkCombo ()"
+.SS "int Grille::checkDark (intsize)"
+.SS "int Grille::checkFalling ()"
+.SS "void Grille::checkHole ()"
+.SS "int Grille::checkLanding ()"
+.SS "void Grille::checkLink ()"
+.SS "bool Grille::checkLoose ()"
+.SS "int Grille::checkMaxCombo ()"
+.SS "void Grille::checkState ()"
+.SS "void Grille::init ()"
+.SS "\fBBlobs\fP* Grille::operator() (intligne, intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 40 du fichier Grille.h.
+.SS "void Grille::operator() (intligne, intcol, \fBBlobs\fPvalue)\fC [inline]\fP"
+.PP
+Définition à la ligne 45 du fichier Grille.h.
+.SS "void Grille::setLink (intl, intc, intn, ints, inte, intw)\fC [protected]\fP"
+.SS "void Grille::switchBlobs (intl1, intc1, intl2, intc2)"
+.SH "Documentation des données membres"
+.PP 
+.SS "std::vector<\fBBlobs\fP> \fBGrille::_grille\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 16 du fichier Grille.h.
+.SS "int \fBGrille::_tailleBlob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 17 du fichier Grille.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

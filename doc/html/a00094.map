@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$a00009.html" title="{Grille\n|# _grille\l# _tailleBlob\l|+ Grille()\l+ ~Grille()\l+ checkLoose()\l+ checkFalling()\l+ checkLanding()\l+ check()\l+ checkLink()\l+ checkState()\l+ checkHole()\l+ checkCombo()\l+ checkDark()\l+ checkMaxCombo()\l+ animFallin()\l+ switchBlobs()\l+ init()\l+ operator()()\l+ operator()()\l# setLink()\l}" alt="" coords="5,6,163,375"/>
+<area shape="rect" id="node4" href="$a00014.html" title="{Position\n|# _x\l# _y\l|+ Position()\l+ Position()\l+ ~Position()\l+ x()\l+ y()\l+ setX()\l+ setY()\l}" alt="" coords="187,94,296,287"/>
+</map>

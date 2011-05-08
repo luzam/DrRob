@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de include/DashBoard.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00022.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">include/DashBoard.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00022.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DASHBOARD_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DASHBOARD_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="a00017.html">Blobs.h</a>&quot;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="a00033.html">Position.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="a00031.html">MoteurPhy.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="a00032.html">Orientation.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="comment">//#include &quot;SDLttf.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">// temporaire</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="a00006.html">00015</a> <span class="keyword">class </span><a class="code" href="a00006.html">DashBoard</a>
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">protected</span> :
+<a name="l00019"></a><a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">00019</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a>;
+<a name="l00020"></a><a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">00020</a>     <a class="code" href="a00013.html">MoteurPhy</a>* <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>;
+<a name="l00021"></a><a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">00021</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a>;
+<a name="l00022"></a><a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">00022</a>     <a class="code" href="a00002.html">Blobs</a> <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>;
+<a name="l00023"></a><a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">00023</a>     <a class="code" href="a00002.html">Blobs</a> <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>;
+<a name="l00024"></a><a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">00024</a>     <a class="code" href="a00002.html">Blobs</a> <a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">_nextMaster</a>;
+<a name="l00025"></a><a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">00025</a>     <a class="code" href="a00002.html">Blobs</a> <a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">_nextSlave</a>;
+<a name="l00026"></a><a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">00026</a>     <a class="code" href="a00009.html">Grille</a>* <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>;
+<a name="l00027"></a><a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">00027</a>     std::list&lt;Blobs&gt;* <a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">_nextBlobs</a>;
+<a name="l00028"></a><a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">00028</a>     std::list&lt;Blobs&gt;::iterator <a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>;
+<a name="l00029"></a><a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">00029</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>;
+<a name="l00030"></a><a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">00030</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>;
+<a name="l00031"></a><a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">00031</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">_go</a>;
+<a name="l00032"></a><a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">00032</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">_launchCombo</a>;
+<a name="l00033"></a><a class="code" href="a00006.html#a1d12a71d3980c6cee4d63826d7c0d2be">00033</a>     <a class="code" href="a00014.html">Position</a> <a class="code" href="a00006.html#a1d12a71d3980c6cee4d63826d7c0d2be">posFen</a>;
+<a name="l00034"></a><a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">00034</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>;
+<a name="l00035"></a><a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">00035</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">_landing</a>;
+<a name="l00036"></a><a class="code" href="a00006.html#a44aed8a490288604e2d4eb4b60f51b09">00036</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#a44aed8a490288604e2d4eb4b60f51b09">_newDelay</a>;
+<a name="l00037"></a><a class="code" href="a00006.html#a602b2b8a2a7364c1456c1315cd634404">00037</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#a602b2b8a2a7364c1456c1315cd634404">_score</a>;
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="keyword">public</span> :
+<a name="l00040"></a><a class="code" href="a00006.html#aeb6269585c4447aa9b34d1694141d7bf">00040</a>     <a class="code" href="a00006.html#aeb6269585c4447aa9b34d1694141d7bf">DashBoard</a>(<span class="keywordtype">int</span> taille,<a class="code" href="a00009.html">Grille</a>* <a class="code" href="a00006.html#ada490ddcae4719c60a189678d0235fee">grille</a>,std::list&lt;Blobs&gt;* randBlobs):<a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a>(false),<a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a>(0),
+<a name="l00041"></a>00041         <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>(grille),<a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">_nextBlobs</a>(randBlobs),<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>((*<a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">_nextBlobs</a>).begin()),<a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">_go</a>(false),<a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">_launchCombo</a>(false),
+<a name="l00042"></a>00042         <a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>(0),<a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">_landing</a>(true),<a class="code" href="a00006.html#a44aed8a490288604e2d4eb4b60f51b09">_newDelay</a>(2),<a class="code" href="a00006.html#a602b2b8a2a7364c1456c1315cd634404">_score</a>(0)
+<a name="l00043"></a>00043     {
+<a name="l00044"></a>00044         <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a> = <span class="keyword">new</span> <a class="code" href="a00013.html">MoteurPhy</a>(taille,grille);
+<a name="l00045"></a>00045          <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(*(++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>));
+<a name="l00046"></a>00046         <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(*(++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>));
+<a name="l00047"></a>00047         <a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">_nextMaster</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>((++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>)-&gt;color());
+<a name="l00048"></a>00048         <a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">_nextSlave</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>((++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>)-&gt;color());
+<a name="l00049"></a>00049         <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a7949b13ddb18140c687c5ff7d0c5c7c2">nextBlobs</a>(<a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>,<a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>);
+<a name="l00050"></a>00050     }
+<a name="l00051"></a><a class="code" href="a00006.html#a80562fb1ded72b6516d5f53ff872851a">00051</a>     <span class="keyword">virtual</span> <a class="code" href="a00006.html#a80562fb1ded72b6516d5f53ff872851a">~DashBoard</a>(){
+<a name="l00052"></a>00052     <span class="keyword">delete</span> <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054     }
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="a00006.html#aeac071365954590475e9736790c237e4">00056</a>     <a class="code" href="a00013.html">MoteurPhy</a>* <a class="code" href="a00006.html#aeac071365954590475e9736790c237e4">moteurPhy</a>()<span class="keyword">const</span>
+<a name="l00057"></a>00057 <span class="keyword">    </span>{
+<a name="l00058"></a>00058         <span class="keywordflow">return</span> <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>;
+<a name="l00059"></a>00059     }
+<a name="l00060"></a><a class="code" href="a00006.html#ada490ddcae4719c60a189678d0235fee">00060</a>     <a class="code" href="a00009.html">Grille</a>* <a class="code" href="a00006.html#ada490ddcae4719c60a189678d0235fee">grille</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>;}
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     <span class="keywordtype">void</span> <a class="code" href="a00006.html#aedb1665a2fe05a34f0bbca968650b9a3">go</a>();
+<a name="l00063"></a><a class="code" href="a00006.html#ac3bfd0edad099ec7eadb8f7d2a684066">00063</a>     <a class="code" href="a00014.html">Position</a>* <a class="code" href="a00006.html#ac3bfd0edad099ec7eadb8f7d2a684066">masterPos</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>;}
+<a name="l00064"></a><a class="code" href="a00006.html#ae00d7ec3d6ccf302639d4b5154bd3fe8">00064</a>     <a class="code" href="a00014.html">Position</a>* <a class="code" href="a00006.html#ae00d7ec3d6ccf302639d4b5154bd3fe8">slavePos</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>;}
+<a name="l00065"></a><a class="code" href="a00006.html#a8bd5260f3ca718ae930ec70d0d2ef43f">00065</a>     <a class="code" href="a00002.html">Blobs</a>* <a class="code" href="a00006.html#a8bd5260f3ca718ae930ec70d0d2ef43f">masterBlob</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>;}
+<a name="l00066"></a><a class="code" href="a00006.html#a8c404d302488ea9f835c1c5c90967c22">00066</a>     <a class="code" href="a00002.html">Blobs</a>* <a class="code" href="a00006.html#a8c404d302488ea9f835c1c5c90967c22">slaveBlob</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>;}
+<a name="l00067"></a><a class="code" href="a00006.html#a11372d42e725fd66855214bad9d79212">00067</a>     <a class="code" href="a00002.html">Blobs</a>* <a class="code" href="a00006.html#a11372d42e725fd66855214bad9d79212">nextMaster</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">_nextMaster</a>;}
+<a name="l00068"></a><a class="code" href="a00006.html#a18979178cb54ca87c912bc3cb9b88579">00068</a>     <a class="code" href="a00002.html">Blobs</a>* <a class="code" href="a00006.html#a18979178cb54ca87c912bc3cb9b88579">nextSlave</a>(){<span class="keywordflow">return</span> &amp;<a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">_nextSlave</a>;}
+<a name="l00069"></a><a class="code" href="a00006.html#aa951db0b14ba73945d8e04ca806f6e62">00069</a>     <span class="keywordtype">void</span> <a class="code" href="a00006.html#aa951db0b14ba73945d8e04ca806f6e62">setCombo</a>(<span class="keywordtype">int</span> <a class="code" href="a00006.html#a85bd1f45990c381cb7633b530500f88f">combo</a>){<a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a> = <a class="code" href="a00006.html#a85bd1f45990c381cb7633b530500f88f">combo</a>;}
+<a name="l00070"></a>00070     <span class="keywordtype">void</span> <a class="code" href="a00006.html#a29fcb010d048847b44e8bba0e85a3002">resetCombo</a>();
+<a name="l00071"></a><a class="code" href="a00006.html#ae4e3734d09946aaad2daca47ac1be538">00071</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#ae4e3734d09946aaad2daca47ac1be538">launchCombo</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">_launchCombo</a>;}
+<a name="l00072"></a><a class="code" href="a00006.html#a85bd1f45990c381cb7633b530500f88f">00072</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#a85bd1f45990c381cb7633b530500f88f">combo</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a>;}
+<a name="l00073"></a>00073     <span class="keywordtype">void</span> <a class="code" href="a00006.html#af643d3187d22b2b33bce16863c507140">addDarkBlob</a>();
+<a name="l00074"></a><a class="code" href="a00006.html#ae2f0cc20b204ef5aab428ba39d7bc008">00074</a>     <span class="keywordtype">bool</span> <a class="code" href="a00006.html#ae2f0cc20b204ef5aab428ba39d7bc008">looser</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a>;}
+<a name="l00075"></a><a class="code" href="a00006.html#a9ab575b357ca8649d494b6ad3eb9a6e9">00075</a>     <span class="keywordtype">int</span> <a class="code" href="a00006.html#a9ab575b357ca8649d494b6ad3eb9a6e9">score</a>()<span class="keyword">const</span>{<span class="keywordflow">return</span> <a class="code" href="a00006.html#a602b2b8a2a7364c1456c1315cd634404">_score</a>;}
+<a name="l00076"></a>00076     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00006.html#a4805c3218cfe5c48db4aa3a53795e51e">think</a>() = 0;
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 };
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00022.html">DashBoard.h</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:30:25 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

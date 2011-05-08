@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de include/Grille.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00026.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">include/Grille.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00026.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef GRILLE_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define GRILLE_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span><span class="comment">//temporaire</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;assert.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="a00017.html">Blobs.h</a>&quot;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;time.h&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;stdlib.h&quot;</span>
+<a name="l00010"></a><a class="code" href="a00026.html#a7b620b1d77305e47aecb5e27e8a13d1e">00010</a> <span class="preprocessor">#define LANDING_ANIM_TIME 12</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="a00009.html">00013</a> <span class="keyword">class </span><a class="code" href="a00009.html">Grille</a>{
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">protected</span> :
+<a name="l00016"></a><a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">00016</a>     std::vector&lt;Blobs&gt; <a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>;
+<a name="l00017"></a><a class="code" href="a00009.html#a8be16edd283bc90ff878489491cd496d">00017</a>     <span class="keywordtype">int</span> <a class="code" href="a00009.html#a8be16edd283bc90ff878489491cd496d">_tailleBlob</a>;
+<a name="l00018"></a>00018     <span class="keywordtype">void</span> <a class="code" href="a00009.html#add9aa6f09b3f80fa364ee7df3c6daa16">setLink</a>(<span class="keywordtype">int</span> l, <span class="keywordtype">int</span> c, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> s, <span class="keywordtype">int</span> e, <span class="keywordtype">int</span> w);
+<a name="l00019"></a>00019     <span class="keyword">public</span> :
+<a name="l00020"></a><a class="code" href="a00009.html#a81670107c4d72721fe21ca966031bb38">00020</a>     <a class="code" href="a00009.html#a81670107c4d72721fe21ca966031bb38">Grille</a>(<span class="keywordtype">int</span> taille):<a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>(18*6),<a class="code" href="a00009.html#a8be16edd283bc90ff878489491cd496d">_tailleBlob</a>(taille){
+<a name="l00021"></a>00021     <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0;c&lt;18*6;c++)
+<a name="l00022"></a>00022     std::fill(<a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>.begin(), <a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>.end(), <a class="code" href="a00002.html">Blobs</a>());
+<a name="l00023"></a>00023     }
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="a00009.html#ac9f539f33c2652c09f0f9db1adfa758d">00025</a>     <a class="code" href="a00009.html#ac9f539f33c2652c09f0f9db1adfa758d">~Grille</a>(){
+<a name="l00026"></a>00026     }
+<a name="l00027"></a>00027     <span class="keywordtype">bool</span> <a class="code" href="a00009.html#a675db2a23a1a2a55668e823adca5a9ef">checkLoose</a>();
+<a name="l00028"></a>00028     <span class="keywordtype">int</span> <a class="code" href="a00009.html#a858572a13fbc8917cec074554ca574d4">checkFalling</a>();
+<a name="l00029"></a>00029     <span class="keywordtype">int</span> <a class="code" href="a00009.html#ae85e20bc3da47e38fff29e6e2f9ac6c0">checkLanding</a>();
+<a name="l00030"></a>00030     <span class="keywordtype">void</span> <a class="code" href="a00009.html#adbbe24c84a3433c3968f18792de5aab7">check</a>();
+<a name="l00031"></a>00031     <span class="keywordtype">void</span> <a class="code" href="a00009.html#acae31a9e26671f326ee60e11424f4545">checkLink</a>();
+<a name="l00032"></a>00032     <span class="keywordtype">void</span> <a class="code" href="a00009.html#ab8bd46d3f97f1849662fe2642f270846">checkState</a>();
+<a name="l00033"></a>00033     <span class="keywordtype">void</span> <a class="code" href="a00009.html#a9921270522f16053aa254abb2cab22de">checkHole</a>();
+<a name="l00034"></a>00034     <span class="keywordtype">void</span> <a class="code" href="a00009.html#a4b142af28f88e73e0985c32a03472caf">checkCombo</a>();
+<a name="l00035"></a>00035     <span class="keywordtype">int</span> <a class="code" href="a00009.html#a70e60f93d2b0ff9d37fd0e3967b3d454">checkDark</a>(<span class="keywordtype">int</span> size);
+<a name="l00036"></a>00036     <span class="keywordtype">int</span> <a class="code" href="a00009.html#a0aa8c02a0ebdb2e0bd45bc29311a5693">checkMaxCombo</a>();
+<a name="l00037"></a>00037     <span class="keywordtype">void</span> <a class="code" href="a00009.html#acdddbfa2d76354f294bc017196c5bc16">animFallin</a>(<span class="keywordtype">int</span> taille);
+<a name="l00038"></a>00038     <span class="keywordtype">void</span> <a class="code" href="a00009.html#af24ae497afd4dc1657587803fb45fe1f">switchBlobs</a>(<span class="keywordtype">int</span> l1,<span class="keywordtype">int</span> c1,<span class="keywordtype">int</span> l2,<span class="keywordtype">int</span> c2);
+<a name="l00039"></a>00039     <span class="keywordtype">void</span> <a class="code" href="a00009.html#aa178d44adfb7047a30ecee5e21857bba">init</a>();
+<a name="l00040"></a><a class="code" href="a00009.html#a7ebbc3349442e0cf860bb7000a81f742">00040</a>     <a class="code" href="a00002.html">Blobs</a>* <a class="code" href="a00009.html#a7ebbc3349442e0cf860bb7000a81f742">operator()</a>(<span class="keywordtype">int</span> ligne,<span class="keywordtype">int</span> col)
+<a name="l00041"></a>00041     {
+<a name="l00042"></a>00042         assert(6*ligne+col&lt;18*6);
+<a name="l00043"></a>00043         <span class="keywordflow">return</span> &amp;(<a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>.at(6*ligne + col));
+<a name="l00044"></a>00044     }
+<a name="l00045"></a><a class="code" href="a00009.html#a3c0262b7d0b65a16c5ee573bd5adf542">00045</a>     <span class="keywordtype">void</span> <a class="code" href="a00009.html#a7ebbc3349442e0cf860bb7000a81f742">operator()</a>(<span class="keywordtype">int</span> ligne,<span class="keywordtype">int</span> col,<a class="code" href="a00002.html">Blobs</a> value)
+<a name="l00046"></a>00046     {
+<a name="l00047"></a>00047         assert(6*ligne+col&lt;18*6);
+<a name="l00048"></a>00048         <a class="code" href="a00009.html#a4d8c997595fcd22c7505e470e8633cd7">_grille</a>.at(6*ligne + col) = value;
+<a name="l00049"></a>00049     }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 };
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00026.html">Grille.h</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:30:25 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

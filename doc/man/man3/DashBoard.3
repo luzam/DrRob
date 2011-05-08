@@ -1,0 +1,257 @@
+.TH "DashBoard" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DashBoard \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DashBoard.h>\fP
+.PP
+Dérivée par \fBAi\fP, et \fBJoueur\fP.
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBDashBoard\fP (int taille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)"
+.br
+.ti -1c
+.RI "virtual \fB~DashBoard\fP ()"
+.br
+.ti -1c
+.RI "\fBMoteurPhy\fP * \fBmoteurPhy\fP () const "
+.br
+.ti -1c
+.RI "\fBGrille\fP * \fBgrille\fP () const "
+.br
+.ti -1c
+.RI "void \fBgo\fP ()"
+.br
+.ti -1c
+.RI "\fBPosition\fP * \fBmasterPos\fP ()"
+.br
+.ti -1c
+.RI "\fBPosition\fP * \fBslavePos\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP * \fBmasterBlob\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP * \fBslaveBlob\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP * \fBnextMaster\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP * \fBnextSlave\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCombo\fP (int combo)"
+.br
+.ti -1c
+.RI "void \fBresetCombo\fP ()"
+.br
+.ti -1c
+.RI "bool \fBlaunchCombo\fP () const "
+.br
+.ti -1c
+.RI "int \fBcombo\fP () const "
+.br
+.ti -1c
+.RI "void \fBaddDarkBlob\fP ()"
+.br
+.ti -1c
+.RI "bool \fBlooser\fP () const "
+.br
+.ti -1c
+.RI "int \fBscore\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBthink\fP ()=0"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_looser\fP"
+.br
+.ti -1c
+.RI "\fBMoteurPhy\fP * \fB_moteurPhy\fP"
+.br
+.ti -1c
+.RI "int \fB_combo\fP"
+.br
+.ti -1c
+.RI "\fBBlobs\fP \fB_masterBlob\fP"
+.br
+.ti -1c
+.RI "\fBBlobs\fP \fB_slaveBlob\fP"
+.br
+.ti -1c
+.RI "\fBBlobs\fP \fB_nextMaster\fP"
+.br
+.ti -1c
+.RI "\fBBlobs\fP \fB_nextSlave\fP"
+.br
+.ti -1c
+.RI "\fBGrille\fP * \fB_grille\fP"
+.br
+.ti -1c
+.RI "std::list< \fBBlobs\fP > * \fB_nextBlobs\fP"
+.br
+.ti -1c
+.RI "std::list< \fBBlobs\fP >::iterator \fB_it\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_master\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_slave\fP"
+.br
+.ti -1c
+.RI "bool \fB_go\fP"
+.br
+.ti -1c
+.RI "bool \fB_launchCombo\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fBposFen\fP"
+.br
+.ti -1c
+.RI "int \fB_nextDarkBlobs\fP"
+.br
+.ti -1c
+.RI "bool \fB_landing\fP"
+.br
+.ti -1c
+.RI "int \fB_newDelay\fP"
+.br
+.ti -1c
+.RI "int \fB_score\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 15 du fichier DashBoard.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "DashBoard::DashBoard (inttaille, \fBGrille\fP *grille, std::list< \fBBlobs\fP > *randBlobs)\fC [inline]\fP"
+.PP
+Définition à la ligne 40 du fichier DashBoard.h.
+.SS "virtual DashBoard::~DashBoard ()\fC [inline, virtual]\fP"
+.PP
+Définition à la ligne 51 du fichier DashBoard.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void DashBoard::addDarkBlob ()"
+.SS "int DashBoard::combo () const\fC [inline]\fP"
+.PP
+Définition à la ligne 72 du fichier DashBoard.h.
+.SS "void DashBoard::go ()"
+.PP
+Réimplémentée dans \fBAi\fP.
+.SS "\fBGrille\fP* DashBoard::grille () const\fC [inline]\fP"
+.PP
+Définition à la ligne 60 du fichier DashBoard.h.
+.SS "bool DashBoard::launchCombo () const\fC [inline]\fP"
+.PP
+Définition à la ligne 71 du fichier DashBoard.h.
+.SS "bool DashBoard::looser () const\fC [inline]\fP"
+.PP
+Définition à la ligne 74 du fichier DashBoard.h.
+.SS "\fBBlobs\fP* DashBoard::masterBlob ()\fC [inline]\fP"
+.PP
+Définition à la ligne 65 du fichier DashBoard.h.
+.SS "\fBPosition\fP* DashBoard::masterPos ()\fC [inline]\fP"
+.PP
+Définition à la ligne 63 du fichier DashBoard.h.
+.SS "\fBMoteurPhy\fP* DashBoard::moteurPhy () const\fC [inline]\fP"
+.PP
+Définition à la ligne 56 du fichier DashBoard.h.
+.SS "\fBBlobs\fP* DashBoard::nextMaster ()\fC [inline]\fP"
+.PP
+Définition à la ligne 67 du fichier DashBoard.h.
+.SS "\fBBlobs\fP* DashBoard::nextSlave ()\fC [inline]\fP"
+.PP
+Définition à la ligne 68 du fichier DashBoard.h.
+.SS "void DashBoard::resetCombo ()"
+.SS "int DashBoard::score () const\fC [inline]\fP"
+.PP
+Définition à la ligne 75 du fichier DashBoard.h.
+.SS "void DashBoard::setCombo (intcombo)\fC [inline]\fP"
+.PP
+Définition à la ligne 69 du fichier DashBoard.h.
+.SS "\fBBlobs\fP* DashBoard::slaveBlob ()\fC [inline]\fP"
+.PP
+Définition à la ligne 66 du fichier DashBoard.h.
+.SS "\fBPosition\fP* DashBoard::slavePos ()\fC [inline]\fP"
+.PP
+Définition à la ligne 64 du fichier DashBoard.h.
+.SS "virtual void DashBoard::think ()\fC [pure virtual]\fP"
+.PP
+Implémenté dans \fBAi\fP, \fBEasy\fP, \fBHard\fP, et \fBJoueur\fP.
+.SH "Documentation des données membres"
+.PP 
+.SS "int \fBDashBoard::_combo\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 21 du fichier DashBoard.h.
+.SS "bool \fBDashBoard::_go\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 31 du fichier DashBoard.h.
+.SS "\fBGrille\fP* \fBDashBoard::_grille\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 26 du fichier DashBoard.h.
+.SS "std::list<\fBBlobs\fP>::iterator \fBDashBoard::_it\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 28 du fichier DashBoard.h.
+.SS "bool \fBDashBoard::_landing\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 35 du fichier DashBoard.h.
+.SS "bool \fBDashBoard::_launchCombo\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 32 du fichier DashBoard.h.
+.SS "bool \fBDashBoard::_looser\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 19 du fichier DashBoard.h.
+.SS "\fBPosition\fP \fBDashBoard::_master\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 29 du fichier DashBoard.h.
+.SS "\fBBlobs\fP \fBDashBoard::_masterBlob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 22 du fichier DashBoard.h.
+.SS "\fBMoteurPhy\fP* \fBDashBoard::_moteurPhy\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 20 du fichier DashBoard.h.
+.SS "int \fBDashBoard::_newDelay\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 36 du fichier DashBoard.h.
+.SS "std::list<\fBBlobs\fP>* \fBDashBoard::_nextBlobs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 27 du fichier DashBoard.h.
+.SS "int \fBDashBoard::_nextDarkBlobs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 34 du fichier DashBoard.h.
+.SS "\fBBlobs\fP \fBDashBoard::_nextMaster\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 24 du fichier DashBoard.h.
+.SS "\fBBlobs\fP \fBDashBoard::_nextSlave\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 25 du fichier DashBoard.h.
+.SS "int \fBDashBoard::_score\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 37 du fichier DashBoard.h.
+.SS "\fBPosition\fP \fBDashBoard::_slave\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 30 du fichier DashBoard.h.
+.SS "\fBBlobs\fP \fBDashBoard::_slaveBlob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 23 du fichier DashBoard.h.
+.SS "\fBPosition\fP \fBDashBoard::posFen\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 33 du fichier DashBoard.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

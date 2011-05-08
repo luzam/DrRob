@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00013.html#afc5325d5fbbff1cd9c72b943726a02ea" title="MoteurPhy::colBlobCourant" alt="" coords="173,5,384,33"/>
+<area shape="rect" id="node5" href="$a00013.html#ac552223e5740621815438cd1a4097b87" title="MoteurPhy::droite" alt="" coords="205,55,352,83"/>
+<area shape="rect" id="node7" href="$a00013.html#aff04c5ab8ca86434f15b2d09aeb4d3c4" title="MoteurPhy::gauche" alt="" coords="203,106,355,134"/>
+<area shape="rect" id="node9" href="$a00013.html#a36aa8c6a3c53abab11d7c76e68fc5922" title="MoteurPhy::speedUp" alt="" coords="197,157,360,185"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00010.html#a1b8904c208b5126198f8a0ae1660ba42" title="Hard::gotocol" alt="" coords="229,81,347,109"/>
+<area shape="rect" id="node13" href="$a00013.html#a268b4af76d3a123c58bf3e74c34732d9" title="MoteurPhy::orientation" alt="" coords="199,131,377,159"/>
+<area shape="rect" id="node15" href="$a00013.html#a48b81367d338f8887643db583281d8fb" title="MoteurPhy::rotationAntiHoraire" alt="" coords="169,182,407,210"/>
+<area shape="rect" id="node17" href="$a00013.html#a28c33e603d5b4938e005b5cef1dff958" title="MoteurPhy::rotationHoraire" alt="" coords="183,233,393,261"/>
+<area shape="rect" id="node5" href="$a00013.html#afc5325d5fbbff1cd9c72b943726a02ea" title="MoteurPhy::colBlobCourant" alt="" coords="456,5,667,33"/>
+<area shape="rect" id="node7" href="$a00013.html#ac552223e5740621815438cd1a4097b87" title="MoteurPhy::droite" alt="" coords="488,55,635,83"/>
+<area shape="rect" id="node9" href="$a00013.html#aff04c5ab8ca86434f15b2d09aeb4d3c4" title="MoteurPhy::gauche" alt="" coords="485,106,637,134"/>
+<area shape="rect" id="node11" href="$a00013.html#a36aa8c6a3c53abab11d7c76e68fc5922" title="MoteurPhy::speedUp" alt="" coords="480,157,643,185"/>
+</map>
