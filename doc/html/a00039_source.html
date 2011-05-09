@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de source/DashBoard.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00039.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">source/DashBoard.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00039.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;../include/DashBoard.h&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00007"></a><a class="code" href="a00006.html#aedb1665a2fe05a34f0bbca968650b9a3">00007</a> <span class="keywordtype">void</span> <a class="code" href="a00006.html#aedb1665a2fe05a34f0bbca968650b9a3" title="main loop for each DashBoard">DashBoard::go</a>()
+<a name="l00008"></a>00008 {
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010     <span class="keywordflow">if</span>(!<a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a>&amp;&amp;<a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#a675db2a23a1a2a55668e823adca5a9ef" title="(one liner)">checkLoose</a>())
+<a name="l00011"></a>00011     {
+<a name="l00012"></a>00012         <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#acdddbfa2d76354f294bc017196c5bc16">animFallin</a>(<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a187627c77d1f8f3abdfc943c78049036">taille</a>());
+<a name="l00013"></a>00013         <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>(<a class="code" href="a00021.html#ab87bacfdad76e61b9412d7124be44c1ca9eea16b4e105c96853a3a4cb462cc3a4">BLANK</a>);
+<a name="l00014"></a>00014         <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>(<a class="code" href="a00021.html#ab87bacfdad76e61b9412d7124be44c1ca9eea16b4e105c96853a3a4cb462cc3a4">BLANK</a>);
+<a name="l00015"></a>00015         <a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a> = <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#a675db2a23a1a2a55668e823adca5a9ef" title="(one liner)">checkLoose</a>();
+<a name="l00016"></a>00016         <span class="keywordflow">return</span>;
+<a name="l00017"></a>00017     }
+<a name="l00018"></a>00018     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a12cae430d3bf41e1fa7dbb15b8285966">_looser</a>)
+<a name="l00019"></a>00019     {
+<a name="l00020"></a>00020         <span class="keywordflow">return</span>;
+<a name="l00021"></a>00021     }
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ae9c1c631f6aec115d9da860a2c117422">fixed</a>())
+<a name="l00024"></a>00024     {
+<a name="l00025"></a>00025         <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>(<a class="code" href="a00021.html#ab87bacfdad76e61b9412d7124be44c1ca9eea16b4e105c96853a3a4cb462cc3a4">BLANK</a>);
+<a name="l00026"></a>00026         <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>(<a class="code" href="a00021.html#ab87bacfdad76e61b9412d7124be44c1ca9eea16b4e105c96853a3a4cb462cc3a4">BLANK</a>);
+<a name="l00027"></a>00027     }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>!=0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ae9c1c631f6aec115d9da860a2c117422">fixed</a>())
+<a name="l00031"></a>00031     {
+<a name="l00032"></a>00032         <a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>-=<a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#a70e60f93d2b0ff9d37fd0e3967b3d454" title="(one liner)">checkDark</a>(<a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>);
+<a name="l00033"></a>00033         <span class="comment">//return;</span>
+<a name="l00034"></a>00034     }
+<a name="l00035"></a>00035     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a97d4047a17d5ef7e5be05b56e014d8b3">comboting</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#aad81aa6262b2df09b7f5f6867b7d6948">falling</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#ae85e20bc3da47e38fff29e6e2f9ac6c0">checkLanding</a>()==0)
+<a name="l00036"></a>00036     {
+<a name="l00037"></a>00037         <a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">_go</a> = <span class="keyword">true</span>;
+<a name="l00038"></a>00038         <span class="comment">//return;</span>
+<a name="l00039"></a>00039     }
+<a name="l00040"></a>00040     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">_go</a> &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#aad81aa6262b2df09b7f5f6867b7d6948">falling</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a97d4047a17d5ef7e5be05b56e014d8b3">comboting</a>()==0&amp;&amp; <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#ae85e20bc3da47e38fff29e6e2f9ac6c0">checkLanding</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#a858572a13fbc8917cec074554ca574d4">checkFalling</a>() == 0 )
+<a name="l00041"></a>00041     {
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ae9c1c631f6aec115d9da860a2c117422">fixed</a>()&amp;&amp; <a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>==0)
+<a name="l00044"></a>00044         {
+<a name="l00045"></a>00045             <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a44aed8a490288604e2d4eb4b60f51b09">_newDelay</a>--==0){
+<a name="l00046"></a>00046             <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(<a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">_nextMaster</a>);
+<a name="l00047"></a>00047             <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(<a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">_nextSlave</a>);
+<a name="l00048"></a>00048             <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ab4729174c75f3bf9d0fe80804a97dc4a">setFixed</a>(<span class="keyword">false</span>);
+<a name="l00049"></a>00049             ++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>;
+<a name="l00050"></a>00050             <span class="keywordflow">if</span>(<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>==<a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">_nextBlobs</a>-&gt;end())
+<a name="l00051"></a>00051                 ++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>;
+<a name="l00052"></a>00052             <a class="code" href="a00006.html#a08ac2c46640d46b44ae523bb908489c0">_nextMaster</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(*<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>);
+<a name="l00053"></a>00053             ++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>;
+<a name="l00054"></a>00054             <span class="keywordflow">if</span>(<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>==<a class="code" href="a00006.html#a2621904ab56530934f9738bdd425ecde">_nextBlobs</a>-&gt;end())
+<a name="l00055"></a>00055                 ++<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>;
+<a name="l00056"></a>00056             <a class="code" href="a00006.html#a8e6a09f0e9b1459e132b270356238000">_nextSlave</a>.<a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(*<a class="code" href="a00006.html#aa3d5cd0bb59d1545de16968d0b850903">_it</a>);
+<a name="l00057"></a>00057             <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a7949b13ddb18140c687c5ff7d0c5c7c2">nextBlobs</a>(<a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>,<a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>);
+<a name="l00058"></a>00058             <a class="code" href="a00006.html#a44aed8a490288604e2d4eb4b60f51b09">_newDelay</a> = 2;}
+<a name="l00059"></a>00059         }
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061         <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#aad81aa6262b2df09b7f5f6867b7d6948">falling</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a97d4047a17d5ef7e5be05b56e014d8b3">comboting</a>()==0&amp;&amp; <a class="code" href="a00006.html#a9ced0e67d8e061e3890b476a572dde6b">_grille</a>-&gt;<a class="code" href="a00009.html#ae85e20bc3da47e38fff29e6e2f9ac6c0">checkLanding</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a2ad7eaa7e5e5a6f6578cbe1be03b9726">_go</a>)
+<a name="l00062"></a>00062         {
+<a name="l00063"></a>00063             <span class="keywordtype">bool</span> land = <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a333168582e7ceaa77b7575fab5a5c4fb" title="Moove current blobs, if possible.">moove</a>(&amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>,&amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>);
+<a name="l00064"></a>00064             <span class="keywordflow">if</span>(land&amp;&amp;<a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">_landing</a>)
+<a name="l00065"></a>00065             {
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067                 <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00037.html#a5d74787dedbc4e11c1ab15bf487e61f8aed02a50bc7e61636eb8ab00f1d31b9c4">LANDING</a>);
+<a name="l00068"></a>00068                 <a class="code" href="a00006.html#a9a81b59e94c30e8542d4e0c7f3be7e60">_masterBlob</a>.<a class="code" href="a00002.html#acb65ae69b396af27306894fc8482cfd4">setLanding</a>(<a class="code" href="a00028.html#a7b620b1d77305e47aecb5e27e8a13d1e">LANDING_ANIM_TIME</a>);
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070                 <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#acb65ae69b396af27306894fc8482cfd4">setLanding</a>(<a class="code" href="a00028.html#a7b620b1d77305e47aecb5e27e8a13d1e">LANDING_ANIM_TIME</a>);
+<a name="l00071"></a>00071                 <a class="code" href="a00006.html#a5030dc62dcb274352e0ca951eea8e077">_slaveBlob</a>.<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00037.html#a5d74787dedbc4e11c1ab15bf487e61f8aed02a50bc7e61636eb8ab00f1d31b9c4">LANDING</a>);
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073                 <a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">_landing</a> = <span class="keyword">false</span>;
+<a name="l00074"></a>00074             }
+<a name="l00075"></a>00075             <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!land)
+<a name="l00076"></a>00076             {
+<a name="l00077"></a>00077                 <a class="code" href="a00006.html#a164a37075ee0d4fe23d04e3a5f73b6df">_landing</a> = <span class="keyword">true</span>;
+<a name="l00078"></a>00078             }
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082     }
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086     <span class="keywordflow">if</span>(<a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a>!=0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a97d4047a17d5ef7e5be05b56e014d8b3">comboting</a>()==0 &amp;&amp; <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#aad81aa6262b2df09b7f5f6867b7d6948">falling</a>()==0 &amp;&amp; !<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ae9c1c631f6aec115d9da860a2c117422">fixed</a>())
+<a name="l00087"></a>00087     {
+<a name="l00088"></a>00088         <a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">_launchCombo</a>=<span class="keyword">true</span>;
+<a name="l00089"></a>00089     }
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 }
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="a00006.html#a29fcb010d048847b44e8bba0e85a3002">00093</a> <span class="keywordtype">void</span> <a class="code" href="a00006.html#a29fcb010d048847b44e8bba0e85a3002">DashBoard::resetCombo</a>()
+<a name="l00094"></a>00094 {
+<a name="l00095"></a>00095     <a class="code" href="a00006.html#ada98245f69668c579e27d128515dcc7d">_launchCombo</a> = <span class="keyword">false</span>;
+<a name="l00096"></a>00096     <a class="code" href="a00006.html#a602b2b8a2a7364c1456c1315cd634404">_score</a>+=<a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a>*10;
+<a name="l00097"></a>00097     <a class="code" href="a00006.html#a31c34a088ccffcd18aa0cb833c40808c">_combo</a> =0;
+<a name="l00098"></a>00098     <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a540eb7aa4aad37a5487ac0e4c91da903">setCombo</a>(0);
+<a name="l00099"></a>00099 }
+<a name="l00100"></a><a class="code" href="a00006.html#af643d3187d22b2b33bce16863c507140">00100</a> <span class="keywordtype">void</span> <a class="code" href="a00006.html#af643d3187d22b2b33bce16863c507140">DashBoard::addDarkBlob</a>()
+<a name="l00101"></a>00101 {
+<a name="l00102"></a>00102     <a class="code" href="a00006.html#aa8b41dfc552b2c925c1f0d35257d5343">_nextDarkBlobs</a>++;
+<a name="l00103"></a>00103 }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00039.html">DashBoard.cpp</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:28:34 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définition de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

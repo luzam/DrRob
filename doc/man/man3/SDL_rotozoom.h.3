@@ -1,0 +1,90 @@
+.TH "include/SDL_rotozoom.h" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/SDL_rotozoom.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <math.h>\fP
+.br
+\fC#include <SDL.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBM_PI\fP   3.141592654"
+.br
+.ti -1c
+.RI "#define \fBSMOOTHING_OFF\fP   0"
+.br
+.RI "\fIDisable anti-aliasing (no smoothing). \fP"
+.ti -1c
+.RI "#define \fBSMOOTHING_ON\fP   1"
+.br
+.RI "\fIEnable anti-aliasing (smoothing). \fP"
+.ti -1c
+.RI "#define \fBSDL_ROTOZOOM_SCOPE\fP   extern"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE SDL_Surface * \fBrotozoomSurface\fP (SDL_Surface *src, double angle, double zoom, int smooth)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE SDL_Surface * \fBrotozoomSurfaceXY\fP (SDL_Surface *src, double angle, double zoomx, double zoomy, int smooth)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE void \fBrotozoomSurfaceSize\fP (int width, int height, double angle, double zoom, int *dstwidth, int *dstheight)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE void \fBrotozoomSurfaceSizeXY\fP (int width, int height, double angle, double zoomx, double zoomy, int *dstwidth, int *dstheight)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE SDL_Surface * \fBzoomSurface\fP (SDL_Surface *src, double zoomx, double zoomy, int smooth)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE void \fBzoomSurfaceSize\fP (int width, int height, double zoomx, double zoomy, int *dstwidth, int *dstheight)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE SDL_Surface * \fBshrinkSurface\fP (SDL_Surface *src, int factorx, int factory)"
+.br
+.ti -1c
+.RI "SDL_ROTOZOOM_SCOPE SDL_Surface * \fBrotateSurface90Degrees\fP (SDL_Surface *src, int numClockwiseTurns)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define M_PI   3.141592654"
+.PP
+Définition à la ligne 21 du fichier SDL_rotozoom.h.
+.SS "#define SDL_ROTOZOOM_SCOPE   extern"
+.PP
+Définition à la ligne 50 du fichier SDL_rotozoom.h.
+.SS "#define SMOOTHING_OFF   0"
+.PP
+Disable anti-aliasing (no smoothing). 
+.PP
+Définition à la ligne 31 du fichier SDL_rotozoom.h.
+.SS "#define SMOOTHING_ON   1"
+.PP
+Enable anti-aliasing (smoothing). 
+.PP
+Définition à la ligne 36 du fichier SDL_rotozoom.h.
+.SH "Documentation des fonctions"
+.PP 
+.SS "SDL_ROTOZOOM_SCOPE SDL_Surface* rotateSurface90Degrees (SDL_Surface *src, intnumClockwiseTurns)"
+.SS "SDL_ROTOZOOM_SCOPE SDL_Surface* rotozoomSurface (SDL_Surface *src, doubleangle, doublezoom, intsmooth)"
+.SS "SDL_ROTOZOOM_SCOPE void rotozoomSurfaceSize (intwidth, intheight, doubleangle, doublezoom, int *dstwidth, int *dstheight)"
+.SS "SDL_ROTOZOOM_SCOPE void rotozoomSurfaceSizeXY (intwidth, intheight, doubleangle, doublezoomx, doublezoomy, int *dstwidth, int *dstheight)"
+.SS "SDL_ROTOZOOM_SCOPE SDL_Surface* rotozoomSurfaceXY (SDL_Surface *src, doubleangle, doublezoomx, doublezoomy, intsmooth)"
+.SS "SDL_ROTOZOOM_SCOPE SDL_Surface* shrinkSurface (SDL_Surface *src, intfactorx, intfactory)"
+.SS "SDL_ROTOZOOM_SCOPE SDL_Surface* zoomSurface (SDL_Surface *src, doublezoomx, doublezoomy, intsmooth)"
+.SS "SDL_ROTOZOOM_SCOPE void zoomSurfaceSize (intwidth, intheight, doublezoomx, doublezoomy, int *dstwidth, int *dstheight)"
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

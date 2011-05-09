@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de source/Game.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- GÃ©nÃ©rÃ© par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00040.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">source/Game.cpp</div>  </div>
+</div>
+<div class="contents">
+<a href="a00040.html">Aller Ã  la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;../include/Game.h&quot;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &quot;../include/InterfaceX.h&quot;</span>
+<a name="l00007"></a><a class="code" href="a00008.html#ab411d0da584724addd4fdb96fc16b9a4">00007</a> <span class="keywordtype">void</span> <a class="code" href="a00008.html#ab411d0da584724addd4fdb96fc16b9a4" title="main loop">Game::go</a>()
+<a name="l00008"></a>00008 {
+<a name="l00009"></a>00009     <span class="keywordflow">while</span>(1)
+<a name="l00010"></a>00010     {
+<a name="l00011"></a>00011         <span class="keywordtype">bool</span> winner = <span class="keyword">false</span>;
+<a name="l00012"></a>00012         <span class="keywordtype">int</span> winer = 0;
+<a name="l00013"></a>00013         <span class="keywordtype">int</span> winnerDelay = 100;
+<a name="l00014"></a>00014         <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#ab36b304cac86159cb4b27e10fb35d9b8">initialisation_debut_jeu</a>();
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016         <span class="keywordflow">if</span>(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a04f6a2f38eacdf947037eaf45092c33a">menu</a>()==-1)
+<a name="l00017"></a>00017         {
+<a name="l00018"></a>00018             <span class="comment">//On quitte</span>
+<a name="l00019"></a>00019             <span class="keywordflow">return</span>;
+<a name="l00020"></a>00020         }
+<a name="l00021"></a>00021         <a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>=<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#aa202bf95ccd9db4a78a5eed055c56c22">NbJoueurs</a>();
+<a name="l00022"></a>00022         <a class="code" href="a00008.html#a4c0eee968b713100c74cde5aa6e984e0">_nbAI</a>=<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a9d87b046afcb1badd511cd1ee97ef062">NbAI</a>();
+<a name="l00023"></a>00023         <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#addc58fa271a81d66c482aa8ac0e178af">setNbJoueurs</a>(<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>+<a class="code" href="a00008.html#a4c0eee968b713100c74cde5aa6e984e0">_nbAI</a>);
+<a name="l00024"></a>00024         std::vector&lt;bool&gt; _turningBool(<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>,<span class="keyword">false</span>);
+<a name="l00025"></a>00025         std::vector&lt;bool&gt; _turninghBool(<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>,<span class="keyword">false</span>);
+<a name="l00026"></a>00026         <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a0e50405d74683c38fc1f0e3f71cf4c3d">compute_game</a>();
+<a name="l00027"></a>00027         assert(<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>+<a class="code" href="a00008.html#a4c0eee968b713100c74cde5aa6e984e0">_nbAI</a>&gt;0);
+<a name="l00028"></a>00028         <a class="code" href="a00008.html#ac776a53b458aefe8f9fcd747cbd9f017">initBlobs</a>();
+<a name="l00029"></a>00029         srand(time(NULL));
+<a name="l00030"></a>00030         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.clear();
+<a name="l00031"></a>00031         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>; c++)
+<a name="l00032"></a>00032             <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.push_back(<span class="keyword">new</span> <a class="code" href="a00012.html">Joueur</a>(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>(),<span class="keyword">new</span> <a class="code" href="a00009.html">Grille</a>((<span class="keywordtype">int</span>)(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>())),&amp;<a class="code" href="a00008.html#a33bcc74459901d064c807acff9c9526a">_randBlobs</a>));
+<a name="l00033"></a>00033         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0 ; c&lt;<a class="code" href="a00008.html#a4c0eee968b713100c74cde5aa6e984e0">_nbAI</a>; c++){
+<a name="l00034"></a>00034             <span class="keywordflow">if</span>(rand()%3==0)
+<a name="l00035"></a>00035             <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.push_back(<span class="keyword">new</span> <a class="code" href="a00007.html">Easy</a>(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>(),<span class="keyword">new</span> <a class="code" href="a00009.html">Grille</a>((<span class="keywordtype">int</span>)(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>())),&amp;<a class="code" href="a00008.html#a33bcc74459901d064c807acff9c9526a">_randBlobs</a>));
+<a name="l00036"></a>00036             <span class="keywordflow">else</span>
+<a name="l00037"></a>00037             <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.push_back(<span class="keyword">new</span> <a class="code" href="a00010.html">Hard</a>(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>(),<span class="keyword">new</span> <a class="code" href="a00009.html">Grille</a>((<span class="keywordtype">int</span>)(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#afb2d1a8f5360c53374ea396f366cccf0">taille_blob</a>())),&amp;<a class="code" href="a00008.html#a33bcc74459901d064c807acff9c9526a">_randBlobs</a>));
+<a name="l00038"></a>00038         }
+<a name="l00039"></a>00039         <a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a> = (<span class="keywordtype">int</span> *) calloc(_nbJoueurs+_nbAI,<span class="keyword">sizeof</span>(<span class="keywordtype">int</span>));
+<a name="l00040"></a>00040         SDL_Event event;
+<a name="l00041"></a>00041         <span class="keywordtype">int</span> continuer = 1;
+<a name="l00042"></a>00042         <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a1564b6d5334c9a23025b6090c1968bca">blits</a>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         <span class="keywordflow">while</span> (continuer) <span class="comment">/* TANT QUE la variable ne vaut pas 0 */</span>
+<a name="l00045"></a>00045         {
+<a name="l00046"></a>00046             <span class="keywordflow">while</span>(SDL_PollEvent(&amp;event)) <span class="comment">/* On attend un évènement qu&#39;on récupère dans event */</span>
+<a name="l00047"></a>00047             {
+<a name="l00048"></a>00048                 <span class="keywordflow">if</span> (event.type==SDL_QUIT)  <span class="comment">/* Si c&#39;est un évènement QUITTER */</span>
+<a name="l00049"></a>00049                 {
+<a name="l00050"></a>00050                     continuer = 0; <span class="comment">/* On met le booléen à 0, donc la boucle va s&#39;arrêter */</span>
+<a name="l00051"></a>00051                 }
+<a name="l00052"></a>00052                 Uint8 *keystates = SDL_GetKeyState( NULL );
+<a name="l00053"></a>00053                     <span class="keywordflow">if</span> (keystates[SDLK_ESCAPE]) <span class="comment">/* Appui sur la touche Echap, on arrête le programme */</span>
+<a name="l00054"></a>00054                     continuer = 0;
+<a name="l00055"></a>00055                 <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="a00008.html#a44492b721749d5d05a7a28842af710a8">_nbJoueurs</a>; i++)
+<a name="l00056"></a>00056                 {
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059                     <span class="keywordflow">if</span> (keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a53ad5f5d4c4d1d56261b0f143325675d">CGAUCHE</a>]])
+<a name="l00060"></a>00060                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;gauche(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterPos(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slavePos());
+<a name="l00061"></a>00061                     <span class="keywordflow">if</span> (keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a2b00be84524f86987e100caa815f8eaa">CDROITE</a>]])
+<a name="l00062"></a>00062                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;droite(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterPos(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slavePos());
+<a name="l00063"></a>00063                     <span class="keywordflow">if</span> (keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a8b83df918bd05d18b7c16106d0015fac">CBAS</a>]])
+<a name="l00064"></a>00064                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;speedUp();
+<a name="l00065"></a>00065                     <span class="keywordflow">else</span>
+<a name="l00066"></a>00066                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;speedToNormal();
+<a name="l00067"></a>00067                     <span class="keywordflow">if</span> ((keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a3d5dc97311e9ac8b6031e4267e10520c">CHORAIRE</a>]] )&amp;&amp; !_turningBool.at(i) )
+<a name="l00068"></a>00068                     {
+<a name="l00069"></a>00069                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;rotationHoraire(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterPos(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slavePos());
+<a name="l00070"></a>00070                         _turningBool.at(i) = <span class="keyword">true</span>;
+<a name="l00071"></a>00071                     }
+<a name="l00072"></a>00072                     <span class="keywordflow">if</span>(!keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][CHORAIRE]] )
+<a name="l00073"></a>00073                         _turningBool.at(i) = <span class="keyword">false</span>;
+<a name="l00074"></a>00074                     <span class="keywordflow">if</span> (keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a09bc5379d222ea3f01750511bc2926ff">CANTIHORAIRE</a>]] &amp;&amp; !_turninghBool.at(i) )
+<a name="l00075"></a>00075                     {
+<a name="l00076"></a>00076                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;moteurPhy()-&gt;rotationAntiHoraire(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterPos(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slavePos());
+<a name="l00077"></a>00077                         _turninghBool.at(i) = <span class="keyword">true</span>;
+<a name="l00078"></a>00078                     }
+<a name="l00079"></a>00079                     <span class="keywordflow">if</span>(!keystates[(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a2770bc51029e6ac83600fb0db36147e1">Commandes</a>())[i][<a class="code" href="a00023.html#a949b4a8624f2b4343a97e2f265d19aa7a09bc5379d222ea3f01750511bc2926ff">CANTIHORAIRE</a>]] )
+<a name="l00080"></a>00080                         _turninghBool.at(i) = <span class="keyword">false</span>;
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082                 }
+<a name="l00083"></a>00083             }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085             <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a7417ed7ba1bbd0bd367ce7e727236eb6">_clock</a>.<a class="code" href="a00003.html#ad8aff49c20fb41555b0b8bae79530c08">tic</a>(20))
+<a name="l00086"></a>00086             {
+<a name="l00087"></a>00087                 <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); i++)
+<a name="l00088"></a>00088                     <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[i]-&gt;moteurPhy()-&gt;speedUpBool())
+<a name="l00089"></a>00089                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;go();
+<a name="l00090"></a>00090                 <span class="keywordflow">if</span>(_nbJoueurs+_nbAI &gt;1)
+<a name="l00091"></a>00091                 {
+<a name="l00092"></a>00092                     <span class="keywordtype">int</span> jvivant= 0;
+<a name="l00093"></a>00093                     <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); i++)
+<a name="l00094"></a>00094                     {
+<a name="l00095"></a>00095                         <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[i]-&gt;looser())
+<a name="l00096"></a>00096                             jvivant++;
+<a name="l00097"></a>00097                         <span class="keywordflow">else</span> winer=i;
+<a name="l00098"></a>00098                     }
+<a name="l00099"></a>00099                     <span class="keywordflow">if</span>(jvivant&gt;= _nbJoueurs+_nbAI - 1)
+<a name="l00100"></a>00100                         winner = <span class="keyword">true</span>;
+<a name="l00101"></a>00101                     <span class="keywordflow">if</span>(winner &amp;&amp; (winnerDelay--)==0)
+<a name="l00102"></a>00102                     {
+<a name="l00103"></a>00103                         continuer = 0;
+<a name="l00104"></a>00104                         <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a885bd9df47f9c00230fe13ad20ce29a7">winner</a>(winer);
+<a name="l00105"></a>00105                         SDL_Flip(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#ada4011aa7937ea45af992c4cad392238">screen</a>());
+<a name="l00106"></a>00106                         <span class="keywordflow">while</span>(SDL_WaitEvent(&amp;event)){
+<a name="l00107"></a>00107                         Uint8* keystates = SDL_GetKeyState( NULL );
+<a name="l00108"></a>00108                         <span class="keywordflow">if</span>(keystates[SDLK_RETURN])
+<a name="l00109"></a>00109                             <span class="keywordflow">break</span>;
+<a name="l00110"></a>00110                         }
+<a name="l00111"></a>00111                     }
+<a name="l00112"></a>00112                 }
+<a name="l00113"></a>00113                 <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a7417ed7ba1bbd0bd367ce7e727236eb6">_clock</a>.<a class="code" href="a00003.html#a68fc343f570b848743edf1bcd10a14c6">tac</a>())
+<a name="l00114"></a>00114                 {
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116                     <span class="comment">// ici mises a jours du jeu, horloge plus lente et indépendantes</span>
+<a name="l00117"></a>00117                     <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); i++)
+<a name="l00118"></a>00118                     {
+<a name="l00119"></a>00119                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;think();
+<a name="l00120"></a>00120                         <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;go();
+<a name="l00121"></a>00121                         <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;launchCombo())
+<a name="l00122"></a>00122                         {
+<a name="l00123"></a>00123                             <a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a>[i] = <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;combo();
+<a name="l00124"></a>00124                             <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;resetCombo();
+<a name="l00125"></a>00125                         }
+<a name="l00126"></a>00126                     }
+<a name="l00127"></a>00127                 }
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132                 <span class="comment">//ici les animations indépendantes du fonctionnements du jeu type shining</span>
+<a name="l00133"></a>00133                 <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a1564b6d5334c9a23025b6090c1968bca">blits</a>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>);
+<a name="l00134"></a>00134                 <a class="code" href="a00008.html#a5be594f7665ef28f1c1c45a13cbc329c" title="main loop">repartitionCombo</a>(winner);
+<a name="l00135"></a>00135                 <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); i++)
+<a name="l00136"></a>00136                     <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a5bcad9348c35e0472ec0bb1bf66770fb">maj_anims</a>(*<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[i]);
+<a name="l00137"></a>00137                 <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); i++)
+<a name="l00138"></a>00138                 {
+<a name="l00139"></a>00139                     <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#ae5bc9e2ed46c0448eb4f7dea08217b45">blit_blobs_mobiles</a>((*<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterPos()),(*<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slavePos()),
+<a name="l00140"></a>00140                                            <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;masterBlob(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;slaveBlob(),(int)i);
+<a name="l00141"></a>00141                     <a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#a98196e7e039d0613d157349b7a16149f">blit_nextBlob</a>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;nextMaster(),<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.at(i)-&gt;nextSlave(),(int)i);
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143                 }
+<a name="l00144"></a>00144                 SDL_Flip(<a class="code" href="a00008.html#aa1772649a588646ef4e1a131e94d05b1">_X</a>-&gt;<a class="code" href="a00011.html#ada4011aa7937ea45af992c4cad392238">screen</a>());
+<a name="l00145"></a>00145             }
+<a name="l00146"></a>00146         }
+<a name="l00147"></a>00147         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;_nbJoueurs+<a class="code" href="a00008.html#a4c0eee968b713100c74cde5aa6e984e0">_nbAI</a> ; c++)
+<a name="l00148"></a>00148             <span class="keyword">delete</span> <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[c];
+<a name="l00149"></a>00149         free(<a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a>);
+<a name="l00150"></a>00150     }
+<a name="l00151"></a>00151 }
+<a name="l00156"></a><a class="code" href="a00008.html#a5be594f7665ef28f1c1c45a13cbc329c">00156</a> <span class="keywordtype">void</span> <a class="code" href="a00008.html#a5be594f7665ef28f1c1c45a13cbc329c" title="main loop">Game::repartitionCombo</a>(<span class="keywordtype">bool</span> winner)
+<a name="l00157"></a>00157 {
+<a name="l00158"></a>00158     <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size()==1 || winner)
+<a name="l00159"></a>00159         <span class="keywordflow">return</span>;
+<a name="l00160"></a>00160     srand(time(NULL));
+<a name="l00161"></a>00161     <span class="keywordtype">int</span> target =0;
+<a name="l00162"></a>00162     <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i=0; i&lt;<a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size(); ++i)
+<a name="l00163"></a>00163     {
+<a name="l00164"></a>00164         <span class="keywordflow">if</span>(<a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a>[i]!=0)
+<a name="l00165"></a>00165         {
+<a name="l00166"></a>00166             <span class="keywordflow">while</span>(<a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a>[i]!=0)
+<a name="l00167"></a>00167             {
+<a name="l00168"></a>00168                 <span class="keywordflow">do</span>
+<a name="l00169"></a>00169                 {
+<a name="l00170"></a>00170                     target = rand() % <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>.size();
+<a name="l00171"></a>00171                 }
+<a name="l00172"></a>00172                 <span class="keywordflow">while</span>(target==(<span class="keywordtype">int</span>)i || <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[target]-&gt;looser());
+<a name="l00173"></a>00173                 <a class="code" href="a00008.html#a45fee55be795271d23513ebea986e77e">_dashBoards</a>[target]-&gt;addDarkBlob();
+<a name="l00174"></a>00174                 <a class="code" href="a00008.html#a767c9632e60bc307680766395ecb9b1b">_combo</a>[i]--;
+<a name="l00175"></a>00175             }
+<a name="l00176"></a>00176         }
+<a name="l00177"></a>00177     }
+<a name="l00178"></a>00178 }
+<a name="l00179"></a>00179 
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00040.html">Game.cpp</a>      </li>
+      <li class="footer">GÃ©nÃ©rÃ© le Mon May 9 2011 00:28:34 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>DÃ©finition de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Ã‰numÃ©rations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs Ã©numÃ©rÃ©es</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

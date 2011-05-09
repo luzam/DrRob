@@ -1,0 +1,199 @@
+.TH "Blobs" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Blobs \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Blobs.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBBlobs\fP (\fBColor\fP color, \fBState\fP state=NO_STATE, \fBLink\fP link=NO_LINK)"
+.br
+.ti -1c
+.RI "\fBBlobs\fP ()"
+.br
+.ti -1c
+.RI "\fBBlobs\fP (const \fBBlobs\fP &blob)"
+.br
+.ti -1c
+.RI "\fB~Blobs\fP ()"
+.br
+.ti -1c
+.RI "const size_t \fBcolor\fP () const "
+.br
+.ti -1c
+.RI "const size_t \fBstate\fP () const "
+.br
+.ti -1c
+.RI "const size_t \fBlink\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (size_t color)"
+.br
+.ti -1c
+.RI "void \fBsetState\fP (size_t state)"
+.br
+.ti -1c
+.RI "void \fBsetLink\fP (size_t link)"
+.br
+.ti -1c
+.RI "void \fBsetBlob\fP (size_t color, size_t state, size_t link)"
+.br
+.ti -1c
+.RI "void \fBsetBlob\fP (const \fBBlobs\fP &blob)"
+.br
+.ti -1c
+.RI "void \fBsetFalling\fP (int falling)"
+.br
+.ti -1c
+.RI "void \fBsetFallingAnim\fP (int falling)"
+.br
+.ti -1c
+.RI "void \fBsetTurning\fP (int turning)"
+.br
+.ti -1c
+.RI "void \fBsetLanding\fP (int landing)"
+.br
+.ti -1c
+.RI "void \fBsetComboting\fP (int comboting)"
+.br
+.ti -1c
+.RI "int \fBcurrent\fP () const "
+.br
+.ti -1c
+.RI "int \fBfallingDepth\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetFallingDepth\fP (int depth)"
+.br
+.ti -1c
+.RI "int \fBfallingCol\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetFallingCol\fP (int col)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "size_t \fB_color\fP"
+.br
+.ti -1c
+.RI "size_t \fB_state\fP"
+.br
+.ti -1c
+.RI "size_t \fB_link\fP"
+.br
+.ti -1c
+.RI "int \fB_current\fP"
+.br
+.ti -1c
+.RI "int \fB_fallingDepth\fP"
+.br
+.ti -1c
+.RI "size_t \fB_fallingCol\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 11 du fichier Blobs.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "Blobs::Blobs (\fBColor\fPcolor, \fBState\fPstate = \fCNO_STATE\fP, \fBLink\fPlink = \fCNO_LINK\fP)\fC [inline]\fP"
+.PP
+Définition à la ligne 21 du fichier Blobs.h.
+.SS "Blobs::Blobs ()\fC [inline]\fP"
+.PP
+Définition à la ligne 25 du fichier Blobs.h.
+.SS "Blobs::Blobs (const \fBBlobs\fP &blob)\fC [inline]\fP"
+.PP
+Définition à la ligne 28 du fichier Blobs.h.
+.SS "Blobs::~Blobs ()\fC [inline]\fP"
+.PP
+Définition à la ligne 31 du fichier Blobs.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "const size_t Blobs::color () const\fC [inline]\fP"
+.PP
+Définition à la ligne 33 du fichier Blobs.h.
+.SS "int Blobs::current () const\fC [inline]\fP"
+.PP
+Définition à la ligne 94 du fichier Blobs.h.
+.SS "int Blobs::fallingCol () const\fC [inline]\fP"
+.PP
+Définition à la ligne 106 du fichier Blobs.h.
+.SS "int Blobs::fallingDepth () const\fC [inline]\fP"
+.PP
+Définition à la ligne 98 du fichier Blobs.h.
+.SS "const size_t Blobs::link () const\fC [inline]\fP"
+.PP
+Définition à la ligne 41 du fichier Blobs.h.
+.SS "void Blobs::setBlob (const \fBBlobs\fP &blob)\fC [inline]\fP"
+.PP
+Définition à la ligne 63 du fichier Blobs.h.
+.SS "void Blobs::setBlob (size_tcolor, size_tstate, size_tlink)\fC [inline]\fP"
+.PP
+Définition à la ligne 57 du fichier Blobs.h.
+.SS "void Blobs::setColor (size_tcolor)\fC [inline]\fP"
+.PP
+Définition à la ligne 45 du fichier Blobs.h.
+.SS "void Blobs::setComboting (intcomboting)\fC [inline]\fP"
+.PP
+Définition à la ligne 89 du fichier Blobs.h.
+.SS "void Blobs::setFalling (intfalling)\fC [inline]\fP"
+.PP
+Définition à la ligne 69 du fichier Blobs.h.
+.SS "void Blobs::setFallingAnim (intfalling)\fC [inline]\fP"
+.PP
+Définition à la ligne 74 du fichier Blobs.h.
+.SS "void Blobs::setFallingCol (intcol)\fC [inline]\fP"
+.PP
+Définition à la ligne 110 du fichier Blobs.h.
+.SS "void Blobs::setFallingDepth (intdepth)\fC [inline]\fP"
+.PP
+Définition à la ligne 102 du fichier Blobs.h.
+.SS "void Blobs::setLanding (intlanding)\fC [inline]\fP"
+.PP
+Définition à la ligne 84 du fichier Blobs.h.
+.SS "void Blobs::setLink (size_tlink)\fC [inline]\fP"
+.PP
+Définition à la ligne 53 du fichier Blobs.h.
+.SS "void Blobs::setState (size_tstate)\fC [inline]\fP"
+.PP
+Définition à la ligne 49 du fichier Blobs.h.
+.SS "void Blobs::setTurning (intturning)\fC [inline]\fP"
+.PP
+Définition à la ligne 79 du fichier Blobs.h.
+.SS "const size_t Blobs::state () const\fC [inline]\fP"
+.PP
+Définition à la ligne 37 du fichier Blobs.h.
+.SH "Documentation des données membres"
+.PP 
+.SS "size_t \fBBlobs::_color\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 14 du fichier Blobs.h.
+.SS "int \fBBlobs::_current\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 17 du fichier Blobs.h.
+.SS "size_t \fBBlobs::_fallingCol\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 19 du fichier Blobs.h.
+.SS "int \fBBlobs::_fallingDepth\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 18 du fichier Blobs.h.
+.SS "size_t \fBBlobs::_link\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 16 du fichier Blobs.h.
+.SS "size_t \fBBlobs::_state\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 15 du fichier Blobs.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

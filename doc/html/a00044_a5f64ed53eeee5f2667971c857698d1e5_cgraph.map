@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00036.html#a454d4234a45eab6ec238a40cc44051d4" title="Rotates and zooms a surface with different horizontal and vertival scaling factors and optional anti&#45;..." alt="" coords="199,145,359,173"/>
+<area shape="rect" id="node5" href="$a00044.html#afe2a2e4dc6cc462c5fc98a2110b8e1ce" title="Returns colorkey info for a surface." alt="" coords="664,120,752,148"/>
+<area shape="rect" id="node7" href="$a00044.html#af48638a298820d4d1dd24a13896963d8" title="Internal target surface sizing function for rotozooms with trig result return." alt="" coords="408,44,616,72"/>
+<area shape="rect" id="node9" href="$a00044.html#aae634e7b5e6ec1622fec361ecbd0d1b7" title="Internal 32 bit rotozoomer with optional anti&#45;aliasing." alt="" coords="416,95,608,123"/>
+<area shape="rect" id="node11" href="$a00044.html#a9898b12bb565c4075c2da4db4891fd81" title="Internal 32 bit Zoomer with optional anti&#45;aliasing by bilinear interpolation." alt="" coords="432,145,592,173"/>
+<area shape="rect" id="node13" href="$a00044.html#acfeb5a322cbb575f105f1762d9d21c29" title="Internal 8 bit Zoomer without smoothing." alt="" coords="448,196,576,224"/>
+<area shape="rect" id="node15" href="$a00044.html#a126e3b96b22cc18e78e33cc1f8eb6c3c" title="Rotates and zooms 8 bit palette/Y &#39;src&#39; surface to &#39;dst&#39; surface without smoothing." alt="" coords="436,247,588,275"/>
+<area shape="rect" id="node18" href="$a00036.html#a7927e415d87ea7856794cd4cc77e0a25" title="Calculates the size of the target surface for a zoomSurface() call." alt="" coords="441,297,583,325"/>
+</map>

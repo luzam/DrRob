@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00010.html#a9f437c2157f0d7f584cc8b80b098644c" title="Hard::checkLigne" alt="" coords="188,5,329,33"/>
+<area shape="rect" id="node5" href="$a00013.html#afc5325d5fbbff1cd9c72b943726a02ea" title="MoteurPhy::colBlobCourant" alt="" coords="701,182,912,210"/>
+<area shape="rect" id="node7" href="$a00002.html#a0c301f42dbf74a239f6e94f396eb33d9" title="Blobs::color" alt="" coords="205,106,312,134"/>
+<area shape="rect" id="node9" href="$a00010.html#a6fac737ec1b166b740ca5b837dceec64" title="Hard::droite" alt="" coords="205,258,312,286"/>
+<area shape="rect" id="node14" href="$a00013.html#ac552223e5740621815438cd1a4097b87" title="MoteurPhy::droite" alt="" coords="733,461,880,489"/>
+<area shape="rect" id="node16" href="$a00013.html#aff04c5ab8ca86434f15b2d09aeb4d3c4" title="MoteurPhy::gauche" alt="" coords="731,511,883,539"/>
+<area shape="rect" id="node20" href="$a00013.html#a48b81367d338f8887643db583281d8fb" title="MoteurPhy::rotationAntiHoraire" alt="" coords="415,207,652,235"/>
+<area shape="rect" id="node22" href="$a00013.html#a28c33e603d5b4938e005b5cef1dff958" title="MoteurPhy::rotationHoraire" alt="" coords="428,359,639,387"/>
+<area shape="rect" id="node25" href="$a00010.html#a7f9949755fd2f0f4f00ac905b5e01113" title="Hard::gauche" alt="" coords="201,309,316,337"/>
+<area shape="rect" id="node32" href="$a00010.html#adb65c7409eac21ee72cca6a5a18f009b" title="Hard::majLineEmpty" alt="" coords="179,461,339,489"/>
+<area shape="rect" id="node34" href="$a00010.html#a2ef5d60b9f599447a8f9b97433e26c64" title="Hard::majLineUp" alt="" coords="191,511,327,539"/>
+<area shape="rect" id="node38" href="$a00013.html#a1a8f08b95399519bcb9b7393cce04f36" title="MoteurPhy::speedToNormal" alt="" coords="152,562,365,590"/>
+<area shape="rect" id="node40" href="$a00010.html#a30c0f8f6b7089ad3a445ab4d73475ad0" title="Hard::verticalBas" alt="" coords="188,359,329,387"/>
+<area shape="rect" id="node46" href="$a00010.html#aa3923fb9a7cd12294b8dea3db7a07053" title="Hard::verticalHaut" alt="" coords="185,207,332,235"/>
+<area shape="rect" id="node11" href="$a00010.html#a1b8904c208b5126198f8a0ae1660ba42" title="Hard::gotocol" alt="" coords="475,309,592,337"/>
+<area shape="rect" id="node18" href="$a00013.html#a268b4af76d3a123c58bf3e74c34732d9" title="MoteurPhy::orientation" alt="" coords="444,258,623,286"/>
+</map>

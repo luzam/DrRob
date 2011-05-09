@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00013.html#a7949b13ddb18140c687c5ff7d0c5c7c2" title="MoteurPhy::nextBlobs" alt="" coords="239,55,409,83"/>
+<area shape="rect" id="node11" href="$a00002.html#a9447e59fbeba596aa7e53d40cec281c4" title="Blobs::setBlob" alt="" coords="263,157,385,185"/>
+<area shape="rect" id="node18" href="$a00002.html#afc632649a46b45e05cee74d03c200728" title="Blobs::setColor" alt="" coords="259,106,389,134"/>
+<area shape="rect" id="node5" href="$a00002.html#a0c301f42dbf74a239f6e94f396eb33d9" title="Blobs::color" alt="" coords="465,106,572,134"/>
+<area shape="rect" id="node7" href="$a00014.html#ad46bb77324e2d9538e15f1a25320f1ff" title="Position::setX" alt="" coords="459,5,579,33"/>
+<area shape="rect" id="node9" href="$a00014.html#a473274f1a3e4888f9c5e3eba0889a1ab" title="Position::setY" alt="" coords="459,55,579,83"/>
+<area shape="rect" id="node14" href="$a00002.html#a66f8b006e5b94590fa9897734884615c" title="Blobs::link" alt="" coords="472,207,565,235"/>
+<area shape="rect" id="node16" href="$a00002.html#aee05e24d1502a39838c0c2457973ed92" title="Blobs::state" alt="" coords="465,157,572,185"/>
+</map>

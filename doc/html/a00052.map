@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00021.html" title="Controls.h" alt="" coords="1174,238,1267,266"/>
+<area shape="rect" id="node5" href="$a00017.html" title="Blobs.h" alt="" coords="1673,470,1745,498"/>
+<area shape="rect" id="node15" href="$a00031.html" title="MoteurPhy.h" alt="" coords="574,315,681,343"/>
+<area shape="rect" id="node46" href="$a00022.html" title="DashBoard.h" alt="" coords="727,238,837,266"/>
+<area shape="rect" id="node56" href="$a00018.html" title="Clock.h" alt="" coords="2491,238,2563,266"/>
+<area shape="rect" id="node65" href="$a00028.html" title="InterfaceX.h" alt="" coords="1731,161,1835,189"/>
+<area shape="rect" id="node92" href="$a00023.html" title="Easy.h" alt="" coords="947,83,1014,111"/>
+<area shape="rect" id="node99" href="$a00027.html" title="Hard.h" alt="" coords="853,83,919,111"/>
+<area shape="rect" id="node105" href="$a00029.html" title="Joueur.h" alt="" coords="665,161,745,189"/>
+<area shape="rect" id="node7" href="$a00034.html" title="State.h" alt="" coords="2043,547,2113,575"/>
+<area shape="rect" id="node9" href="$a00019.html" title="Color.h" alt="" coords="1673,547,1745,575"/>
+<area shape="rect" id="node11" href="$a00030.html" title="Link.h" alt="" coords="2279,547,2341,575"/>
+<area shape="rect" id="node19" href="$a00033.html" title="Position.h" alt="" coords="958,393,1049,421"/>
+<area shape="rect" id="node21" href="$a00026.html" title="Grille.h" alt="" coords="678,393,747,421"/>
+<area shape="rect" id="node33" href="$a00035.html" title="Tree.h" alt="" coords="273,393,339,421"/>
+<area shape="rect" id="node35" href="$a00020.html" title="conected.h" alt="" coords="505,393,603,421"/>
+<area shape="rect" id="node39" href="$a00032.html" title="Orientation.h" alt="" coords="822,393,934,421"/>
+<area shape="rect" id="node94" href="$a00016.html" title="ai.h" alt="" coords="971,161,1017,189"/>
+</map>

@@ -1,0 +1,507 @@
+.TH "source/SDL_rotozoom.c" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/SDL_rotozoom.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib.h>\fP
+.br
+\fC#include <string.h>\fP
+.br
+\fC#include '../include/SDL_rotozoom.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtColorRGBA\fP"
+.br
+.RI "\fIA 32 bit RGBA pixel. \fP"
+.ti -1c
+.RI "struct \fBtColorY\fP"
+.br
+.RI "\fIA 8bit Y/palette pixel. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX\fP(a, b)   (((a) > (b)) ? (a) : (b))"
+.br
+.RI "\fIReturns maximum of two numbers a and b. \fP"
+.ti -1c
+.RI "#define \fBGUARD_ROWS\fP   (2)"
+.br
+.RI "\fINumber of guard rows added to destination surfaces. \fP"
+.ti -1c
+.RI "#define \fBVALUE_LIMIT\fP   0.001"
+.br
+.RI "\fILower limit of absolute zoom factor or rotation degrees. \fP"
+.in -1c
+.SS "Définition de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBtColorRGBA\fP \fBtColorRGBA\fP"
+.br
+.RI "\fIA 32 bit RGBA pixel. \fP"
+.ti -1c
+.RI "typedef struct \fBtColorY\fP \fBtColorY\fP"
+.br
+.RI "\fIA 8bit Y/palette pixel. \fP"
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "Uint32 \fB_colorkey\fP (SDL_Surface *src)"
+.br
+.RI "\fIReturns colorkey info for a surface. \fP"
+.ti -1c
+.RI "int \fB_shrinkSurfaceRGBA\fP (SDL_Surface *src, SDL_Surface *dst, int factorx, int factory)"
+.br
+.RI "\fIInternal 32 bit integer-factor averaging Shrinker. \fP"
+.ti -1c
+.RI "int \fB_shrinkSurfaceY\fP (SDL_Surface *src, SDL_Surface *dst, int factorx, int factory)"
+.br
+.RI "\fIInternal 8 bit integer-factor averaging shrinker. \fP"
+.ti -1c
+.RI "int \fB_zoomSurfaceRGBA\fP (SDL_Surface *src, SDL_Surface *dst, int flipx, int flipy, int smooth)"
+.br
+.RI "\fIInternal 32 bit Zoomer with optional anti-aliasing by bilinear interpolation. \fP"
+.ti -1c
+.RI "int \fB_zoomSurfaceY\fP (SDL_Surface *src, SDL_Surface *dst, int flipx, int flipy)"
+.br
+.RI "\fIInternal 8 bit Zoomer without smoothing. \fP"
+.ti -1c
+.RI "void \fB_transformSurfaceRGBA\fP (SDL_Surface *src, SDL_Surface *dst, int cx, int cy, int isin, int icos, int flipx, int flipy, int smooth)"
+.br
+.RI "\fIInternal 32 bit rotozoomer with optional anti-aliasing. \fP"
+.ti -1c
+.RI "void \fBtransformSurfaceY\fP (SDL_Surface *src, SDL_Surface *dst, int cx, int cy, int isin, int icos, int flipx, int flipy)"
+.br
+.RI "\fIRotates and zooms 8 bit palette/Y 'src' surface to 'dst' surface without smoothing. \fP"
+.ti -1c
+.RI "SDL_Surface * \fBrotateSurface90Degrees\fP (SDL_Surface *src, int numClockwiseTurns)"
+.br
+.RI "\fIRotates a 32 bit surface in increments of 90 degrees. \fP"
+.ti -1c
+.RI "void \fB_rotozoomSurfaceSizeTrig\fP (int width, int height, double angle, double zoomx, double zoomy, int *dstwidth, int *dstheight, double *canglezoom, double *sanglezoom)"
+.br
+.RI "\fIInternal target surface sizing function for rotozooms with trig result return. \fP"
+.ti -1c
+.RI "void \fBrotozoomSurfaceSizeXY\fP (int width, int height, double angle, double zoomx, double zoomy, int *dstwidth, int *dstheight)"
+.br
+.RI "\fIReturns the size of the resulting target surface for a \fBrotozoomSurfaceXY()\fP call. \fP"
+.ti -1c
+.RI "void \fBrotozoomSurfaceSize\fP (int width, int height, double angle, double zoom, int *dstwidth, int *dstheight)"
+.br
+.RI "\fIReturns the size of the resulting target surface for a \fBrotozoomSurface()\fP call. \fP"
+.ti -1c
+.RI "SDL_Surface * \fBrotozoomSurface\fP (SDL_Surface *src, double angle, double zoom, int smooth)"
+.br
+.RI "\fIRotates and zooms a surface and optional anti-aliasing. \fP"
+.ti -1c
+.RI "SDL_Surface * \fBrotozoomSurfaceXY\fP (SDL_Surface *src, double angle, double zoomx, double zoomy, int smooth)"
+.br
+.RI "\fIRotates and zooms a surface with different horizontal and vertival scaling factors and optional anti-aliasing. \fP"
+.ti -1c
+.RI "void \fBzoomSurfaceSize\fP (int width, int height, double zoomx, double zoomy, int *dstwidth, int *dstheight)"
+.br
+.RI "\fICalculates the size of the target surface for a \fBzoomSurface()\fP call. \fP"
+.ti -1c
+.RI "SDL_Surface * \fBzoomSurface\fP (SDL_Surface *src, double zoomx, double zoomy, int smooth)"
+.br
+.RI "\fIZoom a surface by independent horizontal and vertical factors with optional smoothing. \fP"
+.ti -1c
+.RI "SDL_Surface * \fBshrinkSurface\fP (SDL_Surface *src, int factorx, int factory)"
+.br
+.RI "\fIShrink a surface by an integer ratio using averaging. \fP"
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define GUARD_ROWS   (2)"
+.PP
+Number of guard rows added to destination surfaces. This is a simple but effective workaround for observed issues. These rows allocate extra memory and are then hidden from the surface. Rows are added to the end of destination surfaces when they are allocated. This catches any potential overflows which seem to happen with just the right src image dimensions and scale/rotation and can lead to a situation where the program can segfault. 
+.PP
+Définition à la ligne 52 du fichier SDL_rotozoom.c.
+.SS "#define MAX(a, b)   (((a) > (b)) ? (a) : (b))"
+.PP
+Returns maximum of two numbers a and b. 
+.PP
+Définition à la ligne 40 du fichier SDL_rotozoom.c.
+.SS "#define VALUE_LIMIT   0.001"
+.PP
+Lower limit of absolute zoom factor or rotation degrees. 
+.PP
+Définition à la ligne 57 du fichier SDL_rotozoom.c.
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBtColorRGBA\fP  \fBtColorRGBA\fP"
+.PP
+A 32 bit RGBA pixel. 
+.SS "typedef struct \fBtColorY\fP  \fBtColorY\fP"
+.PP
+A 8bit Y/palette pixel. 
+.SH "Documentation des fonctions"
+.PP 
+.SS "Uint32 _colorkey (SDL_Surface *src)"
+.PP
+Returns colorkey info for a surface. 
+.PP
+Définition à la ligne 62 du fichier SDL_rotozoom.c.
+.SS "void _rotozoomSurfaceSizeTrig (intwidth, intheight, doubleangle, doublezoomx, doublezoomy, int *dstwidth, int *dstheight, double *canglezoom, double *sanglezoom)"
+.PP
+Internal target surface sizing function for rotozooms with trig result return. \fBParamètres:\fP
+.RS 4
+\fIwidth\fP The source surface width. 
+.br
+\fIheight\fP The source surface height. 
+.br
+\fIangle\fP The angle to rotate in degrees. 
+.br
+\fIzoomx\fP The horizontal scaling factor. 
+.br
+\fIzoomy\fP The vertical scaling factor. 
+.br
+\fIdstwidth\fP The calculated width of the destination surface. 
+.br
+\fIdstheight\fP The calculated height of the destination surface. 
+.br
+\fIcanglezoom\fP The sine of the angle adjusted by the zoom factor. 
+.br
+\fIsanglezoom\fP The cosine of the angle adjusted by the zoom factor. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 924 du fichier SDL_rotozoom.c.
+.SS "int _shrinkSurfaceRGBA (SDL_Surface *src, SDL_Surface *dst, intfactorx, intfactory)"
+.PP
+Internal 32 bit integer-factor averaging Shrinker. Shrinks 32 bit RGBA/ABGR 'src' surface to 'dst' surface. Averages color and alpha values values of src pixels to calculate dst pixels. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to shrink (input). 
+.br
+\fIdst\fP The shrunken surface (output). 
+.br
+\fIfactorx\fP The horizontal shrinking ratio. 
+.br
+\fIfactory\fP The vertical shrinking ratio.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 for success or -1 for error. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 92 du fichier SDL_rotozoom.c.
+.SS "int _shrinkSurfaceY (SDL_Surface *src, SDL_Surface *dst, intfactorx, intfactory)"
+.PP
+Internal 8 bit integer-factor averaging shrinker. Shrinks 8bit Y 'src' surface to 'dst' surface. Averages color (brightness) values values of src pixels to calculate dst pixels. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to shrink (input). 
+.br
+\fIdst\fP The shrunken surface (output). 
+.br
+\fIfactorx\fP The horizontal shrinking ratio. 
+.br
+\fIfactory\fP The vertical shrinking ratio.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 for success or -1 for error. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 181 du fichier SDL_rotozoom.c.
+.SS "void _transformSurfaceRGBA (SDL_Surface *src, SDL_Surface *dst, intcx, intcy, intisin, inticos, intflipx, intflipy, intsmooth)"
+.PP
+Internal 32 bit rotozoomer with optional anti-aliasing. Rotates and zooms 32 bit RGBA/ABGR 'src' surface to 'dst' surface based on the control parameters by scanning the destination surface and applying optionally anti-aliasing by bilinear interpolation. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP Source surface. 
+.br
+\fIdst\fP Destination surface. 
+.br
+\fIcx\fP Horizontal center coordinate. 
+.br
+\fIcy\fP Vertical center coordinate. 
+.br
+\fIisin\fP Integer version of sine of angle. 
+.br
+\fIicos\fP Integer version of cosine of angle. 
+.br
+\fIflipx\fP Flag indicating horizontal mirroring should be applied. 
+.br
+\fIflipy\fP Flag indicating vertical mirroring should be applied. 
+.br
+\fIsmooth\fP Flag indicating anti-aliasing should be used. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 613 du fichier SDL_rotozoom.c.
+.SS "int _zoomSurfaceRGBA (SDL_Surface *src, SDL_Surface *dst, intflipx, intflipy, intsmooth)"
+.PP
+Internal 32 bit Zoomer with optional anti-aliasing by bilinear interpolation. Zooms 32 bit RGBA/ABGR 'src' surface to 'dst' surface. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to zoom (input). 
+.br
+\fIdst\fP The zoomed surface (output). 
+.br
+\fIflipx\fP Flag indicating if the image should be horizontally flipped. 
+.br
+\fIflipy\fP Flag indicating if the image should be vertically flipped. 
+.br
+\fIsmooth\fP Antialiasing flag; set to SMOOTHING_ON to enable.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 for success or -1 for error. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 265 du fichier SDL_rotozoom.c.
+.SS "int _zoomSurfaceY (SDL_Surface *src, SDL_Surface *dst, intflipx, intflipy)"
+.PP
+Internal 8 bit Zoomer without smoothing. Zooms 8bit palette/Y 'src' surface to 'dst' surface. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to zoom (input). 
+.br
+\fIdst\fP The zoomed surface (output). 
+.br
+\fIflipx\fP Flag indicating if the image should be horizontally flipped. 
+.br
+\fIflipy\fP Flag indicating if the image should be vertically flipped.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+0 for success or -1 for error. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 496 du fichier SDL_rotozoom.c.
+.SS "SDL_Surface* rotateSurface90Degrees (SDL_Surface *src, intnumClockwiseTurns)"
+.PP
+Rotates a 32 bit surface in increments of 90 degrees. Specialized 90 degree rotator which rotates a 'src' surface in 90 degree increments clockwise returning a new surface. Faster than rotozoomer since not scanning or interpolation takes place. Input surface must be 32 bit. (code contributed by J. Schiller, improved by C. Allport and A. Schiffler)
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP Source surface to rotate. 
+.br
+\fInumClockwiseTurns\fP Number of clockwise 90 degree turns to apply to the source.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The new, rotated surface; or NULL for surfaces with incorrect input format. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 789 du fichier SDL_rotozoom.c.
+.SS "SDL_Surface* rotozoomSurface (SDL_Surface *src, doubleangle, doublezoom, intsmooth)"
+.PP
+Rotates and zooms a surface and optional anti-aliasing. Rotates and zoomes a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'angle' is the rotation in degrees and 'zoom' a scaling factor. If 'smooth' is set then the destination 32bit surface is anti-aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to rotozoom. 
+.br
+\fIangle\fP The angle to rotate in degrees. 
+.br
+\fIzoom\fP The scaling factor. 
+.br
+\fIsmooth\fP Antialiasing flag; set to SMOOTHING_ON to enable.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The new rotozoomed surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1005 du fichier SDL_rotozoom.c.
+.SS "void rotozoomSurfaceSize (intwidth, intheight, doubleangle, doublezoom, int *dstwidth, int *dstheight)"
+.PP
+Returns the size of the resulting target surface for a \fBrotozoomSurface()\fP call. \fBParamètres:\fP
+.RS 4
+\fIwidth\fP The source surface width. 
+.br
+\fIheight\fP The source surface height. 
+.br
+\fIangle\fP The angle to rotate in degrees. 
+.br
+\fIzoom\fP The scaling factor. 
+.br
+\fIdstwidth\fP The calculated width of the rotozoomed destination surface. 
+.br
+\fIdstheight\fP The calculated height of the rotozoomed destination surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 983 du fichier SDL_rotozoom.c.
+.SS "void rotozoomSurfaceSizeXY (intwidth, intheight, doubleangle, doublezoomx, doublezoomy, int *dstwidth, int *dstheight)"
+.PP
+Returns the size of the resulting target surface for a \fBrotozoomSurfaceXY()\fP call. \fBParamètres:\fP
+.RS 4
+\fIwidth\fP The source surface width. 
+.br
+\fIheight\fP The source surface height. 
+.br
+\fIangle\fP The angle to rotate in degrees. 
+.br
+\fIzoomx\fP The horizontal scaling factor. 
+.br
+\fIzoomy\fP The vertical scaling factor. 
+.br
+\fIdstwidth\fP The calculated width of the rotozoomed destination surface. 
+.br
+\fIdstheight\fP The calculated height of the rotozoomed destination surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 966 du fichier SDL_rotozoom.c.
+.SS "SDL_Surface* rotozoomSurfaceXY (SDL_Surface *src, doubleangle, doublezoomx, doublezoomy, intsmooth)"
+.PP
+Rotates and zooms a surface with different horizontal and vertival scaling factors and optional anti-aliasing. Rotates and zooms a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'angle' is the rotation in degrees, 'zoomx and 'zoomy' scaling factors. If 'smooth' is set then the destination 32bit surface is anti-aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to rotozoom. 
+.br
+\fIangle\fP The angle to rotate in degrees. 
+.br
+\fIzoomx\fP The horizontal scaling factor. 
+.br
+\fIzoomy\fP The vertical scaling factor. 
+.br
+\fIsmooth\fP Antialiasing flag; set to SMOOTHING_ON to enable.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The new rotozoomed surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1026 du fichier SDL_rotozoom.c.
+.SS "SDL_Surface* shrinkSurface (SDL_Surface *src, intfactorx, intfactory)"
+.PP
+Shrink a surface by an integer ratio using averaging. Shrinks a 32bit or 8bit 'src' surface to a newly created 'dst' surface. 'factorx' and 'factory' are the shrinking ratios (i.e. 2=1/2 the size, 3=1/3 the size, etc.) The destination surface is antialiased by averaging the source box RGBA or Y information. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly. The input surface is not modified. The output surface is newly allocated.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to shrink. 
+.br
+\fIfactorx\fP The horizontal shrinking ratio. 
+.br
+\fIfactory\fP The vertical shrinking ratio.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The new, shrunken surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1512 du fichier SDL_rotozoom.c.
+.SS "void transformSurfaceY (SDL_Surface *src, SDL_Surface *dst, intcx, intcy, intisin, inticos, intflipx, intflipy)"
+.PP
+Rotates and zooms 8 bit palette/Y 'src' surface to 'dst' surface without smoothing. Rotates and zooms 8 bit RGBA/ABGR 'src' surface to 'dst' surface based on the control parameters by scanning the destination surface. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP Source surface. 
+.br
+\fIdst\fP Destination surface. 
+.br
+\fIcx\fP Horizontal center coordinate. 
+.br
+\fIcy\fP Vertical center coordinate. 
+.br
+\fIisin\fP Integer version of sine of angle. 
+.br
+\fIicos\fP Integer version of cosine of angle. 
+.br
+\fIflipx\fP Flag indicating horizontal mirroring should be applied. 
+.br
+\fIflipy\fP Flag indicating vertical mirroring should be applied. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 730 du fichier SDL_rotozoom.c.
+.SS "SDL_Surface* zoomSurface (SDL_Surface *src, doublezoomx, doublezoomy, intsmooth)"
+.PP
+Zoom a surface by independent horizontal and vertical factors with optional smoothing. Zooms a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'zoomx' and 'zoomy' are scaling factors for width and height. If 'smooth' is on then the destination 32bit surface is anti-aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly. If zoom factors are negative, the image is flipped on the axes.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIsrc\fP The surface to zoom. 
+.br
+\fIzoomx\fP The horizontal zoom factor. 
+.br
+\fIzoomy\fP The vertical zoom factor. 
+.br
+\fIsmooth\fP Antialiasing flag; set to SMOOTHING_ON to enable.
+.RE
+.PP
+\fBRenvoie:\fP
+.RS 4
+The new, zoomed surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1367 du fichier SDL_rotozoom.c.
+.SS "void zoomSurfaceSize (intwidth, intheight, doublezoomx, doublezoomy, int *dstwidth, int *dstheight)"
+.PP
+Calculates the size of the target surface for a \fBzoomSurface()\fP call. The minimum size of the target surface is 1. The input factors can be positive or negative.
+.PP
+\fBParamètres:\fP
+.RS 4
+\fIwidth\fP The width of the source surface to zoom. 
+.br
+\fIheight\fP The height of the source surface to zoom. 
+.br
+\fIzoomx\fP The horizontal zoom factor. 
+.br
+\fIzoomy\fP The vertical zoom factor. 
+.br
+\fIdstwidth\fP Pointer to an integer to store the calculated width of the zoomed target surface. 
+.br
+\fIdstheight\fP Pointer to an integer to store the calculated height of the zoomed target surface. 
+.RE
+.PP
+
+.PP
+Définition à la ligne 1317 du fichier SDL_rotozoom.c.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

@@ -1,0 +1,307 @@
+.TH "MoteurPhy" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoteurPhy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MoteurPhy.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBMoteurPhy\fP (int taille, \fBGrille\fP *grille)"
+.br
+.ti -1c
+.RI "\fB~MoteurPhy\fP ()"
+.br
+.ti -1c
+.RI "void \fBinit\fP (int taille)"
+.br
+.ti -1c
+.RI "const int \fBcolBlobCourant\fP () const "
+.br
+.ti -1c
+.RI "void \fBrotationHoraire\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "void \fBrotationAntiHoraire\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "void \fBgauche\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "void \fBdroite\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "void \fBspeedUp\fP ()"
+.br
+.ti -1c
+.RI "void \fBspeedToNormal\fP ()"
+.br
+.ti -1c
+.RI "void \fBmajCombo\fP ()"
+.br
+.ti -1c
+.RI "void \fBfall\fP ()"
+.br
+.ti -1c
+.RI "int \fBmoove\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "int \fBcombo\fP () const "
+.br
+.ti -1c
+.RI "void \fBnextBlobs\fP (\fBBlobs\fP master, \fBBlobs\fP slave)"
+.br
+.ti -1c
+.RI "bool \fBfixed\fP () const "
+.br
+.ti -1c
+.RI "int \fBfalling\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetFalling\fP (int falling)"
+.br
+.ti -1c
+.RI "int \fBturningDirect\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetTurningDirect\fP (int turning)"
+.br
+.ti -1c
+.RI "int \fBturningHoraire\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetTurningHoraire\fP (int turning)"
+.br
+.ti -1c
+.RI "void \fBsetFixed\fP (bool fixed)"
+.br
+.ti -1c
+.RI "void \fBsetComboting\fP (int comboting)"
+.br
+.ti -1c
+.RI "void \fBsetCombo\fP (int combo)"
+.br
+.ti -1c
+.RI "int \fBcomboting\fP () const "
+.br
+.ti -1c
+.RI "int \fBorientation\fP () const "
+.br
+.ti -1c
+.RI "void \fBmajPosition\fP (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.br
+.ti -1c
+.RI "int \fBtaille\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetLanding\fP (int landing)"
+.br
+.ti -1c
+.RI "bool \fBspeedUpBool\fP () const "
+.br
+.in -1c
+.SS "Fonctions membres protégées"
+
+.in +1c
+.ti -1c
+.RI "const int \fBligneBlobCourant\fP () const "
+.br
+.ti -1c
+.RI "void \fBajoutGrille\fP ()"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "int \fB_taille\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_posBlobPivot\fP"
+.br
+.ti -1c
+.RI "size_t \fB_colorMaster\fP"
+.br
+.ti -1c
+.RI "size_t \fB_colorSlave\fP"
+.br
+.ti -1c
+.RI "int \fB_vitesseBlob\fP"
+.br
+.ti -1c
+.RI "int \fB_orientation\fP"
+.br
+.ti -1c
+.RI "int \fB_combo\fP"
+.br
+.ti -1c
+.RI "bool \fB_fixed\fP"
+.br
+.ti -1c
+.RI "\fBGrille\fP * \fB_grille\fP"
+.br
+.ti -1c
+.RI "int \fB_touching\fP"
+.br
+.ti -1c
+.RI "int \fB_comboting\fP"
+.br
+.ti -1c
+.RI "int \fB_falling\fP"
+.br
+.ti -1c
+.RI "int \fB_landing\fP"
+.br
+.ti -1c
+.RI "int \fB_turningDirect\fP"
+.br
+.ti -1c
+.RI "int \fB_turningHoraire\fP"
+.br
+.ti -1c
+.RI "bool \fB_speedUp\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 21 du fichier MoteurPhy.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "MoteurPhy::MoteurPhy (inttaille, \fBGrille\fP *grille)\fC [inline]\fP"
+.PP
+Définition à la ligne 45 du fichier MoteurPhy.h.
+.SS "MoteurPhy::~MoteurPhy ()\fC [inline]\fP"
+.PP
+Définition à la ligne 47 du fichier MoteurPhy.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "void MoteurPhy::ajoutGrille ()\fC [protected]\fP"
+.SS "const int MoteurPhy::colBlobCourant () const\fC [inline]\fP"
+.PP
+Définition à la ligne 66 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::combo () const\fC [inline]\fP"
+.PP
+Définition à la ligne 76 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::comboting () const\fC [inline]\fP"
+.PP
+Définition à la ligne 93 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::droite (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "void MoteurPhy::fall ()"
+.SS "int MoteurPhy::falling () const\fC [inline]\fP"
+.PP
+Définition à la ligne 84 du fichier MoteurPhy.h.
+.SS "bool MoteurPhy::fixed () const\fC [inline]\fP"
+.PP
+Définition à la ligne 83 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::gauche (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "void MoteurPhy::init (inttaille)\fC [inline]\fP"
+.PP
+Définition à la ligne 50 du fichier MoteurPhy.h.
+.SS "const int MoteurPhy::ligneBlobCourant () const\fC [inline, protected]\fP"
+.PP
+Définition à la ligne 40 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::majCombo ()"
+.SS "void MoteurPhy::majPosition (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "int MoteurPhy::moove (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "void MoteurPhy::nextBlobs (\fBBlobs\fPmaster, \fBBlobs\fPslave)\fC [inline]\fP"
+.PP
+Définition à la ligne 77 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::orientation () const\fC [inline]\fP"
+.PP
+Définition à la ligne 94 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::rotationAntiHoraire (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "void MoteurPhy::rotationHoraire (\fBPosition\fP *master, \fBPosition\fP *slave)"
+.SS "void MoteurPhy::setCombo (intcombo)\fC [inline]\fP"
+.PP
+Définition à la ligne 92 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setComboting (intcomboting)\fC [inline]\fP"
+.PP
+Définition à la ligne 91 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setFalling (intfalling)\fC [inline]\fP"
+.PP
+Définition à la ligne 85 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setFixed (boolfixed)\fC [inline]\fP"
+.PP
+Définition à la ligne 90 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setLanding (intlanding)\fC [inline]\fP"
+.PP
+Définition à la ligne 97 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setTurningDirect (intturning)\fC [inline]\fP"
+.PP
+Définition à la ligne 87 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::setTurningHoraire (intturning)\fC [inline]\fP"
+.PP
+Définition à la ligne 89 du fichier MoteurPhy.h.
+.SS "void MoteurPhy::speedToNormal ()"
+.SS "void MoteurPhy::speedUp ()"
+.SS "bool MoteurPhy::speedUpBool () const\fC [inline]\fP"
+.PP
+Définition à la ligne 98 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::taille () const\fC [inline]\fP"
+.PP
+Définition à la ligne 96 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::turningDirect () const\fC [inline]\fP"
+.PP
+Définition à la ligne 86 du fichier MoteurPhy.h.
+.SS "int MoteurPhy::turningHoraire () const\fC [inline]\fP"
+.PP
+Définition à la ligne 88 du fichier MoteurPhy.h.
+.SH "Documentation des données membres"
+.PP 
+.SS "size_t \fBMoteurPhy::_colorMaster\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 26 du fichier MoteurPhy.h.
+.SS "size_t \fBMoteurPhy::_colorSlave\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 27 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_combo\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 30 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_comboting\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 34 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_falling\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 35 du fichier MoteurPhy.h.
+.SS "bool \fBMoteurPhy::_fixed\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 31 du fichier MoteurPhy.h.
+.SS "\fBGrille\fP* \fBMoteurPhy::_grille\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 32 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_landing\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 36 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_orientation\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 29 du fichier MoteurPhy.h.
+.SS "\fBPosition\fP \fBMoteurPhy::_posBlobPivot\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 25 du fichier MoteurPhy.h.
+.SS "bool \fBMoteurPhy::_speedUp\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 39 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_taille\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 24 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_touching\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 33 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_turningDirect\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 37 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_turningHoraire\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 38 du fichier MoteurPhy.h.
+.SS "int \fBMoteurPhy::_vitesseBlob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 28 du fichier MoteurPhy.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

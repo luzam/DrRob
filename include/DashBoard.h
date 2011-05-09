@@ -35,11 +35,12 @@ protected :
     bool _landing;
     int _newDelay;
     int _score;
+    int _multiplicateur;
 
 public :
     DashBoard(int taille,Grille* grille,std::list<Blobs>* randBlobs):_looser(false),_combo(0),
         _grille(grille),_nextBlobs(randBlobs),_it((*_nextBlobs).begin()),_go(false),_launchCombo(false),
-        _nextDarkBlobs(0),_landing(true),_newDelay(2),_score(0)
+        _nextDarkBlobs(0),_landing(true),_newDelay(2),_score(0),_multiplicateur(0)
     {
         _moteurPhy = new MoteurPhy(taille,grille);
          _masterBlob.setBlob(*(++_it));
@@ -70,6 +71,8 @@ public :
     void resetCombo();
     bool launchCombo()const{return _launchCombo;}
     int combo()const{return _combo;}
+    int multiplicateur()const{return _multiplicateur;}
+    void setMultiplicateur(int multi){_multiplicateur = multi;}
     void addDarkBlob();
     bool looser()const{return _looser;}
     int score()const{return _score;}

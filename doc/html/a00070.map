@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$a00007.html" title="{Easy\n||+ Easy()\l+ think()\l}" alt="" coords="5,1011,83,1109"/>
+<area shape="rect" id="node7" href="$a00010.html" title="{Hard\n|# _lineUp\l# _colMin\l# _debilismeAleatoire\l|+ Hard()\l+ ~Hard()\l+ think()\l+ majLineUp()\l+ majLineEmpty()\l+ vertical()\l+ checkLigne()\l+ droite()\l+ gauche()\l+ verticalBas()\l+ verticalHaut()\l+ gotocol()\l+ easy()\l}" alt="" coords="107,907,275,1213"/>
+<area shape="rect" id="node2" href="$a00006.html" title="{DashBoard\n|# _looser\l# _moteurPhy\l# _combo\l# _masterBlob\l# _slaveBlob\l# _nextMaster\l# _nextSlave\l# _grille\l# _nextBlobs\l# _it\l# _master\l# _slave\l# _go\l# _launchCombo\l# posFen\l# _nextDarkBlobs\l# _landing\l# _newDelay\l# _score\l|+ DashBoard()\l+ ~DashBoard()\l+ moteurPhy()\l+ grille()\l+ go()\l+ masterPos()\l+ slavePos()\l+ masterBlob()\l+ slaveBlob()\l+ nextMaster()\l+ nextSlave()\l+ setCombo()\l+ resetCombo()\l+ launchCombo()\l+ combo()\l+ addDarkBlob()\l+ looser()\l+ score()\l+ think()\l}" alt="" coords="48,6,187,663"/>
+</map>

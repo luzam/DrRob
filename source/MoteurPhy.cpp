@@ -52,9 +52,10 @@ void MoteurPhy:: rotationHoraire(Position* master,Position* slave)
                     (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
                 return;
             else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()==BLANK&&(
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK||
-                    (*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK||
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK)){
+                        (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()+1)).color()!=BLANK||
+                        (*(*_grille)(ligneBlobCourant(),colBlobCourant()+1)).color()!=BLANK||
+                        (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK))
+            {
                 (_posBlobPivot).setX((_posBlobPivot).x()-_taille);
                 (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
             }
@@ -108,7 +109,7 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-             if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK &&
                     (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
                 return;
             else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille+1,colBlobCourant()+1)).color()!=BLANK||
@@ -134,13 +135,14 @@ void MoteurPhy::rotationAntiHoraire(Position* master,Position* slave)
         }
         else if(colBlobCourant() != 0 &&colBlobCourant() != 5 )
         {
-             if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK &&
+            if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()!=BLANK &&
                     (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)
                 return;
             else if((*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()+1)).color()==BLANK&&(
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK||
-                    (*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK||
-                    (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK)){
+                        (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille-1,colBlobCourant()-1)).color()!=BLANK||
+                        (*(*_grille)(ligneBlobCourant(),colBlobCourant()-1)).color()!=BLANK||
+                        (*(*_grille)((_posBlobPivot.y()+_vitesseBlob)/_taille,colBlobCourant()-1)).color()!=BLANK))
+            {
                 (_posBlobPivot).setX((_posBlobPivot).x()+_taille);
                 (_posBlobPivot).setY((_posBlobPivot).y()-_taille);
             }
@@ -372,6 +374,8 @@ void MoteurPhy::speedToNormal()
   */
 void MoteurPhy::majCombo()
 {
+    if(_grille->checkFalling()!=0 || _grille->checkLanding()!=0)
+        return;
     char *img = (char *)malloc(6*18);
     std::multimap<unsigned char,Position> key;
     int combo = 0;
@@ -417,19 +421,29 @@ void MoteurPhy::majCombo()
     {
         for(std::set<unsigned char>::iterator its = keyset.begin(); its!=keyset.end(); ++its)
             combo+=key.count(*its);
-        _comboting = COMBOTING_ANIM_TIME;
-        if(combo!=0)
-            _combo = combo;
 
     }
     keyset.clear();
+    _combo = 0;
+    bool oneCombo =false;
     for (std::multimap<unsigned char, Position>::iterator it = key.begin(); it != key.end(); ++it)
     {
-        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0)
+        if(((*_grille)((*it).second.x(),(*it).second.y()))->current()==0 && ((*_grille)((*it).second.x(),(*it).second.y()))->state()== NO_STATE
+           && ((*_grille)((*it).second.x(),(*it).second.y()))->color()!= BLANK )
         {
             ((*_grille)((*it).second.x(),(*it).second.y()))->setComboting(COMBOTING_ANIM_TIME);
+            _comboting = COMBOTING_ANIM_TIME;
+            oneCombo = true;
+
+
         }
     }
+    if(oneCombo)
+    {
+        _combo = combo;
+        std::cerr<< "combo "<<_combo<<"\n";
+    }
+
     free(out_uc);
     free(img);
 

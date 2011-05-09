@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de include/Blobs.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00017.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">include/Blobs.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00017.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef BLOBS_H_INCLUDED</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define BLOBS_H_INCLUDED</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="a00034.html">State.h</a>&quot;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="a00019.html">Color.h</a>&quot;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="a00030.html">Link.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">// temporaire</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a><a class="code" href="a00002.html">00011</a> <span class="keyword">class </span><a class="code" href="a00002.html">Blobs</a>
+<a name="l00012"></a>00012 {
+<a name="l00013"></a>00013 <span class="keyword">protected</span> :
+<a name="l00014"></a><a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">00014</a>     <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>;
+<a name="l00015"></a><a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">00015</a>     <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a>;
+<a name="l00016"></a><a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">00016</a>     <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a>;
+<a name="l00017"></a><a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">00017</a>     <span class="keywordtype">int</span> <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a>;
+<a name="l00018"></a><a class="code" href="a00002.html#a9a85f031f87a4ca02fa42271ee79d77e">00018</a>     <span class="keywordtype">int</span> <a class="code" href="a00002.html#a9a85f031f87a4ca02fa42271ee79d77e">_fallingDepth</a>;
+<a name="l00019"></a><a class="code" href="a00002.html#a1435bb449cb1558bcdebd67aaa58a1e8">00019</a>     <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a1435bb449cb1558bcdebd67aaa58a1e8">_fallingCol</a>;
+<a name="l00020"></a>00020 <span class="keyword">public</span> :
+<a name="l00021"></a><a class="code" href="a00002.html#a66a30f1b909c0b653dd1d957950488cc">00021</a>     <a class="code" href="a00002.html#ad3158cb186cd2ccdd29a1d151c15395c">Blobs</a>(<a class="code" href="a00019.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> <a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>,<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>=<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8abacd1f79fd3d7541c133792402702dc2">NO_STATE</a>,<a class="code" href="a00030.html#a25bfc943aa3ee41674eed19d92e439e3">Link</a> <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>=<a class="code" href="a00030.html#a25bfc943aa3ee41674eed19d92e439e3aba43fad8ee5185f12ea31f7dcb843709">NO_LINK</a>):
+<a name="l00022"></a>00022         <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>(color),<a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a>(<a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>),<a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a>(<a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>),<a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a>(0)
+<a name="l00023"></a>00023     {
+<a name="l00024"></a>00024     }
+<a name="l00025"></a><a class="code" href="a00002.html#ad3158cb186cd2ccdd29a1d151c15395c">00025</a>     <a class="code" href="a00002.html#ad3158cb186cd2ccdd29a1d151c15395c">Blobs</a>():<a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>(<a class="code" href="a00019.html#ab87bacfdad76e61b9412d7124be44c1ca9eea16b4e105c96853a3a4cb462cc3a4">BLANK</a>),<a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8abacd1f79fd3d7541c133792402702dc2">NO_STATE</a>),<a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a>(<a class="code" href="a00030.html#a25bfc943aa3ee41674eed19d92e439e3aba43fad8ee5185f12ea31f7dcb843709">NO_LINK</a>),<a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a>(0)
+<a name="l00026"></a>00026     {
+<a name="l00027"></a>00027     }
+<a name="l00028"></a><a class="code" href="a00002.html#a4a0d965c30b973c07fdc52fc019e7ec5">00028</a>     <a class="code" href="a00002.html#ad3158cb186cd2ccdd29a1d151c15395c">Blobs</a>(<span class="keyword">const</span> <a class="code" href="a00002.html">Blobs</a>&amp; blob): <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>(blob.<a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>()),<a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a>(blob.<a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>()),<a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a>(blob.<a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>()),<a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a>(0)
+<a name="l00029"></a>00029     {
+<a name="l00030"></a>00030     }
+<a name="l00031"></a><a class="code" href="a00002.html#a85790119872e03dc82cafc8e00c11a95">00031</a>     <a class="code" href="a00002.html#a85790119872e03dc82cafc8e00c11a95">~Blobs</a>() {}
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">00033</a>     <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>()<span class="keyword">const</span>
+<a name="l00034"></a>00034 <span class="keyword">    </span>{
+<a name="l00035"></a>00035         <span class="keywordflow">return</span> <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>;
+<a name="l00036"></a>00036     }
+<a name="l00037"></a><a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">00037</a>     <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>()<span class="keyword">const</span>
+<a name="l00038"></a>00038 <span class="keyword">    </span>{
+<a name="l00039"></a>00039         <span class="keywordflow">return</span> <a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a>;
+<a name="l00040"></a>00040     }
+<a name="l00041"></a><a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">00041</a>     <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>()<span class="keyword">const</span>
+<a name="l00042"></a>00042 <span class="keyword">    </span>{
+<a name="l00043"></a>00043         <span class="keywordflow">return</span> <a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a>;
+<a name="l00044"></a>00044     }
+<a name="l00045"></a><a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">00045</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#afc632649a46b45e05cee74d03c200728">setColor</a>(<span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>)
+<a name="l00046"></a>00046     {
+<a name="l00047"></a>00047         <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a>=<a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>;
+<a name="l00048"></a>00048     }
+<a name="l00049"></a><a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">00049</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<span class="keywordtype">size_t</span> <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>)
+<a name="l00050"></a>00050     {
+<a name="l00051"></a>00051         <a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a> =  <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>;
+<a name="l00052"></a>00052     }
+<a name="l00053"></a><a class="code" href="a00002.html#ad430244e866cd1e1d2cbe8757a2aa9a4">00053</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#ad430244e866cd1e1d2cbe8757a2aa9a4">setLink</a>(<span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>)
+<a name="l00054"></a>00054     {
+<a name="l00055"></a>00055         <a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a> = <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>;
+<a name="l00056"></a>00056     }
+<a name="l00057"></a><a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">00057</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(<span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>, <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>, <span class="keywordtype">size_t</span> <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>)
+<a name="l00058"></a>00058     {
+<a name="l00059"></a>00059         <a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a> = <a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>;
+<a name="l00060"></a>00060         <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a> = <a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>;
+<a name="l00061"></a>00061         <a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a> = <a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>;
+<a name="l00062"></a>00062     }
+<a name="l00063"></a><a class="code" href="a00002.html#a254b9066ae256eca2d2f1b694fb71700">00063</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a9447e59fbeba596aa7e53d40cec281c4">setBlob</a>(<span class="keyword">const</span> <a class="code" href="a00002.html">Blobs</a>&amp; blob)
+<a name="l00064"></a>00064     {
+<a name="l00065"></a>00065         <a class="code" href="a00002.html#a736707e153639e847dbe28dd2466a685">_link</a> = blob.<a class="code" href="a00002.html#a66f8b006e5b94590fa9897734884615c">link</a>();
+<a name="l00066"></a>00066         <a class="code" href="a00002.html#a185140955e8852e5ed192cc6ee8406c3">_color</a> = blob.<a class="code" href="a00002.html#a0c301f42dbf74a239f6e94f396eb33d9">color</a>();
+<a name="l00067"></a>00067         <a class="code" href="a00002.html#a340c08f20dc79da9cf98ae19e5fd19e6">_state</a> = blob.<a class="code" href="a00002.html#aee05e24d1502a39838c0c2457973ed92">state</a>();
+<a name="l00068"></a>00068     }
+<a name="l00069"></a><a class="code" href="a00002.html#a1e523f45eb64be6f293cfc0f8733df07">00069</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a1e523f45eb64be6f293cfc0f8733df07">setFalling</a>(<span class="keywordtype">int</span> falling)
+<a name="l00070"></a>00070     {
+<a name="l00071"></a>00071         this-&gt;<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8ad24712a6a30c1d431b927d1ba2f84b66">FALLING</a>);
+<a name="l00072"></a>00072         <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a> = falling;
+<a name="l00073"></a>00073     }
+<a name="l00074"></a><a class="code" href="a00002.html#af20cf2e337af6e6b564de331e09bcb92">00074</a>      <span class="keywordtype">void</span> <a class="code" href="a00002.html#af20cf2e337af6e6b564de331e09bcb92">setFallingAnim</a>(<span class="keywordtype">int</span> falling)
+<a name="l00075"></a>00075     {
+<a name="l00076"></a>00076         this-&gt;<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8acb0065aa8498518b93a9f4b46a4afc72">FALLIN_ANIM</a>);
+<a name="l00077"></a>00077         <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a> = falling;
+<a name="l00078"></a>00078     }
+<a name="l00079"></a><a class="code" href="a00002.html#a84ad774cff740cd97f55b9e742c4ce3c">00079</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a84ad774cff740cd97f55b9e742c4ce3c">setTurning</a>(<span class="keywordtype">int</span> turning)
+<a name="l00080"></a>00080     {
+<a name="l00081"></a>00081         this-&gt;<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8abacd1f79fd3d7541c133792402702dc2">NO_STATE</a>);
+<a name="l00082"></a>00082         <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a> = turning;
+<a name="l00083"></a>00083     }
+<a name="l00084"></a><a class="code" href="a00002.html#acb65ae69b396af27306894fc8482cfd4">00084</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#acb65ae69b396af27306894fc8482cfd4">setLanding</a>(<span class="keywordtype">int</span> landing)
+<a name="l00085"></a>00085     {
+<a name="l00086"></a>00086         this-&gt;<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8aed02a50bc7e61636eb8ab00f1d31b9c4">LANDING</a>);
+<a name="l00087"></a>00087         <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a> = landing;
+<a name="l00088"></a>00088     }
+<a name="l00089"></a><a class="code" href="a00002.html#a2a588aede5a856b20c95d062ef205f55">00089</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a2a588aede5a856b20c95d062ef205f55">setComboting</a>(<span class="keywordtype">int</span> comboting)
+<a name="l00090"></a>00090     {
+<a name="l00091"></a>00091         this-&gt;<a class="code" href="a00002.html#a66f5de9f3fe5b27afcbc7e4cf387ef05">setState</a>(<a class="code" href="a00034.html#a5d74787dedbc4e11c1ab15bf487e61f8a4617a64489a533898256aa9a3e47b316">COMBOTING</a>);
+<a name="l00092"></a>00092         <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a> = comboting;
+<a name="l00093"></a>00093     }
+<a name="l00094"></a><a class="code" href="a00002.html#acd75c66074b658c0801c0722a1cf668c">00094</a>     <span class="keywordtype">int</span> <a class="code" href="a00002.html#acd75c66074b658c0801c0722a1cf668c">current</a>()<span class="keyword">const</span>
+<a name="l00095"></a>00095 <span class="keyword">    </span>{
+<a name="l00096"></a>00096         <span class="keywordflow">return</span> <a class="code" href="a00002.html#aec7f746f6a0bfdb0eab6726d527aa367">_current</a>;
+<a name="l00097"></a>00097     }
+<a name="l00098"></a><a class="code" href="a00002.html#ac21168f121f2e424315ff249149315b1">00098</a>     <span class="keywordtype">int</span> <a class="code" href="a00002.html#ac21168f121f2e424315ff249149315b1">fallingDepth</a>()<span class="keyword">const</span>
+<a name="l00099"></a>00099 <span class="keyword">    </span>{
+<a name="l00100"></a>00100         <span class="keywordflow">return</span> <a class="code" href="a00002.html#a9a85f031f87a4ca02fa42271ee79d77e">_fallingDepth</a>;
+<a name="l00101"></a>00101     }
+<a name="l00102"></a><a class="code" href="a00002.html#a934308b413ea3eacc5ad80a2099c5bfe">00102</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#a934308b413ea3eacc5ad80a2099c5bfe">setFallingDepth</a>(<span class="keywordtype">int</span> depth)
+<a name="l00103"></a>00103     {
+<a name="l00104"></a>00104         <a class="code" href="a00002.html#a9a85f031f87a4ca02fa42271ee79d77e">_fallingDepth</a>=depth;
+<a name="l00105"></a>00105     }
+<a name="l00106"></a><a class="code" href="a00002.html#adf2deedc2e4058d874a903dc819bc9a2">00106</a>     <span class="keywordtype">int</span> <a class="code" href="a00002.html#adf2deedc2e4058d874a903dc819bc9a2">fallingCol</a>()<span class="keyword">const</span>
+<a name="l00107"></a>00107 <span class="keyword">    </span>{
+<a name="l00108"></a>00108         <span class="keywordflow">return</span> <a class="code" href="a00002.html#a1435bb449cb1558bcdebd67aaa58a1e8">_fallingCol</a>;
+<a name="l00109"></a>00109     }
+<a name="l00110"></a><a class="code" href="a00002.html#ad8b00e50793b4b701878f230021d1430">00110</a>     <span class="keywordtype">void</span> <a class="code" href="a00002.html#ad8b00e50793b4b701878f230021d1430">setFallingCol</a>(<span class="keywordtype">int</span> col)
+<a name="l00111"></a>00111     {
+<a name="l00112"></a>00112         <a class="code" href="a00002.html#a1435bb449cb1558bcdebd67aaa58a1e8">_fallingCol</a>=col;
+<a name="l00113"></a>00113     }
+<a name="l00114"></a>00114 };
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00017.html">Blobs.h</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:30:25 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

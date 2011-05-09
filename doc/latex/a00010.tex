@@ -1,0 +1,377 @@
+\hypertarget{a00010}{
+\section{Référence de la classe Hard}
+\label{a00010}\index{Hard@{Hard}}
+}
+
+
+{\ttfamily \#include $<$Hard.h$>$}
+
+
+
+Graphe d'héritage de Hard:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{a00086}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Hard:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=600pt]{a00087}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{a00010_ab4e64cf125abac5d134a54aacc2b185f}{Hard} (int taille, \hyperlink{a00009}{Grille} $\ast$grille, std::list$<$ \hyperlink{a00002}{Blobs} $>$ $\ast$randBlobs)
+\item 
+virtual \hyperlink{a00010_a923689eba65bc738bc51b35950e30287}{$\sim$Hard} ()
+\item 
+virtual void \hyperlink{a00010_aef0c09a1c1830583d0fdd60ce6273247}{think} ()
+\item 
+void \hyperlink{a00010_a2ef5d60b9f599447a8f9b97433e26c64}{majLineUp} ()
+\item 
+void \hyperlink{a00010_adb65c7409eac21ee72cca6a5a18f009b}{majLineEmpty} ()
+\item 
+void \hyperlink{a00010_a44d66c2111608f15555553ac342d1915}{vertical} (int col)
+\item 
+int \hyperlink{a00010_a9f437c2157f0d7f584cc8b80b098644c}{checkLigne} (int color)
+\item 
+void \hyperlink{a00010_a6fac737ec1b166b740ca5b837dceec64}{droite} (int col)
+\item 
+void \hyperlink{a00010_a7f9949755fd2f0f4f00ac905b5e01113}{gauche} (int col)
+\item 
+void \hyperlink{a00010_a30c0f8f6b7089ad3a445ab4d73475ad0}{verticalBas} (int col)
+\item 
+void \hyperlink{a00010_aa3923fb9a7cd12294b8dea3db7a07053}{verticalHaut} (int col)
+\item 
+void \hyperlink{a00010_a1b8904c208b5126198f8a0ae1660ba42}{gotocol} (int col)
+\item 
+void \hyperlink{a00010_a91ef94a0415b7244a326f4fed5d41470}{easy} ()
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std::vector$<$ int $>$ \hyperlink{a00010_a77f3d26a1e2b3c98e8e0ec513fc57112}{\_\-lineUp}
+\item 
+int \hyperlink{a00010_a5e05a5d847e4543162fd7ba5ebbce233}{\_\-colMin}
+\item 
+int \hyperlink{a00010_a40a101537ee79d41b6e7b4f78986050d}{\_\-debilismeAleatoire}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+
+
+Définition à la ligne 9 du fichier Hard.h.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{a00010_ab4e64cf125abac5d134a54aacc2b185f}{
+\index{Hard@{Hard}!Hard@{Hard}}
+\index{Hard@{Hard}!Hard@{Hard}}
+\subsubsection[{Hard}]{\setlength{\rightskip}{0pt plus 5cm}Hard::Hard (
+\begin{DoxyParamCaption}
+\item[{int}]{taille, }
+\item[{{\bf Grille} $\ast$}]{grille, }
+\item[{std::list$<$ {\bf Blobs} $>$ $\ast$}]{randBlobs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_ab4e64cf125abac5d134a54aacc2b185f}
+
+
+Définition à la ligne 16 du fichier Hard.h.
+
+\hypertarget{a00010_a923689eba65bc738bc51b35950e30287}{
+\index{Hard@{Hard}!$\sim$Hard@{$\sim$Hard}}
+\index{$\sim$Hard@{$\sim$Hard}!Hard@{Hard}}
+\subsubsection[{$\sim$Hard}]{\setlength{\rightskip}{0pt plus 5cm}virtual Hard::$\sim$Hard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{a00010_a923689eba65bc738bc51b35950e30287}
+
+
+Définition à la ligne 17 du fichier Hard.h.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{a00010_a9f437c2157f0d7f584cc8b80b098644c}{
+\index{Hard@{Hard}!checkLigne@{checkLigne}}
+\index{checkLigne@{checkLigne}!Hard@{Hard}}
+\subsubsection[{checkLigne}]{\setlength{\rightskip}{0pt plus 5cm}int Hard::checkLigne (
+\begin{DoxyParamCaption}
+\item[{int}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a9f437c2157f0d7f584cc8b80b098644c}
+
+
+Définition à la ligne 203 du fichier Hard.h.
+
+\hypertarget{a00010_a6fac737ec1b166b740ca5b837dceec64}{
+\index{Hard@{Hard}!droite@{droite}}
+\index{droite@{droite}!Hard@{Hard}}
+\subsubsection[{droite}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::droite (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a6fac737ec1b166b740ca5b837dceec64}
+
+
+Définition à la ligne 214 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_a6fac737ec1b166b740ca5b837dceec64_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_a91ef94a0415b7244a326f4fed5d41470}{
+\index{Hard@{Hard}!easy@{easy}}
+\index{easy@{easy}!Hard@{Hard}}
+\subsubsection[{easy}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::easy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a91ef94a0415b7244a326f4fed5d41470}
+
+
+Définition à la ligne 318 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=368pt]{a00010_a91ef94a0415b7244a326f4fed5d41470_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_a7f9949755fd2f0f4f00ac905b5e01113}{
+\index{Hard@{Hard}!gauche@{gauche}}
+\index{gauche@{gauche}!Hard@{Hard}}
+\subsubsection[{gauche}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::gauche (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a7f9949755fd2f0f4f00ac905b5e01113}
+
+
+Définition à la ligne 231 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_a7f9949755fd2f0f4f00ac905b5e01113_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_a1b8904c208b5126198f8a0ae1660ba42}{
+\index{Hard@{Hard}!gotocol@{gotocol}}
+\index{gotocol@{gotocol}!Hard@{Hard}}
+\subsubsection[{gotocol}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::gotocol (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a1b8904c208b5126198f8a0ae1660ba42}
+
+
+Définition à la ligne 300 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=364pt]{a00010_a1b8904c208b5126198f8a0ae1660ba42_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_adb65c7409eac21ee72cca6a5a18f009b}{
+\index{Hard@{Hard}!majLineEmpty@{majLineEmpty}}
+\index{majLineEmpty@{majLineEmpty}!Hard@{Hard}}
+\subsubsection[{majLineEmpty}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::majLineEmpty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_adb65c7409eac21ee72cca6a5a18f009b}
+
+
+Définition à la ligne 139 du fichier Hard.h.
+
+\hypertarget{a00010_a2ef5d60b9f599447a8f9b97433e26c64}{
+\index{Hard@{Hard}!majLineUp@{majLineUp}}
+\index{majLineUp@{majLineUp}!Hard@{Hard}}
+\subsubsection[{majLineUp}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::majLineUp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a2ef5d60b9f599447a8f9b97433e26c64}
+
+
+Définition à la ligne 127 du fichier Hard.h.
+
+\hypertarget{a00010_aef0c09a1c1830583d0fdd60ce6273247}{
+\index{Hard@{Hard}!think@{think}}
+\index{think@{think}!Hard@{Hard}}
+\subsubsection[{think}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Hard::think (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{a00010_aef0c09a1c1830583d0fdd60ce6273247}
+
+
+Implémente \hyperlink{a00001_a50899ff36a4a5bd6e663e05952be785f}{Ai}.
+
+
+
+Définition à la ligne 19 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_aef0c09a1c1830583d0fdd60ce6273247_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_a44d66c2111608f15555553ac342d1915}{
+\index{Hard@{Hard}!vertical@{vertical}}
+\index{vertical@{vertical}!Hard@{Hard}}
+\subsubsection[{vertical}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::vertical (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a44d66c2111608f15555553ac342d1915}
+
+
+Définition à la ligne 180 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_a44d66c2111608f15555553ac342d1915_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_a30c0f8f6b7089ad3a445ab4d73475ad0}{
+\index{Hard@{Hard}!verticalBas@{verticalBas}}
+\index{verticalBas@{verticalBas}!Hard@{Hard}}
+\subsubsection[{verticalBas}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::verticalBas (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_a30c0f8f6b7089ad3a445ab4d73475ad0}
+
+
+Définition à la ligne 249 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_a30c0f8f6b7089ad3a445ab4d73475ad0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{a00010_aa3923fb9a7cd12294b8dea3db7a07053}{
+\index{Hard@{Hard}!verticalHaut@{verticalHaut}}
+\index{verticalHaut@{verticalHaut}!Hard@{Hard}}
+\subsubsection[{verticalHaut}]{\setlength{\rightskip}{0pt plus 5cm}void Hard::verticalHaut (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{a00010_aa3923fb9a7cd12294b8dea3db7a07053}
+
+
+Définition à la ligne 274 du fichier Hard.h.
+
+
+
+Voici le graphe d'appel pour cette fonction :\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=400pt]{a00010_aa3923fb9a7cd12294b8dea3db7a07053_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{a00010_a5e05a5d847e4543162fd7ba5ebbce233}{
+\index{Hard@{Hard}!\_\-colMin@{\_\-colMin}}
+\index{\_\-colMin@{\_\-colMin}!Hard@{Hard}}
+\subsubsection[{\_\-colMin}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Hard::\_\-colMin}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00010_a5e05a5d847e4543162fd7ba5ebbce233}
+
+
+Définition à la ligne 13 du fichier Hard.h.
+
+\hypertarget{a00010_a40a101537ee79d41b6e7b4f78986050d}{
+\index{Hard@{Hard}!\_\-debilismeAleatoire@{\_\-debilismeAleatoire}}
+\index{\_\-debilismeAleatoire@{\_\-debilismeAleatoire}!Hard@{Hard}}
+\subsubsection[{\_\-debilismeAleatoire}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf Hard::\_\-debilismeAleatoire}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00010_a40a101537ee79d41b6e7b4f78986050d}
+
+
+Définition à la ligne 14 du fichier Hard.h.
+
+\hypertarget{a00010_a77f3d26a1e2b3c98e8e0ec513fc57112}{
+\index{Hard@{Hard}!\_\-lineUp@{\_\-lineUp}}
+\index{\_\-lineUp@{\_\-lineUp}!Hard@{Hard}}
+\subsubsection[{\_\-lineUp}]{\setlength{\rightskip}{0pt plus 5cm}std::vector$<$int$>$ {\bf Hard::\_\-lineUp}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{a00010_a77f3d26a1e2b3c98e8e0ec513fc57112}
+
+
+Définition à la ligne 12 du fichier Hard.h.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant :\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{a00027}{Hard.h}\end{DoxyCompactItemize}

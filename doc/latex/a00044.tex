@@ -1,0 +1,773 @@
+\hypertarget{a00044}{
+\section{Référence du fichier source/SDL\_\-rotozoom.c}
+\label{a00044}\index{source/SDL\_\-rotozoom.c@{source/SDL\_\-rotozoom.c}}
+}
+{\ttfamily \#include $<$stdlib.h$>$}\par
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include \char`\"{}../include/SDL\_\-rotozoom.h\char`\"{}}\par
+Graphe des dépendances par inclusion de SDL\_\-rotozoom.c:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{a00015}{tColorRGBA}
+\begin{DoxyCompactList}\small\item\em A 32 bit RGBA pixel. \end{DoxyCompactList}\item 
+struct \hyperlink{a00016}{tColorY}
+\begin{DoxyCompactList}\small\item\em A 8bit Y/palette pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{a00044_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}(a, b)~(((a) $>$ (b)) ? (a) : (b))
+\begin{DoxyCompactList}\small\item\em Returns maximum of two numbers a and b. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00044_a05a2601b7ea2906858ccc31b45fdc6eb}{GUARD\_\-ROWS}~(2)
+\begin{DoxyCompactList}\small\item\em Number of guard rows added to destination surfaces. \end{DoxyCompactList}\item 
+\#define \hyperlink{a00044_a98a929bd64d660c1860c7b60b4fe5bd9}{VALUE\_\-LIMIT}~0.001
+\begin{DoxyCompactList}\small\item\em Lower limit of absolute zoom factor or rotation degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Définition de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{a00015}{tColorRGBA} \hyperlink{a00044_ac91ff95383d3a6c0df046a42e23baf04}{tColorRGBA}
+\begin{DoxyCompactList}\small\item\em A 32 bit RGBA pixel. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{a00016}{tColorY} \hyperlink{a00044_a9db27e25d1a6e93c64eb768007dcf3da}{tColorY}
+\begin{DoxyCompactList}\small\item\em A 8bit Y/palette pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \hyperlink{a00044_afe2a2e4dc6cc462c5fc98a2110b8e1ce}{\_\-colorkey} (SDL\_\-Surface $\ast$src)
+\begin{DoxyCompactList}\small\item\em Returns colorkey info for a surface. \end{DoxyCompactList}\item 
+int \hyperlink{a00044_ac1bde824f44ae9a76930e9782b783512}{\_\-shrinkSurfaceRGBA} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int factorx, int factory)
+\begin{DoxyCompactList}\small\item\em Internal 32 bit integer-\/factor averaging Shrinker. \end{DoxyCompactList}\item 
+int \hyperlink{a00044_aadb38a61ab6727e5fd621b63418399be}{\_\-shrinkSurfaceY} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int factorx, int factory)
+\begin{DoxyCompactList}\small\item\em Internal 8 bit integer-\/factor averaging shrinker. \end{DoxyCompactList}\item 
+int \hyperlink{a00044_a9898b12bb565c4075c2da4db4891fd81}{\_\-zoomSurfaceRGBA} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int flipx, int flipy, int smooth)
+\begin{DoxyCompactList}\small\item\em Internal 32 bit Zoomer with optional anti-\/aliasing by bilinear interpolation. \end{DoxyCompactList}\item 
+int \hyperlink{a00044_acfeb5a322cbb575f105f1762d9d21c29}{\_\-zoomSurfaceY} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int flipx, int flipy)
+\begin{DoxyCompactList}\small\item\em Internal 8 bit Zoomer without smoothing. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_aae634e7b5e6ec1622fec361ecbd0d1b7}{\_\-transformSurfaceRGBA} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int cx, int cy, int isin, int icos, int flipx, int flipy, int smooth)
+\begin{DoxyCompactList}\small\item\em Internal 32 bit rotozoomer with optional anti-\/aliasing. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_a126e3b96b22cc18e78e33cc1f8eb6c3c}{transformSurfaceY} (SDL\_\-Surface $\ast$src, SDL\_\-Surface $\ast$dst, int cx, int cy, int isin, int icos, int flipx, int flipy)
+\begin{DoxyCompactList}\small\item\em Rotates and zooms 8 bit palette/Y 'src' surface to 'dst' surface without smoothing. \end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{a00044_a77563d68634cb2624d4f2f0bcdc19e73}{rotateSurface90Degrees} (SDL\_\-Surface $\ast$src, int numClockwiseTurns)
+\begin{DoxyCompactList}\small\item\em Rotates a 32 bit surface in increments of 90 degrees. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_af48638a298820d4d1dd24a13896963d8}{\_\-rotozoomSurfaceSizeTrig} (int width, int height, double angle, double zoomx, double zoomy, int $\ast$dstwidth, int $\ast$dstheight, double $\ast$canglezoom, double $\ast$sanglezoom)
+\begin{DoxyCompactList}\small\item\em Internal target surface sizing function for rotozooms with trig result return. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_aee64992d26c818d9975610754d5c929b}{rotozoomSurfaceSizeXY} (int width, int height, double angle, double zoomx, double zoomy, int $\ast$dstwidth, int $\ast$dstheight)
+\begin{DoxyCompactList}\small\item\em Returns the size of the resulting target surface for a \hyperlink{a00036_a454d4234a45eab6ec238a40cc44051d4}{rotozoomSurfaceXY()} call. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_a9886c783255edfd70a4974f8f3dd5a8c}{rotozoomSurfaceSize} (int width, int height, double angle, double zoom, int $\ast$dstwidth, int $\ast$dstheight)
+\begin{DoxyCompactList}\small\item\em Returns the size of the resulting target surface for a \hyperlink{a00036_a3cb0c11d5edc929579c807dc7612348c}{rotozoomSurface()} call. \end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{a00044_a5f64ed53eeee5f2667971c857698d1e5}{rotozoomSurface} (SDL\_\-Surface $\ast$src, double angle, double zoom, int smooth)
+\begin{DoxyCompactList}\small\item\em Rotates and zooms a surface and optional anti-\/aliasing. \end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{a00044_aab98b5b0da4ea468bacf47f7b85f0ee2}{rotozoomSurfaceXY} (SDL\_\-Surface $\ast$src, double angle, double zoomx, double zoomy, int smooth)
+\begin{DoxyCompactList}\small\item\em Rotates and zooms a surface with different horizontal and vertival scaling factors and optional anti-\/aliasing. \end{DoxyCompactList}\item 
+void \hyperlink{a00044_a8ba40859c1a977dae87488dd8be1bf9a}{zoomSurfaceSize} (int width, int height, double zoomx, double zoomy, int $\ast$dstwidth, int $\ast$dstheight)
+\begin{DoxyCompactList}\small\item\em Calculates the size of the target surface for a \hyperlink{a00036_a06c8108f8fe8de77cf841c176ee64850}{zoomSurface()} call. \end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{a00044_abdd772b2f6b1f26134e4e90cda657a21}{zoomSurface} (SDL\_\-Surface $\ast$src, double zoomx, double zoomy, int smooth)
+\begin{DoxyCompactList}\small\item\em Zoom a surface by independent horizontal and vertical factors with optional smoothing. \end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{a00044_aad3bf0cd89cc39ff874ffa778fa1495d}{shrinkSurface} (SDL\_\-Surface $\ast$src, int factorx, int factory)
+\begin{DoxyCompactList}\small\item\em Shrink a surface by an integer ratio using averaging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des macros}
+\hypertarget{a00044_a05a2601b7ea2906858ccc31b45fdc6eb}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!GUARD\_\-ROWS@{GUARD\_\-ROWS}}
+\index{GUARD\_\-ROWS@{GUARD\_\-ROWS}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{GUARD\_\-ROWS}]{\setlength{\rightskip}{0pt plus 5cm}\#define GUARD\_\-ROWS~(2)}}
+\label{a00044_a05a2601b7ea2906858ccc31b45fdc6eb}
+
+
+Number of guard rows added to destination surfaces. 
+
+This is a simple but effective workaround for observed issues. These rows allocate extra memory and are then hidden from the surface. Rows are added to the end of destination surfaces when they are allocated. This catches any potential overflows which seem to happen with just the right src image dimensions and scale/rotation and can lead to a situation where the program can segfault. 
+
+Définition à la ligne 52 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!MAX@{MAX}}
+\index{MAX@{MAX}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{MAX}]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~(((a) $>$ (b)) ? (a) : (b))}}
+\label{a00044_afa99ec4acc4ecb2dc3c2d05da15d0e3f}
+
+
+Returns maximum of two numbers a and b. 
+
+
+
+Définition à la ligne 40 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_a98a929bd64d660c1860c7b60b4fe5bd9}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!VALUE\_\-LIMIT@{VALUE\_\-LIMIT}}
+\index{VALUE\_\-LIMIT@{VALUE\_\-LIMIT}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{VALUE\_\-LIMIT}]{\setlength{\rightskip}{0pt plus 5cm}\#define VALUE\_\-LIMIT~0.001}}
+\label{a00044_a98a929bd64d660c1860c7b60b4fe5bd9}
+
+
+Lower limit of absolute zoom factor or rotation degrees. 
+
+
+
+Définition à la ligne 57 du fichier SDL\_\-rotozoom.c.
+
+
+
+\subsection{Documentation des définitions de type}
+\hypertarget{a00044_ac91ff95383d3a6c0df046a42e23baf04}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!tColorRGBA@{tColorRGBA}}
+\index{tColorRGBA@{tColorRGBA}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{tColorRGBA}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tColorRGBA}  {\bf tColorRGBA}}}
+\label{a00044_ac91ff95383d3a6c0df046a42e23baf04}
+
+
+A 32 bit RGBA pixel. 
+
+\hypertarget{a00044_a9db27e25d1a6e93c64eb768007dcf3da}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!tColorY@{tColorY}}
+\index{tColorY@{tColorY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{tColorY}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tColorY}  {\bf tColorY}}}
+\label{a00044_a9db27e25d1a6e93c64eb768007dcf3da}
+
+
+A 8bit Y/palette pixel. 
+
+
+
+\subsection{Documentation des fonctions}
+\hypertarget{a00044_afe2a2e4dc6cc462c5fc98a2110b8e1ce}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-colorkey@{\_\-colorkey}}
+\index{\_\-colorkey@{\_\-colorkey}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-colorkey}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 \_\-colorkey (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_afe2a2e4dc6cc462c5fc98a2110b8e1ce}
+
+
+Returns colorkey info for a surface. 
+
+
+
+Définition à la ligne 62 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_af48638a298820d4d1dd24a13896963d8}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-rotozoomSurfaceSizeTrig@{\_\-rotozoomSurfaceSizeTrig}}
+\index{\_\-rotozoomSurfaceSizeTrig@{\_\-rotozoomSurfaceSizeTrig}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-rotozoomSurfaceSizeTrig}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-rotozoomSurfaceSizeTrig (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{double}]{angle, }
+\item[{double}]{zoomx, }
+\item[{double}]{zoomy, }
+\item[{int $\ast$}]{dstwidth, }
+\item[{int $\ast$}]{dstheight, }
+\item[{double $\ast$}]{canglezoom, }
+\item[{double $\ast$}]{sanglezoom}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_af48638a298820d4d1dd24a13896963d8}
+
+
+Internal target surface sizing function for rotozooms with trig result return. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em width} & The source surface width. \\
+\hline
+{\em height} & The source surface height. \\
+\hline
+{\em angle} & The angle to rotate in degrees. \\
+\hline
+{\em zoomx} & The horizontal scaling factor. \\
+\hline
+{\em zoomy} & The vertical scaling factor. \\
+\hline
+{\em dstwidth} & The calculated width of the destination surface. \\
+\hline
+{\em dstheight} & The calculated height of the destination surface. \\
+\hline
+{\em canglezoom} & The sine of the angle adjusted by the zoom factor. \\
+\hline
+{\em sanglezoom} & The cosine of the angle adjusted by the zoom factor. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 924 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_ac1bde824f44ae9a76930e9782b783512}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-shrinkSurfaceRGBA@{\_\-shrinkSurfaceRGBA}}
+\index{\_\-shrinkSurfaceRGBA@{\_\-shrinkSurfaceRGBA}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-shrinkSurfaceRGBA}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-shrinkSurfaceRGBA (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{factorx, }
+\item[{int}]{factory}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_ac1bde824f44ae9a76930e9782b783512}
+
+
+Internal 32 bit integer-\/factor averaging Shrinker. 
+
+Shrinks 32 bit RGBA/ABGR 'src' surface to 'dst' surface. Averages color and alpha values values of src pixels to calculate dst pixels. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to shrink (input). \\
+\hline
+{\em dst} & The shrunken surface (output). \\
+\hline
+{\em factorx} & The horizontal shrinking ratio. \\
+\hline
+{\em factory} & The vertical shrinking ratio.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 for success or -\/1 for error. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 92 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_aadb38a61ab6727e5fd621b63418399be}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-shrinkSurfaceY@{\_\-shrinkSurfaceY}}
+\index{\_\-shrinkSurfaceY@{\_\-shrinkSurfaceY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-shrinkSurfaceY}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-shrinkSurfaceY (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{factorx, }
+\item[{int}]{factory}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_aadb38a61ab6727e5fd621b63418399be}
+
+
+Internal 8 bit integer-\/factor averaging shrinker. 
+
+Shrinks 8bit Y 'src' surface to 'dst' surface. Averages color (brightness) values values of src pixels to calculate dst pixels. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to shrink (input). \\
+\hline
+{\em dst} & The shrunken surface (output). \\
+\hline
+{\em factorx} & The horizontal shrinking ratio. \\
+\hline
+{\em factory} & The vertical shrinking ratio.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 for success or -\/1 for error. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 181 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_aae634e7b5e6ec1622fec361ecbd0d1b7}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-transformSurfaceRGBA@{\_\-transformSurfaceRGBA}}
+\index{\_\-transformSurfaceRGBA@{\_\-transformSurfaceRGBA}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-transformSurfaceRGBA}]{\setlength{\rightskip}{0pt plus 5cm}void \_\-transformSurfaceRGBA (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{cx, }
+\item[{int}]{cy, }
+\item[{int}]{isin, }
+\item[{int}]{icos, }
+\item[{int}]{flipx, }
+\item[{int}]{flipy, }
+\item[{int}]{smooth}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_aae634e7b5e6ec1622fec361ecbd0d1b7}
+
+
+Internal 32 bit rotozoomer with optional anti-\/aliasing. 
+
+Rotates and zooms 32 bit RGBA/ABGR 'src' surface to 'dst' surface based on the control parameters by scanning the destination surface and applying optionally anti-\/aliasing by bilinear interpolation. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & Source surface. \\
+\hline
+{\em dst} & Destination surface. \\
+\hline
+{\em cx} & Horizontal center coordinate. \\
+\hline
+{\em cy} & Vertical center coordinate. \\
+\hline
+{\em isin} & Integer version of sine of angle. \\
+\hline
+{\em icos} & Integer version of cosine of angle. \\
+\hline
+{\em flipx} & Flag indicating horizontal mirroring should be applied. \\
+\hline
+{\em flipy} & Flag indicating vertical mirroring should be applied. \\
+\hline
+{\em smooth} & Flag indicating anti-\/aliasing should be used. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 613 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_a9898b12bb565c4075c2da4db4891fd81}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-zoomSurfaceRGBA@{\_\-zoomSurfaceRGBA}}
+\index{\_\-zoomSurfaceRGBA@{\_\-zoomSurfaceRGBA}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-zoomSurfaceRGBA}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-zoomSurfaceRGBA (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{flipx, }
+\item[{int}]{flipy, }
+\item[{int}]{smooth}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a9898b12bb565c4075c2da4db4891fd81}
+
+
+Internal 32 bit Zoomer with optional anti-\/aliasing by bilinear interpolation. 
+
+Zooms 32 bit RGBA/ABGR 'src' surface to 'dst' surface. Assumes src and dst surfaces are of 32 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to zoom (input). \\
+\hline
+{\em dst} & The zoomed surface (output). \\
+\hline
+{\em flipx} & Flag indicating if the image should be horizontally flipped. \\
+\hline
+{\em flipy} & Flag indicating if the image should be vertically flipped. \\
+\hline
+{\em smooth} & Antialiasing flag; set to SMOOTHING\_\-ON to enable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 for success or -\/1 for error. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 265 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_acfeb5a322cbb575f105f1762d9d21c29}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!\_\-zoomSurfaceY@{\_\-zoomSurfaceY}}
+\index{\_\-zoomSurfaceY@{\_\-zoomSurfaceY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{\_\-zoomSurfaceY}]{\setlength{\rightskip}{0pt plus 5cm}int \_\-zoomSurfaceY (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{flipx, }
+\item[{int}]{flipy}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_acfeb5a322cbb575f105f1762d9d21c29}
+
+
+Internal 8 bit Zoomer without smoothing. 
+
+Zooms 8bit palette/Y 'src' surface to 'dst' surface. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to zoom (input). \\
+\hline
+{\em dst} & The zoomed surface (output). \\
+\hline
+{\em flipx} & Flag indicating if the image should be horizontally flipped. \\
+\hline
+{\em flipy} & Flag indicating if the image should be vertically flipped.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 for success or -\/1 for error. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 496 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_a77563d68634cb2624d4f2f0bcdc19e73}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!rotateSurface90Degrees@{rotateSurface90Degrees}}
+\index{rotateSurface90Degrees@{rotateSurface90Degrees}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{rotateSurface90Degrees}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ rotateSurface90Degrees (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{int}]{numClockwiseTurns}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a77563d68634cb2624d4f2f0bcdc19e73}
+
+
+Rotates a 32 bit surface in increments of 90 degrees. 
+
+Specialized 90 degree rotator which rotates a 'src' surface in 90 degree increments clockwise returning a new surface. Faster than rotozoomer since not scanning or interpolation takes place. Input surface must be 32 bit. (code contributed by J. Schiller, improved by C. Allport and A. Schiffler)
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & Source surface to rotate. \\
+\hline
+{\em numClockwiseTurns} & Number of clockwise 90 degree turns to apply to the source.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The new, rotated surface; or NULL for surfaces with incorrect input format. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 789 du fichier SDL\_\-rotozoom.c.
+
+\hypertarget{a00044_a5f64ed53eeee5f2667971c857698d1e5}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!rotozoomSurface@{rotozoomSurface}}
+\index{rotozoomSurface@{rotozoomSurface}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{rotozoomSurface}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ rotozoomSurface (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{double}]{angle, }
+\item[{double}]{zoom, }
+\item[{int}]{smooth}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a5f64ed53eeee5f2667971c857698d1e5}
+
+
+Rotates and zooms a surface and optional anti-\/aliasing. 
+
+Rotates and zoomes a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'angle' is the rotation in degrees and 'zoom' a scaling factor. If 'smooth' is set then the destination 32bit surface is anti-\/aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to rotozoom. \\
+\hline
+{\em angle} & The angle to rotate in degrees. \\
+\hline
+{\em zoom} & The scaling factor. \\
+\hline
+{\em smooth} & Antialiasing flag; set to SMOOTHING\_\-ON to enable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The new rotozoomed surface. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 1005 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 1
+
+
+\hypertarget{a00044_a9886c783255edfd70a4974f8f3dd5a8c}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!rotozoomSurfaceSize@{rotozoomSurfaceSize}}
+\index{rotozoomSurfaceSize@{rotozoomSurfaceSize}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{rotozoomSurfaceSize}]{\setlength{\rightskip}{0pt plus 5cm}void rotozoomSurfaceSize (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{double}]{angle, }
+\item[{double}]{zoom, }
+\item[{int $\ast$}]{dstwidth, }
+\item[{int $\ast$}]{dstheight}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a9886c783255edfd70a4974f8f3dd5a8c}
+
+
+Returns the size of the resulting target surface for a \hyperlink{a00036_a3cb0c11d5edc929579c807dc7612348c}{rotozoomSurface()} call. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em width} & The source surface width. \\
+\hline
+{\em height} & The source surface height. \\
+\hline
+{\em angle} & The angle to rotate in degrees. \\
+\hline
+{\em zoom} & The scaling factor. \\
+\hline
+{\em dstwidth} & The calculated width of the rotozoomed destination surface. \\
+\hline
+{\em dstheight} & The calculated height of the rotozoomed destination surface. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 983 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 2
+
+
+\hypertarget{a00044_aee64992d26c818d9975610754d5c929b}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!rotozoomSurfaceSizeXY@{rotozoomSurfaceSizeXY}}
+\index{rotozoomSurfaceSizeXY@{rotozoomSurfaceSizeXY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{rotozoomSurfaceSizeXY}]{\setlength{\rightskip}{0pt plus 5cm}void rotozoomSurfaceSizeXY (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{double}]{angle, }
+\item[{double}]{zoomx, }
+\item[{double}]{zoomy, }
+\item[{int $\ast$}]{dstwidth, }
+\item[{int $\ast$}]{dstheight}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_aee64992d26c818d9975610754d5c929b}
+
+
+Returns the size of the resulting target surface for a \hyperlink{a00036_a454d4234a45eab6ec238a40cc44051d4}{rotozoomSurfaceXY()} call. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em width} & The source surface width. \\
+\hline
+{\em height} & The source surface height. \\
+\hline
+{\em angle} & The angle to rotate in degrees. \\
+\hline
+{\em zoomx} & The horizontal scaling factor. \\
+\hline
+{\em zoomy} & The vertical scaling factor. \\
+\hline
+{\em dstwidth} & The calculated width of the rotozoomed destination surface. \\
+\hline
+{\em dstheight} & The calculated height of the rotozoomed destination surface. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 966 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 3
+
+
+\hypertarget{a00044_aab98b5b0da4ea468bacf47f7b85f0ee2}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!rotozoomSurfaceXY@{rotozoomSurfaceXY}}
+\index{rotozoomSurfaceXY@{rotozoomSurfaceXY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{rotozoomSurfaceXY}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ rotozoomSurfaceXY (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{double}]{angle, }
+\item[{double}]{zoomx, }
+\item[{double}]{zoomy, }
+\item[{int}]{smooth}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_aab98b5b0da4ea468bacf47f7b85f0ee2}
+
+
+Rotates and zooms a surface with different horizontal and vertival scaling factors and optional anti-\/aliasing. 
+
+Rotates and zooms a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'angle' is the rotation in degrees, 'zoomx and 'zoomy' scaling factors. If 'smooth' is set then the destination 32bit surface is anti-\/aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to rotozoom. \\
+\hline
+{\em angle} & The angle to rotate in degrees. \\
+\hline
+{\em zoomx} & The horizontal scaling factor. \\
+\hline
+{\em zoomy} & The vertical scaling factor. \\
+\hline
+{\em smooth} & Antialiasing flag; set to SMOOTHING\_\-ON to enable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The new rotozoomed surface. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 1026 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 4
+
+
+\hypertarget{a00044_aad3bf0cd89cc39ff874ffa778fa1495d}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!shrinkSurface@{shrinkSurface}}
+\index{shrinkSurface@{shrinkSurface}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{shrinkSurface}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ shrinkSurface (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{int}]{factorx, }
+\item[{int}]{factory}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_aad3bf0cd89cc39ff874ffa778fa1495d}
+
+
+Shrink a surface by an integer ratio using averaging. 
+
+Shrinks a 32bit or 8bit 'src' surface to a newly created 'dst' surface. 'factorx' and 'factory' are the shrinking ratios (i.e. 2=1/2 the size, 3=1/3 the size, etc.) The destination surface is antialiased by averaging the source box RGBA or Y information. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly. The input surface is not modified. The output surface is newly allocated.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to shrink. \\
+\hline
+{\em factorx} & The horizontal shrinking ratio. \\
+\hline
+{\em factory} & The vertical shrinking ratio.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The new, shrunken surface. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 1512 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 5
+
+
+\hypertarget{a00044_a126e3b96b22cc18e78e33cc1f8eb6c3c}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!transformSurfaceY@{transformSurfaceY}}
+\index{transformSurfaceY@{transformSurfaceY}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{transformSurfaceY}]{\setlength{\rightskip}{0pt plus 5cm}void transformSurfaceY (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{SDL\_\-Surface $\ast$}]{dst, }
+\item[{int}]{cx, }
+\item[{int}]{cy, }
+\item[{int}]{isin, }
+\item[{int}]{icos, }
+\item[{int}]{flipx, }
+\item[{int}]{flipy}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a126e3b96b22cc18e78e33cc1f8eb6c3c}
+
+
+Rotates and zooms 8 bit palette/Y 'src' surface to 'dst' surface without smoothing. 
+
+Rotates and zooms 8 bit RGBA/ABGR 'src' surface to 'dst' surface based on the control parameters by scanning the destination surface. Assumes src and dst surfaces are of 8 bit depth. Assumes dst surface was allocated with the correct dimensions.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & Source surface. \\
+\hline
+{\em dst} & Destination surface. \\
+\hline
+{\em cx} & Horizontal center coordinate. \\
+\hline
+{\em cy} & Vertical center coordinate. \\
+\hline
+{\em isin} & Integer version of sine of angle. \\
+\hline
+{\em icos} & Integer version of cosine of angle. \\
+\hline
+{\em flipx} & Flag indicating horizontal mirroring should be applied. \\
+\hline
+{\em flipy} & Flag indicating vertical mirroring should be applied. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 730 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 6
+
+
+\hypertarget{a00044_abdd772b2f6b1f26134e4e90cda657a21}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!zoomSurface@{zoomSurface}}
+\index{zoomSurface@{zoomSurface}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{zoomSurface}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ zoomSurface (
+\begin{DoxyParamCaption}
+\item[{SDL\_\-Surface $\ast$}]{src, }
+\item[{double}]{zoomx, }
+\item[{double}]{zoomy, }
+\item[{int}]{smooth}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_abdd772b2f6b1f26134e4e90cda657a21}
+
+
+Zoom a surface by independent horizontal and vertical factors with optional smoothing. 
+
+Zooms a 32bit or 8bit 'src' surface to newly created 'dst' surface. 'zoomx' and 'zoomy' are scaling factors for width and height. If 'smooth' is on then the destination 32bit surface is anti-\/aliased. If the surface is not 8bit or 32bit RGBA/ABGR it will be converted into a 32bit RGBA format on the fly. If zoom factors are negative, the image is flipped on the axes.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em src} & The surface to zoom. \\
+\hline
+{\em zoomx} & The horizontal zoom factor. \\
+\hline
+{\em zoomy} & The vertical zoom factor. \\
+\hline
+{\em smooth} & Antialiasing flag; set to SMOOTHING\_\-ON to enable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+The new, zoomed surface. 
+\end{DoxyReturn}
+
+
+Définition à la ligne 1367 du fichier SDL\_\-rotozoom.c.
+
+
+
+Voici le graphe d'appel pour cette fonction :
+% FIG 7
+
+
+\hypertarget{a00044_a8ba40859c1a977dae87488dd8be1bf9a}{
+\index{SDL\_\-rotozoom.c@{SDL\_\-rotozoom.c}!zoomSurfaceSize@{zoomSurfaceSize}}
+\index{zoomSurfaceSize@{zoomSurfaceSize}!SDL_rotozoom.c@{SDL\_\-rotozoom.c}}
+\subsubsection[{zoomSurfaceSize}]{\setlength{\rightskip}{0pt plus 5cm}void zoomSurfaceSize (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{double}]{zoomx, }
+\item[{double}]{zoomy, }
+\item[{int $\ast$}]{dstwidth, }
+\item[{int $\ast$}]{dstheight}
+\end{DoxyParamCaption}
+)}}
+\label{a00044_a8ba40859c1a977dae87488dd8be1bf9a}
+
+
+Calculates the size of the target surface for a \hyperlink{a00036_a06c8108f8fe8de77cf841c176ee64850}{zoomSurface()} call. 
+
+The minimum size of the target surface is 1. The input factors can be positive or negative.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em width} & The width of the source surface to zoom. \\
+\hline
+{\em height} & The height of the source surface to zoom. \\
+\hline
+{\em zoomx} & The horizontal zoom factor. \\
+\hline
+{\em zoomy} & The vertical zoom factor. \\
+\hline
+{\em dstwidth} & Pointer to an integer to store the calculated width of the zoomed target surface. \\
+\hline
+{\em dstheight} & Pointer to an integer to store the calculated height of the zoomed target surface. \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 1317 du fichier SDL\_\-rotozoom.c.
+

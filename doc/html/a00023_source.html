@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dr.Robotnik Mean Bean Machine:  Fichier source de include/Easy.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript">
+$(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Généré par Doxygen 1.7.4 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+--></script>
+<div id="top">
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="cursor.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dr.Robotnik Mean Bean Machine&#160;<span id="projectnumber">1.0</span></div>
+   <div id="projectbrief">Antoine Hoarau et Lucas Zamuner ROB4 Projet C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li id="searchli">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('a00023.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">include/Easy.h</div>  </div>
+</div>
+<div class="contents">
+<a href="a00023.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef EASY_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define EASY_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="a00016.html">ai.h</a>&quot;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="a00007.html">00006</a> <span class="keyword">class </span><a class="code" href="a00007.html">Easy</a> : <span class="keyword">public</span> <a class="code" href="a00001.html">Ai</a> {
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="keyword">protected</span> :
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">public</span> :
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="a00007.html#a832df7869632b44fb5798a6a3ddd33f7">00013</a> <a class="code" href="a00007.html#a832df7869632b44fb5798a6a3ddd33f7">Easy</a>(<span class="keywordtype">int</span> taille,<a class="code" href="a00009.html">Grille</a>* <a class="code" href="a00006.html#ada490ddcae4719c60a189678d0235fee">grille</a>,std::list&lt;Blobs&gt;* randBlobs):<a class="code" href="a00001.html">Ai</a>(taille,grille,randBlobs){}
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="a00007.html#adec77ce869f77400d7feba1a31e86886">00015</a> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="a00007.html#adec77ce869f77400d7feba1a31e86886">think</a>(){
+<a name="l00016"></a>00016     <span class="keywordtype">int</span> comp = rand()%21;
+<a name="l00017"></a>00017     <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a1a8f08b95399519bcb9b7393cce04f36">speedToNormal</a>();
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <span class="keywordflow">switch</span>(comp){
+<a name="l00020"></a>00020     <span class="keywordflow">case</span> 0 :<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a48b81367d338f8887643db583281d8fb">rotationAntiHoraire</a>(&amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>,&amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>); <span class="keywordflow">break</span>;
+<a name="l00021"></a>00021     <span class="keywordflow">case</span> 1 : <a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a28c33e603d5b4938e005b5cef1dff958">rotationHoraire</a>(&amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>,&amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>); <span class="keywordflow">break</span>;
+<a name="l00022"></a>00022     <span class="keywordflow">case</span> 2 :
+<a name="l00023"></a>00023     <span class="keywordflow">case</span> 3 :
+<a name="l00024"></a>00024     <span class="keywordflow">case</span> 4 :
+<a name="l00025"></a>00025     <span class="keywordflow">case</span> 5 :
+<a name="l00026"></a>00026     <span class="keywordflow">case</span> 6 :
+<a name="l00027"></a>00027     <span class="keywordflow">case</span> 7 :
+<a name="l00028"></a>00028     <span class="keywordflow">case</span> 8 :
+<a name="l00029"></a>00029     <span class="keywordflow">case</span> 9 :<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#ac552223e5740621815438cd1a4097b87">droite</a>(&amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>,&amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>); <span class="keywordflow">break</span>;
+<a name="l00030"></a>00030     <span class="keywordflow">case</span> 10 :
+<a name="l00031"></a>00031     <span class="keywordflow">case</span> 11:
+<a name="l00032"></a>00032     <span class="keywordflow">case</span> 12:
+<a name="l00033"></a>00033     <span class="keywordflow">case</span> 13:
+<a name="l00034"></a>00034     <span class="keywordflow">case</span> 14:
+<a name="l00035"></a>00035     <span class="keywordflow">case</span> 15:
+<a name="l00036"></a>00036     <span class="keywordflow">case</span> 16:
+<a name="l00037"></a>00037     <span class="keywordflow">case</span> 17:<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#aff04c5ab8ca86434f15b2d09aeb4d3c4">gauche</a>(&amp;<a class="code" href="a00006.html#a2136e91577e9bf6521e68e245e01ef69">_master</a>,&amp;<a class="code" href="a00006.html#aed42034d37e14778c2cd85ad022821d3">_slave</a>); <span class="keywordflow">break</span>;
+<a name="l00038"></a>00038     <span class="keywordflow">case</span> 18:
+<a name="l00039"></a>00039     <span class="keywordflow">case</span> 19:
+<a name="l00040"></a>00040     <span class="keywordflow">case</span> 20:   <span class="keywordflow">break</span>;
+<a name="l00041"></a>00041     <span class="keywordflow">case</span> 21:<a class="code" href="a00006.html#a5a57821cbe1b43cf4d1dbf0016a4ad4c">_moteurPhy</a>-&gt;<a class="code" href="a00013.html#a36aa8c6a3c53abab11d7c76e68fc5922">speedUp</a>();<span class="keywordflow">break</span>;
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043     <span class="keywordflow">default</span> : <span class="keywordflow">break</span>;
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045     }
+<a name="l00046"></a>00046 }
+<a name="l00047"></a>00047 <span class="comment">//virtual ~Easy() {}</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 };
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 <span class="preprocessor">#endif</span>
+</pre></div></div>
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="a00023.html">Easy.h</a>      </li>
+      <li class="footer">Généré le Mon May 9 2011 00:30:25 pour Dr.Robotnik Mean Bean Machine par&#160;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.4 </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+</body>
+</html>

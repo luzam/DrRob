@@ -28,9 +28,6 @@
 	<File name="include\InterfaceX.h" open="1" top="0" tabpos="13">
 		<Cursor position="4425" topLine="113" />
 	</File>
-	<File name="include\Joueur.h" open="0" top="0" tabpos="9">
-		<Cursor position="277" topLine="0" />
-	</File>
 	<File name="include\MoteurPhy.h" open="1" top="0" tabpos="9">
 		<Cursor position="1485" topLine="33" />
 	</File>
@@ -40,8 +37,8 @@
 	<File name="main.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="267" topLine="0" />
 	</File>
-	<File name="source\DashBoard.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="733" topLine="10" />
+	<File name="source\DashBoard.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="733" topLine="28" />
 	</File>
 	<File name="source\Game.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="1105" topLine="10" />
@@ -49,11 +46,11 @@
 	<File name="source\Grille.cpp" open="1" top="0" tabpos="11">
 		<Cursor position="8289" topLine="276" />
 	</File>
-	<File name="source\InterfaceX.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="26441" topLine="881" />
+	<File name="source\InterfaceX.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="36950" topLine="1238" />
 	</File>
 	<File name="source\MoteurPhy.cpp" open="1" top="0" tabpos="10">
-		<Cursor position="695" topLine="0" />
+		<Cursor position="14815" topLine="411" />
 	</File>
 	<File name="source\SDL_rotozoom.c" open="0" top="0" tabpos="0">
 		<Cursor position="4" topLine="0" />

@@ -1,0 +1,3 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$a00006.html" title="{DashBoard\n|# _looser\l# _moteurPhy\l# _combo\l# _masterBlob\l# _slaveBlob\l# _nextMaster\l# _nextSlave\l# _grille\l# _nextBlobs\l# _it\l# _master\l# _slave\l# _go\l# _launchCombo\l# posFen\l# _nextDarkBlobs\l# _landing\l# _newDelay\l# _score\l|+ DashBoard()\l+ ~DashBoard()\l+ moteurPhy()\l+ grille()\l+ go()\l+ masterPos()\l+ slavePos()\l+ masterBlob()\l+ slaveBlob()\l+ nextMaster()\l+ nextSlave()\l+ setCombo()\l+ resetCombo()\l+ launchCombo()\l+ combo()\l+ addDarkBlob()\l+ looser()\l+ score()\l+ think()\l}" alt="" coords="5,6,144,663"/>
+</map>

@@ -55,6 +55,7 @@ void DashBoard::go()
                 ++_it;
             _nextSlave.setBlob(*_it);
             _moteurPhy->nextBlobs(_masterBlob,_slaveBlob);
+            _launchCombo=true;
             _newDelay = 2;}
         }
 
@@ -85,7 +86,7 @@ void DashBoard::go()
 
     if(_combo!=0 && _moteurPhy->comboting()==0 && _moteurPhy->falling()==0 && !_moteurPhy->fixed())
     {
-        _launchCombo=true;
+        //_launchCombo=true;
     }
 
 }
@@ -93,8 +94,9 @@ void DashBoard::go()
 void DashBoard::resetCombo()
 {
     _launchCombo = false;
-    _score+=_combo*10;
+    _score+=6 * _multiplicateur + _combo;
     _combo =0;
+    _multiplicateur = 0;
     _moteurPhy->setCombo(0);
 }
 void DashBoard::addDarkBlob()

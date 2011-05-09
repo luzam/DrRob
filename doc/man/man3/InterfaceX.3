@@ -1,0 +1,543 @@
+.TH "InterfaceX" 3 "Mon May 9 2011" "Version 1.0" "Dr.Robotnik Mean Bean Machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InterfaceX \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <InterfaceX.h>\fP
+.SS "Fonctions membres publiques"
+
+.in +1c
+.ti -1c
+.RI "\fBInterfaceX\fP (int w, int h)"
+.br
+.ti -1c
+.RI "\fB~InterfaceX\fP ()"
+.br
+.ti -1c
+.RI "int \fBmenu\fP ()"
+.br
+.ti -1c
+.RI "void \fBcompute_game\fP ()"
+.br
+.ti -1c
+.RI "SDL_Surface * \fBload_img\fP (std::string filename)"
+.br
+.ti -1c
+.RI "void \fBapply_surface\fP (int x, int y, SDL_Surface *source, SDL_Surface *destination, SDL_Rect *clip)"
+.br
+.ti -1c
+.RI "bool \fBinit_SDL\fP ()"
+.br
+.ti -1c
+.RI "bool \fBload_files\fP ()"
+.br
+.ti -1c
+.RI "void \fBclean_up\fP ()"
+.br
+.ti -1c
+.RI "double \fBtaille_blob\fP () const "
+.br
+.ti -1c
+.RI "void \fBsetNbJoueurs\fP (int n)"
+.br
+.ti -1c
+.RI "std::vector< \fBPosition\fP > \fBvDash\fP () const "
+.br
+.ti -1c
+.RI "SDL_Surface * \fBscreen\fP () const "
+.br
+.ti -1c
+.RI "int \fBNbJoueurs\fP () const "
+.br
+.ti -1c
+.RI "int \fBNbAI\fP () const "
+.br
+.ti -1c
+.RI "int \fBgrille_H\fP () const "
+.br
+.ti -1c
+.RI "int \fBgrille_W\fP () const "
+.br
+.ti -1c
+.RI "bool \fBresize_files\fP ()"
+.br
+.ti -1c
+.RI "SDL_Surface * \fBimg_zoom_pixel_H\fP (SDL_Surface *surface1, int pixel)"
+.br
+.ti -1c
+.RI "SDL_Surface * \fBimg_zoom_pixel_W\fP (SDL_Surface *surface1, int pixel)"
+.br
+.ti -1c
+.RI "bool \fBcompute_offsets\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcompute_vDash\fP ()"
+.br
+.ti -1c
+.RI "void \fBresize_vect\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_dash\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_fond\fP ()"
+.br
+.ti -1c
+.RI "int \fBplay_anim_menu\fP (int init, int fin)"
+.br
+.ti -1c
+.RI "int \fBselect_nbJoueurs\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_cursor\fP ()"
+.br
+.ti -1c
+.RI "void \fBdecouper_sprite\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_avatars\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_un_blob\fP (\fBBlobs\fP *blob, int x, int y)"
+.br
+.ti -1c
+.RI "void \fBblit_blobs_mobiles\fP (\fBPosition\fP pmaster, \fBPosition\fP pslave, \fBBlobs\fP *master, \fBBlobs\fP *slave, int n)"
+.br
+.ti -1c
+.RI "void \fBblits\fP (std::vector< \fBDashBoard\fP * > dashBoards)"
+.br
+.ti -1c
+.RI "void \fBblit_menu\fP ()"
+.br
+.ti -1c
+.RI "void \fBresize_menu\fP ()"
+.br
+.ti -1c
+.RI "void \fBblit_nextBlob\fP (\fBBlobs\fP *master, \fBBlobs\fP *slave, int n)"
+.br
+.ti -1c
+.RI "void \fBblit_blobs\fP (std::vector< \fBDashBoard\fP * > dashBoards)"
+.br
+.ti -1c
+.RI "SDL_Rect \fBoffset_sprite\fP (int color, int link, int state)"
+.br
+.ti -1c
+.RI "Uint32 \fBgetpixel\fP (SDL_Surface *s, int x, int y)"
+.br
+.ti -1c
+.RI "void \fBputpixel\fP (SDL_Surface *s, int x, int y, Uint32 p)"
+.br
+.ti -1c
+.RI "void \fBresize_blobsIMG\fP ()"
+.br
+.ti -1c
+.RI "int \fBanim_comboting\fP (\fBBlobs\fP *blob)"
+.br
+.ti -1c
+.RI "int \fBanim_falling\fP (\fBBlobs\fP *blob)"
+.br
+.ti -1c
+.RI "int \fBanim_landing\fP (\fBBlobs\fP *blob)"
+.br
+.ti -1c
+.RI "int \fBcontrols_and_start\fP ()"
+.br
+.ti -1c
+.RI "int \fBcontrols\fP ()"
+.br
+.ti -1c
+.RI "void \fBresize_blobs\fP ()"
+.br
+.ti -1c
+.RI "void \fBresize_dash\fP ()"
+.br
+.ti -1c
+.RI "void \fBresize_avatars\fP ()"
+.br
+.ti -1c
+.RI "void \fBmaj_anims\fP (\fBDashBoard\fP &dash)"
+.br
+.ti -1c
+.RI "void \fBmaj_shining\fP ()"
+.br
+.ti -1c
+.RI "void \fBtourne_un_blob\fP (\fBPosition\fP *pivot, \fBPosition\fP *slave, int sens, int angle, int target)"
+.br
+.ti -1c
+.RI "std::vector< std::vector< int > > \fBCommandes\fP () const "
+.br
+.ti -1c
+.RI "void \fBcontrols_resize\fP ()"
+.br
+.ti -1c
+.RI "void \fBcontrols_by_default\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialisation_debut_jeu\fP ()"
+.br
+.ti -1c
+.RI "void \fBwinner\fP (int i)"
+.br
+.ti -1c
+.RI "void \fBblit_scores\fP (std::vector< \fBDashBoard\fP * > dashBoards)"
+.br
+.in -1c
+.SS "Attributs protégés"
+
+.in +1c
+.ti -1c
+.RI "int \fB_SCREEN_WIDTH\fP"
+.br
+.ti -1c
+.RI "int \fB_SCREEN_HEIGHT\fP"
+.br
+.ti -1c
+.RI "int \fB_SCREEN_BPP\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< SDL_Surface * > > \fB_blobsIMG_ini\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< SDL_Surface * > > \fB_blobsIMG\fP"
+.br
+.ti -1c
+.RI "const int \fB_taille_blob_ini\fP"
+.br
+.ti -1c
+.RI "double \fB_taille_blob\fP"
+.br
+.ti -1c
+.RI "int \fB_decalage_menu_x\fP"
+.br
+.ti -1c
+.RI "int \fB_decalage_menu_y\fP"
+.br
+.ti -1c
+.RI "double \fB_ratio_avat_ini\fP"
+.br
+.ti -1c
+.RI "int \fB_nbJoueurs\fP"
+.br
+.ti -1c
+.RI "int \fB_nbAI\fP"
+.br
+.ti -1c
+.RI "double \fB_ratio_menu\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_offset_grille\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_offset_nextBlob\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_offset_score\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_offset_avatar\fP"
+.br
+.ti -1c
+.RI "\fBPosition\fP \fB_offset_cursor\fP"
+.br
+.ti -1c
+.RI "SDL_Rect \fB_offset_menu\fP"
+.br
+.ti -1c
+.RI "double \fB_ratio\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBPosition\fP > \fB_vDash\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_dashboard\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_background\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_avatars\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_avatars_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_screen\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_dashboard_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_background_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_blobs_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_menu_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_menu\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_cursor_ini\fP"
+.br
+.ti -1c
+.RI "SDL_Surface * \fB_cursor\fP"
+.br
+.ti -1c
+.RI "int \fB_grille_W\fP"
+.br
+.ti -1c
+.RI "int \fB_grille_H\fP"
+.br
+.ti -1c
+.RI "int \fB_nb_blobs\fP"
+.br
+.ti -1c
+.RI "int \fB_cpt\fP"
+.br
+.ti -1c
+.RI "int \fB_taille_menu_ini\fP"
+.br
+.ti -1c
+.RI "int \fB_taille_menu\fP"
+.br
+.ti -1c
+.RI "int \fB_taille_text\fP"
+.br
+.ti -1c
+.RI "std::vector< std::vector< int > > \fB_commandes\fP"
+.br
+.ti -1c
+.RI "int \fB_shining\fP"
+.br
+.ti -1c
+.RI "int \fB_taille_score\fP"
+.br
+.in -1c
+.SH "Description détaillée"
+.PP 
+Définition à la ligne 37 du fichier InterfaceX.h.
+.SH "Documentation des constructeurs et destructeur"
+.PP 
+.SS "InterfaceX::InterfaceX (intw, inth)\fC [inline]\fP"
+.PP
+Définition à la ligne 84 du fichier InterfaceX.h.
+.SS "InterfaceX::~InterfaceX ()\fC [inline]\fP"
+.PP
+Définition à la ligne 97 du fichier InterfaceX.h.
+.SH "Documentation des fonctions membres"
+.PP 
+.SS "int InterfaceX::anim_comboting (\fBBlobs\fP *blob)"
+.SS "int InterfaceX::anim_falling (\fBBlobs\fP *blob)"
+.SS "int InterfaceX::anim_landing (\fBBlobs\fP *blob)"
+.SS "void InterfaceX::apply_surface (intx, inty, SDL_Surface *source, SDL_Surface *destination, SDL_Rect *clip)"
+.SS "void InterfaceX::blit_avatars ()"
+.SS "void InterfaceX::blit_blobs (std::vector< \fBDashBoard\fP * >dashBoards)"
+.SS "void InterfaceX::blit_blobs_mobiles (\fBPosition\fPpmaster, \fBPosition\fPpslave, \fBBlobs\fP *master, \fBBlobs\fP *slave, intn)"
+.SS "void InterfaceX::blit_cursor ()"
+.SS "void InterfaceX::blit_dash ()"
+.SS "void InterfaceX::blit_fond ()"
+.SS "void InterfaceX::blit_menu ()"
+.SS "void InterfaceX::blit_nextBlob (\fBBlobs\fP *master, \fBBlobs\fP *slave, intn)"
+.SS "void InterfaceX::blit_scores (std::vector< \fBDashBoard\fP * >dashBoards)"
+.SS "void InterfaceX::blit_un_blob (\fBBlobs\fP *blob, intx, inty)"
+.SS "void InterfaceX::blits (std::vector< \fBDashBoard\fP * >dashBoards)"
+.SS "void InterfaceX::clean_up ()"
+.SS "std::vector<std::vector<int> > InterfaceX::Commandes () const\fC [inline]\fP"
+.PP
+Définition à la ligne 148 du fichier InterfaceX.h.
+.SS "void InterfaceX::compute_game ()"
+.SS "bool InterfaceX::compute_offsets ()"
+.SS "bool InterfaceX::compute_vDash ()"
+.SS "int InterfaceX::controls ()"
+.SS "int InterfaceX::controls_and_start ()"
+.SS "void InterfaceX::controls_by_default ()"
+.SS "void InterfaceX::controls_resize ()"
+.SS "void InterfaceX::decouper_sprite ()"
+.SS "Uint32 InterfaceX::getpixel (SDL_Surface *s, intx, inty)"
+.SS "int InterfaceX::grille_H () const\fC [inline]\fP"
+.PP
+Définition à la ligne 111 du fichier InterfaceX.h.
+.SS "int InterfaceX::grille_W () const\fC [inline]\fP"
+.PP
+Définition à la ligne 112 du fichier InterfaceX.h.
+.SS "SDL_Surface* InterfaceX::img_zoom_pixel_H (SDL_Surface *surface1, intpixel)"
+.SS "SDL_Surface* InterfaceX::img_zoom_pixel_W (SDL_Surface *surface1, intpixel)"
+.SS "bool InterfaceX::init_SDL ()"
+.SS "void InterfaceX::initialisation_debut_jeu ()"
+.SS "bool InterfaceX::load_files ()"
+.SS "SDL_Surface* InterfaceX::load_img (std::stringfilename)"
+.SS "void InterfaceX::maj_anims (\fBDashBoard\fP &dash)"
+.SS "void InterfaceX::maj_shining ()"
+.SS "int InterfaceX::menu ()"
+.SS "int InterfaceX::NbAI () const\fC [inline]\fP"
+.PP
+Définition à la ligne 110 du fichier InterfaceX.h.
+.SS "int InterfaceX::NbJoueurs () const\fC [inline]\fP"
+.PP
+Définition à la ligne 109 du fichier InterfaceX.h.
+.SS "SDL_Rect InterfaceX::offset_sprite (intcolor, intlink, intstate)"
+.SS "int InterfaceX::play_anim_menu (intinit, intfin)"
+.SS "void InterfaceX::putpixel (SDL_Surface *s, intx, inty, Uint32p)"
+.SS "void InterfaceX::resize_avatars ()"
+.SS "void InterfaceX::resize_blobs ()"
+.SS "void InterfaceX::resize_blobsIMG ()"
+.SS "void InterfaceX::resize_dash ()"
+.SS "bool InterfaceX::resize_files ()"
+.SS "void InterfaceX::resize_menu ()"
+.SS "void InterfaceX::resize_vect ()"
+.SS "SDL_Surface* InterfaceX::screen () const\fC [inline]\fP"
+.PP
+Définition à la ligne 108 du fichier InterfaceX.h.
+.SS "int InterfaceX::select_nbJoueurs ()"
+.SS "void InterfaceX::setNbJoueurs (intn)\fC [inline]\fP"
+.PP
+Définition à la ligne 106 du fichier InterfaceX.h.
+.SS "double InterfaceX::taille_blob () const\fC [inline]\fP"
+.PP
+Définition à la ligne 105 du fichier InterfaceX.h.
+.SS "void InterfaceX::tourne_un_blob (\fBPosition\fP *pivot, \fBPosition\fP *slave, intsens, intangle, inttarget)"
+.SS "std::vector<\fBPosition\fP> InterfaceX::vDash () const\fC [inline]\fP"
+.PP
+Définition à la ligne 107 du fichier InterfaceX.h.
+.SS "void InterfaceX::winner (inti)"
+.SH "Documentation des données membres"
+.PP 
+.SS "SDL_Surface* \fBInterfaceX::_avatars\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 63 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_avatars_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 64 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_background\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 62 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_background_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 67 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_blobs_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 68 du fichier InterfaceX.h.
+.SS "std::vector<std::vector<SDL_Surface*> > \fBInterfaceX::_blobsIMG\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 44 du fichier InterfaceX.h.
+.SS "std::vector<std::vector<SDL_Surface*> > \fBInterfaceX::_blobsIMG_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 43 du fichier InterfaceX.h.
+.SS "std::vector<std::vector<int> > \fBInterfaceX::_commandes\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 80 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_cpt\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 76 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_cursor\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 72 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_cursor_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 71 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_dashboard\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 61 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_dashboard_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 66 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_decalage_menu_x\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 47 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_decalage_menu_y\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 48 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_grille_H\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 74 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_grille_W\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 73 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_menu\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 70 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_menu_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 69 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_nb_blobs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 75 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_nbAI\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 51 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_nbJoueurs\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 50 du fichier InterfaceX.h.
+.SS "\fBPosition\fP \fBInterfaceX::_offset_avatar\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 56 du fichier InterfaceX.h.
+.SS "\fBPosition\fP \fBInterfaceX::_offset_cursor\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 57 du fichier InterfaceX.h.
+.SS "\fBPosition\fP \fBInterfaceX::_offset_grille\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 53 du fichier InterfaceX.h.
+.SS "SDL_Rect \fBInterfaceX::_offset_menu\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 58 du fichier InterfaceX.h.
+.SS "\fBPosition\fP \fBInterfaceX::_offset_nextBlob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 54 du fichier InterfaceX.h.
+.SS "\fBPosition\fP \fBInterfaceX::_offset_score\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 55 du fichier InterfaceX.h.
+.SS "double \fBInterfaceX::_ratio\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 59 du fichier InterfaceX.h.
+.SS "double \fBInterfaceX::_ratio_avat_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 49 du fichier InterfaceX.h.
+.SS "double \fBInterfaceX::_ratio_menu\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 52 du fichier InterfaceX.h.
+.SS "SDL_Surface* \fBInterfaceX::_screen\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 65 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_SCREEN_BPP\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 42 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_SCREEN_HEIGHT\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 41 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_SCREEN_WIDTH\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 40 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_shining\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 81 du fichier InterfaceX.h.
+.SS "double \fBInterfaceX::_taille_blob\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 46 du fichier InterfaceX.h.
+.SS "const int \fBInterfaceX::_taille_blob_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 45 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_taille_menu\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 78 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_taille_menu_ini\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 77 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_taille_score\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 82 du fichier InterfaceX.h.
+.SS "int \fBInterfaceX::_taille_text\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 79 du fichier InterfaceX.h.
+.SS "std::vector<\fBPosition\fP> \fBInterfaceX::_vDash\fP\fC [protected]\fP"
+.PP
+Définition à la ligne 60 du fichier InterfaceX.h.
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour Dr.Robotnik Mean Bean Machine à partir du code source.

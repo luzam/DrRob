@@ -1249,14 +1249,24 @@ void InterfaceX::maj_anims(DashBoard& dash)
         dash.moteurPhy()->setFalling(dash.moteurPhy()->falling()-1);
     }
     dash.moteurPhy()->setComboting(dash.grille()->checkMaxCombo());
-//     std::cerr << "combo : "<< dash.moteurPhy()->comboting() << "\n";
-    if(dash.moteurPhy()->comboting()==1||dash.moteurPhy()->comboting()==2)
+     std::cerr << "combo : "<< dash.moteurPhy()->combo() << "\n";
+    //if(dash.moteurPhy()->comboting()==1||dash.moteurPhy()->comboting()==2)
+    if(dash.moteurPhy()->combo()!=0)
     {
+        if(dash.combo()!=0){
+            dash.setMultiplicateur(dash.multiplicateur()+1);
+            dash.setCombo(dash.combo()+dash.moteurPhy()->combo()-4);
+
+        }
         if(dash.combo()==0)
             dash.setCombo(dash.moteurPhy()->combo()-3);
-        else
-            dash.setCombo(6*(dash.moteurPhy()->combo()%4) +(dash.moteurPhy()->combo()%4) );
+        //if(dash.moteurPhy()->combo()>7)
+          //  dash.setMultiplicateur(dash.multiplicateur()+1);
+
+
     }
+    std::cerr<<"dash : "<< dash.combo()<<std::endl;
+    std::cerr<<"mutli : "<< dash.multiplicateur()<<"\n\n";
      //    std::cerr << "combo value : "<< dash.moteurPhy()->combo() << "\n";
 
     if(dash.moteurPhy()->turningDirect()!=0||dash.moteurPhy()->turningHoraire()!=0)

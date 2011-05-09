@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$a00009.html#afe2a2e4dc6cc462c5fc98a2110b8e1ce" title="Returns colorkey info for a surface." alt="" coords="205,5,293,33"/>
+<area shape="rect" id="node5" href="$a00009.html#a9898b12bb565c4075c2da4db4891fd81" title="Internal 32 bit Zoomer with optional anti&#45;aliasing by bilinear interpolation." alt="" coords="169,55,329,83"/>
+<area shape="rect" id="node7" href="$a00009.html#acfeb5a322cbb575f105f1762d9d21c29" title="Internal 8 bit Zoomer without smoothing." alt="" coords="185,106,313,134"/>
+<area shape="rect" id="node9" href="$a00009.html#a8ba40859c1a977dae87488dd8be1bf9a" title="Calculates the size of the target surface for a zoomSurface() call." alt="" coords="179,157,320,185"/>
+</map>

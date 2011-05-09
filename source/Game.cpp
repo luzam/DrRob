@@ -120,7 +120,7 @@ void Game::go()
                         _dashBoards.at(i)->go();
                         if(_dashBoards.at(i)->launchCombo())
                         {
-                            _combo[i] = _dashBoards.at(i)->combo();
+                            _combo[i] = _dashBoards.at(i)->combo()+6*_dashBoards.at(i)->multiplicateur();
                             _dashBoards.at(i)->resetCombo();
                         }
                     }
